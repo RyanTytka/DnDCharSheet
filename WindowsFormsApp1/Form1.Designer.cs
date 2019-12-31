@@ -190,6 +190,7 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
@@ -197,7 +198,6 @@
             this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -287,7 +287,7 @@
             // 
             // chrModLabel
             // 
-            this.chrModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chrModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chrModLabel.Location = new System.Drawing.Point(8, 378);
             this.chrModLabel.Multiline = true;
             this.chrModLabel.Name = "chrModLabel";
@@ -371,7 +371,7 @@
             // 
             // wisModLabel
             // 
-            this.wisModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wisModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wisModLabel.Location = new System.Drawing.Point(8, 313);
             this.wisModLabel.Multiline = true;
             this.wisModLabel.Name = "wisModLabel";
@@ -455,7 +455,7 @@
             // 
             // intModLabel
             // 
-            this.intModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.intModLabel.Location = new System.Drawing.Point(8, 246);
             this.intModLabel.Multiline = true;
             this.intModLabel.Name = "intModLabel";
@@ -539,7 +539,7 @@
             // 
             // conModLabel
             // 
-            this.conModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conModLabel.Location = new System.Drawing.Point(8, 182);
             this.conModLabel.Multiline = true;
             this.conModLabel.Name = "conModLabel";
@@ -623,7 +623,7 @@
             // 
             // dexModLabel
             // 
-            this.dexModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dexModLabel.Location = new System.Drawing.Point(10, 117);
             this.dexModLabel.Multiline = true;
             this.dexModLabel.Name = "dexModLabel";
@@ -729,7 +729,7 @@
             // 
             // strModLabel
             // 
-            this.strModLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.strModLabel.Location = new System.Drawing.Point(9, 54);
             this.strModLabel.Multiline = true;
             this.strModLabel.Name = "strModLabel";
@@ -1648,6 +1648,7 @@
             this.TempAmountBox.Size = new System.Drawing.Size(21, 17);
             this.TempAmountBox.TabIndex = 103;
             this.TempAmountBox.Tag = "temp";
+            this.TempAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
             this.TempAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             this.TempAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
             // 
@@ -1696,6 +1697,7 @@
             this.CurrentAmountBox.Size = new System.Drawing.Size(21, 17);
             this.CurrentAmountBox.TabIndex = 101;
             this.CurrentAmountBox.Tag = "current";
+            this.CurrentAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
             this.CurrentAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             this.CurrentAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
             // 
@@ -1719,6 +1721,7 @@
             this.MaxHPAmountBox.Size = new System.Drawing.Size(21, 17);
             this.MaxHPAmountBox.TabIndex = 102;
             this.MaxHPAmountBox.Tag = "max";
+            this.MaxHPAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
             this.MaxHPAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             this.MaxHPAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
             // 
@@ -2268,6 +2271,17 @@
             this.panel6.Size = new System.Drawing.Size(220, 311);
             this.panel6.TabIndex = 96;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(64, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.TabIndex = 165;
+            this.label4.Text = "Description";
+            // 
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(6, 196);
@@ -2346,22 +2360,11 @@
             this.listBox1.Size = new System.Drawing.Size(101, 156);
             this.listBox1.TabIndex = 164;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 15);
-            this.label4.TabIndex = 165;
-            this.label4.Text = "Description";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 598);
+            this.ClientSize = new System.Drawing.Size(1028, 598);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox23);

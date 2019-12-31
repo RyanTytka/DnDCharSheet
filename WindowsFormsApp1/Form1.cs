@@ -785,21 +785,19 @@ namespace WindowsFormsApp1
         //press hp buttons
         private void HPButtonClick(object sender, EventArgs e)
         {
-            if(((CustomButtons.ButtonNoPadding)sender).Tag.ToString() == "current") //current
+            if (((CustomButtons.ButtonNoPadding)sender).Tag.ToString() == "current") //current
             {
-                if (((CustomButtons.ButtonNoPadding)sender).Text != "")
+                if (CurrentAmountBox.Text != "")
                 {
                     if (((CustomButtons.ButtonNoPadding)sender).Text == "+")
                     {
                         currentHP = Math.Min(MaxHP, currentHP + int.Parse(CurrentAmountBox.Text));
                         currentHPnumberlabel.Text = currentHP.ToString();
-                        CurrentAmountBox.Text = "";
                     }
                     else if (((CustomButtons.ButtonNoPadding)sender).Text == "-")
                     {
                         currentHP = Math.Min(MaxHP, currentHP - int.Parse(CurrentAmountBox.Text));
                         currentHPnumberlabel.Text = currentHP.ToString();
-                        CurrentAmountBox.Text = "";
                     }
                     else //=
                     {
@@ -808,20 +806,28 @@ namespace WindowsFormsApp1
                         CurrentAmountBox.Text = "";
                     }
                 }
+                CurrentAmountBox.Focus();
+                CurrentAmountBox.SelectAll();
             }
             else // temp
             {
-                if (((CustomButtons.ButtonNoPadding)sender).Text == "-")
+                if (TempAmountBox.Text != "")
                 {
-                    tempHP = tempHP - int.Parse(TempAmountBox.Text);
-                    temphpnumberslabel.Text = tempHP.ToString();
-                    TempAmountBox.Text = "";
-                }
-                else //set 
-                {
-                    tempHP = int.Parse(TempAmountBox.Text);
-                    temphpnumberslabel.Text = tempHP.ToString();
-                    TempAmountBox.Text = "";
+
+                    if (((CustomButtons.ButtonNoPadding)sender).Text == "-")
+                    {
+                        tempHP = tempHP - int.Parse(TempAmountBox.Text);
+                        temphpnumberslabel.Text = tempHP.ToString();
+                        TempAmountBox.Text = "";
+                        TempAmountBox.Focus();
+                    }
+                    else //set 
+                    {
+                        tempHP = int.Parse(TempAmountBox.Text);
+                        temphpnumberslabel.Text = tempHP.ToString();
+                        TempAmountBox.Text = "";
+                        TempAmountBox.Focus();
+                    }
                 }
             }
         }
@@ -840,9 +846,11 @@ namespace WindowsFormsApp1
                 }
                 else if ((string)((TextBox)sender).Tag == "current")
                 {
-                    currentHP = Math.Min(MaxHP, currentHP + int.Parse(CurrentAmountBox.Text));
+                    currentHP = Math.Min(MaxHP, int.Parse(CurrentAmountBox.Text));
                     currentHPnumberlabel.Text = currentHP.ToString();
                     CurrentAmountBox.Text = "";
+                    CurrentAmountBox.Focus();
+                    //CurrentAmountBox.SelectAll();
                 }
                 else if ((string)((TextBox)sender).Tag == "temp")
                 {
@@ -865,6 +873,13 @@ namespace WindowsFormsApp1
             if(int.TryParse(MaxHPAmountBox.Text,out int i))
             MaxHP = int.Parse(MaxHPAmountBox.Text);
             maxHPNumberLabel.Text = MaxHP.ToString();
+            MaxHPAmountBox.Focus();
+            MaxHPAmountBox.Text = "";
+        }
+
+        private void SelectTextOnEnter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).SelectAll();
         }
 
         #endregion
@@ -1034,6 +1049,8 @@ namespace WindowsFormsApp1
             }
             currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0, Math.Max(0, s.Length - 2));
         }
+
+
 
         #endregion
 
