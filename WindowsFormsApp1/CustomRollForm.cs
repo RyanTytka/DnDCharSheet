@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         List<int> numList, amountList;
         int intDieNum;
-        int formType; //1 = weapon bonus roll; 2 = weapon damage roll
+        int formType; //1 = weapon bonus roll; 2 = weapon damage roll; 3 = feat roll
 
         public CustomRollForm(int type, int intDieNum)
         {
@@ -71,6 +71,10 @@ namespace WindowsFormsApp1
             else if (formType == 2) //set damage roll
             {
                 ((WeaponCreation)Owner).SetDamageRoll(new Roll(amountList,numList, (int)flatNumBox.Value));
+                this.Close();
+            }
+            else if (formType == 3) //set feat roll
+            {   ((FeatCreation)Owner).SetRoll(new Roll(amountList, numList, (int)flatNumBox.Value));
                 this.Close();
             }
         }

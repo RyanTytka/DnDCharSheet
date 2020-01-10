@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
         List<Control> currentBonusRolls;
         int MaxHP = 10, currentHP = 0, tempHP = 0;
         int[] currentHitDice, maxHitDice;
+        List<Feat> feats;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,6 +34,7 @@ namespace WindowsFormsApp1
             mods = new TextBox[23];
             currentHitDice = new int[4];
             maxHitDice = new int[4];
+            feats = new List<Feat>();
 
 
             mods[1] = strModLabel;
@@ -460,6 +462,7 @@ namespace WindowsFormsApp1
 
         // vvvvvvvvvvvvvv    Weapons   vvvvvvvvvvvvvvvv
 
+        #region weapons
 
         //new weapon button is clicked
         private void createWeapon_Click(object sender, EventArgs e)
@@ -498,9 +501,7 @@ namespace WindowsFormsApp1
                     button.Text = w.Name;
                     return;
                 }
-            }
-
-            
+            }           
             
         }
 
@@ -745,7 +746,7 @@ namespace WindowsFormsApp1
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 
-
+#endregion
 
 
         // vvvvvvvvv Name / AC / etc vvvvvvvvvvvvvvvvvvvv
@@ -755,8 +756,6 @@ namespace WindowsFormsApp1
         {
             profBonus = (int)profBonusBox.Value;
         }
-
-
 
 
         #region HP
@@ -1084,6 +1083,23 @@ namespace WindowsFormsApp1
                 misc = i3;
 
             ACBox.Text = (armor + dex + misc).ToString();
+        }
+
+
+        #endregion
+
+        #region feats
+
+        public void AddFeat(Feat f)
+        {
+            feats.Add(f);
+        }
+
+        //open form for new feat
+        private void newFeatButton_Click(object sender, EventArgs e)
+        {
+            FeatCreation featCreation = new FeatCreation();
+            featCreation.ShowDialog(this);
         }
 
         #endregion
