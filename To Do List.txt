@@ -1,0 +1,12 @@
+Main features:
+spells
+save/load
+feats
+continuous adding of rolls
+
+
+small fixes:
+Advantage on Initiative(keep highest or set manually)
+Highlight bonus on weapon when add new
+fix half odd ability mod for ability checks
+make check/save buttons different color?
