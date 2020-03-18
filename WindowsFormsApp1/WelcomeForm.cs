@@ -14,57 +14,45 @@ namespace WindowsFormsApp1
 {
     public partial class WelcomeForm : Form
     {
+        public string name;
+
         public WelcomeForm()
         {
             InitializeComponent();
         }
-    }
-}
-/*
-//load file and open editor
-OpenFileDialog loadFile = new OpenFileDialog();
-loadFile.Title = "Open a level file";
-    loadFile.Filter = "Level Files| *.level";
-    DialogResult result = loadFile.ShowDialog();
-    if (result == DialogResult.OK)
-    {
-        Editor editor = new Editor(loadFile.FileName);
-editor.ShowDialog();
-    }
 
 
-
-
-string filePath = null;
-    SaveFileDialog saveFile = new SaveFileDialog();
-    saveFile.Title = "Save a level file";
-    saveFile.Filter = "Level Files| *.level";
-    DialogResult result = saveFile.ShowDialog();
-    if (result == DialogResult.OK && saveFile.FileName != null)
-    {
-        filePath = saveFile.FileNames[0];
-        Stream outStream = File.OpenWrite(filePath);
-        BinaryWriter output = new BinaryWriter(outStream);
-        //save data into file
-        output.Write(MAP_WIDTH);
-        output.Write(MAP_HEIGHT);
-        foreach (PictureBox pic in pics)
+        private void loadCharButton_click(object sender, EventArgs e)
         {
-            if(pic.BackColor == Color.Black)
+            //load file and open editor
+            OpenFileDialog loadFile = new OpenFileDialog();
+            loadFile.Title = "Load a Character";
+            loadFile.Filter = "Player Character| *.pc";
+            DialogResult result = loadFile.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                output.Write(1);
-            }
-            else
-            {
-                output.Write(0);
+                Form1 form = new Form1();
+                form.ShowDialog();
             }
         }
-        output.Close();
-        MessageBox.Show("File saved successfully", "Save loaded");
-        if (!saved)
-            this.Text = "Editor - " + filePath;
-        saved = true;
+
+        private void newCharButton_click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        
     }
+}
+
+
+
+/*
+
+
+
 
 
 

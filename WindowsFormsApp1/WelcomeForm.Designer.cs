@@ -40,6 +40,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "New";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.newCharButton_click);
             // 
             // button2
             // 
@@ -49,6 +50,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Load";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.loadCharButton_click);
             // 
             // WelcomeForm
             // 
@@ -58,6 +60,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "WelcomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WelcomeForm";
             this.ResumeLayout(false);
 

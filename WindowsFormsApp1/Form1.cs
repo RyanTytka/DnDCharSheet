@@ -7,9 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace WindowsFormsApp1
 {
+
+
     public partial class Form1 : Form
     {
         bool saveThrowAdv;
@@ -26,6 +30,8 @@ namespace WindowsFormsApp1
         int MaxHP = 10, currentHP = 0, tempHP = 0;
         int[] currentHitDice, maxHitDice;
         List<Feat> feats;
+        
+        string fileName;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -53,11 +59,25 @@ namespace WindowsFormsApp1
             weaponButtons.Add(weaponRadioButton6);
             weaponButtons.Add(weaponRadioButton7);
             weaponButtons.Add(weaponRadioButton8);
+
+            //load characater file
+            //if(filePath != "")
+            //{   
+            //    Stream inStream = File.OpenRead(filePath);
+            //    BinaryReader reader = new BinaryReader(inStream);
+            //    nameLabel.Text = reader.ReadString();
+            //    //saved = true;
+            //    //this.Text = "Editor - " + filePath;
+            //    reader.Close();
+            //}
+
+
         }
 
 
-        public Form1()
+        public Form1()//string file="")
         {
+            //filePath = file;
             InitializeComponent();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -1104,6 +1124,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
+
         private void InitiativeRollButton_Click(object sender, EventArgs e)
         {
             int roll = Roll.RollSingleDie(20);
@@ -1136,6 +1157,69 @@ namespace WindowsFormsApp1
             ((TextBox)sender).SelectionLength = 0;
         }
 
+
+
+
+        #region save / load
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            saveFile();
+        }
+
+        private void saveFile(string filePath = "")
+        {
+            string saveFilePath;
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Title = "Save a Character";
+            saveFile.Filter = "Player Character| *.pc";
+            DialogResult result = saveFile.ShowDialog();
+            if (result == DialogResult.OK && saveFile.FileName != null)
+            {
+                saveFilePath = saveFile.FileNames[0];
+                Stream outStream = File.OpenWrite(saveFilePath);
+                BinaryWriter output = new BinaryWriter(outStream);
+                //save data into file
+                output.Write(nameLabel.Text);               //char name
+                output.Write(levelTextBox.Text);            //char level/class
+                output.Close();
+                MessageBox.Show("File saved successfully", "Save loaded");
+            }
+        }
+
+        private void loadFile(string filePath)
+        {
+            //load characater file
+            if (filePath != "")
+            {
+                Stream inStream = File.OpenRead(filePath);
+                BinaryReader reader = new BinaryReader(inStream);
+                nameLabel.Text = reader.ReadString();       //char name
+                levelTextBox.Text = reader.ReadString();    //char level/class
+                //saved = true;
+                //this.Text = "Editor - " + filePath;
+                reader.Close();
+
+
+            }
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            //load file and open editor
+            OpenFileDialog loadFileDialog = new OpenFileDialog();
+            loadFileDialog.Title = "Load a Character";
+            loadFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = loadFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //place info in
+                fileName = loadFileDialog.FileName;
+                loadFile(fileName);
+            }
+        }
+
+        #endregion
 
 
     }

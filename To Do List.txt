@@ -10,3 +10,7 @@ Advantage on Initiative(keep highest or set manually)
 Highlight bonus on weapon when add new
 fix half odd ability mod for ability checks
 make check/save buttons different color?
+
+
+eventual features:
+custom file loading menu

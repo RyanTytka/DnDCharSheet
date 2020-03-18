@@ -68,5 +68,41 @@ namespace WindowsFormsApp1
             LimitedUsecheckBox.Checked = true;
             numUsesBox.Enabled = true;
         }
+
+        //enable/disable numOfUses box
+        private void LimitedUsecheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(((CheckBox)sender).Checked)
+            {
+                //if(usesRollCheckBox.Checked)
+                    numUsesBox.Enabled = true;
+            }
+            else
+            {
+                numUsesBox.Enabled = false;
+            }
+        }
+
+        //enable/disable roll buttons/boxes
+        private void usesRollCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked)
+            {
+                if(LimitedUsecheckBox.Checked)
+                    numUsesBox.Enabled = true;
+                else
+                    numUsesBox.Enabled = false;
+                setRollButton.Enabled = true;
+                LimitedUsecheckBox.Enabled = true;
+                rollNameTextBox.Enabled = true;
+            }
+            else
+            {
+                numUsesBox.Enabled = false;
+                setRollButton.Enabled = false;
+                LimitedUsecheckBox.Enabled = false;
+                rollNameTextBox.Enabled = false;
+            }
+        }
     }
 }

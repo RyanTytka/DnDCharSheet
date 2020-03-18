@@ -63,6 +63,7 @@
             this.rollNameTextBox.Size = new System.Drawing.Size(141, 20);
             this.rollNameTextBox.TabIndex = 36;
             this.rollNameTextBox.Text = "roll name";
+            this.rollNameTextBox.Enter += new System.EventHandler(this.rollNameTextBox_Enter);
             this.rollNameTextBox.Leave += new System.EventHandler(this.rollNameTextBox_Leave);
             // 
             // abilitiesTextBox
@@ -86,6 +87,8 @@
             // usesRollCheckBox
             // 
             this.usesRollCheckBox.AutoSize = true;
+            this.usesRollCheckBox.Checked = true;
+            this.usesRollCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.usesRollCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usesRollCheckBox.Location = new System.Drawing.Point(11, 158);
             this.usesRollCheckBox.Name = "usesRollCheckBox";
@@ -93,6 +96,7 @@
             this.usesRollCheckBox.TabIndex = 28;
             this.usesRollCheckBox.Text = "Uses Roll";
             this.usesRollCheckBox.UseVisualStyleBackColor = true;
+            this.usesRollCheckBox.CheckedChanged += new System.EventHandler(this.usesRollCheckBox_CheckedChanged);
             // 
             // nameTextBox
             // 
@@ -108,7 +112,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(7, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 24);
+            this.label2.Size = new System.Drawing.Size(74, 26);
             this.label2.TabIndex = 26;
             this.label2.Text = "Name:";
             // 
@@ -118,7 +122,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, -42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 35);
+            this.label1.Size = new System.Drawing.Size(200, 36);
             this.label1.TabIndex = 25;
             this.label1.Text = "New Weapon";
             // 
@@ -169,6 +173,7 @@
             this.LimitedUsecheckBox.TabIndex = 45;
             this.LimitedUsecheckBox.Text = "Limited Uses";
             this.LimitedUsecheckBox.UseVisualStyleBackColor = true;
+            this.LimitedUsecheckBox.CheckedChanged += new System.EventHandler(this.LimitedUsecheckBox_CheckedChanged);
             // 
             // FeatCreation
             // 
@@ -188,6 +193,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
             this.Name = "FeatCreation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Feat";
             this.Load += new System.EventHandler(this.FeatCreation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUsesBox)).EndInit();
