@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         int MaxHP = 10, currentHP = 0, tempHP = 0;
         int[] currentHitDice, maxHitDice;
         List<Feat> feats;
+        List<RadioButton> featButtons;
+        Feat selectedFeat;
         
         string fileName;
 
@@ -41,6 +43,7 @@ namespace WindowsFormsApp1
             currentHitDice = new int[4];
             maxHitDice = new int[4];
             feats = new List<Feat>();
+            featButtons = new List<RadioButton>();
 
 
             mods[1] = strModLabel;
@@ -1108,11 +1111,32 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region feats
+        #region Feats
 
         public void AddFeat(Feat f)
         {
             feats.Add(f);
+            //add radioButton
+            RadioButton newButton = new RadioButton();
+            newButton.Width = 250;
+            //string text = ""; 
+            if(f.LimitedUse)
+            {
+                newButton.Text = "(" + f.NumUses + "/" + f.NumUses + ") " + f.Name;
+            }
+            else 
+            {
+                newButton.Text = f.Name;
+            }
+            //text += f.Name;
+            newButton.Location = new Point(6, -3 + feats.Count * 20);
+            newButton.BringToFront();
+            //newButton.Click += new EventHandler(BonusCheckChanged);
+            newButton.Font = new Font("Arial", 9.25f, FontStyle.Regular);
+            featsPanel.Controls.Add(newButton);
+            featButtons.Add(newButton);
+            selectedFeat = f;
+            newButton.Select();
         }
 
         //open form for new feat
@@ -1120,6 +1144,12 @@ namespace WindowsFormsApp1
         {
             FeatCreation featCreation = new FeatCreation();
             featCreation.ShowDialog(this);
+        }
+
+        //set description when selecting a new feat to display
+        private void SelectFeat(object sender, EventArgs e)
+        {
+
         }
 
         #endregion

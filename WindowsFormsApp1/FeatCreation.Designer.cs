@@ -101,16 +101,16 @@
             // nameTextBox
             // 
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.nameTextBox.Location = new System.Drawing.Point(77, 3);
+            this.nameTextBox.Location = new System.Drawing.Point(77, 5);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(198, 23);
+            this.nameTextBox.Size = new System.Drawing.Size(191, 23);
             this.nameTextBox.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 2);
+            this.label2.Location = new System.Drawing.Point(7, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 26);
             this.label2.TabIndex = 26;
@@ -135,6 +135,7 @@
             this.saveButton.TabIndex = 24;
             this.saveButton.Text = "Create Feat";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.CreateFeat);
             // 
             // numUsesBox
             // 

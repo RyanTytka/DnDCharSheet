@@ -10,8 +10,8 @@ namespace WindowsFormsApp1
     {
         //fields
         string name, rollName, abilities;
-        int numRolls;
-        bool useRoll;
+        int numUses;
+        bool useRoll, limitedUse;
         Roll roll;
 
         //properties
@@ -27,9 +27,13 @@ namespace WindowsFormsApp1
         {
             get { return useRoll; }
         }
-        public int NumRolls
+        public bool LimitedUse
         {
-            get { return numRolls; }
+            get { return limitedUse; }
+        }
+        public int NumUses
+        {
+            get { return numUses; }
         }
         public string RollName
         {
@@ -50,13 +54,16 @@ namespace WindowsFormsApp1
         }
 
         //constructor
-        public Feat(string name, string rollName, string abilities, bool useRoll, Roll roll)
+        public Feat(string name, string rollName, string abilities, bool useRoll, Roll roll, 
+            bool limited, int numUses = 0)
         {
             this.name = name;
             this.rollName = rollName;
             this.abilities = abilities;
             this.useRoll = useRoll;
             this.roll = roll;
+            this.numUses = numUses;
+            limitedUse = limited;
         }
 
     }

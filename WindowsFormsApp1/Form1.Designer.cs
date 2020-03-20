@@ -169,11 +169,10 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.featsPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.nameLabel = new System.Windows.Forms.TextBox();
             this.levelTextBox = new System.Windows.Forms.TextBox();
             this.newFeatButton = new CustomButtons.ButtonNoPadding();
@@ -215,7 +214,7 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.featsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -2030,28 +2029,27 @@
             this.textBox23.TabIndex = 162;
             this.textBox23.Text = "Click to Edit";
             // 
-            // panel6
+            // featsPanel
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.textBox15);
-            this.panel6.Controls.Add(this.newFeatButton);
-            this.panel6.Controls.Add(this.buttonNoPadding2);
-            this.panel6.Controls.Add(this.buttonNoPadding3);
-            this.panel6.Controls.Add(this.buttonNoPadding4);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.listBox1);
-            this.panel6.Location = new System.Drawing.Point(818, 6);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(220, 311);
-            this.panel6.TabIndex = 96;
+            this.featsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.featsPanel.Controls.Add(this.label4);
+            this.featsPanel.Controls.Add(this.textBox15);
+            this.featsPanel.Controls.Add(this.newFeatButton);
+            this.featsPanel.Controls.Add(this.buttonNoPadding2);
+            this.featsPanel.Controls.Add(this.buttonNoPadding3);
+            this.featsPanel.Controls.Add(this.buttonNoPadding4);
+            this.featsPanel.Controls.Add(this.label3);
+            this.featsPanel.Location = new System.Drawing.Point(818, 6);
+            this.featsPanel.Name = "featsPanel";
+            this.featsPanel.Size = new System.Drawing.Size(220, 313);
+            this.featsPanel.TabIndex = 96;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 180);
+            this.label4.Location = new System.Drawing.Point(64, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 165;
@@ -2059,7 +2057,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(6, 196);
+            this.textBox15.Location = new System.Drawing.Point(6, 199);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(206, 108);
@@ -2077,19 +2075,6 @@
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 72;
             this.label3.Text = "Feats";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "awd",
-            "awd1"});
-            this.listBox1.Location = new System.Drawing.Point(22, 22);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(101, 156);
-            this.listBox1.TabIndex = 164;
             // 
             // nameLabel
             // 
@@ -2418,7 +2403,7 @@
             this.ClientSize = new System.Drawing.Size(1049, 598);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.featsPanel);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox21);
@@ -2467,8 +2452,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.featsPanel.ResumeLayout(false);
+            this.featsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2635,14 +2620,13 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel featsPanel;
         private System.Windows.Forms.TextBox textBox15;
         private CustomButtons.ButtonNoPadding newFeatButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding2;
         private CustomButtons.ButtonNoPadding buttonNoPadding3;
         private CustomButtons.ButtonNoPadding buttonNoPadding4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label4;
         private CustomButtons.ButtonNoPadding saveButton;
         private CustomButtons.ButtonNoPadding SaveAsButton;

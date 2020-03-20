@@ -20,11 +20,12 @@ namespace WindowsFormsApp1
         Roll roll;
 
 
-        //save/create weapon
-        private void button1_Click(object sender, EventArgs e)
+        //save/create feat
+        private void CreateFeat(object sender, EventArgs e)
         {
             ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, rollNameTextBox.Text, abilitiesTextBox.Text,
-                usesRollCheckBox.Checked, roll));
+                usesRollCheckBox.Checked, roll, (usesRollCheckBox.Checked && LimitedUsecheckBox.Checked), 
+                (int)numUsesBox.Value));
             this.Close();
         }
 
@@ -60,13 +61,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        //disable buttons for roll
+        //initialize form
         private void FeatCreation_Load(object sender, EventArgs e)
         {
+            //disable buttons for roll
             usesRollCheckBox.Checked = false;
             setRollButton.Enabled = false;
             LimitedUsecheckBox.Checked = true;
             numUsesBox.Enabled = true;
+            //focus the name text box
+            nameTextBox.Select();
         }
 
         //enable/disable numOfUses box
