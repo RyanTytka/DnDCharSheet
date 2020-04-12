@@ -13,4 +13,6 @@ make check/save buttons different color?
 
 
 eventual features:
+sorcery/ki points etc
 custom file loading menu
+multi page feats

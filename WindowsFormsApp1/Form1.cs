@@ -1129,14 +1129,19 @@ namespace WindowsFormsApp1
                 newButton.Text = f.Name;
             }
             //text += f.Name;
-            newButton.Location = new Point(6, -3 + feats.Count * 20);
+            newButton.Location = new Point(6, 20 + feats.Count * 20);
             newButton.BringToFront();
-            //newButton.Click += new EventHandler(BonusCheckChanged);
+            newButton.CheckedChanged += new EventHandler(SelectFeat);
             newButton.Font = new Font("Arial", 9.25f, FontStyle.Regular);
+            newButton.Tag = feats.Count - 1;
             featsPanel.Controls.Add(newButton);
             featButtons.Add(newButton);
             selectedFeat = f;
             newButton.Select();
+            //enable roll/edit/delete buttons
+            featEditButton.Enabled = true;
+            featRollButton.Enabled = true;
+            featDeleteButton.Enabled = true;
         }
 
         //open form for new feat
@@ -1149,10 +1154,32 @@ namespace WindowsFormsApp1
         //set description when selecting a new feat to display
         private void SelectFeat(object sender, EventArgs e)
         {
-
+            //change description text box to checked box
+            if(((RadioButton)sender).Checked)
+                featDescriptionTextbox.Text = feats[int.Parse(((RadioButton)sender).Tag.ToString())].Abilities;
         }
 
+        //make the roll for the selected feat
+        private void featRoll(object sender, EventArgs e)
+        {
+            //find selected feat
+            int index = 0;
+            foreach(RadioButton button in featButtons)
+            {
+                if(button.Checked)
+                {
+                    UpdateOutput(feats[index].RollName + ": "  + feats[index].Roll.RollDice());
+                    UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                }
+                index++;
+            }
+        }
+
+
+
         #endregion
+
+
 
 
         private void InitiativeRollButton_Click(object sender, EventArgs e)
@@ -1190,12 +1217,17 @@ namespace WindowsFormsApp1
 
 
 
+
         #region save / load
+
+
+
 
         private void saveButton_Click(object sender, EventArgs e)
         {
             saveFile();
         }
+
 
         private void saveFile(string filePath = "")
         {
@@ -1249,7 +1281,12 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
+
         #endregion
+
+
 
 
     }

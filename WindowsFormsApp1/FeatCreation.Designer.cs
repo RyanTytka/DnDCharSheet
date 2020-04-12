@@ -78,7 +78,7 @@
             // 
             this.propertiesLabel.AutoSize = true;
             this.propertiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.propertiesLabel.Location = new System.Drawing.Point(109, 28);
+            this.propertiesLabel.Location = new System.Drawing.Point(109, 29);
             this.propertiesLabel.Name = "propertiesLabel";
             this.propertiesLabel.Size = new System.Drawing.Size(55, 13);
             this.propertiesLabel.TabIndex = 31;
