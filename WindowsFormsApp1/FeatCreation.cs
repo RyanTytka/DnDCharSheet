@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         //save/create feat
         private void CreateFeat(object sender, EventArgs e)
         {
-            ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, rollNameTextBox.Text, abilitiesTextBox.Text,
+            ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
                 usesRollCheckBox.Checked, roll, (usesRollCheckBox.Checked && LimitedUsecheckBox.Checked), 
                 (int)numUsesBox.Value));
             this.Close();
@@ -43,23 +43,6 @@ namespace WindowsFormsApp1
             rollDisplayTextBox.Text = "Roll: " + roll.ToString();
         }
 
-        //clear text of roll name
-        private void rollNameTextBox_Enter(object sender, EventArgs e)
-        {
-            if (rollNameTextBox.Text == "roll name")
-            {
-                rollNameTextBox.Text = "";
-                rollNameTextBox.ForeColor = DefaultForeColor;
-            }
-        }
-        private void rollNameTextBox_Leave(object sender, EventArgs e)
-        {
-            if (rollNameTextBox.Text == "")
-            {
-                rollNameTextBox.ForeColor = Color.DimGray;
-                rollNameTextBox.Text = "roll name";
-            }
-        }
 
         //initialize form
         private void FeatCreation_Load(object sender, EventArgs e)
@@ -98,14 +81,12 @@ namespace WindowsFormsApp1
                     numUsesBox.Enabled = false;
                 setRollButton.Enabled = true;
                 LimitedUsecheckBox.Enabled = true;
-                rollNameTextBox.Enabled = true;
             }
             else
             {
                 numUsesBox.Enabled = false;
                 setRollButton.Enabled = false;
                 LimitedUsecheckBox.Enabled = false;
-                rollNameTextBox.Enabled = false;
             }
         }
     }

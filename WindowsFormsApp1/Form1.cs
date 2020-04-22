@@ -1122,7 +1122,7 @@ namespace WindowsFormsApp1
             //string text = ""; 
             if(f.LimitedUse)
             {
-                newButton.Text = "(" + f.NumUses + "/" + f.NumUses + ") " + f.Name;
+                newButton.Text = "(" + f.UsesLeft + "/" + f.NumUses + ") " + f.Name;
             }
             else 
             {
@@ -1138,9 +1138,8 @@ namespace WindowsFormsApp1
             featButtons.Add(newButton);
             selectedFeat = f;
             newButton.Select();
-            //enable roll/edit/delete buttons
+            //enable edit/delete buttons
             featEditButton.Enabled = true;
-            featRollButton.Enabled = true;
             featDeleteButton.Enabled = true;
         }
 
@@ -1157,6 +1156,26 @@ namespace WindowsFormsApp1
             //change description text box to checked box
             if(((RadioButton)sender).Checked)
                 featDescriptionTextbox.Text = feats[int.Parse(((RadioButton)sender).Tag.ToString())].Abilities;
+            //check to enable/disable roll button
+            if(feats[int.Parse(((RadioButton)sender).Tag.ToString())].UseRoll)
+            {
+                featRollButton.Enabled = true;
+            }
+            else
+            {
+                featRollButton.Enabled = false;
+            }
+            //enable/disable roll button if enough uses left
+            if(feats[int.Parse(((RadioButton)sender).Tag.ToString())].UsesLeft > 0 && feats[int.Parse(((RadioButton)sender).Tag.ToString())].UseRoll)
+            {
+                //enable button
+                featRollButton.Enabled = true;
+            }
+            else
+            {
+                //disable button
+                featRollButton.Enabled = false;
+            }
         }
 
         //make the roll for the selected feat
@@ -1168,8 +1187,17 @@ namespace WindowsFormsApp1
             {
                 if(button.Checked)
                 {
-                    UpdateOutput(feats[index].RollName + ": "  + feats[index].Roll.RollDice());
+                    //roll
+                    UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
                     UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                    //subtract one use 
+                    feats[index].UsesLeft--;
+                    featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
+                    //disable roll button if 0 uses left
+                    if (feats[index].UsesLeft == 0)
+                    {
+                        featRollButton.Enabled = false;
+                    }
                 }
                 index++;
             }
