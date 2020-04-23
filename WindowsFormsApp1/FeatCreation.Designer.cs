@@ -39,13 +39,16 @@
             this.numUsesBox = new System.Windows.Forms.NumericUpDown();
             this.rollDisplayTextBox = new System.Windows.Forms.Label();
             this.LimitedUsecheckBox = new System.Windows.Forms.CheckBox();
+            this.longRestradioButton = new System.Windows.Forms.RadioButton();
+            this.shortRestRadioButton = new System.Windows.Forms.RadioButton();
+            this.OtherradioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numUsesBox)).BeginInit();
             this.SuspendLayout();
             // 
             // setRollButton
             // 
             this.setRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.setRollButton.Location = new System.Drawing.Point(9, 212);
+            this.setRollButton.Location = new System.Drawing.Point(111, 212);
             this.setRollButton.Name = "setRollButton";
             this.setRollButton.Size = new System.Drawing.Size(47, 18);
             this.setRollButton.TabIndex = 40;
@@ -65,11 +68,11 @@
             // 
             this.propertiesLabel.AutoSize = true;
             this.propertiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.propertiesLabel.Location = new System.Drawing.Point(109, 29);
+            this.propertiesLabel.Location = new System.Drawing.Point(99, 29);
             this.propertiesLabel.Name = "propertiesLabel";
-            this.propertiesLabel.Size = new System.Drawing.Size(55, 13);
+            this.propertiesLabel.Size = new System.Drawing.Size(75, 13);
             this.propertiesLabel.TabIndex = 31;
-            this.propertiesLabel.Text = "Abilities:";
+            this.propertiesLabel.Text = "Description:";
             // 
             // usesRollCheckBox
             // 
@@ -77,7 +80,7 @@
             this.usesRollCheckBox.Checked = true;
             this.usesRollCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.usesRollCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usesRollCheckBox.Location = new System.Drawing.Point(10, 162);
+            this.usesRollCheckBox.Location = new System.Drawing.Point(10, 211);
             this.usesRollCheckBox.Name = "usesRollCheckBox";
             this.usesRollCheckBox.Size = new System.Drawing.Size(95, 20);
             this.usesRollCheckBox.TabIndex = 28;
@@ -116,7 +119,7 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(164, 160);
+            this.saveButton.Location = new System.Drawing.Point(164, 182);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(104, 49);
             this.saveButton.TabIndex = 24;
@@ -126,7 +129,7 @@
             // 
             // numUsesBox
             // 
-            this.numUsesBox.Location = new System.Drawing.Point(124, 187);
+            this.numUsesBox.Location = new System.Drawing.Point(124, 183);
             this.numUsesBox.Minimum = new decimal(new int[] {
             1,
             0,
@@ -145,7 +148,7 @@
             // 
             this.rollDisplayTextBox.AutoSize = true;
             this.rollDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rollDisplayTextBox.Location = new System.Drawing.Point(62, 212);
+            this.rollDisplayTextBox.Location = new System.Drawing.Point(8, 235);
             this.rollDisplayTextBox.Name = "rollDisplayTextBox";
             this.rollDisplayTextBox.Size = new System.Drawing.Size(40, 16);
             this.rollDisplayTextBox.TabIndex = 44;
@@ -155,7 +158,7 @@
             // 
             this.LimitedUsecheckBox.AutoSize = true;
             this.LimitedUsecheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.LimitedUsecheckBox.Location = new System.Drawing.Point(10, 188);
+            this.LimitedUsecheckBox.Location = new System.Drawing.Point(10, 183);
             this.LimitedUsecheckBox.Name = "LimitedUsecheckBox";
             this.LimitedUsecheckBox.Size = new System.Drawing.Size(117, 20);
             this.LimitedUsecheckBox.TabIndex = 45;
@@ -163,11 +166,52 @@
             this.LimitedUsecheckBox.UseVisualStyleBackColor = true;
             this.LimitedUsecheckBox.CheckedChanged += new System.EventHandler(this.LimitedUsecheckBox_CheckedChanged);
             // 
+            // longRestradioButton
+            // 
+            this.longRestradioButton.AutoSize = true;
+            this.longRestradioButton.Enabled = false;
+            this.longRestradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.longRestradioButton.Location = new System.Drawing.Point(65, 157);
+            this.longRestradioButton.Name = "longRestradioButton";
+            this.longRestradioButton.Size = new System.Drawing.Size(77, 20);
+            this.longRestradioButton.TabIndex = 46;
+            this.longRestradioButton.TabStop = true;
+            this.longRestradioButton.Text = "long rest";
+            this.longRestradioButton.UseVisualStyleBackColor = true;
+            // 
+            // shortRestRadioButton
+            // 
+            this.shortRestRadioButton.AutoSize = true;
+            this.shortRestRadioButton.Enabled = false;
+            this.shortRestRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.shortRestRadioButton.Location = new System.Drawing.Point(139, 158);
+            this.shortRestRadioButton.Name = "shortRestRadioButton";
+            this.shortRestRadioButton.Size = new System.Drawing.Size(135, 20);
+            this.shortRestRadioButton.TabIndex = 47;
+            this.shortRestRadioButton.TabStop = true;
+            this.shortRestRadioButton.Text = "short and long rest";
+            this.shortRestRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // OtherradioButton
+            // 
+            this.OtherradioButton.AutoSize = true;
+            this.OtherradioButton.Enabled = false;
+            this.OtherradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.OtherradioButton.Location = new System.Drawing.Point(11, 157);
+            this.OtherradioButton.Name = "OtherradioButton";
+            this.OtherradioButton.Size = new System.Drawing.Size(56, 20);
+            this.OtherradioButton.TabIndex = 48;
+            this.OtherradioButton.TabStop = true;
+            this.OtherradioButton.Text = "other";
+            this.OtherradioButton.UseVisualStyleBackColor = true;
+            // 
             // FeatCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 235);
+            this.ClientSize = new System.Drawing.Size(275, 259);
+            this.Controls.Add(this.shortRestRadioButton);
+            this.Controls.Add(this.longRestradioButton);
             this.Controls.Add(this.numUsesBox);
             this.Controls.Add(this.LimitedUsecheckBox);
             this.Controls.Add(this.rollDisplayTextBox);
@@ -179,6 +223,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.OtherradioButton);
             this.Name = "FeatCreation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Feat";
@@ -201,5 +246,8 @@
         private System.Windows.Forms.NumericUpDown numUsesBox;
         private System.Windows.Forms.Label rollDisplayTextBox;
         private System.Windows.Forms.CheckBox LimitedUsecheckBox;
+        private System.Windows.Forms.RadioButton longRestradioButton;
+        private System.Windows.Forms.RadioButton shortRestRadioButton;
+        private System.Windows.Forms.RadioButton OtherradioButton;
     }
 }

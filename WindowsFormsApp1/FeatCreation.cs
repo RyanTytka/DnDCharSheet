@@ -23,9 +23,17 @@ namespace WindowsFormsApp1
         //save/create feat
         private void CreateFeat(object sender, EventArgs e)
         {
+            RefillType type;
+            if (longRestradioButton.Checked)
+                type = RefillType.LONG;
+            else if (shortRestRadioButton.Checked)
+                type = RefillType.SHORT;
+            else
+                type = RefillType.OTHER;
+
             ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
                 usesRollCheckBox.Checked, roll, (usesRollCheckBox.Checked && LimitedUsecheckBox.Checked), 
-                (int)numUsesBox.Value));
+                type, (int)numUsesBox.Value));
             this.Close();
         }
 
@@ -41,6 +49,7 @@ namespace WindowsFormsApp1
         {
             roll = r;
             rollDisplayTextBox.Text = "Roll: " + roll.ToString();
+            saveButton.Enabled = true;
         }
 
 
@@ -51,22 +60,29 @@ namespace WindowsFormsApp1
             usesRollCheckBox.Checked = false;
             setRollButton.Enabled = false;
             LimitedUsecheckBox.Checked = true;
-            numUsesBox.Enabled = true;
+            //numUsesBox.Enabled = true;
             //focus the name text box
             nameTextBox.Select();
         }
 
-        //enable/disable numOfUses box
+        //enable/disable numOfUses box and radio buttons
         private void LimitedUsecheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if(((CheckBox)sender).Checked)
             {
-                //if(usesRollCheckBox.Checked)
-                    numUsesBox.Enabled = true;
+                numUsesBox.Enabled = true;
+                if (!(shortRestRadioButton.Checked || longRestradioButton.Checked || OtherradioButton.Checked))
+                    longRestradioButton.Checked = true;
+                shortRestRadioButton.Enabled = true;
+                longRestradioButton.Enabled = true;
+                OtherradioButton.Enabled = true;
             }
             else
             {
                 numUsesBox.Enabled = false;
+                shortRestRadioButton.Enabled = false;
+                longRestradioButton.Enabled = false;
+                OtherradioButton.Enabled = false;
             }
         }
 
@@ -75,18 +91,23 @@ namespace WindowsFormsApp1
         {
             if (((CheckBox)sender).Checked)
             {
-                if(LimitedUsecheckBox.Checked)
-                    numUsesBox.Enabled = true;
-                else
-                    numUsesBox.Enabled = false;
+                //if(LimitedUsecheckBox.Checked)
+                //    numUsesBox.Enabled = true;
+                //else
+                //    numUsesBox.Enabled = false;
+                //LimitedUsecheckBox.Enabled = true;
                 setRollButton.Enabled = true;
-                LimitedUsecheckBox.Enabled = true;
+                if (roll != null)
+                    saveButton.Enabled = true;
+                else
+                    saveButton.Enabled = false;
             }
             else
             {
-                numUsesBox.Enabled = false;
+                //numUsesBox.Enabled = false;
+                //LimitedUsecheckBox.Enabled = false;
                 setRollButton.Enabled = false;
-                LimitedUsecheckBox.Enabled = false;
+                saveButton.Enabled = true;
             }
         }
     }

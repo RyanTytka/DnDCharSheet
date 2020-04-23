@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
+    public enum RefillType {SHORT, LONG, OTHER};
+    
     public class Feat
     {
+
         //fields
         string name, abilities;
         int numUses, usesLeft;
         bool useRoll, limitedUse;
         Roll roll;
+        RefillType refillType;
 
         //properties
         public Roll Roll
@@ -40,6 +44,10 @@ namespace WindowsFormsApp1
             get { return usesLeft; }
             set { usesLeft = value; }
         }
+        public RefillType RefillTypeProperty
+        {
+            get { return refillType; }
+        }
 
         public string Abilities
         {
@@ -57,7 +65,7 @@ namespace WindowsFormsApp1
 
         //constructor
         public Feat(string name, string abilities, bool useRoll, Roll roll, 
-            bool limited, int numUses = 0)
+            bool limited, RefillType refill, int numUses = 0)
         {
             this.name = name;
             this.abilities = abilities;
@@ -66,6 +74,7 @@ namespace WindowsFormsApp1
             this.numUses = numUses;
             usesLeft = numUses;
             limitedUse = limited;
+            refillType = refill;
         }
 
     }

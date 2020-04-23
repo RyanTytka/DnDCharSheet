@@ -200,9 +200,11 @@
             this.featRollButton = new CustomButtons.ButtonNoPadding();
             this.featDeleteButton = new CustomButtons.ButtonNoPadding();
             this.featEditButton = new CustomButtons.ButtonNoPadding();
-            this.label3 = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.TextBox();
             this.levelTextBox = new System.Windows.Forms.TextBox();
+            this.otherFeatButton = new CustomButtons.ButtonNoPadding();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -2286,27 +2288,28 @@
             // featsPanel
             // 
             this.featsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.featsPanel.Controls.Add(this.featLongRestButton);
             this.featsPanel.Controls.Add(this.featShortRestButton);
+            this.featsPanel.Controls.Add(this.textBox15);
+            this.featsPanel.Controls.Add(this.otherFeatButton);
+            this.featsPanel.Controls.Add(this.featLongRestButton);
             this.featsPanel.Controls.Add(this.label4);
             this.featsPanel.Controls.Add(this.featDescriptionTextbox);
             this.featsPanel.Controls.Add(this.newFeatButton);
             this.featsPanel.Controls.Add(this.featRollButton);
             this.featsPanel.Controls.Add(this.featDeleteButton);
             this.featsPanel.Controls.Add(this.featEditButton);
-            this.featsPanel.Controls.Add(this.label3);
-            this.featsPanel.Location = new System.Drawing.Point(788, 6);
+            this.featsPanel.Location = new System.Drawing.Point(788, 25);
             this.featsPanel.Name = "featsPanel";
-            this.featsPanel.Size = new System.Drawing.Size(250, 313);
+            this.featsPanel.Size = new System.Drawing.Size(240, 294);
             this.featsPanel.TabIndex = 96;
             // 
             // featLongRestButton
             // 
             this.featLongRestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featLongRestButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featLongRestButton.Location = new System.Drawing.Point(148, 23);
+            this.featLongRestButton.Location = new System.Drawing.Point(125, 23);
             this.featLongRestButton.Name = "featLongRestButton";
-            this.featLongRestButton.Size = new System.Drawing.Size(62, 19);
+            this.featLongRestButton.Size = new System.Drawing.Size(64, 19);
             this.featLongRestButton.TabIndex = 167;
             this.featLongRestButton.Text = "Long Rest";
             this.featLongRestButton.UseVisualStyleBackColor = true;
@@ -2315,7 +2318,7 @@
             // 
             this.featShortRestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featShortRestButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featShortRestButton.Location = new System.Drawing.Point(81, 23);
+            this.featShortRestButton.Location = new System.Drawing.Point(59, 23);
             this.featShortRestButton.Name = "featShortRestButton";
             this.featShortRestButton.Size = new System.Drawing.Size(66, 19);
             this.featShortRestButton.TabIndex = 166;
@@ -2327,7 +2330,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(87, 182);
+            this.label4.Location = new System.Drawing.Point(80, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 165;
@@ -2335,20 +2338,20 @@
             // 
             // featDescriptionTextbox
             // 
-            this.featDescriptionTextbox.Location = new System.Drawing.Point(5, 199);
+            this.featDescriptionTextbox.Location = new System.Drawing.Point(5, 181);
             this.featDescriptionTextbox.Multiline = true;
             this.featDescriptionTextbox.Name = "featDescriptionTextbox";
             this.featDescriptionTextbox.ReadOnly = true;
-            this.featDescriptionTextbox.Size = new System.Drawing.Size(239, 108);
+            this.featDescriptionTextbox.Size = new System.Drawing.Size(228, 108);
             this.featDescriptionTextbox.TabIndex = 95;
             this.featDescriptionTextbox.Tag = "";
             // 
             // newFeatButton
             // 
             this.newFeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newFeatButton.Location = new System.Drawing.Point(172, 3);
+            this.newFeatButton.Location = new System.Drawing.Point(161, 3);
             this.newFeatButton.Name = "newFeatButton";
-            this.newFeatButton.Size = new System.Drawing.Size(73, 19);
+            this.newFeatButton.Size = new System.Drawing.Size(75, 19);
             this.newFeatButton.TabIndex = 94;
             this.newFeatButton.Text = "New Feat";
             this.newFeatButton.UseVisualStyleBackColor = true;
@@ -2359,9 +2362,9 @@
             this.featRollButton.Enabled = false;
             this.featRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featRollButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featRollButton.Location = new System.Drawing.Point(211, 23);
+            this.featRollButton.Location = new System.Drawing.Point(110, 3);
             this.featRollButton.Name = "featRollButton";
-            this.featRollButton.Size = new System.Drawing.Size(34, 19);
+            this.featRollButton.Size = new System.Drawing.Size(50, 19);
             this.featRollButton.TabIndex = 93;
             this.featRollButton.Text = "Roll";
             this.featRollButton.UseVisualStyleBackColor = true;
@@ -2371,9 +2374,9 @@
             // 
             this.featDeleteButton.Enabled = false;
             this.featDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.featDeleteButton.Location = new System.Drawing.Point(120, 3);
+            this.featDeleteButton.Location = new System.Drawing.Point(49, 3);
             this.featDeleteButton.Name = "featDeleteButton";
-            this.featDeleteButton.Size = new System.Drawing.Size(51, 19);
+            this.featDeleteButton.Size = new System.Drawing.Size(60, 19);
             this.featDeleteButton.TabIndex = 92;
             this.featDeleteButton.Text = "Delete";
             this.featDeleteButton.UseVisualStyleBackColor = true;
@@ -2382,23 +2385,12 @@
             // 
             this.featEditButton.Enabled = false;
             this.featEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.featEditButton.Location = new System.Drawing.Point(82, 3);
+            this.featEditButton.Location = new System.Drawing.Point(3, 3);
             this.featEditButton.Name = "featEditButton";
-            this.featEditButton.Size = new System.Drawing.Size(37, 19);
+            this.featEditButton.Size = new System.Drawing.Size(45, 19);
             this.featEditButton.TabIndex = 91;
             this.featEditButton.Text = "Edit";
             this.featEditButton.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(3, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 29);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Feats";
             // 
             // nameLabel
             // 
@@ -2423,11 +2415,44 @@
             this.levelTextBox.TabIndex = 167;
             this.levelTextBox.Text = "Level / Class";
             // 
+            // otherFeatButton
+            // 
+            this.otherFeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherFeatButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.otherFeatButton.Location = new System.Drawing.Point(190, 23);
+            this.otherFeatButton.Name = "otherFeatButton";
+            this.otherFeatButton.Size = new System.Drawing.Size(46, 19);
+            this.otherFeatButton.TabIndex = 168;
+            this.otherFeatButton.Text = "Other";
+            this.otherFeatButton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(877, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 168;
+            this.label2.Text = "Feats";
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Location = new System.Drawing.Point(4, 25);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(60, 18);
+            this.textBox15.TabIndex = 153;
+            this.textBox15.Text = "Refill Uses:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 598);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.featsPanel);
@@ -2653,7 +2678,6 @@
         private CustomButtons.ButtonNoPadding featRollButton;
         private CustomButtons.ButtonNoPadding featDeleteButton;
         private CustomButtons.ButtonNoPadding featEditButton;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private CustomButtons.ButtonNoPadding saveButton;
         private CustomButtons.ButtonNoPadding SaveAsButton;
@@ -2663,6 +2687,9 @@
         private CustomButtons.ButtonNoPadding newCharButton;
         private CustomButtons.ButtonNoPadding featLongRestButton;
         private CustomButtons.ButtonNoPadding featShortRestButton;
+        private CustomButtons.ButtonNoPadding otherFeatButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox15;
     }
 }
 
