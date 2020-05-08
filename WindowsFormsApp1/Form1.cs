@@ -1153,28 +1153,46 @@ namespace WindowsFormsApp1
         //set description when selecting a new feat to display
         private void SelectFeat(object sender, EventArgs e)
         {
+            Feat feat = feats[int.Parse(((RadioButton)sender).Tag.ToString())];
+
             //change description text box to checked box
-            if(((RadioButton)sender).Checked)
-                featDescriptionTextbox.Text = feats[int.Parse(((RadioButton)sender).Tag.ToString())].Abilities;
+            if (((RadioButton)sender).Checked)
+                featDescriptionTextbox.Text = feat.Abilities;
             //check to enable/disable roll button
-            if(feats[int.Parse(((RadioButton)sender).Tag.ToString())].UseRoll)
+            if(feat.UseRoll)
             {
                 featRollButton.Enabled = true;
+                featRollButton.Text = "Roll";
             }
             else
             {
-                featRollButton.Enabled = false;
+                if (feat.LimitedUse)
+                {
+                    featRollButton.Text = "Use";
+                    featRollButton.Enabled = true;
+                }
+                else
+                {
+                    featRollButton.Enabled = false;
+                }
             }
             //enable/disable roll button if enough uses left
-            if(feats[int.Parse(((RadioButton)sender).Tag.ToString())].UsesLeft > 0 && feats[int.Parse(((RadioButton)sender).Tag.ToString())].UseRoll)
+            if(feat.UsesLeft > 0)
             {
-                //enable button
                 featRollButton.Enabled = true;
             }
             else
             {
-                //disable button
                 featRollButton.Enabled = false;
+            }
+            //enable /disable other button
+            if(feat.LimitedUse &&  feat.RefillTypeProperty == RefillType.OTHER)
+            {
+                otherFeatButton.Enabled = true;
+            }
+            else
+            {
+                otherFeatButton.Enabled = false;
             }
         }
 
@@ -1187,9 +1205,18 @@ namespace WindowsFormsApp1
             {
                 if(button.Checked)
                 {
-                    //roll
-                    UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
-                    UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                    if (feats[index].UseRoll)
+                    {
+                        //roll button
+                        UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
+                        UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                    }
+                    else {
+                        //use button
+                        UpdateOutput(feats[index].Name + " used");
+                        UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                    }
+
                     //subtract one use 
                     feats[index].UsesLeft--;
                     featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
@@ -1201,6 +1228,60 @@ namespace WindowsFormsApp1
                 }
                 index++;
             }
+        }
+
+        // refill feats that refill on short rest
+        private void featRefillButton(object sender, EventArgs e)
+        {
+            //get type from button tag
+            RefillType buttonType = RefillType.LONG;
+            if((string)((CustomButtons.ButtonNoPadding)sender).Tag == "OTHER")
+            {
+                buttonType = RefillType.OTHER;
+            }
+            else if ((string)((CustomButtons.ButtonNoPadding)sender).Tag == "SHORT")
+            {
+                UpdateOutput("You have taken a short rest");
+                buttonType = RefillType.SHORT;
+            }
+            else
+            {
+                UpdateOutput("You have taken a long rest");
+            }
+
+            //loop through feats
+            int index = 0;
+            foreach(Feat f in feats)
+            {
+                if(f.LimitedUse)
+                {
+                    if(f.LimitedUse)
+                    {
+                        //short and long
+                        if ((f.RefillTypeProperty == buttonType && buttonType != RefillType.OTHER) || 
+                            (buttonType == RefillType.LONG && f.RefillTypeProperty == RefillType.SHORT))
+                        {
+                            f.UsesLeft = f.NumUses;
+                            featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
+                        }
+                        //other type
+                        if(buttonType == RefillType.OTHER && f.RefillTypeProperty == RefillType.OTHER)
+                        {
+                            if(featButtons[index].Checked)
+                            {
+                                f.UsesLeft = f.NumUses;
+                                featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
+                                UpdateOutput(feats[index].Name + " has been regained its uses");
+                            }
+                        }
+                    }
+                }
+                index++;
+            }
+
+            //output
+            featRollButton.Enabled = true;
+            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 
 
@@ -1255,6 +1336,7 @@ namespace WindowsFormsApp1
         {
             saveFile();
         }
+
 
 
         private void saveFile(string filePath = "")

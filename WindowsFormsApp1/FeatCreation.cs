@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                 type = RefillType.OTHER;
 
             ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
-                usesRollCheckBox.Checked, roll, (usesRollCheckBox.Checked && LimitedUsecheckBox.Checked), 
+                usesRollCheckBox.Checked, roll, LimitedUsecheckBox.Checked, 
                 type, (int)numUsesBox.Value));
             this.Close();
         }
