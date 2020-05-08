@@ -1377,9 +1377,32 @@ namespace WindowsFormsApp1
                 for(int i = 0; i < 23; i++)
                     output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
                 for (int i = 0; i < 23; i++)
-                    output.Write(profCheckshalf.GetItemChecked(i));    //half prof
+                    output.Write(profCheckshalf.GetItemChecked(i));         //half prof
                 for (int i = 0; i < 23; i++)
-                    output.Write(profChecksX2.GetItemChecked(i));    //expertise
+                    output.Write(profChecksX2.GetItemChecked(i));           //expertise
+                //
+                output.Write(InitiativeTextBoxNum.Text);                //initiative misc bonus
+                //armor class
+                output.Write(ACArmorBox.Text);            
+                output.Write(ACDexBox.Text);
+                output.Write(ACMiscBox.Text);
+                //hp
+                output.Write(currentHPnumberlabel.Text);
+                output.Write(temphpnumberslabel.Text);
+                output.Write(maxHPNumberLabel.Text);
+                //hit dice
+                output.Write(autoHealHitDice.Checked);
+                output.Write(currentHitDiceDisplayLabel.Text);
+                output.Write(MaxHitDiceDisplayLabel.Text);
+                output.Write(currentHitDice[0]);                //current hit dice array
+                output.Write(currentHitDice[1]);
+                output.Write(currentHitDice[2]);
+                output.Write(currentHitDice[3]);
+                output.Write(maxHitDice[0]);                //max hit dice array
+                output.Write(maxHitDice[1]);
+                output.Write(maxHitDice[2]);
+                output.Write(maxHitDice[3]);
+
 
                 output.Close();
                 MessageBox.Show("File saved successfully", "Save loaded");
@@ -1421,6 +1444,29 @@ namespace WindowsFormsApp1
                     profCheckshalf.SetItemChecked(i, reader.ReadBoolean());         //half prof
                 for (int i = 0; i < 23; i++)
                     profChecksX2.SetItemChecked(i, reader.ReadBoolean());           //expertise
+                //
+                InitiativeTextBoxNum.Text = reader.ReadString();                    //initiative misc bonus
+                //armor class
+                ACArmorBox.Text = reader.ReadString();
+                ACDexBox.Text = reader.ReadString();
+                ACMiscBox.Text = reader.ReadString();
+                //hp
+                currentHPnumberlabel.Text = reader.ReadString();
+                temphpnumberslabel.Text = reader.ReadString();
+                maxHPNumberLabel.Text = reader.ReadString();
+                //hit dice
+                autoHealHitDice.Checked = reader.ReadBoolean();
+                currentHitDiceDisplayLabel.Text = reader.ReadString();
+                MaxHitDiceDisplayLabel.Text = reader.ReadString();
+                currentHitDice[0] = reader.ReadInt32();                 //current hit dice array
+                currentHitDice[1] = reader.ReadInt32();
+                currentHitDice[2] = reader.ReadInt32();
+                currentHitDice[3] = reader.ReadInt32();
+                maxHitDice[0] = reader.ReadInt32();                     //max hit dice array
+                maxHitDice[1] = reader.ReadInt32();
+                maxHitDice[2] = reader.ReadInt32();
+                maxHitDice[3] = reader.ReadInt32();
+
 
                 //saved = true;
                 //this.Text = "Editor - " + filePath;
