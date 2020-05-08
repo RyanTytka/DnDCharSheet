@@ -1354,6 +1354,33 @@ namespace WindowsFormsApp1
                 //save data into file
                 output.Write(nameLabel.Text);               //char name
                 output.Write(levelTextBox.Text);            //char level/class
+                //stats
+                output.Write(strDisplayBox.Text);
+                output.Write(dexDisplayBox.Text);
+                output.Write(conDisplayBox.Text);
+                output.Write(intDisplayBox.Text);
+                output.Write(wisDisplayBox.Text);
+                output.Write(chrDisplayBox.Text);
+                //stat proficiencies
+                output.Write(strProfBox.Checked);
+                output.Write(dexProfBox.Checked);
+                output.Write(conProfBox.Checked);
+                output.Write(intProfBox.Checked);
+                output.Write(wisProfBox.Checked);
+                output.Write(chrProfBox.Checked);
+                //
+                output.Write(profBonusBox.Value);           //proficiency bonus
+                output.Write(raceTextBox.Text);             //race 
+                output.Write(backgroundtextBox.Text);       //background
+                output.Write(AlignmenttextBox.Text);        //alignment
+                //proficiencies
+                for(int i = 0; i < 23; i++)
+                    output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
+                for (int i = 0; i < 23; i++)
+                    output.Write(profCheckshalf.GetItemChecked(i));    //half prof
+                for (int i = 0; i < 23; i++)
+                    output.Write(profChecksX2.GetItemChecked(i));    //expertise
+
                 output.Close();
                 MessageBox.Show("File saved successfully", "Save loaded");
             }
@@ -1368,11 +1395,39 @@ namespace WindowsFormsApp1
                 BinaryReader reader = new BinaryReader(inStream);
                 nameLabel.Text = reader.ReadString();       //char name
                 levelTextBox.Text = reader.ReadString();    //char level/class
+                //stats
+                strDisplayBox.Text = reader.ReadString();
+                dexDisplayBox.Text = reader.ReadString();
+                conDisplayBox.Text = reader.ReadString();
+                intDisplayBox.Text = reader.ReadString();
+                wisDisplayBox.Text = reader.ReadString();
+                chrDisplayBox.Text = reader.ReadString();
+                //stat proficincies
+                strProfBox.Checked = reader.ReadBoolean();
+                dexProfBox.Checked = reader.ReadBoolean();
+                conProfBox.Checked = reader.ReadBoolean();
+                intProfBox.Checked = reader.ReadBoolean();
+                wisProfBox.Checked = reader.ReadBoolean();
+                chrProfBox.Checked = reader.ReadBoolean();
+                //
+                profBonusBox.Value = reader.ReadDecimal();      //proficiency bonus
+                raceTextBox.Text = reader.ReadString();         //race
+                backgroundtextBox.Text = reader.ReadString();   //background
+                AlignmenttextBox.Text = reader.ReadString();    //alignment
+                //proficiencies
+                for (int i = 0; i < 23; i++)
+                    ProficienciesChecks.SetItemChecked(i, reader.ReadBoolean());    //normal prof
+                for (int i = 0; i < 23; i++)
+                    profCheckshalf.SetItemChecked(i, reader.ReadBoolean());         //half prof
+                for (int i = 0; i < 23; i++)
+                    profChecksX2.SetItemChecked(i, reader.ReadBoolean());           //expertise
+
                 //saved = true;
                 //this.Text = "Editor - " + filePath;
                 reader.Close();
 
-
+                UpdateOutput("Character Loaded");
+                UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
             }
         }
 

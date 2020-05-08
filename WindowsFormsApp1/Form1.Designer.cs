@@ -166,9 +166,9 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.raceTextBox = new System.Windows.Forms.TextBox();
+            this.backgroundtextBox = new System.Windows.Forms.TextBox();
+            this.AlignmenttextBox = new System.Windows.Forms.TextBox();
             this.featsPanel = new System.Windows.Forms.Panel();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -2000,38 +2000,38 @@
             this.textBox20.Text = "Alignment";
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox21
+            // raceTextBox
             // 
-            this.textBox21.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.textBox21.Location = new System.Drawing.Point(293, 42);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(116, 14);
-            this.textBox21.TabIndex = 109;
-            this.textBox21.Text = "Click to Edit";
+            this.raceTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.raceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.raceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.raceTextBox.Location = new System.Drawing.Point(293, 42);
+            this.raceTextBox.Name = "raceTextBox";
+            this.raceTextBox.Size = new System.Drawing.Size(116, 14);
+            this.raceTextBox.TabIndex = 109;
+            this.raceTextBox.Text = "Click to Edit";
             // 
-            // textBox22
+            // backgroundtextBox
             // 
-            this.textBox22.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.textBox22.Location = new System.Drawing.Point(293, 59);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(116, 14);
-            this.textBox22.TabIndex = 161;
-            this.textBox22.Text = "Click to Edit";
+            this.backgroundtextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.backgroundtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backgroundtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.backgroundtextBox.Location = new System.Drawing.Point(293, 59);
+            this.backgroundtextBox.Name = "backgroundtextBox";
+            this.backgroundtextBox.Size = new System.Drawing.Size(116, 14);
+            this.backgroundtextBox.TabIndex = 161;
+            this.backgroundtextBox.Text = "Click to Edit";
             // 
-            // textBox23
+            // AlignmenttextBox
             // 
-            this.textBox23.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.textBox23.Location = new System.Drawing.Point(293, 77);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(117, 14);
-            this.textBox23.TabIndex = 162;
-            this.textBox23.Text = "Click to Edit";
+            this.AlignmenttextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AlignmenttextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AlignmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.AlignmenttextBox.Location = new System.Drawing.Point(293, 77);
+            this.AlignmenttextBox.Name = "AlignmenttextBox";
+            this.AlignmenttextBox.Size = new System.Drawing.Size(117, 14);
+            this.AlignmenttextBox.TabIndex = 162;
+            this.AlignmenttextBox.Text = "Click to Edit";
             // 
             // featsPanel
             // 
@@ -2228,6 +2228,7 @@
             this.SaveAsButton.TabIndex = 165;
             this.SaveAsButton.Text = "Save As";
             this.SaveAsButton.UseVisualStyleBackColor = true;
+            this.SaveAsButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // saveButton
             // 
@@ -2237,7 +2238,6 @@
             this.saveButton.TabIndex = 164;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // InitiativeRollButton
             // 
@@ -2462,9 +2462,9 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.featsPanel);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.AlignmenttextBox);
+            this.Controls.Add(this.backgroundtextBox);
+            this.Controls.Add(this.raceTextBox);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.textBox17);
@@ -2675,9 +2675,9 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox raceTextBox;
+        private System.Windows.Forms.TextBox backgroundtextBox;
+        private System.Windows.Forms.TextBox AlignmenttextBox;
         private System.Windows.Forms.Panel featsPanel;
         private System.Windows.Forms.TextBox featDescriptionTextbox;
         private CustomButtons.ButtonNoPadding newFeatButton;

@@ -13,6 +13,7 @@ make check/save buttons different color?
 
 
 eventual features:
+automatic prof bonus
 sorcery/ki points etc
 custom file loading menu
 multi page feats
