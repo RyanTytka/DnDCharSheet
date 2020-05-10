@@ -41,12 +41,16 @@ namespace WindowsFormsApp1
             get
             {
                 string s = "";
-                foreach(string s2 in properties)
+                foreach (string s2 in properties)
                 {
                     s += s2 + Environment.NewLine;
                 }
                 return s;
             }
+        }
+        public string[] PropertiesArray
+        {
+            get { return properties; }
         }
 
         

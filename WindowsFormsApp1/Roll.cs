@@ -31,6 +31,19 @@ namespace WindowsFormsApp1
             get { return currentState; }
             set { currentState = value; }
         }
+        public List<int> DieNum
+        {
+            get { return dieNum; }
+        }
+        public List<int> DieAmount
+        {
+            get { return dieAmount; }
+        }
+        public int Flat
+        {
+            get { return flat; }
+        }
+
 
         //constructor
         public Roll(List<int> dieNum, List<int> dieAmount, int flat = 0, int RollType = 0, string s = "", bool opt = false)

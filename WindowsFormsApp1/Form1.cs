@@ -1402,6 +1402,54 @@ namespace WindowsFormsApp1
                 output.Write(maxHitDice[1]);
                 output.Write(maxHitDice[2]);
                 output.Write(maxHitDice[3]);
+                //weapons
+                foreach(Weapon w in weapons)
+                {
+                    output.Write(-2);               //start marker
+                    output.Write(w.Name);              //weapon name
+                    output.Write(w.Finesse);           //finesse
+                    output.Write(w.Proficient);        //proficient
+                    //properties
+                    output.Write(w.PropertiesArray.Length);     //how many times to loop
+                    foreach (string s in w.PropertiesArray)
+                    {
+                        output.Write(s);
+                    }
+                    //damage roll
+                    foreach (int i in w.Damage.DieNum)
+                    {
+                        output.Write(i);                    //dieNums
+                    }
+                    output.Write(-1);               //end marker
+                    foreach (int i in w.Damage.DieAmount)
+                    {
+                        output.Write(i);                    //dieAmounts
+                    }
+                    output.Write(-1);               //end marker
+                    output.Write(w.Damage.Flat);            //flat amount
+                    //bonus rolls
+                    foreach (Roll r in w.BonusRolls)
+                    {
+                        output.Write(-2);                   //start marker
+                        output.Write(r.Type);                   //roll type
+                        output.Write(r.Name);                   //roll name
+                        output.Write(r.Optional);               //optional
+                        foreach (int i in r.DieNum)
+                        {
+                            output.Write(i);                    //dieNums
+                        }
+                        output.Write(-1);            //end marker
+                        foreach (int i in r.DieAmount)
+                        {
+                            output.Write(i);                    //dieAmounts
+                        }
+                        output.Write(-1);            //end marker
+                        output.Write(r.Flat);            //flat amount
+                    }
+                    output.Write(-1);            //end marker
+                }
+                output.Write(-1);            //end marker
+
 
 
                 output.Close();
@@ -1434,6 +1482,7 @@ namespace WindowsFormsApp1
                 chrProfBox.Checked = reader.ReadBoolean();
                 //
                 profBonusBox.Value = reader.ReadDecimal();      //proficiency bonus
+                profBonus = (int)profBonusBox.Value;
                 raceTextBox.Text = reader.ReadString();         //race
                 backgroundtextBox.Text = reader.ReadString();   //background
                 AlignmenttextBox.Text = reader.ReadString();    //alignment
@@ -1466,7 +1515,88 @@ namespace WindowsFormsApp1
                 maxHitDice[1] = reader.ReadInt32();
                 maxHitDice[2] = reader.ReadInt32();
                 maxHitDice[3] = reader.ReadInt32();
+                //weapons
+                //create weapons
+                int readIn = reader.ReadInt32();
+                while(readIn != -1)
+                {
+                    //weapon stats
+                    string name = reader.ReadString();          //read name
+                    bool finesse = reader.ReadBoolean();        //finesse
+                    bool prof = reader.ReadBoolean();           //proficient
+                    //properties
+                    int numOfProps = reader.ReadInt32();
+                    string[] properties = new string[numOfProps];
+                    for(int i = 0; i < numOfProps; i++)
+                    {
+                        properties[i] = reader.ReadString();
+                    }
+                    //damage
+                    List<int> damageDieNums = new List<int>();
+                    List<int> damageDieAmounts = new List<int>();
+                    int readIn2 = reader.ReadInt32();
+                    while(readIn2 != -1)
+                    {
+                        damageDieNums.Add(readIn2);      //dieNums
+                        readIn2 = reader.ReadInt32();
+                    }
+                    readIn2 = reader.ReadInt32();
+                    while (readIn2 != -1)
+                    {
+                        damageDieAmounts.Add(readIn2);      //dieAmounts
+                        readIn2 = reader.ReadInt32();
+                    }
+                    int DamageFlat = reader.ReadInt32();
+                    Roll damageRoll = new Roll(damageDieNums, damageDieAmounts, DamageFlat);
+                    //bonus rolls
+                    List<Roll> bonusRolls = new List<Roll>();
+                    readIn2 = reader.ReadInt32();
+                    while(readIn2 != -1)
+                    {
+                        List<int> bonusDieNums = new List<int>();
+                        List<int> bonusDieAmounts = new List<int>();
+                        int rollType = reader.ReadInt32();
+                        string bonusName = reader.ReadString();
+                        bool optional = reader.ReadBoolean();
 
+                        int readIn3 = reader.ReadInt32();
+                        while (readIn3 != -1)
+                        {
+                            bonusDieNums.Add(readIn3);      //dieNums
+                            readIn3 = reader.ReadInt32();
+                        }
+                        readIn3 = reader.ReadInt32();
+                        while (readIn3 != -1)
+                        {
+                            bonusDieAmounts.Add(readIn3);      //dieAmounts
+                            readIn3 = reader.ReadInt32();
+                        }
+                        int bonusFlat = reader.ReadInt32();
+
+                        Roll r = new Roll(bonusDieNums, bonusDieAmounts, bonusFlat, rollType, bonusName, optional);
+                        bonusRolls.Add(r);
+                        readIn2 = reader.ReadInt32();
+                    }
+                    //add weapon
+                    AddWeapon(new Weapon(name, bonusRolls, properties, finesse, prof, damageRoll));
+                    readIn = reader.ReadInt32();
+                    //move new weapon button
+                    newWeaponButton.Location = new Point(newWeaponButton.Location.X, newWeaponButton.Location.Y + 18);
+                }
+                //enable buttons
+                if (weapons.Count >= 8)
+                    newWeaponButton.Visible = false;
+                if (weapons.Count >= 1)
+                {
+                    weaponRadioButton1.Checked = true;
+                    weaponPropTextBox.Tag = "properties";
+                    propertiesButtonDisplay.Enabled = true;
+                    bonusButtonDisplay.Enabled = true;
+                    weapondDelButton.Enabled = true;
+                    weaponEditButton.Enabled = true;
+                    atkRoll1.Enabled = true;
+                    dmgRoll2.Enabled = true;
+                }
 
                 //saved = true;
                 //this.Text = "Editor - " + filePath;
