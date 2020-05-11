@@ -2200,6 +2200,7 @@
             this.featEditButton.TabIndex = 91;
             this.featEditButton.Text = "Edit";
             this.featEditButton.UseVisualStyleBackColor = true;
+            this.featEditButton.Click += new System.EventHandler(this.EditFeat);
             // 
             // newCharButton
             // 

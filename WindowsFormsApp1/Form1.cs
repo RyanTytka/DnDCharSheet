@@ -1128,7 +1128,6 @@ namespace WindowsFormsApp1
             {
                 newButton.Text = f.Name;
             }
-            //text += f.Name;
             newButton.Location = new Point(6, 20 + feats.Count * 20);
             newButton.BringToFront();
             newButton.CheckedChanged += new EventHandler(SelectFeat);
@@ -1205,25 +1204,25 @@ namespace WindowsFormsApp1
             {
                 if(button.Checked)
                 {
+                    //subtract one use 
+                    feats[index].UsesLeft--;
                     if (feats[index].UseRoll)
                     {
                         //roll button
                         UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
                         UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                        featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
+                        //disable roll button if 0 uses left
+                        if (feats[index].UsesLeft == 0)
+                        {
+                            featRollButton.Enabled = false;
+                        }
                     }
                     else {
                         //use button
                         UpdateOutput(feats[index].Name + " used");
                         UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
-                    }
-
-                    //subtract one use 
-                    feats[index].UsesLeft--;
-                    featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
-                    //disable roll button if 0 uses left
-                    if (feats[index].UsesLeft == 0)
-                    {
-                        featRollButton.Enabled = false;
+                        featButtons[index].Text = feats[index].Name;
                     }
                 }
                 index++;
@@ -1284,6 +1283,37 @@ namespace WindowsFormsApp1
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 
+        
+        //open feat creation form to edit selected feat
+        private void EditFeat(object sender, EventArgs e)
+        {
+            //find selected feat
+            Feat selectedFeat = null;
+            int index = 0;
+            foreach (RadioButton button in featButtons)
+            {
+                if (button.Checked)
+                {
+                    selectedFeat = feats[index];
+                    FeatCreation featCreation = new FeatCreation(selectedFeat, index);
+                    featCreation.ShowDialog(this);
+                }
+                index++;
+            }
+        }
+
+        public void SetFeat(Feat f, int index)
+        {
+            feats[index] = f;
+            if (f.LimitedUse)
+            {
+                featButtons[index].Text = "(" + f.UsesLeft + "/" + f.NumUses + ") " + f.Name;
+            }
+            else
+            {
+                featButtons[index].Text = f.Name;
+            }
+        }
 
 
         #endregion
@@ -1336,7 +1366,6 @@ namespace WindowsFormsApp1
         {
             saveFile();
         }
-
 
 
         private void saveFile(string filePath = "")

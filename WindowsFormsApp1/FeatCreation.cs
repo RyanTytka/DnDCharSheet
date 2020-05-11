@@ -12,12 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class FeatCreation : Form
     {
-        public FeatCreation()
+        Feat selectedFeat;      //feat to be editing, null if creating new feat
+        int featIndex;          //index of feat to edit
+        Roll roll;
+
+        public FeatCreation(Feat feat = null, int index = 0)
         {
+            selectedFeat = feat;
+            featIndex = index;
+
             InitializeComponent();
         }
 
-        Roll roll;
 
 
         //save/create feat
@@ -31,9 +37,18 @@ namespace WindowsFormsApp1
             else
                 type = RefillType.OTHER;
 
-            ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
-                usesRollCheckBox.Checked, roll, LimitedUsecheckBox.Checked, 
-                type, (int)numUsesBox.Value));
+            if (selectedFeat == null)
+            {
+                ((Form1)Owner).AddFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
+                    usesRollCheckBox.Checked, roll, LimitedUsecheckBox.Checked,
+                    type, (int)numUsesBox.Value));
+            }
+            else
+            {
+                ((Form1)Owner).SetFeat(new Feat(nameTextBox.Text, abilitiesTextBox.Text,
+                    usesRollCheckBox.Checked, roll, LimitedUsecheckBox.Checked,
+                    type, (int)numUsesBox.Value), featIndex);
+            }
             this.Close();
         }
 
@@ -56,13 +71,50 @@ namespace WindowsFormsApp1
         //initialize form
         private void FeatCreation_Load(object sender, EventArgs e)
         {
-            //disable buttons for roll
-            usesRollCheckBox.Checked = false;
-            setRollButton.Enabled = false;
-            LimitedUsecheckBox.Checked = true;
-            //numUsesBox.Enabled = true;
-            //focus the name text box
-            nameTextBox.Select();
+            //check if creating or editing feat
+            if (selectedFeat == null)
+            {
+                //disable buttons for roll
+                usesRollCheckBox.Checked = false;
+                setRollButton.Enabled = false;
+                LimitedUsecheckBox.Checked = true;
+            }
+            else
+            {
+                //set controls to feat stats
+                nameTextBox.Text = selectedFeat.Name;
+                abilitiesTextBox.Text = selectedFeat.Abilities;
+                usesRollCheckBox.Checked = selectedFeat.UseRoll;
+                //limited use
+                if(selectedFeat.LimitedUse)
+                {
+                    if(selectedFeat.RefillTypeProperty == RefillType.SHORT)
+                    {
+                        shortRestRadioButton.Checked = true;
+                    }
+                    else if(selectedFeat.RefillTypeProperty == RefillType.LONG)
+                    {
+                        longRestradioButton.Checked = true;
+                    }
+                    else
+                    {
+                        OtherradioButton.Checked = true;
+                    }
+                    numUsesBox.Value = selectedFeat.NumUses;
+                    LimitedUsecheckBox.Checked = selectedFeat.LimitedUse;
+                    shortRestRadioButton.Enabled = true;
+                    longRestradioButton.Enabled = true;
+                    OtherradioButton.Enabled = true;
+                }
+                //roll
+                if(selectedFeat.UseRoll)
+                {
+                    usesRollCheckBox.Checked = true;
+                    roll = selectedFeat.Roll;
+                    rollDisplayTextBox.Text = "Roll: " + roll.ToString();
+                }
+                saveButton.Text = "Save Feat";
+            }
         }
 
         //enable/disable numOfUses box and radio buttons
@@ -91,11 +143,6 @@ namespace WindowsFormsApp1
         {
             if (((CheckBox)sender).Checked)
             {
-                //if(LimitedUsecheckBox.Checked)
-                //    numUsesBox.Enabled = true;
-                //else
-                //    numUsesBox.Enabled = false;
-                //LimitedUsecheckBox.Enabled = true;
                 setRollButton.Enabled = true;
                 if (roll != null)
                     saveButton.Enabled = true;
@@ -104,8 +151,6 @@ namespace WindowsFormsApp1
             }
             else
             {
-                //numUsesBox.Enabled = false;
-                //LimitedUsecheckBox.Enabled = false;
                 setRollButton.Enabled = false;
                 saveButton.Enabled = true;
             }
