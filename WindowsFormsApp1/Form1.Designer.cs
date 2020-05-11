@@ -121,7 +121,7 @@
             this.weaponRadioButton2 = new System.Windows.Forms.RadioButton();
             this.weaponRadioButton1 = new System.Windows.Forms.RadioButton();
             this.weapon1Name = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.InventoryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ACLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -1474,13 +1474,13 @@
             this.weapon1Name.TabIndex = 72;
             this.weapon1Name.Text = "Weapons";
             // 
-            // textBox12
+            // InventoryTextBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(591, 101);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(191, 218);
-            this.textBox12.TabIndex = 72;
+            this.InventoryTextBox.Location = new System.Drawing.Point(591, 101);
+            this.InventoryTextBox.Multiline = true;
+            this.InventoryTextBox.Name = "InventoryTextBox";
+            this.InventoryTextBox.Size = new System.Drawing.Size(191, 218);
+            this.InventoryTextBox.TabIndex = 72;
             // 
             // label1
             // 
@@ -2476,7 +2476,7 @@
             this.Controls.Add(this.profBonusBox);
             this.Controls.Add(this.profBonusLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.InventoryTextBox);
             this.Controls.Add(this.Weapon1);
             this.Controls.Add(this.profPanel);
             this.Controls.Add(this.HPLabel);
@@ -2619,7 +2619,7 @@
         private CustomButtons.ButtonNoPadding dmgRoll2;
         private CustomButtons.ButtonNoPadding newWeaponButton;
         private System.Windows.Forms.TextBox weaponPropTextBox;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox InventoryTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ACLabel;
         private System.Windows.Forms.Panel panel1;

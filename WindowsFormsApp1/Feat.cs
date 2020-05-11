@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    public enum RefillType {SHORT, LONG, OTHER};
+    public enum RefillType {SHORT = 0, LONG, OTHER};
     
     public class Feat
     {

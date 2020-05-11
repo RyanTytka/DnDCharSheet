@@ -13,9 +13,11 @@ make check/save buttons different color?
 offhand weapon attack
 make flat bonus (on damage rolls) show separately
 load file removes stuff before loading
+more detailed intitiative(what the misc bonuses are for example)
 
 eventual features:
 automatic prof bonus
 sorcery/ki points etc
 custom file loading menu
 multi page feats
+help page(shows how many spells classes have, prof bonus at levels etc)

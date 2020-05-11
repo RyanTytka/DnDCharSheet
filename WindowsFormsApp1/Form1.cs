@@ -1449,7 +1449,40 @@ namespace WindowsFormsApp1
                     output.Write(-1);            //end marker
                 }
                 output.Write(-1);            //end marker
-
+                //inventory
+                output.Write(InventoryTextBox.Text);
+                //feats
+                foreach(Feat f in feats)
+                {
+                    output.Write(-2);       //feat start marker
+                    output.Write(f.Name);                   //feat name
+                    output.Write(f.Abilities);              //abilities
+                    //uses
+                    output.Write(f.LimitedUse);             //limited use
+                    if (f.LimitedUse)
+                    {
+                        output.Write(f.NumUses);                //num of uses
+                        output.Write(f.UsesLeft);               //uses left
+                        output.Write((int)f.RefillTypeProperty);     //refill type  short=1, long, other
+                    }
+                    //roll
+                    output.Write(f.UseRoll);                //uses roll
+                    if(f.UseRoll)
+                    {
+                        foreach (int i in f.Roll.DieNum)
+                        {
+                            output.Write(i);        //die Nums
+                        }
+                        output.Write(-1);       //end marker
+                        foreach (int i in f.Roll.DieAmount)
+                        {
+                            output.Write(i);        //die Amounts
+                        }
+                        output.Write(-1);       //end marker
+                        output.Write(f.Roll.Flat);
+                    }
+                }
+                output.Write(-1);       //feat end marker
 
 
                 output.Close();
@@ -1597,6 +1630,58 @@ namespace WindowsFormsApp1
                     atkRoll1.Enabled = true;
                     dmgRoll2.Enabled = true;
                 }
+                //inventory
+                InventoryTextBox.Text = reader.ReadString();
+                //feats
+                readIn = reader.ReadInt32();
+                while (readIn != -1)
+                {
+                    string featName = reader.ReadString();          //name
+                    string featAbilities = reader.ReadString();     //abilities
+                    //uses
+                    bool featLimitedUses = reader.ReadBoolean();    //limited uses
+                    RefillType featRefillType = 0;
+                    int featNumUses = 0;
+                    int featUsesLeft = 0;
+                    if (featLimitedUses)
+                    {
+                        featNumUses = reader.ReadInt32();
+                        featUsesLeft = reader.ReadInt32();
+                        featRefillType = (RefillType)reader.ReadInt32();
+                    }
+                    //roll
+                    bool featUseRoll = reader.ReadBoolean();
+                    Roll featRoll = null;
+                    if (featUseRoll)
+                    {
+                        List<int> featDieNums = new List<int>();
+                        List<int> featDieAmounts = new List<int>();
+                        int readIn2 = reader.ReadInt32();
+                        while (readIn2 != -1)
+                        {
+                            featDieNums.Add(readIn2);
+                            readIn2 = reader.ReadInt32();
+                        }
+                        readIn2 = reader.ReadInt32();
+                        while (readIn2 != -1)
+                        {
+                            featDieAmounts.Add(readIn2);
+                            readIn2 = reader.ReadInt32();
+                        }
+                        int featFlat = reader.ReadInt32();
+                        featRoll = new Roll(featDieNums, featDieAmounts, featFlat);
+                    }
+                    //create feat
+                    Feat newFeat = new Feat(featName, featAbilities, featUseRoll, featRoll, featLimitedUses,
+                        featRefillType, featNumUses);
+                    if (featLimitedUses)
+                        newFeat.UsesLeft = featUsesLeft;
+                    //add feat
+                    AddFeat(newFeat);
+
+                    //update readIn
+                    readIn = reader.ReadInt32();
+                }                                    
 
                 //saved = true;
                 //this.Text = "Editor - " + filePath;
