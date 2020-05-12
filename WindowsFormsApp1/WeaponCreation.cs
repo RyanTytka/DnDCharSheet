@@ -17,19 +17,32 @@ namespace WindowsFormsApp1
         List<Button> rollButtons;
         List<Label> rollLabels;
 
-        public WeaponCreation()
+        Weapon selectedWeapon;
+        int index;
+
+        public WeaponCreation(Weapon w = null, int index = 0)
         {
             bonusRolls = new List<Roll>();
             rollButtons = new List<Button>();
             rollLabels = new List<Label>();
+            selectedWeapon = w;
+            this.index = index;
             InitializeComponent();
         }
 
         //save/create weapon
         private void button1_Click(object sender, EventArgs e)
         {
-            ((Form1)Owner).AddWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines, 
-                finessCheckBox.Checked, profCheckBox.Checked,damageRoll));
+            if (selectedWeapon == null)
+            {
+                ((Form1)Owner).AddWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
+                    finessCheckBox.Checked, profCheckBox.Checked, damageRoll));
+            }
+            else
+            {
+                ((Form1)Owner).SetWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
+                    finessCheckBox.Checked, profCheckBox.Checked, damageRoll), index);
+            }
             this.Close();
         }
 
@@ -41,7 +54,8 @@ namespace WindowsFormsApp1
         }
 
         //add the roll to the lists
-        public void AddBonusRolls(List<int> nums, List<int> dice, int flat)
+        public void AddBonusRolls(List<int> nums, List<int> dice, int flat, 
+            string _name = "", int _type = -1, bool _optional = false)
         {
             int type = 0;
             if (atkRadioButton.Checked)
@@ -53,24 +67,30 @@ namespace WindowsFormsApp1
                 type = 3;
             }
 
-            bonusRolls.Add(new Roll(nums, dice, flat, type, rollNameTextBox.Text, rollOptionalCheckBox.Checked));
-            TextBox box = new TextBox();
-            box.Location = new Point(1, 1);
-            box.Text = nameTextBox.Text;
-
             //add bonus roll textbox
             Button newButton = new Button();
             Label newBox = new Label();
             newBox.Location = new Point(bonusRollsLabel.Location.X + 8, bonusRollsLabel.Location.Y - 4);
             newButton.Location = new Point(bonusRollsLabel.Location.X - 8, bonusRollsLabel.Location.Y - 4);
-            newBox.Text = rollNameTextBox.Text;
             newButton.Size = new Size(16,16);
             newButton.Font = new Font("Arial", 5.25f, FontStyle.Regular);
             newButton.Tag = "" + rollButtons.Count;
             newButton.Text = "x";
-            rollNameTextBox.Text = "roll name";
             rollNameTextBox.ForeColor = Color.DimGray;
             newButton.Click += new EventHandler(XButtonClick);
+            if (_type != -1)
+            {
+                //editing weapon
+                bonusRolls.Add(new Roll(nums, dice, flat, _type, _name, _optional));
+                newBox.Text = _name;
+            }
+            else
+            {
+                //creating weapon
+                bonusRolls.Add(new Roll(nums, dice, flat, type, rollNameTextBox.Text, rollOptionalCheckBox.Checked));
+                newBox.Text = rollNameTextBox.Text;
+            }
+            rollNameTextBox.Text = "roll name";
             this.Controls.Add(newBox);
             this.Controls.Add(newButton);
             rollButtons.Add(newButton);
@@ -83,7 +103,25 @@ namespace WindowsFormsApp1
         private void WeaponCreation_Load(object sender, EventArgs e)
         {
             bothRadioButton.Checked = true;
-            this.ActiveControl = nameTextBox;
+            if(selectedWeapon != null)
+            {
+                //enter in weapon stats to controls
+                nameTextBox.Text = selectedWeapon.Name;
+                propertiesTextBox.Text = selectedWeapon.Properties;
+                profCheckBox.Checked = selectedWeapon.Proficient;
+                finessCheckBox.Checked = selectedWeapon.Finesse;
+                damageRoll = selectedWeapon.Damage;
+                damageRollDisplay.Text = damageRoll.ToString();
+                saveButton.Text = "Save Weapon";
+                foreach(Roll r in selectedWeapon.BonusRolls)
+                {
+                    AddBonusRolls(r.DieNum, r.DieAmount, r.Flat, r.Name, r.Type, r.Optional);
+                }
+            }
+            else
+            {
+                this.ActiveControl = nameTextBox;
+            }
         }
 
         //clear text of roll name

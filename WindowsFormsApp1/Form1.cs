@@ -507,9 +507,10 @@ namespace WindowsFormsApp1
                 weaponEditButton.Enabled = true;
                 atkRoll1.Enabled = true;
                 dmgRoll2.Enabled = true;
-                //propertiesButtonDisplay.BackColor
             }
         }
+
+
 
         public void AddWeapon(Weapon w)
         {
@@ -525,7 +526,18 @@ namespace WindowsFormsApp1
                     return;
                 }
             }           
-            
+        }
+
+        public void SetWeapon(Weapon w, int index)
+        {
+            weapons[index] = w;
+            weaponButtons[index].Text = w.Name;
+        }
+
+        private void EditWeapon(object sender, EventArgs e)
+        {
+            WeaponCreation weaponCreation = new WeaponCreation(weapons[currentWeapon], currentWeapon);
+            weaponCreation.ShowDialog(this);
         }
 
         //make attack roll with current weapon
