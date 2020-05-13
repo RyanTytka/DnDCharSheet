@@ -1575,8 +1575,12 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
         private void loadFile(string filePath)
         {
+            //reset form first
+            NewCharacter();
             //load characater file
             if (filePath != "")
             {
@@ -1792,6 +1796,98 @@ namespace WindowsFormsApp1
             }
         }
 
+        //click new button
+        private void NewCharacter(object sender, EventArgs e)
+        {
+            NewCharacter();
+        }
+
+        //reset form
+        private void NewCharacter()
+        {
+            //stats
+            strDisplayBox.Text = "10";                        
+            dexDisplayBox.Text = "10";
+            conDisplayBox.Text = "10";
+            intDisplayBox.Text = "10";
+            wisDisplayBox.Text = "10";
+            chrDisplayBox.Text = "10";
+            strProfBox.Checked = false;
+            dexProfBox.Checked = false;
+            conProfBox.Checked = false;
+            intProfBox.Checked = false;
+            wisProfBox.Checked = false;
+            chrProfBox.Checked = false;
+            profBonusBox.Value = 2;
+            SpeedTextBox.Text = "30";
+            raceTextBox.Text = "Click to Edit";
+            backgroundtextBox.Text = "Click to Edit";
+            AlignmenttextBox.Text = "Click to Edit";
+            for (int i = 0; i < 23; i++)
+                ProficienciesChecks.SetItemChecked(i, false);  
+            for (int i = 0; i < 23; i++)
+                profCheckshalf.SetItemChecked(i, false);       
+            for (int i = 0; i < 23; i++)
+                profChecksX2.SetItemChecked(i, false);
+            InitiativeTextBoxNum.Text = "";
+            InitiativeRollDisplay.Text = "";
+            ACArmorBox.Text = "10";
+            ACBox.Text = "10";
+            ACDexBox.Text = "0";
+            ACMiscBox.Text = "0";
+            InventoryTextBox.Text = "";
+            currentHPnumberlabel.Text = "0";
+            maxHPNumberLabel.Text = "10";
+            temphpnumberslabel.Text = "0";
+            autoHealHitDice.Checked = false;
+            currentHitDiceDisplayLabel.Text = "Current: ";
+            MaxHitDiceDisplayLabel.Text = "Max: ";
+            HitDiced6NumBox.Value = 0;
+            HitDiced8NumBox.Value = 0;
+            HitDiced10NumBox.Value = 0;
+            HitDiced12NumBox.Value = 0;
+            nameLabel.Text = "Character Name";
+            levelTextBox.Text = "Level / Class";
+            weaponPropTextBox.Text = "";
+            //buttons
+            foreach (RadioButton b in weaponButtons)
+            {
+                b.Visible = false;
+            }
+            foreach(Control c in currentBonusRolls)
+            {
+                Weapon1.Controls.Remove(c);
+            }
+            newWeaponButton.Location = new Point(13,19);
+            newWeaponButton.Visible = true;
+            weapondDelButton.Enabled = false;
+            weaponEditButton.Enabled = false;
+            atkRoll1.Enabled = false;
+            dmgRoll2.Enabled = false;
+            foreach (RadioButton b in featButtons)
+            {
+                featsPanel.Controls.Remove(b);
+            }
+            featEditButton.Enabled = false;
+            featDeleteButton.Enabled = false;
+            featRollButton.Enabled = false;
+            otherFeatButton.Enabled = false;
+            //reset variables
+            weapons = new List<Weapon>();
+            currentWeapon = 0;
+            profBonus = 2;
+            outputList = new List<string>();
+            currentBonusRolls = new List<Control>();
+            MaxHP = 10;
+            currentHP = 0;
+            tempHP = 0;
+            currentHitDice = new int[4];
+            maxHitDice = new int[4];
+            feats = new List<Feat>();
+            featButtons = new List<RadioButton>();
+            selectedFeat = null;
+            featDescriptionTextbox.Text = "";
+        }
 
 
 
