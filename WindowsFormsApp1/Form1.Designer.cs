@@ -1393,6 +1393,7 @@
             this.weapondDelButton.TabIndex = 92;
             this.weapondDelButton.Text = "Delete";
             this.weapondDelButton.UseVisualStyleBackColor = true;
+            this.weapondDelButton.Click += new System.EventHandler(this.DeleteWeapon);
             // 
             // weaponEditButton
             // 
@@ -2409,6 +2410,7 @@
             this.featDeleteButton.TabIndex = 92;
             this.featDeleteButton.Text = "Delete";
             this.featDeleteButton.UseVisualStyleBackColor = true;
+            this.featDeleteButton.Click += new System.EventHandler(this.DeleteFeat);
             // 
             // featEditButton
             // 

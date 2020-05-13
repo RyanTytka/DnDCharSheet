@@ -540,6 +540,22 @@ namespace WindowsFormsApp1
             weaponCreation.ShowDialog(this);
         }
 
+
+        private void DeleteWeapon(object sender, EventArgs e)
+        {
+            weaponButtons[weapons.Count - 1].Visible = false;
+            for (int i = currentWeapon; i < weapons.Count - 1; i++)
+            {
+                weaponButtons[i].Text = weaponButtons[i + 1].Text;
+            }
+            weapons.RemoveAt(currentWeapon);
+            //move new weapon button
+            newWeaponButton.Location = new Point(newWeaponButton.Location.X, newWeaponButton.Location.Y - 18);
+            if (weapons.Count < 8)
+                newWeaponButton.Visible = true;
+
+        }
+
         //make attack roll with current weapon
         private void atkRoll1_Click(object sender, EventArgs e)
         {
@@ -1159,6 +1175,34 @@ namespace WindowsFormsApp1
         {
             FeatCreation featCreation = new FeatCreation();
             featCreation.ShowDialog(this);
+        }
+
+
+        private void DeleteFeat(object sender, EventArgs e)
+        {
+            //find selected feat
+            int i = 0, index = 0;
+            foreach(RadioButton b in featButtons)
+            {
+                if (b.Checked)
+                    index = i;
+                i++;
+            }
+            feats.RemoveAt(index);
+            featsPanel.Controls.Remove(featButtons[index]);
+            featButtons.RemoveAt(index);
+            //reset tags
+            i = 0;
+            foreach(RadioButton b in featButtons)
+            {
+                b.Tag = i;
+                i++;
+            }
+            //move buttons
+            for(int n = index; n < featButtons.Count; n++)
+            {
+                featButtons[n].Location = new Point(featButtons[n].Location.X, featButtons[n].Location.Y - 20);
+            }
         }
 
         //set description when selecting a new feat to display
