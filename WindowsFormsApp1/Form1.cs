@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
 
     public partial class Form1 : Form
     {
+
+        #region initialization
+
+
         bool saveThrowAdv;
         double[] Saveproficiencies = new double[6];
         TextBox[] mods;
@@ -34,6 +38,7 @@ namespace WindowsFormsApp1
         Feat selectedFeat;
         
         string fileName;
+        bool saved;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,37 +67,39 @@ namespace WindowsFormsApp1
             weaponButtons.Add(weaponRadioButton6);
             weaponButtons.Add(weaponRadioButton7);
             weaponButtons.Add(weaponRadioButton8);
-
-            //load characater file
-            //if(filePath != "")
-            //{   
-            //    Stream inStream = File.OpenRead(filePath);
-            //    BinaryReader reader = new BinaryReader(inStream);
-            //    nameLabel.Text = reader.ReadString();
-            //    //saved = true;
-            //    //this.Text = "Editor - " + filePath;
-            //    reader.Close();
-            //}
-
-
         }
 
 
-        public Form1()//string file="")
+        public Form1()
         {
-            //filePath = file;
             InitializeComponent();
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-
-
-        // vvvvvvvvvvv attribute methods vvvvvvvvvvvvvv
+        #endregion
 
         #region Saving Throws
+
+        private void SaveThrow(int statI, string statS)
+        {
+            int roll;
+            int pb = (int)(profBonus * Saveproficiencies[statI]); //checks if you add proficiency bonus
+            if (Saveproficiencies[statI] == 1)
+                pb = profBonus;
+
+            if (saveThrowAdv) //reroll for advantage/disadvantage
+            {
+                roll = Roll.RollSingleDie(20);
+                UpdateOutput(statS + " saving throw: " + (roll + pb + statMods[statI]) + " (Roll: " + roll + ", " +
+                    "Proficency Bonus: " + pb + ", Ability Modifier: " + statMods[statI] + ")");
+                UpdateOutput(Environment.NewLine);
+            }
+
+            roll = Roll.RollSingleDie(20);
+            UpdateOutput(statS + " saving throw: " + (roll + pb + statMods[statI]) + " (Roll: " + roll + ", " +
+                "Proficency Bonus: " + pb + ", Ability Modifier: " + statMods[statI] + ")");
+            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+        }
+
         private void strSaveButton_Click(object sender, EventArgs e)
         {
             SaveThrow(0, "Strength");
@@ -117,9 +124,6 @@ namespace WindowsFormsApp1
         {
             SaveThrow(5, "Charisma");
         }
-        #endregion
-
-        #region Add/Subtract Buttons
 
         private void strAddButton_Click(object sender, EventArgs e)
         {
@@ -272,11 +276,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
-
-
-        // vvvvvvvvvvv Proficiencies vvvvvvvvvvvvvvvvvvv
-
-        #region Misc
+        #region Proficiencies
 
         // rolls an ability check
         private void rollEditButton_Click(object sender, EventArgs e)
@@ -338,9 +338,7 @@ namespace WindowsFormsApp1
 
 
         }
-        #endregion
 
-        #region Buttons
 
         private void ProficienciesChecks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -404,86 +402,6 @@ namespace WindowsFormsApp1
 
 
         #endregion
-
-
-
-        // vvvvvvvv helper methods vvvvvvvvvvvv
-
-
-        private string RollDice()
-        {
-            Random rng = new Random();
-            string output = "You rolled a (";
-            List<int>[] rolls = Roll.RollDice(0, 4);
-
-            int sum = 0;
-            //add the rolls together for total
-            for (int j = 0; j < rolls.Length; j++)
-            {
-                if (rolls[j] != null)
-                {
-                    for (int k = 0; k < rolls[j].Count; k++)
-                    {
-                        sum += rolls[j][k];
-                        output += rolls[j][k] + " ";
-                    }
-                }
-            }
-            output += ")" + sum;
-
-
-
-            return output;
-        }
-
-        //add a string to the log.  Displays the last 10 lines
-        private void UpdateOutput(string s)
-        {
-            //add s to history
-            outputList.Add(s);
-
-            //take the last 10 lines
-            string log = "";
-            for(int i = Math.Max(0,outputList.Count - 10); i < outputList.Count; i++)
-            {
-                log += outputList[i];
-            }
-
-            //set the display text box
-            outputTextBox.Text = log;
-        }
-
-        //converts true to 1, false to 0
-        private int BoolToInt(bool b)
-        {
-            if (b)
-                return 1;
-            else
-                return 0;
-        }
-
-        private void SaveThrow(int statI, string statS)
-        {
-            int roll;
-            int pb = (int)(profBonus * Saveproficiencies[statI]); //checks if you add proficiency bonus
-            if (Saveproficiencies[statI] == 1)
-                pb = profBonus;
-
-            if (saveThrowAdv) //reroll for advantage/disadvantage
-            {
-                roll = Roll.RollSingleDie(20);
-                UpdateOutput(statS + " saving throw: " + (roll + pb + statMods[statI]) + " (Roll: " + roll + ", " +
-                    "Proficency Bonus: " + pb + ", Ability Modifier: " + statMods[statI] + ")");
-                UpdateOutput(Environment.NewLine);
-            }
-
-            roll = Roll.RollSingleDie(20);
-            UpdateOutput(statS + " saving throw: " + (roll + pb + statMods[statI]) + " (Roll: " + roll + ", " +
-                "Proficency Bonus: " + pb + ", Ability Modifier: " + statMods[statI] + ")");
-            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
-        }
-
-        // vvvvvvvvvvvvvv    Weapons   vvvvvvvvvvvvvvvv
 
         #region weapons
 
@@ -797,17 +715,7 @@ namespace WindowsFormsApp1
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 
-#endregion
-
-
-        // vvvvvvvvv Name / AC / etc vvvvvvvvvvvvvvvvvvvv
-
-        //set internal prof bonus
-        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
-        {
-            profBonus = (int)profBonusBox.Value;
-        }
-
+        #endregion
 
         #region HP
 
@@ -1374,45 +1282,6 @@ namespace WindowsFormsApp1
 
         #endregion
 
-
-
-
-        private void InitiativeRollButton_Click(object sender, EventArgs e)
-        {
-            int roll = Roll.RollSingleDie(20);
-            string misc = "";
-            if(int.TryParse(InitiativeTextBoxNum.Text, out int x) && x != 0)
-                misc = ", Misc: " + x;
-            int total = roll + statMods[1] + x;
-
-            InitiativeRollDisplay.Text = total.ToString();
-
-            UpdateOutput("Initiative Roll: " + total + "  (Roll: " + roll + ", Dex: " + statMods[1] + misc + ")");
-            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
-        }
-
-        private void RemoveLetters(object sender, EventArgs e)
-        {
-            //remove letters
-            string s = ((TextBox)sender).Text;
-            string end = "";
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (int.TryParse(s[i].ToString(), out int num) ||
-                    (i == 0 && s[i] == '-'))
-                {
-                    end += s[i];
-                }
-            }
-            ((TextBox)sender).Text = end;
-            ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
-            ((TextBox)sender).SelectionLength = 0;
-        }
-
-
-
-
-
         #region save / load
 
 
@@ -1893,7 +1762,105 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region Misc
 
+        //set internal prof bonus
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            profBonus = (int)profBonusBox.Value;
+        }
+
+        private void InitiativeRollButton_Click(object sender, EventArgs e)
+        {
+            int roll = Roll.RollSingleDie(20);
+            string misc = "";
+            if (int.TryParse(InitiativeTextBoxNum.Text, out int x) && x != 0)
+                misc = ", Misc: " + x;
+            int total = roll + statMods[1] + x;
+
+            InitiativeRollDisplay.Text = total.ToString();
+
+            UpdateOutput("Initiative Roll: " + total + "  (Roll: " + roll + ", Dex: " + statMods[1] + misc + ")");
+            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+        }
+
+        private string RollDice()
+        {
+            Random rng = new Random();
+            string output = "You rolled a (";
+            List<int>[] rolls = Roll.RollDice(0, 4);
+
+            int sum = 0;
+            //add the rolls together for total
+            for (int j = 0; j < rolls.Length; j++)
+            {
+                if (rolls[j] != null)
+                {
+                    for (int k = 0; k < rolls[j].Count; k++)
+                    {
+                        sum += rolls[j][k];
+                        output += rolls[j][k] + " ";
+                    }
+                }
+            }
+            output += ")" + sum;
+
+
+
+            return output;
+        }
+
+        //add a string to the log.  Displays the last 10 lines
+        private void UpdateOutput(string s)
+        {
+            //add s to history
+            outputList.Add(s);
+
+            //take the last 10 lines
+            string log = "";
+            for (int i = Math.Max(0, outputList.Count - 10); i < outputList.Count; i++)
+            {
+                log += outputList[i];
+            }
+
+            //set the display text box
+            outputTextBox.Text = log;
+        }
+
+        //converts true to 1, false to 0
+        private int BoolToInt(bool b)
+        {
+            if (b)
+                return 1;
+            else
+                return 0;
+        }
+
+        #endregion
+
+        #region helper methods
+
+
+
+        private void RemoveLetters(object sender, EventArgs e)
+        {
+            //remove letters
+            string s = ((TextBox)sender).Text;
+            string end = "";
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (int.TryParse(s[i].ToString(), out int num) ||
+                    (i == 0 && s[i] == '-'))
+                {
+                    end += s[i];
+                }
+            }
+            ((TextBox)sender).Text = end;
+            ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
+            ((TextBox)sender).SelectionLength = 0;
+        }
+
+        #endregion
 
 
     }

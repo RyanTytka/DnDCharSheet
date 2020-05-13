@@ -229,7 +229,6 @@
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.Size = new System.Drawing.Size(628, 93);
             this.outputTextBox.TabIndex = 0;
-            this.outputTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // outputLabel
             // 
