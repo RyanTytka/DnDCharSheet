@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
         Feat selectedFeat;
         
         string fileName;
-        bool saved;
+        bool saved = true;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -410,7 +410,13 @@ namespace WindowsFormsApp1
         {
             WeaponCreation weaponCreation = new WeaponCreation();
             weaponCreation.ShowDialog(this);
+        }
 
+
+
+        public void AddWeapon(Weapon w)
+        {
+            weapons.Add(w);
             //move new weapon button
             newWeaponButton.Location = new Point(newWeaponButton.Location.X, newWeaponButton.Location.Y + 18);
             if (weapons.Count >= 8)
@@ -425,17 +431,11 @@ namespace WindowsFormsApp1
                 weaponEditButton.Enabled = true;
                 atkRoll1.Enabled = true;
                 dmgRoll2.Enabled = true;
+                SwitchWeaponDisplay(propertiesButtonDisplay, null);
             }
-        }
-
-
-
-        public void AddWeapon(Weapon w)
-        {
-            weapons.Add(w);
-
+            UpdateWeaponDisplay();
             //show controls
-            foreach(RadioButton button in weaponButtons)
+            foreach (RadioButton button in weaponButtons)
             {
                 if (!button.Visible)
                 {
@@ -443,13 +443,14 @@ namespace WindowsFormsApp1
                     button.Text = w.Name;
                     return;
                 }
-            }           
+            }
         }
 
         public void SetWeapon(Weapon w, int index)
         {
             weapons[index] = w;
             weaponButtons[index].Text = w.Name;
+            UpdateWeaponDisplay();
         }
 
         private void EditWeapon(object sender, EventArgs e)
@@ -471,7 +472,28 @@ namespace WindowsFormsApp1
             newWeaponButton.Location = new Point(newWeaponButton.Location.X, newWeaponButton.Location.Y - 18);
             if (weapons.Count < 8)
                 newWeaponButton.Visible = true;
-
+            if (currentWeapon == weapons.Count)
+                currentWeapon--;
+            if(weapons.Count > 0)
+                weaponButtons[currentWeapon].Checked = true;
+            UpdateWeaponDisplay();
+            if(weapons.Count == 0)
+            {
+                //set text boxes to gray
+                propertiesButtonDisplay.BackColor = Color.DimGray;
+                bonusButtonDisplay.BackColor = Color.DimGray;
+                weaponPropTextBox.Visible = false;
+                //delete bonus roll controls
+                foreach (Control c in currentBonusRolls)
+                {
+                    Weapon1.Controls.Remove(c);
+                }
+                //disable buttons
+                atkRoll1.Enabled = false;
+                dmgRoll2.Enabled = false;
+                weapondDelButton.Enabled = false;
+                weaponEditButton.Enabled = false;
+            }
         }
 
         //make attack roll with current weapon
@@ -514,13 +536,22 @@ namespace WindowsFormsApp1
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 
-
+        //finds active weapon and calls updateWeaponDisplay
         private void UpdateWeapon(object sender, EventArgs e)
         {
             if(((RadioButton)sender).Checked)
             {
                 currentWeapon = int.Parse(((RadioButton)sender).Name.Substring(17)) - 1;
                 //update current weapon info
+                UpdateWeaponDisplay();
+            }
+        }
+
+        //updates weapon display tab
+        private void UpdateWeaponDisplay()
+        {
+            if (weapons.Count > 0)
+            {
                 if ((string)weaponPropTextBox.Tag == "properties")
                 {
                     //show properties
@@ -579,15 +610,13 @@ namespace WindowsFormsApp1
 
                     }
                 }
-
-
             }
         }
 
         //switch between properties tab and bonus rolls tab
         private void SwitchWeaponDisplay(object sender, EventArgs e)
         {
-            if (((string)weaponPropTextBox.Tag) != "")
+            if (((string)weaponPropTextBox.Tag) != "" && weapons.Count > 0)
             {
                 weaponPropTextBox.Tag = ((Button)sender).Tag;
                 //change colors/tag
@@ -1438,7 +1467,7 @@ namespace WindowsFormsApp1
                 }
                 output.Write(-1);       //feat end marker
 
-
+                saved = true;
                 output.Close();
                 MessageBox.Show("File saved successfully", "Save loaded");
             }
@@ -1571,8 +1600,6 @@ namespace WindowsFormsApp1
                     //add weapon
                     AddWeapon(new Weapon(name, bonusRolls, properties, finesse, prof, damageRoll));
                     readIn = reader.ReadInt32();
-                    //move new weapon button
-                    newWeaponButton.Location = new Point(newWeaponButton.Location.X, newWeaponButton.Location.Y + 18);
                 }
                 //enable buttons
                 if (weapons.Count >= 8)
@@ -1641,8 +1668,8 @@ namespace WindowsFormsApp1
                     readIn = reader.ReadInt32();
                 }                                    
 
-                //saved = true;
-                //this.Text = "Editor - " + filePath;
+                saved = true;
+                this.Text = nameLabel.Text + " Character sheet";
                 reader.Close();
 
                 UpdateOutput("Character Loaded");
@@ -1669,6 +1696,7 @@ namespace WindowsFormsApp1
         private void NewCharacter(object sender, EventArgs e)
         {
             NewCharacter();
+            saved = true;
         }
 
         //reset form
@@ -1758,11 +1786,33 @@ namespace WindowsFormsApp1
             featDescriptionTextbox.Text = "";
         }
 
-
+        //make sure user has saved before exiting
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!saved)
+            {
+                if (MessageBox.Show("There are unsaved changes.  Are you sure you want to exit?", "Unsaved changes", MessageBoxButtons.YesNo) == DialogResult.No)
+                    e.Cancel = true;
+            }
+        }
 
         #endregion
 
         #region Misc
+
+        //even handler to for when the form is changed
+        private void SetUnsaved(object sender, EventArgs e)
+        {
+            SetUnsaved();
+        }
+
+        //internal method, sets saved to false and append name
+        private void SetUnsaved()
+        {
+            if (saved)
+                this.Text += " *";
+            saved = false;
+        }
 
         //set internal prof bonus
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
@@ -1809,6 +1859,13 @@ namespace WindowsFormsApp1
 
             return output;
         }
+
+        private void nameLabel_TextChanged(object sender, EventArgs e)
+        {
+            saved = false;
+            this.Text = nameLabel.Text + " Character sheet *";
+        }
+
 
         //add a string to the log.  Displays the last 10 lines
         private void UpdateOutput(string s)

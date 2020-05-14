@@ -2092,6 +2092,7 @@
             this.nameLabel.Size = new System.Drawing.Size(139, 20);
             this.nameLabel.TabIndex = 166;
             this.nameLabel.Text = "Character Name";
+            this.nameLabel.TextChanged += new System.EventHandler(this.nameLabel_TextChanged);
             // 
             // levelTextBox
             // 
@@ -2493,6 +2494,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Character Sheet";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statPanel.ResumeLayout(false);
             this.statPanel.PerformLayout();
