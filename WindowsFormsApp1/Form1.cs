@@ -67,6 +67,8 @@ namespace WindowsFormsApp1
             weaponButtons.Add(weaponRadioButton6);
             weaponButtons.Add(weaponRadioButton7);
             weaponButtons.Add(weaponRadioButton8);
+
+            saveButton.Enabled = false;
         }
 
 
@@ -1314,24 +1316,79 @@ namespace WindowsFormsApp1
         #region save / load
 
 
-
-
-        private void saveButton_Click(object sender, EventArgs e)
+        //even handler to for when the form is changed
+        private void SetUnsaved(object sender, EventArgs e)
         {
-            saveFile();
+            SetUnsaved();
+        }
+
+        //internal method, sets saved to false and append name
+        private void SetUnsaved()
+        {
+            if (saved)
+                this.Text += " *";
+            saved = false;
         }
 
 
+        private void SaveAsButtonClick(object sender, EventArgs e)
+        {
+            saveFile();
+            saveButton.Enabled = true;
+        }
+
+        private void SaveButtonClick(object sender, EventArgs e)
+        {
+            saveFile(fileName);
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            //load file and open editor
+            OpenFileDialog loadFileDialog = new OpenFileDialog();
+            loadFileDialog.Title = "Load a Character";
+            loadFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = loadFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //place info in
+                fileName = loadFileDialog.FileName;
+                loadFile(fileName);
+            }
+            saveButton.Enabled = true;
+        }
+
+        //click new button
+        private void NewCharacter(object sender, EventArgs e)
+        {
+            NewCharacter();
+            saved = true;
+            saveButton.Enabled = false;
+        }
+
         private void saveFile(string filePath = "")
         {
-            string saveFilePath;
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.Title = "Save a Character";
-            saveFile.Filter = "Player Character| *.pc";
-            DialogResult result = saveFile.ShowDialog();
-            if (result == DialogResult.OK && saveFile.FileName != null)
+            string saveFilePath = "";
+            DialogResult result = DialogResult.None;
+            SaveFileDialog saveFile = null;
+            if (filePath == "")
             {
-                saveFilePath = saveFile.FileNames[0];
+                saveFile = new SaveFileDialog();
+                saveFile.Title = "Save a Character";
+                saveFile.Filter = "Player Character| *.pc";
+                result = saveFile.ShowDialog();
+            }
+            if ((result == DialogResult.OK && saveFile.FileName != null) || filePath != "")
+            {
+                if (filePath == "")
+                {
+                    saveFilePath = saveFile.FileNames[0];
+                    fileName = saveFilePath;
+                }
+                else
+                {
+                    saveFilePath = filePath;
+                }
                 Stream outStream = File.OpenWrite(saveFilePath);
                 BinaryWriter output = new BinaryWriter(outStream);
                 //save data into file
@@ -1467,6 +1524,8 @@ namespace WindowsFormsApp1
                 }
                 output.Write(-1);       //feat end marker
 
+                if(!saved)
+                    this.Text = this.Text.Substring(0, this.Text.Length - 2);
                 saved = true;
                 output.Close();
                 MessageBox.Show("File saved successfully", "Save loaded");
@@ -1670,6 +1729,7 @@ namespace WindowsFormsApp1
 
                 saved = true;
                 this.Text = nameLabel.Text + " Character sheet";
+                fileName = filePath;
                 reader.Close();
 
                 UpdateOutput("Character Loaded");
@@ -1677,27 +1737,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void loadButton_Click(object sender, EventArgs e)
-        {
-            //load file and open editor
-            OpenFileDialog loadFileDialog = new OpenFileDialog();
-            loadFileDialog.Title = "Load a Character";
-            loadFileDialog.Filter = "Player Character| *.pc";
-            DialogResult result = loadFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                //place info in
-                fileName = loadFileDialog.FileName;
-                loadFile(fileName);
-            }
-        }
-
-        //click new button
-        private void NewCharacter(object sender, EventArgs e)
-        {
-            NewCharacter();
-            saved = true;
-        }
 
         //reset form
         private void NewCharacter()
@@ -1784,6 +1823,7 @@ namespace WindowsFormsApp1
             featButtons = new List<RadioButton>();
             selectedFeat = null;
             featDescriptionTextbox.Text = "";
+            this.Text = "Character sheet";
         }
 
         //make sure user has saved before exiting
@@ -1800,19 +1840,7 @@ namespace WindowsFormsApp1
 
         #region Misc
 
-        //even handler to for when the form is changed
-        private void SetUnsaved(object sender, EventArgs e)
-        {
-            SetUnsaved();
-        }
 
-        //internal method, sets saved to false and append name
-        private void SetUnsaved()
-        {
-            if (saved)
-                this.Text += " *";
-            saved = false;
-        }
 
         //set internal prof bonus
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
