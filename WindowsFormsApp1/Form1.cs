@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
         List<Feat> feats;
         List<RadioButton> featButtons;
         Feat selectedFeat;
+        bool removedLetters = false;
         
         string fileName;
         bool saved = true;
@@ -187,26 +188,32 @@ namespace WindowsFormsApp1
         private void strProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[0] = BoolToInt(strProfBox.Checked);
+            SetUnsaved();
         }
         private void dexProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[1] = BoolToInt(dexProfBox.Checked);
+            SetUnsaved();
         }
         private void conProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[2] = BoolToInt(conProfBox.Checked);
+            SetUnsaved();
         }
         private void intProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[3] = BoolToInt(intProfBox.Checked);
+            SetUnsaved();
         }
         private void wisProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[4] = BoolToInt(wisProfBox.Checked);
+            SetUnsaved();
         }
         private void chrProfBox_CheckedChanged(object sender, EventArgs e)
         {
             Saveproficiencies[5] = BoolToInt(chrProfBox.Checked);
+            SetUnsaved();
         }
         //change the modifier bonus text
         private void strDisplayBox_TextChanged(object sender, EventArgs e)
@@ -395,7 +402,7 @@ namespace WindowsFormsApp1
             }
 
             UpdateProficiencies(null, null);
-
+            SetUnsaved();
             //clear highlight from check lists
             ((CheckedListBox)sender).ClearSelected();
 
@@ -413,8 +420,6 @@ namespace WindowsFormsApp1
             WeaponCreation weaponCreation = new WeaponCreation();
             weaponCreation.ShowDialog(this);
         }
-
-
 
         public void AddWeapon(Weapon w)
         {
@@ -436,6 +441,7 @@ namespace WindowsFormsApp1
                 SwitchWeaponDisplay(propertiesButtonDisplay, null);
             }
             UpdateWeaponDisplay();
+            SetUnsaved();
             //show controls
             foreach (RadioButton button in weaponButtons)
             {
@@ -453,6 +459,7 @@ namespace WindowsFormsApp1
             weapons[index] = w;
             weaponButtons[index].Text = w.Name;
             UpdateWeaponDisplay();
+            SetUnsaved();
         }
 
         private void EditWeapon(object sender, EventArgs e)
@@ -479,7 +486,8 @@ namespace WindowsFormsApp1
             if(weapons.Count > 0)
                 weaponButtons[currentWeapon].Checked = true;
             UpdateWeaponDisplay();
-            if(weapons.Count == 0)
+            SetUnsaved();
+            if (weapons.Count == 0)
             {
                 //set text boxes to gray
                 propertiesButtonDisplay.BackColor = Color.DimGray;
@@ -1104,6 +1112,7 @@ namespace WindowsFormsApp1
             featButtons.Add(newButton);
             selectedFeat = f;
             newButton.Select();
+            SetUnsaved();
             //enable edit/delete buttons
             featEditButton.Enabled = true;
             featDeleteButton.Enabled = true;
@@ -1142,6 +1151,7 @@ namespace WindowsFormsApp1
             {
                 featButtons[n].Location = new Point(featButtons[n].Location.X, featButtons[n].Location.Y - 20);
             }
+            SetUnsaved();
         }
 
         //set description when selecting a new feat to display
@@ -1219,6 +1229,7 @@ namespace WindowsFormsApp1
                         UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
                         featButtons[index].Text = feats[index].Name;
                     }
+                    SetUnsaved();
                 }
                 index++;
             }
@@ -1276,6 +1287,7 @@ namespace WindowsFormsApp1
             //output
             featRollButton.Enabled = true;
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+            SetUnsaved();
         }
 
         
@@ -1308,6 +1320,7 @@ namespace WindowsFormsApp1
             {
                 featButtons[index].Text = f.Name;
             }
+            SetUnsaved();
         }
 
 
@@ -1846,6 +1859,7 @@ namespace WindowsFormsApp1
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
             profBonus = (int)profBonusBox.Value;
+            SetUnsaved();
         }
 
         private void InitiativeRollButton_Click(object sender, EventArgs e)
@@ -1940,7 +1954,11 @@ namespace WindowsFormsApp1
                     end += s[i];
                 }
             }
+            if (s.Length > 0 && !s.Substring(0,s.Length - 1).Equals(end) && !removedLetters)
+                SetUnsaved();
+            removedLetters = true;      //"mutex" so that setting the text does not trigger this again
             ((TextBox)sender).Text = end;
+            removedLetters = false; 
             ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
             ((TextBox)sender).SelectionLength = 0;
         }
