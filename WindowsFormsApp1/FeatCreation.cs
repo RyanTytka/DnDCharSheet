@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                 usesRollCheckBox.Checked = false;
                 setRollButton.Enabled = false;
                 LimitedUsecheckBox.Checked = true;
+                nameTextBox.Select();
             }
             else
             {

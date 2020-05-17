@@ -1151,6 +1151,18 @@ namespace WindowsFormsApp1
             {
                 featButtons[n].Location = new Point(featButtons[n].Location.X, featButtons[n].Location.Y - 20);
             }
+            if (featButtons.Count > 0)
+            {
+                //select current feat
+                featButtons[Math.Min(index,featButtons.Count - 1)].Checked = true;
+            }
+            else
+            {
+                //disable edit/delete/roll buttons
+                featEditButton.Enabled = false;
+                featDeleteButton.Enabled = false;
+                featRollButton.Enabled = false;
+            }
             SetUnsaved();
         }
 
@@ -1170,9 +1182,9 @@ namespace WindowsFormsApp1
             }
             else
             {
+                featRollButton.Text = "Use";
                 if (feat.LimitedUse)
                 {
-                    featRollButton.Text = "Use";
                     featRollButton.Enabled = true;
                 }
                 else
@@ -1209,13 +1221,11 @@ namespace WindowsFormsApp1
             {
                 if(button.Checked)
                 {
-                    //subtract one use 
-                    feats[index].UsesLeft--;
-                    if (feats[index].UseRoll)
+                    //update button text
+                    if (feats[index].LimitedUse)
                     {
-                        //roll button
-                        UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
-                        UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                        feats[index].UsesLeft--;
+                        //update button text
                         featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
                         //disable roll button if 0 uses left
                         if (feats[index].UsesLeft == 0)
@@ -1223,11 +1233,21 @@ namespace WindowsFormsApp1
                             featRollButton.Enabled = false;
                         }
                     }
-                    else {
-                        //use button
+                    else
+                    {
+
+                        featButtons[index].Text = feats[index].Name;
+                    }
+                    //output
+                    if (feats[index].UseRoll)
+                    {
+                        UpdateOutput(feats[index].Name + ": " + feats[index].Roll.RollDice() + " (" + feats[index].Roll.ToString() + ")");
+                        UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                    }
+                    else
+                    {
                         UpdateOutput(feats[index].Name + " used");
                         UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
-                        featButtons[index].Text = feats[index].Name;
                     }
                     SetUnsaved();
                 }
