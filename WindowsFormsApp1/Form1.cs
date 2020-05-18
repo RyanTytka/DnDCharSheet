@@ -37,7 +37,11 @@ namespace WindowsFormsApp1
         List<RadioButton> featButtons;
         Feat selectedFeat;
         bool removedLetters = false;
-        
+        int classSpellType;     //what kind of spellcasting is being used
+        int[] spellTypes;       //what kind of spellcasting each class is
+        int[] spellModTypes;    //which stat to use for spellcasting
+        int[][,] spellSlots;     //how many spells slots are per class
+
         string fileName;
         bool saved = true;
 
@@ -70,6 +74,8 @@ namespace WindowsFormsApp1
             weaponButtons.Add(weaponRadioButton8);
 
             saveButton.Enabled = false;
+
+            spellTypeDropdown.Text = "None";
         }
 
 
@@ -1093,8 +1099,7 @@ namespace WindowsFormsApp1
             feats.Add(f);
             //add radioButton
             RadioButton newButton = new RadioButton();
-            newButton.Width = 250;
-            //string text = ""; 
+            newButton.Width = 350;
             if(f.LimitedUse)
             {
                 newButton.Text = "(" + f.UsesLeft + "/" + f.NumUses + ") " + f.Name;
@@ -1103,7 +1108,7 @@ namespace WindowsFormsApp1
             {
                 newButton.Text = f.Name;
             }
-            newButton.Location = new Point(6, 20 + feats.Count * 20);
+            newButton.Location = new Point(132, -20 + feats.Count * 20);
             newButton.BringToFront();
             newButton.CheckedChanged += new EventHandler(SelectFeat);
             newButton.Font = new Font("Arial", 9.25f, FontStyle.Regular);
@@ -1985,6 +1990,26 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region Spells
+
+        //resize form1 to show/hide spells tab
+        private void ChangeSpellType(object sender, EventArgs e)
+        {
+            if (((ComboBox)sender).Text == "None")
+            {
+                spellPanel.Visible = false;
+                this.Size = new Size(892, 637);
+            }
+            else
+            {
+                spellPanel.Visible = true;
+                this.Size = new Size(1156, 637);
+            }
+            this.CenterToScreen();
+        }
+
+
+        #endregion
 
     }
 }
