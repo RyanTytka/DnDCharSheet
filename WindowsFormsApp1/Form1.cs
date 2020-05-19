@@ -1998,6 +1998,7 @@ namespace WindowsFormsApp1
 
         }
 
+
         #endregion
 
         #region Spells
@@ -2035,6 +2036,13 @@ namespace WindowsFormsApp1
         {
             spellDescriptionTextbox.Visible = false;
             spellDesLabel.BackColor = Color.Gainsboro;
+        }
+
+        //clicked create spell button
+        private void CreateSpellButtonClick(object sender, EventArgs e)
+        {
+            SpellCreationForm spellCreation = new SpellCreationForm();
+            spellCreation.ShowDialog(this);
         }
 
         #endregion

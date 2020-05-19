@@ -10,7 +10,8 @@ namespace WindowsFormsApp1
     {
         string name, castTime, range, duration, components, description;
         List<Roll> rolls;
-        int level;
+        bool usesRoll;
+        int level, attackType;
 
         public Spell(string _name, string _castTime, string _range, string _duration, string _components, List<Roll> _rolls,
             int _level, string _description)
@@ -23,6 +24,12 @@ namespace WindowsFormsApp1
             rolls = _rolls;
             level = _level;
             description = _description;
+        }
+
+        //makes roll and returns output
+        public string Roll(int rollID, int multiplier)
+        {
+            return "";
         }
     }
 }

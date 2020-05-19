@@ -126,4 +126,7 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 creature assumes the higher level for that casting wherever it uses the spell’s level in its stat block.
 </value>
   </data>
+  <data name="helpDisplaylabel.Text" xml:space="preserve">
+    <value>Add various rolls for the spell, such as the damage roll for the Firebolt cantrip, or the bonus roll for the guidance Guidance cantrip.  For a spell like Toll the Undead, add two separate rolls, one for undamaged enemies and one for damaged enemies, each with their own multiplier dice. Multiplier dice are used when casting a spell at a higher level or for cantrips that deal extra damage once you reach a certain level.  For example, the multipier dice for the Fireball spell would be 1d6, since for each level above 3rd level, the damage increases by 1d6.</value>
+  </data>
 </root>

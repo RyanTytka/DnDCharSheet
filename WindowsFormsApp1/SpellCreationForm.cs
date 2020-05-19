@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
         //get rid of bonus roll
         private void XButtonClick(object sender, System.EventArgs e)
         {
-
+            /*
             int ID = int.Parse((string)((Button)sender).Tag);
             this.Controls.Remove(rollButtons[ID]);
             this.Controls.Remove(rollLabels[ID]);
@@ -158,7 +158,7 @@ namespace WindowsFormsApp1
                 rollLabels[i].Location = new Point(rollLabels[i].Location.X, rollLabels[i].Location.Y + 20);
             }
             bonusRollsLabel.Location = new Point(bonusRollsLabel.Location.X, bonusRollsLabel.Location.Y + 20);
-
+            */
         }
 
         //create damage roll
@@ -173,8 +173,19 @@ namespace WindowsFormsApp1
         //set damage roll
         public void SetDamageRoll(Roll r)
         {
-            damageRoll = r;
-            damageRollDisplay.Text = r.ToString();
+            //damageRoll = r;
+            //damageRollDisplay.Text = r.ToString();
+        }
+
+        private void ShowHelp(object sender, EventArgs e)
+        {
+            helpDisplaylabel.BringToFront();
+            helpDisplaylabel.Visible = true;
+        }
+
+        private void HideHelp(object sender, EventArgs e)
+        {
+            helpDisplaylabel.Visible = false;
         }
     }
 }

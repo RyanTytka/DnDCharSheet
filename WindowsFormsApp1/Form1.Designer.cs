@@ -212,9 +212,27 @@
             this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
             this.spellPanel = new System.Windows.Forms.Panel();
+            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
+            this.label3 = new System.Windows.Forms.Label();
+            this.spellDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
+            this.DurationDisplaylabel = new System.Windows.Forms.Label();
+            this.rangeDisplaylabel = new System.Windows.Forms.Label();
+            this.castTimedisplaylabel = new System.Windows.Forms.Label();
+            this.damagerolldropdown = new System.Windows.Forms.ComboBox();
+            this.durationlabel = new System.Windows.Forms.Label();
+            this.componentlabel = new System.Windows.Forms.Label();
+            this.rangelabel = new System.Windows.Forms.Label();
+            this.castTimelabel = new System.Windows.Forms.Label();
+            this.spellDesLabel = new System.Windows.Forms.Label();
             this.SpellRollButton = new CustomButtons.ButtonNoPadding();
             this.spellnamelabel = new System.Windows.Forms.Label();
+            this.componentsDisplaylabel = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
             this.Level0SpellButton = new System.Windows.Forms.RadioButton();
@@ -229,23 +247,14 @@
             this.Level2SpellButton = new System.Windows.Forms.RadioButton();
             this.Level1SpellButton = new System.Windows.Forms.RadioButton();
             this.spellListLabel = new System.Windows.Forms.TextBox();
-            this.spellDescriptionTextbox = new System.Windows.Forms.TextBox();
-            this.spellDesLabel = new System.Windows.Forms.Label();
-            this.castTimelabel = new System.Windows.Forms.Label();
-            this.rangelabel = new System.Windows.Forms.Label();
-            this.componentlabel = new System.Windows.Forms.Label();
-            this.durationlabel = new System.Windows.Forms.Label();
-            this.damagerolldropdown = new System.Windows.Forms.ComboBox();
-            this.castTimedisplaylabel = new System.Windows.Forms.Label();
-            this.rangeDisplaylabel = new System.Windows.Forms.Label();
-            this.DurationDisplaylabel = new System.Windows.Forms.Label();
-            this.componentsDisplaylabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -2581,6 +2590,7 @@
             this.buttonNoPadding1.TabIndex = 171;
             this.buttonNoPadding1.Text = "Create Spell";
             this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            this.buttonNoPadding1.Click += new System.EventHandler(this.CreateSpellButtonClick);
             // 
             // buttonNoPadding2
             // 
@@ -2607,6 +2617,15 @@
             // spellPanel
             // 
             this.spellPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.spellPanel.Controls.Add(this.label13);
+            this.spellPanel.Controls.Add(this.label9);
+            this.spellPanel.Controls.Add(this.label10);
+            this.spellPanel.Controls.Add(this.label11);
+            this.spellPanel.Controls.Add(this.label12);
+            this.spellPanel.Controls.Add(this.label7);
+            this.spellPanel.Controls.Add(this.label8);
+            this.spellPanel.Controls.Add(this.label6);
+            this.spellPanel.Controls.Add(this.buttonNoPadding8);
             this.spellPanel.Controls.Add(this.buttonNoPadding7);
             this.spellPanel.Controls.Add(this.buttonNoPadding6);
             this.spellPanel.Controls.Add(this.label3);
@@ -2634,6 +2653,62 @@
             this.spellPanel.Size = new System.Drawing.Size(251, 555);
             this.spellPanel.TabIndex = 176;
             // 
+            // buttonNoPadding8
+            // 
+            this.buttonNoPadding8.Enabled = false;
+            this.buttonNoPadding8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding8.Location = new System.Drawing.Point(142, 194);
+            this.buttonNoPadding8.Name = "buttonNoPadding8";
+            this.buttonNoPadding8.Size = new System.Drawing.Size(54, 18);
+            this.buttonNoPadding8.TabIndex = 187;
+            this.buttonNoPadding8.Text = "Use Slot";
+            this.buttonNoPadding8.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding7
+            // 
+            this.buttonNoPadding7.Enabled = false;
+            this.buttonNoPadding7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding7.Location = new System.Drawing.Point(65, 194);
+            this.buttonNoPadding7.Name = "buttonNoPadding7";
+            this.buttonNoPadding7.Size = new System.Drawing.Size(77, 18);
+            this.buttonNoPadding7.TabIndex = 186;
+            this.buttonNoPadding7.Text = "Remove Slot";
+            this.buttonNoPadding7.UseVisualStyleBackColor = true;
+            this.buttonNoPadding7.Click += new System.EventHandler(this.buttonNoPadding7_Click);
+            // 
+            // buttonNoPadding6
+            // 
+            this.buttonNoPadding6.Enabled = false;
+            this.buttonNoPadding6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding6.Location = new System.Drawing.Point(3, 194);
+            this.buttonNoPadding6.Name = "buttonNoPadding6";
+            this.buttonNoPadding6.Size = new System.Drawing.Size(63, 18);
+            this.buttonNoPadding6.TabIndex = 185;
+            this.buttonNoPadding6.Text = "Add Slot";
+            this.buttonNoPadding6.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label3.Location = new System.Drawing.Point(19, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 16);
+            this.label3.TabIndex = 182;
+            this.label3.Text = "0/0";
+            // 
+            // spellDescriptionTextbox
+            // 
+            this.spellDescriptionTextbox.Location = new System.Drawing.Point(11, 184);
+            this.spellDescriptionTextbox.Multiline = true;
+            this.spellDescriptionTextbox.Name = "spellDescriptionTextbox";
+            this.spellDescriptionTextbox.ReadOnly = true;
+            this.spellDescriptionTextbox.Size = new System.Drawing.Size(63, 10);
+            this.spellDescriptionTextbox.TabIndex = 169;
+            this.spellDescriptionTextbox.Tag = "";
+            this.spellDescriptionTextbox.Visible = false;
+            // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2656,6 +2731,139 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(137, 166);
             this.panel6.TabIndex = 182;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(52, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 183;
+            this.label5.Text = "Multiplier";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.numericUpDown1.Location = new System.Drawing.Point(100, 97);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(32, 18);
+            this.numericUpDown1.TabIndex = 120;
+            // 
+            // buttonNoPadding5
+            // 
+            this.buttonNoPadding5.Enabled = false;
+            this.buttonNoPadding5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNoPadding5.ForeColor = System.Drawing.Color.Black;
+            this.buttonNoPadding5.Location = new System.Drawing.Point(2, 92);
+            this.buttonNoPadding5.Name = "buttonNoPadding5";
+            this.buttonNoPadding5.Size = new System.Drawing.Size(57, 23);
+            this.buttonNoPadding5.TabIndex = 182;
+            this.buttonNoPadding5.Text = "Attack";
+            this.buttonNoPadding5.UseVisualStyleBackColor = true;
+            // 
+            // DurationDisplaylabel
+            // 
+            this.DurationDisplaylabel.AutoSize = true;
+            this.DurationDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
+            this.DurationDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DurationDisplaylabel.Location = new System.Drawing.Point(53, 63);
+            this.DurationDisplaylabel.Name = "DurationDisplaylabel";
+            this.DurationDisplaylabel.Size = new System.Drawing.Size(47, 13);
+            this.DurationDisplaylabel.TabIndex = 180;
+            this.DurationDisplaylabel.Text = "1 minute";
+            // 
+            // rangeDisplaylabel
+            // 
+            this.rangeDisplaylabel.AutoSize = true;
+            this.rangeDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
+            this.rangeDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rangeDisplaylabel.Location = new System.Drawing.Point(42, 49);
+            this.rangeDisplaylabel.Name = "rangeDisplaylabel";
+            this.rangeDisplaylabel.Size = new System.Drawing.Size(40, 13);
+            this.rangeDisplaylabel.TabIndex = 179;
+            this.rangeDisplaylabel.Text = "60 feet";
+            // 
+            // castTimedisplaylabel
+            // 
+            this.castTimedisplaylabel.AutoSize = true;
+            this.castTimedisplaylabel.BackColor = System.Drawing.SystemColors.Control;
+            this.castTimedisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.castTimedisplaylabel.Location = new System.Drawing.Point(60, 33);
+            this.castTimedisplaylabel.Name = "castTimedisplaylabel";
+            this.castTimedisplaylabel.Size = new System.Drawing.Size(45, 13);
+            this.castTimedisplaylabel.TabIndex = 178;
+            this.castTimedisplaylabel.Text = "1 action";
+            // 
+            // damagerolldropdown
+            // 
+            this.damagerolldropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.damagerolldropdown.DropDownWidth = 81;
+            this.damagerolldropdown.FormattingEnabled = true;
+            this.damagerolldropdown.Location = new System.Drawing.Point(61, 118);
+            this.damagerolldropdown.Name = "damagerolldropdown";
+            this.damagerolldropdown.Size = new System.Drawing.Size(71, 21);
+            this.damagerolldropdown.TabIndex = 177;
+            // 
+            // durationlabel
+            // 
+            this.durationlabel.AutoSize = true;
+            this.durationlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.durationlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.durationlabel.Location = new System.Drawing.Point(0, 63);
+            this.durationlabel.Name = "durationlabel";
+            this.durationlabel.Size = new System.Drawing.Size(55, 13);
+            this.durationlabel.TabIndex = 177;
+            this.durationlabel.Text = "Duration";
+            // 
+            // componentlabel
+            // 
+            this.componentlabel.AutoSize = true;
+            this.componentlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.componentlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.componentlabel.Location = new System.Drawing.Point(0, 78);
+            this.componentlabel.Name = "componentlabel";
+            this.componentlabel.Size = new System.Drawing.Size(76, 13);
+            this.componentlabel.TabIndex = 176;
+            this.componentlabel.Text = "Components";
+            // 
+            // rangelabel
+            // 
+            this.rangelabel.AutoSize = true;
+            this.rangelabel.BackColor = System.Drawing.SystemColors.Control;
+            this.rangelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.rangelabel.Location = new System.Drawing.Point(0, 48);
+            this.rangelabel.Name = "rangelabel";
+            this.rangelabel.Size = new System.Drawing.Size(44, 13);
+            this.rangelabel.TabIndex = 175;
+            this.rangelabel.Text = "Range";
+            // 
+            // castTimelabel
+            // 
+            this.castTimelabel.AutoSize = true;
+            this.castTimelabel.BackColor = System.Drawing.SystemColors.Control;
+            this.castTimelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.castTimelabel.Location = new System.Drawing.Point(1, 33);
+            this.castTimelabel.Name = "castTimelabel";
+            this.castTimelabel.Size = new System.Drawing.Size(63, 13);
+            this.castTimelabel.TabIndex = 174;
+            this.castTimelabel.Text = "Cast Time";
+            // 
+            // spellDesLabel
+            // 
+            this.spellDesLabel.AutoSize = true;
+            this.spellDesLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.spellDesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.spellDesLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            this.spellDesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellDesLabel.Location = new System.Drawing.Point(3, 143);
+            this.spellDesLabel.Name = "spellDesLabel";
+            this.spellDesLabel.Size = new System.Drawing.Size(129, 18);
+            this.spellDesLabel.TabIndex = 173;
+            this.spellDesLabel.Text = "Spell Description";
+            this.spellDesLabel.MouseEnter += new System.EventHandler(this.SpellDescriptionShow);
+            this.spellDesLabel.MouseLeave += new System.EventHandler(this.SpellDescriptionHide);
             // 
             // SpellRollButton
             // 
@@ -2680,6 +2888,16 @@
             this.spellnamelabel.TabIndex = 171;
             this.spellnamelabel.Text = "Spell Name";
             this.spellnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // componentsDisplaylabel
+            // 
+            this.componentsDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
+            this.componentsDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.componentsDisplaylabel.Location = new System.Drawing.Point(2, 78);
+            this.componentsDisplaylabel.Name = "componentsDisplaylabel";
+            this.componentsDisplaylabel.Size = new System.Drawing.Size(125, 46);
+            this.componentsDisplaylabel.TabIndex = 181;
+            this.componentsDisplaylabel.Text = "                        V,S, 100 gold diamond";
             // 
             // textBox22
             // 
@@ -2717,9 +2935,9 @@
             // spellListPanel
             // 
             this.spellListPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.spellListPanel.Location = new System.Drawing.Point(4, 211);
+            this.spellListPanel.Location = new System.Drawing.Point(4, 237);
             this.spellListPanel.Name = "spellListPanel";
-            this.spellListPanel.Size = new System.Drawing.Size(241, 339);
+            this.spellListPanel.Size = new System.Drawing.Size(241, 313);
             this.spellListPanel.TabIndex = 181;
             this.spellListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.spellListPanel_Paint);
             // 
@@ -2820,7 +3038,7 @@
             this.spellListLabel.BackColor = System.Drawing.SystemColors.Control;
             this.spellListLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.spellListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.spellListLabel.Location = new System.Drawing.Point(77, 195);
+            this.spellListLabel.Location = new System.Drawing.Point(77, 220);
             this.spellListLabel.Multiline = true;
             this.spellListLabel.Name = "spellListLabel";
             this.spellListLabel.Size = new System.Drawing.Size(99, 19);
@@ -2828,193 +3046,93 @@
             this.spellListLabel.Text = "Level 1 Spells";
             this.spellListLabel.WordWrap = false;
             // 
-            // spellDescriptionTextbox
+            // label6
             // 
-            this.spellDescriptionTextbox.Location = new System.Drawing.Point(11, 184);
-            this.spellDescriptionTextbox.Multiline = true;
-            this.spellDescriptionTextbox.Name = "spellDescriptionTextbox";
-            this.spellDescriptionTextbox.ReadOnly = true;
-            this.spellDescriptionTextbox.Size = new System.Drawing.Size(63, 10);
-            this.spellDescriptionTextbox.TabIndex = 169;
-            this.spellDescriptionTextbox.Tag = "";
-            this.spellDescriptionTextbox.Visible = false;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label6.Location = new System.Drawing.Point(19, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 16);
+            this.label6.TabIndex = 188;
+            this.label6.Text = "0/0";
             // 
-            // spellDesLabel
+            // label7
             // 
-            this.spellDesLabel.AutoSize = true;
-            this.spellDesLabel.BackColor = System.Drawing.Color.Gainsboro;
-            this.spellDesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.spellDesLabel.Cursor = System.Windows.Forms.Cursors.Help;
-            this.spellDesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellDesLabel.Location = new System.Drawing.Point(3, 143);
-            this.spellDesLabel.Name = "spellDesLabel";
-            this.spellDesLabel.Size = new System.Drawing.Size(129, 18);
-            this.spellDesLabel.TabIndex = 173;
-            this.spellDesLabel.Text = "Spell Description";
-            this.spellDesLabel.MouseEnter += new System.EventHandler(this.SpellDescriptionShow);
-            this.spellDesLabel.MouseLeave += new System.EventHandler(this.SpellDescriptionHide);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label7.Location = new System.Drawing.Point(19, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 16);
+            this.label7.TabIndex = 190;
+            this.label7.Text = "0/0";
             // 
-            // castTimelabel
+            // label8
             // 
-            this.castTimelabel.AutoSize = true;
-            this.castTimelabel.BackColor = System.Drawing.SystemColors.Control;
-            this.castTimelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.castTimelabel.Location = new System.Drawing.Point(1, 33);
-            this.castTimelabel.Name = "castTimelabel";
-            this.castTimelabel.Size = new System.Drawing.Size(63, 13);
-            this.castTimelabel.TabIndex = 174;
-            this.castTimelabel.Text = "Cast Time";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label8.Location = new System.Drawing.Point(19, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(26, 16);
+            this.label8.TabIndex = 189;
+            this.label8.Text = "0/0";
             // 
-            // rangelabel
+            // label9
             // 
-            this.rangelabel.AutoSize = true;
-            this.rangelabel.BackColor = System.Drawing.SystemColors.Control;
-            this.rangelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.rangelabel.Location = new System.Drawing.Point(0, 48);
-            this.rangelabel.Name = "rangelabel";
-            this.rangelabel.Size = new System.Drawing.Size(44, 13);
-            this.rangelabel.TabIndex = 175;
-            this.rangelabel.Text = "Range";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label9.Location = new System.Drawing.Point(19, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(26, 16);
+            this.label9.TabIndex = 194;
+            this.label9.Text = "0/0";
             // 
-            // componentlabel
+            // label10
             // 
-            this.componentlabel.AutoSize = true;
-            this.componentlabel.BackColor = System.Drawing.SystemColors.Control;
-            this.componentlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.componentlabel.Location = new System.Drawing.Point(0, 78);
-            this.componentlabel.Name = "componentlabel";
-            this.componentlabel.Size = new System.Drawing.Size(76, 13);
-            this.componentlabel.TabIndex = 176;
-            this.componentlabel.Text = "Components";
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label10.Location = new System.Drawing.Point(19, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 16);
+            this.label10.TabIndex = 193;
+            this.label10.Text = "0/0";
             // 
-            // durationlabel
+            // label11
             // 
-            this.durationlabel.AutoSize = true;
-            this.durationlabel.BackColor = System.Drawing.SystemColors.Control;
-            this.durationlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.durationlabel.Location = new System.Drawing.Point(0, 63);
-            this.durationlabel.Name = "durationlabel";
-            this.durationlabel.Size = new System.Drawing.Size(55, 13);
-            this.durationlabel.TabIndex = 177;
-            this.durationlabel.Text = "Duration";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label11.Location = new System.Drawing.Point(19, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 16);
+            this.label11.TabIndex = 192;
+            this.label11.Text = "0/0";
             // 
-            // damagerolldropdown
+            // label12
             // 
-            this.damagerolldropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.damagerolldropdown.DropDownWidth = 81;
-            this.damagerolldropdown.FormattingEnabled = true;
-            this.damagerolldropdown.Location = new System.Drawing.Point(61, 118);
-            this.damagerolldropdown.Name = "damagerolldropdown";
-            this.damagerolldropdown.Size = new System.Drawing.Size(71, 21);
-            this.damagerolldropdown.TabIndex = 177;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.Control;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label12.Location = new System.Drawing.Point(19, 123);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 16);
+            this.label12.TabIndex = 191;
+            this.label12.Text = "0/0";
             // 
-            // castTimedisplaylabel
+            // label13
             // 
-            this.castTimedisplaylabel.AutoSize = true;
-            this.castTimedisplaylabel.BackColor = System.Drawing.SystemColors.Control;
-            this.castTimedisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.castTimedisplaylabel.Location = new System.Drawing.Point(60, 33);
-            this.castTimedisplaylabel.Name = "castTimedisplaylabel";
-            this.castTimedisplaylabel.Size = new System.Drawing.Size(45, 13);
-            this.castTimedisplaylabel.TabIndex = 178;
-            this.castTimedisplaylabel.Text = "1 action";
-            // 
-            // rangeDisplaylabel
-            // 
-            this.rangeDisplaylabel.AutoSize = true;
-            this.rangeDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
-            this.rangeDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rangeDisplaylabel.Location = new System.Drawing.Point(42, 49);
-            this.rangeDisplaylabel.Name = "rangeDisplaylabel";
-            this.rangeDisplaylabel.Size = new System.Drawing.Size(40, 13);
-            this.rangeDisplaylabel.TabIndex = 179;
-            this.rangeDisplaylabel.Text = "60 feet";
-            // 
-            // DurationDisplaylabel
-            // 
-            this.DurationDisplaylabel.AutoSize = true;
-            this.DurationDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
-            this.DurationDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DurationDisplaylabel.Location = new System.Drawing.Point(53, 63);
-            this.DurationDisplaylabel.Name = "DurationDisplaylabel";
-            this.DurationDisplaylabel.Size = new System.Drawing.Size(47, 13);
-            this.DurationDisplaylabel.TabIndex = 180;
-            this.DurationDisplaylabel.Text = "1 minute";
-            // 
-            // componentsDisplaylabel
-            // 
-            this.componentsDisplaylabel.BackColor = System.Drawing.SystemColors.Control;
-            this.componentsDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.componentsDisplaylabel.Location = new System.Drawing.Point(2, 78);
-            this.componentsDisplaylabel.Name = "componentsDisplaylabel";
-            this.componentsDisplaylabel.Size = new System.Drawing.Size(125, 46);
-            this.componentsDisplaylabel.TabIndex = 181;
-            this.componentsDisplaylabel.Text = "                        V,S, 100 gold diamond";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 182;
-            this.label3.Text = "0/0";
-            // 
-            // buttonNoPadding5
-            // 
-            this.buttonNoPadding5.Enabled = false;
-            this.buttonNoPadding5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNoPadding5.ForeColor = System.Drawing.Color.Black;
-            this.buttonNoPadding5.Location = new System.Drawing.Point(2, 92);
-            this.buttonNoPadding5.Name = "buttonNoPadding5";
-            this.buttonNoPadding5.Size = new System.Drawing.Size(57, 23);
-            this.buttonNoPadding5.TabIndex = 182;
-            this.buttonNoPadding5.Text = "Attack";
-            this.buttonNoPadding5.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.numericUpDown1.Location = new System.Drawing.Point(100, 97);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(32, 18);
-            this.numericUpDown1.TabIndex = 120;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(52, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 183;
-            this.label5.Text = "Level Cast At";
-            // 
-            // buttonNoPadding6
-            // 
-            this.buttonNoPadding6.Enabled = false;
-            this.buttonNoPadding6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding6.Location = new System.Drawing.Point(3, 194);
-            this.buttonNoPadding6.Name = "buttonNoPadding6";
-            this.buttonNoPadding6.Size = new System.Drawing.Size(63, 18);
-            this.buttonNoPadding6.TabIndex = 185;
-            this.buttonNoPadding6.Text = "Add Slot";
-            this.buttonNoPadding6.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding7
-            // 
-            this.buttonNoPadding7.Enabled = false;
-            this.buttonNoPadding7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding7.Location = new System.Drawing.Point(170, 194);
-            this.buttonNoPadding7.Name = "buttonNoPadding7";
-            this.buttonNoPadding7.Size = new System.Drawing.Size(63, 18);
-            this.buttonNoPadding7.TabIndex = 186;
-            this.buttonNoPadding7.Text = "Remove Slot";
-            this.buttonNoPadding7.UseVisualStyleBackColor = true;
-            this.buttonNoPadding7.Click += new System.EventHandler(this.buttonNoPadding7_Click);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.Control;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label13.Location = new System.Drawing.Point(19, 40);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 16);
+            this.label13.TabIndex = 195;
+            this.label13.Text = "0/0";
             // 
             // Form1
             // 
@@ -3310,6 +3428,15 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private CustomButtons.ButtonNoPadding buttonNoPadding7;
         private CustomButtons.ButtonNoPadding buttonNoPadding6;
+        private CustomButtons.ButtonNoPadding buttonNoPadding8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
     }
 }
 

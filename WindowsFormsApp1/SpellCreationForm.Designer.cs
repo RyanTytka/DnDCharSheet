@@ -50,7 +50,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.AttackRollDropdown = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.DieNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.multiplierLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DieAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.UsesRollcheckBox = new System.Windows.Forms.CheckBox();
+            this.helpLabel = new System.Windows.Forms.Label();
+            this.helpDisplaylabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // saveButton
@@ -84,7 +93,7 @@
             // 
             // addRollButton
             // 
-            this.addRollButton.Location = new System.Drawing.Point(233, 183);
+            this.addRollButton.Location = new System.Drawing.Point(233, 219);
             this.addRollButton.Name = "addRollButton";
             this.addRollButton.Size = new System.Drawing.Size(108, 23);
             this.addRollButton.TabIndex = 12;
@@ -116,7 +125,7 @@
             // 
             this.rollNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rollNameTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.rollNameTextBox.Location = new System.Drawing.Point(235, 160);
+            this.rollNameTextBox.Location = new System.Drawing.Point(235, 159);
             this.rollNameTextBox.Name = "rollNameTextBox";
             this.rollNameTextBox.Size = new System.Drawing.Size(105, 20);
             this.rollNameTextBox.TabIndex = 18;
@@ -127,10 +136,10 @@
             // bonusRollsLabel
             // 
             this.bonusRollsLabel.AutoSize = true;
-            this.bonusRollsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bonusRollsLabel.Location = new System.Drawing.Point(266, 144);
+            this.bonusRollsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.bonusRollsLabel.Location = new System.Drawing.Point(264, 141);
             this.bonusRollsLabel.Name = "bonusRollsLabel";
-            this.bonusRollsLabel.Size = new System.Drawing.Size(39, 13);
+            this.bonusRollsLabel.Size = new System.Drawing.Size(48, 16);
             this.bonusRollsLabel.TabIndex = 20;
             this.bonusRollsLabel.Text = "Rolls:";
             // 
@@ -254,7 +263,7 @@
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.AttackRollDropdown.Location = new System.Drawing.Point(233, 103);
+            this.AttackRollDropdown.Location = new System.Drawing.Point(233, 93);
             this.AttackRollDropdown.Name = "AttackRollDropdown";
             this.AttackRollDropdown.Size = new System.Drawing.Size(107, 21);
             this.AttackRollDropdown.TabIndex = 34;
@@ -263,17 +272,102 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(250, 87);
+            this.label8.Location = new System.Drawing.Point(250, 77);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 35;
             this.label8.Text = "Attack Roll";
+            // 
+            // DieNumnumericUpDown
+            // 
+            this.DieNumnumericUpDown.Location = new System.Drawing.Point(294, 197);
+            this.DieNumnumericUpDown.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.DieNumnumericUpDown.Name = "DieNumnumericUpDown";
+            this.DieNumnumericUpDown.Size = new System.Drawing.Size(34, 20);
+            this.DieNumnumericUpDown.TabIndex = 36;
+            // 
+            // multiplierLabel
+            // 
+            this.multiplierLabel.AutoSize = true;
+            this.multiplierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
+            this.multiplierLabel.Location = new System.Drawing.Point(243, 181);
+            this.multiplierLabel.Name = "multiplierLabel";
+            this.multiplierLabel.Size = new System.Drawing.Size(87, 13);
+            this.multiplierLabel.TabIndex = 37;
+            this.multiplierLabel.Text = "Multiplier Dice";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(275, 198);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 16);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "d";
+            // 
+            // DieAmountnumericUpDown
+            // 
+            this.DieAmountnumericUpDown.Location = new System.Drawing.Point(240, 197);
+            this.DieAmountnumericUpDown.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.DieAmountnumericUpDown.Name = "DieAmountnumericUpDown";
+            this.DieAmountnumericUpDown.Size = new System.Drawing.Size(34, 20);
+            this.DieAmountnumericUpDown.TabIndex = 39;
+            // 
+            // UsesRollcheckBox
+            // 
+            this.UsesRollcheckBox.AutoSize = true;
+            this.UsesRollcheckBox.Location = new System.Drawing.Point(253, 121);
+            this.UsesRollcheckBox.Name = "UsesRollcheckBox";
+            this.UsesRollcheckBox.Size = new System.Drawing.Size(71, 17);
+            this.UsesRollcheckBox.TabIndex = 40;
+            this.UsesRollcheckBox.Text = "Uses Roll";
+            this.UsesRollcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // helpLabel
+            // 
+            this.helpLabel.AutoSize = true;
+            this.helpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
+            this.helpLabel.Location = new System.Drawing.Point(329, 182);
+            this.helpLabel.Name = "helpLabel";
+            this.helpLabel.Size = new System.Drawing.Size(12, 11);
+            this.helpLabel.TabIndex = 41;
+            this.helpLabel.Text = "?";
+            this.helpLabel.MouseEnter += new System.EventHandler(this.ShowHelp);
+            this.helpLabel.MouseLeave += new System.EventHandler(this.HideHelp);
+            // 
+            // helpDisplaylabel
+            // 
+            this.helpDisplaylabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.helpDisplaylabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.helpDisplaylabel.Location = new System.Drawing.Point(164, 193);
+            this.helpDisplaylabel.Name = "helpDisplaylabel";
+            this.helpDisplaylabel.Size = new System.Drawing.Size(177, 172);
+            this.helpDisplaylabel.TabIndex = 42;
+            this.helpDisplaylabel.Text = resources.GetString("helpDisplaylabel.Text");
+            this.helpDisplaylabel.Visible = false;
             // 
             // SpellCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 480);
+            this.Controls.Add(this.helpLabel);
+            this.Controls.Add(this.UsesRollcheckBox);
+            this.Controls.Add(this.DieAmountnumericUpDown);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.multiplierLabel);
+            this.Controls.Add(this.DieNumnumericUpDown);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.AttackRollDropdown);
             this.Controls.Add(this.label7);
@@ -295,11 +389,14 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.helpDisplaylabel);
             this.Name = "SpellCreationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Spell";
             this.Load += new System.EventHandler(this.SpellCreation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +425,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox AttackRollDropdown;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown DieNumnumericUpDown;
+        private System.Windows.Forms.Label multiplierLabel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown DieAmountnumericUpDown;
+        private System.Windows.Forms.CheckBox UsesRollcheckBox;
+        private System.Windows.Forms.Label helpLabel;
+        private System.Windows.Forms.Label helpDisplaylabel;
     }
 }
