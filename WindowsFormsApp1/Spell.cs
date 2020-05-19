@@ -11,7 +11,12 @@ namespace WindowsFormsApp1
         string name, castTime, range, duration, components, description;
         List<Roll> rolls;
         bool usesRoll;
-        int level, attackType;
+        int level, attackType, index;
+
+        public string Name
+        {
+            get { return name; }
+        }
 
         public Spell(string _name, string _castTime, string _range, string _duration, string _components, List<Roll> _rolls,
             int _level, string _description)

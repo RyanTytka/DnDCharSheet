@@ -71,7 +71,7 @@
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "Create Spell";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.button1_Click);
+            this.saveButton.Click += new System.EventHandler(this.SaveSpell);
             // 
             // label1
             // 

@@ -12,27 +12,23 @@ namespace WindowsFormsApp1
 {
     public partial class SpellCreationForm : Form
     {
+        Spell selectedSPell;
+
         public SpellCreationForm(Spell s = null, int index = 0)
         {
-
+            selectedSPell = s;
             InitializeComponent();
         }
 
         //save/create weapon
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveSpell(object sender, EventArgs e)
         {
-            /*
-            if (selectedWeapon == null)
+            
+            if (selectedSPell == null)
             {
-                ((Form1)Owner).AddWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
-                    finessCheckBox.Checked, profCheckBox.Checked, damageRoll));
+                ((Form1)Owner.Owner).AddSpell(new Spell(nameTextBox.Text, "", "", "", "", null, 1, ""));
+                ((SpellMenu)Owner).RefreshSpells();
             }
-            else
-            {
-                ((Form1)Owner).SetWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
-                    finessCheckBox.Checked, profCheckBox.Checked, damageRoll), index);
-            }
-            */
             this.Close();
         }
 

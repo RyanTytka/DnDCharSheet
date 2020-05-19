@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
         List<RadioButton> featButtons;
         Feat selectedFeat;
         bool removedLetters = false;
+        List<Spell> spells;     //spells loaded from the spells.data file
         int classSpellType;     //what kind of spellcasting is being used
         int[] spellTypes;       //what kind of spellcasting each class is
         int[] spellModTypes;    //which stat to use for spellcasting
@@ -44,6 +45,11 @@ namespace WindowsFormsApp1
 
         string fileName;
         bool saved = true;
+
+        public List<Spell> Spells
+        {
+            get { return spells; }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -76,6 +82,8 @@ namespace WindowsFormsApp1
             saveButton.Enabled = false;
 
             spellTypeDropdown.Text = "Prepared Spells";
+            spells = new List<Spell>();
+            LoadSpells();
         }
 
 
@@ -140,7 +148,7 @@ namespace WindowsFormsApp1
         }
         private void strDecreaseButton_Click(object sender, EventArgs e)
         {
-            strDisplayBox.Text = (int.Parse(strDisplayBox.Text) - 1).ToString(); 
+            strDisplayBox.Text = (int.Parse(strDisplayBox.Text) - 1).ToString();
         }
         private void dexAddButton_Click(object sender, EventArgs e)
         {
@@ -365,7 +373,7 @@ namespace WindowsFormsApp1
                 //update check boxes
                 if (sender == ProficienciesChecks)
                 {
-                    if(ProficienciesChecks.GetItemChecked(ID)) 
+                    if (ProficienciesChecks.GetItemChecked(ID))
                     { //prof is checked
                         profCheckshalf.SetItemChecked(ID, false);
                     }
@@ -489,7 +497,7 @@ namespace WindowsFormsApp1
                 newWeaponButton.Visible = true;
             if (currentWeapon == weapons.Count)
                 currentWeapon--;
-            if(weapons.Count > 0)
+            if (weapons.Count > 0)
                 weaponButtons[currentWeapon].Checked = true;
             UpdateWeaponDisplay();
             SetUnsaved();
@@ -520,7 +528,7 @@ namespace WindowsFormsApp1
             int roll = Roll.RollSingleDie(20);
 
             int modifier;
-            if(weapons[ID].Finesse)
+            if (weapons[ID].Finesse)
                 modifier = statMods[1];
             else
                 modifier = statMods[0];
@@ -533,7 +541,7 @@ namespace WindowsFormsApp1
             string bonuses = "";
             int bonusesTotal = 0;
             int i = 0;
-            foreach(Roll r in weapons[ID].BonusRolls)
+            foreach (Roll r in weapons[ID].BonusRolls)
             {
                 if (r.Type == 1 || r.Type == 3)
                 {
@@ -555,7 +563,7 @@ namespace WindowsFormsApp1
         //finds active weapon and calls updateWeaponDisplay
         private void UpdateWeapon(object sender, EventArgs e)
         {
-            if(((RadioButton)sender).Checked)
+            if (((RadioButton)sender).Checked)
             {
                 currentWeapon = int.Parse(((RadioButton)sender).Name.Substring(17)) - 1;
                 //update current weapon info
@@ -722,7 +730,7 @@ namespace WindowsFormsApp1
                     weapons[currentWeapon].BonusRolls[i].CurrentState = ((CheckBox)sender).Checked;
                 }
 
-            } 
+            }
         }
 
         //make damage roll
@@ -770,16 +778,16 @@ namespace WindowsFormsApp1
         {
             string s = ((TextBox)sender).Text;
             string end = "";
-            for(int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                if(int.TryParse(s[i].ToString() , out int num) || 
+                if (int.TryParse(s[i].ToString(), out int num) ||
                     ((string)((TextBox)sender).Tag != "max" && (
                     (i == 0 && s[i] == '+' && (string)((TextBox)sender).Tag != "temp") || s[i] == '-' && i == 0)))
                 {
                     end += s[i];
                 }
             }
-            ((TextBox)sender).Size = new Size(12 + end.Length * 6,17);
+            ((TextBox)sender).Size = new Size(12 + end.Length * 6, 17);
             ((TextBox)sender).Text = end;
             ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
             ((TextBox)sender).SelectionLength = 0;
@@ -839,7 +847,7 @@ namespace WindowsFormsApp1
         //enter key pressed on hp boxes
         private void PuAddHPBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(int.TryParse(((TextBox)sender).Text, out int num) && e.KeyChar == (Char)13)
+            if (int.TryParse(((TextBox)sender).Text, out int num) && e.KeyChar == (Char)13)
             {
                 if ((string)((TextBox)sender).Tag == "max")
                 {
@@ -873,8 +881,8 @@ namespace WindowsFormsApp1
         //HP buttons
         private void SetMaxHP_Click(object sender, EventArgs e)
         {
-            if(int.TryParse(MaxHPAmountBox.Text,out int i))
-            MaxHP = int.Parse(MaxHPAmountBox.Text);
+            if (int.TryParse(MaxHPAmountBox.Text, out int i))
+                MaxHP = int.Parse(MaxHPAmountBox.Text);
             maxHPNumberLabel.Text = MaxHP.ToString();
             MaxHPAmountBox.Focus();
             MaxHPAmountBox.Text = "";
@@ -968,7 +976,7 @@ namespace WindowsFormsApp1
             {
                 currentHP = Math.Min(currentHP + Totalsum, MaxHP);
                 currentHPnumberlabel.Text = currentHP.ToString();
-            } 
+            }
 
             string s = "";
             for (int i = 0; i < 4; i++)
@@ -976,7 +984,7 @@ namespace WindowsFormsApp1
                 if (maxHitDice[i] > 0)
                     s += currentHitDice[i] + "d" + (i * 2 + 6) + ", ";
             }
-            currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0,Math.Max(0, s.Length - 2));
+            currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0, Math.Max(0, s.Length - 2));
         }
 
 
@@ -1067,7 +1075,7 @@ namespace WindowsFormsApp1
             string end = "";
             for (int i = 0; i < s.Length; i++)
             {
-                if (int.TryParse(s[i].ToString(), out int num) || 
+                if (int.TryParse(s[i].ToString(), out int num) ||
                     (i == 0 && s[i] == '-'))
                 {
                     end += s[i];
@@ -1100,11 +1108,11 @@ namespace WindowsFormsApp1
             //add radioButton
             RadioButton newButton = new RadioButton();
             newButton.Width = 350;
-            if(f.LimitedUse)
+            if (f.LimitedUse)
             {
                 newButton.Text = "(" + f.UsesLeft + "/" + f.NumUses + ") " + f.Name;
             }
-            else 
+            else
             {
                 newButton.Text = f.Name;
             }
@@ -1135,7 +1143,7 @@ namespace WindowsFormsApp1
         {
             //find selected feat
             int i = 0, index = 0;
-            foreach(RadioButton b in featButtons)
+            foreach (RadioButton b in featButtons)
             {
                 if (b.Checked)
                     index = i;
@@ -1146,20 +1154,20 @@ namespace WindowsFormsApp1
             featButtons.RemoveAt(index);
             //reset tags
             i = 0;
-            foreach(RadioButton b in featButtons)
+            foreach (RadioButton b in featButtons)
             {
                 b.Tag = i;
                 i++;
             }
             //move buttons
-            for(int n = index; n < featButtons.Count; n++)
+            for (int n = index; n < featButtons.Count; n++)
             {
                 featButtons[n].Location = new Point(featButtons[n].Location.X, featButtons[n].Location.Y - 20);
             }
             if (featButtons.Count > 0)
             {
                 //select current feat
-                featButtons[Math.Min(index,featButtons.Count - 1)].Checked = true;
+                featButtons[Math.Min(index, featButtons.Count - 1)].Checked = true;
             }
             else
             {
@@ -1180,7 +1188,7 @@ namespace WindowsFormsApp1
             if (((RadioButton)sender).Checked)
                 featDescriptionTextbox.Text = feat.Abilities;
             //check to enable/disable roll button
-            if(feat.UseRoll)
+            if (feat.UseRoll)
             {
                 featRollButton.Enabled = true;
                 featRollButton.Text = "Roll";
@@ -1198,7 +1206,7 @@ namespace WindowsFormsApp1
                 }
             }
             //enable/disable roll button if enough uses left
-            if(feat.UsesLeft > 0)
+            if (feat.UsesLeft > 0)
             {
                 featRollButton.Enabled = true;
             }
@@ -1207,7 +1215,7 @@ namespace WindowsFormsApp1
                 featRollButton.Enabled = false;
             }
             //enable /disable other button
-            if(feat.LimitedUse &&  feat.RefillTypeProperty == RefillType.OTHER)
+            if (feat.LimitedUse && feat.RefillTypeProperty == RefillType.OTHER)
             {
                 otherFeatButton.Enabled = true;
             }
@@ -1222,9 +1230,9 @@ namespace WindowsFormsApp1
         {
             //find selected feat
             int index = 0;
-            foreach(RadioButton button in featButtons)
+            foreach (RadioButton button in featButtons)
             {
-                if(button.Checked)
+                if (button.Checked)
                 {
                     //update button text
                     if (feats[index].LimitedUse)
@@ -1265,7 +1273,7 @@ namespace WindowsFormsApp1
         {
             //get type from button tag
             RefillType buttonType = RefillType.LONG;
-            if((string)((CustomButtons.ButtonNoPadding)sender).Tag == "OTHER")
+            if ((string)((CustomButtons.ButtonNoPadding)sender).Tag == "OTHER")
             {
                 buttonType = RefillType.OTHER;
             }
@@ -1281,23 +1289,23 @@ namespace WindowsFormsApp1
 
             //loop through feats
             int index = 0;
-            foreach(Feat f in feats)
+            foreach (Feat f in feats)
             {
-                if(f.LimitedUse)
+                if (f.LimitedUse)
                 {
-                    if(f.LimitedUse)
+                    if (f.LimitedUse)
                     {
                         //short and long
-                        if ((f.RefillTypeProperty == buttonType && buttonType != RefillType.OTHER) || 
+                        if ((f.RefillTypeProperty == buttonType && buttonType != RefillType.OTHER) ||
                             (buttonType == RefillType.LONG && f.RefillTypeProperty == RefillType.SHORT))
                         {
                             f.UsesLeft = f.NumUses;
                             featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
                         }
                         //other type
-                        if(buttonType == RefillType.OTHER && f.RefillTypeProperty == RefillType.OTHER)
+                        if (buttonType == RefillType.OTHER && f.RefillTypeProperty == RefillType.OTHER)
                         {
-                            if(featButtons[index].Checked)
+                            if (featButtons[index].Checked)
                             {
                                 f.UsesLeft = f.NumUses;
                                 featButtons[index].Text = "(" + feats[index].UsesLeft + "/" + feats[index].NumUses + ") " + feats[index].Name;
@@ -1315,7 +1323,7 @@ namespace WindowsFormsApp1
             SetUnsaved();
         }
 
-        
+
         //open feat creation form to edit selected feat
         private void EditFeat(object sender, EventArgs e)
         {
@@ -1452,7 +1460,7 @@ namespace WindowsFormsApp1
                 output.Write(backgroundtextBox.Text);       //background
                 output.Write(AlignmenttextBox.Text);        //alignment
                 //proficiencies
-                for(int i = 0; i < 23; i++)
+                for (int i = 0; i < 23; i++)
                     output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
                 for (int i = 0; i < 23; i++)
                     output.Write(profCheckshalf.GetItemChecked(i));         //half prof
@@ -1461,7 +1469,7 @@ namespace WindowsFormsApp1
                 //
                 output.Write(InitiativeTextBoxNum.Text);                //initiative misc bonus
                 //armor class
-                output.Write(ACArmorBox.Text);            
+                output.Write(ACArmorBox.Text);
                 output.Write(ACDexBox.Text);
                 output.Write(ACMiscBox.Text);
                 //hp
@@ -1481,7 +1489,7 @@ namespace WindowsFormsApp1
                 output.Write(maxHitDice[2]);
                 output.Write(maxHitDice[3]);
                 //weapons
-                foreach(Weapon w in weapons)
+                foreach (Weapon w in weapons)
                 {
                     output.Write(-2);               //start marker
                     output.Write(w.Name);              //weapon name
@@ -1530,7 +1538,7 @@ namespace WindowsFormsApp1
                 //inventory
                 output.Write(InventoryTextBox.Text);
                 //feats
-                foreach(Feat f in feats)
+                foreach (Feat f in feats)
                 {
                     output.Write(-2);       //feat start marker
                     output.Write(f.Name);                   //feat name
@@ -1545,7 +1553,7 @@ namespace WindowsFormsApp1
                     }
                     //roll
                     output.Write(f.UseRoll);                //uses roll
-                    if(f.UseRoll)
+                    if (f.UseRoll)
                     {
                         foreach (int i in f.Roll.DieNum)
                         {
@@ -1562,7 +1570,7 @@ namespace WindowsFormsApp1
                 }
                 output.Write(-1);       //feat end marker
 
-                if(!saved)
+                if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
                 saved = true;
                 output.Close();
@@ -1635,7 +1643,7 @@ namespace WindowsFormsApp1
                 //weapons
                 //create weapons
                 int readIn = reader.ReadInt32();
-                while(readIn != -1)
+                while (readIn != -1)
                 {
                     //weapon stats
                     string name = reader.ReadString();          //read name
@@ -1644,7 +1652,7 @@ namespace WindowsFormsApp1
                     //properties
                     int numOfProps = reader.ReadInt32();
                     string[] properties = new string[numOfProps];
-                    for(int i = 0; i < numOfProps; i++)
+                    for (int i = 0; i < numOfProps; i++)
                     {
                         properties[i] = reader.ReadString();
                     }
@@ -1652,7 +1660,7 @@ namespace WindowsFormsApp1
                     List<int> damageDieNums = new List<int>();
                     List<int> damageDieAmounts = new List<int>();
                     int readIn2 = reader.ReadInt32();
-                    while(readIn2 != -1)
+                    while (readIn2 != -1)
                     {
                         damageDieNums.Add(readIn2);      //dieNums
                         readIn2 = reader.ReadInt32();
@@ -1668,7 +1676,7 @@ namespace WindowsFormsApp1
                     //bonus rolls
                     List<Roll> bonusRolls = new List<Roll>();
                     readIn2 = reader.ReadInt32();
-                    while(readIn2 != -1)
+                    while (readIn2 != -1)
                     {
                         List<int> bonusDieNums = new List<int>();
                         List<int> bonusDieAmounts = new List<int>();
@@ -1763,7 +1771,7 @@ namespace WindowsFormsApp1
 
                     //update readIn
                     readIn = reader.ReadInt32();
-                }                                    
+                }
 
                 saved = true;
                 this.Text = nameLabel.Text + " Character sheet";
@@ -1780,7 +1788,7 @@ namespace WindowsFormsApp1
         private void NewCharacter()
         {
             //stats
-            strDisplayBox.Text = "10";                        
+            strDisplayBox.Text = "10";
             dexDisplayBox.Text = "10";
             conDisplayBox.Text = "10";
             intDisplayBox.Text = "10";
@@ -1798,9 +1806,9 @@ namespace WindowsFormsApp1
             backgroundtextBox.Text = "Click to Edit";
             AlignmenttextBox.Text = "Click to Edit";
             for (int i = 0; i < 23; i++)
-                ProficienciesChecks.SetItemChecked(i, false);  
+                ProficienciesChecks.SetItemChecked(i, false);
             for (int i = 0; i < 23; i++)
-                profCheckshalf.SetItemChecked(i, false);       
+                profCheckshalf.SetItemChecked(i, false);
             for (int i = 0; i < 23; i++)
                 profChecksX2.SetItemChecked(i, false);
             InitiativeTextBoxNum.Text = "";
@@ -1828,11 +1836,11 @@ namespace WindowsFormsApp1
             {
                 b.Visible = false;
             }
-            foreach(Control c in currentBonusRolls)
+            foreach (Control c in currentBonusRolls)
             {
                 Weapon1.Controls.Remove(c);
             }
-            newWeaponButton.Location = new Point(13,19);
+            newWeaponButton.Location = new Point(13, 19);
             newWeaponButton.Visible = true;
             weapondDelButton.Enabled = false;
             weaponEditButton.Enabled = false;
@@ -1979,11 +1987,11 @@ namespace WindowsFormsApp1
                     end += s[i];
                 }
             }
-            if (s.Length > 0 && !s.Substring(0,s.Length - 1).Equals(end) && !removedLetters)
+            if (s.Length > 0 && !s.Substring(0, s.Length - 1).Equals(end) && !removedLetters)
                 SetUnsaved();
             removedLetters = true;      //"mutex" so that setting the text does not trigger this again
             ((TextBox)sender).Text = end;
-            removedLetters = false; 
+            removedLetters = false;
             ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
             ((TextBox)sender).SelectionLength = 0;
         }
@@ -2038,12 +2046,56 @@ namespace WindowsFormsApp1
             spellDesLabel.BackColor = Color.Gainsboro;
         }
 
-        //clicked create spell button
-        private void CreateSpellButtonClick(object sender, EventArgs e)
+        //open spell menu to select spell to edit
+        private void BrowsSpells(object sender, EventArgs e)
         {
-            SpellCreationForm spellCreation = new SpellCreationForm();
-            spellCreation.ShowDialog(this);
+            SpellMenu spellMenu = new SpellMenu(spells);
+            spellMenu.ShowDialog(this);
         }
+
+        //inputs spells from text file into a list on load
+        private void LoadSpells()
+        {
+            Stream inStream = File.OpenRead("spells.data");
+            BinaryReader reader = new BinaryReader(inStream);
+            int numOfSpells = reader.ReadInt32();
+            for(int i = 0; i < numOfSpells; i++)
+            {
+                string name = reader.ReadString();
+                spells.Add(new Spell(name, "", "", "", "", null, 0, "" ));
+            }
+        }
+
+        //writes all spells in list to text file
+        private void SaveSpells()
+        {
+            //open writer
+            string saveFilePath = "spells.data";
+            Stream outStream = File.OpenWrite(saveFilePath);
+            BinaryWriter output = new BinaryWriter(outStream);
+            //write spells
+            output.Write(spells.Count);
+            foreach(Spell s in spells)
+            {
+                output.Write(s.Name);
+            }
+            //close
+            output.Close();
+        }
+
+        public void AddSpell(Spell s)
+        {
+            spells.Add(s);
+            SaveSpells();
+        }
+
+        //delete spell from list at index
+        public void DeleteSpell(int index)
+        {
+            spells.RemoveAt(index);
+            SaveSpells();
+        }
+
 
         #endregion
 

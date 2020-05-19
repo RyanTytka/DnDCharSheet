@@ -75,6 +75,12 @@
       <DependentUpon>NoPaddingButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Spell.cs" />
+    <Compile Include="SpellMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellMenu.Designer.cs">
+      <DependentUpon>SpellMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Weapon.cs" />
     <Compile Include="SpellCreationForm.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpellCreationForm.resx">
       <DependentUpon>SpellCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellMenu.resx">
+      <DependentUpon>SpellMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WeaponCreation.resx">
       <DependentUpon>WeaponCreation.cs</DependentUpon>
