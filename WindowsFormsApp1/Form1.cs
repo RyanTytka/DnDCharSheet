@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
 
             saveButton.Enabled = false;
 
-            spellTypeDropdown.Text = "None";
+            spellTypeDropdown.Text = "Prepared Spells";
         }
 
 
@@ -1988,6 +1988,16 @@ namespace WindowsFormsApp1
             ((TextBox)sender).SelectionLength = 0;
         }
 
+        private void buttonNoPadding7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spellListPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Spells
@@ -2008,6 +2018,24 @@ namespace WindowsFormsApp1
             this.CenterToScreen();
         }
 
+        private void SpellDescriptionShow(object sender, EventArgs e)
+        {
+            spellDescriptionTextbox.Visible = true;
+            spellDesLabel.BackColor = Color.WhiteSmoke;
+            spellDescriptionTextbox.Text = "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell againYou can use your action to control the hand.You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial.You can move the hand up to 30 feet each time you use it.The hand can’t attack, activate magical items, or carry more than 10 pounds.";
+            //set box of description textbox
+            spellDescriptionTextbox.Width = 228;
+            SizeF MessageSize = spellDescriptionTextbox.CreateGraphics().MeasureString(spellDescriptionTextbox.Text,
+                spellDescriptionTextbox.Font, spellDescriptionTextbox.Width, new StringFormat(0));
+            spellDescriptionTextbox.Height = (int)(MessageSize.Height * 1) + 10;
+
+        }
+
+        private void SpellDescriptionHide(object sender, EventArgs e)
+        {
+            spellDescriptionTextbox.Visible = false;
+            spellDesLabel.BackColor = Color.Gainsboro;
+        }
 
         #endregion
 
