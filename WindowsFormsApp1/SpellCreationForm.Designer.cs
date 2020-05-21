@@ -34,7 +34,7 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.addRollButton = new System.Windows.Forms.Button();
             this.propertiesLabel = new System.Windows.Forms.Label();
-            this.propertiesTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.rollNameTextBox = new System.Windows.Forms.TextBox();
             this.bonusRollsLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.LevelnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.AttackRollDropdown = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,10 +54,10 @@
             this.multiplierLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.DieAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.UsesRollcheckBox = new System.Windows.Forms.CheckBox();
             this.helpLabel = new System.Windows.Forms.Label();
             this.helpDisplaylabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.multipliercheckBox = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LevelnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -93,13 +93,13 @@
             // 
             // addRollButton
             // 
-            this.addRollButton.Location = new System.Drawing.Point(233, 219);
+            this.addRollButton.Location = new System.Drawing.Point(233, 236);
             this.addRollButton.Name = "addRollButton";
             this.addRollButton.Size = new System.Drawing.Size(108, 23);
             this.addRollButton.TabIndex = 12;
             this.addRollButton.Text = "Add Roll";
             this.addRollButton.UseVisualStyleBackColor = true;
-            this.addRollButton.Click += new System.EventHandler(this.button2_Click);
+            this.addRollButton.Click += new System.EventHandler(this.AddRollButton_click);
             // 
             // propertiesLabel
             // 
@@ -111,15 +111,14 @@
             this.propertiesLabel.TabIndex = 13;
             this.propertiesLabel.Text = "Description  ";
             // 
-            // propertiesTextBox
+            // descriptionTextBox
             // 
-            this.propertiesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.propertiesTextBox.Location = new System.Drawing.Point(5, 160);
-            this.propertiesTextBox.Multiline = true;
-            this.propertiesTextBox.Name = "propertiesTextBox";
-            this.propertiesTextBox.Size = new System.Drawing.Size(216, 318);
-            this.propertiesTextBox.TabIndex = 14;
-            this.propertiesTextBox.Text = resources.GetString("propertiesTextBox.Text");
+            this.descriptionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.descriptionTextBox.Location = new System.Drawing.Point(5, 160);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(216, 318);
+            this.descriptionTextBox.TabIndex = 14;
             // 
             // rollNameTextBox
             // 
@@ -229,17 +228,17 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Components";
             // 
-            // numericUpDown1
+            // LevelnumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(187, 88);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.LevelnumericUpDown.Location = new System.Drawing.Point(187, 88);
+            this.LevelnumericUpDown.Maximum = new decimal(new int[] {
             9,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(34, 20);
-            this.numericUpDown1.TabIndex = 30;
+            this.LevelnumericUpDown.Name = "LevelnumericUpDown";
+            this.LevelnumericUpDown.Size = new System.Drawing.Size(34, 20);
+            this.LevelnumericUpDown.TabIndex = 30;
             // 
             // label7
             // 
@@ -263,7 +262,7 @@
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.AttackRollDropdown.Location = new System.Drawing.Point(233, 93);
+            this.AttackRollDropdown.Location = new System.Drawing.Point(233, 104);
             this.AttackRollDropdown.Name = "AttackRollDropdown";
             this.AttackRollDropdown.Size = new System.Drawing.Size(107, 21);
             this.AttackRollDropdown.TabIndex = 34;
@@ -272,7 +271,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(250, 77);
+            this.label8.Location = new System.Drawing.Point(250, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 35;
@@ -280,21 +279,21 @@
             // 
             // DieNumnumericUpDown
             // 
-            this.DieNumnumericUpDown.Location = new System.Drawing.Point(294, 197);
-            this.DieNumnumericUpDown.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
+            this.DieNumnumericUpDown.Location = new System.Drawing.Point(294, 214);
             this.DieNumnumericUpDown.Name = "DieNumnumericUpDown";
             this.DieNumnumericUpDown.Size = new System.Drawing.Size(34, 20);
             this.DieNumnumericUpDown.TabIndex = 36;
+            this.DieNumnumericUpDown.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
             // 
             // multiplierLabel
             // 
             this.multiplierLabel.AutoSize = true;
             this.multiplierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
-            this.multiplierLabel.Location = new System.Drawing.Point(243, 181);
+            this.multiplierLabel.Location = new System.Drawing.Point(243, 199);
             this.multiplierLabel.Name = "multiplierLabel";
             this.multiplierLabel.Size = new System.Drawing.Size(87, 13);
             this.multiplierLabel.TabIndex = 37;
@@ -304,7 +303,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(275, 198);
+            this.label9.Location = new System.Drawing.Point(275, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 16);
             this.label9.TabIndex = 38;
@@ -312,7 +311,7 @@
             // 
             // DieAmountnumericUpDown
             // 
-            this.DieAmountnumericUpDown.Location = new System.Drawing.Point(240, 197);
+            this.DieAmountnumericUpDown.Location = new System.Drawing.Point(240, 214);
             this.DieAmountnumericUpDown.Maximum = new decimal(new int[] {
             9,
             0,
@@ -321,23 +320,18 @@
             this.DieAmountnumericUpDown.Name = "DieAmountnumericUpDown";
             this.DieAmountnumericUpDown.Size = new System.Drawing.Size(34, 20);
             this.DieAmountnumericUpDown.TabIndex = 39;
-            // 
-            // UsesRollcheckBox
-            // 
-            this.UsesRollcheckBox.AutoSize = true;
-            this.UsesRollcheckBox.Location = new System.Drawing.Point(253, 121);
-            this.UsesRollcheckBox.Name = "UsesRollcheckBox";
-            this.UsesRollcheckBox.Size = new System.Drawing.Size(71, 17);
-            this.UsesRollcheckBox.TabIndex = 40;
-            this.UsesRollcheckBox.Text = "Uses Roll";
-            this.UsesRollcheckBox.UseVisualStyleBackColor = true;
+            this.DieAmountnumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // helpLabel
             // 
             this.helpLabel.AutoSize = true;
             this.helpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.helpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
-            this.helpLabel.Location = new System.Drawing.Point(329, 182);
+            this.helpLabel.Location = new System.Drawing.Point(329, 200);
             this.helpLabel.Name = "helpLabel";
             this.helpLabel.Size = new System.Drawing.Size(12, 11);
             this.helpLabel.TabIndex = 41;
@@ -350,20 +344,33 @@
             this.helpDisplaylabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.helpDisplaylabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.helpDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.helpDisplaylabel.Location = new System.Drawing.Point(164, 193);
+            this.helpDisplaylabel.Location = new System.Drawing.Point(164, 209);
             this.helpDisplaylabel.Name = "helpDisplaylabel";
             this.helpDisplaylabel.Size = new System.Drawing.Size(177, 172);
             this.helpDisplaylabel.TabIndex = 42;
             this.helpDisplaylabel.Text = resources.GetString("helpDisplaylabel.Text");
             this.helpDisplaylabel.Visible = false;
             // 
+            // multipliercheckBox
+            // 
+            this.multipliercheckBox.AutoSize = true;
+            this.multipliercheckBox.Checked = true;
+            this.multipliercheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.multipliercheckBox.Location = new System.Drawing.Point(256, 182);
+            this.multipliercheckBox.Name = "multipliercheckBox";
+            this.multipliercheckBox.Size = new System.Drawing.Size(67, 17);
+            this.multipliercheckBox.TabIndex = 43;
+            this.multipliercheckBox.Text = "Multiplier";
+            this.multipliercheckBox.UseVisualStyleBackColor = true;
+            this.multipliercheckBox.CheckedChanged += new System.EventHandler(this.multipliercheckBox_CheckedChanged);
+            // 
             // SpellCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 480);
+            this.Controls.Add(this.multipliercheckBox);
             this.Controls.Add(this.helpLabel);
-            this.Controls.Add(this.UsesRollcheckBox);
             this.Controls.Add(this.DieAmountnumericUpDown);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.multiplierLabel);
@@ -371,7 +378,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.AttackRollDropdown);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.LevelnumericUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -383,7 +390,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bonusRollsLabel);
             this.Controls.Add(this.rollNameTextBox);
-            this.Controls.Add(this.propertiesTextBox);
+            this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.propertiesLabel);
             this.Controls.Add(this.addRollButton);
             this.Controls.Add(this.nameTextBox);
@@ -394,7 +401,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Spell";
             this.Load += new System.EventHandler(this.SpellCreation_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LevelnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).EndInit();
             this.ResumeLayout(false);
@@ -409,7 +416,7 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button addRollButton;
         private System.Windows.Forms.Label propertiesLabel;
-        private System.Windows.Forms.TextBox propertiesTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox rollNameTextBox;
         private System.Windows.Forms.Label bonusRollsLabel;
         private System.Windows.Forms.Label label2;
@@ -421,7 +428,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown LevelnumericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox AttackRollDropdown;
         private System.Windows.Forms.Label label8;
@@ -429,8 +436,8 @@
         private System.Windows.Forms.Label multiplierLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown DieAmountnumericUpDown;
-        private System.Windows.Forms.CheckBox UsesRollcheckBox;
         private System.Windows.Forms.Label helpLabel;
         private System.Windows.Forms.Label helpDisplaylabel;
+        private System.Windows.Forms.CheckBox multipliercheckBox;
     }
 }

@@ -23,10 +23,7 @@ namespace WindowsFormsApp1
 
         private void SpellMenu_Load(object sender, EventArgs e)
         {
-            foreach(Spell s in spells)
-            {
-                spellListBox.Items.Add(s.Name);
-            }
+            RefreshSpells();
         }
 
         //clicked create spell button
@@ -41,10 +38,12 @@ namespace WindowsFormsApp1
         {
             //clear list, then get spells from form1 then add to list
             spellListBox.Items.Clear();
+            spellLevellistBox.Items.Clear();
             spells = ((Form1)Owner).Spells;
             foreach (Spell s in spells)
             {
                 spellListBox.Items.Add(s.Name);
+                spellLevellistBox.Items.Add(s.Level);
             }
         }
 

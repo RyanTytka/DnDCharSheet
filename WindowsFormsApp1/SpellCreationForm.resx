@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="propertiesTextBox.Text" xml:space="preserve">
-    <value>You call forth a fiendish spirit from the Lower Planes. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the Fiendish Spirit stat block below. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature physically resembles a fiend of the chosen type, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.
-
-The creature is friendly to you and your companions for the spell’s duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don’t issue any, it defends itself but otherwise takes no action.
-
-At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the
-creature assumes the higher level for that casting wherever it uses the spell’s level in its stat block.
-</value>
-  </data>
   <data name="helpDisplaylabel.Text" xml:space="preserve">
     <value>Add various rolls for the spell, such as the damage roll for the Firebolt cantrip, or the bonus roll for the guidance Guidance cantrip.  For a spell like Toll the Undead, add two separate rolls, one for undamaged enemies and one for damaged enemies, each with their own multiplier dice. Multiplier dice are used when casting a spell at a higher level or for cantrips that deal extra damage once you reach a certain level.  For example, the multipier dice for the Fireball spell would be 1d6, since for each level above 3rd level, the damage increases by 1d6.</value>
   </data>

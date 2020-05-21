@@ -32,6 +32,7 @@
             this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
             this.deleteSpellButton = new CustomButtons.ButtonNoPadding();
             this.editSpellButton = new CustomButtons.ButtonNoPadding();
+            this.spellLevellistBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // spellListBox
@@ -76,11 +77,22 @@
             this.editSpellButton.Text = "Edit    Spell";
             this.editSpellButton.UseVisualStyleBackColor = true;
             // 
+            // spellLevellistBox
+            // 
+            this.spellLevellistBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.spellLevellistBox.FormattingEnabled = true;
+            this.spellLevellistBox.ItemHeight = 20;
+            this.spellLevellistBox.Location = new System.Drawing.Point(279, 12);
+            this.spellLevellistBox.Name = "spellLevellistBox";
+            this.spellLevellistBox.Size = new System.Drawing.Size(86, 184);
+            this.spellLevellistBox.TabIndex = 4;
+            // 
             // SpellMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 261);
+            this.ClientSize = new System.Drawing.Size(380, 261);
+            this.Controls.Add(this.spellLevellistBox);
             this.Controls.Add(this.editSpellButton);
             this.Controls.Add(this.deleteSpellButton);
             this.Controls.Add(this.buttonNoPadding1);
@@ -98,5 +110,6 @@
         private CustomButtons.ButtonNoPadding buttonNoPadding1;
         private CustomButtons.ButtonNoPadding deleteSpellButton;
         private CustomButtons.ButtonNoPadding editSpellButton;
+        private System.Windows.Forms.ListBox spellLevellistBox;
     }
 }

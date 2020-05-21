@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         List<int> numList, amountList;
         int intDieNum;
-        int formType; //1 = weapon bonus roll; 2 = weapon damage roll; 3 = feat roll
+        int formType; //1 = weapon bonus roll; 2 = weapon damage roll; 3 = feat roll; 4 = spell roll
 
         public CustomRollForm(int type, int intDieNum)
         {
@@ -45,6 +45,13 @@ namespace WindowsFormsApp1
         private void CustomRollForm_Load(object sender, EventArgs e)
         {
             dieNumBox.Value = intDieNum;
+            if(formType != 4)
+            {
+                this.Size = new Size(187, 128);
+                ModifiercomboBox.Visible = false;
+                modifierlabel.Visible = false;
+            }
+            ModifiercomboBox.Text = "None";
         }
 
 
@@ -74,7 +81,13 @@ namespace WindowsFormsApp1
                 this.Close();
             }
             else if (formType == 3) //set feat roll
-            {   ((FeatCreation)Owner).SetRoll(new Roll(amountList, numList, (int)flatNumBox.Value));
+            {   
+                ((FeatCreation)Owner).SetRoll(new Roll(amountList, numList, (int)flatNumBox.Value));
+                this.Close();
+            }
+            else if(formType == 4)   //set spell roll
+            {
+                ((SpellCreationForm)Owner).AddRoll(amountList, numList, (int)flatNumBox.Value, ModifiercomboBox.SelectedIndex);
                 this.Close();
             }
         }

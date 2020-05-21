@@ -12,7 +12,9 @@ namespace WindowsFormsApp1
         int flat; //flat bonus
         List<int> dieNum, dieAmount;  //parallel arrays: the number on the die (d4 etc.) , the number of those dice 
         string name;
-        bool optional, currentState; 
+        bool optional, currentState, usesMultiplier;
+        Roll multiplier;
+        int modifier;
 
         public bool Optional
         {
@@ -43,18 +45,47 @@ namespace WindowsFormsApp1
         {
             get { return flat; }
         }
+        public Roll Multiplier
+        {
+            get { return multiplier; }
+        }
+        public int Modifier
+        {
+            get { return modifier; }
+        }
+        public bool UsesMul
+        {
+            get { return usesMultiplier; }
+        }
 
 
         //constructor
-        public Roll(List<int> dieNum, List<int> dieAmount, int flat = 0, int RollType = 0, string s = "", bool opt = false)
+        public Roll(List<int> dieNum, List<int> dieAmount, int flat = 0, int RollType = 0, string name = "", bool opt = false)
         {
             this.dieNum = dieNum;
             this.dieAmount = dieAmount;
             rollType = RollType;
-            name = s;
+            this.name = name;
             optional = opt;
             currentState = true;
             this.flat = flat;
+        }
+
+        //constructor for rolls on a spell
+        public Roll(List<int> dieNum, List<int> dieAmount, int flat, string name, int mulDieNum, int mulDieAmount, 
+            bool usesMul, int modifier)
+        {
+            this.dieNum = dieNum;
+            this.dieAmount = dieAmount;
+            this.name = name;
+            this.flat = flat;
+            List<int> dieNums = new List<int>();
+            List<int> dieAmounts = new List<int>();
+            dieNums.Add(mulDieNum);
+            dieAmounts.Add(mulDieAmount);
+            multiplier = new Roll(dieNums, dieAmount);
+            this.modifier = modifier;
+            usesMultiplier = usesMul;
         }
 
 

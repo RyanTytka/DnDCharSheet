@@ -2047,7 +2047,7 @@ namespace WindowsFormsApp1
         }
 
         //open spell menu to select spell to edit
-        private void BrowsSpells(object sender, EventArgs e)
+        private void BrowseSpells(object sender, EventArgs e)
         {
             SpellMenu spellMenu = new SpellMenu(spells);
             spellMenu.ShowDialog(this);
@@ -2059,12 +2059,69 @@ namespace WindowsFormsApp1
             Stream inStream = File.OpenRead("spells.data");
             BinaryReader reader = new BinaryReader(inStream);
             int numOfSpells = reader.ReadInt32();
-            for(int i = 0; i < numOfSpells; i++)
+            for (int i = 0; i < numOfSpells; i++)
             {
                 string name = reader.ReadString();
-                spells.Add(new Spell(name, "", "", "", "", null, 0, "" ));
+                int lvl = reader.ReadInt32();
+                string castTime = reader.ReadString();
+                string range = reader.ReadString();
+                string duration = reader.ReadString();
+                string components = reader.ReadString();
+                string description = reader.ReadString();
+                int atkType = reader.ReadInt32();
+                //rolls
+                List<Roll> rolls = new List<Roll>();
+                int numOfRolls = reader.ReadInt32();
+                for(int i2 = 0; i2 < numOfRolls; i2++)
+                {
+                    string rollName = reader.ReadString();
+                    List<int> rollDieNum = new List<int>();
+                    List<int> rollDieAmount = new List<int>();
+                    int numOfInts = reader.ReadInt32(); 
+                    for(int i3 = 0; i3 < numOfInts; i3++)
+                    {
+                        rollDieNum.Add(reader.ReadInt32());   
+                    }
+                    for (int i3 = 0; i3 < numOfInts; i3++)
+                    {
+                        rollDieAmount.Add(reader.ReadInt32());
+                    }
+                    int rollFlat = reader.ReadInt32();
+                    bool usesMul = reader.ReadBoolean();
+                    int mulDieNum = 0;
+                    int mulDieAmount = 0;
+                    if(usesMul)
+                    {
+                        mulDieNum = reader.ReadInt32();
+                        mulDieAmount = reader.ReadInt32();
+                    }
+                    int rollModifier = reader.ReadInt32();
+                    Roll r = new Roll(rollDieNum, rollDieAmount, rollFlat, rollName, mulDieNum, mulDieAmount, usesMul, rollModifier);
+                    rolls.Add(r);
+                }
+                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, atkType));
             }
         }
+
+        private void SpellAttackRoll(object sender, EventArgs e)
+        {
+            string s = "";
+            Spell spell = spells[0];
+            int roll = Roll.RollSingleDie(20);
+            int mod = 0;
+            if(spell.AttackType > 0)
+                mod = statMods[spell.AttackType - 1];
+            s += spell.Name + " attack roll: ";
+            s += (roll + mod);
+            s += "(Roll: " + roll;
+            if (spell.AttackType > 0)
+                s += ", Mod: " + mod;
+            s += ")";
+            UpdateOutput(s);
+            UpdateOutput(Environment.NewLine);
+            UpdateOutput(Environment.NewLine);
+        }
+
 
         //writes all spells in list to text file
         private void SaveSpells()
@@ -2078,6 +2135,36 @@ namespace WindowsFormsApp1
             foreach(Spell s in spells)
             {
                 output.Write(s.Name);
+                output.Write(s.Level);
+                output.Write(s.CastTime);
+                output.Write(s.Range);
+                output.Write(s.Duration);
+                output.Write(s.Components);
+                output.Write(s.Description);
+                output.Write(s.AttackType);
+                //rolls
+                output.Write(s.Rolls.Count);
+                foreach(Roll r in s.Rolls)
+                {
+                    output.Write(r.Name);
+                    output.Write(r.DieNum.Count);
+                    foreach(int i in r.DieNum)
+                    {
+                        output.Write(i);
+                    }
+                    foreach (int i in r.DieAmount)
+                    {
+                        output.Write(i);
+                    }
+                    output.Write(r.Flat); 
+                    output.Write(r.UsesMul);
+                    if (r.UsesMul)
+                    {
+                        output.Write(r.Multiplier.DieNum[0]);
+                        output.Write(r.Multiplier.DieAmount[0]);
+                    }
+                    output.Write(r.Modifier);
+                }
             }
             //close
             output.Close();
