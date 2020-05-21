@@ -24,6 +24,8 @@ namespace WindowsFormsApp1
         private void SpellMenu_Load(object sender, EventArgs e)
         {
             RefreshSpells();
+            if (spellListBox.Items.Count > 0)
+                spellListBox.SetSelected(0, true);
         }
 
         //clicked create spell button
@@ -38,12 +40,30 @@ namespace WindowsFormsApp1
         {
             //clear list, then get spells from form1 then add to list
             spellListBox.Items.Clear();
-            spellLevellistBox.Items.Clear();
             spells = ((Form1)Owner).Spells;
             foreach (Spell s in spells)
             {
-                spellListBox.Items.Add(s.Name);
-                spellLevellistBox.Items.Add(s.Level);
+                //adds name, then enough spaces to make level on the right of the string
+                string line = s.Name;
+                int numOfDashes = s.Name.Length;
+                SizeF MessageSize = spellListBox.CreateGraphics().MeasureString(line, spellListBox.Font);
+                while (MessageSize.Width < 265)
+                {
+                    //add i's until the string is a certain length
+                    line += "i";
+                    MessageSize = spellListBox.CreateGraphics().MeasureString(line, spellListBox.Font);
+                    numOfDashes++;
+                }
+                line += "\t";
+                //replace i's with spaces
+                StringBuilder sb = new StringBuilder(line);
+                for(int i = s.Name.Length; i < numOfDashes;  i++)
+                {
+                    sb[i] = ' ';
+                }
+                line = sb.ToString();
+                line += s.Level;
+                spellListBox.Items.Add(line);
             }
         }
 
@@ -51,6 +71,11 @@ namespace WindowsFormsApp1
         {
             ((Form1)Owner).DeleteSpell(spellListBox.SelectedIndex);
             RefreshSpells();
+        }
+
+        //when a spell is selected
+        private void spellListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
