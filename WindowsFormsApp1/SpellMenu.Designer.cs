@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.descriptionlabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.castTimelabel = new System.Windows.Forms.Label();
             this.rangelabel = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.buttonNoPadding1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNoPadding1.Location = new System.Drawing.Point(12, 218);
             this.buttonNoPadding1.Name = "buttonNoPadding1";
-            this.buttonNoPadding1.Size = new System.Drawing.Size(83, 45);
+            this.buttonNoPadding1.Size = new System.Drawing.Size(103, 45);
             this.buttonNoPadding1.TabIndex = 1;
             this.buttonNoPadding1.Text = "Create Spell";
             this.buttonNoPadding1.UseVisualStyleBackColor = true;
@@ -72,22 +72,22 @@
             // deleteSpellButton
             // 
             this.deleteSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteSpellButton.Location = new System.Drawing.Point(101, 218);
+            this.deleteSpellButton.Location = new System.Drawing.Point(120, 218);
             this.deleteSpellButton.Name = "deleteSpellButton";
-            this.deleteSpellButton.Size = new System.Drawing.Size(83, 45);
+            this.deleteSpellButton.Size = new System.Drawing.Size(103, 45);
             this.deleteSpellButton.TabIndex = 2;
-            this.deleteSpellButton.Text = "Delete Spell";
+            this.deleteSpellButton.Text = "Delete\r\nSpell";
             this.deleteSpellButton.UseVisualStyleBackColor = true;
             this.deleteSpellButton.Click += new System.EventHandler(this.deleteSpellButton_Click);
             // 
             // editSpellButton
             // 
             this.editSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editSpellButton.Location = new System.Drawing.Point(190, 218);
+            this.editSpellButton.Location = new System.Drawing.Point(230, 218);
             this.editSpellButton.Name = "editSpellButton";
-            this.editSpellButton.Size = new System.Drawing.Size(83, 45);
+            this.editSpellButton.Size = new System.Drawing.Size(103, 45);
             this.editSpellButton.TabIndex = 3;
-            this.editSpellButton.Text = "Edit    Spell";
+            this.editSpellButton.Text = "Edit\r\nSpell";
             this.editSpellButton.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -150,15 +150,15 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Components";
             // 
-            // label7
+            // descriptionlabel
             // 
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label7.Location = new System.Drawing.Point(465, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 238);
-            this.label7.TabIndex = 11;
+            this.descriptionlabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.descriptionlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.descriptionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.descriptionlabel.Location = new System.Drawing.Point(465, 25);
+            this.descriptionlabel.Name = "descriptionlabel";
+            this.descriptionlabel.Size = new System.Drawing.Size(169, 238);
+            this.descriptionlabel.TabIndex = 11;
             // 
             // label8
             // 
@@ -224,7 +224,7 @@
             this.Controls.Add(this.rangelabel);
             this.Controls.Add(this.castTimelabel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.descriptionlabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -255,7 +255,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label descriptionlabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label castTimelabel;
         private System.Windows.Forms.Label rangelabel;

@@ -69,13 +69,22 @@ namespace WindowsFormsApp1
 
         private void deleteSpellButton_Click(object sender, EventArgs e)
         {
-            ((Form1)Owner).DeleteSpell(spellListBox.SelectedIndex);
+            int index = spellListBox.SelectedIndex;
+            ((Form1)Owner).DeleteSpell(index);
             RefreshSpells();
+            if(spells.Count > 0)
+                spellListBox.SetSelected(Math.Max(0, index - 1), true);
         }
 
         //when a spell is selected
         private void spellListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Spell s = spells[spellListBox.SelectedIndex];
+            castTimelabel.Text = s.CastTime;
+            rangelabel.Text = s.Range;
+            durationlabel.Text = s.Duration;
+            componentslabel.Text = s.Components;
+            durationlabel.Text = s.Description;
         }
     }
 }
