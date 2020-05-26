@@ -13,14 +13,14 @@ namespace WindowsFormsApp1
     public partial class SpellCreationForm : Form
     {
         List<Roll> rolls;
-        Spell selectedSPell;
+        Spell selectedSpell;
         int index;
         List<Control> rollButtons, rollLabels;
 
         public SpellCreationForm(Spell s = null, int index = 0)
         {
             rolls = new List<Roll>();
-            selectedSPell = s;
+            selectedSpell = s;
             this.index = index;
             rollButtons = new List<Control>();
             rollLabels = new List<Control>();
@@ -31,13 +31,19 @@ namespace WindowsFormsApp1
         private void SaveSpell(object sender, EventArgs e)
         {
             
-            if (selectedSPell == null)
+            if (selectedSpell == null)
             {
                 ((Form1)Owner.Owner).AddSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text, 
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value, 
                     descriptionTextBox.Text, AttackRollDropdown.SelectedIndex));
-                ((SpellMenu)Owner).RefreshSpells();
             }
+            else
+            {
+                ((Form1)Owner.Owner).SetSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text,
+                    DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value,
+                    descriptionTextBox.Text, AttackRollDropdown.SelectedIndex), index);
+            }
+            ((SpellMenu)Owner).RefreshSpells();
             this.Close();
         }
 
@@ -52,8 +58,8 @@ namespace WindowsFormsApp1
         //add the roll to the lists
         public void AddRoll(List<int> nums, List<int> dice, int flat, int modifier)
         {
-            Roll r = new Roll(nums, dice, flat, rollNameTextBox.Text, (int)DieNumnumericUpDown.Value, 
-                (int)DieAmountnumericUpDown.Value, multipliercheckBox.Checked, modifier);
+            Roll r = new Roll(nums, dice, flat, rollNameTextBox.Text, (int)DieAmountnumericUpDown.Value, 
+                (int)DieNumnumericUpDown.Value, multipliercheckBox.Checked, modifier);
             rolls.Add(r);
             //add bonus roll textbox
             Button newButton = new Button();
@@ -78,28 +84,29 @@ namespace WindowsFormsApp1
         private void SpellCreation_Load(object sender, EventArgs e)
         {
             AttackRollDropdown.Text = "None";
-            /*
-            bothRadioButton.Checked = true;
-            if(selectedWeapon != null)
+            
+            if(selectedSpell != null)
             {
-                //enter in weapon stats to controls
-                nameTextBox.Text = selectedWeapon.Name;
-                propertiesTextBox.Text = selectedWeapon.Properties;
-                profCheckBox.Checked = selectedWeapon.Proficient;
-                finessCheckBox.Checked = selectedWeapon.Finesse;
-                damageRoll = selectedWeapon.Damage;
-                damageRollDisplay.Text = damageRoll.ToString();
-                saveButton.Text = "Save Weapon";
-                foreach(Roll r in selectedWeapon.BonusRolls)
+                //enter in spell stats to controls
+                nameTextBox.Text = selectedSpell.Name;
+                saveButton.Text = "Save Spell";
+                headerLabel.Text = "Edit Spell";
+                CastTimetextBox.Text = selectedSpell.CastTime;
+                RangetextBox.Text = selectedSpell.Range;
+                DurationtextBox.Text = selectedSpell.Duration;
+                ComponentsTextBox.Text = selectedSpell.Components;
+                descriptionTextBox.Text = selectedSpell.Description;
+                LevelnumericUpDown.Value = selectedSpell.Level;
+                foreach(Roll r in selectedSpell.Rolls)
                 {
-                    AddBonusRolls(r.DieNum, r.DieAmount, r.Flat, r.Name, r.Type, r.Optional);
+                    AddRoll(r.DieNum, r.DieAmount, r.Flat, r.Modifier);
                 }
             }
             else
             {
                 this.ActiveControl = nameTextBox;
             }
-            */
+            
         }
 
         //clear text of roll name

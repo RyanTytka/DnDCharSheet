@@ -44,6 +44,7 @@
             this.rangelabel = new System.Windows.Forms.Label();
             this.durationlabel = new System.Windows.Forms.Label();
             this.componentslabel = new System.Windows.Forms.Label();
+            this.learnSpellbutton = new CustomButtons.ButtonNoPadding();
             this.SuspendLayout();
             // 
             // spellListBox
@@ -89,6 +90,7 @@
             this.editSpellButton.TabIndex = 3;
             this.editSpellButton.Text = "Edit\r\nSpell";
             this.editSpellButton.UseVisualStyleBackColor = true;
+            this.editSpellButton.Click += new System.EventHandler(this.editSpellButton_Click);
             // 
             // label1
             // 
@@ -124,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(333, 70);
+            this.label4.Location = new System.Drawing.Point(333, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 8;
@@ -134,7 +136,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(333, 119);
+            this.label5.Location = new System.Drawing.Point(333, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 9;
@@ -144,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(333, 168);
+            this.label6.Location = new System.Drawing.Point(333, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 10;
@@ -155,7 +157,7 @@
             this.descriptionlabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.descriptionlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descriptionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.descriptionlabel.Location = new System.Drawing.Point(465, 25);
+            this.descriptionlabel.Location = new System.Drawing.Point(451, 25);
             this.descriptionlabel.Name = "descriptionlabel";
             this.descriptionlabel.Size = new System.Drawing.Size(169, 238);
             this.descriptionlabel.TabIndex = 11;
@@ -164,7 +166,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(495, 3);
+            this.label8.Location = new System.Drawing.Point(484, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 20);
             this.label8.TabIndex = 12;
@@ -172,53 +174,61 @@
             // 
             // castTimelabel
             // 
-            this.castTimelabel.AutoSize = true;
             this.castTimelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.castTimelabel.Location = new System.Drawing.Point(335, 43);
+            this.castTimelabel.Location = new System.Drawing.Point(335, 42);
             this.castTimelabel.MaximumSize = new System.Drawing.Size(128, 0);
             this.castTimelabel.Name = "castTimelabel";
-            this.castTimelabel.Size = new System.Drawing.Size(69, 16);
+            this.castTimelabel.Size = new System.Drawing.Size(111, 0);
             this.castTimelabel.TabIndex = 13;
             this.castTimelabel.Text = "Cast Time";
             // 
             // rangelabel
             // 
-            this.rangelabel.AutoSize = true;
             this.rangelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rangelabel.Location = new System.Drawing.Point(335, 90);
+            this.rangelabel.Location = new System.Drawing.Point(335, 91);
             this.rangelabel.MaximumSize = new System.Drawing.Size(128, 0);
             this.rangelabel.Name = "rangelabel";
-            this.rangelabel.Size = new System.Drawing.Size(69, 16);
+            this.rangelabel.Size = new System.Drawing.Size(113, 0);
             this.rangelabel.TabIndex = 14;
             this.rangelabel.Text = "Cast Time";
             // 
             // durationlabel
             // 
-            this.durationlabel.AutoSize = true;
             this.durationlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.durationlabel.Location = new System.Drawing.Point(335, 139);
+            this.durationlabel.Location = new System.Drawing.Point(335, 138);
             this.durationlabel.MaximumSize = new System.Drawing.Size(128, 0);
             this.durationlabel.Name = "durationlabel";
-            this.durationlabel.Size = new System.Drawing.Size(69, 16);
+            this.durationlabel.Size = new System.Drawing.Size(113, 0);
             this.durationlabel.TabIndex = 15;
             this.durationlabel.Text = "Cast Time";
             // 
             // componentslabel
             // 
-            this.componentslabel.AutoSize = true;
             this.componentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.componentslabel.Location = new System.Drawing.Point(335, 189);
+            this.componentslabel.Location = new System.Drawing.Point(335, 186);
             this.componentslabel.MaximumSize = new System.Drawing.Size(128, 0);
             this.componentslabel.Name = "componentslabel";
-            this.componentslabel.Size = new System.Drawing.Size(84, 16);
+            this.componentslabel.Size = new System.Drawing.Size(113, 0);
             this.componentslabel.TabIndex = 16;
             this.componentslabel.Text = "Components";
+            // 
+            // learnSpellbutton
+            // 
+            this.learnSpellbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.learnSpellbutton.Location = new System.Drawing.Point(339, 218);
+            this.learnSpellbutton.Name = "learnSpellbutton";
+            this.learnSpellbutton.Size = new System.Drawing.Size(103, 45);
+            this.learnSpellbutton.TabIndex = 17;
+            this.learnSpellbutton.Text = "Learn\r\nSpell";
+            this.learnSpellbutton.UseVisualStyleBackColor = true;
+            this.learnSpellbutton.Click += new System.EventHandler(this.learnSpellbutton_Click);
             // 
             // SpellMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 273);
+            this.ClientSize = new System.Drawing.Size(630, 273);
+            this.Controls.Add(this.learnSpellbutton);
             this.Controls.Add(this.componentslabel);
             this.Controls.Add(this.durationlabel);
             this.Controls.Add(this.rangelabel);
@@ -261,5 +271,6 @@
         private System.Windows.Forms.Label rangelabel;
         private System.Windows.Forms.Label durationlabel;
         private System.Windows.Forms.Label componentslabel;
+        private CustomButtons.ButtonNoPadding learnSpellbutton;
     }
 }

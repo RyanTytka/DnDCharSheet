@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
             List<int> dieAmounts = new List<int>();
             dieNums.Add(mulDieNum);
             dieAmounts.Add(mulDieAmount);
-            multiplier = new Roll(dieNums, dieAmount);
+            multiplier = new Roll(dieNums, dieAmounts);
             this.modifier = modifier;
             usesMultiplier = usesMul;
         }

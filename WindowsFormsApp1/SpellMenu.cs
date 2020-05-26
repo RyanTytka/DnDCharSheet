@@ -86,5 +86,19 @@ namespace WindowsFormsApp1
             componentslabel.Text = s.Components;
             durationlabel.Text = s.Description;
         }
+
+        //add selected spell to knownSpells in form1
+        private void learnSpellbutton_Click(object sender, EventArgs e)
+        {
+            ((Form1)Owner).LearnSpell(spellListBox.SelectedIndex);
+        }
+
+        //open spell creation form editing selected spell
+        private void editSpellButton_Click(object sender, EventArgs e)
+        {
+            int index = spellListBox.SelectedIndex;
+            SpellCreationForm spellCreation = new SpellCreationForm(spells[index], index);
+            spellCreation.ShowDialog(this);
+        }
     }
 }

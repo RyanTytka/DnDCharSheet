@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         #region initialization
 
-
+        string[] attributeNames;        //strings for each of the attributes in order
         bool saveThrowAdv;
         double[] Saveproficiencies = new double[6];
         TextBox[] mods;
@@ -37,14 +37,22 @@ namespace WindowsFormsApp1
         List<RadioButton> featButtons;
         Feat selectedFeat;
         bool removedLetters = false;
-        List<Spell> spells;     //spells loaded from the spells.data file
+        List<Spell> spells;         //spells loaded from the spells.data file
+        int currentSpell;           //selected spell
+        List<int> knownSpells;      //list of indexes of spells that the player knows
+        List<int> preparedSpells;   //list of indexs of spells that are cureently prepared
+        List<RadioButton> spellRadioButtons;    //list of radio buttons currently displayed
+        int[] classModifierTypes;   //array of ints that relate each spellcasting class to what attribute they use
         int classSpellType;     //what kind of spellcasting is being used
-        int[] spellTypes;       //what kind of spellcasting each class is
-        int[] spellModTypes;    //which stat to use for spellcasting
-        int[][,] spellSlots;     //how many spells slots are per class
 
         string fileName;
         bool saved = true;
+
+
+        //these are not being used right now
+        int[] spellTypes;       //what kind of spellcasting each class is
+        int[] spellModTypes;    //which stat to use for spellcasting
+        int[][,] spellSlots;     //how many spells slots are per class
 
         public List<Spell> Spells
         {
@@ -61,6 +69,7 @@ namespace WindowsFormsApp1
             feats = new List<Feat>();
             featButtons = new List<RadioButton>();
 
+            attributeNames = new string[] { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
 
             mods[1] = strModLabel;
             mods[3] = dexModLabel; mods[4] = dexModLabel; mods[5] = dexModLabel;
@@ -81,8 +90,12 @@ namespace WindowsFormsApp1
 
             saveButton.Enabled = false;
 
-            spellTypeDropdown.Text = "Prepared Spells";
+            spellTypeDropdown.Text = "Sorcerer";
             spells = new List<Spell>();
+            knownSpells = new List<int>();
+            preparedSpells = new List<int>();
+            spellRadioButtons = new List<RadioButton>();
+            classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
             LoadSpells();
         }
 
@@ -2024,14 +2037,16 @@ namespace WindowsFormsApp1
                 spellPanel.Visible = true;
                 this.Size = new Size(1156, 637);
             }
+            classSpellType = spellTypeDropdown.SelectedIndex;
             this.CenterToScreen();
         }
 
         private void SpellDescriptionShow(object sender, EventArgs e)
         {
+            spellDescriptionTextbox.BringToFront();
             spellDescriptionTextbox.Visible = true;
             spellDesLabel.BackColor = Color.WhiteSmoke;
-            spellDescriptionTextbox.Text = "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell againYou can use your action to control the hand.You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial.You can move the hand up to 30 feet each time you use it.The hand can’t attack, activate magical items, or carry more than 10 pounds.";
+            spellDescriptionTextbox.Text = spells[currentSpell].Description;
             //set box of description textbox
             spellDescriptionTextbox.Width = 228;
             SizeF MessageSize = spellDescriptionTextbox.CreateGraphics().MeasureString(spellDescriptionTextbox.Text,
@@ -2053,6 +2068,189 @@ namespace WindowsFormsApp1
             spellMenu.ShowDialog(this);
         }
 
+        private void SpellAttackRoll(object sender, EventArgs e)
+        {
+            string s = "";
+            Spell spell = spells[0];
+            int roll = Roll.RollSingleDie(20);
+            //int mod = 0;
+            //if(spellattacktypeDropDown.SelectedIndex > 0)
+            int mod = statMods[spellattacktypeDropDown.SelectedIndex];
+            s += spell.Name + " attack roll: ";
+            s += (roll + mod + profBonus + MiscBonusnumericUpDown.Value);
+            s += "(Roll: " + roll;
+            //if (spell.AttackType > 0)
+            s += ", " + attributeNames[spellattacktypeDropDown.SelectedIndex] + ": " + mod;
+            if (MiscBonusnumericUpDown.Value != 0)
+                s += ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
+            s += ", Proficiency Bonus: " + profBonus; 
+            s += ")";
+            UpdateOutput(s);
+            UpdateOutput(Environment.NewLine);
+            UpdateOutput(Environment.NewLine);
+        }
+
+        //make a roll for the spell
+        private void SpellMiscRollButton_Click(object sender, EventArgs e)
+        {
+            Spell s = spells[currentSpell];
+            //find the correct roll from the drop down
+            foreach (Roll r in s.Rolls)
+            {
+                if (r.Name == spellrolldropdown.Text)
+                {
+                    //make roll
+                    int roll = r.RollDice();
+                    //add multiplier to roll
+                    List<int> totalDieNums = new List<int>();
+                    totalDieNums.AddRange(r.DieAmount);
+                    List<int> totalDieAmounts = new List<int>();
+                    totalDieAmounts.AddRange(r.DieNum);
+                    if (r.UsesMul)
+                    {
+                        if (totalDieNums.Contains(r.Multiplier.DieAmount[0]))
+                        {
+                            totalDieAmounts[totalDieNums.IndexOf(r.Multiplier.DieAmount[0])] += 
+                                r.Multiplier.DieNum[0] * (int)MultipliernumericUpDown.Value; 
+                        }
+                        else
+                        {
+                            totalDieNums.Add(r.Multiplier.DieAmount[0]);
+                            totalDieAmounts.Add(r.Multiplier.DieNum[0]);
+                        }
+                    }
+                    Roll newRoll = new Roll(totalDieAmounts, totalDieNums, r.Flat);
+                    //roll for multiplier
+                    for (int i = 0; i < MultipliernumericUpDown.Value; i++)
+                    {
+                        //add multiplier
+                        roll += r.Multiplier.RollDice();
+                    }
+
+                    // add modifier to roll
+
+                    roll = newRoll.RollDice() + (int)MiscBonusnumericUpDown.Value;
+                    string miscString = "";
+                    if (MiscBonusnumericUpDown.Value != 0)
+                        miscString = ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
+                    UpdateOutput(s.Name + " - " + r.Name + " (" + newRoll.ToString() + miscString + "): " + roll);
+                    UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+                }
+            }
+        }
+
+        private void buttonNoPadding5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //add spell to current spell list
+        public void LearnSpell(int index)
+        {
+            knownSpells.Add(index);
+        }
+
+        //select spell level radio button
+        private void SelectSpellLevel(object sender, EventArgs e)
+        {
+            //get selected level and update label
+            int level = int.Parse(((RadioButton)sender).Tag.ToString());
+            spellListLabel.Text = "Level " + level + " Spells";
+            if (level == 0)
+                spellListLabel.Text = "Cantrips";
+            //clear currently displayed spells
+            spellListPanel.Controls.Clear();
+            spellRadioButtons.Clear();
+            //display spell list
+            int spellsDisplayed = 0;
+            for(int i = 0; i < knownSpells.Count; i++)
+            {
+                if(spells[knownSpells[i]].Level == level)
+                {
+                    //add new control
+                    RadioButton newButton = new RadioButton();
+                    newButton.Text = spells[knownSpells[i]].Name;
+                    newButton.Tag = knownSpells[i];   //adds the spells index in spells to the tag
+                    newButton.Location = new Point(5, spellsDisplayed * 20 + 5);
+                    newButton.CheckedChanged += SpellSelected;
+                    //add to lists
+                    spellListPanel.Controls.Add(newButton);
+                    spellRadioButtons.Add(newButton);
+                    spellsDisplayed++;
+                }
+            }
+            if(spellRadioButtons.Count > 0)
+                spellRadioButtons[0].Checked = true;
+        }
+        
+        //when a spell display radio button is checked
+        private void SpellSelected(object sender, EventArgs e)
+        {
+            if(((RadioButton)sender).Checked)
+                currentSpell = int.Parse(((RadioButton)sender).Tag.ToString());
+            UpdateSpellInfo();
+        }
+
+
+
+        //set spell info to currently selected spell
+        private void UpdateSpellInfo()
+        {
+            Spell s = spells[currentSpell];
+            //spell info
+            castTimedisplaylabel.Text = s.CastTime;
+            rangeDisplaylabel.Text = s.Range;
+            DurationDisplaylabel.Text = s.Duration;
+            componentsDisplaylabel.Text = s.Components;
+            //spell rolls
+            spellrolldropdown.Items.Clear();
+            foreach (Roll r in s.Rolls)
+            {
+                spellrolldropdown.Items.Add(r.Name);
+            }
+            if (s.Rolls.Count > 0)
+                spellrolldropdown.Text = s.Rolls[0].Name;
+            //enable/disable attack buttons
+            spellAttackButton.Enabled = s.AttackType != 0;
+            spellattacktypeDropDown.Enabled = s.AttackType != 0;
+            spellattacktypeDropDown.Text = attributeNames[classModifierTypes[classSpellType-1]];
+            //enable/disable misc roll buttons
+            SpellMiscRollButton.Enabled = s.Rolls.Count > 0;
+            spellrolldropdown.Enabled = s.Rolls.Count > 0;
+        }
+
+        public void SetSpell(Spell s, int index)
+        {
+            spells[index] = s;
+            SaveSpells();
+        }
+
+        public void AddSpell(Spell s)
+        {
+            spells.Add(s);
+            SaveSpells();
+        }
+
+        //change display label of multiplier
+        private void UpdateMultiplierLabel(object sender, EventArgs e)
+        {
+            //loop through rolls in spell to find selected roll
+            foreach (Roll r in spells[currentSpell].Rolls)
+            {
+                if (r.Name == spellrolldropdown.Text)
+                {
+                    multiplierDicedisplaylabel.Text = r.Multiplier.DieNum[0] + "d" + r.Multiplier.DieAmount[0];
+                }
+            }
+        }
+
+        //delete spell from list at index
+        public void DeleteSpell(int index)
+        {
+            spells.RemoveAt(index);
+            SaveSpells();
+        }
+
         //inputs spells from text file into a list on load
         private void LoadSpells()
         {
@@ -2072,15 +2270,15 @@ namespace WindowsFormsApp1
                 //rolls
                 List<Roll> rolls = new List<Roll>();
                 int numOfRolls = reader.ReadInt32();
-                for(int i2 = 0; i2 < numOfRolls; i2++)
+                for (int i2 = 0; i2 < numOfRolls; i2++)
                 {
                     string rollName = reader.ReadString();
                     List<int> rollDieNum = new List<int>();
                     List<int> rollDieAmount = new List<int>();
-                    int numOfInts = reader.ReadInt32(); 
-                    for(int i3 = 0; i3 < numOfInts; i3++)
+                    int numOfInts = reader.ReadInt32();
+                    for (int i3 = 0; i3 < numOfInts; i3++)
                     {
-                        rollDieNum.Add(reader.ReadInt32());   
+                        rollDieNum.Add(reader.ReadInt32());
                     }
                     for (int i3 = 0; i3 < numOfInts; i3++)
                     {
@@ -2090,7 +2288,7 @@ namespace WindowsFormsApp1
                     bool usesMul = reader.ReadBoolean();
                     int mulDieNum = 0;
                     int mulDieAmount = 0;
-                    if(usesMul)
+                    if (usesMul)
                     {
                         mulDieNum = reader.ReadInt32();
                         mulDieAmount = reader.ReadInt32();
@@ -2101,25 +2299,6 @@ namespace WindowsFormsApp1
                 }
                 spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, atkType));
             }
-        }
-
-        private void SpellAttackRoll(object sender, EventArgs e)
-        {
-            string s = "";
-            Spell spell = spells[0];
-            int roll = Roll.RollSingleDie(20);
-            int mod = 0;
-            if(spell.AttackType > 0)
-                mod = statMods[spell.AttackType - 1];
-            s += spell.Name + " attack roll: ";
-            s += (roll + mod);
-            s += "(Roll: " + roll;
-            if (spell.AttackType > 0)
-                s += ", Mod: " + mod;
-            s += ")";
-            UpdateOutput(s);
-            UpdateOutput(Environment.NewLine);
-            UpdateOutput(Environment.NewLine);
         }
 
 
@@ -2168,19 +2347,6 @@ namespace WindowsFormsApp1
             }
             //close
             output.Close();
-        }
-
-        public void AddSpell(Spell s)
-        {
-            spells.Add(s);
-            SaveSpells();
-        }
-
-        //delete spell from list at index
-        public void DeleteSpell(int index)
-        {
-            spells.RemoveAt(index);
-            SaveSpells();
         }
 
 

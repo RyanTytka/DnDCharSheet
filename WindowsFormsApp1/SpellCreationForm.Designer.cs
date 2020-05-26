@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpellCreationForm));
             this.saveButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.addRollButton = new System.Windows.Forms.Button();
             this.propertiesLabel = new System.Windows.Forms.Label();
@@ -73,15 +73,15 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveSpell);
             // 
-            // label1
+            // headerLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, -1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "New Spell";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Location = new System.Drawing.Point(36, -1);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(151, 36);
+            this.headerLabel.TabIndex = 1;
+            this.headerLabel.Text = "New Spell";
             // 
             // nameTextBox
             // 
@@ -394,7 +394,7 @@
             this.Controls.Add(this.propertiesLabel);
             this.Controls.Add(this.addRollButton);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.helpDisplaylabel);
             this.Name = "SpellCreationForm";
@@ -412,7 +412,7 @@
         #endregion
 
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button addRollButton;
         private System.Windows.Forms.Label propertiesLabel;
