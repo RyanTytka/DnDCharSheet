@@ -2390,7 +2390,7 @@
             // 
             // spellDescriptionTextbox
             // 
-            this.spellDescriptionTextbox.Location = new System.Drawing.Point(11, 184);
+            this.spellDescriptionTextbox.Location = new System.Drawing.Point(11, 240);
             this.spellDescriptionTextbox.Multiline = true;
             this.spellDescriptionTextbox.Name = "spellDescriptionTextbox";
             this.spellDescriptionTextbox.ReadOnly = true;
@@ -2796,14 +2796,14 @@
             // 
             // addModDisplayLabel
             // 
-            this.addModDisplayLabel.AutoSize = true;
             this.addModDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
             this.addModDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addModDisplayLabel.Location = new System.Drawing.Point(64, 202);
+            this.addModDisplayLabel.Location = new System.Drawing.Point(62, 202);
             this.addModDisplayLabel.Name = "addModDisplayLabel";
             this.addModDisplayLabel.Size = new System.Drawing.Size(71, 13);
             this.addModDisplayLabel.TabIndex = 188;
             this.addModDisplayLabel.Text = "(Ability Name)";
+            this.addModDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonNoPadding8
             // 

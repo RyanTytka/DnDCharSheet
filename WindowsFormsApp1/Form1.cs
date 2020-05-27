@@ -90,12 +90,12 @@ namespace WindowsFormsApp1
 
             saveButton.Enabled = false;
 
+            classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
             spellTypeDropdown.Text = "Sorcerer";
             spells = new List<Spell>();
             knownSpells = new List<int>();
             preparedSpells = new List<int>();
             spellRadioButtons = new List<RadioButton>();
-            classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
             LoadSpells();
         }
 
@@ -1582,6 +1582,12 @@ namespace WindowsFormsApp1
                     }
                 }
                 output.Write(-1);       //feat end marker
+                //spells known
+                output.Write(knownSpells.Count);
+                foreach(int i in knownSpells)
+                {
+                    output.Write(i);
+                }
 
                 if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
@@ -1781,9 +1787,16 @@ namespace WindowsFormsApp1
                         newFeat.UsesLeft = featUsesLeft;
                     //add feat
                     AddFeat(newFeat);
-
                     //update readIn
                     readIn = reader.ReadInt32();
+                }
+                //known spells
+                int numOfSpells = reader.ReadInt32();
+                for(int i = 0; i < numOfSpells; i++)
+                {
+                    int index = reader.ReadInt32();
+                    if (index < spells.Count)  //make sure the spell is in your saved list
+                        LearnSpell(index);
                 }
 
                 saved = true;
@@ -2039,6 +2052,7 @@ namespace WindowsFormsApp1
             }
             classSpellType = spellTypeDropdown.SelectedIndex;
             this.CenterToScreen();
+            addModDisplayLabel.Text = "(" + attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]] + ")";
         }
 
         private void SpellDescriptionShow(object sender, EventArgs e)
