@@ -14,7 +14,6 @@ namespace WindowsFormsApp1
         string name;
         bool optional, currentState, usesMultiplier;
         Roll multiplier;
-        int modifier;
 
         public bool Optional
         {
@@ -49,10 +48,6 @@ namespace WindowsFormsApp1
         {
             get { return multiplier; }
         }
-        public int Modifier
-        {
-            get { return modifier; }
-        }
         public bool UsesMul
         {
             get { return usesMultiplier; }
@@ -73,7 +68,7 @@ namespace WindowsFormsApp1
 
         //constructor for rolls on a spell
         public Roll(List<int> dieNum, List<int> dieAmount, int flat, string name, int mulDieNum, int mulDieAmount, 
-            bool usesMul, int modifier)
+            bool usesMul)
         {
             this.dieNum = dieNum;
             this.dieAmount = dieAmount;
@@ -84,7 +79,6 @@ namespace WindowsFormsApp1
             dieNums.Add(mulDieNum);
             dieAmounts.Add(mulDieAmount);
             multiplier = new Roll(dieNums, dieAmounts);
-            this.modifier = modifier;
             usesMultiplier = usesMul;
         }
 

@@ -11,7 +11,8 @@ namespace WindowsFormsApp1
         string name, castTime, range, duration, components, description;
         List<Roll> rolls;
         bool usesRoll;
-        int level, attackType;
+        int level;
+        bool attackRoll;
 
         public string Name
         {
@@ -45,13 +46,13 @@ namespace WindowsFormsApp1
         {
             get { return rolls; }
         }
-        public int AttackType
+        public bool UsesAttack
         {
-            get { return attackType; }
+            get { return attackRoll; }
         }
 
         public Spell(string _name, string _castTime, string _range, string _duration, string _components, List<Roll> _rolls,
-            int _level, string _description, int atkRoll)
+            int _level, string _description, bool atkRoll)
         {
             name = _name;
             castTime = _castTime;
@@ -61,7 +62,7 @@ namespace WindowsFormsApp1
             rolls = _rolls;
             level = _level;
             description = _description;
-            attackType = atkRoll;
+            attackRoll = atkRoll;
         }
 
         //makes roll and returns output

@@ -35,13 +35,13 @@ namespace WindowsFormsApp1
             {
                 ((Form1)Owner.Owner).AddSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text, 
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value, 
-                    descriptionTextBox.Text, AttackRollDropdown.SelectedIndex));
+                    descriptionTextBox.Text, AttackRollcheckBox.Checked));
             }
             else
             {
                 ((Form1)Owner.Owner).SetSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text,
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value,
-                    descriptionTextBox.Text, AttackRollDropdown.SelectedIndex), index);
+                    descriptionTextBox.Text, AttackRollcheckBox.Checked), index);
             }
             ((SpellMenu)Owner).RefreshSpells();
             this.Close();
@@ -56,10 +56,10 @@ namespace WindowsFormsApp1
         
 
         //add the roll to the lists
-        public void AddRoll(List<int> nums, List<int> dice, int flat, int modifier)
+        public void AddRoll(List<int> nums, List<int> dice, int flat)
         {
             Roll r = new Roll(nums, dice, flat, rollNameTextBox.Text, (int)DieAmountnumericUpDown.Value, 
-                (int)DieNumnumericUpDown.Value, multipliercheckBox.Checked, modifier);
+                (int)DieNumnumericUpDown.Value, multipliercheckBox.Checked);
             rolls.Add(r);
             //add bonus roll textbox
             Button newButton = new Button();
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
                 LevelnumericUpDown.Value = selectedSpell.Level;
                 foreach(Roll r in selectedSpell.Rolls)
                 {
-                    AddRoll(r.DieNum, r.DieAmount, r.Flat, r.Modifier);
+                    AddRoll(r.DieNum, r.DieAmount, r.Flat);
                 }
             }
             else

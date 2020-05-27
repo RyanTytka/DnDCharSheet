@@ -2075,15 +2075,15 @@ namespace WindowsFormsApp1
             int roll = Roll.RollSingleDie(20);
             //int mod = 0;
             //if(spellattacktypeDropDown.SelectedIndex > 0)
-            int mod = statMods[spellattacktypeDropDown.SelectedIndex];
+            int mod = statMods[classModifierTypes[classSpellType - 1]];
             s += spell.Name + " attack roll: ";
             s += (roll + mod + profBonus + MiscBonusnumericUpDown.Value);
             s += "(Roll: " + roll;
             //if (spell.AttackType > 0)
-            s += ", " + attributeNames[spellattacktypeDropDown.SelectedIndex] + ": " + mod;
+            s += ", " + attributeNames[classModifierTypes[classSpellType - 1]] + ": " + mod;
+            s += ", Proficiency Bonus: " + profBonus; 
             if (MiscBonusnumericUpDown.Value != 0)
                 s += ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
-            s += ", Proficiency Bonus: " + profBonus; 
             s += ")";
             UpdateOutput(s);
             UpdateOutput(Environment.NewLine);
@@ -2099,8 +2099,6 @@ namespace WindowsFormsApp1
             {
                 if (r.Name == spellrolldropdown.Text)
                 {
-                    //make roll
-                    int roll = r.RollDice();
                     //add multiplier to roll
                     List<int> totalDieNums = new List<int>();
                     totalDieNums.AddRange(r.DieAmount);
@@ -2119,21 +2117,27 @@ namespace WindowsFormsApp1
                             totalDieAmounts.Add(r.Multiplier.DieNum[0]);
                         }
                     }
+                    //create and roll dice
                     Roll newRoll = new Roll(totalDieAmounts, totalDieNums, r.Flat);
-                    //roll for multiplier
-                    for (int i = 0; i < MultipliernumericUpDown.Value; i++)
+                    int roll = newRoll.RollDice();
+                    string rollString = newRoll.ToString();
+                    if(addModcheckBox.Checked || MiscBonusnumericUpDown.Value != 0)
+                        rollString += ": " + roll;
+                    //add modifier to roll
+                    string modString = "";
+                    if(addModcheckBox.Checked)
                     {
-                        //add multiplier
-                        roll += r.Multiplier.RollDice();
+                        modString += ", " + attributeNames[classModifierTypes[classSpellType - 1]];
+                        modString += ": " + statMods[classModifierTypes[classSpellType - 1]];
+                        roll += statMods[classModifierTypes[classSpellType - 1]];
                     }
-
-                    // add modifier to roll
-
-                    roll = newRoll.RollDice() + (int)MiscBonusnumericUpDown.Value;
+                    //misc bonus
+                    roll += (int)MiscBonusnumericUpDown.Value;
                     string miscString = "";
                     if (MiscBonusnumericUpDown.Value != 0)
                         miscString = ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
-                    UpdateOutput(s.Name + " - " + r.Name + " (" + newRoll.ToString() + miscString + "): " + roll);
+                    //output roll
+                    UpdateOutput(s.Name + " - " + r.Name + ": " + roll + " (" + rollString + modString + miscString + ")");
                     UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
                 }
             }
@@ -2211,9 +2215,7 @@ namespace WindowsFormsApp1
             if (s.Rolls.Count > 0)
                 spellrolldropdown.Text = s.Rolls[0].Name;
             //enable/disable attack buttons
-            spellAttackButton.Enabled = s.AttackType != 0;
-            spellattacktypeDropDown.Enabled = s.AttackType != 0;
-            spellattacktypeDropDown.Text = attributeNames[classModifierTypes[classSpellType-1]];
+            spellAttackButton.Enabled = s.UsesAttack;
             //enable/disable misc roll buttons
             SpellMiscRollButton.Enabled = s.Rolls.Count > 0;
             spellrolldropdown.Enabled = s.Rolls.Count > 0;
@@ -2266,7 +2268,7 @@ namespace WindowsFormsApp1
                 string duration = reader.ReadString();
                 string components = reader.ReadString();
                 string description = reader.ReadString();
-                int atkType = reader.ReadInt32();
+                bool useAtk = reader.ReadBoolean();
                 //rolls
                 List<Roll> rolls = new List<Roll>();
                 int numOfRolls = reader.ReadInt32();
@@ -2293,11 +2295,10 @@ namespace WindowsFormsApp1
                         mulDieNum = reader.ReadInt32();
                         mulDieAmount = reader.ReadInt32();
                     }
-                    int rollModifier = reader.ReadInt32();
-                    Roll r = new Roll(rollDieNum, rollDieAmount, rollFlat, rollName, mulDieNum, mulDieAmount, usesMul, rollModifier);
+                    Roll r = new Roll(rollDieNum, rollDieAmount, rollFlat, rollName, mulDieNum, mulDieAmount, usesMul);
                     rolls.Add(r);
                 }
-                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, atkType));
+                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, useAtk));
             }
         }
 
@@ -2320,7 +2321,7 @@ namespace WindowsFormsApp1
                 output.Write(s.Duration);
                 output.Write(s.Components);
                 output.Write(s.Description);
-                output.Write(s.AttackType);
+                output.Write(s.UsesAttack);
                 //rolls
                 output.Write(s.Rolls.Count);
                 foreach(Roll r in s.Rolls)
@@ -2342,7 +2343,6 @@ namespace WindowsFormsApp1
                         output.Write(r.Multiplier.DieNum[0]);
                         output.Write(r.Multiplier.DieAmount[0]);
                     }
-                    output.Write(r.Modifier);
                 }
             }
             //close

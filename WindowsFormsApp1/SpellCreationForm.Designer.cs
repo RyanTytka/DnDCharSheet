@@ -49,7 +49,6 @@
             this.LevelnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.AttackRollDropdown = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.DieNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.multiplierLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.helpLabel = new System.Windows.Forms.Label();
             this.helpDisplaylabel = new System.Windows.Forms.Label();
             this.multipliercheckBox = new System.Windows.Forms.CheckBox();
+            this.AttackRollcheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.LevelnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).BeginInit();
@@ -262,20 +262,10 @@
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.AttackRollDropdown.Location = new System.Drawing.Point(233, 104);
+            this.AttackRollDropdown.Location = new System.Drawing.Point(235, 447);
             this.AttackRollDropdown.Name = "AttackRollDropdown";
             this.AttackRollDropdown.Size = new System.Drawing.Size(107, 21);
             this.AttackRollDropdown.TabIndex = 34;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(250, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Attack Roll";
             // 
             // DieNumnumericUpDown
             // 
@@ -364,18 +354,30 @@
             this.multipliercheckBox.UseVisualStyleBackColor = true;
             this.multipliercheckBox.CheckedChanged += new System.EventHandler(this.multipliercheckBox_CheckedChanged);
             // 
+            // AttackRollcheckBox
+            // 
+            this.AttackRollcheckBox.AutoSize = true;
+            this.AttackRollcheckBox.Checked = true;
+            this.AttackRollcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AttackRollcheckBox.Location = new System.Drawing.Point(247, 91);
+            this.AttackRollcheckBox.Name = "AttackRollcheckBox";
+            this.AttackRollcheckBox.Size = new System.Drawing.Size(78, 17);
+            this.AttackRollcheckBox.TabIndex = 44;
+            this.AttackRollcheckBox.Text = "Attack Roll";
+            this.AttackRollcheckBox.UseVisualStyleBackColor = true;
+            // 
             // SpellCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 480);
+            this.Controls.Add(this.AttackRollcheckBox);
             this.Controls.Add(this.multipliercheckBox);
             this.Controls.Add(this.helpLabel);
             this.Controls.Add(this.DieAmountnumericUpDown);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.multiplierLabel);
             this.Controls.Add(this.DieNumnumericUpDown);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.AttackRollDropdown);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.LevelnumericUpDown);
@@ -431,7 +433,6 @@
         private System.Windows.Forms.NumericUpDown LevelnumericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox AttackRollDropdown;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown DieNumnumericUpDown;
         private System.Windows.Forms.Label multiplierLabel;
         private System.Windows.Forms.Label label9;
@@ -439,5 +440,6 @@
         private System.Windows.Forms.Label helpLabel;
         private System.Windows.Forms.Label helpDisplaylabel;
         private System.Windows.Forms.CheckBox multipliercheckBox;
+        private System.Windows.Forms.CheckBox AttackRollcheckBox;
     }
 }

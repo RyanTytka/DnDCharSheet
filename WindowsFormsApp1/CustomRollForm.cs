@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             }
             else if(formType == 4)   //set spell roll
             {
-                ((SpellCreationForm)Owner).AddRoll(amountList, numList, (int)flatNumBox.Value, ModifiercomboBox.SelectedIndex);
+                ((SpellCreationForm)Owner).AddRoll(amountList, numList, (int)flatNumBox.Value);
                 this.Close();
             }
         }
