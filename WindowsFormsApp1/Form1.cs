@@ -39,13 +39,14 @@ namespace WindowsFormsApp1
         bool removedLetters = false;
         List<Spell> spells;         //spells loaded from the spells.data file
         int currentSpell;           //selected spell
-        List<int> knownSpells;      //list of indexes of spells that the player knows
-        List<int> preparedSpells;   //list of indexs of spells that are cureently prepared
+        List<int> knownSpells;      //list of spell id's that the player knows
+        List<int> preparedSpells;   //list of spell id's of spells that are currently prepared
         List<RadioButton> spellRadioButtons;    //list of radio buttons currently displayed
         int[] classModifierTypes;   //array of ints that relate each spellcasting class to what attribute they use
         int classSpellType;     //what kind of spellcasting is being used
         List<RadioButton> spellLevelButtons;    // list containing controls for selecting spell levels
         int currentSpellLevel = 1;              // what level spells are currently being shown
+        public static int nextSpellId;      //static int that increases each time a spell is made
 
         string fileName;
         bool saved = true;
@@ -59,6 +60,10 @@ namespace WindowsFormsApp1
         public List<Spell> Spells
         {
             get { return spells; }
+        }
+        public List<int> KnownSpells
+        {
+            get { return knownSpells; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -1807,9 +1812,9 @@ namespace WindowsFormsApp1
                 int numOfSpells = reader.ReadInt32();
                 for(int i = 0; i < numOfSpells; i++)
                 {
-                    int index = reader.ReadInt32();
-                    if (index < spells.Count)  //make sure the spell is in your saved list
-                        LearnSpell(index);
+                    int id = reader.ReadInt32();
+                    if (FindSpellFromID(id) != null)  //make sure the spell is in your saved list
+                        LearnSpell(id);
                 }
 
                 saved = true;
@@ -2180,9 +2185,9 @@ namespace WindowsFormsApp1
         }
 
         //add spell to current spell list
-        public void LearnSpell(int index)
+        public void LearnSpell(int id)
         {
-            knownSpells.Add(index);
+            knownSpells.Add(id);
             SelectSpellLevel(spellLevelButtons[currentSpellLevel] , null);
         }
 
@@ -2201,12 +2206,12 @@ namespace WindowsFormsApp1
             int spellsDisplayed = 0;
             for(int i = 0; i < knownSpells.Count; i++)
             {
-                if(spells[knownSpells[i]].Level == currentSpellLevel)
+                if(FindSpellFromID(knownSpells[i]) != null && FindSpellFromID(knownSpells[i]).Level == currentSpellLevel)
                 {
                     //add new control
                     RadioButton newButton = new RadioButton();
-                    newButton.Text = spells[knownSpells[i]].Name;
-                    newButton.Tag = knownSpells[i];   //adds the spells index in spells to the tag
+                    newButton.Text = FindSpellFromID(knownSpells[i]).Name;
+                    newButton.Tag = spells.IndexOf(FindSpellFromID(knownSpells[i]));   //adds the spells index in spells to the tag
                     newButton.Location = new Point(5, spellsDisplayed * 20 + 5);
                     newButton.CheckedChanged += SpellSelected;
                     //add to lists
@@ -2261,9 +2266,9 @@ namespace WindowsFormsApp1
             miscBonuslabel.Enabled = s.Rolls.Count > 0 || s.UsesAttack;
         }
 
-        public void SetSpell(Spell s, int index)
+        public void SetSpell(Spell s, int id)
         {
-            spells[index] = s;
+            spells[spells.IndexOf(FindSpellFromID(id))] = s;
             SaveSpells();
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
         }
@@ -2288,10 +2293,13 @@ namespace WindowsFormsApp1
         }
 
         //delete spell from list at index
-        public void DeleteSpell(int index)
+        public void DeleteSpell(int id)
         {
-            spells.RemoveAt(index);
+            spells.Remove(FindSpellFromID(id));
             SaveSpells();
+            //remove spell from known spells
+            if (knownSpells.Contains(id))
+                knownSpells.Remove(id);
         }
 
         //inputs spells from text file into a list on load
@@ -2299,11 +2307,13 @@ namespace WindowsFormsApp1
         {
             Stream inStream = File.OpenRead("spells.data");
             BinaryReader reader = new BinaryReader(inStream);
+            nextSpellId = reader.ReadInt32();
             int numOfSpells = reader.ReadInt32();
             for (int i = 0; i < numOfSpells; i++)
             {
                 string name = reader.ReadString();
                 int lvl = reader.ReadInt32();
+                int id = reader.ReadInt32();
                 string castTime = reader.ReadString();
                 string range = reader.ReadString();
                 string duration = reader.ReadString();
@@ -2339,7 +2349,7 @@ namespace WindowsFormsApp1
                     Roll r = new Roll(rollDieNum, rollDieAmount, rollFlat, rollName, mulDieNum, mulDieAmount, usesMul);
                     rolls.Add(r);
                 }
-                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, useAtk));
+                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, useAtk, id));
             }
         }
 
@@ -2352,11 +2362,13 @@ namespace WindowsFormsApp1
             Stream outStream = File.OpenWrite(saveFilePath);
             BinaryWriter output = new BinaryWriter(outStream);
             //write spells
+            output.Write(nextSpellId);
             output.Write(spells.Count);
             foreach(Spell s in spells)
             {
                 output.Write(s.Name);
                 output.Write(s.Level);
+                output.Write(s.ID);
                 output.Write(s.CastTime);
                 output.Write(s.Range);
                 output.Write(s.Duration);
@@ -2389,6 +2401,18 @@ namespace WindowsFormsApp1
             //close
             output.Close();
         }
+
+        //takes a spell ID and finds the spell from the spells list
+        public Spell FindSpellFromID(int id)
+        {
+            foreach(Spell s in spells)
+            {
+                if (s.ID == id)
+                    return s;
+            }
+            return null;
+        }
+
 
 
         #endregion

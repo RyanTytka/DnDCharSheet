@@ -33,15 +33,16 @@ namespace WindowsFormsApp1
             
             if (selectedSpell == null)
             {
+                Form1.nextSpellId++;
                 ((Form1)Owner.Owner).AddSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text, 
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value, 
-                    descriptionTextBox.Text, AttackRollcheckBox.Checked));
+                    descriptionTextBox.Text, AttackRollcheckBox.Checked, Form1.nextSpellId));
             }
             else
             {
                 ((Form1)Owner.Owner).SetSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text,
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value,
-                    descriptionTextBox.Text, AttackRollcheckBox.Checked), index);
+                    descriptionTextBox.Text, AttackRollcheckBox.Checked, selectedSpell.ID), index);
             }
             ((SpellMenu)Owner).RefreshSpells();
             this.Close();

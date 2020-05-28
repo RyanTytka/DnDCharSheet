@@ -181,7 +181,6 @@
             this.castTimelabel.Name = "castTimelabel";
             this.castTimelabel.Size = new System.Drawing.Size(111, 18);
             this.castTimelabel.TabIndex = 13;
-            this.castTimelabel.Text = "Cast Time";
             // 
             // rangelabel
             // 
@@ -191,7 +190,6 @@
             this.rangelabel.Name = "rangelabel";
             this.rangelabel.Size = new System.Drawing.Size(113, 18);
             this.rangelabel.TabIndex = 14;
-            this.rangelabel.Text = "Cast Time";
             // 
             // durationlabel
             // 
@@ -201,7 +199,6 @@
             this.durationlabel.Name = "durationlabel";
             this.durationlabel.Size = new System.Drawing.Size(113, 18);
             this.durationlabel.TabIndex = 15;
-            this.durationlabel.Text = "Cast Time";
             // 
             // componentslabel
             // 
@@ -211,7 +208,6 @@
             this.componentslabel.Name = "componentslabel";
             this.componentslabel.Size = new System.Drawing.Size(113, 18);
             this.componentslabel.TabIndex = 16;
-            this.componentslabel.Text = "Components";
             // 
             // learnSpellbutton
             // 
@@ -247,7 +243,6 @@
             this.Controls.Add(this.buttonNoPadding1);
             this.Controls.Add(this.spellListBox);
             this.Name = "SpellMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spells";
             this.Load += new System.EventHandler(this.SpellMenu_Load);
             this.ResumeLayout(false);

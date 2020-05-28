@@ -42,13 +42,34 @@ namespace WindowsFormsApp1
             //clear list, then get spells from form1 then add to list
             spellListBox.Items.Clear();
             spells = ((Form1)Owner).Spells;
+            List<int> knownSpells = ((Form1)Owner).KnownSpells;
             foreach (Spell s in spells)
             {
                 //adds name, then enough spaces to make level on the right of the string
-                string line = s.Name;
-                int numOfDashes = s.Name.Length;
+                string line = "";
+                if (knownSpells.Contains(s.ID)) //show what spells are already known
+                    line = "(Learned) ";
+                line += s.Name;
+                int startPoint = line.Length;
+                int numOfDashes = line.Length;
+                bool tooLong = false;
                 SizeF MessageSize = spellListBox.CreateGraphics().MeasureString(line, spellListBox.Font);
-                while (MessageSize.Width < 265)
+                while(MessageSize.Width > 265)
+                {
+                    //trim down names that are too long
+                    line = line.Substring(0, line.Length - 1);
+                    MessageSize = spellListBox.CreateGraphics().MeasureString(line, spellListBox.Font);
+                    numOfDashes--;
+                    tooLong = true;
+                }
+                if (tooLong)
+                {
+                    //add ...
+                    line = line.Substring(0, line.Length - 2);
+                    line += "...";
+                }
+                //create space on right side
+                while (MessageSize.Width < 265 && !tooLong)
                 {
                     //add i's until the string is a certain length
                     line += "i";
@@ -58,7 +79,7 @@ namespace WindowsFormsApp1
                 line += "\t";
                 //replace i's with spaces
                 StringBuilder sb = new StringBuilder(line);
-                for(int i = s.Name.Length; i < numOfDashes;  i++)
+                for(int i = startPoint; i < numOfDashes;  i++)
                 {
                     sb[i] = ' ';
                 }
@@ -66,6 +87,9 @@ namespace WindowsFormsApp1
                 line += s.Level;
                 spellListBox.Items.Add(line);
             }
+            deleteSpellButton.Enabled = spells.Count > 0;
+            learnSpellbutton.Enabled = spells.Count > 0;
+            editSpellButton.Enabled = spells.Count > 0;
         }
 
         private void deleteSpellButton_Click(object sender, EventArgs e)
@@ -79,17 +103,19 @@ namespace WindowsFormsApp1
                 MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
+                int count = 0;      //used to offset the indices while deleting multiple spells
                 int index = spellListBox.SelectedIndex;
-                int count = 0;  //used to offest the indices that are being removed
                 foreach (int i in spellListBox.SelectedIndices)
                 {
-                    ((Form1)Owner).DeleteSpell(i - count);
+                    ((Form1)Owner).DeleteSpell(spells[i - count].ID);
                     count++;
                 }
                 RefreshSpells();
                 if (spells.Count > 0)
                     spellListBox.SetSelected(Math.Max(0, index - 1), true);
             }
+            if (spells.Count == 0)
+                deleteSpellButton.Enabled = false;
         }
 
         //when a spell is selected
@@ -126,8 +152,9 @@ namespace WindowsFormsApp1
         {
             foreach (int i in spellListBox.SelectedIndices)
             {
-                ((Form1)Owner).LearnSpell(i);
+                ((Form1)Owner).LearnSpell(spells[i].ID);
             }
+            RefreshSpells();
         }
 
         //open spell creation form editing selected spell
@@ -136,7 +163,7 @@ namespace WindowsFormsApp1
             int index = spellListBox.SelectedIndex;
             if (index >= 0)
             {
-                SpellCreationForm spellCreation = new SpellCreationForm(spells[index], index);
+                SpellCreationForm spellCreation = new SpellCreationForm(spells[index], spells[index].ID);
                 spellCreation.ShowDialog(this);
             }
         }
