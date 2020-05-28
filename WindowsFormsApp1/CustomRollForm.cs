@@ -45,13 +45,6 @@ namespace WindowsFormsApp1
         private void CustomRollForm_Load(object sender, EventArgs e)
         {
             dieNumBox.Value = intDieNum;
-            if(formType != 4)
-            {
-                this.Size = new Size(187, 128);
-                ModifiercomboBox.Visible = false;
-                modifierlabel.Visible = false;
-            }
-            ModifiercomboBox.Text = "None";
         }
 
 

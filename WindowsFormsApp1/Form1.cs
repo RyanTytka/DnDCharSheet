@@ -44,6 +44,8 @@ namespace WindowsFormsApp1
         List<RadioButton> spellRadioButtons;    //list of radio buttons currently displayed
         int[] classModifierTypes;   //array of ints that relate each spellcasting class to what attribute they use
         int classSpellType;     //what kind of spellcasting is being used
+        List<RadioButton> spellLevelButtons;    // list containing controls for selecting spell levels
+        int currentSpellLevel = 1;              // what level spells are currently being shown
 
         string fileName;
         bool saved = true;
@@ -96,6 +98,17 @@ namespace WindowsFormsApp1
             knownSpells = new List<int>();
             preparedSpells = new List<int>();
             spellRadioButtons = new List<RadioButton>();
+            spellLevelButtons = new List<RadioButton>();
+            spellLevelButtons.Add(Level0SpellButton);
+            spellLevelButtons.Add(Level1SpellButton);
+            spellLevelButtons.Add(Level2SpellButton);
+            spellLevelButtons.Add(Level3SpellButton);
+            spellLevelButtons.Add(Level4SpellButton);
+            spellLevelButtons.Add(Level5SpellButton);
+            spellLevelButtons.Add(Level6SpellButton);
+            spellLevelButtons.Add(Level7SpellButton);
+            spellLevelButtons.Add(Level8SpellButton);
+            spellLevelButtons.Add(Level9SpellButton);
             LoadSpells();
         }
 
@@ -2057,16 +2070,20 @@ namespace WindowsFormsApp1
 
         private void SpellDescriptionShow(object sender, EventArgs e)
         {
+            if (spells[currentSpell].Description == "")
+                spellDescriptionTextbox.Text = "No description set";
+            else
+                spellDescriptionTextbox.Text = spells[currentSpell].Description;
             spellDescriptionTextbox.BringToFront();
             spellDescriptionTextbox.Visible = true;
             spellDesLabel.BackColor = Color.WhiteSmoke;
-            spellDescriptionTextbox.Text = spells[currentSpell].Description;
-            //set box of description textbox
-            spellDescriptionTextbox.Width = 228;
+            spellDescriptionTextbox.Width = Math.Min(228, (int)spellDescriptionTextbox.CreateGraphics().
+                MeasureString(spellDescriptionTextbox.Text, spellDescriptionTextbox.Font).Width);
             SizeF MessageSize = spellDescriptionTextbox.CreateGraphics().MeasureString(spellDescriptionTextbox.Text,
                 spellDescriptionTextbox.Font, spellDescriptionTextbox.Width, new StringFormat(0));
-            spellDescriptionTextbox.Height = (int)(MessageSize.Height * 1) + 10;
-
+            spellDescriptionTextbox.Height = (int)(MessageSize.Height * 1.06) - 8;
+            int xPos = Math.Max( Math.Min(113, 235 - spellDescriptionTextbox.Width), 11);
+            spellDescriptionTextbox.Location = new Point(xPos, 240);
         }
 
         private void SpellDescriptionHide(object sender, EventArgs e)
@@ -2166,15 +2183,16 @@ namespace WindowsFormsApp1
         public void LearnSpell(int index)
         {
             knownSpells.Add(index);
+            SelectSpellLevel(spellLevelButtons[currentSpellLevel] , null);
         }
 
         //select spell level radio button
         private void SelectSpellLevel(object sender, EventArgs e)
         {
             //get selected level and update label
-            int level = int.Parse(((RadioButton)sender).Tag.ToString());
-            spellListLabel.Text = "Level " + level + " Spells";
-            if (level == 0)
+            currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
+            spellListLabel.Text = "Level " + currentSpellLevel + " Spells";
+            if (currentSpellLevel == 0)
                 spellListLabel.Text = "Cantrips";
             //clear currently displayed spells
             spellListPanel.Controls.Clear();
@@ -2183,7 +2201,7 @@ namespace WindowsFormsApp1
             int spellsDisplayed = 0;
             for(int i = 0; i < knownSpells.Count; i++)
             {
-                if(spells[knownSpells[i]].Level == level)
+                if(spells[knownSpells[i]].Level == currentSpellLevel)
                 {
                     //add new control
                     RadioButton newButton = new RadioButton();
@@ -2228,17 +2246,26 @@ namespace WindowsFormsApp1
             }
             if (s.Rolls.Count > 0)
                 spellrolldropdown.Text = s.Rolls[0].Name;
-            //enable/disable attack buttons
+            //enable/disable buttons
             spellAttackButton.Enabled = s.UsesAttack;
-            //enable/disable misc roll buttons
             SpellMiscRollButton.Enabled = s.Rolls.Count > 0;
             spellrolldropdown.Enabled = s.Rolls.Count > 0;
+            MultipliernumericUpDown.Enabled = s.Rolls.Count > 0;
+            multiplierDicedisplaylabel.Enabled = s.Rolls.Count > 0;
+            addModcheckBox.Enabled = s.Rolls.Count > 0;
+            addModDisplayLabel.Enabled = s.Rolls.Count > 0;
+            mullabel.Enabled = s.Rolls.Count > 0;
+            if (s.Rolls.Count == 0)
+                multiplierDicedisplaylabel.Text = " n/a";
+            MiscBonusnumericUpDown.Enabled = s.Rolls.Count > 0 || s.UsesAttack;
+            miscBonuslabel.Enabled = s.Rolls.Count > 0 || s.UsesAttack;
         }
 
         public void SetSpell(Spell s, int index)
         {
             spells[index] = s;
             SaveSpells();
+            SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
         }
 
         public void AddSpell(Spell s)

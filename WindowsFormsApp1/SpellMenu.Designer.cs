@@ -55,6 +55,7 @@
             this.spellListBox.Location = new System.Drawing.Point(12, 25);
             this.spellListBox.Name = "spellListBox";
             this.spellListBox.ScrollAlwaysVisible = true;
+            this.spellListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.spellListBox.Size = new System.Drawing.Size(321, 184);
             this.spellListBox.TabIndex = 0;
             this.spellListBox.SelectedIndexChanged += new System.EventHandler(this.spellListBox_SelectedIndexChanged);
@@ -84,7 +85,7 @@
             // editSpellButton
             // 
             this.editSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editSpellButton.Location = new System.Drawing.Point(230, 218);
+            this.editSpellButton.Location = new System.Drawing.Point(339, 218);
             this.editSpellButton.Name = "editSpellButton";
             this.editSpellButton.Size = new System.Drawing.Size(103, 45);
             this.editSpellButton.TabIndex = 3;
@@ -157,28 +158,28 @@
             this.descriptionlabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.descriptionlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descriptionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.descriptionlabel.Location = new System.Drawing.Point(451, 25);
+            this.descriptionlabel.Location = new System.Drawing.Point(450, 25);
             this.descriptionlabel.Name = "descriptionlabel";
-            this.descriptionlabel.Size = new System.Drawing.Size(169, 238);
+            this.descriptionlabel.Size = new System.Drawing.Size(310, 238);
             this.descriptionlabel.TabIndex = 11;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(484, 3);
+            this.label8.Location = new System.Drawing.Point(453, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 20);
+            this.label8.Size = new System.Drawing.Size(305, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "Description";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // castTimelabel
             // 
             this.castTimelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.castTimelabel.Location = new System.Drawing.Point(335, 42);
-            this.castTimelabel.MaximumSize = new System.Drawing.Size(128, 0);
+            this.castTimelabel.MaximumSize = new System.Drawing.Size(128, 30);
             this.castTimelabel.Name = "castTimelabel";
-            this.castTimelabel.Size = new System.Drawing.Size(111, 0);
+            this.castTimelabel.Size = new System.Drawing.Size(111, 18);
             this.castTimelabel.TabIndex = 13;
             this.castTimelabel.Text = "Cast Time";
             // 
@@ -186,9 +187,9 @@
             // 
             this.rangelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rangelabel.Location = new System.Drawing.Point(335, 91);
-            this.rangelabel.MaximumSize = new System.Drawing.Size(128, 0);
+            this.rangelabel.MaximumSize = new System.Drawing.Size(128, 30);
             this.rangelabel.Name = "rangelabel";
-            this.rangelabel.Size = new System.Drawing.Size(113, 0);
+            this.rangelabel.Size = new System.Drawing.Size(113, 18);
             this.rangelabel.TabIndex = 14;
             this.rangelabel.Text = "Cast Time";
             // 
@@ -196,9 +197,9 @@
             // 
             this.durationlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durationlabel.Location = new System.Drawing.Point(335, 138);
-            this.durationlabel.MaximumSize = new System.Drawing.Size(128, 0);
+            this.durationlabel.MaximumSize = new System.Drawing.Size(128, 30);
             this.durationlabel.Name = "durationlabel";
-            this.durationlabel.Size = new System.Drawing.Size(113, 0);
+            this.durationlabel.Size = new System.Drawing.Size(113, 18);
             this.durationlabel.TabIndex = 15;
             this.durationlabel.Text = "Cast Time";
             // 
@@ -206,16 +207,16 @@
             // 
             this.componentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentslabel.Location = new System.Drawing.Point(335, 186);
-            this.componentslabel.MaximumSize = new System.Drawing.Size(128, 0);
+            this.componentslabel.MaximumSize = new System.Drawing.Size(128, 30);
             this.componentslabel.Name = "componentslabel";
-            this.componentslabel.Size = new System.Drawing.Size(113, 0);
+            this.componentslabel.Size = new System.Drawing.Size(113, 18);
             this.componentslabel.TabIndex = 16;
             this.componentslabel.Text = "Components";
             // 
             // learnSpellbutton
             // 
             this.learnSpellbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.learnSpellbutton.Location = new System.Drawing.Point(339, 218);
+            this.learnSpellbutton.Location = new System.Drawing.Point(230, 218);
             this.learnSpellbutton.Name = "learnSpellbutton";
             this.learnSpellbutton.Size = new System.Drawing.Size(103, 45);
             this.learnSpellbutton.TabIndex = 17;
@@ -227,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 273);
+            this.ClientSize = new System.Drawing.Size(770, 273);
             this.Controls.Add(this.learnSpellbutton);
             this.Controls.Add(this.componentslabel);
             this.Controls.Add(this.durationlabel);
@@ -246,6 +247,7 @@
             this.Controls.Add(this.buttonNoPadding1);
             this.Controls.Add(this.spellListBox);
             this.Name = "SpellMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spells";
             this.Load += new System.EventHandler(this.SpellMenu_Load);
             this.ResumeLayout(false);

@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class SpellMenu : Form
     {
         List<Spell> spells;
+        int lastIndexSelected;
 
         public SpellMenu(List<Spell> spells)
         {
@@ -69,36 +70,75 @@ namespace WindowsFormsApp1
 
         private void deleteSpellButton_Click(object sender, EventArgs e)
         {
-            int index = spellListBox.SelectedIndex;
-            ((Form1)Owner).DeleteSpell(index);
-            RefreshSpells();
-            if(spells.Count > 0)
-                spellListBox.SetSelected(Math.Max(0, index - 1), true);
+            string text = "";
+            if (spellListBox.SelectedIndices.Count > 1)
+                text = "Are you sure you want to delete these spells?";
+            else
+                text = "Are you sure you want to delete this spell?";
+            DialogResult result = MessageBox.Show(this, text, "Confirmation", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int index = spellListBox.SelectedIndex;
+                int count = 0;  //used to offest the indices that are being removed
+                foreach (int i in spellListBox.SelectedIndices)
+                {
+                    ((Form1)Owner).DeleteSpell(i - count);
+                    count++;
+                }
+                RefreshSpells();
+                if (spells.Count > 0)
+                    spellListBox.SetSelected(Math.Max(0, index - 1), true);
+            }
         }
 
         //when a spell is selected
         private void spellListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (spellListBox.SelectedIndex < 0)
+                spellListBox.SetSelected(lastIndexSelected, true);
+            else
+                lastIndexSelected = spellListBox.SelectedIndex;
             Spell s = spells[spellListBox.SelectedIndex];
             castTimelabel.Text = s.CastTime;
             rangelabel.Text = s.Range;
             durationlabel.Text = s.Duration;
             componentslabel.Text = s.Components;
-            durationlabel.Text = s.Description;
+            descriptionlabel.Text = s.Description;
+            //if multiple items are selected
+            if(spellListBox.SelectedIndices.Count > 1)
+            {
+                deleteSpellButton.Text = "Delete  Spells";
+                learnSpellbutton.Text = "Learn  Spells";
+                editSpellButton.Enabled = false;
+            }
+            else
+            {
+                deleteSpellButton.Text = "Delete  Spell";
+                learnSpellbutton.Text = "Learn    Spell";
+                editSpellButton.Enabled = true;
+
+            }
         }
 
         //add selected spell to knownSpells in form1
         private void learnSpellbutton_Click(object sender, EventArgs e)
         {
-            ((Form1)Owner).LearnSpell(spellListBox.SelectedIndex);
+            foreach (int i in spellListBox.SelectedIndices)
+            {
+                ((Form1)Owner).LearnSpell(i);
+            }
         }
 
         //open spell creation form editing selected spell
         private void editSpellButton_Click(object sender, EventArgs e)
         {
             int index = spellListBox.SelectedIndex;
-            SpellCreationForm spellCreation = new SpellCreationForm(spells[index], index);
-            spellCreation.ShowDialog(this);
+            if (index >= 0)
+            {
+                SpellCreationForm spellCreation = new SpellCreationForm(spells[index], index);
+                spellCreation.ShowDialog(this);
+            }
         }
     }
 }

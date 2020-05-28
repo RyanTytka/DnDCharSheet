@@ -192,8 +192,8 @@
             this.spellDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.MiscBonusnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.miscBonuslabel = new System.Windows.Forms.Label();
+            this.mullabel = new System.Windows.Forms.Label();
             this.MultipliernumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DurationDisplaylabel = new System.Windows.Forms.Label();
             this.rangeDisplaylabel = new System.Windows.Forms.Label();
@@ -224,12 +224,15 @@
             this.textBox = new System.Windows.Forms.TextBox();
             this.addModcheckBox = new System.Windows.Forms.CheckBox();
             this.addModDisplayLabel = new System.Windows.Forms.Label();
-            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
             this.spellAttackButton = new CustomButtons.ButtonNoPadding();
             this.SpellMiscRollButton = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
             this.browseSpellsButton = new CustomButtons.ButtonNoPadding();
             this.featShortRestButton = new CustomButtons.ButtonNoPadding();
             this.otherFeatButton = new CustomButtons.ButtonNoPadding();
@@ -238,6 +241,9 @@
             this.featRollButton = new CustomButtons.ButtonNoPadding();
             this.featDeleteButton = new CustomButtons.ButtonNoPadding();
             this.featEditButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
             this.newCharButton = new CustomButtons.ButtonNoPadding();
             this.loadButton = new CustomButtons.ButtonNoPadding();
             this.SaveAsButton = new CustomButtons.ButtonNoPadding();
@@ -2131,8 +2137,11 @@
             this.featsPanel.Controls.Add(this.featRollButton);
             this.featsPanel.Controls.Add(this.featDeleteButton);
             this.featsPanel.Controls.Add(this.featEditButton);
+            this.featsPanel.Controls.Add(this.buttonNoPadding8);
             this.featsPanel.Controls.Add(this.textBox15);
+            this.featsPanel.Controls.Add(this.buttonNoPadding7);
             this.featsPanel.Controls.Add(this.label4);
+            this.featsPanel.Controls.Add(this.buttonNoPadding6);
             this.featsPanel.Location = new System.Drawing.Point(590, 99);
             this.featsPanel.Name = "featsPanel";
             this.featsPanel.Size = new System.Drawing.Size(277, 218);
@@ -2255,22 +2264,23 @@
             // spellPanel
             // 
             this.spellPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.spellPanel.Controls.Add(this.textBox23);
+            this.spellPanel.Controls.Add(this.buttonNoPadding3);
+            this.spellPanel.Controls.Add(this.buttonNoPadding5);
+            this.spellPanel.Controls.Add(this.buttonNoPadding1);
             this.spellPanel.Controls.Add(this.label13);
             this.spellPanel.Controls.Add(this.label9);
+            this.spellPanel.Controls.Add(this.buttonNoPadding2);
             this.spellPanel.Controls.Add(this.label10);
             this.spellPanel.Controls.Add(this.label11);
             this.spellPanel.Controls.Add(this.label12);
             this.spellPanel.Controls.Add(this.label7);
             this.spellPanel.Controls.Add(this.label8);
             this.spellPanel.Controls.Add(this.label6);
-            this.spellPanel.Controls.Add(this.buttonNoPadding8);
-            this.spellPanel.Controls.Add(this.buttonNoPadding7);
-            this.spellPanel.Controls.Add(this.buttonNoPadding6);
+            this.spellPanel.Controls.Add(this.buttonNoPadding4);
             this.spellPanel.Controls.Add(this.label3);
             this.spellPanel.Controls.Add(this.spellDescriptionTextbox);
             this.spellPanel.Controls.Add(this.panel6);
-            this.spellPanel.Controls.Add(this.textBox22);
-            this.spellPanel.Controls.Add(this.buttonNoPadding4);
             this.spellPanel.Controls.Add(this.Level0SpellButton);
             this.spellPanel.Controls.Add(this.spellListPanel);
             this.spellPanel.Controls.Add(this.Level9SpellButton);
@@ -2284,6 +2294,8 @@
             this.spellPanel.Controls.Add(this.Level1SpellButton);
             this.spellPanel.Controls.Add(this.browseSpellsButton);
             this.spellPanel.Controls.Add(this.spellListLabel);
+            this.spellPanel.Controls.Add(this.textBox22);
+            this.spellPanel.Controls.Add(this.textBox21);
             this.spellPanel.Location = new System.Drawing.Point(879, 31);
             this.spellPanel.Name = "spellPanel";
             this.spellPanel.Size = new System.Drawing.Size(251, 555);
@@ -2294,7 +2306,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.Control;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label13.Location = new System.Drawing.Point(19, 40);
+            this.label13.Location = new System.Drawing.Point(6, 40);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(26, 16);
             this.label13.TabIndex = 195;
@@ -2305,7 +2317,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label9.Location = new System.Drawing.Point(19, 173);
+            this.label9.Location = new System.Drawing.Point(6, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 16);
             this.label9.TabIndex = 194;
@@ -2316,7 +2328,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label10.Location = new System.Drawing.Point(19, 156);
+            this.label10.Location = new System.Drawing.Point(6, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 16);
             this.label10.TabIndex = 193;
@@ -2327,7 +2339,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label11.Location = new System.Drawing.Point(19, 140);
+            this.label11.Location = new System.Drawing.Point(6, 141);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 16);
             this.label11.TabIndex = 192;
@@ -2338,7 +2350,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label12.Location = new System.Drawing.Point(19, 123);
+            this.label12.Location = new System.Drawing.Point(6, 124);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(26, 16);
             this.label12.TabIndex = 191;
@@ -2349,7 +2361,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label7.Location = new System.Drawing.Point(19, 107);
+            this.label7.Location = new System.Drawing.Point(6, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 16);
             this.label7.TabIndex = 190;
@@ -2360,7 +2372,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Control;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label8.Location = new System.Drawing.Point(19, 90);
+            this.label8.Location = new System.Drawing.Point(6, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 16);
             this.label8.TabIndex = 189;
@@ -2371,7 +2383,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label6.Location = new System.Drawing.Point(19, 74);
+            this.label6.Location = new System.Drawing.Point(6, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 16);
             this.label6.TabIndex = 188;
@@ -2382,7 +2394,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label3.Location = new System.Drawing.Point(19, 57);
+            this.label3.Location = new System.Drawing.Point(6, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 16);
             this.label3.TabIndex = 182;
@@ -2405,8 +2417,8 @@
             this.panel6.Controls.Add(this.addModDisplayLabel);
             this.panel6.Controls.Add(this.MiscBonusnumericUpDown);
             this.panel6.Controls.Add(this.addModcheckBox);
-            this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.miscBonuslabel);
+            this.panel6.Controls.Add(this.mullabel);
             this.panel6.Controls.Add(this.MultipliernumericUpDown);
             this.panel6.Controls.Add(this.spellAttackButton);
             this.panel6.Controls.Add(this.DurationDisplaylabel);
@@ -2440,27 +2452,27 @@
             this.MiscBonusnumericUpDown.Size = new System.Drawing.Size(31, 18);
             this.MiscBonusnumericUpDown.TabIndex = 185;
             // 
-            // label14
+            // miscBonuslabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(92, 133);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 26);
-            this.label14.TabIndex = 184;
-            this.label14.Text = "Misc\r\nBonus";
+            this.miscBonuslabel.AutoSize = true;
+            this.miscBonuslabel.BackColor = System.Drawing.SystemColors.Control;
+            this.miscBonuslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
+            this.miscBonuslabel.Location = new System.Drawing.Point(92, 133);
+            this.miscBonuslabel.Name = "miscBonuslabel";
+            this.miscBonuslabel.Size = new System.Drawing.Size(42, 26);
+            this.miscBonuslabel.TabIndex = 184;
+            this.miscBonuslabel.Text = "Misc\r\nBonus";
             // 
-            // label5
+            // mullabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(1, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
-            this.label5.TabIndex = 183;
-            this.label5.Text = "Multiplier";
+            this.mullabel.AutoSize = true;
+            this.mullabel.BackColor = System.Drawing.SystemColors.Control;
+            this.mullabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
+            this.mullabel.Location = new System.Drawing.Point(1, 182);
+            this.mullabel.Name = "mullabel";
+            this.mullabel.Size = new System.Drawing.Size(58, 13);
+            this.mullabel.TabIndex = 183;
+            this.mullabel.Text = "Multiplier";
             // 
             // MultipliernumericUpDown
             // 
@@ -2611,18 +2623,18 @@
             // 
             this.textBox22.BackColor = System.Drawing.SystemColors.Control;
             this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.textBox22.Location = new System.Drawing.Point(3, 24);
             this.textBox22.Multiline = true;
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(40, 15);
+            this.textBox22.Size = new System.Drawing.Size(32, 15);
             this.textBox22.TabIndex = 184;
             this.textBox22.Text = "Slots";
             // 
             // Level0SpellButton
             // 
             this.Level0SpellButton.AutoSize = true;
-            this.Level0SpellButton.Location = new System.Drawing.Point(45, 23);
+            this.Level0SpellButton.Location = new System.Drawing.Point(38, 23);
             this.Level0SpellButton.Name = "Level0SpellButton";
             this.Level0SpellButton.Size = new System.Drawing.Size(63, 17);
             this.Level0SpellButton.TabIndex = 182;
@@ -2643,7 +2655,7 @@
             // Level9SpellButton
             // 
             this.Level9SpellButton.AutoSize = true;
-            this.Level9SpellButton.Location = new System.Drawing.Point(45, 175);
+            this.Level9SpellButton.Location = new System.Drawing.Point(38, 175);
             this.Level9SpellButton.Name = "Level9SpellButton";
             this.Level9SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level9SpellButton.TabIndex = 180;
@@ -2655,7 +2667,7 @@
             // Level8SpellButton
             // 
             this.Level8SpellButton.AutoSize = true;
-            this.Level8SpellButton.Location = new System.Drawing.Point(45, 158);
+            this.Level8SpellButton.Location = new System.Drawing.Point(38, 158);
             this.Level8SpellButton.Name = "Level8SpellButton";
             this.Level8SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level8SpellButton.TabIndex = 179;
@@ -2667,7 +2679,7 @@
             // Level7SpellButton
             // 
             this.Level7SpellButton.AutoSize = true;
-            this.Level7SpellButton.Location = new System.Drawing.Point(45, 141);
+            this.Level7SpellButton.Location = new System.Drawing.Point(38, 141);
             this.Level7SpellButton.Name = "Level7SpellButton";
             this.Level7SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level7SpellButton.TabIndex = 178;
@@ -2679,7 +2691,7 @@
             // Level6SpellButton
             // 
             this.Level6SpellButton.AutoSize = true;
-            this.Level6SpellButton.Location = new System.Drawing.Point(45, 124);
+            this.Level6SpellButton.Location = new System.Drawing.Point(38, 124);
             this.Level6SpellButton.Name = "Level6SpellButton";
             this.Level6SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level6SpellButton.TabIndex = 177;
@@ -2691,7 +2703,7 @@
             // Level5SpellButton
             // 
             this.Level5SpellButton.AutoSize = true;
-            this.Level5SpellButton.Location = new System.Drawing.Point(45, 107);
+            this.Level5SpellButton.Location = new System.Drawing.Point(38, 107);
             this.Level5SpellButton.Name = "Level5SpellButton";
             this.Level5SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level5SpellButton.TabIndex = 176;
@@ -2703,7 +2715,7 @@
             // Level4SpellButton
             // 
             this.Level4SpellButton.AutoSize = true;
-            this.Level4SpellButton.Location = new System.Drawing.Point(45, 91);
+            this.Level4SpellButton.Location = new System.Drawing.Point(38, 91);
             this.Level4SpellButton.Name = "Level4SpellButton";
             this.Level4SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level4SpellButton.TabIndex = 175;
@@ -2715,7 +2727,7 @@
             // Level3SpellButton
             // 
             this.Level3SpellButton.AutoSize = true;
-            this.Level3SpellButton.Location = new System.Drawing.Point(45, 74);
+            this.Level3SpellButton.Location = new System.Drawing.Point(38, 74);
             this.Level3SpellButton.Name = "Level3SpellButton";
             this.Level3SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level3SpellButton.TabIndex = 174;
@@ -2727,7 +2739,7 @@
             // Level2SpellButton
             // 
             this.Level2SpellButton.AutoSize = true;
-            this.Level2SpellButton.Location = new System.Drawing.Point(45, 57);
+            this.Level2SpellButton.Location = new System.Drawing.Point(38, 57);
             this.Level2SpellButton.Name = "Level2SpellButton";
             this.Level2SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level2SpellButton.TabIndex = 173;
@@ -2740,7 +2752,7 @@
             // 
             this.Level1SpellButton.AutoSize = true;
             this.Level1SpellButton.Checked = true;
-            this.Level1SpellButton.Location = new System.Drawing.Point(45, 40);
+            this.Level1SpellButton.Location = new System.Drawing.Point(38, 40);
             this.Level1SpellButton.Name = "Level1SpellButton";
             this.Level1SpellButton.Size = new System.Drawing.Size(60, 17);
             this.Level1SpellButton.TabIndex = 172;
@@ -2805,39 +2817,84 @@
             this.addModDisplayLabel.Text = "(Ability Name)";
             this.addModDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonNoPadding8
+            // textBox21
             // 
-            this.buttonNoPadding8.Enabled = false;
-            this.buttonNoPadding8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding8.Location = new System.Drawing.Point(2, 197);
-            this.buttonNoPadding8.Name = "buttonNoPadding8";
-            this.buttonNoPadding8.Size = new System.Drawing.Size(54, 18);
-            this.buttonNoPadding8.TabIndex = 187;
-            this.buttonNoPadding8.Text = "Use Slot";
-            this.buttonNoPadding8.UseVisualStyleBackColor = true;
+            this.textBox21.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.textBox21.Location = new System.Drawing.Point(41, 192);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(71, 19);
+            this.textBox21.TabIndex = 177;
+            this.textBox21.Text = "Max Slots";
             // 
-            // buttonNoPadding7
+            // textBox23
             // 
-            this.buttonNoPadding7.Enabled = false;
-            this.buttonNoPadding7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding7.Location = new System.Drawing.Point(22, 217);
-            this.buttonNoPadding7.Name = "buttonNoPadding7";
-            this.buttonNoPadding7.Size = new System.Drawing.Size(77, 18);
-            this.buttonNoPadding7.TabIndex = 186;
-            this.buttonNoPadding7.Text = "Remove Slot";
-            this.buttonNoPadding7.UseVisualStyleBackColor = true;
-            this.buttonNoPadding7.Click += new System.EventHandler(this.buttonNoPadding7_Click);
+            this.textBox23.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.textBox23.Location = new System.Drawing.Point(41, 209);
+            this.textBox23.Multiline = true;
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(57, 19);
+            this.textBox23.TabIndex = 198;
+            this.textBox23.Text = "Current";
             // 
-            // buttonNoPadding6
+            // buttonNoPadding3
             // 
-            this.buttonNoPadding6.Enabled = false;
-            this.buttonNoPadding6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding6.Location = new System.Drawing.Point(3, 213);
-            this.buttonNoPadding6.Name = "buttonNoPadding6";
-            this.buttonNoPadding6.Size = new System.Drawing.Size(63, 18);
-            this.buttonNoPadding6.TabIndex = 185;
-            this.buttonNoPadding6.Text = "Add Slot";
-            this.buttonNoPadding6.UseVisualStyleBackColor = true;
+            this.buttonNoPadding3.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonNoPadding3.Location = new System.Drawing.Point(2, 209);
+            this.buttonNoPadding3.Name = "buttonNoPadding3";
+            this.buttonNoPadding3.Size = new System.Drawing.Size(19, 19);
+            this.buttonNoPadding3.TabIndex = 197;
+            this.buttonNoPadding3.Tag = "current";
+            this.buttonNoPadding3.Text = "-";
+            this.buttonNoPadding3.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding5
+            // 
+            this.buttonNoPadding5.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonNoPadding5.Location = new System.Drawing.Point(21, 209);
+            this.buttonNoPadding5.Name = "buttonNoPadding5";
+            this.buttonNoPadding5.Size = new System.Drawing.Size(19, 19);
+            this.buttonNoPadding5.TabIndex = 196;
+            this.buttonNoPadding5.Tag = "current";
+            this.buttonNoPadding5.Text = "+";
+            this.buttonNoPadding5.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding1
+            // 
+            this.buttonNoPadding1.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonNoPadding1.Location = new System.Drawing.Point(2, 190);
+            this.buttonNoPadding1.Name = "buttonNoPadding1";
+            this.buttonNoPadding1.Size = new System.Drawing.Size(19, 19);
+            this.buttonNoPadding1.TabIndex = 110;
+            this.buttonNoPadding1.Tag = "current";
+            this.buttonNoPadding1.Text = "-";
+            this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding2
+            // 
+            this.buttonNoPadding2.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonNoPadding2.Location = new System.Drawing.Point(21, 190);
+            this.buttonNoPadding2.Name = "buttonNoPadding2";
+            this.buttonNoPadding2.Size = new System.Drawing.Size(19, 19);
+            this.buttonNoPadding2.TabIndex = 109;
+            this.buttonNoPadding2.Tag = "current";
+            this.buttonNoPadding2.Text = "+";
+            this.buttonNoPadding2.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding4
+            // 
+            this.buttonNoPadding4.Enabled = false;
+            this.buttonNoPadding4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding4.Location = new System.Drawing.Point(3, 228);
+            this.buttonNoPadding4.Name = "buttonNoPadding4";
+            this.buttonNoPadding4.Size = new System.Drawing.Size(82, 18);
+            this.buttonNoPadding4.TabIndex = 183;
+            this.buttonNoPadding4.Text = "Refill All Slots";
+            this.buttonNoPadding4.UseVisualStyleBackColor = true;
             // 
             // spellAttackButton
             // 
@@ -2863,17 +2920,6 @@
             this.SpellMiscRollButton.Text = "Other";
             this.SpellMiscRollButton.UseVisualStyleBackColor = true;
             this.SpellMiscRollButton.Click += new System.EventHandler(this.SpellMiscRollButton_Click);
-            // 
-            // buttonNoPadding4
-            // 
-            this.buttonNoPadding4.Enabled = false;
-            this.buttonNoPadding4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonNoPadding4.Location = new System.Drawing.Point(45, 198);
-            this.buttonNoPadding4.Name = "buttonNoPadding4";
-            this.buttonNoPadding4.Size = new System.Drawing.Size(63, 18);
-            this.buttonNoPadding4.TabIndex = 183;
-            this.buttonNoPadding4.Text = "Refill Slots";
-            this.buttonNoPadding4.UseVisualStyleBackColor = true;
             // 
             // browseSpellsButton
             // 
@@ -2972,6 +3018,40 @@
             this.featEditButton.Text = "Edit";
             this.featEditButton.UseVisualStyleBackColor = true;
             this.featEditButton.Click += new System.EventHandler(this.EditFeat);
+            // 
+            // buttonNoPadding8
+            // 
+            this.buttonNoPadding8.Enabled = false;
+            this.buttonNoPadding8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding8.Location = new System.Drawing.Point(154, 155);
+            this.buttonNoPadding8.Name = "buttonNoPadding8";
+            this.buttonNoPadding8.Size = new System.Drawing.Size(54, 18);
+            this.buttonNoPadding8.TabIndex = 187;
+            this.buttonNoPadding8.Text = "Use Slot";
+            this.buttonNoPadding8.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding7
+            // 
+            this.buttonNoPadding7.Enabled = false;
+            this.buttonNoPadding7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding7.Location = new System.Drawing.Point(174, 175);
+            this.buttonNoPadding7.Name = "buttonNoPadding7";
+            this.buttonNoPadding7.Size = new System.Drawing.Size(77, 18);
+            this.buttonNoPadding7.TabIndex = 186;
+            this.buttonNoPadding7.Text = "Remove Slot";
+            this.buttonNoPadding7.UseVisualStyleBackColor = true;
+            this.buttonNoPadding7.Click += new System.EventHandler(this.buttonNoPadding7_Click);
+            // 
+            // buttonNoPadding6
+            // 
+            this.buttonNoPadding6.Enabled = false;
+            this.buttonNoPadding6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNoPadding6.Location = new System.Drawing.Point(151, 174);
+            this.buttonNoPadding6.Name = "buttonNoPadding6";
+            this.buttonNoPadding6.Size = new System.Drawing.Size(63, 18);
+            this.buttonNoPadding6.TabIndex = 185;
+            this.buttonNoPadding6.Text = "Add Slot";
+            this.buttonNoPadding6.UseVisualStyleBackColor = true;
             // 
             // newCharButton
             // 
@@ -3520,7 +3600,7 @@
         private System.Windows.Forms.Label componentsDisplaylabel;
         private System.Windows.Forms.Label label3;
         private CustomButtons.ButtonNoPadding spellAttackButton;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label mullabel;
         private System.Windows.Forms.NumericUpDown MultipliernumericUpDown;
         private CustomButtons.ButtonNoPadding buttonNoPadding7;
         private CustomButtons.ButtonNoPadding buttonNoPadding6;
@@ -3534,12 +3614,18 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown MiscBonusnumericUpDown;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label miscBonuslabel;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label multiplierDicedisplaylabel;
         private System.Windows.Forms.CheckBox addModcheckBox;
         private System.Windows.Forms.Label addModDisplayLabel;
+        private CustomButtons.ButtonNoPadding buttonNoPadding1;
+        private CustomButtons.ButtonNoPadding buttonNoPadding2;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox23;
+        private CustomButtons.ButtonNoPadding buttonNoPadding3;
+        private CustomButtons.ButtonNoPadding buttonNoPadding5;
     }
 }
 

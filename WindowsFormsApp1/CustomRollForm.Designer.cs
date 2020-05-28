@@ -36,8 +36,6 @@
             this.dieNumBox = new System.Windows.Forms.NumericUpDown();
             this.flatNumBox = new System.Windows.Forms.NumericUpDown();
             this.flatLabel = new System.Windows.Forms.Label();
-            this.ModifiercomboBox = new System.Windows.Forms.ComboBox();
-            this.modifierlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dieAmountBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dieNumBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flatNumBox)).BeginInit();
@@ -145,40 +143,11 @@
             this.flatLabel.TabIndex = 9;
             this.flatLabel.Text = "Flat Bonus";
             // 
-            // ModifiercomboBox
-            // 
-            this.ModifiercomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ModifiercomboBox.FormattingEnabled = true;
-            this.ModifiercomboBox.Items.AddRange(new object[] {
-            "None",
-            "Strength",
-            "Dexterity",
-            "Constitution",
-            "Intelligence",
-            "Wisdom",
-            "Charisma"});
-            this.ModifiercomboBox.Location = new System.Drawing.Point(7, 90);
-            this.ModifiercomboBox.Name = "ModifiercomboBox";
-            this.ModifiercomboBox.Size = new System.Drawing.Size(96, 21);
-            this.ModifiercomboBox.TabIndex = 10;
-            // 
-            // modifierlabel
-            // 
-            this.modifierlabel.AutoSize = true;
-            this.modifierlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifierlabel.Location = new System.Drawing.Point(103, 93);
-            this.modifierlabel.Name = "modifierlabel";
-            this.modifierlabel.Size = new System.Drawing.Size(56, 16);
-            this.modifierlabel.TabIndex = 11;
-            this.modifierlabel.Text = "Modifier";
-            // 
             // CustomRollForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(171, 116);
-            this.Controls.Add(this.modifierlabel);
-            this.Controls.Add(this.ModifiercomboBox);
+            this.ClientSize = new System.Drawing.Size(171, 91);
             this.Controls.Add(this.flatNumBox);
             this.Controls.Add(this.dieNumBox);
             this.Controls.Add(this.dieAmountBox);
@@ -208,7 +177,5 @@
         private System.Windows.Forms.NumericUpDown dieNumBox;
         private System.Windows.Forms.NumericUpDown flatNumBox;
         private System.Windows.Forms.Label flatLabel;
-        private System.Windows.Forms.ComboBox ModifiercomboBox;
-        private System.Windows.Forms.Label modifierlabel;
     }
 }
