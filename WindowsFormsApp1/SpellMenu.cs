@@ -49,18 +49,41 @@ namespace WindowsFormsApp1
             searchSpells = new List<Spell>();
             if (search == "null")
                 search = searchBox.Text;
-            foreach(Spell s in spells)
-            {
-                if(int.TryParse(search, out int result))
+            if (search == "search by name or level")
+                search = "";
+            if (search == "")
+                //sort by level
+                for(int i = 0; i < 10; i++)
                 {
-                    //search by level
-                    if(result == s.Level)
+                    //create list of spells of level i
+                    List<Spell> levelISpells = new List<Spell>();
+                    foreach(Spell s in spells)
+                    {
+                        if (s.Level == i)
+                            levelISpells.Add(s);
+                    }
+                    //sort spells
+                    levelISpells.Sort(delegate (Spell s1, Spell s2)
+                    {
+                        return s1.Name.CompareTo(s2.Name);
+                    });
+                    //add spells to searchSpells
+                    searchSpells.AddRange(levelISpells);
+                }
+            else
+                //sort by search filter
+                foreach (Spell s in spells)
+                {
+                    if (int.TryParse(search, out int result))
+                    {
+                        //search by level
+                        if (result == s.Level)
+                            searchSpells.Add(s);
+                    }
+                    //search by name
+                    else if (s.Name.ToUpper().Contains(search.ToUpper()))
                         searchSpells.Add(s);
                 }
-                //search by name
-                else if (s.Name.ToUpper().Contains(search.ToUpper()))
-                    searchSpells.Add(s);
-            }
             foreach (Spell s in searchSpells)
             {
                 //adds name, then enough spaces to make level on the right of the string
@@ -112,7 +135,7 @@ namespace WindowsFormsApp1
 
         private void deleteSpellButton_Click(object sender, EventArgs e)
         {
-            string text = "";
+            string text;
             if (spellListBox.SelectedIndices.Count > 1)
                 text = "Are you sure you want to delete these spells?";
             else
@@ -121,12 +144,10 @@ namespace WindowsFormsApp1
                 MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                int count = 0;      //used to offset the indices while deleting multiple spells
                 int index = spellListBox.SelectedIndex;
                 foreach (int i in spellListBox.SelectedIndices)
                 {
-                    ((Form1)Owner).DeleteSpell(searchSpells[i - count].ID);
-                    count++;
+                    ((Form1)Owner).DeleteSpell(searchSpells[i].ID);
                 }
                 RefreshSpells("null");
                 if (searchSpells.Count > 0)
