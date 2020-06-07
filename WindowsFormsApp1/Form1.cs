@@ -47,15 +47,12 @@ namespace WindowsFormsApp1
         List<RadioButton> spellLevelButtons;    // list containing controls for selecting spell levels
         int currentSpellLevel = 1;              // what level spells are currently being shown
         public static int nextSpellId;      //static int that increases each time a spell is made
+        List<Label> spellSlotsLabels;   //labels showing spell slots 
+        int[,] spellSlots;          // array of (current spell slots, max spell slots)
 
         string fileName;
         bool saved = true;
 
-
-        //these are not being used right now
-        int[] spellTypes;       //what kind of spellcasting each class is
-        int[] spellModTypes;    //which stat to use for spellcasting
-        int[][,] spellSlots;     //how many spells slots are per class
 
         public List<Spell> Spells
         {
@@ -100,6 +97,7 @@ namespace WindowsFormsApp1
             classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
             spellTypeDropdown.Text = "Sorcerer";
             spells = new List<Spell>();
+            spellSlots = new int[9, 2];
             knownSpells = new List<int>();
             preparedSpells = new List<int>();
             spellRadioButtons = new List<RadioButton>();
@@ -114,6 +112,16 @@ namespace WindowsFormsApp1
             spellLevelButtons.Add(Level7SpellButton);
             spellLevelButtons.Add(Level8SpellButton);
             spellLevelButtons.Add(Level9SpellButton);
+            spellSlotsLabels = new List<Label>();
+            spellSlotsLabels.Add(lvl1slotslabel);
+            spellSlotsLabels.Add(lvl2slotslabel);
+            spellSlotsLabels.Add(lvl3slotslabel);
+            spellSlotsLabels.Add(lvl4slotslabel);
+            spellSlotsLabels.Add(lvl5slotslabel);
+            spellSlotsLabels.Add(lvl6slotslabel);
+            spellSlotsLabels.Add(lvl7slotslabel);
+            spellSlotsLabels.Add(lvl8slotslabel);
+            spellSlotsLabels.Add(lvl9slotslabel);
             LoadSpells();
         }
 
@@ -2211,6 +2219,7 @@ namespace WindowsFormsApp1
                     //add new control
                     RadioButton newButton = new RadioButton();
                     newButton.Text = FindSpellFromID(knownSpells[i]).Name;
+                    newButton.Width = 300;
                     newButton.Tag = spells.IndexOf(FindSpellFromID(knownSpells[i]));   //adds the spells index in spells to the tag
                     newButton.Location = new Point(5, spellsDisplayed * 20 + 5);
                     newButton.CheckedChanged += SpellSelected;
@@ -2300,6 +2309,54 @@ namespace WindowsFormsApp1
             //remove spell from known spells
             if (knownSpells.Contains(id))
                 knownSpells.Remove(id);
+        }
+
+        //add or subract one from the current level spell slots
+        private void AddMaxSlot(object sender, EventArgs e)
+        {
+            if (currentSpellLevel > 0)
+            {
+                spellSlots[currentSpellLevel - 1, 1]++;
+                spellSlotsLabels[currentSpellLevel - 1].Text =
+                    spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
+            }
+        }
+        private void MinusMaxSlot(object sender, EventArgs e)
+        {
+            if (currentSpellLevel > 0)
+            {
+                spellSlots[currentSpellLevel - 1, 1] = Math.Max(spellSlots[currentSpellLevel - 1, 1] - 1, 0);
+                spellSlotsLabels[currentSpellLevel - 1].Text =
+                    spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
+            }
+        }
+        private void AddCurrentSlot(object sender, EventArgs e)
+        {
+            if (currentSpellLevel > 0)
+            {
+                spellSlots[currentSpellLevel - 1, 0] = 
+                    Math.Min(spellSlots[currentSpellLevel - 1, 0] + 1, spellSlots[currentSpellLevel - 1, 1]);
+                spellSlotsLabels[currentSpellLevel - 1].Text =
+                    spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
+            }
+        }
+        private void MinusCurrentSlot(object sender, EventArgs e)
+        {
+            if (currentSpellLevel > 0)
+            {
+                spellSlots[currentSpellLevel - 1, 0] = Math.Max(spellSlots[currentSpellLevel - 1, 0] - 1, 0);
+                spellSlotsLabels[currentSpellLevel - 1].Text =
+                    spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
+            }
+        }
+
+        private void RefillSpellSlots(object sender, EventArgs e)
+        {
+            for(int i = 0; i < 9; i++)
+            {
+                spellSlots[i, 0] = spellSlots[i, 1];
+                spellSlotsLabels[i].Text = spellSlots[i, 0] + "/" + spellSlots[i, 1];
+            }
         }
 
         //inputs spells from text file into a list on load

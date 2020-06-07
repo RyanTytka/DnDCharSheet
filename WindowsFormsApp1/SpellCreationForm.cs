@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
                     DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value,
                     descriptionTextBox.Text, AttackRollcheckBox.Checked, selectedSpell.ID), index);
             }
-            ((SpellMenu)Owner).RefreshSpells();
+            ((SpellMenu)Owner).RefreshSpells("null");
             this.Close();
         }
 
@@ -84,8 +84,7 @@ namespace WindowsFormsApp1
 
         private void SpellCreation_Load(object sender, EventArgs e)
         {
-            AttackRollDropdown.Text = "None";
-            
+           
             if(selectedSpell != null)
             {
                 //enter in spell stats to controls

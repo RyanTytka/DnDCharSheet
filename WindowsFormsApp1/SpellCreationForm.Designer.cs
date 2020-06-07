@@ -48,7 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.LevelnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.AttackRollDropdown = new System.Windows.Forms.ComboBox();
             this.DieNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.multiplierLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,7 +64,7 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(232, 21);
+            this.saveButton.Location = new System.Drawing.Point(232, 48);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(108, 52);
             this.saveButton.TabIndex = 0;
@@ -77,7 +76,7 @@
             // 
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.Location = new System.Drawing.Point(36, -1);
+            this.headerLabel.Location = new System.Drawing.Point(99, -1);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(151, 36);
             this.headerLabel.TabIndex = 1;
@@ -155,7 +154,7 @@
             // CastTimetextBox
             // 
             this.CastTimetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CastTimetextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.CastTimetextBox.ForeColor = System.Drawing.Color.Black;
             this.CastTimetextBox.Location = new System.Drawing.Point(6, 89);
             this.CastTimetextBox.Name = "CastTimetextBox";
             this.CastTimetextBox.Size = new System.Drawing.Size(83, 20);
@@ -164,16 +163,16 @@
             // RangetextBox
             // 
             this.RangetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangetextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.RangetextBox.ForeColor = System.Drawing.Color.Black;
             this.RangetextBox.Location = new System.Drawing.Point(6, 123);
             this.RangetextBox.Name = "RangetextBox";
-            this.RangetextBox.Size = new System.Drawing.Size(105, 20);
+            this.RangetextBox.Size = new System.Drawing.Size(83, 20);
             this.RangetextBox.TabIndex = 23;
             // 
             // DurationtextBox
             // 
             this.DurationtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DurationtextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.DurationtextBox.ForeColor = System.Drawing.Color.Black;
             this.DurationtextBox.Location = new System.Drawing.Point(94, 88);
             this.DurationtextBox.Name = "DurationtextBox";
             this.DurationtextBox.Size = new System.Drawing.Size(90, 20);
@@ -182,17 +181,17 @@
             // ComponentsTextBox
             // 
             this.ComponentsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComponentsTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.ComponentsTextBox.Location = new System.Drawing.Point(116, 125);
+            this.ComponentsTextBox.ForeColor = System.Drawing.Color.Black;
+            this.ComponentsTextBox.Location = new System.Drawing.Point(95, 123);
             this.ComponentsTextBox.Name = "ComponentsTextBox";
-            this.ComponentsTextBox.Size = new System.Drawing.Size(105, 20);
+            this.ComponentsTextBox.Size = new System.Drawing.Size(126, 20);
             this.ComponentsTextBox.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 75);
+            this.label3.Location = new System.Drawing.Point(7, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 26;
@@ -202,7 +201,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 109);
+            this.label4.Location = new System.Drawing.Point(24, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 27;
@@ -222,7 +221,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(131, 110);
+            this.label6.Location = new System.Drawing.Point(131, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 29;
@@ -249,23 +248,6 @@
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 31;
             this.label7.Text = "Level";
-            // 
-            // AttackRollDropdown
-            // 
-            this.AttackRollDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AttackRollDropdown.FormattingEnabled = true;
-            this.AttackRollDropdown.Items.AddRange(new object[] {
-            "None",
-            "Strength",
-            "Dexterity",
-            "Constitution",
-            "Intelligence",
-            "Wisdom",
-            "Charisma"});
-            this.AttackRollDropdown.Location = new System.Drawing.Point(235, 447);
-            this.AttackRollDropdown.Name = "AttackRollDropdown";
-            this.AttackRollDropdown.Size = new System.Drawing.Size(107, 21);
-            this.AttackRollDropdown.TabIndex = 34;
             // 
             // DieNumnumericUpDown
             // 
@@ -359,7 +341,7 @@
             this.AttackRollcheckBox.AutoSize = true;
             this.AttackRollcheckBox.Checked = true;
             this.AttackRollcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AttackRollcheckBox.Location = new System.Drawing.Point(247, 91);
+            this.AttackRollcheckBox.Location = new System.Drawing.Point(247, 116);
             this.AttackRollcheckBox.Name = "AttackRollcheckBox";
             this.AttackRollcheckBox.Size = new System.Drawing.Size(78, 17);
             this.AttackRollcheckBox.TabIndex = 44;
@@ -378,7 +360,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.multiplierLabel);
             this.Controls.Add(this.DieNumnumericUpDown);
-            this.Controls.Add(this.AttackRollDropdown);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.LevelnumericUpDown);
             this.Controls.Add(this.label6);
@@ -432,7 +413,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown LevelnumericUpDown;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox AttackRollDropdown;
         private System.Windows.Forms.NumericUpDown DieNumnumericUpDown;
         private System.Windows.Forms.Label multiplierLabel;
         private System.Windows.Forms.Label label9;

@@ -45,6 +45,8 @@
             this.durationlabel = new System.Windows.Forms.Label();
             this.componentslabel = new System.Windows.Forms.Label();
             this.learnSpellbutton = new CustomButtons.ButtonNoPadding();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.xSearchButton = new CustomButtons.ButtonNoPadding();
             this.SuspendLayout();
             // 
             // spellListBox
@@ -97,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 3);
+            this.label1.Location = new System.Drawing.Point(12, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 5;
@@ -220,11 +222,36 @@
             this.learnSpellbutton.UseVisualStyleBackColor = true;
             this.learnSpellbutton.Click += new System.EventHandler(this.learnSpellbutton_Click);
             // 
+            // searchBox
+            // 
+            this.searchBox.ForeColor = System.Drawing.Color.DimGray;
+            this.searchBox.Location = new System.Drawing.Point(117, 3);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(139, 20);
+            this.searchBox.TabIndex = 18;
+            this.searchBox.Text = "search by name or level";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.SearchBox_Enter);
+            this.searchBox.Leave += new System.EventHandler(this.SearchBox_Leave);
+            // 
+            // xSearchButton
+            // 
+            this.xSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.xSearchButton.Location = new System.Drawing.Point(259, 5);
+            this.xSearchButton.Name = "xSearchButton";
+            this.xSearchButton.Size = new System.Drawing.Size(17, 17);
+            this.xSearchButton.TabIndex = 19;
+            this.xSearchButton.Text = "X";
+            this.xSearchButton.UseVisualStyleBackColor = true;
+            this.xSearchButton.Click += new System.EventHandler(this.xSearchButton_Click);
+            // 
             // SpellMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 273);
+            this.Controls.Add(this.xSearchButton);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.learnSpellbutton);
             this.Controls.Add(this.componentslabel);
             this.Controls.Add(this.durationlabel);
@@ -269,5 +296,7 @@
         private System.Windows.Forms.Label durationlabel;
         private System.Windows.Forms.Label componentslabel;
         private CustomButtons.ButtonNoPadding learnSpellbutton;
+        private System.Windows.Forms.TextBox searchBox;
+        private CustomButtons.ButtonNoPadding xSearchButton;
     }
 }
