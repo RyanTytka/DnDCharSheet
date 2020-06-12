@@ -49,6 +49,9 @@ namespace WindowsFormsApp1
         public static int nextSpellId;      //static int that increases each time a spell is made
         List<Label> spellSlotsLabels;   //labels showing spell slots 
         int[,] spellSlots;          // array of (current spell slots, max spell slots)
+        bool[] prepareSpells;       //which classes prepare spells
+        bool[] usedArcanums;        //true if arcanum has been used
+        int[] warlockSpellSlots;      //spell slots of a warlock  [current/max]
 
         string fileName;
         bool saved = true;
@@ -95,11 +98,15 @@ namespace WindowsFormsApp1
             saveButton.Enabled = false;
 
             classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
+            prepareSpells = new bool[] { true, false, true, true, false, true, false, false, false, false, true };
+            preparedSpells = new List<int>();
+            usedArcanums = new bool[4];
             spellTypeDropdown.Text = "Sorcerer";
             spells = new List<Spell>();
             spellSlots = new int[9, 2];
             knownSpells = new List<int>();
             preparedSpells = new List<int>();
+            warlockSpellSlots = new int[] { 0, 0 };
             spellRadioButtons = new List<RadioButton>();
             spellLevelButtons = new List<RadioButton>();
             spellLevelButtons.Add(Level0SpellButton);
@@ -1615,6 +1622,20 @@ namespace WindowsFormsApp1
                     output.Write(i);
                 }
 
+
+                //spellcasting type
+                output.Write(spellTypeDropdown.Text);
+                //prepared spells
+                output.Write(classSpellType > 0 && prepareSpells[classSpellType - 1]);
+                if(classSpellType > 0 && prepareSpells[classSpellType - 1])
+                {
+                    output.Write(preparedSpells.Count);
+                    foreach(int i in preparedSpells)
+                    {
+                        output.Write(i);
+                    }
+                }
+
                 if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
                 saved = true;
@@ -1824,6 +1845,17 @@ namespace WindowsFormsApp1
                     if (FindSpellFromID(id) != null)  //make sure the spell is in your saved list
                         LearnSpell(id);
                 }
+                //spellcasting type
+                spellTypeDropdown.Text = reader.ReadString();
+                //prepared spells
+                if (reader.ReadBoolean())
+                {
+                    int numOfPrepared = reader.ReadInt32();
+                    for(int i = 0; i < numOfPrepared; i++)
+                    {
+                        preparedSpells.Add(reader.ReadInt32());
+                    }
+                }
 
                 saved = true;
                 this.Text = nameLabel.Text + " Character sheet";
@@ -1922,6 +1954,12 @@ namespace WindowsFormsApp1
             selectedFeat = null;
             featDescriptionTextbox.Text = "";
             this.Text = "Character sheet";
+            //delete spells / spell buttons
+            spellListPanel.Controls.Clear();
+            knownSpells = new List<int>();
+            preparedSpells = new List<int>();
+            spellSlots = new int[9, 2];
+            spellTypeDropdown.Text = "None";
         }
 
         //make sure user has saved before exiting
@@ -2066,6 +2104,7 @@ namespace WindowsFormsApp1
         //resize form1 to show/hide spells tab
         private void ChangeSpellType(object sender, EventArgs e)
         {
+            classSpellType = spellTypeDropdown.SelectedIndex;
             if (((ComboBox)sender).Text == "None")
             {
                 spellPanel.Visible = false;
@@ -2075,10 +2114,12 @@ namespace WindowsFormsApp1
             {
                 spellPanel.Visible = true;
                 this.Size = new Size(1156, 637);
+                preparedLabel.Visible = classSpellType > 0 && prepareSpells[classSpellType - 1];
             }
-            classSpellType = spellTypeDropdown.SelectedIndex;
             this.CenterToScreen();
             addModDisplayLabel.Text = "(" + attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]] + ")";
+            //warlock
+            warlockSpellPanel.Visible = ((ComboBox)sender).Text == "Warlock";
         }
 
         private void SpellDescriptionShow(object sender, EventArgs e)
@@ -2207,6 +2248,7 @@ namespace WindowsFormsApp1
             spellListLabel.Text = "Level " + currentSpellLevel + " Spells";
             if (currentSpellLevel == 0)
                 spellListLabel.Text = "Cantrips";
+            preparedLabel.Enabled = currentSpellLevel > 0;
             //clear currently displayed spells
             spellListPanel.Controls.Clear();
             spellRadioButtons.Clear();
@@ -2221,11 +2263,29 @@ namespace WindowsFormsApp1
                     newButton.Text = FindSpellFromID(knownSpells[i]).Name;
                     newButton.Width = 300;
                     newButton.Tag = spells.IndexOf(FindSpellFromID(knownSpells[i]));   //adds the spells index in spells to the tag
-                    newButton.Location = new Point(5, spellsDisplayed * 20 + 5);
+                    int xPos = 5;
+                    if (currentSpellLevel > 0 && prepareSpells[classSpellType - 1])
+                        xPos = 22;
+                    newButton.Location = new Point(xPos, spellsDisplayed * 20 + 5);
                     newButton.CheckedChanged += SpellSelected;
                     //add to lists
                     spellListPanel.Controls.Add(newButton);
                     spellRadioButtons.Add(newButton);
+                    //add checkbox if spells need to be prepared
+                    if(currentSpellLevel > 0 && prepareSpells[classSpellType - 1])
+                    {
+                        //create checkBox
+                        CheckBox newCheck = new CheckBox();
+                        newCheck.Text = "";
+                        newCheck.Tag = knownSpells[i];
+                        newCheck.Checked = preparedSpells.Contains(KnownSpells[i]);
+                        newCheck.CheckedChanged += ChangePrepared;
+                        newCheck.Location = new Point(5, spellsDisplayed * 20 + 5);
+                        //add to lists
+                        spellListPanel.Controls.Add(newCheck);
+                        //spellRadioButtons.Add(newButton);
+
+                    }
                     spellsDisplayed++;
                 }
             }
@@ -2239,6 +2299,20 @@ namespace WindowsFormsApp1
             if(((RadioButton)sender).Checked)
                 currentSpell = int.Parse(((RadioButton)sender).Tag.ToString());
             UpdateSpellInfo();
+        }
+
+        //add or remove the id from preparedSpells
+        private void ChangePrepared(object sender, EventArgs e)
+        {
+            int id = int.Parse(((CheckBox)sender).Tag.ToString());
+            if (preparedSpells.Contains(id))
+            {
+                preparedSpells.Remove(id);
+            }
+            else
+            {
+                preparedSpells.Add(id);
+            }
         }
 
 
@@ -2311,6 +2385,8 @@ namespace WindowsFormsApp1
                 knownSpells.Remove(id);
         }
 
+        #region spell slot buttons
+
         //add or subract one from the current level spell slots
         private void AddMaxSlot(object sender, EventArgs e)
         {
@@ -2349,6 +2425,36 @@ namespace WindowsFormsApp1
                     spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
             }
         }
+        #endregion
+
+        #region warlock slot Buttons
+
+        //max
+        private void warlockPlusSlotButton_Click(object sender, EventArgs e)
+        {
+            warlockSpellSlots[1]++;
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+        }
+        //max
+        private void warlockMinusSlotButton_Click(object sender, EventArgs e)
+        {
+            warlockSpellSlots[1] = Math.Max(warlockSpellSlots[1] - 1, 0);
+            warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0], warlockSpellSlots[1]); //move current slot down if higher than max
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+        }
+
+        private void warlockPlusCurrentSlotButton_Click(object sender, EventArgs e)
+        {
+            warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0] + 1, warlockSpellSlots[1]);
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+        }
+
+        private void warlockMinusCurrentSlotButton_Click(object sender, EventArgs e)
+        {
+            warlockSpellSlots[0] = Math.Max(warlockSpellSlots[0] - 1, 0);
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+        }
+        #endregion
 
         private void RefillSpellSlots(object sender, EventArgs e)
         {
@@ -2358,6 +2464,24 @@ namespace WindowsFormsApp1
                 spellSlotsLabels[i].Text = spellSlots[i, 0] + "/" + spellSlots[i, 1];
             }
         }
+
+        private void WarlockRefillSlotsButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 4; i++)
+                usedArcanums[i] = false;
+            warlockSpellSlots[0] = warlockSpellSlots[1];
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+        }
+
+        private void ArcanumChecKChanged(object sender, EventArgs e)
+        {
+            int index = int.Parse((sender as CheckBox).Tag.ToString());
+            usedArcanums[index] = (sender as CheckBox).Checked;
+        }
+
+
+
+
 
         //inputs spells from text file into a list on load
         private void LoadSpells()
