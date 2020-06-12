@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
         bool[] prepareSpells;       //which classes prepare spells
         bool[] usedArcanums;        //true if arcanum has been used
         int[] warlockSpellSlots;      //spell slots of a warlock  [current/max]
+        Label[] moneyLabels;        //money amount labels for easier modifications
 
         string fileName;
         bool saved = true;
@@ -75,6 +76,7 @@ namespace WindowsFormsApp1
             maxHitDice = new int[4];
             feats = new List<Feat>();
             featButtons = new List<RadioButton>();
+
 
             attributeNames = new string[] { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
 
@@ -130,6 +132,13 @@ namespace WindowsFormsApp1
             spellSlotsLabels.Add(lvl8slotslabel);
             spellSlotsLabels.Add(lvl9slotslabel);
             LoadSpells();
+
+            moneyDropDown.Text = "Gold";
+            moneyLabels = new Label[4];
+            moneyLabels[0] = copperAmountLabel;
+            moneyLabels[1] = silverAmountLabel;
+            moneyLabels[2] = GoldAmountLabel;
+            moneyLabels[3] = PlatinumAmountLabel;
         }
 
 
@@ -1974,6 +1983,45 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region Money
+
+        private void addMoneyButton_Click(object sender, EventArgs e)
+        {
+            Label label = moneyLabels[moneyDropDown.SelectedIndex];
+            int amountAdding = int.Parse(moneyAmountTextBox.Text);
+            int originalAmount = int.Parse(label.Text);
+            label.Text = (originalAmount + amountAdding).ToString();
+            moneyAmountTextBox.Focus();
+            moneyAmountTextBox.SelectAll();
+        }
+
+        private void minusMoneyButton_Click(object sender, EventArgs e)
+        {
+            Label label = moneyLabels[moneyDropDown.SelectedIndex];
+            int amountAdding = int.Parse(moneyAmountTextBox.Text);
+            int originalAmount = int.Parse(label.Text);
+            label.Text = (originalAmount - amountAdding).ToString();
+
+        }
+
+        private void setMoneyButton_Click(object sender, EventArgs e)
+        {
+            moneyLabels[moneyDropDown.SelectedIndex].Text = moneyAmountTextBox.Text;
+            moneyAmountTextBox.Text = "";
+        }
+
+        //press enter while typing amount in text box
+        private void MoneyAmount_PressEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                moneyLabels[moneyDropDown.SelectedIndex].Text = moneyAmountTextBox.Text;
+                moneyAmountTextBox.Text = "";
+            }
+        }
+
+        #endregion
+
         #region Misc
 
 
@@ -2478,9 +2526,6 @@ namespace WindowsFormsApp1
             int index = int.Parse((sender as CheckBox).Tag.ToString());
             usedArcanums[index] = (sender as CheckBox).Checked;
         }
-
-
-
 
 
         //inputs spells from text file into a list on load
