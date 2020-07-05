@@ -37,9 +37,7 @@ namespace WindowsFormsApp1
         List<RadioButton> featButtons;
         Feat selectedFeat;
         bool removedLetters = false;
-        List<Spell> spells;         //spells loaded from the spells.data file
         int currentSpell;           //selected spell
-        List<int> knownSpells;      //list of spell id's that the player knows
         List<int> preparedSpells;   //list of spell id's of spells that are currently prepared
         List<RadioButton> spellRadioButtons;    //list of radio buttons currently displayed
         int[] classModifierTypes;   //array of ints that relate each spellcasting class to what attribute they use
@@ -58,14 +56,8 @@ namespace WindowsFormsApp1
         bool saved = true;
 
 
-        public List<Spell> Spells
-        {
-            get { return spells; }
-        }
-        public List<int> KnownSpells
-        {
-            get { return knownSpells; }
-        }
+        public List<Spell> Spells { get; private set; }  //spells loaded from the spells.data file
+        public List<int> KnownSpells { get; private set; }  //list of spell id's that the player knows
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -104,9 +96,9 @@ namespace WindowsFormsApp1
             preparedSpells = new List<int>();
             usedArcanums = new bool[4];
             spellTypeDropdown.Text = "Sorcerer";
-            spells = new List<Spell>();
+            Spells = new List<Spell>();
             spellSlots = new int[9, 2];
-            knownSpells = new List<int>();
+            KnownSpells = new List<int>();
             preparedSpells = new List<int>();
             warlockSpellSlots = new int[] { 0, 0 };
             spellRadioButtons = new List<RadioButton>();
@@ -1625,8 +1617,8 @@ namespace WindowsFormsApp1
                 }
                 output.Write(-1);       //feat end marker
                 //spells known
-                output.Write(knownSpells.Count);
-                foreach(int i in knownSpells)
+                output.Write(KnownSpells.Count);
+                foreach(int i in KnownSpells)
                 {
                     output.Write(i);
                 }
@@ -1965,7 +1957,7 @@ namespace WindowsFormsApp1
             this.Text = "Character sheet";
             //delete spells / spell buttons
             spellListPanel.Controls.Clear();
-            knownSpells = new List<int>();
+            KnownSpells = new List<int>();
             preparedSpells = new List<int>();
             spellSlots = new int[9, 2];
             spellTypeDropdown.Text = "None";
@@ -2172,10 +2164,10 @@ namespace WindowsFormsApp1
 
         private void SpellDescriptionShow(object sender, EventArgs e)
         {
-            if (spells[currentSpell].Description == "")
+            if (Spells[currentSpell].Description == "")
                 spellDescriptionTextbox.Text = "No description set";
             else
-                spellDescriptionTextbox.Text = spells[currentSpell].Description;
+                spellDescriptionTextbox.Text = Spells[currentSpell].Description;
             spellDescriptionTextbox.BringToFront();
             spellDescriptionTextbox.Visible = true;
             spellDesLabel.BackColor = Color.WhiteSmoke;
@@ -2197,14 +2189,14 @@ namespace WindowsFormsApp1
         //open spell menu to select spell to edit
         private void BrowseSpells(object sender, EventArgs e)
         {
-            SpellMenu spellMenu = new SpellMenu(spells);
+            SpellMenu spellMenu = new SpellMenu(Spells);
             spellMenu.ShowDialog(this);
         }
 
         private void SpellAttackRoll(object sender, EventArgs e)
         {
             string s = "";
-            Spell spell = spells[0];
+            Spell spell = Spells[0];
             int roll = Roll.RollSingleDie(20);
             //int mod = 0;
             //if(spellattacktypeDropDown.SelectedIndex > 0)
@@ -2226,7 +2218,7 @@ namespace WindowsFormsApp1
         //make a roll for the spell
         private void SpellMiscRollButton_Click(object sender, EventArgs e)
         {
-            Spell s = spells[currentSpell];
+            Spell s = Spells[currentSpell];
             //find the correct roll from the drop down
             foreach (Roll r in s.Rolls)
             {
@@ -2284,7 +2276,7 @@ namespace WindowsFormsApp1
         //add spell to current spell list
         public void LearnSpell(int id)
         {
-            knownSpells.Add(id);
+            KnownSpells.Add(id);
             SelectSpellLevel(spellLevelButtons[currentSpellLevel] , null);
         }
 
@@ -2298,19 +2290,22 @@ namespace WindowsFormsApp1
                 spellListLabel.Text = "Cantrips";
             preparedLabel.Enabled = currentSpellLevel > 0;
             //clear currently displayed spells
+            CustomButtons.ButtonNoPadding b = forgetSpellButton; //save forget button from being deleted
             spellListPanel.Controls.Clear();
+            spellListPanel.Controls.Add(b);
             spellRadioButtons.Clear();
+
             //display spell list
             int spellsDisplayed = 0;
-            for(int i = 0; i < knownSpells.Count; i++)
+            for(int i = 0; i < KnownSpells.Count; i++)
             {
-                if(FindSpellFromID(knownSpells[i]) != null && FindSpellFromID(knownSpells[i]).Level == currentSpellLevel)
+                if(FindSpellFromID(KnownSpells[i]) != null && FindSpellFromID(KnownSpells[i]).Level == currentSpellLevel)
                 {
                     //add new control
                     RadioButton newButton = new RadioButton();
-                    newButton.Text = FindSpellFromID(knownSpells[i]).Name;
+                    newButton.Text = FindSpellFromID(KnownSpells[i]).Name;
                     newButton.Width = 300;
-                    newButton.Tag = spells.IndexOf(FindSpellFromID(knownSpells[i]));   //adds the spells index in spells to the tag
+                    newButton.Tag = Spells.IndexOf(FindSpellFromID(KnownSpells[i]));   //adds the spells index in spells to the tag
                     int xPos = 5;
                     if (currentSpellLevel > 0 && prepareSpells[classSpellType - 1])
                         xPos = 22;
@@ -2325,7 +2320,7 @@ namespace WindowsFormsApp1
                         //create checkBox
                         CheckBox newCheck = new CheckBox();
                         newCheck.Text = "";
-                        newCheck.Tag = knownSpells[i];
+                        newCheck.Tag = KnownSpells[i];
                         newCheck.Checked = preparedSpells.Contains(KnownSpells[i]);
                         newCheck.CheckedChanged += ChangePrepared;
                         newCheck.Location = new Point(5, spellsDisplayed * 20 + 5);
@@ -2339,13 +2334,18 @@ namespace WindowsFormsApp1
             }
             if(spellRadioButtons.Count > 0)
                 spellRadioButtons[0].Checked = true;
+            forgetSpellButton.Visible = spellRadioButtons.Count > 0;
         }
-        
+
         //when a spell display radio button is checked
         private void SpellSelected(object sender, EventArgs e)
         {
-            if(((RadioButton)sender).Checked)
+            forgetSpellButton.Visible = true;
+            if (((RadioButton)sender).Checked)
+            {
                 currentSpell = int.Parse(((RadioButton)sender).Tag.ToString());
+                forgetSpellButton.Location = new Point(forgetSpellButton.Location.X, (sender as RadioButton).Location.Y);
+            }
             UpdateSpellInfo();
         }
 
@@ -2368,7 +2368,7 @@ namespace WindowsFormsApp1
         //set spell info to currently selected spell
         private void UpdateSpellInfo()
         {
-            Spell s = spells[currentSpell];
+            Spell s = Spells[currentSpell];
             //spell info
             castTimedisplaylabel.Text = s.CastTime;
             rangeDisplaylabel.Text = s.Range;
@@ -2399,14 +2399,14 @@ namespace WindowsFormsApp1
 
         public void SetSpell(Spell s, int id)
         {
-            spells[spells.IndexOf(FindSpellFromID(id))] = s;
+            Spells[Spells.IndexOf(FindSpellFromID(id))] = s;
             SaveSpells();
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
         }
 
         public void AddSpell(Spell s)
         {
-            spells.Add(s);
+            Spells.Add(s);
             SaveSpells();
         }
 
@@ -2414,7 +2414,7 @@ namespace WindowsFormsApp1
         private void UpdateMultiplierLabel(object sender, EventArgs e)
         {
             //loop through rolls in spell to find selected roll
-            foreach (Roll r in spells[currentSpell].Rolls)
+            foreach (Roll r in Spells[currentSpell].Rolls)
             {
                 if (r.Name == spellrolldropdown.Text)
                 {
@@ -2426,11 +2426,11 @@ namespace WindowsFormsApp1
         //delete spell from list at index
         public void DeleteSpell(int id)
         {
-            spells.Remove(FindSpellFromID(id));
+            Spells.Remove(FindSpellFromID(id));
             SaveSpells();
             //remove spell from known spells
-            if (knownSpells.Contains(id))
-                knownSpells.Remove(id);
+            if (KnownSpells.Contains(id))
+                KnownSpells.Remove(id);
         }
 
         #region spell slot buttons
@@ -2519,12 +2519,22 @@ namespace WindowsFormsApp1
                 usedArcanums[i] = false;
             warlockSpellSlots[0] = warlockSpellSlots[1];
             WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            Arcanum6checkBox.Checked = false;
+            Arcanum7checkBox.Checked = false;
+            Arcanum8checkBox.Checked = false;
+            Arcanum9checkBox.Checked = false;
         }
 
         private void ArcanumChecKChanged(object sender, EventArgs e)
         {
             int index = int.Parse((sender as CheckBox).Tag.ToString());
             usedArcanums[index] = (sender as CheckBox).Checked;
+        }
+
+        private void forgetSpellButton_Click(object sender, EventArgs e)
+        {
+            KnownSpells.Remove(Spells[currentSpell].ID);
+            SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
         }
 
 
@@ -2575,7 +2585,7 @@ namespace WindowsFormsApp1
                     Roll r = new Roll(rollDieNum, rollDieAmount, rollFlat, rollName, mulDieNum, mulDieAmount, usesMul);
                     rolls.Add(r);
                 }
-                spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, useAtk, id));
+                Spells.Add(new Spell(name, castTime, range, duration, components, rolls, lvl, description, useAtk, id));
             }
         }
 
@@ -2589,8 +2599,8 @@ namespace WindowsFormsApp1
             BinaryWriter output = new BinaryWriter(outStream);
             //write spells
             output.Write(nextSpellId);
-            output.Write(spells.Count);
-            foreach(Spell s in spells)
+            output.Write(Spells.Count);
+            foreach(Spell s in Spells)
             {
                 output.Write(s.Name);
                 output.Write(s.Level);
@@ -2631,7 +2641,7 @@ namespace WindowsFormsApp1
         //takes a spell ID and finds the spell from the spells list
         public Spell FindSpellFromID(int id)
         {
-            foreach(Spell s in spells)
+            foreach(Spell s in Spells)
             {
                 if (s.ID == id)
                     return s;
