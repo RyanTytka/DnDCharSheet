@@ -2349,7 +2349,7 @@ namespace WindowsFormsApp1
             UpdateSpellInfo();
         }
 
-        //add or remove the id from preparedSpells
+        //add or remove the id from preparedSpells when the checkbox is clicked
         private void ChangePrepared(object sender, EventArgs e)
         {
             int id = int.Parse(((CheckBox)sender).Tag.ToString());
@@ -2361,6 +2361,8 @@ namespace WindowsFormsApp1
             {
                 preparedSpells.Add(id);
             }
+
+            preparedLabel.Text = "";
         }
 
 
