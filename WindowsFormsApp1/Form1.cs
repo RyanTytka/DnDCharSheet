@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
         bool removedLetters = false;
         int currentSpell;           //selected spell
         List<int> preparedSpells;   //list of spell id's of spells that are currently prepared
+        List<int> alwaysPreparedSpells;   //list of spell id's of spells that are always prepared
         List<RadioButton> spellRadioButtons;    //list of radio buttons currently displayed
         int[] classModifierTypes;   //array of ints that relate each spellcasting class to what attribute they use
         int classSpellType;     //what kind of spellcasting is being used
@@ -95,11 +96,10 @@ namespace WindowsFormsApp1
             prepareSpells = new bool[] { true, false, true, true, false, true, false, false, false, false, true };
             preparedSpells = new List<int>();
             usedArcanums = new bool[4];
-            spellTypeDropdown.Text = "Sorcerer";
             Spells = new List<Spell>();
             spellSlots = new int[9, 2];
             KnownSpells = new List<int>();
-            preparedSpells = new List<int>();
+            alwaysPreparedSpells = new List<int>();
             warlockSpellSlots = new int[] { 0, 0 };
             spellRadioButtons = new List<RadioButton>();
             spellLevelButtons = new List<RadioButton>();
@@ -124,6 +124,7 @@ namespace WindowsFormsApp1
             spellSlotsLabels.Add(lvl8slotslabel);
             spellSlotsLabels.Add(lvl9slotslabel);
             LoadSpells();
+            spellTypeDropdown.Text = "Sorcerer";
 
             moneyDropDown.Text = "Gold";
             moneyLabels = new Label[4];
@@ -406,7 +407,12 @@ namespace WindowsFormsApp1
             if (profBonus * proficiencies[22] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
             profRoll22.Text = sign + (profBonus * proficiencies[22] + int.Parse(chrModLabel.Text));
 
-
+            //set spell dc/atk bonus boxes
+            if (classSpellType > 0)
+            {
+                spellattackBonusDisplayBox.Text = "+" + (profBonus + spellAtkBonusnumUpDown.Value + statMods[classModifierTypes[classSpellType - 1]]);
+                spellSaveDCdisplayLabel.Text = (8 + profBonus + spellsavedcnumupdown.Value + statMods[classModifierTypes[classSpellType - 1]]).ToString();
+            }
         }
 
 
@@ -1447,8 +1453,9 @@ namespace WindowsFormsApp1
                 //place info in
                 fileName = loadFileDialog.FileName;
                 loadFile(fileName);
+                saveButton.Enabled = true;
+                SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
             }
-            saveButton.Enabled = true;
         }
 
         //click new button
@@ -1632,6 +1639,11 @@ namespace WindowsFormsApp1
                 {
                     output.Write(preparedSpells.Count);
                     foreach(int i in preparedSpells)
+                    {
+                        output.Write(i);
+                    }
+                    output.Write(alwaysPreparedSpells.Count);
+                    foreach (int i in alwaysPreparedSpells)
                     {
                         output.Write(i);
                     }
@@ -1856,6 +1868,11 @@ namespace WindowsFormsApp1
                     {
                         preparedSpells.Add(reader.ReadInt32());
                     }
+                    int numOfAlwaysPrepared = reader.ReadInt32();
+                    for (int i = 0; i < numOfAlwaysPrepared; i++)
+                    {
+                        alwaysPreparedSpells.Add(reader.ReadInt32());
+                    }
                 }
 
                 saved = true;
@@ -2022,6 +2039,7 @@ namespace WindowsFormsApp1
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
             profBonus = (int)profBonusBox.Value;
+            UpdateProficiencies(sender, null);
             SetUnsaved();
         }
 
@@ -2154,12 +2172,23 @@ namespace WindowsFormsApp1
             {
                 spellPanel.Visible = true;
                 this.Size = new Size(1156, 637);
-                preparedLabel.Visible = classSpellType > 0 && prepareSpells[classSpellType - 1];
             }
             this.CenterToScreen();
             addModDisplayLabel.Text = "(" + attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]] + ")";
             //warlock
             warlockSpellPanel.Visible = ((ComboBox)sender).Text == "Warlock";
+
+            //set spell dc/atk bonus boxes
+            if (classSpellType > 0)
+            {
+                spellattackBonusDisplayBox.Text = "+" + (profBonus + spellAtkBonusnumUpDown.Value + statMods[classModifierTypes[classSpellType - 1]]);
+                spellSaveDCdisplayLabel.Text = (8 + profBonus + spellsavedcnumupdown.Value + statMods[classModifierTypes[classSpellType - 1]]).ToString();
+            }
+
+            preparedhelpLabel.Visible = prepareSpells[classSpellType - 1] && currentSpellLevel > 0;
+
+            // Update spell list
+            SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
         }
 
         private void SpellDescriptionShow(object sender, EventArgs e)
@@ -2177,7 +2206,7 @@ namespace WindowsFormsApp1
                 spellDescriptionTextbox.Font, spellDescriptionTextbox.Width, new StringFormat(0));
             spellDescriptionTextbox.Height = (int)(MessageSize.Height * 1.06) - 8;
             int xPos = Math.Max( Math.Min(113, 235 - spellDescriptionTextbox.Width), 11);
-            spellDescriptionTextbox.Location = new Point(xPos, 240);
+            spellDescriptionTextbox.Location = new Point(xPos, 300);
         }
 
         private void SpellDescriptionHide(object sender, EventArgs e)
@@ -2196,19 +2225,19 @@ namespace WindowsFormsApp1
         private void SpellAttackRoll(object sender, EventArgs e)
         {
             string s = "";
-            Spell spell = Spells[0];
+            Spell spell = Spells[currentSpell]; 
             int roll = Roll.RollSingleDie(20);
             //int mod = 0;
             //if(spellattacktypeDropDown.SelectedIndex > 0)
             int mod = statMods[classModifierTypes[classSpellType - 1]];
             s += spell.Name + " attack roll: ";
-            s += (roll + mod + profBonus + MiscBonusnumericUpDown.Value);
+            s += (roll + mod + profBonus + spellAtkBonusnumUpDown.Value);
             s += "(Roll: " + roll;
             //if (spell.AttackType > 0)
             s += ", " + attributeNames[classModifierTypes[classSpellType - 1]] + ": " + mod;
             s += ", Proficiency Bonus: " + profBonus; 
-            if (MiscBonusnumericUpDown.Value != 0)
-                s += ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
+            if (spellAtkBonusnumUpDown.Value != 0)
+                s += ", Misc Bonus: " + spellAtkBonusnumUpDown.Value;
             s += ")";
             UpdateOutput(s);
             UpdateOutput(Environment.NewLine);
@@ -2246,7 +2275,7 @@ namespace WindowsFormsApp1
                     Roll newRoll = new Roll(totalDieAmounts, totalDieNums, r.Flat);
                     int roll = newRoll.RollDice();
                     string rollString = newRoll.ToString();
-                    if(addModcheckBox.Checked || MiscBonusnumericUpDown.Value != 0)
+                    if(addModcheckBox.Checked || otherBonusnumericUpDown.Value != 0)
                         rollString += ": " + roll;
                     //add modifier to roll
                     string modString = "";
@@ -2257,10 +2286,10 @@ namespace WindowsFormsApp1
                         roll += statMods[classModifierTypes[classSpellType - 1]];
                     }
                     //misc bonus
-                    roll += (int)MiscBonusnumericUpDown.Value;
+                    roll += (int)otherBonusnumericUpDown.Value;
                     string miscString = "";
-                    if (MiscBonusnumericUpDown.Value != 0)
-                        miscString = ", Misc Bonus: " + MiscBonusnumericUpDown.Value;
+                    if (otherBonusnumericUpDown.Value != 0)
+                        miscString = ", Misc Bonus: " + otherBonusnumericUpDown.Value;
                     //output roll
                     UpdateOutput(s.Name + " - " + r.Name + ": " + roll + " (" + rollString + modString + miscString + ")");
                     UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
@@ -2283,12 +2312,17 @@ namespace WindowsFormsApp1
         //select spell level radio button
         private void SelectSpellLevel(object sender, EventArgs e)
         {
+            //return if dont cast spells
+            if (classSpellType <= 0)
+                return;
+         
+
             //get selected level and update label
             currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
+            preparedhelpLabel.Visible = prepareSpells[classSpellType - 1] && currentSpellLevel > 0;
             spellListLabel.Text = "Level " + currentSpellLevel + " Spells";
             if (currentSpellLevel == 0)
                 spellListLabel.Text = "Cantrips";
-            preparedLabel.Enabled = currentSpellLevel > 0;
             //clear currently displayed spells
             CustomButtons.ButtonNoPadding b = forgetSpellButton; //save forget button from being deleted
             spellListPanel.Controls.Clear();
@@ -2319,10 +2353,13 @@ namespace WindowsFormsApp1
                     {
                         //create checkBox
                         CheckBox newCheck = new CheckBox();
+                        newCheck.ThreeState = true;
                         newCheck.Text = "";
                         newCheck.Tag = KnownSpells[i];
                         newCheck.Checked = preparedSpells.Contains(KnownSpells[i]);
-                        newCheck.CheckedChanged += ChangePrepared;
+                        if (alwaysPreparedSpells.Contains(KnownSpells[i]))
+                            newCheck.CheckState = CheckState.Indeterminate;
+                        newCheck.CheckStateChanged += ChangePrepared;
                         newCheck.Location = new Point(5, spellsDisplayed * 20 + 5);
                         //add to lists
                         spellListPanel.Controls.Add(newCheck);
@@ -2353,16 +2390,21 @@ namespace WindowsFormsApp1
         private void ChangePrepared(object sender, EventArgs e)
         {
             int id = int.Parse(((CheckBox)sender).Tag.ToString());
-            if (preparedSpells.Contains(id))
+            if (((CheckBox)sender).CheckState == CheckState.Checked)
+            {
+                preparedSpells.Add(id);
+                alwaysPreparedSpells.Remove(id);
+            }
+            else if (((CheckBox)sender).CheckState == CheckState.Indeterminate)
             {
                 preparedSpells.Remove(id);
+                alwaysPreparedSpells.Add(id);
             }
             else
             {
-                preparedSpells.Add(id);
+                preparedSpells.Remove(id);
+                alwaysPreparedSpells.Remove(id);
             }
-
-            preparedLabel.Text = "";
         }
 
 
@@ -2370,6 +2412,8 @@ namespace WindowsFormsApp1
         //set spell info to currently selected spell
         private void UpdateSpellInfo()
         {
+            if (Spells is null)
+                return;
             Spell s = Spells[currentSpell];
             //spell info
             castTimedisplaylabel.Text = s.CastTime;
@@ -2395,8 +2439,8 @@ namespace WindowsFormsApp1
             mullabel.Enabled = s.Rolls.Count > 0;
             if (s.Rolls.Count == 0)
                 multiplierDicedisplaylabel.Text = " n/a";
-            MiscBonusnumericUpDown.Enabled = s.Rolls.Count > 0 || s.UsesAttack;
-            miscBonuslabel.Enabled = s.Rolls.Count > 0 || s.UsesAttack;
+            miscBonuslabel.Enabled = s.Rolls.Count > 0;
+            otherBonusnumericUpDown.Enabled = s.Rolls.Count > 0;
         }
 
         public void SetSpell(Spell s, int id)
@@ -2537,6 +2581,16 @@ namespace WindowsFormsApp1
         {
             KnownSpells.Remove(Spells[currentSpell].ID);
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
+        }
+
+        private void ShowPreparedSpellHelpPanel(object sender, EventArgs e)
+        {
+            preparedHelppanel.Visible = true;
+        }
+
+        private void preparedhelpLabel_MouseLeave(object sender, EventArgs e)
+        {
+            preparedHelppanel.Visible = false;
         }
 
 
