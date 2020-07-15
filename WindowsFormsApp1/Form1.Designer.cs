@@ -320,8 +320,9 @@
             this.copperAmountLabel = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.spellsPreparedAMountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.spellsPreparedAmountlabel = new System.Windows.Forms.Label();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.preparednumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -348,7 +349,7 @@
             this.spellListPanel.SuspendLayout();
             this.preparedHelppanel.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spellsPreparedAMountnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preparednumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -2669,10 +2670,10 @@
             // spellPanel
             // 
             this.spellPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.spellPanel.Controls.Add(this.spellsPreparedAmountlabel);
-            this.spellPanel.Controls.Add(this.spellsPreparedAMountnumericUpDown);
-            this.spellPanel.Controls.Add(this.refillSpellSlotsButton);
             this.spellPanel.Controls.Add(this.preparedHelppanel);
+            this.spellPanel.Controls.Add(this.preparednumericUpDown);
+            this.spellPanel.Controls.Add(this.spellsPreparedAmountlabel);
+            this.spellPanel.Controls.Add(this.refillSpellSlotsButton);
             this.spellPanel.Controls.Add(this.preparedhelpLabel);
             this.spellPanel.Controls.Add(this.panel8);
             this.spellPanel.Controls.Add(this.warlockSpellPanel);
@@ -2717,7 +2718,7 @@
             this.preparedhelpLabel.AutoSize = true;
             this.preparedhelpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.preparedhelpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
-            this.preparedhelpLabel.Location = new System.Drawing.Point(13, 309);
+            this.preparedhelpLabel.Location = new System.Drawing.Point(7, 327);
             this.preparedhelpLabel.Name = "preparedhelpLabel";
             this.preparedhelpLabel.Size = new System.Drawing.Size(12, 11);
             this.preparedhelpLabel.TabIndex = 201;
@@ -3637,22 +3638,23 @@
             // 
             this.spellListPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.spellListPanel.Controls.Add(this.forgetSpellButton);
-            this.spellListPanel.Location = new System.Drawing.Point(4, 322);
+            this.spellListPanel.Location = new System.Drawing.Point(4, 342);
             this.spellListPanel.Name = "spellListPanel";
-            this.spellListPanel.Size = new System.Drawing.Size(241, 235);
+            this.spellListPanel.Size = new System.Drawing.Size(241, 216);
             this.spellListPanel.TabIndex = 181;
             this.spellListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.spellListPanel_Paint);
             // 
             // preparedHelppanel
             // 
             this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.preparedHelppanel.Controls.Add(this.textBox31);
             this.preparedHelppanel.Controls.Add(this.checkBox3);
             this.preparedHelppanel.Controls.Add(this.checkBox2);
             this.preparedHelppanel.Controls.Add(this.checkBox1);
             this.preparedHelppanel.Controls.Add(this.textBox25);
-            this.preparedHelppanel.Location = new System.Drawing.Point(13, 320);
+            this.preparedHelppanel.Location = new System.Drawing.Point(4, 342);
             this.preparedHelppanel.Name = "preparedHelppanel";
-            this.preparedHelppanel.Size = new System.Drawing.Size(108, 73);
+            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
             this.preparedHelppanel.TabIndex = 224;
             this.preparedHelppanel.Visible = false;
             // 
@@ -3847,10 +3849,10 @@
             this.spellListLabel.BackColor = System.Drawing.SystemColors.Control;
             this.spellListLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.spellListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.spellListLabel.Location = new System.Drawing.Point(5, 306);
+            this.spellListLabel.Location = new System.Drawing.Point(4, 307);
             this.spellListLabel.Multiline = true;
             this.spellListLabel.Name = "spellListLabel";
-            this.spellListLabel.Size = new System.Drawing.Size(239, 19);
+            this.spellListLabel.Size = new System.Drawing.Size(237, 15);
             this.spellListLabel.TabIndex = 177;
             this.spellListLabel.Text = "Level 1 Spells";
             this.spellListLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4087,24 +4089,42 @@
             this.label13.Text = "MONEY";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // spellsPreparedAMountnumericUpDown
-            // 
-            this.spellsPreparedAMountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.spellsPreparedAMountnumericUpDown.Location = new System.Drawing.Point(46, 303);
-            this.spellsPreparedAMountnumericUpDown.Name = "spellsPreparedAMountnumericUpDown";
-            this.spellsPreparedAMountnumericUpDown.Size = new System.Drawing.Size(35, 18);
-            this.spellsPreparedAMountnumericUpDown.TabIndex = 193;
-            // 
             // spellsPreparedAmountlabel
             // 
-            this.spellsPreparedAmountlabel.AutoSize = true;
             this.spellsPreparedAmountlabel.BackColor = System.Drawing.SystemColors.Control;
             this.spellsPreparedAmountlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.spellsPreparedAmountlabel.Location = new System.Drawing.Point(30, 305);
+            this.spellsPreparedAmountlabel.Location = new System.Drawing.Point(39, 326);
             this.spellsPreparedAmountlabel.Name = "spellsPreparedAmountlabel";
-            this.spellsPreparedAmountlabel.Size = new System.Drawing.Size(20, 13);
+            this.spellsPreparedAmountlabel.Size = new System.Drawing.Size(108, 13);
             this.spellsPreparedAmountlabel.TabIndex = 193;
-            this.spellsPreparedAmountlabel.Text = "0/";
+            this.spellsPreparedAmountlabel.Text = "Prepared: 0/";
+            this.spellsPreparedAmountlabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBox31
+            // 
+            this.textBox31.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox31.Location = new System.Drawing.Point(3, 70);
+            this.textBox31.Multiline = true;
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(100, 66);
+            this.textBox31.TabIndex = 192;
+            this.textBox31.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
+    "ed down)";
+            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // preparednumericUpDown
+            // 
+            this.preparednumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.preparednumericUpDown.Location = new System.Drawing.Point(147, 323);
+            this.preparednumericUpDown.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.preparednumericUpDown.Name = "preparednumericUpDown";
+            this.preparednumericUpDown.Size = new System.Drawing.Size(33, 18);
+            this.preparednumericUpDown.TabIndex = 223;
             // 
             // Form1
             // 
@@ -4189,7 +4209,7 @@
             this.preparedHelppanel.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spellsPreparedAMountnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preparednumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4490,7 +4510,8 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label spellsPreparedAmountlabel;
-        private System.Windows.Forms.NumericUpDown spellsPreparedAMountnumericUpDown;
+        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.NumericUpDown preparednumericUpDown;
     }
 }
 

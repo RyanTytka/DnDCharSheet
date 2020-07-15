@@ -1976,6 +1976,7 @@ namespace WindowsFormsApp1
             spellListPanel.Controls.Clear();
             KnownSpells = new List<int>();
             preparedSpells = new List<int>();
+            alwaysPreparedSpells = new List<int>();
             spellSlots = new int[9, 2];
             spellTypeDropdown.Text = "None";
         }
@@ -2185,10 +2186,28 @@ namespace WindowsFormsApp1
                 spellSaveDCdisplayLabel.Text = (8 + profBonus + spellsavedcnumupdown.Value + statMods[classModifierTypes[classSpellType - 1]]).ToString();
             }
 
-            preparedhelpLabel.Visible = prepareSpells[classSpellType - 1] && currentSpellLevel > 0;
+            if (classSpellType == 0)
+                return;
+
+            bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
+            preparedhelpLabel.Visible = prepared;
+            spellsPreparedAmountlabel.Visible = prepared;
+            preparednumericUpDown.Visible = prepared;
+            if(prepared)
+            {
+                spellListPanel.Location = new Point(4, 342);
+                spellListPanel.Size = new Size(241, 216);
+            }
+            else
+            {
+                spellListPanel.Location = new Point(4, 322);
+                spellListPanel.Size = new Size(241, 236);
+            }
 
             // Update spell list
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
+
+            spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
         }
 
         private void SpellDescriptionShow(object sender, EventArgs e)
@@ -2319,7 +2338,20 @@ namespace WindowsFormsApp1
 
             //get selected level and update label
             currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
-            preparedhelpLabel.Visible = prepareSpells[classSpellType - 1] && currentSpellLevel > 0;
+            bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
+            preparedhelpLabel.Visible = prepared;
+            spellsPreparedAmountlabel.Visible = prepared;
+            preparednumericUpDown.Visible = prepared;
+            if (prepared)
+            {
+                spellListPanel.Location = new Point(4, 342);
+                spellListPanel.Size = new Size(241, 216);
+            }
+            else
+            {
+                spellListPanel.Location = new Point(4, 322);
+                spellListPanel.Size = new Size(241, 236);
+            }
             spellListLabel.Text = "Level " + currentSpellLevel + " Spells";
             if (currentSpellLevel == 0)
                 spellListLabel.Text = "Cantrips";
@@ -2372,6 +2404,7 @@ namespace WindowsFormsApp1
             if(spellRadioButtons.Count > 0)
                 spellRadioButtons[0].Checked = true;
             forgetSpellButton.Visible = spellRadioButtons.Count > 0;
+            spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
         }
 
         //when a spell display radio button is checked
@@ -2405,6 +2438,7 @@ namespace WindowsFormsApp1
                 preparedSpells.Remove(id);
                 alwaysPreparedSpells.Remove(id);
             }
+            spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
         }
 
 
