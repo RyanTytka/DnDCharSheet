@@ -1623,31 +1623,55 @@ namespace WindowsFormsApp1
                     }
                 }
                 output.Write(-1);       //feat end marker
-                //spells known
-                output.Write(KnownSpells.Count);
-                foreach(int i in KnownSpells)
-                {
-                    output.Write(i);
-                }
-
-
                 //spellcasting type
                 output.Write(spellTypeDropdown.Text);
-                //prepared spells
-                output.Write(classSpellType > 0 && prepareSpells[classSpellType - 1]);
-                if(classSpellType > 0 && prepareSpells[classSpellType - 1])
+
+                if (spellTypeDropdown.Text != "None")
                 {
-                    output.Write(preparedSpells.Count);
-                    foreach(int i in preparedSpells)
+                    //spells known
+                    output.Write(KnownSpells.Count);
+                    foreach (int i in KnownSpells)
                     {
                         output.Write(i);
                     }
-                    output.Write(alwaysPreparedSpells.Count);
-                    foreach (int i in alwaysPreparedSpells)
+                    //prepared spells
+                    output.Write(classSpellType > 0 && prepareSpells[classSpellType - 1]);
+                    if (classSpellType > 0 && prepareSpells[classSpellType - 1])
                     {
-                        output.Write(i);
+                        output.Write(preparedSpells.Count);
+                        foreach (int i in preparedSpells)
+                        {
+                            output.Write(i);
+                        }
+                        output.Write(alwaysPreparedSpells.Count);
+                        foreach (int i in alwaysPreparedSpells)
+                        {
+                            output.Write(i);
+                        }
+                        output.Write((int)preparednumericUpDown.Value);
+                        output.Write(spellsPreparedAmountlabel.Text);
+                    }
+                    //spell slots
+                    if (spellTypeDropdown.Text == "Warlock")
+                    {
+                        output.Write(warlockSpellSlots[0]); //min
+                        output.Write(warlockSpellSlots[1]); //max
+                        output.Write((int)warlockSpellLevelnumericUpDown.Value); //slot level
+                        output.Write(Arcanum6checkBox.Checked);
+                        output.Write(Arcanum7checkBox.Checked);
+                        output.Write(Arcanum8checkBox.Checked);
+                        output.Write(Arcanum9checkBox.Checked);
+                    }
+                    else
+                    {
+                        for(int i = 0; i < 9; i++)
+                        {
+                            output.Write(spellSlots[i, 0]); //current
+                            output.Write(spellSlots[i, 1]); //max
+                        }
                     }
                 }
+
 
                 if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
@@ -1850,28 +1874,54 @@ namespace WindowsFormsApp1
                     //update readIn
                     readIn = reader.ReadInt32();
                 }
-                //known spells
-                int numOfSpells = reader.ReadInt32();
-                for(int i = 0; i < numOfSpells; i++)
-                {
-                    int id = reader.ReadInt32();
-                    if (FindSpellFromID(id) != null)  //make sure the spell is in your saved list
-                        LearnSpell(id);
-                }
                 //spellcasting type
                 spellTypeDropdown.Text = reader.ReadString();
-                //prepared spells
-                if (reader.ReadBoolean())
+                if (spellTypeDropdown.Text != "None")
                 {
-                    int numOfPrepared = reader.ReadInt32();
-                    for(int i = 0; i < numOfPrepared; i++)
+                    //known spells
+                    int numOfSpells = reader.ReadInt32();
+                    for (int i = 0; i < numOfSpells; i++)
                     {
-                        preparedSpells.Add(reader.ReadInt32());
+                        int id = reader.ReadInt32();
+                        if (FindSpellFromID(id) != null)  //make sure the spell is in your saved list
+                            LearnSpell(id);
                     }
-                    int numOfAlwaysPrepared = reader.ReadInt32();
-                    for (int i = 0; i < numOfAlwaysPrepared; i++)
+                    //prepared spells
+                    if (reader.ReadBoolean())
                     {
-                        alwaysPreparedSpells.Add(reader.ReadInt32());
+                        int numOfPrepared = reader.ReadInt32();
+                        for (int i = 0; i < numOfPrepared; i++)
+                        {
+                            preparedSpells.Add(reader.ReadInt32());
+                        }
+                        int numOfAlwaysPrepared = reader.ReadInt32();
+                        for (int i = 0; i < numOfAlwaysPrepared; i++)
+                        {
+                            alwaysPreparedSpells.Add(reader.ReadInt32());
+                        }
+                        preparednumericUpDown.Value = reader.ReadInt32();
+                        spellsPreparedAmountlabel.Text = reader.ReadString();
+                    }
+                    //spell slots
+                    if (spellTypeDropdown.Text == "Warlock")
+                    {
+                        warlockSpellSlots[0] = reader.ReadInt32();
+                        warlockSpellSlots[1] = reader.ReadInt32();
+                        WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+                        warlockSpellLevelnumericUpDown.Value = reader.ReadInt32();
+                        Arcanum6checkBox.Checked = reader.ReadBoolean();
+                        Arcanum7checkBox.Checked = reader.ReadBoolean();
+                        Arcanum8checkBox.Checked = reader.ReadBoolean();
+                        Arcanum9checkBox.Checked = reader.ReadBoolean();
+                    }
+                    else
+                    {
+                        for(int i = 0; i < 9; i++)
+                        {
+                            spellSlots[i, 0] = reader.ReadInt32();
+                            spellSlots[i, 1] = reader.ReadInt32();
+                            spellSlotsLabels[i].Text = $"{spellSlots[i, 0]}/{spellSlots[i, 1]}";
+                        }
                     }
                 }
 
