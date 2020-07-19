@@ -279,6 +279,11 @@
             this.preparedHelppanel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox33 = new System.Windows.Forms.TextBox();
+            this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.miscRollNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.setMoneyButton = new CustomButtons.ButtonNoPadding();
             this.minusMoneyButton = new CustomButtons.ButtonNoPadding();
             this.addMoneyButton = new CustomButtons.ButtonNoPadding();
@@ -354,6 +359,8 @@
             this.panel9.SuspendLayout();
             this.preparedHelppanel.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -362,7 +369,7 @@
             this.outputTextBox.Location = new System.Drawing.Point(10, 496);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.Size = new System.Drawing.Size(628, 93);
+            this.outputTextBox.Size = new System.Drawing.Size(518, 93);
             this.outputTextBox.TabIndex = 0;
             // 
             // outputLabel
@@ -3600,6 +3607,85 @@
             this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox33.WordWrap = false;
             // 
+            // miscRollAmountnumericUpDown
+            // 
+            this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(536, 527);
+            this.miscRollAmountnumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.miscRollAmountnumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.miscRollAmountnumericUpDown.Name = "miscRollAmountnumericUpDown";
+            this.miscRollAmountnumericUpDown.Size = new System.Drawing.Size(42, 23);
+            this.miscRollAmountnumericUpDown.TabIndex = 193;
+            this.miscRollAmountnumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(547, 502);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 194;
+            this.label6.Text = "Misc Roll";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(577, 528);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 17);
+            this.label10.TabIndex = 223;
+            this.label10.Text = "d";
+            // 
+            // miscRollNumnumericUpDown
+            // 
+            this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(596, 527);
+            this.miscRollNumnumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.miscRollNumnumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.miscRollNumnumericUpDown.Name = "miscRollNumnumericUpDown";
+            this.miscRollNumnumericUpDown.Size = new System.Drawing.Size(42, 23);
+            this.miscRollNumnumericUpDown.TabIndex = 224;
+            this.miscRollNumnumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // miscRollbutton
+            // 
+            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
+            this.miscRollbutton.Location = new System.Drawing.Point(557, 555);
+            this.miscRollbutton.Name = "miscRollbutton";
+            this.miscRollbutton.Size = new System.Drawing.Size(57, 23);
+            this.miscRollbutton.TabIndex = 193;
+            this.miscRollbutton.Text = "Roll";
+            this.miscRollbutton.UseVisualStyleBackColor = true;
+            this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
+            // 
             // setMoneyButton
             // 
             this.setMoneyButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
@@ -4149,6 +4235,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 598);
+            this.Controls.Add(this.miscRollbutton);
+            this.Controls.Add(this.miscRollNumnumericUpDown);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.spellTypeDropdown);
             this.Controls.Add(this.textBox12);
@@ -4232,6 +4323,8 @@
             this.preparedHelppanel.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4536,6 +4629,11 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown miscRollAmountnumericUpDown;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown miscRollNumnumericUpDown;
+        private CustomButtons.ButtonNoPadding miscRollbutton;
     }
 }
 

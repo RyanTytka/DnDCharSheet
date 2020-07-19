@@ -2827,5 +2827,17 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region Misc Rolls
+
+        private void miscRollbutton_Click(object sender, EventArgs e)
+        {
+            Roll r = new Roll(new List<int> { (int)miscRollAmountnumericUpDown.Value }, new List<int> { (int)miscRollNumnumericUpDown.Value });
+            int roll = r.RollDice();
+            UpdateOutput($"Misc Roll ({miscRollAmountnumericUpDown.Value}d{miscRollNumnumericUpDown.Value}): {roll}");
+            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+        }
+
+        #endregion
+
     }
 }
