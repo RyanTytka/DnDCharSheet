@@ -271,6 +271,14 @@
             this.copperAmountLabel = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.preparedHelppanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox33 = new System.Windows.Forms.TextBox();
             this.setMoneyButton = new CustomButtons.ButtonNoPadding();
             this.minusMoneyButton = new CustomButtons.ButtonNoPadding();
             this.addMoneyButton = new CustomButtons.ButtonNoPadding();
@@ -317,14 +325,6 @@
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.bonusButtonDisplay = new CustomButtons.ButtonNoPadding();
             this.propertiesButtonDisplay = new CustomButtons.ButtonNoPadding();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.preparedHelppanel = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox33 = new System.Windows.Forms.TextBox();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -2574,7 +2574,7 @@
             this.warlockSpellPanel.Controls.Add(this.radioButton10);
             this.warlockSpellPanel.Location = new System.Drawing.Point(2, 80);
             this.warlockSpellPanel.Name = "warlockSpellPanel";
-            this.warlockSpellPanel.Size = new System.Drawing.Size(107, 226);
+            this.warlockSpellPanel.Size = new System.Drawing.Size(107, 228);
             this.warlockSpellPanel.TabIndex = 199;
             // 
             // label9
@@ -2984,7 +2984,6 @@
             this.addModDisplayLabel.Name = "addModDisplayLabel";
             this.addModDisplayLabel.Size = new System.Drawing.Size(71, 13);
             this.addModDisplayLabel.TabIndex = 188;
-            this.addModDisplayLabel.Text = "(Ability Name)";
             this.addModDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // addModcheckBox
@@ -3034,9 +3033,8 @@
             this.DurationDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DurationDisplaylabel.Location = new System.Drawing.Point(0, 89);
             this.DurationDisplaylabel.Name = "DurationDisplaylabel";
-            this.DurationDisplaylabel.Size = new System.Drawing.Size(47, 13);
+            this.DurationDisplaylabel.Size = new System.Drawing.Size(0, 13);
             this.DurationDisplaylabel.TabIndex = 180;
-            this.DurationDisplaylabel.Text = "1 minute";
             // 
             // rangeDisplaylabel
             // 
@@ -3045,9 +3043,8 @@
             this.rangeDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rangeDisplaylabel.Location = new System.Drawing.Point(2, 66);
             this.rangeDisplaylabel.Name = "rangeDisplaylabel";
-            this.rangeDisplaylabel.Size = new System.Drawing.Size(40, 13);
+            this.rangeDisplaylabel.Size = new System.Drawing.Size(0, 13);
             this.rangeDisplaylabel.TabIndex = 179;
-            this.rangeDisplaylabel.Text = "60 feet";
             // 
             // castTimedisplaylabel
             // 
@@ -3056,9 +3053,8 @@
             this.castTimedisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.castTimedisplaylabel.Location = new System.Drawing.Point(1, 41);
             this.castTimedisplaylabel.Name = "castTimedisplaylabel";
-            this.castTimedisplaylabel.Size = new System.Drawing.Size(45, 13);
+            this.castTimedisplaylabel.Size = new System.Drawing.Size(0, 13);
             this.castTimedisplaylabel.TabIndex = 178;
-            this.castTimedisplaylabel.Text = "1 action";
             // 
             // spellrolldropdown
             // 
@@ -3139,7 +3135,6 @@
             this.spellnamelabel.Name = "spellnamelabel";
             this.spellnamelabel.Size = new System.Drawing.Size(135, 39);
             this.spellnamelabel.TabIndex = 171;
-            this.spellnamelabel.Text = "Spell Name";
             this.spellnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // componentsDisplaylabel
@@ -3149,9 +3144,9 @@
             this.componentsDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentsDisplaylabel.Location = new System.Drawing.Point(2, 113);
             this.componentsDisplaylabel.Name = "componentsDisplaylabel";
-            this.componentsDisplaylabel.Size = new System.Drawing.Size(114, 13);
+            this.componentsDisplaylabel.Size = new System.Drawing.Size(10, 13);
             this.componentsDisplaylabel.TabIndex = 181;
-            this.componentsDisplaylabel.Text = "V,S, 100 gold diamond";
+            this.componentsDisplaylabel.Text = " ";
             // 
             // multiplierDicedisplaylabel
             // 
@@ -3160,9 +3155,8 @@
             this.multiplierDicedisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
             this.multiplierDicedisplaylabel.Location = new System.Drawing.Point(30, 187);
             this.multiplierDicedisplaylabel.Name = "multiplierDicedisplaylabel";
-            this.multiplierDicedisplaylabel.Size = new System.Drawing.Size(28, 13);
+            this.multiplierDicedisplaylabel.Size = new System.Drawing.Size(0, 13);
             this.multiplierDicedisplaylabel.TabIndex = 187;
-            this.multiplierDicedisplaylabel.Text = "1d8";
             // 
             // Level0SpellButton
             // 
@@ -3504,6 +3498,107 @@
             this.label13.TabIndex = 177;
             this.label13.Text = "MONEY";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 18);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 17);
+            this.checkBox1.TabIndex = 223;
+            this.checkBox1.Tag = "0";
+            this.checkBox1.Text = "Not Prepared";
+            this.checkBox1.ThreeState = true;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(3, 35);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(69, 17);
+            this.checkBox2.TabIndex = 224;
+            this.checkBox2.Tag = "0";
+            this.checkBox2.Text = "Prepared";
+            this.checkBox2.ThreeState = true;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.checkBox3.Location = new System.Drawing.Point(3, 52);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(105, 17);
+            this.checkBox3.TabIndex = 225;
+            this.checkBox3.Tag = "0";
+            this.checkBox3.Text = "Always Prepared";
+            this.checkBox3.ThreeState = true;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.textBox32);
+            this.panel9.Location = new System.Drawing.Point(-1, 68);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(108, 69);
+            this.panel9.TabIndex = 226;
+            this.panel9.Visible = false;
+            // 
+            // textBox32
+            // 
+            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox32.Location = new System.Drawing.Point(3, 0);
+            this.textBox32.Multiline = true;
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(100, 65);
+            this.textBox32.TabIndex = 192;
+            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
+    "ed down)";
+            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // preparedHelppanel
+            // 
+            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.preparedHelppanel.Controls.Add(this.panel10);
+            this.preparedHelppanel.Controls.Add(this.panel9);
+            this.preparedHelppanel.Controls.Add(this.checkBox3);
+            this.preparedHelppanel.Controls.Add(this.checkBox2);
+            this.preparedHelppanel.Controls.Add(this.checkBox1);
+            this.preparedHelppanel.Location = new System.Drawing.Point(4, 342);
+            this.preparedHelppanel.Name = "preparedHelppanel";
+            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
+            this.preparedHelppanel.TabIndex = 224;
+            this.preparedHelppanel.Visible = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.textBox33);
+            this.panel10.Location = new System.Drawing.Point(-1, -1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(108, 17);
+            this.panel10.TabIndex = 227;
+            this.panel10.Visible = false;
+            // 
+            // textBox33
+            // 
+            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.textBox33.Location = new System.Drawing.Point(20, -1);
+            this.textBox33.Multiline = true;
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(70, 19);
+            this.textBox33.TabIndex = 202;
+            this.textBox33.Text = "Key:";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox33.WordWrap = false;
             // 
             // setMoneyButton
             // 
@@ -4048,107 +4143,6 @@
             this.propertiesButtonDisplay.Text = "properties";
             this.propertiesButtonDisplay.UseVisualStyleBackColor = false;
             this.propertiesButtonDisplay.Click += new System.EventHandler(this.SwitchWeaponDisplay);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
-            this.checkBox1.TabIndex = 223;
-            this.checkBox1.Tag = "0";
-            this.checkBox1.Text = "Not Prepared";
-            this.checkBox1.ThreeState = true;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(3, 35);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 17);
-            this.checkBox2.TabIndex = 224;
-            this.checkBox2.Tag = "0";
-            this.checkBox2.Text = "Prepared";
-            this.checkBox2.ThreeState = true;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBox3.Location = new System.Drawing.Point(3, 52);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(105, 17);
-            this.checkBox3.TabIndex = 225;
-            this.checkBox3.Tag = "0";
-            this.checkBox3.Text = "Always Prepared";
-            this.checkBox3.ThreeState = true;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.textBox32);
-            this.panel9.Location = new System.Drawing.Point(-1, 68);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(108, 69);
-            this.panel9.TabIndex = 226;
-            this.panel9.Visible = false;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox32.Location = new System.Drawing.Point(3, 0);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(100, 65);
-            this.textBox32.TabIndex = 192;
-            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
-    "ed down)";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // preparedHelppanel
-            // 
-            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.preparedHelppanel.Controls.Add(this.panel10);
-            this.preparedHelppanel.Controls.Add(this.panel9);
-            this.preparedHelppanel.Controls.Add(this.checkBox3);
-            this.preparedHelppanel.Controls.Add(this.checkBox2);
-            this.preparedHelppanel.Controls.Add(this.checkBox1);
-            this.preparedHelppanel.Location = new System.Drawing.Point(4, 342);
-            this.preparedHelppanel.Name = "preparedHelppanel";
-            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
-            this.preparedHelppanel.TabIndex = 224;
-            this.preparedHelppanel.Visible = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.textBox33);
-            this.panel10.Location = new System.Drawing.Point(-1, -1);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(108, 17);
-            this.panel10.TabIndex = 227;
-            this.panel10.Visible = false;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.textBox33.Location = new System.Drawing.Point(20, -1);
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(70, 19);
-            this.textBox33.TabIndex = 202;
-            this.textBox33.Text = "Key:";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox33.WordWrap = false;
             // 
             // Form1
             // 

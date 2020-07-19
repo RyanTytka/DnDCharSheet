@@ -1670,6 +1670,9 @@ namespace WindowsFormsApp1
                             output.Write(spellSlots[i, 1]); //max
                         }
                     }
+                    //misc bonuses
+                    output.Write((int)spellAtkBonusnumUpDown.Value);
+                    output.Write((int)spellsavedcnumupdown.Value);
                 }
 
 
@@ -1923,6 +1926,9 @@ namespace WindowsFormsApp1
                             spellSlotsLabels[i].Text = $"{spellSlots[i, 0]}/{spellSlots[i, 1]}";
                         }
                     }
+                    //misc bonuses
+                    spellAtkBonusnumUpDown.Value = reader.ReadInt32();
+                    spellsavedcnumupdown.Value = reader.ReadInt32();
                 }
 
                 saved = true;
@@ -2028,7 +2034,35 @@ namespace WindowsFormsApp1
             preparedSpells = new List<int>();
             alwaysPreparedSpells = new List<int>();
             spellSlots = new int[9, 2];
+            for (int i = 0; i < 9; i++)
+                spellSlotsLabels[i].Text = $"{spellSlots[i, 0]}/{spellSlots[i, 1]}";
+            spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
+            preparednumericUpDown.Value = 0;
             spellTypeDropdown.Text = "None";
+            castTimedisplaylabel.Text = "";
+            rangeDisplaylabel.Text = "";
+            DurationDisplaylabel.Text = "";
+            componentsDisplaylabel.Text = "";
+            spellnamelabel.Text = "";
+            multiplierDicedisplaylabel.Text = "";
+            MultipliernumericUpDown.Value = 0;
+            otherBonusnumericUpDown.Value = 0;
+            spellAtkBonusnumUpDown.Value = 0;
+            spellsavedcnumupdown.Value = 0;
+            addModcheckBox.Checked = false;
+            addModDisplayLabel.Text = "";
+            warlockSpellSlots = new int[2];
+            warlockSpellLevelnumericUpDown.Value = 0;
+            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            Arcanum6checkBox.Checked = false;
+            Arcanum7checkBox.Checked = false;
+            Arcanum8checkBox.Checked = false;
+            Arcanum9checkBox.Checked = false;
+            //money
+            copperAmountLabel.Text = "0";
+            silverAmountLabel.Text = "0";
+            GoldAmountLabel.Text = "0";
+            PlatinumAmountLabel.Text = "0";
         }
 
         //make sure user has saved before exiting
@@ -2516,12 +2550,12 @@ namespace WindowsFormsApp1
             spellAttackButton.Enabled = s.UsesAttack;
             SpellMiscRollButton.Enabled = s.Rolls.Count > 0;
             spellrolldropdown.Enabled = s.Rolls.Count > 0;
-            MultipliernumericUpDown.Enabled = s.Rolls.Count > 0;
-            multiplierDicedisplaylabel.Enabled = s.Rolls.Count > 0;
             addModcheckBox.Enabled = s.Rolls.Count > 0;
             addModDisplayLabel.Enabled = s.Rolls.Count > 0;
-            mullabel.Enabled = s.Rolls.Count > 0;
-            if (s.Rolls.Count == 0)
+            mullabel.Enabled = s.Rolls.Count > 0 && s.Rolls[spellrolldropdown.SelectedIndex].UsesMul;
+            MultipliernumericUpDown.Enabled = s.Rolls.Count > 0 && s.Rolls[spellrolldropdown.SelectedIndex].UsesMul;
+            multiplierDicedisplaylabel.Enabled = s.Rolls.Count > 0 && s.Rolls[spellrolldropdown.SelectedIndex].UsesMul;
+            if (s.Rolls.Count == 0 || !s.Rolls[spellrolldropdown.SelectedIndex].UsesMul)
                 multiplierDicedisplaylabel.Text = " n/a";
             miscBonuslabel.Enabled = s.Rolls.Count > 0;
             otherBonusnumericUpDown.Enabled = s.Rolls.Count > 0;
