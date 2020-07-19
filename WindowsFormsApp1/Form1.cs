@@ -132,6 +132,8 @@ namespace WindowsFormsApp1
             moneyLabels[1] = silverAmountLabel;
             moneyLabels[2] = GoldAmountLabel;
             moneyLabels[3] = PlatinumAmountLabel;
+
+            miscRollDropDown.SelectedIndex = 0;
         }
 
 
@@ -2831,10 +2833,34 @@ namespace WindowsFormsApp1
 
         private void miscRollbutton_Click(object sender, EventArgs e)
         {
-            Roll r = new Roll(new List<int> { (int)miscRollAmountnumericUpDown.Value }, new List<int> { (int)miscRollNumnumericUpDown.Value });
+            Roll r = new Roll(new List<int> { (int)miscRollAmountnumericUpDown.Value }, 
+                new List<int> { (int)miscRollNumnumericUpDown.Value }, (int)MiscRollflatnumericUpDown.Value);
             int roll = r.RollDice();
-            UpdateOutput($"Misc Roll ({miscRollAmountnumericUpDown.Value}d{miscRollNumnumericUpDown.Value}): {roll}");
+            int roll2 = r.RollDice();
+            if (miscRollDropDown.SelectedIndex == 1)
+                roll = Math.Max(roll, roll2);
+            if (miscRollDropDown.SelectedIndex == 2)
+                roll = Math.Min(roll, roll2);
+            UpdateOutput($"Misc Roll ({r.ToString()}): {roll}");
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+        }
+
+        //When enter key is pressed while focusing numUpDOwns
+        private void MiscRollKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                miscRollbutton_Click(miscRollbutton, new EventArgs());
+                // stop ding sound
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        //selects text when the control becomes focused
+        private void miscRollAmountnumericUpDown_Enter(object sender, EventArgs e)
+        {
+            ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Value.ToString().Length);
         }
 
         #endregion

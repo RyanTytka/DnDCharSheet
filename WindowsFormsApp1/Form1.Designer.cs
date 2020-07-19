@@ -180,6 +180,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.spelllabel = new System.Windows.Forms.Label();
             this.spellPanel = new System.Windows.Forms.Panel();
+            this.preparedHelppanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.preparednumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.spellsPreparedAmountlabel = new System.Windows.Forms.Label();
             this.preparedhelpLabel = new System.Windows.Forms.Label();
@@ -271,18 +279,13 @@
             this.copperAmountLabel = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.preparedHelppanel = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox33 = new System.Windows.Forms.TextBox();
             this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.miscRollNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.MiscRollflatnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.miscRollDropDown = new System.Windows.Forms.ComboBox();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.setMoneyButton = new CustomButtons.ButtonNoPadding();
             this.minusMoneyButton = new CustomButtons.ButtonNoPadding();
@@ -345,6 +348,9 @@
             this.panel5.SuspendLayout();
             this.featsPanel.SuspendLayout();
             this.spellPanel.SuspendLayout();
+            this.preparedHelppanel.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preparednumericUpDown)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spellAtkBonusnumUpDown)).BeginInit();
@@ -356,11 +362,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.MultipliernumericUpDown)).BeginInit();
             this.spellListPanel.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.preparedHelppanel.SuspendLayout();
-            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -2381,6 +2385,107 @@
             this.spellPanel.Size = new System.Drawing.Size(251, 563);
             this.spellPanel.TabIndex = 176;
             // 
+            // preparedHelppanel
+            // 
+            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.preparedHelppanel.Controls.Add(this.panel10);
+            this.preparedHelppanel.Controls.Add(this.panel9);
+            this.preparedHelppanel.Controls.Add(this.checkBox3);
+            this.preparedHelppanel.Controls.Add(this.checkBox2);
+            this.preparedHelppanel.Controls.Add(this.checkBox1);
+            this.preparedHelppanel.Location = new System.Drawing.Point(4, 342);
+            this.preparedHelppanel.Name = "preparedHelppanel";
+            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
+            this.preparedHelppanel.TabIndex = 224;
+            this.preparedHelppanel.Visible = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.textBox33);
+            this.panel10.Location = new System.Drawing.Point(-1, -1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(108, 17);
+            this.panel10.TabIndex = 227;
+            this.panel10.Visible = false;
+            // 
+            // textBox33
+            // 
+            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.textBox33.Location = new System.Drawing.Point(20, -1);
+            this.textBox33.Multiline = true;
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(70, 19);
+            this.textBox33.TabIndex = 202;
+            this.textBox33.Text = "Key:";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox33.WordWrap = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.textBox32);
+            this.panel9.Location = new System.Drawing.Point(-1, 68);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(108, 69);
+            this.panel9.TabIndex = 226;
+            this.panel9.Visible = false;
+            // 
+            // textBox32
+            // 
+            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox32.Location = new System.Drawing.Point(3, 0);
+            this.textBox32.Multiline = true;
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(100, 65);
+            this.textBox32.TabIndex = 192;
+            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
+    "ed down)";
+            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.checkBox3.Location = new System.Drawing.Point(3, 52);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(105, 17);
+            this.checkBox3.TabIndex = 225;
+            this.checkBox3.Tag = "0";
+            this.checkBox3.Text = "Always Prepared";
+            this.checkBox3.ThreeState = true;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(3, 35);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(69, 17);
+            this.checkBox2.TabIndex = 224;
+            this.checkBox2.Tag = "0";
+            this.checkBox2.Text = "Prepared";
+            this.checkBox2.ThreeState = true;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 18);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 17);
+            this.checkBox1.TabIndex = 223;
+            this.checkBox1.Tag = "0";
+            this.checkBox1.Text = "Not Prepared";
+            this.checkBox1.ThreeState = true;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // preparednumericUpDown
             // 
             this.preparednumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
@@ -3506,111 +3611,10 @@
             this.label13.Text = "MONEY";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
-            this.checkBox1.TabIndex = 223;
-            this.checkBox1.Tag = "0";
-            this.checkBox1.Text = "Not Prepared";
-            this.checkBox1.ThreeState = true;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(3, 35);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 17);
-            this.checkBox2.TabIndex = 224;
-            this.checkBox2.Tag = "0";
-            this.checkBox2.Text = "Prepared";
-            this.checkBox2.ThreeState = true;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBox3.Location = new System.Drawing.Point(3, 52);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(105, 17);
-            this.checkBox3.TabIndex = 225;
-            this.checkBox3.Tag = "0";
-            this.checkBox3.Text = "Always Prepared";
-            this.checkBox3.ThreeState = true;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.textBox32);
-            this.panel9.Location = new System.Drawing.Point(-1, 68);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(108, 69);
-            this.panel9.TabIndex = 226;
-            this.panel9.Visible = false;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox32.Location = new System.Drawing.Point(3, 0);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(100, 65);
-            this.textBox32.TabIndex = 192;
-            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
-    "ed down)";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // preparedHelppanel
-            // 
-            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.preparedHelppanel.Controls.Add(this.panel10);
-            this.preparedHelppanel.Controls.Add(this.panel9);
-            this.preparedHelppanel.Controls.Add(this.checkBox3);
-            this.preparedHelppanel.Controls.Add(this.checkBox2);
-            this.preparedHelppanel.Controls.Add(this.checkBox1);
-            this.preparedHelppanel.Location = new System.Drawing.Point(4, 342);
-            this.preparedHelppanel.Name = "preparedHelppanel";
-            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
-            this.preparedHelppanel.TabIndex = 224;
-            this.preparedHelppanel.Visible = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.textBox33);
-            this.panel10.Location = new System.Drawing.Point(-1, -1);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(108, 17);
-            this.panel10.TabIndex = 227;
-            this.panel10.Visible = false;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.textBox33.Location = new System.Drawing.Point(20, -1);
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(70, 19);
-            this.textBox33.TabIndex = 202;
-            this.textBox33.Text = "Key:";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox33.WordWrap = false;
-            // 
             // miscRollAmountnumericUpDown
             // 
-            this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(536, 527);
+            this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(535, 512);
             this.miscRollAmountnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3622,19 +3626,21 @@
             0,
             0});
             this.miscRollAmountnumericUpDown.Name = "miscRollAmountnumericUpDown";
-            this.miscRollAmountnumericUpDown.Size = new System.Drawing.Size(42, 23);
+            this.miscRollAmountnumericUpDown.Size = new System.Drawing.Size(42, 21);
             this.miscRollAmountnumericUpDown.TabIndex = 193;
             this.miscRollAmountnumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.miscRollAmountnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
+            this.miscRollAmountnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(547, 502);
+            this.label6.Location = new System.Drawing.Point(547, 491);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 20);
             this.label6.TabIndex = 194;
@@ -3645,7 +3651,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(577, 528);
+            this.label10.Location = new System.Drawing.Point(578, 513);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 17);
             this.label10.TabIndex = 223;
@@ -3653,8 +3659,8 @@
             // 
             // miscRollNumnumericUpDown
             // 
-            this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(596, 527);
+            this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(596, 512);
             this.miscRollNumnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3666,21 +3672,68 @@
             0,
             0});
             this.miscRollNumnumericUpDown.Name = "miscRollNumnumericUpDown";
-            this.miscRollNumnumericUpDown.Size = new System.Drawing.Size(42, 23);
+            this.miscRollNumnumericUpDown.Size = new System.Drawing.Size(42, 21);
             this.miscRollNumnumericUpDown.TabIndex = 224;
             this.miscRollNumnumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.miscRollNumnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
+            this.miscRollNumnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(569, 541);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 15);
+            this.label11.TabIndex = 225;
+            this.label11.Text = "Flat bonus";
+            // 
+            // MiscRollflatnumericUpDown
+            // 
+            this.MiscRollflatnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(535, 538);
+            this.MiscRollflatnumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MiscRollflatnumericUpDown.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.MiscRollflatnumericUpDown.Name = "MiscRollflatnumericUpDown";
+            this.MiscRollflatnumericUpDown.Size = new System.Drawing.Size(34, 21);
+            this.MiscRollflatnumericUpDown.TabIndex = 226;
+            this.MiscRollflatnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
+            this.MiscRollflatnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            // 
+            // miscRollDropDown
+            // 
+            this.miscRollDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.miscRollDropDown.DropDownWidth = 81;
+            this.miscRollDropDown.FormattingEnabled = true;
+            this.miscRollDropDown.Items.AddRange(new object[] {
+            "None",
+            "Advantage",
+            "Disadvantage"});
+            this.miscRollDropDown.Location = new System.Drawing.Point(574, 566);
+            this.miscRollDropDown.Name = "miscRollDropDown";
+            this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
+            this.miscRollDropDown.TabIndex = 193;
             // 
             // miscRollbutton
             // 
-            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(557, 555);
+            this.miscRollbutton.Location = new System.Drawing.Point(534, 565);
             this.miscRollbutton.Name = "miscRollbutton";
-            this.miscRollbutton.Size = new System.Drawing.Size(57, 23);
+            this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
             this.miscRollbutton.TabIndex = 193;
             this.miscRollbutton.Text = "Roll";
             this.miscRollbutton.UseVisualStyleBackColor = true;
@@ -4235,10 +4288,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 598);
+            this.Controls.Add(this.miscRollDropDown);
+            this.Controls.Add(this.MiscRollflatnumericUpDown);
             this.Controls.Add(this.miscRollbutton);
             this.Controls.Add(this.miscRollNumnumericUpDown);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.spellTypeDropdown);
@@ -4273,6 +4326,9 @@
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.profBonusLabel);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -4302,6 +4358,12 @@
             this.featsPanel.PerformLayout();
             this.spellPanel.ResumeLayout(false);
             this.spellPanel.PerformLayout();
+            this.preparedHelppanel.ResumeLayout(false);
+            this.preparedHelppanel.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preparednumericUpDown)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -4317,14 +4379,9 @@
             this.spellListPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.preparedHelppanel.ResumeLayout(false);
-            this.preparedHelppanel.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4634,6 +4691,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown miscRollNumnumericUpDown;
         private CustomButtons.ButtonNoPadding miscRollbutton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown MiscRollflatnumericUpDown;
+        private System.Windows.Forms.ComboBox miscRollDropDown;
     }
 }
 
