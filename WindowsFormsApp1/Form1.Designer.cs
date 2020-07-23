@@ -333,6 +333,10 @@
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.bonusButtonDisplay = new CustomButtons.ButtonNoPadding();
             this.propertiesButtonDisplay = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
+            this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -365,6 +369,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -433,15 +438,15 @@
             this.statPanel.Controls.Add(this.strAddButton);
             this.statPanel.Controls.Add(this.strLabel);
             this.statPanel.Controls.Add(this.strDisplayBox);
-            this.statPanel.Location = new System.Drawing.Point(10, 44);
+            this.statPanel.Location = new System.Drawing.Point(10, 78);
             this.statPanel.Name = "statPanel";
-            this.statPanel.Size = new System.Drawing.Size(202, 429);
+            this.statPanel.Size = new System.Drawing.Size(202, 395);
             this.statPanel.TabIndex = 2;
             // 
             // chrModLabel
             // 
             this.chrModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrModLabel.Location = new System.Drawing.Point(8, 378);
+            this.chrModLabel.Location = new System.Drawing.Point(8, 355);
             this.chrModLabel.Multiline = true;
             this.chrModLabel.Name = "chrModLabel";
             this.chrModLabel.ReadOnly = true;
@@ -454,7 +459,7 @@
             // chrSaveButton
             // 
             this.chrSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrSaveButton.Location = new System.Drawing.Point(123, 380);
+            this.chrSaveButton.Location = new System.Drawing.Point(123, 357);
             this.chrSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.chrSaveButton.Name = "chrSaveButton";
             this.chrSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -466,7 +471,7 @@
             // chrProfBox
             // 
             this.chrProfBox.AutoSize = true;
-            this.chrProfBox.Location = new System.Drawing.Point(124, 358);
+            this.chrProfBox.Location = new System.Drawing.Point(124, 335);
             this.chrProfBox.Name = "chrProfBox";
             this.chrProfBox.Size = new System.Drawing.Size(70, 17);
             this.chrProfBox.TabIndex = 41;
@@ -477,7 +482,7 @@
             // chrDecreaseButton
             // 
             this.chrDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrDecreaseButton.Location = new System.Drawing.Point(89, 393);
+            this.chrDecreaseButton.Location = new System.Drawing.Point(89, 370);
             this.chrDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.chrDecreaseButton.Name = "chrDecreaseButton";
             this.chrDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -489,7 +494,7 @@
             // chrAddButton
             // 
             this.chrAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrAddButton.Location = new System.Drawing.Point(89, 370);
+            this.chrAddButton.Location = new System.Drawing.Point(89, 347);
             this.chrAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.chrAddButton.Name = "chrAddButton";
             this.chrAddButton.Size = new System.Drawing.Size(20, 20);
@@ -502,7 +507,7 @@
             // 
             this.chrLabel.AutoSize = true;
             this.chrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrLabel.Location = new System.Drawing.Point(30, 352);
+            this.chrLabel.Location = new System.Drawing.Point(30, 329);
             this.chrLabel.Name = "chrLabel";
             this.chrLabel.Size = new System.Drawing.Size(73, 16);
             this.chrLabel.TabIndex = 38;
@@ -512,7 +517,7 @@
             // chrDisplayBox
             // 
             this.chrDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrDisplayBox.Location = new System.Drawing.Point(43, 370);
+            this.chrDisplayBox.Location = new System.Drawing.Point(43, 347);
             this.chrDisplayBox.Multiline = true;
             this.chrDisplayBox.Name = "chrDisplayBox";
             this.chrDisplayBox.ReadOnly = true;
@@ -525,7 +530,7 @@
             // wisModLabel
             // 
             this.wisModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisModLabel.Location = new System.Drawing.Point(8, 313);
+            this.wisModLabel.Location = new System.Drawing.Point(8, 293);
             this.wisModLabel.Multiline = true;
             this.wisModLabel.Name = "wisModLabel";
             this.wisModLabel.ReadOnly = true;
@@ -538,7 +543,7 @@
             // wisSaveButton
             // 
             this.wisSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisSaveButton.Location = new System.Drawing.Point(123, 315);
+            this.wisSaveButton.Location = new System.Drawing.Point(123, 295);
             this.wisSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.wisSaveButton.Name = "wisSaveButton";
             this.wisSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -550,7 +555,7 @@
             // wisProfBox
             // 
             this.wisProfBox.AutoSize = true;
-            this.wisProfBox.Location = new System.Drawing.Point(124, 293);
+            this.wisProfBox.Location = new System.Drawing.Point(124, 273);
             this.wisProfBox.Name = "wisProfBox";
             this.wisProfBox.Size = new System.Drawing.Size(70, 17);
             this.wisProfBox.TabIndex = 34;
@@ -561,7 +566,7 @@
             // wisDecreaseButton
             // 
             this.wisDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisDecreaseButton.Location = new System.Drawing.Point(89, 328);
+            this.wisDecreaseButton.Location = new System.Drawing.Point(89, 308);
             this.wisDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.wisDecreaseButton.Name = "wisDecreaseButton";
             this.wisDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -573,7 +578,7 @@
             // wisAddButton
             // 
             this.wisAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisAddButton.Location = new System.Drawing.Point(89, 305);
+            this.wisAddButton.Location = new System.Drawing.Point(89, 285);
             this.wisAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.wisAddButton.Name = "wisAddButton";
             this.wisAddButton.Size = new System.Drawing.Size(20, 20);
@@ -586,7 +591,7 @@
             // 
             this.wisLabel.AutoSize = true;
             this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisLabel.Location = new System.Drawing.Point(33, 287);
+            this.wisLabel.Location = new System.Drawing.Point(33, 267);
             this.wisLabel.Name = "wisLabel";
             this.wisLabel.Size = new System.Drawing.Size(64, 16);
             this.wisLabel.TabIndex = 31;
@@ -596,7 +601,7 @@
             // wisDisplayBox
             // 
             this.wisDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisDisplayBox.Location = new System.Drawing.Point(43, 305);
+            this.wisDisplayBox.Location = new System.Drawing.Point(43, 285);
             this.wisDisplayBox.Multiline = true;
             this.wisDisplayBox.Name = "wisDisplayBox";
             this.wisDisplayBox.ReadOnly = true;
@@ -609,7 +614,7 @@
             // intModLabel
             // 
             this.intModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intModLabel.Location = new System.Drawing.Point(8, 246);
+            this.intModLabel.Location = new System.Drawing.Point(8, 231);
             this.intModLabel.Multiline = true;
             this.intModLabel.Name = "intModLabel";
             this.intModLabel.ReadOnly = true;
@@ -622,7 +627,7 @@
             // intSaveButton
             // 
             this.intSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intSaveButton.Location = new System.Drawing.Point(123, 248);
+            this.intSaveButton.Location = new System.Drawing.Point(123, 233);
             this.intSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.intSaveButton.Name = "intSaveButton";
             this.intSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -634,7 +639,7 @@
             // intProfBox
             // 
             this.intProfBox.AutoSize = true;
-            this.intProfBox.Location = new System.Drawing.Point(124, 226);
+            this.intProfBox.Location = new System.Drawing.Point(124, 210);
             this.intProfBox.Name = "intProfBox";
             this.intProfBox.Size = new System.Drawing.Size(70, 17);
             this.intProfBox.TabIndex = 27;
@@ -645,7 +650,7 @@
             // intDecreaseButton
             // 
             this.intDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intDecreaseButton.Location = new System.Drawing.Point(89, 261);
+            this.intDecreaseButton.Location = new System.Drawing.Point(89, 246);
             this.intDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.intDecreaseButton.Name = "intDecreaseButton";
             this.intDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -657,7 +662,7 @@
             // intAddButton
             // 
             this.intAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intAddButton.Location = new System.Drawing.Point(89, 238);
+            this.intAddButton.Location = new System.Drawing.Point(89, 223);
             this.intAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.intAddButton.Name = "intAddButton";
             this.intAddButton.Size = new System.Drawing.Size(20, 20);
@@ -670,7 +675,7 @@
             // 
             this.intLabel.AutoSize = true;
             this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intLabel.Location = new System.Drawing.Point(26, 220);
+            this.intLabel.Location = new System.Drawing.Point(26, 204);
             this.intLabel.Name = "intLabel";
             this.intLabel.Size = new System.Drawing.Size(88, 16);
             this.intLabel.TabIndex = 24;
@@ -680,7 +685,7 @@
             // intDisplayBox
             // 
             this.intDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intDisplayBox.Location = new System.Drawing.Point(43, 238);
+            this.intDisplayBox.Location = new System.Drawing.Point(43, 223);
             this.intDisplayBox.Multiline = true;
             this.intDisplayBox.Name = "intDisplayBox";
             this.intDisplayBox.ReadOnly = true;
@@ -693,7 +698,7 @@
             // conModLabel
             // 
             this.conModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conModLabel.Location = new System.Drawing.Point(8, 182);
+            this.conModLabel.Location = new System.Drawing.Point(8, 168);
             this.conModLabel.Multiline = true;
             this.conModLabel.Name = "conModLabel";
             this.conModLabel.ReadOnly = true;
@@ -706,7 +711,7 @@
             // conSaveButton
             // 
             this.conSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conSaveButton.Location = new System.Drawing.Point(123, 184);
+            this.conSaveButton.Location = new System.Drawing.Point(123, 170);
             this.conSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.conSaveButton.Name = "conSaveButton";
             this.conSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -718,7 +723,7 @@
             // conProfBox
             // 
             this.conProfBox.AutoSize = true;
-            this.conProfBox.Location = new System.Drawing.Point(124, 162);
+            this.conProfBox.Location = new System.Drawing.Point(124, 148);
             this.conProfBox.Name = "conProfBox";
             this.conProfBox.Size = new System.Drawing.Size(70, 17);
             this.conProfBox.TabIndex = 20;
@@ -729,7 +734,7 @@
             // conDecreaseButton
             // 
             this.conDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conDecreaseButton.Location = new System.Drawing.Point(89, 197);
+            this.conDecreaseButton.Location = new System.Drawing.Point(89, 183);
             this.conDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.conDecreaseButton.Name = "conDecreaseButton";
             this.conDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -741,7 +746,7 @@
             // conAddButton
             // 
             this.conAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conAddButton.Location = new System.Drawing.Point(89, 174);
+            this.conAddButton.Location = new System.Drawing.Point(89, 160);
             this.conAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.conAddButton.Name = "conAddButton";
             this.conAddButton.Size = new System.Drawing.Size(20, 20);
@@ -754,7 +759,7 @@
             // 
             this.conLabel.AutoSize = true;
             this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conLabel.Location = new System.Drawing.Point(25, 156);
+            this.conLabel.Location = new System.Drawing.Point(25, 142);
             this.conLabel.Name = "conLabel";
             this.conLabel.Size = new System.Drawing.Size(88, 16);
             this.conLabel.TabIndex = 17;
@@ -764,7 +769,7 @@
             // conDisplayBox
             // 
             this.conDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conDisplayBox.Location = new System.Drawing.Point(43, 174);
+            this.conDisplayBox.Location = new System.Drawing.Point(43, 160);
             this.conDisplayBox.Multiline = true;
             this.conDisplayBox.Name = "conDisplayBox";
             this.conDisplayBox.ReadOnly = true;
@@ -777,7 +782,7 @@
             // dexModLabel
             // 
             this.dexModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexModLabel.Location = new System.Drawing.Point(10, 117);
+            this.dexModLabel.Location = new System.Drawing.Point(10, 106);
             this.dexModLabel.Multiline = true;
             this.dexModLabel.Name = "dexModLabel";
             this.dexModLabel.ReadOnly = true;
@@ -790,7 +795,7 @@
             // dexSaveButton
             // 
             this.dexSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexSaveButton.Location = new System.Drawing.Point(125, 119);
+            this.dexSaveButton.Location = new System.Drawing.Point(125, 108);
             this.dexSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.dexSaveButton.Name = "dexSaveButton";
             this.dexSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -802,7 +807,7 @@
             // dexProfBox
             // 
             this.dexProfBox.AutoSize = true;
-            this.dexProfBox.Location = new System.Drawing.Point(126, 97);
+            this.dexProfBox.Location = new System.Drawing.Point(126, 86);
             this.dexProfBox.Name = "dexProfBox";
             this.dexProfBox.Size = new System.Drawing.Size(70, 17);
             this.dexProfBox.TabIndex = 13;
@@ -813,7 +818,7 @@
             // dexDecreaseButton
             // 
             this.dexDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexDecreaseButton.Location = new System.Drawing.Point(91, 132);
+            this.dexDecreaseButton.Location = new System.Drawing.Point(91, 121);
             this.dexDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.dexDecreaseButton.Name = "dexDecreaseButton";
             this.dexDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -825,7 +830,7 @@
             // dexAddButton
             // 
             this.dexAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexAddButton.Location = new System.Drawing.Point(91, 109);
+            this.dexAddButton.Location = new System.Drawing.Point(91, 98);
             this.dexAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.dexAddButton.Name = "dexAddButton";
             this.dexAddButton.Size = new System.Drawing.Size(20, 20);
@@ -838,7 +843,7 @@
             // 
             this.dexLabel.AutoSize = true;
             this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexLabel.Location = new System.Drawing.Point(32, 91);
+            this.dexLabel.Location = new System.Drawing.Point(32, 80);
             this.dexLabel.Name = "dexLabel";
             this.dexLabel.Size = new System.Drawing.Size(69, 16);
             this.dexLabel.TabIndex = 10;
@@ -848,7 +853,7 @@
             // dexDisplayBox
             // 
             this.dexDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexDisplayBox.Location = new System.Drawing.Point(45, 109);
+            this.dexDisplayBox.Location = new System.Drawing.Point(45, 98);
             this.dexDisplayBox.Multiline = true;
             this.dexDisplayBox.Name = "dexDisplayBox";
             this.dexDisplayBox.ReadOnly = true;
@@ -862,7 +867,7 @@
             // 
             this.saveThrowLabels.AutoSize = true;
             this.saveThrowLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveThrowLabels.Location = new System.Drawing.Point(10, 7);
+            this.saveThrowLabels.Location = new System.Drawing.Point(59, 1);
             this.saveThrowLabels.Name = "saveThrowLabels";
             this.saveThrowLabels.Size = new System.Drawing.Size(88, 20);
             this.saveThrowLabels.TabIndex = 3;
@@ -872,18 +877,19 @@
             // 
             this.saveAdvantage.AutoSize = true;
             this.saveAdvantage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.saveAdvantage.Location = new System.Drawing.Point(110, 9);
+            this.saveAdvantage.Location = new System.Drawing.Point(177, 5);
             this.saveAdvantage.Name = "saveAdvantage";
             this.saveAdvantage.Size = new System.Drawing.Size(70, 17);
             this.saveAdvantage.TabIndex = 3;
             this.saveAdvantage.Text = "Two Rolls";
             this.saveAdvantage.UseVisualStyleBackColor = true;
+            this.saveAdvantage.Visible = false;
             this.saveAdvantage.CheckedChanged += new System.EventHandler(this.saveAdvantage_CheckedChanged);
             // 
             // strModLabel
             // 
             this.strModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strModLabel.Location = new System.Drawing.Point(9, 54);
+            this.strModLabel.Location = new System.Drawing.Point(9, 45);
             this.strModLabel.Multiline = true;
             this.strModLabel.Name = "strModLabel";
             this.strModLabel.ReadOnly = true;
@@ -896,7 +902,7 @@
             // strSaveButton
             // 
             this.strSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strSaveButton.Location = new System.Drawing.Point(124, 56);
+            this.strSaveButton.Location = new System.Drawing.Point(124, 47);
             this.strSaveButton.Margin = new System.Windows.Forms.Padding(0);
             this.strSaveButton.Name = "strSaveButton";
             this.strSaveButton.Size = new System.Drawing.Size(51, 33);
@@ -908,7 +914,7 @@
             // strProfBox
             // 
             this.strProfBox.AutoSize = true;
-            this.strProfBox.Location = new System.Drawing.Point(125, 34);
+            this.strProfBox.Location = new System.Drawing.Point(125, 25);
             this.strProfBox.Name = "strProfBox";
             this.strProfBox.Size = new System.Drawing.Size(70, 17);
             this.strProfBox.TabIndex = 6;
@@ -919,7 +925,7 @@
             // strDecreaseButton
             // 
             this.strDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strDecreaseButton.Location = new System.Drawing.Point(90, 69);
+            this.strDecreaseButton.Location = new System.Drawing.Point(90, 60);
             this.strDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
             this.strDecreaseButton.Name = "strDecreaseButton";
             this.strDecreaseButton.Size = new System.Drawing.Size(20, 20);
@@ -931,7 +937,7 @@
             // strAddButton
             // 
             this.strAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strAddButton.Location = new System.Drawing.Point(90, 46);
+            this.strAddButton.Location = new System.Drawing.Point(90, 37);
             this.strAddButton.Margin = new System.Windows.Forms.Padding(0);
             this.strAddButton.Name = "strAddButton";
             this.strAddButton.Size = new System.Drawing.Size(20, 20);
@@ -944,7 +950,7 @@
             // 
             this.strLabel.AutoSize = true;
             this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strLabel.Location = new System.Drawing.Point(33, 28);
+            this.strLabel.Location = new System.Drawing.Point(33, 19);
             this.strLabel.Name = "strLabel";
             this.strLabel.Size = new System.Drawing.Size(65, 16);
             this.strLabel.TabIndex = 3;
@@ -954,7 +960,7 @@
             // strDisplayBox
             // 
             this.strDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strDisplayBox.Location = new System.Drawing.Point(44, 46);
+            this.strDisplayBox.Location = new System.Drawing.Point(44, 37);
             this.strDisplayBox.Multiline = true;
             this.strDisplayBox.Name = "strDisplayBox";
             this.strDisplayBox.ReadOnly = true;
@@ -1971,20 +1977,19 @@
             this.profBonusLabel.BackColor = System.Drawing.SystemColors.Control;
             this.profBonusLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profBonusLabel.Location = new System.Drawing.Point(215, 24);
+            this.profBonusLabel.Location = new System.Drawing.Point(55, 2);
             this.profBonusLabel.Multiline = true;
             this.profBonusLabel.Name = "profBonusLabel";
             this.profBonusLabel.Size = new System.Drawing.Size(73, 29);
             this.profBonusLabel.TabIndex = 101;
             this.profBonusLabel.Text = "Proficiency\r\nBonus";
-            this.profBonusLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // profBonusBox
             // 
-            this.profBonusBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.profBonusBox.Location = new System.Drawing.Point(290, 27);
+            this.profBonusBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.profBonusBox.Location = new System.Drawing.Point(95, 18);
             this.profBonusBox.Name = "profBonusBox";
-            this.profBonusBox.Size = new System.Drawing.Size(32, 23);
+            this.profBonusBox.Size = new System.Drawing.Size(36, 24);
             this.profBonusBox.TabIndex = 118;
             this.profBonusBox.Value = new decimal(new int[] {
             2,
@@ -2102,33 +2107,37 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.buttonNoPadding1);
+            this.panel5.Controls.Add(this.buttonNoPadding2);
             this.panel5.Controls.Add(this.newCharButton);
             this.panel5.Controls.Add(this.loadButton);
             this.panel5.Controls.Add(this.SaveAsButton);
             this.panel5.Controls.Add(this.saveButton);
-            this.panel5.Location = new System.Drawing.Point(416, 5);
+            this.panel5.Location = new System.Drawing.Point(361, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(61, 74);
+            this.panel5.Size = new System.Drawing.Size(117, 74);
             this.panel5.TabIndex = 157;
             // 
             // SpeedTextBox
             // 
-            this.SpeedTextBox.Location = new System.Drawing.Point(290, 4);
+            this.SpeedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.SpeedTextBox.Location = new System.Drawing.Point(12, 19);
             this.SpeedTextBox.Name = "SpeedTextBox";
-            this.SpeedTextBox.Size = new System.Drawing.Size(21, 20);
+            this.SpeedTextBox.Size = new System.Drawing.Size(27, 23);
             this.SpeedTextBox.TabIndex = 154;
             this.SpeedTextBox.Text = "30";
+            this.SpeedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SpeedTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
             // textBox17
             // 
             this.textBox17.BackColor = System.Drawing.SystemColors.Control;
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(240, 6);
+            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.textBox17.Location = new System.Drawing.Point(3, 2);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(62, 19);
+            this.textBox17.Size = new System.Drawing.Size(44, 19);
             this.textBox17.TabIndex = 153;
             this.textBox17.Text = "Speed";
             // 
@@ -2137,10 +2146,10 @@
             this.textBox18.BackColor = System.Drawing.SystemColors.Control;
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(219, 52);
+            this.textBox18.Location = new System.Drawing.Point(9, 44);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(70, 14);
+            this.textBox18.Size = new System.Drawing.Size(60, 14);
             this.textBox18.TabIndex = 158;
             this.textBox18.Text = "Race";
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -2150,7 +2159,7 @@
             this.textBox19.BackColor = System.Drawing.SystemColors.Control;
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(214, 66);
+            this.textBox19.Location = new System.Drawing.Point(-6, 58);
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(75, 18);
@@ -2163,7 +2172,7 @@
             this.textBox20.BackColor = System.Drawing.SystemColors.Control;
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(215, 81);
+            this.textBox20.Location = new System.Drawing.Point(-5, 73);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(75, 18);
@@ -2176,7 +2185,7 @@
             this.raceTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.raceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.raceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.raceTextBox.Location = new System.Drawing.Point(293, 50);
+            this.raceTextBox.Location = new System.Drawing.Point(72, 42);
             this.raceTextBox.Name = "raceTextBox";
             this.raceTextBox.Size = new System.Drawing.Size(116, 14);
             this.raceTextBox.TabIndex = 109;
@@ -2188,7 +2197,7 @@
             this.backgroundtextBox.BackColor = System.Drawing.SystemColors.Control;
             this.backgroundtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.backgroundtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.backgroundtextBox.Location = new System.Drawing.Point(293, 64);
+            this.backgroundtextBox.Location = new System.Drawing.Point(72, 56);
             this.backgroundtextBox.Name = "backgroundtextBox";
             this.backgroundtextBox.Size = new System.Drawing.Size(116, 14);
             this.backgroundtextBox.TabIndex = 161;
@@ -2200,7 +2209,7 @@
             this.AlignmenttextBox.BackColor = System.Drawing.SystemColors.Control;
             this.AlignmenttextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AlignmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.AlignmenttextBox.Location = new System.Drawing.Point(293, 79);
+            this.AlignmenttextBox.Location = new System.Drawing.Point(72, 71);
             this.AlignmenttextBox.Name = "AlignmenttextBox";
             this.AlignmenttextBox.Size = new System.Drawing.Size(117, 14);
             this.AlignmenttextBox.TabIndex = 162;
@@ -2262,6 +2271,7 @@
             // 
             this.spellTypeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.spellTypeDropdown.DropDownWidth = 130;
+            this.spellTypeDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.spellTypeDropdown.FormattingEnabled = true;
             this.spellTypeDropdown.Items.AddRange(new object[] {
             "None",
@@ -2276,9 +2286,9 @@
             "Sorcerer",
             "Warlock",
             "Wizard"});
-            this.spellTypeDropdown.Location = new System.Drawing.Point(328, 27);
+            this.spellTypeDropdown.Location = new System.Drawing.Point(114, 53);
             this.spellTypeDropdown.Name = "spellTypeDropdown";
-            this.spellTypeDropdown.Size = new System.Drawing.Size(81, 21);
+            this.spellTypeDropdown.Size = new System.Drawing.Size(98, 21);
             this.spellTypeDropdown.TabIndex = 175;
             this.spellTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.ChangeSpellType);
             // 
@@ -2287,7 +2297,7 @@
             this.textBox12.BackColor = System.Drawing.SystemColors.Control;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.textBox12.Location = new System.Drawing.Point(329, 7);
+            this.textBox12.Location = new System.Drawing.Point(125, 36);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(83, 19);
@@ -2311,10 +2321,10 @@
             this.levelTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.levelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.levelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelTextBox.Location = new System.Drawing.Point(10, 23);
+            this.levelTextBox.Location = new System.Drawing.Point(10, 24);
             this.levelTextBox.Multiline = true;
             this.levelTextBox.Name = "levelTextBox";
-            this.levelTextBox.Size = new System.Drawing.Size(202, 20);
+            this.levelTextBox.Size = new System.Drawing.Size(202, 17);
             this.levelTextBox.TabIndex = 167;
             this.levelTextBox.Text = "Level / Class";
             this.levelTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
@@ -3942,9 +3952,9 @@
             // 
             // newCharButton
             // 
-            this.newCharButton.Location = new System.Drawing.Point(1, 54);
+            this.newCharButton.Location = new System.Drawing.Point(58, 49);
             this.newCharButton.Name = "newCharButton";
-            this.newCharButton.Size = new System.Drawing.Size(57, 17);
+            this.newCharButton.Size = new System.Drawing.Size(54, 20);
             this.newCharButton.TabIndex = 167;
             this.newCharButton.Text = "New";
             this.newCharButton.UseVisualStyleBackColor = true;
@@ -3952,9 +3962,9 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(1, 37);
+            this.loadButton.Location = new System.Drawing.Point(3, 49);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(57, 17);
+            this.loadButton.Size = new System.Drawing.Size(54, 20);
             this.loadButton.TabIndex = 166;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -3962,9 +3972,9 @@
             // 
             // SaveAsButton
             // 
-            this.SaveAsButton.Location = new System.Drawing.Point(1, 20);
+            this.SaveAsButton.Location = new System.Drawing.Point(3, 26);
             this.SaveAsButton.Name = "SaveAsButton";
-            this.SaveAsButton.Size = new System.Drawing.Size(57, 17);
+            this.SaveAsButton.Size = new System.Drawing.Size(54, 21);
             this.SaveAsButton.TabIndex = 165;
             this.SaveAsButton.Text = "Save As";
             this.SaveAsButton.UseVisualStyleBackColor = true;
@@ -3972,9 +3982,9 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(1, 1);
+            this.saveButton.Location = new System.Drawing.Point(3, 3);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(57, 19);
+            this.saveButton.Size = new System.Drawing.Size(54, 22);
             this.saveButton.TabIndex = 164;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -4283,18 +4293,65 @@
             this.propertiesButtonDisplay.UseVisualStyleBackColor = false;
             this.propertiesButtonDisplay.Click += new System.EventHandler(this.SwitchWeaponDisplay);
             // 
+            // buttonNoPadding1
+            // 
+            this.buttonNoPadding1.Location = new System.Drawing.Point(58, 26);
+            this.buttonNoPadding1.Name = "buttonNoPadding1";
+            this.buttonNoPadding1.Size = new System.Drawing.Size(54, 21);
+            this.buttonNoPadding1.TabIndex = 169;
+            this.buttonNoPadding1.Text = "Export";
+            this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding2
+            // 
+            this.buttonNoPadding2.Location = new System.Drawing.Point(58, 3);
+            this.buttonNoPadding2.Name = "buttonNoPadding2";
+            this.buttonNoPadding2.Size = new System.Drawing.Size(54, 21);
+            this.buttonNoPadding2.TabIndex = 168;
+            this.buttonNoPadding2.Text = "Import";
+            this.buttonNoPadding2.UseVisualStyleBackColor = true;
+            // 
+            // BackgroundInfobutton
+            // 
+            this.BackgroundInfobutton.Location = new System.Drawing.Point(10, 52);
+            this.BackgroundInfobutton.Name = "BackgroundInfobutton";
+            this.BackgroundInfobutton.Size = new System.Drawing.Size(101, 23);
+            this.BackgroundInfobutton.TabIndex = 170;
+            this.BackgroundInfobutton.Text = "Character Info";
+            this.BackgroundInfobutton.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.profBonusBox);
+            this.panel11.Controls.Add(this.textBox19);
+            this.panel11.Controls.Add(this.textBox20);
+            this.panel11.Controls.Add(this.textBox18);
+            this.panel11.Controls.Add(this.raceTextBox);
+            this.panel11.Controls.Add(this.backgroundtextBox);
+            this.panel11.Controls.Add(this.AlignmenttextBox);
+            this.panel11.Controls.Add(this.SpeedTextBox);
+            this.panel11.Controls.Add(this.textBox17);
+            this.panel11.Controls.Add(this.profBonusLabel);
+            this.panel11.Location = new System.Drawing.Point(218, 5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(140, 90);
+            this.panel11.TabIndex = 156;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 598);
+            this.Controls.Add(this.spellTypeDropdown);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.BackgroundInfobutton);
             this.Controls.Add(this.miscRollDropDown);
             this.Controls.Add(this.MiscRollflatnumericUpDown);
             this.Controls.Add(this.miscRollbutton);
             this.Controls.Add(this.miscRollNumnumericUpDown);
             this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.spellTypeDropdown);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.spelllabel);
@@ -4304,16 +4361,10 @@
             this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.featsPanel);
-            this.Controls.Add(this.AlignmenttextBox);
-            this.Controls.Add(this.backgroundtextBox);
-            this.Controls.Add(this.raceTextBox);
-            this.Controls.Add(this.SpeedTextBox);
-            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.HitDiceHeader);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.profBonusBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InventoryTextBox);
             this.Controls.Add(this.Weapon1);
@@ -4322,10 +4373,6 @@
             this.Controls.Add(this.statPanel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputTextBox);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.profBonusLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -4382,6 +4429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4694,6 +4743,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown MiscRollflatnumericUpDown;
         private System.Windows.Forms.ComboBox miscRollDropDown;
+        private CustomButtons.ButtonNoPadding buttonNoPadding1;
+        private CustomButtons.ButtonNoPadding buttonNoPadding2;
+        private CustomButtons.ButtonNoPadding BackgroundInfobutton;
+        private System.Windows.Forms.Panel panel11;
     }
 }
 

@@ -49,6 +49,7 @@
             this.characterListBox.ScrollAlwaysVisible = true;
             this.characterListBox.Size = new System.Drawing.Size(321, 184);
             this.characterListBox.TabIndex = 1;
+            this.characterListBox.SelectedIndexChanged += new System.EventHandler(this.characterListBox_SelectedIndexChanged);
             // 
             // SubmitButton
             // 
@@ -91,9 +92,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(339, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 15);
+            this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Level / Class";
+            this.label2.Text = "Description";
             // 
             // deletebutton
             // 
@@ -114,6 +115,7 @@
             this.Exportbutton.TabIndex = 9;
             this.Exportbutton.Text = "Export";
             this.Exportbutton.UseVisualStyleBackColor = true;
+            this.Exportbutton.Click += new System.EventHandler(this.Exportbutton_Click);
             // 
             // importbutton
             // 
@@ -124,6 +126,7 @@
             this.importbutton.TabIndex = 8;
             this.importbutton.Text = "Import";
             this.importbutton.UseVisualStyleBackColor = true;
+            this.importbutton.Click += new System.EventHandler(this.importbutton_Click);
             // 
             // LoadCharMenu
             // 

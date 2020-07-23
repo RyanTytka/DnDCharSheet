@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             else
             {
                 SubmitButton.Text = "Load";
+                SubmitButton.Enabled = false;
             }
 
             loadCharData();
@@ -67,8 +68,10 @@ namespace WindowsFormsApp1
             int numChars = reader.ReadInt32();
             for (int i = 0; i < numChars; i++)
             {
-                chars.Add(reader.ReadString());
-                characterListBox.Items.Add(chars[i]);
+                string name = reader.ReadString();
+                chars.Add(name);
+                if (File.Exists(directory + "\\" + name))
+                    characterListBox.Items.Add(chars[i]);
             }
             reader.Close();
 
@@ -92,13 +95,55 @@ namespace WindowsFormsApp1
         {
             if (SubmitButton.Text == "Save")
             {
-                chars.Add(nametextBox.Text + " - " + descriptiontextBox.Text);
-                ((Form1)Owner).saveFile(directory + "\\" + nametextBox.Text + " - " + descriptiontextBox.Text);
+                if (!chars.Contains(nametextBox.Text + "   -   " + descriptiontextBox.Text))
+                    chars.Add(nametextBox.Text + "   -   " + descriptiontextBox.Text);
+                ((Form1)Owner).saveFile(directory + "\\" + nametextBox.Text + "   -   " + descriptiontextBox.Text);
                 saveCharData();
             }
             else
+            {
                 ((Form1)Owner).loadFile(directory + "\\" + chars[characterListBox.SelectedIndex]);
+            }
             this.Close();
+        }
+
+        // sets save info to selected item
+        private void characterListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SubmitButton.Enabled = true;
+
+            string fullStr = characterListBox.SelectedItem.ToString();
+            nametextBox.Text =  fullStr.Substring(0, fullStr.IndexOf("   -   "));
+            descriptiontextBox.Text =  fullStr.Substring(fullStr.IndexOf("   -   ") + 7);
+        }
+
+        // save char from text file
+        private void importbutton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog importFileDialog = new OpenFileDialog();
+            importFileDialog.Title = "Import a Character";
+            importFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = importFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string fileName = importFileDialog.FileName;
+                ((Form1)Owner).loadFile(fileName);
+                this.Close();
+            }
+        }
+
+        private void Exportbutton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog exportFileDialog = new SaveFileDialog();
+            exportFileDialog.Title = "Export a Character";
+            exportFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = exportFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string fileName = exportFileDialog.FileName;
+                ((Form1)Owner).saveFile(fileName);
+                this.Close();
+            }
         }
     }
 }
