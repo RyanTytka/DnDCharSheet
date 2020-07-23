@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadCharMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadCharMenu.Designer.cs">
+      <DependentUpon>LoadCharMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Feat.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creation Forms\FeatCreation.resx">
       <DependentUpon>FeatCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadCharMenu.resx">
+      <DependentUpon>LoadCharMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoPaddingButton.resx">
       <DependentUpon>NoPaddingButton.cs</DependentUpon>

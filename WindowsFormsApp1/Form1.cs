@@ -1434,7 +1434,8 @@ namespace WindowsFormsApp1
 
         private void SaveAsButtonClick(object sender, EventArgs e)
         {
-            saveFile();
+            LoadCharMenu menu = new LoadCharMenu(1);
+            menu.ShowDialog(this);
             saveButton.Enabled = true;
         }
 
@@ -1445,18 +1446,24 @@ namespace WindowsFormsApp1
 
         private void loadButton_Click(object sender, EventArgs e)
         {
+            LoadCharMenu menu = new LoadCharMenu(2);
+            menu.ShowDialog(this);
+            //saveButton.Enabled = true;
+            //SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
+
+
             //load file and open editor
-            OpenFileDialog loadFileDialog = new OpenFileDialog();
-            loadFileDialog.Title = "Load a Character";
-            loadFileDialog.Filter = "Player Character| *.pc";
-            DialogResult result = loadFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
+            //OpenFileDialog loadFileDialog = new OpenFileDialog();
+            //loadFileDialog.Title = "Load a Character";
+            //loadFileDialog.Filter = "Player Character| *.pc";
+            //DialogResult result = loadFileDialog.ShowDialog();
+            //if (result == DialogResult.OK)
             {
                 //place info in
-                fileName = loadFileDialog.FileName;
-                loadFile(fileName);
-                saveButton.Enabled = true;
-                SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
+                //fileName = loadFileDialog.FileName;
+                //loadFile(fileName);
+                //saveButton.Enabled = true;
+                //SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
             }
         }
 
@@ -1468,29 +1475,11 @@ namespace WindowsFormsApp1
             saveButton.Enabled = false;
         }
 
-        private void saveFile(string filePath = "")
+        public void saveFile(string filePath = "")
         {
-            string saveFilePath = "";
-            DialogResult result = DialogResult.None;
-            SaveFileDialog saveFile = null;
-            if (filePath == "")
+            string saveFilePath;
             {
-                saveFile = new SaveFileDialog();
-                saveFile.Title = "Save a Character";
-                saveFile.Filter = "Player Character| *.pc";
-                result = saveFile.ShowDialog();
-            }
-            if ((result == DialogResult.OK && saveFile.FileName != null) || filePath != "")
-            {
-                if (filePath == "")
-                {
-                    saveFilePath = saveFile.FileNames[0];
-                    fileName = saveFilePath;
-                }
-                else
-                {
-                    saveFilePath = filePath;
-                }
+                saveFilePath = filePath;
                 Stream outStream = File.OpenWrite(saveFilePath);
                 BinaryWriter output = new BinaryWriter(outStream);
                 //save data into file
@@ -1688,7 +1677,7 @@ namespace WindowsFormsApp1
 
 
 
-        private void loadFile(string filePath)
+        public void loadFile(string filePath)
         {
             //reset form first
             NewCharacter();
