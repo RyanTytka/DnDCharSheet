@@ -137,6 +137,10 @@ namespace WindowsFormsApp1
             miscRollDropDown.SelectedIndex = 0;
 
             charInfo = new string[7];
+            for(int i = 0; i < charInfo.Length; i++)
+            {
+                charInfo[i] = "";
+            }
         }
 
 
@@ -2084,6 +2088,10 @@ namespace WindowsFormsApp1
             //char info
             portrait = null;
             charInfo = new string[7];
+            for (int i = 0; i < charInfo.Length; i++)
+            {
+                charInfo[i] = "";
+            }
         }
 
         //make sure user has saved before exiting

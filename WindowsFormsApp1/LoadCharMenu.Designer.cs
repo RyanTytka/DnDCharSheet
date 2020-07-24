@@ -106,6 +106,7 @@
             this.deletebutton.TabIndex = 7;
             this.deletebutton.Text = "Delete";
             this.deletebutton.UseVisualStyleBackColor = true;
+            this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
             // 
             // Exportbutton
             // 
@@ -144,6 +145,7 @@
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.characterListBox);
             this.Name = "LoadCharMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoadCharMenu";
             this.Load += new System.EventHandler(this.LoadCharMenu_Load);
             this.ResumeLayout(false);

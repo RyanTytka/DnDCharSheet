@@ -155,5 +155,30 @@ namespace WindowsFormsApp1
             if(characterListBox.SelectedIndex >= 0)
                 SubmitButton_Click(SubmitButton, new EventArgs());
         }
+
+        // delete selected char from memory
+        private void deletebutton_Click(object sender, EventArgs e)
+        {
+            if (characterListBox.SelectedIndex < 0)
+                return;
+
+            //confirmation
+            string message = $"You are about to delete {characterListBox.SelectedItem.ToString()}.  Are you sure?";
+            DialogResult result = MessageBox.Show(message, "Delete Character", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes)
+                return;
+
+            //delete
+            File.Delete(directory + "\\" + characterListBox.SelectedItem.ToString());
+            chars.Remove(characterListBox.SelectedItem.ToString());
+            characterListBox.Items.Remove(characterListBox.SelectedItem);
+            saveCharData();
+                nametextBox.Text = "";
+                descriptiontextBox.Text = "";
+            if (saveOrLoad == 2)
+            {
+                SubmitButton.Enabled = false;
+            }
+        }
     }
 }
