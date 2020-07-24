@@ -286,6 +286,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.MiscRollflatnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.miscRollDropDown = new System.Windows.Forms.ComboBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.setMoneyButton = new CustomButtons.ButtonNoPadding();
             this.minusMoneyButton = new CustomButtons.ButtonNoPadding();
@@ -304,6 +306,8 @@
             this.forgetSpellButton = new CustomButtons.ButtonNoPadding();
             this.browseSpellsButton = new CustomButtons.ButtonNoPadding();
             this.refillSpellSlotsButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
             this.newCharButton = new CustomButtons.ButtonNoPadding();
             this.loadButton = new CustomButtons.ButtonNoPadding();
             this.SaveAsButton = new CustomButtons.ButtonNoPadding();
@@ -333,10 +337,7 @@
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.bonusButtonDisplay = new CustomButtons.ButtonNoPadding();
             this.propertiesButtonDisplay = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
-            this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -2297,7 +2298,7 @@
             this.textBox12.BackColor = System.Drawing.SystemColors.Control;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.textBox12.Location = new System.Drawing.Point(125, 36);
+            this.textBox12.Location = new System.Drawing.Point(123, 37);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(83, 19);
@@ -3737,6 +3738,34 @@
             this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
             this.miscRollDropDown.TabIndex = 193;
             // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.profBonusBox);
+            this.panel11.Controls.Add(this.textBox19);
+            this.panel11.Controls.Add(this.textBox20);
+            this.panel11.Controls.Add(this.textBox18);
+            this.panel11.Controls.Add(this.raceTextBox);
+            this.panel11.Controls.Add(this.backgroundtextBox);
+            this.panel11.Controls.Add(this.AlignmenttextBox);
+            this.panel11.Controls.Add(this.SpeedTextBox);
+            this.panel11.Controls.Add(this.textBox17);
+            this.panel11.Controls.Add(this.profBonusLabel);
+            this.panel11.Location = new System.Drawing.Point(218, 5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(140, 90);
+            this.panel11.TabIndex = 156;
+            // 
+            // BackgroundInfobutton
+            // 
+            this.BackgroundInfobutton.Location = new System.Drawing.Point(10, 52);
+            this.BackgroundInfobutton.Name = "BackgroundInfobutton";
+            this.BackgroundInfobutton.Size = new System.Drawing.Size(101, 23);
+            this.BackgroundInfobutton.TabIndex = 170;
+            this.BackgroundInfobutton.Text = "Character Info";
+            this.BackgroundInfobutton.UseVisualStyleBackColor = true;
+            this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
+            // 
             // miscRollbutton
             // 
             this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -3949,6 +3978,24 @@
             this.refillSpellSlotsButton.Text = "Refill All Slots";
             this.refillSpellSlotsButton.UseVisualStyleBackColor = true;
             this.refillSpellSlotsButton.Click += new System.EventHandler(this.RefillSpellSlots);
+            // 
+            // buttonNoPadding1
+            // 
+            this.buttonNoPadding1.Location = new System.Drawing.Point(58, 26);
+            this.buttonNoPadding1.Name = "buttonNoPadding1";
+            this.buttonNoPadding1.Size = new System.Drawing.Size(54, 21);
+            this.buttonNoPadding1.TabIndex = 169;
+            this.buttonNoPadding1.Text = "Export";
+            this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            // 
+            // buttonNoPadding2
+            // 
+            this.buttonNoPadding2.Location = new System.Drawing.Point(58, 3);
+            this.buttonNoPadding2.Name = "buttonNoPadding2";
+            this.buttonNoPadding2.Size = new System.Drawing.Size(54, 21);
+            this.buttonNoPadding2.TabIndex = 168;
+            this.buttonNoPadding2.Text = "Import";
+            this.buttonNoPadding2.UseVisualStyleBackColor = true;
             // 
             // newCharButton
             // 
@@ -4293,56 +4340,22 @@
             this.propertiesButtonDisplay.UseVisualStyleBackColor = false;
             this.propertiesButtonDisplay.Click += new System.EventHandler(this.SwitchWeaponDisplay);
             // 
-            // buttonNoPadding1
+            // buttonNoPadding3
             // 
-            this.buttonNoPadding1.Location = new System.Drawing.Point(58, 26);
-            this.buttonNoPadding1.Name = "buttonNoPadding1";
-            this.buttonNoPadding1.Size = new System.Drawing.Size(54, 21);
-            this.buttonNoPadding1.TabIndex = 169;
-            this.buttonNoPadding1.Text = "Export";
-            this.buttonNoPadding1.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding2
-            // 
-            this.buttonNoPadding2.Location = new System.Drawing.Point(58, 3);
-            this.buttonNoPadding2.Name = "buttonNoPadding2";
-            this.buttonNoPadding2.Size = new System.Drawing.Size(54, 21);
-            this.buttonNoPadding2.TabIndex = 168;
-            this.buttonNoPadding2.Text = "Import";
-            this.buttonNoPadding2.UseVisualStyleBackColor = true;
-            // 
-            // BackgroundInfobutton
-            // 
-            this.BackgroundInfobutton.Location = new System.Drawing.Point(10, 52);
-            this.BackgroundInfobutton.Name = "BackgroundInfobutton";
-            this.BackgroundInfobutton.Size = new System.Drawing.Size(101, 23);
-            this.BackgroundInfobutton.TabIndex = 170;
-            this.BackgroundInfobutton.Text = "Character Info";
-            this.BackgroundInfobutton.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.profBonusBox);
-            this.panel11.Controls.Add(this.textBox19);
-            this.panel11.Controls.Add(this.textBox20);
-            this.panel11.Controls.Add(this.textBox18);
-            this.panel11.Controls.Add(this.raceTextBox);
-            this.panel11.Controls.Add(this.backgroundtextBox);
-            this.panel11.Controls.Add(this.AlignmenttextBox);
-            this.panel11.Controls.Add(this.SpeedTextBox);
-            this.panel11.Controls.Add(this.textBox17);
-            this.panel11.Controls.Add(this.profBonusLabel);
-            this.panel11.Location = new System.Drawing.Point(218, 5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(140, 90);
-            this.panel11.TabIndex = 156;
+            this.buttonNoPadding3.Location = new System.Drawing.Point(179, 19);
+            this.buttonNoPadding3.Name = "buttonNoPadding3";
+            this.buttonNoPadding3.Size = new System.Drawing.Size(37, 18);
+            this.buttonNoPadding3.TabIndex = 227;
+            this.buttonNoPadding3.Text = "color";
+            this.buttonNoPadding3.UseVisualStyleBackColor = true;
+            this.buttonNoPadding3.Click += new System.EventHandler(this.buttonNoPadding3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 598);
+            this.Controls.Add(this.buttonNoPadding3);
             this.Controls.Add(this.spellTypeDropdown);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.BackgroundInfobutton);
@@ -4747,6 +4760,7 @@
         private CustomButtons.ButtonNoPadding buttonNoPadding2;
         private CustomButtons.ButtonNoPadding BackgroundInfobutton;
         private System.Windows.Forms.Panel panel11;
+        private CustomButtons.ButtonNoPadding buttonNoPadding3;
     }
 }
 

@@ -110,6 +110,9 @@ namespace WindowsFormsApp1
         // sets save info to selected item
         private void characterListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (characterListBox.SelectedIndex < 0)
+                return;
+
             SubmitButton.Enabled = true;
 
             string fullStr = characterListBox.SelectedItem.ToString();
@@ -144,6 +147,13 @@ namespace WindowsFormsApp1
                 ((Form1)Owner).saveFile(fileName);
                 this.Close();
             }
+        }
+
+        // submit when double clicked
+        private void characterListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(characterListBox.SelectedIndex >= 0)
+                SubmitButton_Click(SubmitButton, new EventArgs());
         }
     }
 }

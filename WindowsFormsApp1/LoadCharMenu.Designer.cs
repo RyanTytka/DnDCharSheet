@@ -50,6 +50,7 @@
             this.characterListBox.Size = new System.Drawing.Size(321, 184);
             this.characterListBox.TabIndex = 1;
             this.characterListBox.SelectedIndexChanged += new System.EventHandler(this.characterListBox_SelectedIndexChanged);
+            this.characterListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.characterListBox_MouseDoubleClick);
             // 
             // SubmitButton
             // 

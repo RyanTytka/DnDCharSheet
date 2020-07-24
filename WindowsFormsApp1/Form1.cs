@@ -56,7 +56,8 @@ namespace WindowsFormsApp1
         string fileName;
         bool saved = true;
 
-
+        public string[] charInfo { get; set; }  // extra character info textboxes
+        public byte[] portrait { get; set; } //image of player to store as byte array
         public List<Spell> Spells { get; private set; }  //spells loaded from the spells.data file
         public List<int> KnownSpells { get; private set; }  //list of spell id's that the player knows
 
@@ -134,6 +135,8 @@ namespace WindowsFormsApp1
             moneyLabels[3] = PlatinumAmountLabel;
 
             miscRollDropDown.SelectedIndex = 0;
+
+            charInfo = new string[7];
         }
 
 
@@ -1665,7 +1668,20 @@ namespace WindowsFormsApp1
                     output.Write((int)spellAtkBonusnumUpDown.Value);
                     output.Write((int)spellsavedcnumupdown.Value);
                 }
-
+                //char info
+                if (portrait == null)
+                {
+                    output.Write(-1);
+                }
+                else
+                {
+                    output.Write(portrait.Length);
+                    output.Write(portrait);
+                }
+                foreach (string s in charInfo)
+                {
+                    output.Write(s);
+                }
 
                 if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
@@ -1919,8 +1935,19 @@ namespace WindowsFormsApp1
                     }
                     //misc bonuses
                     spellAtkBonusnumUpDown.Value = reader.ReadInt32();
-                    spellsavedcnumupdown.Value = reader.ReadInt32();
+                    spellsavedcnumupdown.Value = reader.ReadInt32();                   
                 }
+                //char info
+                int length = reader.ReadInt32();
+                if (length > 0)
+                {
+                    portrait = reader.ReadBytes(length);
+                }
+                for (int i = 0; i < charInfo.Length; i++)
+                {
+                    charInfo[i] = reader.ReadString();
+                }
+
 
                 saved = true;
                 this.Text = nameLabel.Text + " Character sheet";
@@ -2054,6 +2081,9 @@ namespace WindowsFormsApp1
             silverAmountLabel.Text = "0";
             GoldAmountLabel.Text = "0";
             PlatinumAmountLabel.Text = "0";
+            //char info
+            portrait = null;
+            charInfo = new string[7];
         }
 
         //make sure user has saved before exiting
@@ -2109,7 +2139,20 @@ namespace WindowsFormsApp1
 
         #region Misc
 
+        //changes color
+        private void buttonNoPadding3_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if(cd.ShowDialog() == DialogResult.OK)
+                this.BackColor = cd.Color;
+        }
 
+        // open char info window
+        private void BackgroundInfobutton_Click(object sender, EventArgs e)
+        {
+            CharacterInfo charInfo = new CharacterInfo();
+            charInfo.Show(this);
+        }
 
         //set internal prof bonus
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
@@ -2813,7 +2856,6 @@ namespace WindowsFormsApp1
             }
             return null;
         }
-
 
 
         #endregion

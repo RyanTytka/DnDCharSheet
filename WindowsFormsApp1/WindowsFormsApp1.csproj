@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterInfo.Designer.cs">
+      <DependentUpon>CharacterInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadCharMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CharacterInfo.resx">
+      <DependentUpon>CharacterInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Creation Forms\CustomRollForm.resx">
       <DependentUpon>CustomRollForm.cs</DependentUpon>
     </EmbeddedResource>
