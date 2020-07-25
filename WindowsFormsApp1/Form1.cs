@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
         bool[] usedArcanums;        //true if arcanum has been used
         int[] warlockSpellSlots;      //spell slots of a warlock  [current/max]
         Label[] moneyLabels;        //money amount labels for easier modifications
+        string directory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\DnD Data"; //where data is saved to
 
         string fileName;
         bool saved = true;
@@ -2757,7 +2758,20 @@ namespace WindowsFormsApp1
         //inputs spells from text file into a list on load
         private void LoadSpells()
         {
-            Stream inStream = File.OpenRead("spells.data");
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            if (!File.Exists(directory + "\\spellData"))
+            {
+                //create initial spell spellData file
+                Stream outStream = File.OpenWrite(directory + "\\spellData");
+                BinaryWriter output = new BinaryWriter(outStream);
+                output.Write(0);
+                output.Write(0);
+                output.Close();
+            }
+            Stream inStream = File.OpenRead(directory + "\\spellData");
             BinaryReader reader = new BinaryReader(inStream);
             nextSpellId = reader.ReadInt32();
             int numOfSpells = reader.ReadInt32();
@@ -2809,8 +2823,18 @@ namespace WindowsFormsApp1
         //writes all spells in list to text file
         private void SaveSpells()
         {
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if (!File.Exists(directory + "\\spellData"))
+            {
+                File.Create(directory + "\\spellData");
+            }
+
             //open writer
-            string saveFilePath = "spells.data";
+            string saveFilePath = directory + "\\spellData";
             Stream outStream = File.OpenWrite(saveFilePath);
             BinaryWriter output = new BinaryWriter(outStream);
             //write spells
