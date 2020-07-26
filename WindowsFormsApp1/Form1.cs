@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             spellSlotsLabels.Add(lvl8slotslabel);
             spellSlotsLabels.Add(lvl9slotslabel);
             LoadSpells();
-            spellTypeDropdown.Text = "Sorcerer";
+            spellTypeDropdown.Text = "None";
 
             moneyDropDown.Text = "Gold";
             moneyLabels = new Label[4];
@@ -374,6 +374,25 @@ namespace WindowsFormsApp1
         //update each of the text on the prof roll buttons
         private void UpdateProficiencies(object sender, EventArgs e)
         {
+            for (int i = 0; i < ProficienciesChecks.Items.Count; i++)
+            {
+                //update arrays
+                if (ProficienciesChecks.GetItemChecked(i))
+                {
+                    if (profChecksX2.GetItemChecked(i))
+                        proficiencies[i] = 2;
+                    else
+                        proficiencies[i] = 1;
+                }
+                else
+                {
+                    if (profCheckshalf.GetItemChecked(i))
+                        proficiencies[i] = .5;
+                    else
+                        proficiencies[i] = 0;
+                }
+            }
+
             string sign;
 
             if (profBonus * proficiencies[1] + int.Parse(strModLabel.Text) > 0) sign = "+"; else sign = "";
@@ -1458,21 +1477,6 @@ namespace WindowsFormsApp1
             menu.ShowDialog(this);
             //saveButton.Enabled = true;
             //SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
-
-
-            //load file and open editor
-            //OpenFileDialog loadFileDialog = new OpenFileDialog();
-            //loadFileDialog.Title = "Load a Character";
-            //loadFileDialog.Filter = "Player Character| *.pc";
-            //DialogResult result = loadFileDialog.ShowDialog();
-            //if (result == DialogResult.OK)
-            {
-                //place info in
-                //fileName = loadFileDialog.FileName;
-                //loadFile(fileName);
-                //saveButton.Enabled = true;
-                //SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
-            }
         }
 
         //click new button
@@ -1688,11 +1692,12 @@ namespace WindowsFormsApp1
                     output.Write(s);
                 }
 
+                saveButton.Enabled = true;
                 if (!saved)
                     this.Text = this.Text.Substring(0, this.Text.Length - 2);
                 saved = true;
                 output.Close();
-                MessageBox.Show("File saved successfully", "Save loaded");
+                MessageBox.Show("Character saved successfully", "Saved Character");
             }
         }
 
@@ -1953,14 +1958,12 @@ namespace WindowsFormsApp1
                     charInfo[i] = reader.ReadString();
                 }
 
-
+                UpdateProficiencies(null, null); // Update Expertise and half prof
+                saveButton.Enabled = true;
                 saved = true;
                 this.Text = nameLabel.Text + " Character sheet";
                 fileName = filePath;
                 reader.Close();
-
-                UpdateOutput("Character Loaded");
-                UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
             }
         }
 
@@ -2081,6 +2084,10 @@ namespace WindowsFormsApp1
             Arcanum7checkBox.Checked = false;
             Arcanum8checkBox.Checked = false;
             Arcanum9checkBox.Checked = false;
+            castTimelabel.Enabled = false;
+            rangelabel.Enabled = false;
+            durationlabel.Enabled = false;
+            componentlabel.Enabled = false;
             //money
             copperAmountLabel.Text = "0";
             silverAmountLabel.Text = "0";
@@ -2093,6 +2100,8 @@ namespace WindowsFormsApp1
             {
                 charInfo[i] = "";
             }
+
+            saveButton.Enabled = false;
         }
 
         //make sure user has saved before exiting
@@ -2461,9 +2470,8 @@ namespace WindowsFormsApp1
             //return if dont cast spells
             if (classSpellType <= 0)
                 return;
-         
 
-            //get selected level and update label
+            //get selected level and update labels
             currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
             bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
             preparedhelpLabel.Visible = prepared;
@@ -2487,6 +2495,26 @@ namespace WindowsFormsApp1
             spellListPanel.Controls.Clear();
             spellListPanel.Controls.Add(b);
             spellRadioButtons.Clear();
+            //disable/clear buttons.  will be enabled when adding spells
+            castTimelabel.Enabled = false;
+            rangelabel.Enabled = false;
+            durationlabel.Enabled = false;
+            componentlabel.Enabled = false;
+            spellDesLabel.Enabled = false;
+            castTimedisplaylabel.Text = "";
+            rangeDisplaylabel.Text = "";
+            DurationDisplaylabel.Text = "";
+            componentsDisplaylabel.Text = "";
+            spellrolldropdown.Enabled = false;
+            SpellMiscRollButton.Enabled = false;
+            spellAttackButton.Enabled = false;
+            mullabel.Enabled = false;
+            multiplierDicedisplaylabel.Enabled = false;
+            MultipliernumericUpDown.Enabled = false;
+            miscBonuslabel.Enabled = false;
+            otherBonusnumericUpDown.Enabled = false;
+            addModcheckBox.Enabled = false;
+            addModDisplayLabel.Enabled = false;
 
             //display spell list
             int spellsDisplayed = 0;
@@ -2494,6 +2522,12 @@ namespace WindowsFormsApp1
             {
                 if(FindSpellFromID(KnownSpells[i]) != null && FindSpellFromID(KnownSpells[i]).Level == currentSpellLevel)
                 {
+                    //labels
+                    castTimelabel.Enabled = true;
+                    rangelabel.Enabled = true;
+                    durationlabel.Enabled = true;
+                    componentlabel.Enabled = true;
+                    spellDesLabel.Enabled = true;
                     //add new control
                     RadioButton newButton = new RadioButton();
                     newButton.Text = FindSpellFromID(KnownSpells[i]).Name;
@@ -2577,6 +2611,7 @@ namespace WindowsFormsApp1
                 return;
             Spell s = Spells[currentSpell];
             //spell info
+            spellnamelabel.Text = s.Name;
             castTimedisplaylabel.Text = s.CastTime;
             rangeDisplaylabel.Text = s.Range;
             DurationDisplaylabel.Text = s.Duration;
