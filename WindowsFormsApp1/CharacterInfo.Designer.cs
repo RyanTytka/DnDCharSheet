@@ -44,6 +44,8 @@
             this.backstorytextBox = new System.Windows.Forms.TextBox();
             this.portrait = new System.Windows.Forms.PictureBox();
             this.setPicButton = new CustomButtons.ButtonNoPadding();
+            this.misctextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.portrait)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,11 +193,31 @@
             this.setPicButton.UseVisualStyleBackColor = true;
             this.setPicButton.Click += new System.EventHandler(this.setPicButton_Click);
             // 
+            // misctextBox
+            // 
+            this.misctextBox.Location = new System.Drawing.Point(596, 22);
+            this.misctextBox.Multiline = true;
+            this.misctextBox.Name = "misctextBox";
+            this.misctextBox.Size = new System.Drawing.Size(184, 343);
+            this.misctextBox.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(596, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Notes / Misc.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CharacterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 377);
+            this.ClientSize = new System.Drawing.Size(792, 377);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.misctextBox);
             this.Controls.Add(this.setPicButton);
             this.Controls.Add(this.portrait);
             this.Controls.Add(this.label8);
@@ -240,5 +262,7 @@
         private System.Windows.Forms.TextBox backstorytextBox;
         private System.Windows.Forms.PictureBox portrait;
         private CustomButtons.ButtonNoPadding setPicButton;
+        private System.Windows.Forms.TextBox misctextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

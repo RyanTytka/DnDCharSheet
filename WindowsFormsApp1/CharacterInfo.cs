@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
             form1.charInfo[4] = flawstextBox.Text;
             form1.charInfo[5] = backstorytextBox.Text;
             form1.charInfo[6] = alliestextBox.Text;
+            form1.charInfo[7] = misctextBox.Text;
         }
 
         private void CharacterInfo_Load(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace WindowsFormsApp1
             flawstextBox.Text = form1.charInfo[4];
             backstorytextBox.Text = form1.charInfo[5];
             alliestextBox.Text = form1.charInfo[6];
+            misctextBox.Text = form1.charInfo[7];
             ProftextBox.Select(ProftextBox.Text.Length, 0);
         }
     }

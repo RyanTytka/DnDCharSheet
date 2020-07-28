@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
 
             miscRollDropDown.SelectedIndex = 0;
 
-            charInfo = new string[7];
+            charInfo = new string[8];
             for(int i = 0; i < charInfo.Length; i++)
             {
                 charInfo[i] = "";
@@ -396,45 +396,45 @@ namespace WindowsFormsApp1
             string sign;
 
             if (profBonus * proficiencies[1] + int.Parse(strModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll01.Text = sign + (profBonus * proficiencies[1] + int.Parse(strModLabel.Text));
+            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel.Text));
 
             if (profBonus * proficiencies[3] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll03.Text = sign + (profBonus * proficiencies[3] + int.Parse(dexModLabel.Text));
+            profRoll03.Text = sign + (int)(profBonus * proficiencies[3] + int.Parse(dexModLabel.Text));
             if (profBonus * proficiencies[4] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll04.Text = sign + (profBonus * proficiencies[4] + int.Parse(dexModLabel.Text));
+            profRoll04.Text = sign + (int)(profBonus * proficiencies[4] + int.Parse(dexModLabel.Text));
             if (profBonus * proficiencies[5] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll05.Text = sign + (profBonus * proficiencies[5] + int.Parse(dexModLabel.Text));
+            profRoll05.Text = sign + (int)(profBonus * proficiencies[5] + int.Parse(dexModLabel.Text));
 
             if (profBonus * proficiencies[7] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll07.Text = sign + (profBonus * proficiencies[7] + int.Parse(intModLabel.Text));
+            profRoll07.Text = sign + (int)(profBonus * proficiencies[7] + int.Parse(intModLabel.Text));
             if (profBonus * proficiencies[8] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll08.Text = sign + (profBonus * proficiencies[8] + int.Parse(intModLabel.Text));
+            profRoll08.Text = sign + (int)(profBonus * proficiencies[8] + int.Parse(intModLabel.Text));
             if (profBonus * proficiencies[9] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll09.Text = sign + (profBonus * proficiencies[9] + int.Parse(intModLabel.Text));
+            profRoll09.Text = sign + (int)(profBonus * proficiencies[9] + int.Parse(intModLabel.Text));
             if (profBonus * proficiencies[10] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll10.Text = sign + (profBonus * proficiencies[10] + int.Parse(intModLabel.Text));
+            profRoll10.Text = sign + (int)(profBonus * proficiencies[10] + int.Parse(intModLabel.Text));
             if (profBonus * proficiencies[11] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll11.Text = sign + (profBonus * proficiencies[11] + int.Parse(intModLabel.Text));
+            profRoll11.Text = sign + (int)(profBonus * proficiencies[11] + int.Parse(intModLabel.Text));
 
             if (profBonus * proficiencies[13] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll13.Text = sign + (profBonus * proficiencies[13] + int.Parse(wisModLabel.Text));
+            profRoll13.Text = sign + (int)(profBonus * proficiencies[13] + int.Parse(wisModLabel.Text));
             if (profBonus * proficiencies[14] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll14.Text = sign + (profBonus * proficiencies[14] + int.Parse(wisModLabel.Text));
+            profRoll14.Text = sign + (int)(profBonus * proficiencies[14] + int.Parse(wisModLabel.Text));
             if (profBonus * proficiencies[15] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll15.Text = sign + (profBonus * proficiencies[15] + int.Parse(wisModLabel.Text));
+            profRoll15.Text = sign + (int)(profBonus * proficiencies[15] + int.Parse(wisModLabel.Text));
             if (profBonus * proficiencies[16] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll16.Text = sign + (profBonus * proficiencies[16] + int.Parse(wisModLabel.Text));
+            profRoll16.Text = sign + (int)(profBonus * proficiencies[16] + int.Parse(wisModLabel.Text));
             if (profBonus * proficiencies[17] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll17.Text = sign + (profBonus * proficiencies[17] + int.Parse(wisModLabel.Text));
+            profRoll17.Text = sign + (int)(profBonus * proficiencies[17] + int.Parse(wisModLabel.Text));
 
             if (profBonus * proficiencies[19] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll19.Text = sign + (profBonus * proficiencies[19] + int.Parse(chrModLabel.Text));
+            profRoll19.Text = sign + (int)(profBonus * proficiencies[19] + int.Parse(chrModLabel.Text));
             if (profBonus * proficiencies[20] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll20.Text = sign + (profBonus * proficiencies[20] + int.Parse(chrModLabel.Text));
+            profRoll20.Text = sign + (int)(profBonus * proficiencies[20] + int.Parse(chrModLabel.Text));
             if (profBonus * proficiencies[21] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll21.Text = sign + (profBonus * proficiencies[21] + int.Parse(chrModLabel.Text));
+            profRoll21.Text = sign + (int)(profBonus * proficiencies[21] + int.Parse(chrModLabel.Text));
             if (profBonus * proficiencies[22] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll22.Text = sign + (profBonus * proficiencies[22] + int.Parse(chrModLabel.Text));
+            profRoll22.Text = sign + (int)(profBonus * proficiencies[22] + int.Parse(chrModLabel.Text));
 
             //set spell dc/atk bonus boxes
             if (classSpellType > 0)
@@ -567,6 +567,11 @@ namespace WindowsFormsApp1
 
         private void DeleteWeapon(object sender, EventArgs e)
         {
+            string message = $"Are you sure you want to delete {weapons[currentWeapon].Name}?";
+            DialogResult result = MessageBox.Show(message, "Delete Weapon", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes)
+                return;
+
             weaponButtons[weapons.Count - 1].Visible = false;
             for (int i = currentWeapon; i < weapons.Count - 1; i++)
             {
@@ -1231,6 +1236,12 @@ namespace WindowsFormsApp1
                     index = i;
                 i++;
             }
+            //confirmation
+            string message = $"Are you sure you want to delete {feats[index].Name}?";
+            DialogResult result = MessageBox.Show(message, "Delete Feat", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes)
+                return;
+            //delete
             feats.RemoveAt(index);
             featsPanel.Controls.Remove(featButtons[index]);
             featButtons.RemoveAt(index);
@@ -2095,7 +2106,7 @@ namespace WindowsFormsApp1
             PlatinumAmountLabel.Text = "0";
             //char info
             portrait = null;
-            charInfo = new string[7];
+            charInfo = new string[8];
             for (int i = 0; i < charInfo.Length; i++)
             {
                 charInfo[i] = "";
@@ -2637,6 +2648,7 @@ namespace WindowsFormsApp1
                 multiplierDicedisplaylabel.Text = " n/a";
             miscBonuslabel.Enabled = s.Rolls.Count > 0;
             otherBonusnumericUpDown.Enabled = s.Rolls.Count > 0;
+            spellDescriptionTextbox.Text = s.Description;
         }
 
         public void SetSpell(Spell s, int id)
@@ -2922,6 +2934,14 @@ namespace WindowsFormsApp1
                     return s;
             }
             return null;
+        }
+
+        //updates spell level label when warlock panel hides/shows
+        private void warlockSpellPanel_VisibleChanged(object sender, EventArgs e)
+        {
+            warlockSpellButton1.Checked = true;
+            spellLevelButtons[1].Checked = true;
+            spellListLabel.Text = "Level 1 spells";
         }
 
 
