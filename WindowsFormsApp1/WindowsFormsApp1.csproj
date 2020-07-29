@@ -55,6 +55,12 @@
     <Compile Include="CharacterInfo.Designer.cs">
       <DependentUpon>CharacterInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomForm.Designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadCharMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,10 +86,10 @@
     <Compile Include="Creation Forms\FeatCreation.Designer.cs">
       <DependentUpon>FeatCreation.cs</DependentUpon>
     </Compile>
-    <Compile Include="NoPaddingButton.cs">
+    <Compile Include="CustomControls\NoPaddingButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="NoPaddingButton.Designer.cs">
+    <Compile Include="CustomControls\NoPaddingButton.Designer.cs">
       <DependentUpon>NoPaddingButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Spell.cs" />
@@ -121,6 +127,9 @@
     <EmbeddedResource Include="Creation Forms\CustomRollForm.resx">
       <DependentUpon>CustomRollForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,7 +139,7 @@
     <EmbeddedResource Include="LoadCharMenu.resx">
       <DependentUpon>LoadCharMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NoPaddingButton.resx">
+    <EmbeddedResource Include="CustomControls\NoPaddingButton.resx">
       <DependentUpon>NoPaddingButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Creation Forms\SpellCreationForm.resx">

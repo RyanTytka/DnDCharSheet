@@ -35,8 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.deletebutton = new CustomButtons.ButtonNoPadding();
-            this.Exportbutton = new CustomButtons.ButtonNoPadding();
-            this.importbutton = new CustomButtons.ButtonNoPadding();
             this.SuspendLayout();
             // 
             // characterListBox
@@ -55,9 +53,9 @@
             // SubmitButton
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.SubmitButton.Location = new System.Drawing.Point(340, 136);
+            this.SubmitButton.Location = new System.Drawing.Point(341, 169);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(68, 27);
+            this.SubmitButton.Size = new System.Drawing.Size(67, 27);
             this.SubmitButton.TabIndex = 2;
             this.SubmitButton.Text = "Save";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -100,43 +98,19 @@
             // deletebutton
             // 
             this.deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.deletebutton.Location = new System.Drawing.Point(340, 169);
+            this.deletebutton.Location = new System.Drawing.Point(415, 169);
             this.deletebutton.Name = "deletebutton";
-            this.deletebutton.Size = new System.Drawing.Size(68, 27);
+            this.deletebutton.Size = new System.Drawing.Size(67, 27);
             this.deletebutton.TabIndex = 7;
             this.deletebutton.Text = "Delete";
             this.deletebutton.UseVisualStyleBackColor = true;
             this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
-            // 
-            // Exportbutton
-            // 
-            this.Exportbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.Exportbutton.Location = new System.Drawing.Point(414, 169);
-            this.Exportbutton.Name = "Exportbutton";
-            this.Exportbutton.Size = new System.Drawing.Size(68, 27);
-            this.Exportbutton.TabIndex = 9;
-            this.Exportbutton.Text = "Export";
-            this.Exportbutton.UseVisualStyleBackColor = true;
-            this.Exportbutton.Click += new System.EventHandler(this.Exportbutton_Click);
-            // 
-            // importbutton
-            // 
-            this.importbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.importbutton.Location = new System.Drawing.Point(414, 136);
-            this.importbutton.Name = "importbutton";
-            this.importbutton.Size = new System.Drawing.Size(68, 27);
-            this.importbutton.TabIndex = 8;
-            this.importbutton.Text = "Import";
-            this.importbutton.UseVisualStyleBackColor = true;
-            this.importbutton.Click += new System.EventHandler(this.importbutton_Click);
             // 
             // LoadCharMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 202);
-            this.Controls.Add(this.Exportbutton);
-            this.Controls.Add(this.importbutton);
             this.Controls.Add(this.deletebutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -145,6 +119,7 @@
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.characterListBox);
             this.Name = "LoadCharMenu";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoadCharMenu";
             this.Load += new System.EventHandler(this.LoadCharMenu_Load);
@@ -162,7 +137,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private CustomButtons.ButtonNoPadding deletebutton;
-        private CustomButtons.ButtonNoPadding Exportbutton;
-        private CustomButtons.ButtonNoPadding importbutton;
     }
 }

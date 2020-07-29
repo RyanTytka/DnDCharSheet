@@ -120,35 +120,6 @@ namespace WindowsFormsApp1
             descriptiontextBox.Text =  fullStr.Substring(fullStr.IndexOf("   -   ") + 7);
         }
 
-        // save char from text file
-        private void importbutton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog importFileDialog = new OpenFileDialog();
-            importFileDialog.Title = "Import a Character";
-            importFileDialog.Filter = "Player Character| *.pc";
-            DialogResult result = importFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string fileName = importFileDialog.FileName;
-                ((Form1)Owner).loadFile(fileName);
-                this.Close();
-            }
-        }
-
-        private void Exportbutton_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog exportFileDialog = new SaveFileDialog();
-            exportFileDialog.Title = "Export a Character";
-            exportFileDialog.Filter = "Player Character| *.pc";
-            DialogResult result = exportFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string fileName = exportFileDialog.FileName;
-                ((Form1)Owner).saveFile(fileName);
-                this.Close();
-            }
-        }
-
         // submit when double clicked
         private void characterListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {

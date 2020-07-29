@@ -15,8 +15,12 @@ namespace WindowsFormsApp1
 
 
     public partial class Form1 : Form
-    {
-
+    { 
+        //to make form look a little nicer
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+            //ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        //}
         #region initialization
 
         string[] attributeNames;        //strings for each of the attributes in order
@@ -1759,9 +1763,12 @@ namespace WindowsFormsApp1
                 ACDexBox.Text = reader.ReadString();
                 ACMiscBox.Text = reader.ReadString();
                 //hp
-                currentHPnumberlabel.Text = reader.ReadString();
-                temphpnumberslabel.Text = reader.ReadString();
-                maxHPNumberLabel.Text = reader.ReadString();
+                currentHP = int.Parse(reader.ReadString());
+                currentHPnumberlabel.Text = currentHP.ToString();
+                tempHP = int.Parse(reader.ReadString());
+                temphpnumberslabel.Text = tempHP.ToString();
+                MaxHP = int.Parse(reader.ReadString());
+                maxHPNumberLabel.Text = MaxHP.ToString();
                 //hit dice
                 autoHealHitDice.Checked = reader.ReadBoolean();
                 currentHitDiceDisplayLabel.Text = reader.ReadString();
@@ -2942,6 +2949,35 @@ namespace WindowsFormsApp1
             warlockSpellButton1.Checked = true;
             spellLevelButtons[1].Checked = true;
             spellListLabel.Text = "Level 1 spells";
+        }
+
+        //open file dialog to import .pc file
+        private void importButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog importFileDialog = new OpenFileDialog();
+            importFileDialog.Title = "Import a Character";
+            importFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = importFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string fileName = importFileDialog.FileName;
+                loadFile(fileName);
+                saveButton.Enabled = false;
+            }
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog exportFileDialog = new SaveFileDialog();
+            exportFileDialog.Title = "Export a Character";
+            exportFileDialog.Filter = "Player Character| *.pc";
+            DialogResult result = exportFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string fileName = exportFileDialog.FileName;
+                saveFile(fileName);
+                saveButton.Enabled = false;
+            }
         }
 
 

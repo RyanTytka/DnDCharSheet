@@ -97,6 +97,7 @@ namespace WindowsFormsApp1
                 ComponentsTextBox.Text = selectedSpell.Components;
                 descriptionTextBox.Text = selectedSpell.Description;
                 LevelnumericUpDown.Value = selectedSpell.Level;
+                AttackRollcheckBox.Checked = selectedSpell.UsesAttack;
                 foreach(Roll r in selectedSpell.Rolls)
                 {
                     AddRoll(r.DieNum, r.DieAmount, r.Flat);

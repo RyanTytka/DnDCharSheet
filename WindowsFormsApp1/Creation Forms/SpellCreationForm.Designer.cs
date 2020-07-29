@@ -66,7 +66,7 @@
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(232, 48);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(108, 52);
+            this.saveButton.Size = new System.Drawing.Size(108, 62);
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "Create Spell";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -341,11 +341,11 @@
             this.AttackRollcheckBox.AutoSize = true;
             this.AttackRollcheckBox.Checked = true;
             this.AttackRollcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AttackRollcheckBox.Location = new System.Drawing.Point(247, 116);
+            this.AttackRollcheckBox.Location = new System.Drawing.Point(233, 122);
             this.AttackRollcheckBox.Name = "AttackRollcheckBox";
-            this.AttackRollcheckBox.Size = new System.Drawing.Size(78, 17);
+            this.AttackRollcheckBox.Size = new System.Drawing.Size(105, 17);
             this.AttackRollcheckBox.TabIndex = 44;
-            this.AttackRollcheckBox.Text = "Attack Roll";
+            this.AttackRollcheckBox.Text = "Uses Attack Roll";
             this.AttackRollcheckBox.UseVisualStyleBackColor = true;
             // 
             // SpellCreationForm
