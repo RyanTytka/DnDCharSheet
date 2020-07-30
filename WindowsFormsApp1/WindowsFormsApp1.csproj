@@ -55,6 +55,12 @@
     <Compile Include="CharacterInfo.Designer.cs">
       <DependentUpon>CharacterInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomCheckBox.Designer.cs">
+      <DependentUpon>CustomCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\CustomForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
