@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.CustomControls
 {
-    partial class CustomForm
+    partial class ProficiencyCheckBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // CustomForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "CustomForm";
-            this.Size = new System.Drawing.Size(279, 261);
-            this.ResumeLayout(false);
-
+            components = new System.ComponentModel.Container();
         }
 
         #endregion

@@ -146,6 +146,11 @@ namespace WindowsFormsApp1
             {
                 charInfo[i] = "";
             }
+
+
+            proficienciesCheckBoxes.attributes = statMods;
+            proficienciesCheckBoxes.modifiers = proficiencies;
+            proficienciesCheckBoxes.profBonus = profBonus;
         }
 
 
@@ -396,6 +401,8 @@ namespace WindowsFormsApp1
                         proficiencies[i] = 0;
                 }
             }
+
+            //proficienciesCheckBoxes.CalculateModifiers(proficiencies);
 
             string sign;
 

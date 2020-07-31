@@ -61,11 +61,17 @@
     <Compile Include="CustomControls\CustomCheckBox.Designer.cs">
       <DependentUpon>CustomCheckBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\CustomForm.cs">
+    <Compile Include="CustomControls\CustomCheckedList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControls\CustomForm.Designer.cs">
-      <DependentUpon>CustomForm.cs</DependentUpon>
+    <Compile Include="CustomControls\CustomCheckedList.Designer.cs">
+      <DependentUpon>CustomCheckedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProficiencyCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProficiencyCheckBox.Designer.cs">
+      <DependentUpon>ProficiencyCheckBox.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadCharMenu.cs">
       <SubType>Form</SubType>
@@ -133,8 +139,8 @@
     <EmbeddedResource Include="Creation Forms\CustomRollForm.resx">
       <DependentUpon>CustomRollForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\CustomForm.resx">
-      <DependentUpon>CustomForm.cs</DependentUpon>
+    <EmbeddedResource Include="CustomControls\CustomCheckedList.resx">
+      <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
