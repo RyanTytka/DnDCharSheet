@@ -67,6 +67,12 @@
     <Compile Include="CustomControls\CustomCheckedList.Designer.cs">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomUpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomUpDown.Designer.cs">
+      <DependentUpon>CustomUpDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ProficiencyCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <EmbeddedResource Include="CustomControls\CustomCheckedList.resx">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomUpDown.resx">
+      <DependentUpon>CustomUpDown.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
