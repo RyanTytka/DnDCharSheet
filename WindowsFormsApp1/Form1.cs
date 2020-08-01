@@ -2253,7 +2253,7 @@ namespace WindowsFormsApp1
 
 
         //add a string to the log.  Displays the last 10 lines
-        private void UpdateOutput(string s)
+        public void UpdateOutput(string s)
         {
             //add s to history
             outputList.Add(s);

@@ -74,10 +74,24 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
+            this.button17 = new CustomButtons.ButtonNoPadding();
+            this.button16 = new CustomButtons.ButtonNoPadding();
+            this.button15 = new CustomButtons.ButtonNoPadding();
+            this.button14 = new CustomButtons.ButtonNoPadding();
+            this.button13 = new CustomButtons.ButtonNoPadding();
+            this.button12 = new CustomButtons.ButtonNoPadding();
+            this.button11 = new CustomButtons.ButtonNoPadding();
+            this.button10 = new CustomButtons.ButtonNoPadding();
+            this.button9 = new CustomButtons.ButtonNoPadding();
+            this.button8 = new CustomButtons.ButtonNoPadding();
+            this.button7 = new CustomButtons.ButtonNoPadding();
+            this.button6 = new CustomButtons.ButtonNoPadding();
+            this.button5 = new CustomButtons.ButtonNoPadding();
+            this.button4 = new CustomButtons.ButtonNoPadding();
+            this.button3 = new CustomButtons.ButtonNoPadding();
+            this.button2 = new CustomButtons.ButtonNoPadding();
+            this.button1 = new CustomButtons.ButtonNoPadding();
+            this.button0 = new CustomButtons.ButtonNoPadding();
             this.proficiencyCheckBox46 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
             this.proficiencyCheckBox47 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
             this.proficiencyCheckBox48 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
@@ -132,20 +146,6 @@
             this.proficiencyCheckBox3 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
             this.proficiencyCheckBox2 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
             this.proficiencyCheckBox1 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
-            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding9 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding10 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding11 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding12 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding13 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding14 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding15 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding16 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding17 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding18 = new CustomButtons.ButtonNoPadding();
             this.SuspendLayout();
             // 
             // label1
@@ -621,54 +621,267 @@
             this.label46.Text = "+0";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonNoPadding4
+            // button17
             // 
-            this.buttonNoPadding4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding4.Location = new System.Drawing.Point(77, 89);
-            this.buttonNoPadding4.Name = "buttonNoPadding4";
-            this.buttonNoPadding4.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding4.TabIndex = 115;
-            this.buttonNoPadding4.Text = "Stealth";
-            this.buttonNoPadding4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding4.UseVisualStyleBackColor = true;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button17.Location = new System.Drawing.Point(76, 379);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(104, 14);
+            this.button17.TabIndex = 129;
+            this.button17.Tag = "17";
+            this.button17.Text = "Persuasion";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
             // 
-            // buttonNoPadding3
+            // button16
             // 
-            this.buttonNoPadding3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding3.Location = new System.Drawing.Point(77, 73);
-            this.buttonNoPadding3.Name = "buttonNoPadding3";
-            this.buttonNoPadding3.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding3.TabIndex = 114;
-            this.buttonNoPadding3.Text = "Sleight of Hand";
-            this.buttonNoPadding3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding3.UseVisualStyleBackColor = true;
+            this.button16.CausesValidation = false;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button16.Location = new System.Drawing.Point(76, 363);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(104, 14);
+            this.button16.TabIndex = 128;
+            this.button16.Tag = "16";
+            this.button16.Text = "Performance";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
             // 
-            // buttonNoPadding2
+            // button15
             // 
-            this.buttonNoPadding2.CausesValidation = false;
-            this.buttonNoPadding2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding2.Location = new System.Drawing.Point(77, 57);
-            this.buttonNoPadding2.Name = "buttonNoPadding2";
-            this.buttonNoPadding2.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding2.TabIndex = 113;
-            this.buttonNoPadding2.Text = "Acrobatics";
-            this.buttonNoPadding2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding2.UseVisualStyleBackColor = true;
+            this.button15.CausesValidation = false;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button15.Location = new System.Drawing.Point(76, 347);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(104, 14);
+            this.button15.TabIndex = 127;
+            this.button15.Tag = "15";
+            this.button15.Text = "Inimidation";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
             // 
-            // buttonNoPadding1
+            // button14
             // 
-            this.buttonNoPadding1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding1.Location = new System.Drawing.Point(78, 20);
-            this.buttonNoPadding1.Name = "buttonNoPadding1";
-            this.buttonNoPadding1.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding1.TabIndex = 112;
-            this.buttonNoPadding1.Text = "Athletics";
-            this.buttonNoPadding1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            this.button14.CausesValidation = false;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button14.Location = new System.Drawing.Point(76, 331);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(104, 14);
+            this.button14.TabIndex = 126;
+            this.button14.Tag = "14";
+            this.button14.Text = "Deception";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button13
+            // 
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button13.Location = new System.Drawing.Point(76, 294);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(104, 14);
+            this.button13.TabIndex = 125;
+            this.button13.Tag = "13";
+            this.button13.Text = "Survival";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button12
+            // 
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button12.Location = new System.Drawing.Point(76, 278);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(104, 14);
+            this.button12.TabIndex = 124;
+            this.button12.Tag = "12";
+            this.button12.Text = "Perception";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button11
+            // 
+            this.button11.CausesValidation = false;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button11.Location = new System.Drawing.Point(76, 262);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(104, 14);
+            this.button11.TabIndex = 123;
+            this.button11.Tag = "11";
+            this.button11.Text = "Medicine";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button10
+            // 
+            this.button10.CausesValidation = false;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button10.Location = new System.Drawing.Point(76, 246);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(104, 14);
+            this.button10.TabIndex = 122;
+            this.button10.Tag = "10";
+            this.button10.Text = "Insight";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button9
+            // 
+            this.button9.CausesValidation = false;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button9.Location = new System.Drawing.Point(77, 230);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(104, 14);
+            this.button9.TabIndex = 121;
+            this.button9.Tag = "9";
+            this.button9.Text = "Animal Handling";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button8
+            // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button8.Location = new System.Drawing.Point(77, 192);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(104, 14);
+            this.button8.TabIndex = 120;
+            this.button8.Tag = "8";
+            this.button8.Text = "Religion";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button7.Location = new System.Drawing.Point(77, 176);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(104, 14);
+            this.button7.TabIndex = 119;
+            this.button7.Tag = "7";
+            this.button7.Text = "Nature";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button6
+            // 
+            this.button6.CausesValidation = false;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button6.Location = new System.Drawing.Point(77, 160);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 14);
+            this.button6.TabIndex = 118;
+            this.button6.Tag = "6";
+            this.button6.Text = "Investigation";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button5
+            // 
+            this.button5.CausesValidation = false;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button5.Location = new System.Drawing.Point(77, 144);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(104, 14);
+            this.button5.TabIndex = 117;
+            this.button5.Tag = "5";
+            this.button5.Text = "History";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button4
+            // 
+            this.button4.CausesValidation = false;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button4.Location = new System.Drawing.Point(77, 128);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 14);
+            this.button4.TabIndex = 116;
+            this.button4.Tag = "4";
+            this.button4.Text = "Arcana";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button3.Location = new System.Drawing.Point(77, 89);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 14);
+            this.button3.TabIndex = 115;
+            this.button3.Tag = "3";
+            this.button3.Text = "Stealth";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button2.Location = new System.Drawing.Point(77, 73);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 14);
+            this.button2.TabIndex = 114;
+            this.button2.Tag = "2";
+            this.button2.Text = "Sleight of Hand";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button1
+            // 
+            this.button1.CausesValidation = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button1.Location = new System.Drawing.Point(77, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 14);
+            this.button1.TabIndex = 113;
+            this.button1.Tag = "1";
+            this.button1.Text = "Acrobatics";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
+            // 
+            // button0
+            // 
+            this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button0.Location = new System.Drawing.Point(78, 20);
+            this.button0.Name = "button0";
+            this.button0.Size = new System.Drawing.Size(104, 14);
+            this.button0.TabIndex = 112;
+            this.button0.Tag = "0";
+            this.button0.Text = "Athletics";
+            this.button0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.RollAbiltyCheck_Click);
             // 
             // proficiencyCheckBox46
             // 
@@ -1372,205 +1585,28 @@
             this.proficiencyCheckBox1.UseVisualStyleBackColor = true;
             this.proficiencyCheckBox1.CheckedChanged += new System.EventHandler(this.CheckChange);
             // 
-            // buttonNoPadding5
-            // 
-            this.buttonNoPadding5.CausesValidation = false;
-            this.buttonNoPadding5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding5.Location = new System.Drawing.Point(77, 128);
-            this.buttonNoPadding5.Name = "buttonNoPadding5";
-            this.buttonNoPadding5.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding5.TabIndex = 116;
-            this.buttonNoPadding5.Text = "Arcana";
-            this.buttonNoPadding5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding5.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding6
-            // 
-            this.buttonNoPadding6.CausesValidation = false;
-            this.buttonNoPadding6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding6.Location = new System.Drawing.Point(77, 144);
-            this.buttonNoPadding6.Name = "buttonNoPadding6";
-            this.buttonNoPadding6.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding6.TabIndex = 117;
-            this.buttonNoPadding6.Text = "History";
-            this.buttonNoPadding6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding6.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding7
-            // 
-            this.buttonNoPadding7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding7.Location = new System.Drawing.Point(77, 192);
-            this.buttonNoPadding7.Name = "buttonNoPadding7";
-            this.buttonNoPadding7.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding7.TabIndex = 120;
-            this.buttonNoPadding7.Text = "Religion";
-            this.buttonNoPadding7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding7.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding8
-            // 
-            this.buttonNoPadding8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding8.Location = new System.Drawing.Point(77, 176);
-            this.buttonNoPadding8.Name = "buttonNoPadding8";
-            this.buttonNoPadding8.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding8.TabIndex = 119;
-            this.buttonNoPadding8.Text = "Nature";
-            this.buttonNoPadding8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding8.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding9
-            // 
-            this.buttonNoPadding9.CausesValidation = false;
-            this.buttonNoPadding9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding9.Location = new System.Drawing.Point(77, 160);
-            this.buttonNoPadding9.Name = "buttonNoPadding9";
-            this.buttonNoPadding9.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding9.TabIndex = 118;
-            this.buttonNoPadding9.Text = "Investigation";
-            this.buttonNoPadding9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding9.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding10
-            // 
-            this.buttonNoPadding10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding10.Location = new System.Drawing.Point(76, 294);
-            this.buttonNoPadding10.Name = "buttonNoPadding10";
-            this.buttonNoPadding10.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding10.TabIndex = 125;
-            this.buttonNoPadding10.Text = "Survival";
-            this.buttonNoPadding10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding10.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding11
-            // 
-            this.buttonNoPadding11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding11.Location = new System.Drawing.Point(76, 278);
-            this.buttonNoPadding11.Name = "buttonNoPadding11";
-            this.buttonNoPadding11.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding11.TabIndex = 124;
-            this.buttonNoPadding11.Text = "Perception";
-            this.buttonNoPadding11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding11.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding12
-            // 
-            this.buttonNoPadding12.CausesValidation = false;
-            this.buttonNoPadding12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding12.Location = new System.Drawing.Point(76, 262);
-            this.buttonNoPadding12.Name = "buttonNoPadding12";
-            this.buttonNoPadding12.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding12.TabIndex = 123;
-            this.buttonNoPadding12.Text = "Medicine";
-            this.buttonNoPadding12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding12.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding13
-            // 
-            this.buttonNoPadding13.CausesValidation = false;
-            this.buttonNoPadding13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding13.Location = new System.Drawing.Point(76, 246);
-            this.buttonNoPadding13.Name = "buttonNoPadding13";
-            this.buttonNoPadding13.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding13.TabIndex = 122;
-            this.buttonNoPadding13.Text = "Insight";
-            this.buttonNoPadding13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding13.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding14
-            // 
-            this.buttonNoPadding14.CausesValidation = false;
-            this.buttonNoPadding14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding14.Location = new System.Drawing.Point(77, 230);
-            this.buttonNoPadding14.Name = "buttonNoPadding14";
-            this.buttonNoPadding14.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding14.TabIndex = 121;
-            this.buttonNoPadding14.Text = "Animal Handling";
-            this.buttonNoPadding14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding14.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding15
-            // 
-            this.buttonNoPadding15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding15.Location = new System.Drawing.Point(76, 379);
-            this.buttonNoPadding15.Name = "buttonNoPadding15";
-            this.buttonNoPadding15.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding15.TabIndex = 129;
-            this.buttonNoPadding15.Text = "Persuasion";
-            this.buttonNoPadding15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding15.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding16
-            // 
-            this.buttonNoPadding16.CausesValidation = false;
-            this.buttonNoPadding16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding16.Location = new System.Drawing.Point(76, 363);
-            this.buttonNoPadding16.Name = "buttonNoPadding16";
-            this.buttonNoPadding16.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding16.TabIndex = 128;
-            this.buttonNoPadding16.Text = "Performance";
-            this.buttonNoPadding16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding16.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding17
-            // 
-            this.buttonNoPadding17.CausesValidation = false;
-            this.buttonNoPadding17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding17.Location = new System.Drawing.Point(76, 347);
-            this.buttonNoPadding17.Name = "buttonNoPadding17";
-            this.buttonNoPadding17.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding17.TabIndex = 127;
-            this.buttonNoPadding17.Text = "Inimidation";
-            this.buttonNoPadding17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding17.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding18
-            // 
-            this.buttonNoPadding18.CausesValidation = false;
-            this.buttonNoPadding18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonNoPadding18.Location = new System.Drawing.Point(76, 331);
-            this.buttonNoPadding18.Name = "buttonNoPadding18";
-            this.buttonNoPadding18.Size = new System.Drawing.Size(104, 14);
-            this.buttonNoPadding18.TabIndex = 126;
-            this.buttonNoPadding18.Text = "Deception";
-            this.buttonNoPadding18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNoPadding18.UseVisualStyleBackColor = true;
-            // 
             // CustomCheckedList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonNoPadding15);
-            this.Controls.Add(this.buttonNoPadding16);
-            this.Controls.Add(this.buttonNoPadding17);
-            this.Controls.Add(this.buttonNoPadding18);
-            this.Controls.Add(this.buttonNoPadding10);
-            this.Controls.Add(this.buttonNoPadding11);
-            this.Controls.Add(this.buttonNoPadding12);
-            this.Controls.Add(this.buttonNoPadding13);
-            this.Controls.Add(this.buttonNoPadding14);
-            this.Controls.Add(this.buttonNoPadding7);
-            this.Controls.Add(this.buttonNoPadding8);
-            this.Controls.Add(this.buttonNoPadding9);
-            this.Controls.Add(this.buttonNoPadding6);
-            this.Controls.Add(this.buttonNoPadding5);
-            this.Controls.Add(this.buttonNoPadding4);
-            this.Controls.Add(this.buttonNoPadding3);
-            this.Controls.Add(this.buttonNoPadding2);
-            this.Controls.Add(this.buttonNoPadding1);
+            this.Controls.Add(this.button17);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button0);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.proficiencyCheckBox46);
             this.Controls.Add(this.proficiencyCheckBox47);
@@ -1780,23 +1816,23 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private ProficiencyCheckBox proficiencyCheckBox1;
-        private CustomButtons.ButtonNoPadding buttonNoPadding1;
-        private CustomButtons.ButtonNoPadding buttonNoPadding2;
-        private CustomButtons.ButtonNoPadding buttonNoPadding3;
-        private CustomButtons.ButtonNoPadding buttonNoPadding4;
-        private CustomButtons.ButtonNoPadding buttonNoPadding5;
-        private CustomButtons.ButtonNoPadding buttonNoPadding6;
-        private CustomButtons.ButtonNoPadding buttonNoPadding7;
-        private CustomButtons.ButtonNoPadding buttonNoPadding8;
-        private CustomButtons.ButtonNoPadding buttonNoPadding9;
-        private CustomButtons.ButtonNoPadding buttonNoPadding10;
-        private CustomButtons.ButtonNoPadding buttonNoPadding11;
-        private CustomButtons.ButtonNoPadding buttonNoPadding12;
-        private CustomButtons.ButtonNoPadding buttonNoPadding13;
-        private CustomButtons.ButtonNoPadding buttonNoPadding14;
-        private CustomButtons.ButtonNoPadding buttonNoPadding15;
-        private CustomButtons.ButtonNoPadding buttonNoPadding16;
-        private CustomButtons.ButtonNoPadding buttonNoPadding17;
-        private CustomButtons.ButtonNoPadding buttonNoPadding18;
+        private CustomButtons.ButtonNoPadding button0;
+        private CustomButtons.ButtonNoPadding button1;
+        private CustomButtons.ButtonNoPadding button2;
+        private CustomButtons.ButtonNoPadding button3;
+        private CustomButtons.ButtonNoPadding button4;
+        private CustomButtons.ButtonNoPadding button5;
+        private CustomButtons.ButtonNoPadding button8;
+        private CustomButtons.ButtonNoPadding button7;
+        private CustomButtons.ButtonNoPadding button6;
+        private CustomButtons.ButtonNoPadding button13;
+        private CustomButtons.ButtonNoPadding button12;
+        private CustomButtons.ButtonNoPadding button11;
+        private CustomButtons.ButtonNoPadding button10;
+        private CustomButtons.ButtonNoPadding button9;
+        private CustomButtons.ButtonNoPadding button17;
+        private CustomButtons.ButtonNoPadding button16;
+        private CustomButtons.ButtonNoPadding button15;
+        private CustomButtons.ButtonNoPadding button14;
     }
 }

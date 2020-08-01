@@ -133,5 +133,18 @@ namespace WindowsFormsApp1.CustomControls
                 displayLabels[i].Text = sign + (int)(profBonus * array[i] + attributes[indexToModifer[i]]);
             }
         }
+
+        //rolls ability check
+        private void RollAbiltyCheck_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse((sender as CustomButtons.ButtonNoPadding).Tag.ToString());
+            int roll = Roll.RollSingleDie(20);
+
+            (Parent as Form1).UpdateOutput(((Button)sender).Text + " ability check: " + 
+                (roll + modifiers[ID] * profBonus + attributes[indexToModifer[ID]]) +
+                " (Roll: " + roll + ", Proficiency Bonus: " + (modifiers[ID] * profBonus) + ", " +
+                "Ability Modifier: " + attributes[indexToModifer[ID]] + ")");
+            (Parent as Form1).UpdateOutput(Environment.NewLine); (Parent as Form1).UpdateOutput(Environment.NewLine);
+        }
     }
 }
