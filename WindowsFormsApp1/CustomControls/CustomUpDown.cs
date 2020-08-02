@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1.CustomControls
 {
@@ -15,12 +16,19 @@ namespace WindowsFormsApp1.CustomControls
         string prevText = "";
         public int Value;
         public Color DrawColor;
-        
+        private System.Windows.Controls.TextBox box;
+        bool alreadyFocused;
+
         public CustomUpDown()
         {
             InitializeComponent();
-            DrawColor = Color.FromArgb(135, 20, 20);
-            Value = int.Parse(textBox.Text);
+            box = (textBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.TextChanged += textBox_TextChanged;
+            box.GotFocus += textBox1_GotFocus;
+            box.MouseUp += textBox1_MouseUp;
+            box.LostFocus += textBox1_Leave;
+            box.Text = "0";
+            Value = int.Parse(box.Text);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -39,33 +47,34 @@ namespace WindowsFormsApp1.CustomControls
         private void upBox_Click(object sender, EventArgs e)
         {
             Value++;
-            textBox.Text = Value.ToString();
+            box.Text = Value.ToString();
         }
 
         //decrement value
         private void downBox_Click(object sender, EventArgs e)
         {
             Value--;
-            textBox.Text = Value.ToString();
+            box.Text = Value.ToString();
         }
 
+        // update value and remove letters
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox.Text, out int o))
+            if (int.TryParse(box.Text, out int o))
             {
                 Value = o;
-                prevText = textBox.Text;
+                prevText = box.Text;
             }
             else
             {
-                if (textBox.Text == "" || textBox.Text == "-")
+                if (box.Text == "" || box.Text == "-")
                 {
-                    prevText = textBox.Text;
+                    prevText = box.Text;
                 }
                 else
                 {
-                    textBox.Text = prevText;
-                    textBox.Select(textBox.Text.Length, 0);
+                    box.Text = prevText;
+                    box.Select(box.Text.Length, 0);
                 }
             }
 
@@ -74,7 +83,46 @@ namespace WindowsFormsApp1.CustomControls
         //makes sure there is always a value
         private void textBox_Leave(object sender, EventArgs e)
         {
-            textBox.Text = Value.ToString();
+            box.Text = Value.ToString();
+        }
+
+        /// <summary>
+        /// increases the size of the control
+        /// </summary>
+        public void MakeBigger()
+        {
+            this.Size = new Size(80, 47);
+            box.FontSize = 24;
+            upButton.Size = new Size(24, 15);
+            downButton.Size = new Size(24, 15);
+            upButton.Location = new Point(42, 1);
+            downButton.Location = new Point(42, 19);
+            textBox.Size = new Size(40, 28);
+
+        }
+
+        // thses three methdos select text when clicking on the textbox (not currently working)
+        void textBox1_Leave(object sender, EventArgs e)
+        {
+            alreadyFocused = false;
+        }
+        void textBox1_GotFocus(object sender, EventArgs e)
+        {
+            // Select all text only if the mouse isn't down.
+            // This makes tabbing to the textbox give focus.
+            if (MouseButtons == MouseButtons.None)
+            {
+                box.SelectAll();
+                alreadyFocused = true;
+            }
+        }
+        void textBox1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (!alreadyFocused && box.SelectionLength == 0)
+            {
+                alreadyFocused = true;
+                box.SelectAll();
+            }
         }
     }
 }

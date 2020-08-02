@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
 
             attributeNames = new string[] { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
 
-            mods[1] = strModLabel;
+            mods[1] = strModLabel_old;
             mods[3] = dexModLabel; mods[4] = dexModLabel; mods[5] = dexModLabel;
             mods[7] = intModLabel; mods[8] = intModLabel; mods[9] = intModLabel; mods[10] = intModLabel; mods[11] = intModLabel;
             mods[13] = wisModLabel; mods[14] = wisModLabel; mods[15] = wisModLabel; mods[16] = wisModLabel; mods[17] = wisModLabel;
@@ -203,6 +203,8 @@ namespace WindowsFormsApp1
             box.Text = "Alignment";
             box.FontSize = 10;
 
+            // attributes
+
             #endregion
         }
 
@@ -321,7 +323,7 @@ namespace WindowsFormsApp1
         }
         private void strProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[0] = BoolToInt(strProfBox.Checked);
+            Saveproficiencies[0] = BoolToInt(strProfCheckBox.Checked);
             SetUnsaved();
         }
         private void dexProfBox_CheckedChanged(object sender, EventArgs e)
@@ -359,7 +361,7 @@ namespace WindowsFormsApp1
             if (statMods[0] > 0)
                 sign = "+";
 
-            strModLabel.Text = sign + statMods[0];
+            strModLabel_old.Text = sign + statMods[0];
         }
         private void dexModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -459,8 +461,8 @@ namespace WindowsFormsApp1
 
             string sign;
 
-            if (profBonus * proficiencies[1] + int.Parse(strModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel.Text));
+            if (profBonus * proficiencies[1] + int.Parse(strModLabel_old.Text) > 0) sign = "+"; else sign = "";
+            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel_old.Text));
 
             if (profBonus * proficiencies[3] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
             profRoll03.Text = sign + (int)(profBonus * proficiencies[3] + int.Parse(dexModLabel.Text));
