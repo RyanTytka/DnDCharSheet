@@ -155,19 +155,55 @@ namespace WindowsFormsApp1
             proficienciesCheckBoxes.modifiers = proficiencies;
             proficienciesCheckBoxes.profBonus = profBonus;
 
-            //custom textbox stuff
+            // sets appreances and events of custom textboxes
+            #region Custom Textboxes Setup
+
+            var redBrush = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 135, 20, 20));
+
+            //hp
             var box = (currentHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.TextChanged += RemoveLetters;
-            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.KeyDown += HPTextboxPressEnter;
             box.Tag = "current";
+            box.LostFocus += ClearText;
+
             box = (maxHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.TextChanged += RemoveLetters;
-            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.KeyDown += HPTextboxPressEnter;
             box.Tag = "max";
+            box.LostFocus += ClearText;
+
             box = (tempHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.TextChanged += RemoveLetters;
-            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.KeyDown += HPTextboxPressEnter;
             box.Tag = "temp";
+            box.LostFocus += ClearText;
+
+            //name/class
+            box = (customTextBox1name.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.Text = "Character Name";
+            box.FontSize = 18;
+            box.FontWeight = System.Windows.FontWeights.Bold;
+            box.Foreground = redBrush;
+
+            box = (customTextBox1levelClass.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.Text = "Level / Class";
+            box.FontSize = 12;
+            box.FontWeight = System.Windows.FontWeights.Bold;
+
+            box = (customTextBox1race.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.Text = "Background";
+            box.FontSize = 10;
+
+            box = (customTextBox2background.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.Text = "Race";
+            box.FontSize = 10;
+
+            box = (customTextBox3alignment.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.Text = "Alignment";
+            box.FontSize = 10;
+
+            #endregion
         }
 
 
@@ -887,6 +923,57 @@ namespace WindowsFormsApp1
 
         #region HP
 
+        // press enter key to submit hp changes
+        private void HPTextboxPressEnter(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            var box = sender as System.Windows.Controls.TextBox;
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                if (box.Text.Length == 0)
+                    return;
+
+                if (box.Text[0] == '+' || box.Text[0] == '-')
+                {
+                    if (box.Text.Length == 1)
+                        return;
+
+                    // add/subtract value
+                    if (box.Tag.ToString() == "current")
+                    {
+                        currentHPlabel.Text = (int.Parse(box.Text) + int.Parse(currentHPlabel.Text)).ToString();
+                    }
+                    else if (box.Tag.ToString() == "max")
+                    {
+                        MaxHPlabel.Text = (int.Parse(box.Text) + int.Parse(MaxHPlabel.Text)).ToString();
+                    }
+                    else
+                    {
+                        tempHPlabel.Text = (int.Parse(box.Text) + int.Parse(tempHPlabel.Text)).ToString();
+                    }
+                }
+                else
+                {
+                    // set value
+                    if (box.Tag.ToString() == "current")
+                    {
+                        currentHPlabel.Text = box.Text;
+                    }
+                    else if (box.Tag.ToString() == "max")
+                    {
+                        MaxHPlabel.Text = box.Text;
+                    }
+                    else
+                    {
+                        tempHPlabel.Text = box.Text;
+                    }
+                }
+
+                box.SelectAll();
+                // stop ding sound
+                e.Handled = true;
+
+            }
+        }
 
         //remove letters from the +/- box
         private void textBox14_TextChanged(object sender, EventArgs e)
@@ -2299,6 +2386,10 @@ namespace WindowsFormsApp1
 
         #region helper methods
 
+        private void ClearText(object sender, EventArgs e)
+        {
+            (sender as System.Windows.Controls.TextBox).Text = "";
+        }
 
 
         private void RemoveLetters(object sender, EventArgs e)
@@ -2333,6 +2424,8 @@ namespace WindowsFormsApp1
         {
 
         }
+
+
 
 
         #endregion
@@ -3005,57 +3098,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        // press enter key to submit hp changes
-        private void HPTextboxPressEnter(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            var box = sender as System.Windows.Controls.TextBox;
-            if (e.Key == System.Windows.Input.Key.Enter)
-            {
-                if (box.Text.Length == 0)
-                    return;
-
-                if(box.Text[0] == '+' || box.Text[0] == '-')
-                {
-                    if (box.Text.Length == 1)
-                        return;
-
-                    // add/subtract value
-                    if (box.Tag.ToString() == "current")
-                    {
-                        currentHPlabel.Text = (int.Parse(box.Text) + int.Parse(currentHPlabel.Text)).ToString();
-                    }
-                    else if (box.Tag.ToString() == "max")
-                    {
-                        MaxHPlabel.Text = (int.Parse(box.Text) + int.Parse(MaxHPlabel.Text)).ToString();
-                    }
-                    else
-                    {
-                        tempHPlabel.Text = (int.Parse(box.Text) + int.Parse(tempHPlabel.Text)).ToString();
-                    }
-                }
-                else
-                {
-                    // set value
-                    if (box.Tag.ToString() == "current")
-                    {
-                        currentHPlabel.Text = box.Text;
-                    }
-                    else if (box.Tag.ToString() == "max")
-                    {
-                        MaxHPlabel.Text = box.Text;
-                    }
-                    else
-                    {
-                        tempHPlabel.Text = box.Text;
-                    }
-                }
-
-                box.SelectAll();
-                // stop ding sound
-                e.Handled = true;
-
-            }
-        }
 
 
         #endregion

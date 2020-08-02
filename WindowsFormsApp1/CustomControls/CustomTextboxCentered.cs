@@ -8,11 +8,11 @@ using System.Windows.Media;
 
 namespace WindowsFormsApp1.CustomControls
 {
-    public class CustomTextBox : System.Windows.Forms.UserControl
+    public class CustomTextBoxCentered : System.Windows.Forms.UserControl
     {
         private ElementHost elementHost = new ElementHost();
         private TextBox textBox = new TextBox();
-        public CustomTextBox()
+        public CustomTextBoxCentered()
         {
             textBox.FontSize = 14;
             textBox.Background = new SolidColorBrush(Colors.LightGray);

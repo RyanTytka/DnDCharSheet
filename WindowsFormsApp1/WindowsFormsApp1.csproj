@@ -71,11 +71,17 @@
     <Compile Include="CustomControls\CustomCheckedList.Designer.cs">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\CustomTextbox.cs">
+    <Compile Include="CustomControls\CustomTextboxCentered.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControls\CustomTextbox.Designer.cs">
-      <DependentUpon>CustomTextbox.cs</DependentUpon>
+    <Compile Include="CustomControls\CustomTextboxCentered.Designer.cs">
+      <DependentUpon>CustomTextboxCentered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomTextboxLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomTextboxLeft.Designer.cs">
+      <DependentUpon>CustomTextboxLeft.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\CustomUpDown.cs">
       <SubType>UserControl</SubType>
@@ -216,6 +222,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\upArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpicon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
