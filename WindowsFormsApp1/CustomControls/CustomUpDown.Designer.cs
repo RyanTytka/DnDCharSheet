@@ -35,7 +35,7 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(2, 3);
+            this.textBox.Location = new System.Drawing.Point(2, 1);
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(22, 19);
             this.textBox.TabIndex = 230;
@@ -46,7 +46,7 @@
             this.downButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.downButton.FlatAppearance.BorderSize = 0;
             this.downButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.downButton.Location = new System.Drawing.Point(29, 14);
+            this.downButton.Location = new System.Drawing.Point(26, 12);
             this.downButton.Name = "downButton";
             this.downButton.Size = new System.Drawing.Size(16, 10);
             this.downButton.TabIndex = 229;
@@ -60,7 +60,7 @@
             this.upButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.upButton.FlatAppearance.BorderSize = 0;
             this.upButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.upButton.Location = new System.Drawing.Point(29, 1);
+            this.upButton.Location = new System.Drawing.Point(26, -1);
             this.upButton.Name = "upButton";
             this.upButton.Size = new System.Drawing.Size(16, 10);
             this.upButton.TabIndex = 228;
@@ -77,7 +77,7 @@
             this.Controls.Add(this.downButton);
             this.Controls.Add(this.upButton);
             this.Name = "CustomUpDown";
-            this.Size = new System.Drawing.Size(48, 25);
+            this.Size = new System.Drawing.Size(46, 23);
             this.ResumeLayout(false);
 
         }

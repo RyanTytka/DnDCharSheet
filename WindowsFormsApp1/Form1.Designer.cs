@@ -111,23 +111,31 @@
             this.label28 = new System.Windows.Forms.Label();
             this.HPLabel = new System.Windows.Forms.Label();
             this.ACBox = new System.Windows.Forms.TextBox();
-            this.HitDiceHeader = new System.Windows.Forms.Label();
             this.ACMiscBox = new System.Windows.Forms.TextBox();
             this.ACDexBox = new System.Windows.Forms.TextBox();
             this.ACArmorBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.customUpDown4 = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.customUpDown5 = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.customUpDown3 = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.customUpDown2 = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.label36 = new System.Windows.Forms.Label();
+            this.customCheckBox2 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.MaxHitDiceDisplayLabel = new System.Windows.Forms.Label();
-            this.currentHitDiceDisplayLabel = new System.Windows.Forms.Label();
-            this.autoHealHitDice = new System.Windows.Forms.CheckBox();
             this.HitDicePartialRefillButton = new CustomButtons.ButtonNoPadding();
             this.HitDiceFullRefillButton = new CustomButtons.ButtonNoPadding();
             this.HitDiceSetMaxButton = new CustomButtons.ButtonNoPadding();
+            this.HitDiceUseButton = new CustomButtons.ButtonNoPadding();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.currentHitDiceDisplayLabel = new System.Windows.Forms.Label();
+            this.autoHealHitDice = new System.Windows.Forms.CheckBox();
             this.HitDiced12NumBox = new System.Windows.Forms.NumericUpDown();
             this.HitDiced10NumBox = new System.Windows.Forms.NumericUpDown();
             this.HitDiced8NumBox = new System.Windows.Forms.NumericUpDown();
             this.HitDiced6NumBox = new System.Windows.Forms.NumericUpDown();
-            this.HitDiceUseButton = new CustomButtons.ButtonNoPadding();
             this.profBonusBox = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -406,7 +414,7 @@
             // outputTextBox
             // 
             this.outputTextBox.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTextBox.Location = new System.Drawing.Point(19, 539);
+            this.outputTextBox.Location = new System.Drawing.Point(340, 533);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
@@ -1512,17 +1520,6 @@
             this.ACBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ACBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
-            // HitDiceHeader
-            // 
-            this.HitDiceHeader.AutoSize = true;
-            this.HitDiceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.HitDiceHeader.Location = new System.Drawing.Point(467, 163);
-            this.HitDiceHeader.Name = "HitDiceHeader";
-            this.HitDiceHeader.Size = new System.Drawing.Size(58, 15);
-            this.HitDiceHeader.TabIndex = 97;
-            this.HitDiceHeader.Text = "Hit Dice";
-            this.HitDiceHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ACMiscBox
             // 
             this.ACMiscBox.Location = new System.Drawing.Point(48, 48);
@@ -1552,74 +1549,112 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.customUpDown4);
+            this.panel2.Controls.Add(this.customUpDown5);
+            this.panel2.Controls.Add(this.customUpDown3);
+            this.panel2.Controls.Add(this.customUpDown2);
             this.panel2.Controls.Add(this.label36);
+            this.panel2.Controls.Add(this.customCheckBox2);
+            this.panel2.Controls.Add(this.label53);
             this.panel2.Controls.Add(this.MaxHitDiceDisplayLabel);
-            this.panel2.Controls.Add(this.currentHitDiceDisplayLabel);
-            this.panel2.Controls.Add(this.autoHealHitDice);
             this.panel2.Controls.Add(this.HitDicePartialRefillButton);
             this.panel2.Controls.Add(this.HitDiceFullRefillButton);
             this.panel2.Controls.Add(this.HitDiceSetMaxButton);
-            this.panel2.Controls.Add(this.HitDiced12NumBox);
-            this.panel2.Controls.Add(this.HitDiced10NumBox);
-            this.panel2.Controls.Add(this.HitDiced8NumBox);
-            this.panel2.Controls.Add(this.HitDiced6NumBox);
             this.panel2.Controls.Add(this.HitDiceUseButton);
-            this.panel2.Location = new System.Drawing.Point(417, 181);
+            this.panel2.Controls.Add(this.label54);
+            this.panel2.Controls.Add(this.label57);
+            this.panel2.Controls.Add(this.label58);
+            this.panel2.Controls.Add(this.currentHitDiceDisplayLabel);
+            this.panel2.Location = new System.Drawing.Point(5, 425);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(167, 136);
+            this.panel2.Size = new System.Drawing.Size(192, 173);
             this.panel2.TabIndex = 100;
+            // 
+            // customUpDown4
+            // 
+            this.customUpDown4.BackColor = System.Drawing.SystemColors.Control;
+            this.customUpDown4.Location = new System.Drawing.Point(144, 103);
+            this.customUpDown4.Name = "customUpDown4";
+            this.customUpDown4.Size = new System.Drawing.Size(46, 23);
+            this.customUpDown4.TabIndex = 289;
+            // 
+            // customUpDown5
+            // 
+            this.customUpDown5.BackColor = System.Drawing.SystemColors.Control;
+            this.customUpDown5.Location = new System.Drawing.Point(96, 103);
+            this.customUpDown5.Name = "customUpDown5";
+            this.customUpDown5.Size = new System.Drawing.Size(46, 23);
+            this.customUpDown5.TabIndex = 288;
+            // 
+            // customUpDown3
+            // 
+            this.customUpDown3.BackColor = System.Drawing.SystemColors.Control;
+            this.customUpDown3.Location = new System.Drawing.Point(46, 103);
+            this.customUpDown3.Name = "customUpDown3";
+            this.customUpDown3.Size = new System.Drawing.Size(46, 23);
+            this.customUpDown3.TabIndex = 287;
+            // 
+            // customUpDown2
+            // 
+            this.customUpDown2.BackColor = System.Drawing.SystemColors.Control;
+            this.customUpDown2.Location = new System.Drawing.Point(-2, 103);
+            this.customUpDown2.Name = "customUpDown2";
+            this.customUpDown2.Size = new System.Drawing.Size(46, 23);
+            this.customUpDown2.TabIndex = 286;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.SystemColors.Control;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label36.Location = new System.Drawing.Point(17, 55);
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label36.ForeColor = System.Drawing.Color.Maroon;
+            this.label36.Location = new System.Drawing.Point(8, 84);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(133, 13);
+            this.label36.Size = new System.Drawing.Size(179, 20);
             this.label36.TabIndex = 232;
             this.label36.Text = "d6     d8     d10    d12";
+            // 
+            // customCheckBox2
+            // 
+            this.customCheckBox2.AutoSize = true;
+            this.customCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customCheckBox2.Location = new System.Drawing.Point(5, 62);
+            this.customCheckBox2.Name = "customCheckBox2";
+            this.customCheckBox2.Size = new System.Drawing.Size(176, 19);
+            this.customCheckBox2.TabIndex = 235;
+            this.customCheckBox2.Text = "Apply Healing Automatically";
+            this.customCheckBox2.UseVisualStyleBackColor = true;
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label53.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label53.Location = new System.Drawing.Point(2, 2);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(188, 20);
+            this.label53.TabIndex = 284;
+            this.label53.Text = "Hit Dice";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MaxHitDiceDisplayLabel
             // 
             this.MaxHitDiceDisplayLabel.AutoSize = true;
             this.MaxHitDiceDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.MaxHitDiceDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxHitDiceDisplayLabel.Location = new System.Drawing.Point(1, 34);
+            this.MaxHitDiceDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxHitDiceDisplayLabel.Location = new System.Drawing.Point(1, 39);
             this.MaxHitDiceDisplayLabel.Name = "MaxHitDiceDisplayLabel";
-            this.MaxHitDiceDisplayLabel.Size = new System.Drawing.Size(36, 16);
+            this.MaxHitDiceDisplayLabel.Size = new System.Drawing.Size(44, 18);
             this.MaxHitDiceDisplayLabel.TabIndex = 233;
             this.MaxHitDiceDisplayLabel.Text = "Max:";
-            // 
-            // currentHitDiceDisplayLabel
-            // 
-            this.currentHitDiceDisplayLabel.AutoSize = true;
-            this.currentHitDiceDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.currentHitDiceDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentHitDiceDisplayLabel.Location = new System.Drawing.Point(1, 18);
-            this.currentHitDiceDisplayLabel.Name = "currentHitDiceDisplayLabel";
-            this.currentHitDiceDisplayLabel.Size = new System.Drawing.Size(53, 16);
-            this.currentHitDiceDisplayLabel.TabIndex = 232;
-            this.currentHitDiceDisplayLabel.Text = "Current:";
-            // 
-            // autoHealHitDice
-            // 
-            this.autoHealHitDice.AutoSize = true;
-            this.autoHealHitDice.Location = new System.Drawing.Point(3, 1);
-            this.autoHealHitDice.Name = "autoHealHitDice";
-            this.autoHealHitDice.Size = new System.Drawing.Size(156, 17);
-            this.autoHealHitDice.TabIndex = 119;
-            this.autoHealHitDice.Text = "Apply Healing Automatically";
-            this.autoHealHitDice.UseVisualStyleBackColor = true;
             // 
             // HitDicePartialRefillButton
             // 
             this.HitDicePartialRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HitDicePartialRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDicePartialRefillButton.Location = new System.Drawing.Point(69, 87);
+            this.HitDicePartialRefillButton.Location = new System.Drawing.Point(96, 129);
             this.HitDicePartialRefillButton.Name = "HitDicePartialRefillButton";
-            this.HitDicePartialRefillButton.Size = new System.Drawing.Size(91, 19);
+            this.HitDicePartialRefillButton.Size = new System.Drawing.Size(95, 17);
             this.HitDicePartialRefillButton.TabIndex = 117;
             this.HitDicePartialRefillButton.Text = "Partial Refill";
             this.HitDicePartialRefillButton.UseVisualStyleBackColor = true;
@@ -1629,9 +1664,9 @@
             // 
             this.HitDiceFullRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HitDiceFullRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceFullRefillButton.Location = new System.Drawing.Point(69, 108);
+            this.HitDiceFullRefillButton.Location = new System.Drawing.Point(96, 148);
             this.HitDiceFullRefillButton.Name = "HitDiceFullRefillButton";
-            this.HitDiceFullRefillButton.Size = new System.Drawing.Size(91, 19);
+            this.HitDiceFullRefillButton.Size = new System.Drawing.Size(95, 17);
             this.HitDiceFullRefillButton.TabIndex = 116;
             this.HitDiceFullRefillButton.Text = "Full Refill";
             this.HitDiceFullRefillButton.UseVisualStyleBackColor = true;
@@ -1641,18 +1676,84 @@
             // 
             this.HitDiceSetMaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HitDiceSetMaxButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceSetMaxButton.Location = new System.Drawing.Point(4, 108);
+            this.HitDiceSetMaxButton.Location = new System.Drawing.Point(0, 148);
             this.HitDiceSetMaxButton.Name = "HitDiceSetMaxButton";
-            this.HitDiceSetMaxButton.Size = new System.Drawing.Size(63, 19);
+            this.HitDiceSetMaxButton.Size = new System.Drawing.Size(94, 17);
             this.HitDiceSetMaxButton.TabIndex = 115;
             this.HitDiceSetMaxButton.Text = "Set Max";
             this.HitDiceSetMaxButton.UseVisualStyleBackColor = true;
             this.HitDiceSetMaxButton.Click += new System.EventHandler(this.HitDiceSetMaxButton_Click);
             // 
+            // HitDiceUseButton
+            // 
+            this.HitDiceUseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitDiceUseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.HitDiceUseButton.Location = new System.Drawing.Point(0, 129);
+            this.HitDiceUseButton.Name = "HitDiceUseButton";
+            this.HitDiceUseButton.Size = new System.Drawing.Size(94, 18);
+            this.HitDiceUseButton.TabIndex = 109;
+            this.HitDiceUseButton.Text = "Use";
+            this.HitDiceUseButton.UseVisualStyleBackColor = true;
+            this.HitDiceUseButton.Click += new System.EventHandler(this.buttonNoPadding1_Click);
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.SystemColors.Control;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label54.Location = new System.Drawing.Point(-7, 152);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(215, 17);
+            this.label54.TabIndex = 284;
+            this.label54.Text = "_______________________";
+            // 
+            // label57
+            // 
+            this.label57.BackColor = System.Drawing.SystemColors.Control;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label57.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label57.Location = new System.Drawing.Point(-7, 67);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(215, 17);
+            this.label57.TabIndex = 284;
+            this.label57.Text = "_______________________";
+            // 
+            // label58
+            // 
+            this.label58.BackColor = System.Drawing.SystemColors.Control;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label58.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label58.Location = new System.Drawing.Point(-8, 42);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(215, 17);
+            this.label58.TabIndex = 285;
+            this.label58.Text = "_______________________";
+            // 
+            // currentHitDiceDisplayLabel
+            // 
+            this.currentHitDiceDisplayLabel.AutoSize = true;
+            this.currentHitDiceDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.currentHitDiceDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentHitDiceDisplayLabel.Location = new System.Drawing.Point(1, 23);
+            this.currentHitDiceDisplayLabel.Name = "currentHitDiceDisplayLabel";
+            this.currentHitDiceDisplayLabel.Size = new System.Drawing.Size(69, 18);
+            this.currentHitDiceDisplayLabel.TabIndex = 232;
+            this.currentHitDiceDisplayLabel.Text = "Current:";
+            // 
+            // autoHealHitDice
+            // 
+            this.autoHealHitDice.AutoSize = true;
+            this.autoHealHitDice.Location = new System.Drawing.Point(217, 506);
+            this.autoHealHitDice.Name = "autoHealHitDice";
+            this.autoHealHitDice.Size = new System.Drawing.Size(156, 17);
+            this.autoHealHitDice.TabIndex = 119;
+            this.autoHealHitDice.Text = "Apply Healing Automatically";
+            this.autoHealHitDice.UseVisualStyleBackColor = true;
+            // 
             // HitDiced12NumBox
             // 
             this.HitDiced12NumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.HitDiced12NumBox.Location = new System.Drawing.Point(121, 68);
+            this.HitDiced12NumBox.Location = new System.Drawing.Point(341, 517);
             this.HitDiced12NumBox.Name = "HitDiced12NumBox";
             this.HitDiced12NumBox.Size = new System.Drawing.Size(32, 18);
             this.HitDiced12NumBox.TabIndex = 113;
@@ -1660,7 +1761,7 @@
             // HitDiced10NumBox
             // 
             this.HitDiced10NumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.HitDiced10NumBox.Location = new System.Drawing.Point(84, 68);
+            this.HitDiced10NumBox.Location = new System.Drawing.Point(304, 517);
             this.HitDiced10NumBox.Name = "HitDiced10NumBox";
             this.HitDiced10NumBox.Size = new System.Drawing.Size(32, 18);
             this.HitDiced10NumBox.TabIndex = 112;
@@ -1668,7 +1769,7 @@
             // HitDiced8NumBox
             // 
             this.HitDiced8NumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.HitDiced8NumBox.Location = new System.Drawing.Point(47, 68);
+            this.HitDiced8NumBox.Location = new System.Drawing.Point(267, 517);
             this.HitDiced8NumBox.Name = "HitDiced8NumBox";
             this.HitDiced8NumBox.Size = new System.Drawing.Size(32, 18);
             this.HitDiced8NumBox.TabIndex = 111;
@@ -1676,22 +1777,10 @@
             // HitDiced6NumBox
             // 
             this.HitDiced6NumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.HitDiced6NumBox.Location = new System.Drawing.Point(10, 68);
+            this.HitDiced6NumBox.Location = new System.Drawing.Point(230, 517);
             this.HitDiced6NumBox.Name = "HitDiced6NumBox";
             this.HitDiced6NumBox.Size = new System.Drawing.Size(32, 18);
             this.HitDiced6NumBox.TabIndex = 101;
-            // 
-            // HitDiceUseButton
-            // 
-            this.HitDiceUseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HitDiceUseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceUseButton.Location = new System.Drawing.Point(4, 87);
-            this.HitDiceUseButton.Name = "HitDiceUseButton";
-            this.HitDiceUseButton.Size = new System.Drawing.Size(63, 19);
-            this.HitDiceUseButton.TabIndex = 109;
-            this.HitDiceUseButton.Text = "Use";
-            this.HitDiceUseButton.UseVisualStyleBackColor = true;
-            this.HitDiceUseButton.Click += new System.EventHandler(this.buttonNoPadding1_Click);
             // 
             // profBonusBox
             // 
@@ -1833,7 +1922,7 @@
             this.panel5.Controls.Add(this.loadButton);
             this.panel5.Controls.Add(this.SaveAsButton);
             this.panel5.Controls.Add(this.saveButton);
-            this.panel5.Location = new System.Drawing.Point(458, 34);
+            this.panel5.Location = new System.Drawing.Point(452, 222);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 74);
             this.panel5.TabIndex = 157;
@@ -1970,7 +2059,7 @@
             this.customUpDown1.BackColor = System.Drawing.SystemColors.Control;
             this.customUpDown1.Location = new System.Drawing.Point(140, 43);
             this.customUpDown1.Name = "customUpDown1";
-            this.customUpDown1.Size = new System.Drawing.Size(48, 30);
+            this.customUpDown1.Size = new System.Drawing.Size(48, 23);
             this.customUpDown1.TabIndex = 234;
             // 
             // proficiencyCheckBox1
@@ -4733,12 +4822,17 @@
             this.Controls.Add(this.customTextBox1name);
             this.Controls.Add(this.customTextBox1levelClass);
             this.Controls.Add(this.customTextBox3alignment);
+            this.Controls.Add(this.autoHealHitDice);
             this.Controls.Add(this.customTextBox2background);
             this.Controls.Add(this.customTextBox1race);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.profLabel);
+            this.Controls.Add(this.HitDiced12NumBox);
             this.Controls.Add(this.proficienciesCheckBoxes);
+            this.Controls.Add(this.HitDiced10NumBox);
             this.Controls.Add(this.panel11);
+            this.Controls.Add(this.HitDiced8NumBox);
+            this.Controls.Add(this.HitDiced6NumBox);
             this.Controls.Add(this.miscRollDropDown);
             this.Controls.Add(this.MiscRollflatnumericUpDown);
             this.Controls.Add(this.miscRollbutton);
@@ -4755,7 +4849,6 @@
             this.Controls.Add(this.featsPanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.HitDiceHeader);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InventoryTextBox);
@@ -4900,7 +4993,6 @@
         private System.Windows.Forms.Label HPLabel;
         private System.Windows.Forms.Label temphpnumberslabel;
         private CustomButtons.ButtonNoPadding SetMaxHP;
-        private System.Windows.Forms.Label HitDiceHeader;
         private System.Windows.Forms.TextBox ACMiscBox;
         private System.Windows.Forms.TextBox ACDexBox;
         private System.Windows.Forms.TextBox ACArmorBox;
@@ -5174,6 +5266,15 @@
         private System.Windows.Forms.Label conmodlabel;
         private System.Windows.Forms.Label conlabel;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private CustomControls.CustomCheckBox customCheckBox2;
+        private CustomControls.CustomUpDown customUpDown2;
+        private CustomControls.CustomUpDown customUpDown4;
+        private CustomControls.CustomUpDown customUpDown5;
+        private CustomControls.CustomUpDown customUpDown3;
     }
 }
 
