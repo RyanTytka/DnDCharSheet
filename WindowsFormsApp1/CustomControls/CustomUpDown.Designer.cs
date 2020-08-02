@@ -39,7 +39,7 @@
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Location = new System.Drawing.Point(25, 5);
+            this.settingsButton.Location = new System.Drawing.Point(29, 1);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(16, 10);
             this.settingsButton.TabIndex = 228;
@@ -52,7 +52,7 @@
             this.buttonNoPadding1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding1.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding1.Location = new System.Drawing.Point(25, 18);
+            this.buttonNoPadding1.Location = new System.Drawing.Point(29, 14);
             this.buttonNoPadding1.Name = "buttonNoPadding1";
             this.buttonNoPadding1.Size = new System.Drawing.Size(16, 10);
             this.buttonNoPadding1.TabIndex = 229;
@@ -61,13 +61,13 @@
             // 
             // textBox
             // 
-            this.textBox.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.ForeColor = System.Drawing.Color.Maroon;
-            this.textBox.Location = new System.Drawing.Point(0, 7);
+            this.textBox.Location = new System.Drawing.Point(0, 3);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(22, 19);
+            this.textBox.Size = new System.Drawing.Size(26, 19);
             this.textBox.TabIndex = 230;
             this.textBox.Text = "10";
             this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -78,11 +78,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.buttonNoPadding1);
             this.Controls.Add(this.settingsButton);
             this.Name = "CustomUpDown";
-            this.Size = new System.Drawing.Size(43, 34);
+            this.Size = new System.Drawing.Size(48, 25);
             this.ResumeLayout(false);
             this.PerformLayout();
 

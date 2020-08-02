@@ -190,6 +190,7 @@
             this.backgroundtextBox = new System.Windows.Forms.TextBox();
             this.AlignmenttextBox = new System.Windows.Forms.TextBox();
             this.featsPanel = new System.Windows.Forms.Panel();
+            this.customUpDown1 = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.proficiencyCheckBox1 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
             this.customCheckBox1 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -339,11 +340,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.currentHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBox();
+            this.tempHPlabel = new System.Windows.Forms.Label();
+            this.MaxHPlabel = new System.Windows.Forms.Label();
+            this.currentHPlabel = new System.Windows.Forms.Label();
             this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
             this.settingsButton = new CustomButtons.ButtonNoPadding();
             this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
-            this.customUpDown1 = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.maxHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBox();
+            this.tempHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBox();
             this.statPanel.SuspendLayout();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
@@ -377,12 +384,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputTextBox
             // 
             this.outputTextBox.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTextBox.Location = new System.Drawing.Point(10, 496);
+            this.outputTextBox.Location = new System.Drawing.Point(19, 539);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
@@ -393,7 +401,7 @@
             // 
             this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputLabel.Location = new System.Drawing.Point(7, 476);
+            this.outputLabel.Location = new System.Drawing.Point(18, 517);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(52, 16);
             this.outputLabel.TabIndex = 1;
@@ -446,7 +454,7 @@
             this.statPanel.Controls.Add(this.strAddButton);
             this.statPanel.Controls.Add(this.strLabel);
             this.statPanel.Controls.Add(this.strDisplayBox);
-            this.statPanel.Location = new System.Drawing.Point(10, 78);
+            this.statPanel.Location = new System.Drawing.Point(14, 165);
             this.statPanel.Name = "statPanel";
             this.statPanel.Size = new System.Drawing.Size(202, 395);
             this.statPanel.TabIndex = 2;
@@ -1786,7 +1794,6 @@
             this.panel1.Controls.Add(this.temphpnumberslabel);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label28);
             this.panel1.Location = new System.Drawing.Point(417, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 63);
@@ -1970,12 +1977,12 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.SystemColors.Control;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(2, 3);
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label28.Location = new System.Drawing.Point(9, 2);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 16);
+            this.label28.Size = new System.Drawing.Size(180, 17);
             this.label28.TabIndex = 224;
-            this.label28.Text = "Current :";
+            this.label28.Text = "Current    Max      Temp";
             // 
             // HPLabel
             // 
@@ -2322,7 +2329,7 @@
             this.panel5.Controls.Add(this.loadButton);
             this.panel5.Controls.Add(this.SaveAsButton);
             this.panel5.Controls.Add(this.saveButton);
-            this.panel5.Location = new System.Drawing.Point(361, 5);
+            this.panel5.Location = new System.Drawing.Point(14, 90);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 74);
             this.panel5.TabIndex = 157;
@@ -2461,6 +2468,14 @@
             this.featsPanel.Name = "featsPanel";
             this.featsPanel.Size = new System.Drawing.Size(277, 218);
             this.featsPanel.TabIndex = 96;
+            // 
+            // customUpDown1
+            // 
+            this.customUpDown1.BackColor = System.Drawing.SystemColors.Control;
+            this.customUpDown1.Location = new System.Drawing.Point(140, 43);
+            this.customUpDown1.Name = "customUpDown1";
+            this.customUpDown1.Size = new System.Drawing.Size(48, 30);
+            this.customUpDown1.TabIndex = 234;
             // 
             // proficiencyCheckBox1
             // 
@@ -2650,10 +2665,11 @@
             // 
             this.nameLabel.BackColor = System.Drawing.SystemColors.Control;
             this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.ForeColor = System.Drawing.Color.Maroon;
             this.nameLabel.Location = new System.Drawing.Point(10, 2);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(202, 20);
+            this.nameLabel.Size = new System.Drawing.Size(202, 22);
             this.nameLabel.TabIndex = 166;
             this.nameLabel.Text = "Character Name";
             this.nameLabel.TextChanged += new System.EventHandler(this.nameLabel_TextChanged);
@@ -2662,7 +2678,7 @@
             // 
             this.levelTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.levelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.levelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelTextBox.Location = new System.Drawing.Point(10, 24);
             this.levelTextBox.Multiline = true;
             this.levelTextBox.Name = "levelTextBox";
@@ -4306,7 +4322,7 @@
             this.panel11.Controls.Add(this.AlignmenttextBox);
             this.panel11.Controls.Add(this.SpeedTextBox);
             this.panel11.Controls.Add(this.label27);
-            this.panel11.Location = new System.Drawing.Point(218, 5);
+            this.panel11.Location = new System.Drawing.Point(702, 389);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(140, 90);
             this.panel11.TabIndex = 156;
@@ -4380,6 +4396,66 @@
             this.label14.TabIndex = 224;
             this.label14.Text = "Spellcasting";
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.tempHPTextbox);
+            this.panel12.Controls.Add(this.maxHPTextbox);
+            this.panel12.Controls.Add(this.currentHPTextbox);
+            this.panel12.Controls.Add(this.tempHPlabel);
+            this.panel12.Controls.Add(this.MaxHPlabel);
+            this.panel12.Controls.Add(this.currentHPlabel);
+            this.panel12.Controls.Add(this.label28);
+            this.panel12.Location = new System.Drawing.Point(217, 9);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(259, 70);
+            this.panel12.TabIndex = 235;
+            // 
+            // currentHPTextbox
+            // 
+            this.currentHPTextbox.Location = new System.Drawing.Point(25, 40);
+            this.currentHPTextbox.Name = "currentHPTextbox";
+            this.currentHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.currentHPTextbox.TabIndex = 234;
+            // 
+            // tempHPlabel
+            // 
+            this.tempHPlabel.AutoSize = true;
+            this.tempHPlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.tempHPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tempHPlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.tempHPlabel.Location = new System.Drawing.Point(145, 19);
+            this.tempHPlabel.Name = "tempHPlabel";
+            this.tempHPlabel.Size = new System.Drawing.Size(39, 20);
+            this.tempHPlabel.TabIndex = 227;
+            this.tempHPlabel.Text = "100";
+            this.tempHPlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MaxHPlabel
+            // 
+            this.MaxHPlabel.AutoSize = true;
+            this.MaxHPlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.MaxHPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.MaxHPlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.MaxHPlabel.Location = new System.Drawing.Point(81, 19);
+            this.MaxHPlabel.Name = "MaxHPlabel";
+            this.MaxHPlabel.Size = new System.Drawing.Size(39, 20);
+            this.MaxHPlabel.TabIndex = 226;
+            this.MaxHPlabel.Text = "100";
+            this.MaxHPlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // currentHPlabel
+            // 
+            this.currentHPlabel.AutoSize = true;
+            this.currentHPlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.currentHPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.currentHPlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.currentHPlabel.Location = new System.Drawing.Point(20, 19);
+            this.currentHPlabel.Name = "currentHPlabel";
+            this.currentHPlabel.Size = new System.Drawing.Size(39, 20);
+            this.currentHPlabel.TabIndex = 225;
+            this.currentHPlabel.Text = "100";
+            this.currentHPlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // proficienciesCheckBoxes
             // 
             this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 116);
@@ -4425,18 +4501,27 @@
             this.miscRollbutton.UseVisualStyleBackColor = true;
             this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
             // 
-            // customUpDown1
+            // maxHPTextbox
             // 
-            this.customUpDown1.Location = new System.Drawing.Point(144, 70);
-            this.customUpDown1.Name = "customUpDown1";
-            this.customUpDown1.Size = new System.Drawing.Size(48, 30);
-            this.customUpDown1.TabIndex = 234;
+            this.maxHPTextbox.Location = new System.Drawing.Point(85, 40);
+            this.maxHPTextbox.Name = "maxHPTextbox";
+            this.maxHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.maxHPTextbox.TabIndex = 235;
+            // 
+            // tempHPTextbox
+            // 
+            this.tempHPTextbox.Location = new System.Drawing.Point(150, 40);
+            this.tempHPTextbox.Name = "tempHPTextbox";
+            this.tempHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.tempHPTextbox.TabIndex = 236;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 598);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1204, 665);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.profLabel);
             this.Controls.Add(this.proficienciesCheckBoxes);
             this.Controls.Add(this.label14);
@@ -4530,6 +4615,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4852,6 +4939,13 @@
         private CustomControls.ProficiencyCheckBox proficiencyCheckBox1;
         private CustomControls.CustomCheckedList proficienciesCheckBoxes;
         private CustomControls.CustomUpDown customUpDown1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label currentHPlabel;
+        private System.Windows.Forms.Label tempHPlabel;
+        private System.Windows.Forms.Label MaxHPlabel;
+        private CustomControls.CustomTextBox currentHPTextbox;
+        private CustomControls.CustomTextBox tempHPTextbox;
+        private CustomControls.CustomTextBox maxHPTextbox;
     }
 }
 

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+//using System.Windows.Controls;
+using System.Windows.Forms.Integration;
+
 
 
 namespace WindowsFormsApp1
@@ -151,6 +154,20 @@ namespace WindowsFormsApp1
             proficienciesCheckBoxes.attributes = statMods;
             proficienciesCheckBoxes.modifiers = proficiencies;
             proficienciesCheckBoxes.profBonus = profBonus;
+
+            //custom textbox stuff
+            var box = (currentHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.TextChanged += RemoveLetters;
+            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.Tag = "current";
+            box = (maxHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.TextChanged += RemoveLetters;
+            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.Tag = "max";
+            box = (tempHPTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box.TextChanged += RemoveLetters;
+            box.KeyDown += (System.Windows.Input.KeyEventHandler)HPTextboxPressEnter;
+            box.Tag = "temp";
         }
 
 
@@ -2287,12 +2304,13 @@ namespace WindowsFormsApp1
         private void RemoveLetters(object sender, EventArgs e)
         {
             //remove letters
-            string s = ((TextBox)sender).Text;
+            var box = ((System.Windows.Controls.TextBox)sender);
+            string s = box.Text;
             string end = "";
             for (int i = 0; i < s.Length; i++)
             {
                 if (int.TryParse(s[i].ToString(), out int num) ||
-                    (i == 0 && s[i] == '-'))
+                    (i == 0 && s[i] == '-') || (i == 0 && s[i] == '+'))
                 {
                     end += s[i];
                 }
@@ -2300,10 +2318,10 @@ namespace WindowsFormsApp1
             if (s.Length > 0 && !s.Substring(0, s.Length - 1).Equals(end) && !removedLetters)
                 SetUnsaved();
             removedLetters = true;      //"mutex" so that setting the text does not trigger this again
-            ((TextBox)sender).Text = end;
+            box.Text = end;
             removedLetters = false;
-            ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
-            ((TextBox)sender).SelectionLength = 0;
+            box.SelectionStart = box.Text.Length;
+            box.SelectionLength = 0;
         }
 
         private void buttonNoPadding7_Click(object sender, EventArgs e)
@@ -2984,6 +3002,58 @@ namespace WindowsFormsApp1
                 string fileName = exportFileDialog.FileName;
                 saveFile(fileName);
                 saveButton.Enabled = false;
+            }
+        }
+
+        // press enter key to submit hp changes
+        private void HPTextboxPressEnter(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            var box = sender as System.Windows.Controls.TextBox;
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                if (box.Text.Length == 0)
+                    return;
+
+                if(box.Text[0] == '+' || box.Text[0] == '-')
+                {
+                    if (box.Text.Length == 1)
+                        return;
+
+                    // add/subtract value
+                    if (box.Tag.ToString() == "current")
+                    {
+                        currentHPlabel.Text = (int.Parse(box.Text) + int.Parse(currentHPlabel.Text)).ToString();
+                    }
+                    else if (box.Tag.ToString() == "max")
+                    {
+                        MaxHPlabel.Text = (int.Parse(box.Text) + int.Parse(MaxHPlabel.Text)).ToString();
+                    }
+                    else
+                    {
+                        tempHPlabel.Text = (int.Parse(box.Text) + int.Parse(tempHPlabel.Text)).ToString();
+                    }
+                }
+                else
+                {
+                    // set value
+                    if (box.Tag.ToString() == "current")
+                    {
+                        currentHPlabel.Text = box.Text;
+                    }
+                    else if (box.Tag.ToString() == "max")
+                    {
+                        MaxHPlabel.Text = box.Text;
+                    }
+                    else
+                    {
+                        tempHPlabel.Text = box.Text;
+                    }
+                }
+
+                box.SelectAll();
+                // stop ding sound
+                e.Handled = true;
+
             }
         }
 
