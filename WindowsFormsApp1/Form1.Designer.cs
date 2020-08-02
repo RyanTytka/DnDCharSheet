@@ -31,50 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.outputLabel = new System.Windows.Forms.Label();
-            this.statPanel = new System.Windows.Forms.Panel();
-            this.chrModLabel = new System.Windows.Forms.TextBox();
-            this.chrSaveButton = new System.Windows.Forms.Button();
-            this.chrProfBox = new System.Windows.Forms.CheckBox();
-            this.chrDecreaseButton = new System.Windows.Forms.Button();
-            this.chrAddButton = new System.Windows.Forms.Button();
-            this.chrDisplayBox = new System.Windows.Forms.TextBox();
-            this.wisModLabel = new System.Windows.Forms.TextBox();
-            this.wisSaveButton = new System.Windows.Forms.Button();
-            this.wisProfBox = new System.Windows.Forms.CheckBox();
-            this.wisDecreaseButton = new System.Windows.Forms.Button();
-            this.wisAddButton = new System.Windows.Forms.Button();
-            this.wisDisplayBox = new System.Windows.Forms.TextBox();
-            this.intModLabel = new System.Windows.Forms.TextBox();
-            this.intSaveButton = new System.Windows.Forms.Button();
-            this.intProfBox = new System.Windows.Forms.CheckBox();
-            this.intDecreaseButton = new System.Windows.Forms.Button();
-            this.intAddButton = new System.Windows.Forms.Button();
-            this.intDisplayBox = new System.Windows.Forms.TextBox();
-            this.conModLabel = new System.Windows.Forms.TextBox();
-            this.conSaveButton = new System.Windows.Forms.Button();
-            this.conProfBox = new System.Windows.Forms.CheckBox();
-            this.conDecreaseButton = new System.Windows.Forms.Button();
-            this.conAddButton = new System.Windows.Forms.Button();
-            this.conDisplayBox = new System.Windows.Forms.TextBox();
-            this.dexModLabel = new System.Windows.Forms.TextBox();
-            this.dexSaveButton = new System.Windows.Forms.Button();
-            this.dexProfBox = new System.Windows.Forms.CheckBox();
-            this.dexDecreaseButton = new System.Windows.Forms.Button();
-            this.dexAddButton = new System.Windows.Forms.Button();
-            this.dexDisplayBox = new System.Windows.Forms.TextBox();
-            this.saveThrowLabels = new System.Windows.Forms.Label();
-            this.saveAdvantage = new System.Windows.Forms.CheckBox();
-            this.strModLabel_old = new System.Windows.Forms.TextBox();
-            this.strSaveButton = new System.Windows.Forms.Button();
-            this.strProfBox = new System.Windows.Forms.CheckBox();
-            this.strDecreaseButton = new System.Windows.Forms.Button();
-            this.strAddButton = new System.Windows.Forms.Button();
-            this.strDisplayBox = new System.Windows.Forms.TextBox();
-            this.chrLabel = new System.Windows.Forms.Label();
-            this.wisLabel = new System.Windows.Forms.Label();
-            this.intLabel = new System.Windows.Forms.Label();
-            this.conLabel = new System.Windows.Forms.Label();
-            this.dexLabel = new System.Windows.Forms.Label();
+            this.chrLabeltitle = new System.Windows.Forms.Label();
+            this.wisLabeltitle = new System.Windows.Forms.Label();
+            this.intLabeltitle = new System.Windows.Forms.Label();
+            this.conLabeltitle = new System.Windows.Forms.Label();
+            this.dexLabeltitle = new System.Windows.Forms.Label();
             this.stengthLabel = new System.Windows.Forms.Label();
             this.ProficienciesChecks = new System.Windows.Forms.CheckedListBox();
             this.profCheckshalf = new System.Windows.Forms.CheckedListBox();
@@ -363,49 +324,48 @@
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.label52 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.buttonNoPadding1 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
-            this.customCheckBox2 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.strSaveButtonNew = new CustomButtons.ButtonNoPadding();
-            this.strDownButton = new CustomButtons.ButtonNoPadding();
-            this.strUpButton = new CustomButtons.ButtonNoPadding();
-            this.strProfCheckBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.strRedModLabel = new System.Windows.Forms.Label();
-            this.strRedLabel = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.buttonNoPadding4 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
-            this.customCheckBox3 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.buttonNoPadding7 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding9 = new CustomButtons.ButtonNoPadding();
-            this.customCheckBox4 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.buttonNoPadding10 = new CustomButtons.ButtonNoPadding();
+            this.conSaveButton = new CustomButtons.ButtonNoPadding();
+            this.charSaveButton = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding11 = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding12 = new CustomButtons.ButtonNoPadding();
-            this.customCheckBox5 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
+            this.charProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.charmodlabel = new System.Windows.Forms.Label();
+            this.charlabel = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.buttonNoPadding13 = new CustomButtons.ButtonNoPadding();
+            this.wisSaveButton = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding14 = new CustomButtons.ButtonNoPadding();
             this.buttonNoPadding15 = new CustomButtons.ButtonNoPadding();
-            this.customCheckBox6 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
+            this.wisProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.wismodlabel = new System.Windows.Forms.Label();
+            this.wislabel = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.statPanel.SuspendLayout();
+            this.intSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
+            this.intProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.intmodlabel = new System.Windows.Forms.Label();
+            this.intlabel = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding9 = new CustomButtons.ButtonNoPadding();
+            this.conProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.conmodlabel = new System.Windows.Forms.Label();
+            this.conlabel = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.dexSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
+            this.dexProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.dexmodlabel = new System.Windows.Forms.Label();
+            this.dexlabel = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.strSaveButton = new CustomButtons.ButtonNoPadding();
+            this.strDownButton = new CustomButtons.ButtonNoPadding();
+            this.strUpButton = new CustomButtons.ButtonNoPadding();
+            this.strProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.strModLabel = new System.Windows.Forms.Label();
+            this.strLabel = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -463,567 +423,60 @@
             this.outputLabel.TabIndex = 1;
             this.outputLabel.Text = "Output";
             // 
-            // statPanel
-            // 
-            this.statPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statPanel.Controls.Add(this.chrModLabel);
-            this.statPanel.Controls.Add(this.chrSaveButton);
-            this.statPanel.Controls.Add(this.chrProfBox);
-            this.statPanel.Controls.Add(this.chrDecreaseButton);
-            this.statPanel.Controls.Add(this.chrAddButton);
-            this.statPanel.Controls.Add(this.chrDisplayBox);
-            this.statPanel.Controls.Add(this.wisModLabel);
-            this.statPanel.Controls.Add(this.wisSaveButton);
-            this.statPanel.Controls.Add(this.wisProfBox);
-            this.statPanel.Controls.Add(this.wisDecreaseButton);
-            this.statPanel.Controls.Add(this.wisAddButton);
-            this.statPanel.Controls.Add(this.wisDisplayBox);
-            this.statPanel.Controls.Add(this.intModLabel);
-            this.statPanel.Controls.Add(this.intSaveButton);
-            this.statPanel.Controls.Add(this.intProfBox);
-            this.statPanel.Controls.Add(this.intDecreaseButton);
-            this.statPanel.Controls.Add(this.intAddButton);
-            this.statPanel.Controls.Add(this.intDisplayBox);
-            this.statPanel.Controls.Add(this.conModLabel);
-            this.statPanel.Controls.Add(this.conSaveButton);
-            this.statPanel.Controls.Add(this.conProfBox);
-            this.statPanel.Controls.Add(this.conDecreaseButton);
-            this.statPanel.Controls.Add(this.conAddButton);
-            this.statPanel.Controls.Add(this.conDisplayBox);
-            this.statPanel.Controls.Add(this.dexModLabel);
-            this.statPanel.Controls.Add(this.dexSaveButton);
-            this.statPanel.Controls.Add(this.dexProfBox);
-            this.statPanel.Controls.Add(this.dexDecreaseButton);
-            this.statPanel.Controls.Add(this.dexAddButton);
-            this.statPanel.Controls.Add(this.dexDisplayBox);
-            this.statPanel.Controls.Add(this.saveThrowLabels);
-            this.statPanel.Controls.Add(this.saveAdvantage);
-            this.statPanel.Controls.Add(this.strModLabel_old);
-            this.statPanel.Controls.Add(this.strSaveButton);
-            this.statPanel.Controls.Add(this.strProfBox);
-            this.statPanel.Controls.Add(this.strDecreaseButton);
-            this.statPanel.Controls.Add(this.strAddButton);
-            this.statPanel.Controls.Add(this.strDisplayBox);
-            this.statPanel.Location = new System.Drawing.Point(214, 138);
-            this.statPanel.Name = "statPanel";
-            this.statPanel.Size = new System.Drawing.Size(202, 395);
-            this.statPanel.TabIndex = 2;
-            // 
-            // chrModLabel
-            // 
-            this.chrModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrModLabel.Location = new System.Drawing.Point(8, 355);
-            this.chrModLabel.Multiline = true;
-            this.chrModLabel.Name = "chrModLabel";
-            this.chrModLabel.ReadOnly = true;
-            this.chrModLabel.Size = new System.Drawing.Size(28, 22);
-            this.chrModLabel.TabIndex = 43;
-            this.chrModLabel.Text = "0";
-            this.chrModLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chrModLabel.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // chrSaveButton
-            // 
-            this.chrSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrSaveButton.Location = new System.Drawing.Point(123, 357);
-            this.chrSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.chrSaveButton.Name = "chrSaveButton";
-            this.chrSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.chrSaveButton.TabIndex = 42;
-            this.chrSaveButton.Text = "Save\r\nThrow";
-            this.chrSaveButton.UseVisualStyleBackColor = true;
-            this.chrSaveButton.Click += new System.EventHandler(this.chrSaveButton_Click);
-            // 
-            // chrProfBox
-            // 
-            this.chrProfBox.AutoSize = true;
-            this.chrProfBox.Location = new System.Drawing.Point(124, 335);
-            this.chrProfBox.Name = "chrProfBox";
-            this.chrProfBox.Size = new System.Drawing.Size(70, 17);
-            this.chrProfBox.TabIndex = 41;
-            this.chrProfBox.Text = "Proficient";
-            this.chrProfBox.UseVisualStyleBackColor = true;
-            this.chrProfBox.CheckedChanged += new System.EventHandler(this.chrProfBox_CheckedChanged);
-            // 
-            // chrDecreaseButton
-            // 
-            this.chrDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrDecreaseButton.Location = new System.Drawing.Point(89, 370);
-            this.chrDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.chrDecreaseButton.Name = "chrDecreaseButton";
-            this.chrDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.chrDecreaseButton.TabIndex = 40;
-            this.chrDecreaseButton.Text = "-";
-            this.chrDecreaseButton.UseVisualStyleBackColor = true;
-            this.chrDecreaseButton.Click += new System.EventHandler(this.chrDecreaseButton_Click);
-            // 
-            // chrAddButton
-            // 
-            this.chrAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrAddButton.Location = new System.Drawing.Point(89, 347);
-            this.chrAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.chrAddButton.Name = "chrAddButton";
-            this.chrAddButton.Size = new System.Drawing.Size(20, 20);
-            this.chrAddButton.TabIndex = 39;
-            this.chrAddButton.Text = "+";
-            this.chrAddButton.UseVisualStyleBackColor = true;
-            this.chrAddButton.Click += new System.EventHandler(this.chrAddButton_Click);
-            // 
-            // chrDisplayBox
-            // 
-            this.chrDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chrDisplayBox.Location = new System.Drawing.Point(43, 347);
-            this.chrDisplayBox.Multiline = true;
-            this.chrDisplayBox.Name = "chrDisplayBox";
-            this.chrDisplayBox.ReadOnly = true;
-            this.chrDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.chrDisplayBox.TabIndex = 37;
-            this.chrDisplayBox.Text = "10";
-            this.chrDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chrDisplayBox.TextChanged += new System.EventHandler(this.chrModLabel_TextChanged);
-            // 
-            // wisModLabel
-            // 
-            this.wisModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisModLabel.Location = new System.Drawing.Point(8, 293);
-            this.wisModLabel.Multiline = true;
-            this.wisModLabel.Name = "wisModLabel";
-            this.wisModLabel.ReadOnly = true;
-            this.wisModLabel.Size = new System.Drawing.Size(28, 22);
-            this.wisModLabel.TabIndex = 36;
-            this.wisModLabel.Text = "0";
-            this.wisModLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.wisModLabel.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // wisSaveButton
-            // 
-            this.wisSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisSaveButton.Location = new System.Drawing.Point(123, 295);
-            this.wisSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.wisSaveButton.Name = "wisSaveButton";
-            this.wisSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.wisSaveButton.TabIndex = 35;
-            this.wisSaveButton.Text = "Save\r\nThrow";
-            this.wisSaveButton.UseVisualStyleBackColor = true;
-            this.wisSaveButton.Click += new System.EventHandler(this.wisSaveButton_Click);
-            // 
-            // wisProfBox
-            // 
-            this.wisProfBox.AutoSize = true;
-            this.wisProfBox.Location = new System.Drawing.Point(124, 273);
-            this.wisProfBox.Name = "wisProfBox";
-            this.wisProfBox.Size = new System.Drawing.Size(70, 17);
-            this.wisProfBox.TabIndex = 34;
-            this.wisProfBox.Text = "Proficient";
-            this.wisProfBox.UseVisualStyleBackColor = true;
-            this.wisProfBox.CheckedChanged += new System.EventHandler(this.wisProfBox_CheckedChanged);
-            // 
-            // wisDecreaseButton
-            // 
-            this.wisDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisDecreaseButton.Location = new System.Drawing.Point(89, 308);
-            this.wisDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.wisDecreaseButton.Name = "wisDecreaseButton";
-            this.wisDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.wisDecreaseButton.TabIndex = 33;
-            this.wisDecreaseButton.Text = "-";
-            this.wisDecreaseButton.UseVisualStyleBackColor = true;
-            this.wisDecreaseButton.Click += new System.EventHandler(this.wisDecreaseButton_Click);
-            // 
-            // wisAddButton
-            // 
-            this.wisAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisAddButton.Location = new System.Drawing.Point(89, 285);
-            this.wisAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.wisAddButton.Name = "wisAddButton";
-            this.wisAddButton.Size = new System.Drawing.Size(20, 20);
-            this.wisAddButton.TabIndex = 32;
-            this.wisAddButton.Text = "+";
-            this.wisAddButton.UseVisualStyleBackColor = true;
-            this.wisAddButton.Click += new System.EventHandler(this.wisAddButton_Click);
-            // 
-            // wisDisplayBox
-            // 
-            this.wisDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisDisplayBox.Location = new System.Drawing.Point(43, 285);
-            this.wisDisplayBox.Multiline = true;
-            this.wisDisplayBox.Name = "wisDisplayBox";
-            this.wisDisplayBox.ReadOnly = true;
-            this.wisDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.wisDisplayBox.TabIndex = 30;
-            this.wisDisplayBox.Text = "10";
-            this.wisDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.wisDisplayBox.TextChanged += new System.EventHandler(this.wisModLabel_TextChanged);
-            // 
-            // intModLabel
-            // 
-            this.intModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intModLabel.Location = new System.Drawing.Point(8, 231);
-            this.intModLabel.Multiline = true;
-            this.intModLabel.Name = "intModLabel";
-            this.intModLabel.ReadOnly = true;
-            this.intModLabel.Size = new System.Drawing.Size(28, 22);
-            this.intModLabel.TabIndex = 29;
-            this.intModLabel.Text = "0";
-            this.intModLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.intModLabel.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // intSaveButton
-            // 
-            this.intSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intSaveButton.Location = new System.Drawing.Point(123, 233);
-            this.intSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.intSaveButton.Name = "intSaveButton";
-            this.intSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.intSaveButton.TabIndex = 28;
-            this.intSaveButton.Text = "Save\r\nThrow";
-            this.intSaveButton.UseVisualStyleBackColor = true;
-            this.intSaveButton.Click += new System.EventHandler(this.intSaveButton_Click);
-            // 
-            // intProfBox
-            // 
-            this.intProfBox.AutoSize = true;
-            this.intProfBox.Location = new System.Drawing.Point(124, 210);
-            this.intProfBox.Name = "intProfBox";
-            this.intProfBox.Size = new System.Drawing.Size(70, 17);
-            this.intProfBox.TabIndex = 27;
-            this.intProfBox.Text = "Proficient";
-            this.intProfBox.UseVisualStyleBackColor = true;
-            this.intProfBox.CheckedChanged += new System.EventHandler(this.intProfBox_CheckedChanged);
-            // 
-            // intDecreaseButton
-            // 
-            this.intDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intDecreaseButton.Location = new System.Drawing.Point(89, 246);
-            this.intDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.intDecreaseButton.Name = "intDecreaseButton";
-            this.intDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.intDecreaseButton.TabIndex = 26;
-            this.intDecreaseButton.Text = "-";
-            this.intDecreaseButton.UseVisualStyleBackColor = true;
-            this.intDecreaseButton.Click += new System.EventHandler(this.intDecreaseButton_Click);
-            // 
-            // intAddButton
-            // 
-            this.intAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intAddButton.Location = new System.Drawing.Point(89, 223);
-            this.intAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.intAddButton.Name = "intAddButton";
-            this.intAddButton.Size = new System.Drawing.Size(20, 20);
-            this.intAddButton.TabIndex = 25;
-            this.intAddButton.Text = "+";
-            this.intAddButton.UseVisualStyleBackColor = true;
-            this.intAddButton.Click += new System.EventHandler(this.intAddButton_Click);
-            // 
-            // intDisplayBox
-            // 
-            this.intDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intDisplayBox.Location = new System.Drawing.Point(43, 223);
-            this.intDisplayBox.Multiline = true;
-            this.intDisplayBox.Name = "intDisplayBox";
-            this.intDisplayBox.ReadOnly = true;
-            this.intDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.intDisplayBox.TabIndex = 23;
-            this.intDisplayBox.Text = "10";
-            this.intDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.intDisplayBox.TextChanged += new System.EventHandler(this.intModLabel_TextChanged);
-            // 
-            // conModLabel
-            // 
-            this.conModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conModLabel.Location = new System.Drawing.Point(8, 168);
-            this.conModLabel.Multiline = true;
-            this.conModLabel.Name = "conModLabel";
-            this.conModLabel.ReadOnly = true;
-            this.conModLabel.Size = new System.Drawing.Size(28, 22);
-            this.conModLabel.TabIndex = 22;
-            this.conModLabel.Text = "0";
-            this.conModLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.conModLabel.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // conSaveButton
-            // 
-            this.conSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conSaveButton.Location = new System.Drawing.Point(123, 170);
-            this.conSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.conSaveButton.Name = "conSaveButton";
-            this.conSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.conSaveButton.TabIndex = 21;
-            this.conSaveButton.Text = "Save\r\nThrow";
-            this.conSaveButton.UseVisualStyleBackColor = true;
-            this.conSaveButton.Click += new System.EventHandler(this.conSaveButton_Click);
-            // 
-            // conProfBox
-            // 
-            this.conProfBox.AutoSize = true;
-            this.conProfBox.Location = new System.Drawing.Point(124, 148);
-            this.conProfBox.Name = "conProfBox";
-            this.conProfBox.Size = new System.Drawing.Size(70, 17);
-            this.conProfBox.TabIndex = 20;
-            this.conProfBox.Text = "Proficient";
-            this.conProfBox.UseVisualStyleBackColor = true;
-            this.conProfBox.CheckedChanged += new System.EventHandler(this.conProfBox_CheckedChanged);
-            // 
-            // conDecreaseButton
-            // 
-            this.conDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conDecreaseButton.Location = new System.Drawing.Point(89, 183);
-            this.conDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.conDecreaseButton.Name = "conDecreaseButton";
-            this.conDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.conDecreaseButton.TabIndex = 19;
-            this.conDecreaseButton.Text = "-";
-            this.conDecreaseButton.UseVisualStyleBackColor = true;
-            this.conDecreaseButton.Click += new System.EventHandler(this.conDecreaseButton_Click);
-            // 
-            // conAddButton
-            // 
-            this.conAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conAddButton.Location = new System.Drawing.Point(89, 160);
-            this.conAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.conAddButton.Name = "conAddButton";
-            this.conAddButton.Size = new System.Drawing.Size(20, 20);
-            this.conAddButton.TabIndex = 18;
-            this.conAddButton.Text = "+";
-            this.conAddButton.UseVisualStyleBackColor = true;
-            this.conAddButton.Click += new System.EventHandler(this.conAddButton_Click);
-            // 
-            // conDisplayBox
-            // 
-            this.conDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conDisplayBox.Location = new System.Drawing.Point(43, 160);
-            this.conDisplayBox.Multiline = true;
-            this.conDisplayBox.Name = "conDisplayBox";
-            this.conDisplayBox.ReadOnly = true;
-            this.conDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.conDisplayBox.TabIndex = 16;
-            this.conDisplayBox.Text = "10";
-            this.conDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.conDisplayBox.TextChanged += new System.EventHandler(this.conModLabel_TextChanged);
-            // 
-            // dexModLabel
-            // 
-            this.dexModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexModLabel.Location = new System.Drawing.Point(10, 106);
-            this.dexModLabel.Multiline = true;
-            this.dexModLabel.Name = "dexModLabel";
-            this.dexModLabel.ReadOnly = true;
-            this.dexModLabel.Size = new System.Drawing.Size(28, 22);
-            this.dexModLabel.TabIndex = 15;
-            this.dexModLabel.Text = "0";
-            this.dexModLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dexModLabel.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // dexSaveButton
-            // 
-            this.dexSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexSaveButton.Location = new System.Drawing.Point(125, 108);
-            this.dexSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.dexSaveButton.Name = "dexSaveButton";
-            this.dexSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.dexSaveButton.TabIndex = 14;
-            this.dexSaveButton.Text = "Save\r\nThrow";
-            this.dexSaveButton.UseVisualStyleBackColor = true;
-            this.dexSaveButton.Click += new System.EventHandler(this.dexSaveButton_Click);
-            // 
-            // dexProfBox
-            // 
-            this.dexProfBox.AutoSize = true;
-            this.dexProfBox.Location = new System.Drawing.Point(126, 86);
-            this.dexProfBox.Name = "dexProfBox";
-            this.dexProfBox.Size = new System.Drawing.Size(70, 17);
-            this.dexProfBox.TabIndex = 13;
-            this.dexProfBox.Text = "Proficient";
-            this.dexProfBox.UseVisualStyleBackColor = true;
-            this.dexProfBox.CheckedChanged += new System.EventHandler(this.dexProfBox_CheckedChanged);
-            // 
-            // dexDecreaseButton
-            // 
-            this.dexDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexDecreaseButton.Location = new System.Drawing.Point(91, 121);
-            this.dexDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.dexDecreaseButton.Name = "dexDecreaseButton";
-            this.dexDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.dexDecreaseButton.TabIndex = 12;
-            this.dexDecreaseButton.Text = "-";
-            this.dexDecreaseButton.UseVisualStyleBackColor = true;
-            this.dexDecreaseButton.Click += new System.EventHandler(this.dexDecreaseButton_Click);
-            // 
-            // dexAddButton
-            // 
-            this.dexAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexAddButton.Location = new System.Drawing.Point(91, 98);
-            this.dexAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.dexAddButton.Name = "dexAddButton";
-            this.dexAddButton.Size = new System.Drawing.Size(20, 20);
-            this.dexAddButton.TabIndex = 11;
-            this.dexAddButton.Text = "+";
-            this.dexAddButton.UseVisualStyleBackColor = true;
-            this.dexAddButton.Click += new System.EventHandler(this.dexAddButton_Click);
-            // 
-            // dexDisplayBox
-            // 
-            this.dexDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexDisplayBox.Location = new System.Drawing.Point(45, 98);
-            this.dexDisplayBox.Multiline = true;
-            this.dexDisplayBox.Name = "dexDisplayBox";
-            this.dexDisplayBox.ReadOnly = true;
-            this.dexDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.dexDisplayBox.TabIndex = 9;
-            this.dexDisplayBox.Text = "10";
-            this.dexDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dexDisplayBox.TextChanged += new System.EventHandler(this.dexModLabel_TextChanged);
-            // 
-            // saveThrowLabels
-            // 
-            this.saveThrowLabels.AutoSize = true;
-            this.saveThrowLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveThrowLabels.Location = new System.Drawing.Point(59, 1);
-            this.saveThrowLabels.Name = "saveThrowLabels";
-            this.saveThrowLabels.Size = new System.Drawing.Size(88, 20);
-            this.saveThrowLabels.TabIndex = 3;
-            this.saveThrowLabels.Text = "Attributes";
-            // 
-            // saveAdvantage
-            // 
-            this.saveAdvantage.AutoSize = true;
-            this.saveAdvantage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.saveAdvantage.Location = new System.Drawing.Point(177, 5);
-            this.saveAdvantage.Name = "saveAdvantage";
-            this.saveAdvantage.Size = new System.Drawing.Size(70, 17);
-            this.saveAdvantage.TabIndex = 3;
-            this.saveAdvantage.Text = "Two Rolls";
-            this.saveAdvantage.UseVisualStyleBackColor = true;
-            this.saveAdvantage.Visible = false;
-            this.saveAdvantage.CheckedChanged += new System.EventHandler(this.saveAdvantage_CheckedChanged);
-            // 
-            // strModLabel_old
-            // 
-            this.strModLabel_old.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strModLabel_old.Location = new System.Drawing.Point(9, 45);
-            this.strModLabel_old.Multiline = true;
-            this.strModLabel_old.Name = "strModLabel_old";
-            this.strModLabel_old.ReadOnly = true;
-            this.strModLabel_old.Size = new System.Drawing.Size(28, 22);
-            this.strModLabel_old.TabIndex = 8;
-            this.strModLabel_old.Text = "0";
-            this.strModLabel_old.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.strModLabel_old.TextChanged += new System.EventHandler(this.UpdateProficiencies);
-            // 
-            // strSaveButton
-            // 
-            this.strSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strSaveButton.Location = new System.Drawing.Point(124, 47);
-            this.strSaveButton.Margin = new System.Windows.Forms.Padding(0);
-            this.strSaveButton.Name = "strSaveButton";
-            this.strSaveButton.Size = new System.Drawing.Size(51, 33);
-            this.strSaveButton.TabIndex = 7;
-            this.strSaveButton.Text = "Save\r\nThrow";
-            this.strSaveButton.UseVisualStyleBackColor = true;
-            this.strSaveButton.Click += new System.EventHandler(this.strSaveButton_Click);
-            // 
-            // strProfBox
-            // 
-            this.strProfBox.AutoSize = true;
-            this.strProfBox.Location = new System.Drawing.Point(125, 25);
-            this.strProfBox.Name = "strProfBox";
-            this.strProfBox.Size = new System.Drawing.Size(70, 17);
-            this.strProfBox.TabIndex = 6;
-            this.strProfBox.Text = "Proficient";
-            this.strProfBox.UseVisualStyleBackColor = true;
-            this.strProfBox.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
-            // 
-            // strDecreaseButton
-            // 
-            this.strDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strDecreaseButton.Location = new System.Drawing.Point(90, 60);
-            this.strDecreaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.strDecreaseButton.Name = "strDecreaseButton";
-            this.strDecreaseButton.Size = new System.Drawing.Size(20, 20);
-            this.strDecreaseButton.TabIndex = 5;
-            this.strDecreaseButton.Text = "-";
-            this.strDecreaseButton.UseVisualStyleBackColor = true;
-            this.strDecreaseButton.Click += new System.EventHandler(this.strDecreaseButton_Click);
-            // 
-            // strAddButton
-            // 
-            this.strAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strAddButton.Location = new System.Drawing.Point(90, 37);
-            this.strAddButton.Margin = new System.Windows.Forms.Padding(0);
-            this.strAddButton.Name = "strAddButton";
-            this.strAddButton.Size = new System.Drawing.Size(20, 20);
-            this.strAddButton.TabIndex = 4;
-            this.strAddButton.Text = "+";
-            this.strAddButton.UseVisualStyleBackColor = true;
-            this.strAddButton.Click += new System.EventHandler(this.strAddButton_Click);
-            // 
-            // strDisplayBox
-            // 
-            this.strDisplayBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strDisplayBox.Location = new System.Drawing.Point(44, 37);
-            this.strDisplayBox.Multiline = true;
-            this.strDisplayBox.Name = "strDisplayBox";
-            this.strDisplayBox.ReadOnly = true;
-            this.strDisplayBox.Size = new System.Drawing.Size(40, 40);
-            this.strDisplayBox.TabIndex = 0;
-            this.strDisplayBox.Text = "10";
-            this.strDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.strDisplayBox.TextChanged += new System.EventHandler(this.strDisplayBox_TextChanged);
-            // 
-            // chrLabel
-            // 
-            this.chrLabel.AutoSize = true;
-            this.chrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.chrLabel.Location = new System.Drawing.Point(6, 284);
-            this.chrLabel.Name = "chrLabel";
-            this.chrLabel.Size = new System.Drawing.Size(89, 20);
-            this.chrLabel.TabIndex = 38;
-            this.chrLabel.Text = "Charisma";
-            this.chrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // wisLabel
-            // 
-            this.wisLabel.AutoSize = true;
-            this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.wisLabel.Location = new System.Drawing.Point(13, 231);
-            this.wisLabel.Name = "wisLabel";
-            this.wisLabel.Size = new System.Drawing.Size(76, 20);
-            this.wisLabel.TabIndex = 31;
-            this.wisLabel.Text = "Wisdom";
-            this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // intLabel
-            // 
-            this.intLabel.AutoSize = true;
-            this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.intLabel.Location = new System.Drawing.Point(0, 179);
-            this.intLabel.Name = "intLabel";
-            this.intLabel.Size = new System.Drawing.Size(105, 20);
-            this.intLabel.TabIndex = 24;
-            this.intLabel.Text = "Intelligence";
-            this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // conLabel
-            // 
-            this.conLabel.AutoSize = true;
-            this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.conLabel.Location = new System.Drawing.Point(-3, 127);
-            this.conLabel.Name = "conLabel";
-            this.conLabel.Size = new System.Drawing.Size(110, 20);
-            this.conLabel.TabIndex = 17;
-            this.conLabel.Text = "Constitution";
-            this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dexLabel
-            // 
-            this.dexLabel.AutoSize = true;
-            this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.dexLabel.Location = new System.Drawing.Point(10, 74);
-            this.dexLabel.Name = "dexLabel";
-            this.dexLabel.Size = new System.Drawing.Size(85, 20);
-            this.dexLabel.TabIndex = 10;
-            this.dexLabel.Text = "Dexterity";
-            this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // chrLabeltitle
+            // 
+            this.chrLabeltitle.AutoSize = true;
+            this.chrLabeltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.chrLabeltitle.Location = new System.Drawing.Point(6, 284);
+            this.chrLabeltitle.Name = "chrLabeltitle";
+            this.chrLabeltitle.Size = new System.Drawing.Size(89, 20);
+            this.chrLabeltitle.TabIndex = 38;
+            this.chrLabeltitle.Text = "Charisma";
+            this.chrLabeltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wisLabeltitle
+            // 
+            this.wisLabeltitle.AutoSize = true;
+            this.wisLabeltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.wisLabeltitle.Location = new System.Drawing.Point(13, 231);
+            this.wisLabeltitle.Name = "wisLabeltitle";
+            this.wisLabeltitle.Size = new System.Drawing.Size(76, 20);
+            this.wisLabeltitle.TabIndex = 31;
+            this.wisLabeltitle.Text = "Wisdom";
+            this.wisLabeltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intLabeltitle
+            // 
+            this.intLabeltitle.AutoSize = true;
+            this.intLabeltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.intLabeltitle.Location = new System.Drawing.Point(0, 179);
+            this.intLabeltitle.Name = "intLabeltitle";
+            this.intLabeltitle.Size = new System.Drawing.Size(105, 20);
+            this.intLabeltitle.TabIndex = 24;
+            this.intLabeltitle.Text = "Intelligence";
+            this.intLabeltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conLabeltitle
+            // 
+            this.conLabeltitle.AutoSize = true;
+            this.conLabeltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.conLabeltitle.Location = new System.Drawing.Point(-3, 127);
+            this.conLabeltitle.Name = "conLabeltitle";
+            this.conLabeltitle.Size = new System.Drawing.Size(110, 20);
+            this.conLabeltitle.TabIndex = 17;
+            this.conLabeltitle.Text = "Constitution";
+            this.conLabeltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dexLabeltitle
+            // 
+            this.dexLabeltitle.AutoSize = true;
+            this.dexLabeltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.dexLabeltitle.Location = new System.Drawing.Point(10, 74);
+            this.dexLabeltitle.Name = "dexLabeltitle";
+            this.dexLabeltitle.Size = new System.Drawing.Size(85, 20);
+            this.dexLabeltitle.TabIndex = 10;
+            this.dexLabeltitle.Text = "Dexterity";
+            this.dexLabeltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // stengthLabel
             // 
@@ -4670,69 +4123,434 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.chrLabel);
-            this.panel13.Controls.Add(this.buttonNoPadding7);
-            this.panel13.Controls.Add(this.buttonNoPadding10);
+            this.panel13.Controls.Add(this.chrLabeltitle);
+            this.panel13.Controls.Add(this.conSaveButton);
+            this.panel13.Controls.Add(this.charSaveButton);
             this.panel13.Controls.Add(this.buttonNoPadding11);
             this.panel13.Controls.Add(this.buttonNoPadding12);
-            this.panel13.Controls.Add(this.customCheckBox5);
-            this.panel13.Controls.Add(this.label63);
-            this.panel13.Controls.Add(this.label64);
+            this.panel13.Controls.Add(this.charProf);
+            this.panel13.Controls.Add(this.charmodlabel);
+            this.panel13.Controls.Add(this.charlabel);
             this.panel13.Controls.Add(this.label65);
-            this.panel13.Controls.Add(this.intLabel);
-            this.panel13.Controls.Add(this.buttonNoPadding13);
+            this.panel13.Controls.Add(this.intLabeltitle);
+            this.panel13.Controls.Add(this.wisSaveButton);
             this.panel13.Controls.Add(this.buttonNoPadding14);
             this.panel13.Controls.Add(this.buttonNoPadding15);
-            this.panel13.Controls.Add(this.customCheckBox6);
-            this.panel13.Controls.Add(this.label66);
-            this.panel13.Controls.Add(this.label67);
-            this.panel13.Controls.Add(this.wisLabel);
+            this.panel13.Controls.Add(this.wisProf);
+            this.panel13.Controls.Add(this.wismodlabel);
+            this.panel13.Controls.Add(this.wislabel);
+            this.panel13.Controls.Add(this.wisLabeltitle);
             this.panel13.Controls.Add(this.label68);
-            this.panel13.Controls.Add(this.buttonNoPadding4);
+            this.panel13.Controls.Add(this.intSaveButton);
             this.panel13.Controls.Add(this.buttonNoPadding5);
             this.panel13.Controls.Add(this.buttonNoPadding6);
-            this.panel13.Controls.Add(this.customCheckBox3);
-            this.panel13.Controls.Add(this.label57);
-            this.panel13.Controls.Add(this.conLabel);
-            this.panel13.Controls.Add(this.label58);
+            this.panel13.Controls.Add(this.intProf);
+            this.panel13.Controls.Add(this.intmodlabel);
+            this.panel13.Controls.Add(this.conLabeltitle);
+            this.panel13.Controls.Add(this.intlabel);
             this.panel13.Controls.Add(this.label59);
             this.panel13.Controls.Add(this.buttonNoPadding8);
             this.panel13.Controls.Add(this.buttonNoPadding9);
-            this.panel13.Controls.Add(this.customCheckBox4);
-            this.panel13.Controls.Add(this.label60);
-            this.panel13.Controls.Add(this.label61);
+            this.panel13.Controls.Add(this.conProf);
+            this.panel13.Controls.Add(this.conmodlabel);
+            this.panel13.Controls.Add(this.conlabel);
             this.panel13.Controls.Add(this.label62);
-            this.panel13.Controls.Add(this.buttonNoPadding1);
+            this.panel13.Controls.Add(this.dexSaveButton);
             this.panel13.Controls.Add(this.buttonNoPadding2);
             this.panel13.Controls.Add(this.buttonNoPadding3);
-            this.panel13.Controls.Add(this.customCheckBox2);
-            this.panel13.Controls.Add(this.label53);
-            this.panel13.Controls.Add(this.label54);
+            this.panel13.Controls.Add(this.dexProf);
+            this.panel13.Controls.Add(this.dexmodlabel);
+            this.panel13.Controls.Add(this.dexlabel);
             this.panel13.Controls.Add(this.label56);
-            this.panel13.Controls.Add(this.strSaveButtonNew);
+            this.panel13.Controls.Add(this.strSaveButton);
             this.panel13.Controls.Add(this.stengthLabel);
             this.panel13.Controls.Add(this.strDownButton);
             this.panel13.Controls.Add(this.strUpButton);
-            this.panel13.Controls.Add(this.strProfCheckBox);
-            this.panel13.Controls.Add(this.strRedModLabel);
+            this.panel13.Controls.Add(this.strProf);
+            this.panel13.Controls.Add(this.strModLabel);
             this.panel13.Controls.Add(this.label52);
-            this.panel13.Controls.Add(this.dexLabel);
-            this.panel13.Controls.Add(this.strRedLabel);
+            this.panel13.Controls.Add(this.dexLabeltitle);
+            this.panel13.Controls.Add(this.strLabel);
             this.panel13.Controls.Add(this.label55);
             this.panel13.Location = new System.Drawing.Point(5, 79);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(192, 339);
             this.panel13.TabIndex = 247;
             // 
-            // buttonNoPadding1
+            // conSaveButton
             // 
-            this.buttonNoPadding1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding1.Location = new System.Drawing.Point(105, 78);
-            this.buttonNoPadding1.Name = "buttonNoPadding1";
-            this.buttonNoPadding1.Size = new System.Drawing.Size(82, 16);
-            this.buttonNoPadding1.TabIndex = 249;
-            this.buttonNoPadding1.Text = "Save Throw";
-            this.buttonNoPadding1.UseVisualStyleBackColor = true;
+            this.conSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conSaveButton.Location = new System.Drawing.Point(105, 130);
+            this.conSaveButton.Name = "conSaveButton";
+            this.conSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.conSaveButton.TabIndex = 256;
+            this.conSaveButton.Text = "Save Throw";
+            this.conSaveButton.UseVisualStyleBackColor = true;
+            this.conSaveButton.Click += new System.EventHandler(this.conSaveButton_Click);
+            // 
+            // charSaveButton
+            // 
+            this.charSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.charSaveButton.Location = new System.Drawing.Point(105, 286);
+            this.charSaveButton.Name = "charSaveButton";
+            this.charSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.charSaveButton.TabIndex = 277;
+            this.charSaveButton.Text = "Save Throw";
+            this.charSaveButton.UseVisualStyleBackColor = true;
+            this.charSaveButton.Click += new System.EventHandler(this.chrSaveButton_Click);
+            // 
+            // buttonNoPadding11
+            // 
+            this.buttonNoPadding11.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding11.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding11.Location = new System.Drawing.Point(40, 318);
+            this.buttonNoPadding11.Name = "buttonNoPadding11";
+            this.buttonNoPadding11.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding11.TabIndex = 282;
+            this.buttonNoPadding11.Text = null;
+            this.buttonNoPadding11.UseVisualStyleBackColor = true;
+            this.buttonNoPadding11.Click += new System.EventHandler(this.chrDecreaseButton_Click);
+            // 
+            // buttonNoPadding12
+            // 
+            this.buttonNoPadding12.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding12.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding12.Location = new System.Drawing.Point(40, 302);
+            this.buttonNoPadding12.Name = "buttonNoPadding12";
+            this.buttonNoPadding12.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding12.TabIndex = 281;
+            this.buttonNoPadding12.Text = null;
+            this.buttonNoPadding12.UseVisualStyleBackColor = true;
+            this.buttonNoPadding12.Click += new System.EventHandler(this.chrAddButton_Click);
+            // 
+            // charProf
+            // 
+            this.charProf.AutoSize = true;
+            this.charProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.charProf.Location = new System.Drawing.Point(105, 309);
+            this.charProf.Name = "charProf";
+            this.charProf.Size = new System.Drawing.Size(87, 19);
+            this.charProf.TabIndex = 278;
+            this.charProf.Text = "Proficient";
+            this.charProf.UseVisualStyleBackColor = true;
+            this.charProf.CheckedChanged += new System.EventHandler(this.chrProfBox_CheckedChanged);
+            // 
+            // charmodlabel
+            // 
+            this.charmodlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.charmodlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.charmodlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.charmodlabel.Location = new System.Drawing.Point(57, 301);
+            this.charmodlabel.Name = "charmodlabel";
+            this.charmodlabel.Size = new System.Drawing.Size(46, 27);
+            this.charmodlabel.TabIndex = 279;
+            this.charmodlabel.Text = "+0";
+            this.charmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // charlabel
+            // 
+            this.charlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.charlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.charlabel.Location = new System.Drawing.Point(-4, 299);
+            this.charlabel.Name = "charlabel";
+            this.charlabel.Size = new System.Drawing.Size(49, 30);
+            this.charlabel.TabIndex = 280;
+            this.charlabel.Text = "10";
+            this.charlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charlabel.TextChanged += new System.EventHandler(this.chrModLabel_TextChanged);
+            // 
+            // label65
+            // 
+            this.label65.BackColor = System.Drawing.SystemColors.Control;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label65.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label65.Location = new System.Drawing.Point(-7, 316);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(215, 17);
+            this.label65.TabIndex = 283;
+            this.label65.Text = "_______________________";
+            // 
+            // wisSaveButton
+            // 
+            this.wisSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wisSaveButton.Location = new System.Drawing.Point(105, 234);
+            this.wisSaveButton.Name = "wisSaveButton";
+            this.wisSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.wisSaveButton.TabIndex = 270;
+            this.wisSaveButton.Text = "Save Throw";
+            this.wisSaveButton.UseVisualStyleBackColor = true;
+            this.wisSaveButton.Click += new System.EventHandler(this.wisSaveButton_Click);
+            // 
+            // buttonNoPadding14
+            // 
+            this.buttonNoPadding14.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding14.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding14.Location = new System.Drawing.Point(40, 266);
+            this.buttonNoPadding14.Name = "buttonNoPadding14";
+            this.buttonNoPadding14.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding14.TabIndex = 275;
+            this.buttonNoPadding14.Text = null;
+            this.buttonNoPadding14.UseVisualStyleBackColor = true;
+            this.buttonNoPadding14.Click += new System.EventHandler(this.wisDecreaseButton_Click);
+            // 
+            // buttonNoPadding15
+            // 
+            this.buttonNoPadding15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding15.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding15.Location = new System.Drawing.Point(40, 250);
+            this.buttonNoPadding15.Name = "buttonNoPadding15";
+            this.buttonNoPadding15.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding15.TabIndex = 274;
+            this.buttonNoPadding15.Text = null;
+            this.buttonNoPadding15.UseVisualStyleBackColor = true;
+            this.buttonNoPadding15.Click += new System.EventHandler(this.wisAddButton_Click);
+            // 
+            // wisProf
+            // 
+            this.wisProf.AutoSize = true;
+            this.wisProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.wisProf.Location = new System.Drawing.Point(105, 257);
+            this.wisProf.Name = "wisProf";
+            this.wisProf.Size = new System.Drawing.Size(87, 19);
+            this.wisProf.TabIndex = 271;
+            this.wisProf.Text = "Proficient";
+            this.wisProf.UseVisualStyleBackColor = true;
+            this.wisProf.CheckedChanged += new System.EventHandler(this.wisProfBox_CheckedChanged);
+            // 
+            // wismodlabel
+            // 
+            this.wismodlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.wismodlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.wismodlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.wismodlabel.Location = new System.Drawing.Point(57, 249);
+            this.wismodlabel.Name = "wismodlabel";
+            this.wismodlabel.Size = new System.Drawing.Size(46, 27);
+            this.wismodlabel.TabIndex = 272;
+            this.wismodlabel.Text = "+0";
+            this.wismodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wislabel
+            // 
+            this.wislabel.BackColor = System.Drawing.SystemColors.Control;
+            this.wislabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wislabel.ForeColor = System.Drawing.Color.Maroon;
+            this.wislabel.Location = new System.Drawing.Point(-4, 247);
+            this.wislabel.Name = "wislabel";
+            this.wislabel.Size = new System.Drawing.Size(49, 30);
+            this.wislabel.TabIndex = 273;
+            this.wislabel.Text = "10";
+            this.wislabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.wislabel.TextChanged += new System.EventHandler(this.wisModLabel_TextChanged);
+            // 
+            // label68
+            // 
+            this.label68.BackColor = System.Drawing.SystemColors.Control;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label68.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label68.Location = new System.Drawing.Point(-7, 264);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(215, 17);
+            this.label68.TabIndex = 276;
+            this.label68.Text = "_______________________";
+            // 
+            // intSaveButton
+            // 
+            this.intSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.intSaveButton.Location = new System.Drawing.Point(105, 182);
+            this.intSaveButton.Name = "intSaveButton";
+            this.intSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.intSaveButton.TabIndex = 263;
+            this.intSaveButton.Text = "Save Throw";
+            this.intSaveButton.UseVisualStyleBackColor = true;
+            this.intSaveButton.Click += new System.EventHandler(this.intSaveButton_Click);
+            // 
+            // buttonNoPadding5
+            // 
+            this.buttonNoPadding5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding5.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding5.Location = new System.Drawing.Point(40, 214);
+            this.buttonNoPadding5.Name = "buttonNoPadding5";
+            this.buttonNoPadding5.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding5.TabIndex = 268;
+            this.buttonNoPadding5.Text = null;
+            this.buttonNoPadding5.UseVisualStyleBackColor = true;
+            this.buttonNoPadding5.Click += new System.EventHandler(this.intDecreaseButton_Click);
+            // 
+            // buttonNoPadding6
+            // 
+            this.buttonNoPadding6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding6.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding6.Location = new System.Drawing.Point(40, 198);
+            this.buttonNoPadding6.Name = "buttonNoPadding6";
+            this.buttonNoPadding6.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding6.TabIndex = 267;
+            this.buttonNoPadding6.Text = null;
+            this.buttonNoPadding6.UseVisualStyleBackColor = true;
+            this.buttonNoPadding6.Click += new System.EventHandler(this.intAddButton_Click);
+            // 
+            // intProf
+            // 
+            this.intProf.AutoSize = true;
+            this.intProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.intProf.Location = new System.Drawing.Point(105, 205);
+            this.intProf.Name = "intProf";
+            this.intProf.Size = new System.Drawing.Size(87, 19);
+            this.intProf.TabIndex = 264;
+            this.intProf.Text = "Proficient";
+            this.intProf.UseVisualStyleBackColor = true;
+            this.intProf.CheckedChanged += new System.EventHandler(this.intProfBox_CheckedChanged);
+            // 
+            // intmodlabel
+            // 
+            this.intmodlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.intmodlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.intmodlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.intmodlabel.Location = new System.Drawing.Point(57, 197);
+            this.intmodlabel.Name = "intmodlabel";
+            this.intmodlabel.Size = new System.Drawing.Size(46, 27);
+            this.intmodlabel.TabIndex = 265;
+            this.intmodlabel.Text = "+0";
+            this.intmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intlabel
+            // 
+            this.intlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.intlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.intlabel.Location = new System.Drawing.Point(-4, 195);
+            this.intlabel.Name = "intlabel";
+            this.intlabel.Size = new System.Drawing.Size(49, 30);
+            this.intlabel.TabIndex = 266;
+            this.intlabel.Text = "10";
+            this.intlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.intlabel.TextChanged += new System.EventHandler(this.intModLabel_TextChanged);
+            // 
+            // label59
+            // 
+            this.label59.BackColor = System.Drawing.SystemColors.Control;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label59.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label59.Location = new System.Drawing.Point(-7, 212);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(215, 17);
+            this.label59.TabIndex = 269;
+            this.label59.Text = "_______________________";
+            // 
+            // buttonNoPadding8
+            // 
+            this.buttonNoPadding8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding8.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding8.Location = new System.Drawing.Point(40, 162);
+            this.buttonNoPadding8.Name = "buttonNoPadding8";
+            this.buttonNoPadding8.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding8.TabIndex = 261;
+            this.buttonNoPadding8.Text = null;
+            this.buttonNoPadding8.UseVisualStyleBackColor = true;
+            this.buttonNoPadding8.Click += new System.EventHandler(this.conDecreaseButton_Click);
+            // 
+            // buttonNoPadding9
+            // 
+            this.buttonNoPadding9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding9.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding9.Location = new System.Drawing.Point(40, 146);
+            this.buttonNoPadding9.Name = "buttonNoPadding9";
+            this.buttonNoPadding9.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding9.TabIndex = 260;
+            this.buttonNoPadding9.Text = null;
+            this.buttonNoPadding9.UseVisualStyleBackColor = true;
+            this.buttonNoPadding9.Click += new System.EventHandler(this.conAddButton_Click);
+            // 
+            // conProf
+            // 
+            this.conProf.AutoSize = true;
+            this.conProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.conProf.Location = new System.Drawing.Point(105, 153);
+            this.conProf.Name = "conProf";
+            this.conProf.Size = new System.Drawing.Size(87, 19);
+            this.conProf.TabIndex = 257;
+            this.conProf.Text = "Proficient";
+            this.conProf.UseVisualStyleBackColor = true;
+            this.conProf.CheckedChanged += new System.EventHandler(this.conProfBox_CheckedChanged);
+            // 
+            // conmodlabel
+            // 
+            this.conmodlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.conmodlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.conmodlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.conmodlabel.Location = new System.Drawing.Point(57, 145);
+            this.conmodlabel.Name = "conmodlabel";
+            this.conmodlabel.Size = new System.Drawing.Size(46, 27);
+            this.conmodlabel.TabIndex = 258;
+            this.conmodlabel.Text = "+0";
+            this.conmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conlabel
+            // 
+            this.conlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.conlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.conlabel.Location = new System.Drawing.Point(-4, 143);
+            this.conlabel.Name = "conlabel";
+            this.conlabel.Size = new System.Drawing.Size(49, 30);
+            this.conlabel.TabIndex = 259;
+            this.conlabel.Text = "10";
+            this.conlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.conlabel.TextChanged += new System.EventHandler(this.conModLabel_TextChanged);
+            // 
+            // label62
+            // 
+            this.label62.BackColor = System.Drawing.SystemColors.Control;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label62.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label62.Location = new System.Drawing.Point(-7, 160);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(215, 17);
+            this.label62.TabIndex = 262;
+            this.label62.Text = "_______________________";
+            // 
+            // dexSaveButton
+            // 
+            this.dexSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dexSaveButton.Location = new System.Drawing.Point(105, 78);
+            this.dexSaveButton.Name = "dexSaveButton";
+            this.dexSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.dexSaveButton.TabIndex = 249;
+            this.dexSaveButton.Text = "Save Throw";
+            this.dexSaveButton.UseVisualStyleBackColor = true;
+            this.dexSaveButton.Click += new System.EventHandler(this.dexSaveButton_Click);
             // 
             // buttonNoPadding2
             // 
@@ -4748,6 +4566,7 @@
             this.buttonNoPadding2.TabIndex = 254;
             this.buttonNoPadding2.Text = null;
             this.buttonNoPadding2.UseVisualStyleBackColor = true;
+            this.buttonNoPadding2.Click += new System.EventHandler(this.dexDecreaseButton_Click);
             // 
             // buttonNoPadding3
             // 
@@ -4763,41 +4582,44 @@
             this.buttonNoPadding3.TabIndex = 253;
             this.buttonNoPadding3.Text = null;
             this.buttonNoPadding3.UseVisualStyleBackColor = true;
+            this.buttonNoPadding3.Click += new System.EventHandler(this.dexAddButton_Click);
             // 
-            // customCheckBox2
+            // dexProf
             // 
-            this.customCheckBox2.AutoSize = true;
-            this.customCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox2.Location = new System.Drawing.Point(105, 101);
-            this.customCheckBox2.Name = "customCheckBox2";
-            this.customCheckBox2.Size = new System.Drawing.Size(87, 19);
-            this.customCheckBox2.TabIndex = 250;
-            this.customCheckBox2.Text = "Proficient";
-            this.customCheckBox2.UseVisualStyleBackColor = true;
+            this.dexProf.AutoSize = true;
+            this.dexProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.dexProf.Location = new System.Drawing.Point(105, 101);
+            this.dexProf.Name = "dexProf";
+            this.dexProf.Size = new System.Drawing.Size(87, 19);
+            this.dexProf.TabIndex = 250;
+            this.dexProf.Text = "Proficient";
+            this.dexProf.UseVisualStyleBackColor = true;
+            this.dexProf.CheckedChanged += new System.EventHandler(this.dexProfBox_CheckedChanged);
             // 
-            // label53
+            // dexmodlabel
             // 
-            this.label53.BackColor = System.Drawing.SystemColors.Control;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label53.ForeColor = System.Drawing.Color.Maroon;
-            this.label53.Location = new System.Drawing.Point(57, 93);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(46, 27);
-            this.label53.TabIndex = 251;
-            this.label53.Text = "+0";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dexmodlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.dexmodlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.dexmodlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.dexmodlabel.Location = new System.Drawing.Point(57, 93);
+            this.dexmodlabel.Name = "dexmodlabel";
+            this.dexmodlabel.Size = new System.Drawing.Size(46, 27);
+            this.dexmodlabel.TabIndex = 251;
+            this.dexmodlabel.Text = "+0";
+            this.dexmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label54
+            // dexlabel
             // 
-            this.label54.BackColor = System.Drawing.SystemColors.Control;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.Maroon;
-            this.label54.Location = new System.Drawing.Point(-4, 91);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(49, 30);
-            this.label54.TabIndex = 252;
-            this.label54.Text = "10";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dexlabel.BackColor = System.Drawing.SystemColors.Control;
+            this.dexlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.dexlabel.Location = new System.Drawing.Point(-4, 91);
+            this.dexlabel.Name = "dexlabel";
+            this.dexlabel.Size = new System.Drawing.Size(49, 30);
+            this.dexlabel.TabIndex = 252;
+            this.dexlabel.Text = "10";
+            this.dexlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dexlabel.TextChanged += new System.EventHandler(this.dexModLabel_TextChanged);
             // 
             // label56
             // 
@@ -4810,16 +4632,16 @@
             this.label56.TabIndex = 255;
             this.label56.Text = "_______________________";
             // 
-            // strSaveButtonNew
+            // strSaveButton
             // 
-            this.strSaveButtonNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.strSaveButtonNew.Location = new System.Drawing.Point(105, 26);
-            this.strSaveButtonNew.Name = "strSaveButtonNew";
-            this.strSaveButtonNew.Size = new System.Drawing.Size(82, 16);
-            this.strSaveButtonNew.TabIndex = 170;
-            this.strSaveButtonNew.Text = "Save Throw";
-            this.strSaveButtonNew.UseVisualStyleBackColor = true;
-            this.strSaveButtonNew.Click += new System.EventHandler(this.strSaveButton_Click);
+            this.strSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strSaveButton.Location = new System.Drawing.Point(105, 26);
+            this.strSaveButton.Name = "strSaveButton";
+            this.strSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.strSaveButton.TabIndex = 170;
+            this.strSaveButton.Text = "Save Throw";
+            this.strSaveButton.UseVisualStyleBackColor = true;
+            this.strSaveButton.Click += new System.EventHandler(this.strSaveButton_Click);
             // 
             // strDownButton
             // 
@@ -4853,41 +4675,42 @@
             this.strUpButton.UseVisualStyleBackColor = true;
             this.strUpButton.Click += new System.EventHandler(this.strAddButton_Click);
             // 
-            // strProfCheckBox
+            // strProf
             // 
-            this.strProfCheckBox.AutoSize = true;
-            this.strProfCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.strProfCheckBox.Location = new System.Drawing.Point(105, 49);
-            this.strProfCheckBox.Name = "strProfCheckBox";
-            this.strProfCheckBox.Size = new System.Drawing.Size(87, 19);
-            this.strProfCheckBox.TabIndex = 235;
-            this.strProfCheckBox.Text = "Proficient";
-            this.strProfCheckBox.UseVisualStyleBackColor = true;
-            this.strProfCheckBox.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
+            this.strProf.AutoSize = true;
+            this.strProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.strProf.Location = new System.Drawing.Point(105, 49);
+            this.strProf.Name = "strProf";
+            this.strProf.Size = new System.Drawing.Size(87, 19);
+            this.strProf.TabIndex = 235;
+            this.strProf.Text = "Proficient";
+            this.strProf.UseVisualStyleBackColor = true;
+            this.strProf.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
             // 
-            // strRedModLabel
+            // strModLabel
             // 
-            this.strRedModLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.strRedModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.strRedModLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.strRedModLabel.Location = new System.Drawing.Point(57, 41);
-            this.strRedModLabel.Name = "strRedModLabel";
-            this.strRedModLabel.Size = new System.Drawing.Size(46, 27);
-            this.strRedModLabel.TabIndex = 239;
-            this.strRedModLabel.Text = "+0";
-            this.strRedModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.strModLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.strModLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.strModLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.strModLabel.Location = new System.Drawing.Point(57, 41);
+            this.strModLabel.Name = "strModLabel";
+            this.strModLabel.Size = new System.Drawing.Size(46, 27);
+            this.strModLabel.TabIndex = 239;
+            this.strModLabel.Text = "+0";
+            this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // strRedLabel
+            // strLabel
             // 
-            this.strRedLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.strRedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strRedLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.strRedLabel.Location = new System.Drawing.Point(-4, 39);
-            this.strRedLabel.Name = "strRedLabel";
-            this.strRedLabel.Size = new System.Drawing.Size(49, 30);
-            this.strRedLabel.TabIndex = 239;
-            this.strRedLabel.Text = "10";
-            this.strRedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.strLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.strLabel.Location = new System.Drawing.Point(-4, 39);
+            this.strLabel.Name = "strLabel";
+            this.strLabel.Size = new System.Drawing.Size(49, 30);
+            this.strLabel.TabIndex = 239;
+            this.strLabel.Text = "10";
+            this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.strLabel.TextChanged += new System.EventHandler(this.strDisplayBox_TextChanged);
             // 
             // label55
             // 
@@ -4900,357 +4723,12 @@
             this.label55.TabIndex = 248;
             this.label55.Text = "_______________________";
             // 
-            // buttonNoPadding4
-            // 
-            this.buttonNoPadding4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding4.Location = new System.Drawing.Point(105, 182);
-            this.buttonNoPadding4.Name = "buttonNoPadding4";
-            this.buttonNoPadding4.Size = new System.Drawing.Size(82, 16);
-            this.buttonNoPadding4.TabIndex = 263;
-            this.buttonNoPadding4.Text = "Save Throw";
-            this.buttonNoPadding4.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding5
-            // 
-            this.buttonNoPadding5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding5.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding5.Location = new System.Drawing.Point(40, 214);
-            this.buttonNoPadding5.Name = "buttonNoPadding5";
-            this.buttonNoPadding5.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding5.TabIndex = 268;
-            this.buttonNoPadding5.Text = null;
-            this.buttonNoPadding5.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding6
-            // 
-            this.buttonNoPadding6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding6.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding6.Location = new System.Drawing.Point(40, 198);
-            this.buttonNoPadding6.Name = "buttonNoPadding6";
-            this.buttonNoPadding6.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding6.TabIndex = 267;
-            this.buttonNoPadding6.Text = null;
-            this.buttonNoPadding6.UseVisualStyleBackColor = true;
-            // 
-            // customCheckBox3
-            // 
-            this.customCheckBox3.AutoSize = true;
-            this.customCheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox3.Location = new System.Drawing.Point(105, 205);
-            this.customCheckBox3.Name = "customCheckBox3";
-            this.customCheckBox3.Size = new System.Drawing.Size(87, 19);
-            this.customCheckBox3.TabIndex = 264;
-            this.customCheckBox3.Text = "Proficient";
-            this.customCheckBox3.UseVisualStyleBackColor = true;
-            // 
-            // label57
-            // 
-            this.label57.BackColor = System.Drawing.SystemColors.Control;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label57.ForeColor = System.Drawing.Color.Maroon;
-            this.label57.Location = new System.Drawing.Point(57, 197);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(46, 27);
-            this.label57.TabIndex = 265;
-            this.label57.Text = "+0";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label58
-            // 
-            this.label58.BackColor = System.Drawing.SystemColors.Control;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.Maroon;
-            this.label58.Location = new System.Drawing.Point(-4, 195);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(49, 30);
-            this.label58.TabIndex = 266;
-            this.label58.Text = "10";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label59
-            // 
-            this.label59.BackColor = System.Drawing.SystemColors.Control;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label59.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label59.Location = new System.Drawing.Point(-7, 212);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(215, 17);
-            this.label59.TabIndex = 269;
-            this.label59.Text = "_______________________";
-            // 
-            // buttonNoPadding7
-            // 
-            this.buttonNoPadding7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding7.Location = new System.Drawing.Point(105, 130);
-            this.buttonNoPadding7.Name = "buttonNoPadding7";
-            this.buttonNoPadding7.Size = new System.Drawing.Size(82, 16);
-            this.buttonNoPadding7.TabIndex = 256;
-            this.buttonNoPadding7.Text = "Save Throw";
-            this.buttonNoPadding7.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding8
-            // 
-            this.buttonNoPadding8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding8.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding8.Location = new System.Drawing.Point(40, 162);
-            this.buttonNoPadding8.Name = "buttonNoPadding8";
-            this.buttonNoPadding8.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding8.TabIndex = 261;
-            this.buttonNoPadding8.Text = null;
-            this.buttonNoPadding8.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding9
-            // 
-            this.buttonNoPadding9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding9.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding9.Location = new System.Drawing.Point(40, 146);
-            this.buttonNoPadding9.Name = "buttonNoPadding9";
-            this.buttonNoPadding9.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding9.TabIndex = 260;
-            this.buttonNoPadding9.Text = null;
-            this.buttonNoPadding9.UseVisualStyleBackColor = true;
-            // 
-            // customCheckBox4
-            // 
-            this.customCheckBox4.AutoSize = true;
-            this.customCheckBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox4.Location = new System.Drawing.Point(105, 153);
-            this.customCheckBox4.Name = "customCheckBox4";
-            this.customCheckBox4.Size = new System.Drawing.Size(87, 19);
-            this.customCheckBox4.TabIndex = 257;
-            this.customCheckBox4.Text = "Proficient";
-            this.customCheckBox4.UseVisualStyleBackColor = true;
-            // 
-            // label60
-            // 
-            this.label60.BackColor = System.Drawing.SystemColors.Control;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label60.ForeColor = System.Drawing.Color.Maroon;
-            this.label60.Location = new System.Drawing.Point(57, 145);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(46, 27);
-            this.label60.TabIndex = 258;
-            this.label60.Text = "+0";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label61
-            // 
-            this.label61.BackColor = System.Drawing.SystemColors.Control;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.Maroon;
-            this.label61.Location = new System.Drawing.Point(-4, 143);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(49, 30);
-            this.label61.TabIndex = 259;
-            this.label61.Text = "10";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label62
-            // 
-            this.label62.BackColor = System.Drawing.SystemColors.Control;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label62.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label62.Location = new System.Drawing.Point(-7, 160);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(215, 17);
-            this.label62.TabIndex = 262;
-            this.label62.Text = "_______________________";
-            // 
-            // buttonNoPadding10
-            // 
-            this.buttonNoPadding10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding10.Location = new System.Drawing.Point(105, 286);
-            this.buttonNoPadding10.Name = "buttonNoPadding10";
-            this.buttonNoPadding10.Size = new System.Drawing.Size(82, 16);
-            this.buttonNoPadding10.TabIndex = 277;
-            this.buttonNoPadding10.Text = "Save Throw";
-            this.buttonNoPadding10.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding11
-            // 
-            this.buttonNoPadding11.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding11.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding11.Location = new System.Drawing.Point(40, 318);
-            this.buttonNoPadding11.Name = "buttonNoPadding11";
-            this.buttonNoPadding11.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding11.TabIndex = 282;
-            this.buttonNoPadding11.Text = null;
-            this.buttonNoPadding11.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding12
-            // 
-            this.buttonNoPadding12.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding12.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding12.Location = new System.Drawing.Point(40, 302);
-            this.buttonNoPadding12.Name = "buttonNoPadding12";
-            this.buttonNoPadding12.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding12.TabIndex = 281;
-            this.buttonNoPadding12.Text = null;
-            this.buttonNoPadding12.UseVisualStyleBackColor = true;
-            // 
-            // customCheckBox5
-            // 
-            this.customCheckBox5.AutoSize = true;
-            this.customCheckBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox5.Location = new System.Drawing.Point(105, 309);
-            this.customCheckBox5.Name = "customCheckBox5";
-            this.customCheckBox5.Size = new System.Drawing.Size(87, 19);
-            this.customCheckBox5.TabIndex = 278;
-            this.customCheckBox5.Text = "Proficient";
-            this.customCheckBox5.UseVisualStyleBackColor = true;
-            // 
-            // label63
-            // 
-            this.label63.BackColor = System.Drawing.SystemColors.Control;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label63.ForeColor = System.Drawing.Color.Maroon;
-            this.label63.Location = new System.Drawing.Point(57, 301);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(46, 27);
-            this.label63.TabIndex = 279;
-            this.label63.Text = "+0";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label64
-            // 
-            this.label64.BackColor = System.Drawing.SystemColors.Control;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.Maroon;
-            this.label64.Location = new System.Drawing.Point(-4, 299);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(49, 30);
-            this.label64.TabIndex = 280;
-            this.label64.Text = "10";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label65
-            // 
-            this.label65.BackColor = System.Drawing.SystemColors.Control;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label65.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label65.Location = new System.Drawing.Point(-7, 316);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(215, 17);
-            this.label65.TabIndex = 283;
-            this.label65.Text = "_______________________";
-            // 
-            // buttonNoPadding13
-            // 
-            this.buttonNoPadding13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding13.Location = new System.Drawing.Point(105, 234);
-            this.buttonNoPadding13.Name = "buttonNoPadding13";
-            this.buttonNoPadding13.Size = new System.Drawing.Size(82, 16);
-            this.buttonNoPadding13.TabIndex = 270;
-            this.buttonNoPadding13.Text = "Save Throw";
-            this.buttonNoPadding13.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding14
-            // 
-            this.buttonNoPadding14.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding14.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding14.Location = new System.Drawing.Point(40, 266);
-            this.buttonNoPadding14.Name = "buttonNoPadding14";
-            this.buttonNoPadding14.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding14.TabIndex = 275;
-            this.buttonNoPadding14.Text = null;
-            this.buttonNoPadding14.UseVisualStyleBackColor = true;
-            // 
-            // buttonNoPadding15
-            // 
-            this.buttonNoPadding15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding15.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding15.Location = new System.Drawing.Point(40, 250);
-            this.buttonNoPadding15.Name = "buttonNoPadding15";
-            this.buttonNoPadding15.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding15.TabIndex = 274;
-            this.buttonNoPadding15.Text = null;
-            this.buttonNoPadding15.UseVisualStyleBackColor = true;
-            // 
-            // customCheckBox6
-            // 
-            this.customCheckBox6.AutoSize = true;
-            this.customCheckBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox6.Location = new System.Drawing.Point(105, 257);
-            this.customCheckBox6.Name = "customCheckBox6";
-            this.customCheckBox6.Size = new System.Drawing.Size(87, 19);
-            this.customCheckBox6.TabIndex = 271;
-            this.customCheckBox6.Text = "Proficient";
-            this.customCheckBox6.UseVisualStyleBackColor = true;
-            // 
-            // label66
-            // 
-            this.label66.BackColor = System.Drawing.SystemColors.Control;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label66.ForeColor = System.Drawing.Color.Maroon;
-            this.label66.Location = new System.Drawing.Point(57, 249);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(46, 27);
-            this.label66.TabIndex = 272;
-            this.label66.Text = "+0";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label67
-            // 
-            this.label67.BackColor = System.Drawing.SystemColors.Control;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.Maroon;
-            this.label67.Location = new System.Drawing.Point(-4, 247);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(49, 30);
-            this.label67.TabIndex = 273;
-            this.label67.Text = "10";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label68
-            // 
-            this.label68.BackColor = System.Drawing.SystemColors.Control;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label68.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label68.Location = new System.Drawing.Point(-7, 264);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(215, 17);
-            this.label68.TabIndex = 276;
-            this.label68.Text = "_______________________";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 665);
-            this.Controls.Add(this.statPanel);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.customTextBox1name);
             this.Controls.Add(this.customTextBox1levelClass);
@@ -5299,8 +4777,6 @@
             this.Text = " Character Name";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.statPanel.ResumeLayout(false);
-            this.statPanel.PerformLayout();
             this.profPanel.ResumeLayout(false);
             this.profPanel.PerformLayout();
             this.Weapon1.ResumeLayout(false);
@@ -5363,51 +4839,12 @@
 
         private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.Panel statPanel;
-        private System.Windows.Forms.Button strDecreaseButton;
-        private System.Windows.Forms.Button strAddButton;
         private System.Windows.Forms.Label stengthLabel;
-        private System.Windows.Forms.TextBox strDisplayBox;
-        private System.Windows.Forms.Button strSaveButton;
-        private System.Windows.Forms.CheckBox strProfBox;
-        private System.Windows.Forms.TextBox strModLabel_old;
-        private System.Windows.Forms.CheckBox saveAdvantage;
-        private System.Windows.Forms.Label saveThrowLabels;
-        private System.Windows.Forms.TextBox chrModLabel;
-        private System.Windows.Forms.Button chrSaveButton;
-        private System.Windows.Forms.CheckBox chrProfBox;
-        private System.Windows.Forms.Button chrDecreaseButton;
-        private System.Windows.Forms.Button chrAddButton;
-        private System.Windows.Forms.Label chrLabel;
-        private System.Windows.Forms.TextBox chrDisplayBox;
-        private System.Windows.Forms.TextBox wisModLabel;
-        private System.Windows.Forms.Button wisSaveButton;
-        private System.Windows.Forms.CheckBox wisProfBox;
-        private System.Windows.Forms.Button wisDecreaseButton;
-        private System.Windows.Forms.Button wisAddButton;
-        private System.Windows.Forms.Label wisLabel;
-        private System.Windows.Forms.TextBox wisDisplayBox;
-        private System.Windows.Forms.TextBox intModLabel;
-        private System.Windows.Forms.Button intSaveButton;
-        private System.Windows.Forms.CheckBox intProfBox;
-        private System.Windows.Forms.Button intDecreaseButton;
-        private System.Windows.Forms.Button intAddButton;
-        private System.Windows.Forms.Label intLabel;
-        private System.Windows.Forms.TextBox intDisplayBox;
-        private System.Windows.Forms.TextBox conModLabel;
-        private System.Windows.Forms.Button conSaveButton;
-        private System.Windows.Forms.CheckBox conProfBox;
-        private System.Windows.Forms.Button conDecreaseButton;
-        private System.Windows.Forms.Button conAddButton;
-        private System.Windows.Forms.Label conLabel;
-        private System.Windows.Forms.TextBox conDisplayBox;
-        private System.Windows.Forms.TextBox dexModLabel;
-        private System.Windows.Forms.Button dexSaveButton;
-        private System.Windows.Forms.CheckBox dexProfBox;
-        private System.Windows.Forms.Button dexDecreaseButton;
-        private System.Windows.Forms.Button dexAddButton;
-        private System.Windows.Forms.Label dexLabel;
-        private System.Windows.Forms.TextBox dexDisplayBox;
+        private System.Windows.Forms.Label chrLabeltitle;
+        private System.Windows.Forms.Label wisLabeltitle;
+        private System.Windows.Forms.Label intLabeltitle;
+        private System.Windows.Forms.Label conLabeltitle;
+        private System.Windows.Forms.Label dexLabeltitle;
         private System.Windows.Forms.CheckedListBox ProficienciesChecks;
         private System.Windows.Forms.CheckedListBox profCheckshalf;
         private System.Windows.Forms.Label profLabel;
@@ -5695,47 +5132,47 @@
         private CustomControls.CustomTextBoxLeft customTextBox1name;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label strRedModLabel;
-        private CustomControls.CustomCheckBox strProfCheckBox;
-        private CustomButtons.ButtonNoPadding strSaveButtonNew;
+        private System.Windows.Forms.Label strModLabel;
+        private CustomControls.CustomCheckBox strProf;
+        private CustomButtons.ButtonNoPadding strSaveButton;
         private CustomButtons.ButtonNoPadding strDownButton;
         private CustomButtons.ButtonNoPadding strUpButton;
-        private System.Windows.Forms.Label strRedLabel;
+        private System.Windows.Forms.Label strLabel;
         private System.Windows.Forms.Label label55;
-        private CustomButtons.ButtonNoPadding buttonNoPadding1;
+        private CustomButtons.ButtonNoPadding dexSaveButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding2;
         private CustomButtons.ButtonNoPadding buttonNoPadding3;
-        private CustomControls.CustomCheckBox customCheckBox2;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
+        private CustomControls.CustomCheckBox dexProf;
+        private System.Windows.Forms.Label dexmodlabel;
+        private System.Windows.Forms.Label dexlabel;
         private System.Windows.Forms.Label label56;
-        private CustomButtons.ButtonNoPadding buttonNoPadding10;
+        private CustomButtons.ButtonNoPadding charSaveButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding11;
         private CustomButtons.ButtonNoPadding buttonNoPadding12;
-        private CustomControls.CustomCheckBox customCheckBox5;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
+        private CustomControls.CustomCheckBox charProf;
+        private System.Windows.Forms.Label charmodlabel;
+        private System.Windows.Forms.Label charlabel;
         private System.Windows.Forms.Label label65;
-        private CustomButtons.ButtonNoPadding buttonNoPadding13;
+        private CustomButtons.ButtonNoPadding wisSaveButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding14;
         private CustomButtons.ButtonNoPadding buttonNoPadding15;
-        private CustomControls.CustomCheckBox customCheckBox6;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
+        private CustomControls.CustomCheckBox wisProf;
+        private System.Windows.Forms.Label wismodlabel;
+        private System.Windows.Forms.Label wislabel;
         private System.Windows.Forms.Label label68;
-        private CustomButtons.ButtonNoPadding buttonNoPadding4;
+        private CustomButtons.ButtonNoPadding intSaveButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding5;
         private CustomButtons.ButtonNoPadding buttonNoPadding6;
-        private CustomControls.CustomCheckBox customCheckBox3;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
+        private CustomControls.CustomCheckBox intProf;
+        private System.Windows.Forms.Label intmodlabel;
+        private System.Windows.Forms.Label intlabel;
         private System.Windows.Forms.Label label59;
-        private CustomButtons.ButtonNoPadding buttonNoPadding7;
+        private CustomButtons.ButtonNoPadding conSaveButton;
         private CustomButtons.ButtonNoPadding buttonNoPadding8;
         private CustomButtons.ButtonNoPadding buttonNoPadding9;
-        private CustomControls.CustomCheckBox customCheckBox4;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
+        private CustomControls.CustomCheckBox conProf;
+        private System.Windows.Forms.Label conmodlabel;
+        private System.Windows.Forms.Label conlabel;
         private System.Windows.Forms.Label label62;
     }
 }

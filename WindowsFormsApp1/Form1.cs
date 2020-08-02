@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         string[] attributeNames;        //strings for each of the attributes in order
         bool saveThrowAdv;
         double[] Saveproficiencies = new double[6];
-        TextBox[] mods;
+        Label[] mods;
         double[] proficiencies = new double[23];
         int profBonus = 2;
         int[] statMods = new int[6];
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
         {
             weapons = new List<Weapon>();
             currentBonusRolls = new List<Control>();
-            mods = new TextBox[23];
+            mods = new Label[23];
             currentHitDice = new int[4];
             maxHitDice = new int[4];
             feats = new List<Feat>();
@@ -82,11 +82,11 @@ namespace WindowsFormsApp1
 
             attributeNames = new string[] { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
 
-            mods[1] = strModLabel_old;
-            mods[3] = dexModLabel; mods[4] = dexModLabel; mods[5] = dexModLabel;
-            mods[7] = intModLabel; mods[8] = intModLabel; mods[9] = intModLabel; mods[10] = intModLabel; mods[11] = intModLabel;
-            mods[13] = wisModLabel; mods[14] = wisModLabel; mods[15] = wisModLabel; mods[16] = wisModLabel; mods[17] = wisModLabel;
-            mods[19] = chrModLabel; mods[20] = chrModLabel; mods[21] = chrModLabel; mods[22] = chrModLabel;
+            mods[1] = strModLabel;
+            mods[3] = dexmodlabel; mods[4] = dexmodlabel; mods[5] = dexmodlabel;
+            mods[7] = intmodlabel; mods[8] = intmodlabel; mods[9] = intmodlabel; mods[10] = intmodlabel; mods[11] = intmodlabel;
+            mods[13] = wismodlabel; mods[14] = wismodlabel; mods[15] = wismodlabel; mods[16] = wismodlabel; mods[17] = wismodlabel;
+            mods[19] = charmodlabel; mods[20] = charmodlabel; mods[21] = charmodlabel; mods[22] = charmodlabel;
 
             //add weapon radio buttons to a list
             weaponButtons = new List<RadioButton>();
@@ -266,51 +266,51 @@ namespace WindowsFormsApp1
 
         private void strAddButton_Click(object sender, EventArgs e)
         {
-            strDisplayBox.Text = (int.Parse(strDisplayBox.Text) + 1).ToString();
+            strLabel.Text = (int.Parse(strLabel.Text) + 1).ToString();
         }
         private void strDecreaseButton_Click(object sender, EventArgs e)
         {
-            strDisplayBox.Text = (int.Parse(strDisplayBox.Text) - 1).ToString();
+            strLabel.Text = (int.Parse(strLabel.Text) - 1).ToString();
         }
         private void dexAddButton_Click(object sender, EventArgs e)
         {
-            dexDisplayBox.Text = (int.Parse(dexDisplayBox.Text) + 1).ToString();
+            dexlabel.Text = (int.Parse(dexlabel.Text) + 1).ToString();
         }
         private void dexDecreaseButton_Click(object sender, EventArgs e)
         {
-            dexDisplayBox.Text = (int.Parse(dexDisplayBox.Text) - 1).ToString();
+            dexlabel.Text = (int.Parse(dexlabel.Text) - 1).ToString();
         }
         private void conAddButton_Click(object sender, EventArgs e)
         {
-            conDisplayBox.Text = (int.Parse(conDisplayBox.Text) + 1).ToString();
+            conlabel.Text = (int.Parse(conlabel.Text) + 1).ToString();
         }
         private void conDecreaseButton_Click(object sender, EventArgs e)
         {
-            conDisplayBox.Text = (int.Parse(conDisplayBox.Text) - 1).ToString();
+            conlabel.Text = (int.Parse(conlabel.Text) - 1).ToString();
         }
         private void intAddButton_Click(object sender, EventArgs e)
         {
-            intDisplayBox.Text = (int.Parse(intDisplayBox.Text) + 1).ToString();
+            intlabel.Text = (int.Parse(intlabel.Text) + 1).ToString();
         }
         private void intDecreaseButton_Click(object sender, EventArgs e)
         {
-            intDisplayBox.Text = (int.Parse(intDisplayBox.Text) - 1).ToString();
+            intlabel.Text = (int.Parse(intlabel.Text) - 1).ToString();
         }
         private void wisAddButton_Click(object sender, EventArgs e)
         {
-            wisDisplayBox.Text = (int.Parse(wisDisplayBox.Text) + 1).ToString();
+            wislabel.Text = (int.Parse(wislabel.Text) + 1).ToString();
         }
         private void wisDecreaseButton_Click(object sender, EventArgs e)
         {
-            wisDisplayBox.Text = (int.Parse(wisDisplayBox.Text) - 1).ToString();
+            wislabel.Text = (int.Parse(wislabel.Text) - 1).ToString();
         }
         private void chrAddButton_Click(object sender, EventArgs e)
         {
-            chrDisplayBox.Text = (int.Parse(chrDisplayBox.Text) + 1).ToString();
+            charlabel.Text = (int.Parse(charlabel.Text) + 1).ToString();
         }
         private void chrDecreaseButton_Click(object sender, EventArgs e)
         {
-            chrDisplayBox.Text = (int.Parse(chrDisplayBox.Text) - 1).ToString();
+            charlabel.Text = (int.Parse(charlabel.Text) - 1).ToString();
         }
 
         #endregion
@@ -319,104 +319,105 @@ namespace WindowsFormsApp1
 
         private void saveAdvantage_CheckedChanged(object sender, EventArgs e)
         {
-            saveThrowAdv = saveAdvantage.Checked;
+            //saveThrowAdv = saveAdvantage.Checked;
+            //old mehtod, not needed
         }
         private void strProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[0] = BoolToInt(strProfCheckBox.Checked);
+            Saveproficiencies[0] = BoolToInt(strProf.Checked);
             SetUnsaved();
         }
         private void dexProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[1] = BoolToInt(dexProfBox.Checked);
+            Saveproficiencies[1] = BoolToInt(dexProf.Checked);
             SetUnsaved();
         }
         private void conProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[2] = BoolToInt(conProfBox.Checked);
+            Saveproficiencies[2] = BoolToInt(conProf.Checked);
             SetUnsaved();
         }
         private void intProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[3] = BoolToInt(intProfBox.Checked);
+            Saveproficiencies[3] = BoolToInt(intProf.Checked);
             SetUnsaved();
         }
         private void wisProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[4] = BoolToInt(wisProfBox.Checked);
+            Saveproficiencies[4] = BoolToInt(wisProf.Checked);
             SetUnsaved();
         }
         private void chrProfBox_CheckedChanged(object sender, EventArgs e)
         {
-            Saveproficiencies[5] = BoolToInt(chrProfBox.Checked);
+            Saveproficiencies[5] = BoolToInt(charProf.Checked);
             SetUnsaved();
         }
         //change the modifier bonus text
         private void strDisplayBox_TextChanged(object sender, EventArgs e)
         {
-            statMods[0] = (int.Parse(strDisplayBox.Text) / 2) - 5;
+            statMods[0] = (int.Parse(strLabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[0] > 0)
                 sign = "+";
 
-            strModLabel_old.Text = sign + statMods[0];
+            strModLabel.Text = sign + statMods[0];
         }
         private void dexModLabel_TextChanged(object sender, EventArgs e)
         {
-            statMods[1] = (int.Parse(dexDisplayBox.Text) / 2) - 5;
+            statMods[1] = (int.Parse(dexlabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[1] > 0)
                 sign = "+";
 
-            dexModLabel.Text = sign + statMods[1];
+            dexmodlabel.Text = sign + statMods[1];
         }
         private void conModLabel_TextChanged(object sender, EventArgs e)
         {
-            statMods[2] = (int.Parse(conDisplayBox.Text) / 2) - 5;
+            statMods[2] = (int.Parse(conlabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[2] > 0)
                 sign = "+";
 
-            conModLabel.Text = sign + statMods[2];
+            conmodlabel.Text = sign + statMods[2];
         }
         private void intModLabel_TextChanged(object sender, EventArgs e)
         {
-            statMods[3] = (int.Parse(intDisplayBox.Text) / 2) - 5;
+            statMods[3] = (int.Parse(intlabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[3] > 0)
                 sign = "+";
 
-            intModLabel.Text = sign + statMods[3];
+            intmodlabel.Text = sign + statMods[3];
         }
         private void wisModLabel_TextChanged(object sender, EventArgs e)
         {
-            statMods[4] = (int.Parse(wisDisplayBox.Text) / 2) - 5;
+            statMods[4] = (int.Parse(wislabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[4] > 0)
                 sign = "+";
 
-            wisModLabel.Text = sign + statMods[4];
+            wismodlabel.Text = sign + statMods[4];
         }
         private void chrModLabel_TextChanged(object sender, EventArgs e)
         {
-            statMods[5] = (int.Parse(chrDisplayBox.Text) / 2) - 5;
+            statMods[5] = (int.Parse(charlabel.Text) / 2) - 5;
 
             //add plus sign if positive
             string sign = "";
             if (statMods[5] > 0)
                 sign = "+";
 
-            chrModLabel.Text = sign + statMods[5];
+            charmodlabel.Text = sign + statMods[5];
         }
 
         #endregion
@@ -461,46 +462,46 @@ namespace WindowsFormsApp1
 
             string sign;
 
-            if (profBonus * proficiencies[1] + int.Parse(strModLabel_old.Text) > 0) sign = "+"; else sign = "";
-            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel_old.Text));
+            if (profBonus * proficiencies[1] + int.Parse(strModLabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel.Text));
 
-            if (profBonus * proficiencies[3] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll03.Text = sign + (int)(profBonus * proficiencies[3] + int.Parse(dexModLabel.Text));
-            if (profBonus * proficiencies[4] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll04.Text = sign + (int)(profBonus * proficiencies[4] + int.Parse(dexModLabel.Text));
-            if (profBonus * proficiencies[5] + int.Parse(dexModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll05.Text = sign + (int)(profBonus * proficiencies[5] + int.Parse(dexModLabel.Text));
+            if (profBonus * proficiencies[3] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll03.Text = sign + (int)(profBonus * proficiencies[3] + int.Parse(dexmodlabel.Text));
+            if (profBonus * proficiencies[4] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll04.Text = sign + (int)(profBonus * proficiencies[4] + int.Parse(dexmodlabel.Text));
+            if (profBonus * proficiencies[5] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll05.Text = sign + (int)(profBonus * proficiencies[5] + int.Parse(dexmodlabel.Text));
 
-            if (profBonus * proficiencies[7] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll07.Text = sign + (int)(profBonus * proficiencies[7] + int.Parse(intModLabel.Text));
-            if (profBonus * proficiencies[8] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll08.Text = sign + (int)(profBonus * proficiencies[8] + int.Parse(intModLabel.Text));
-            if (profBonus * proficiencies[9] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll09.Text = sign + (int)(profBonus * proficiencies[9] + int.Parse(intModLabel.Text));
-            if (profBonus * proficiencies[10] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll10.Text = sign + (int)(profBonus * proficiencies[10] + int.Parse(intModLabel.Text));
-            if (profBonus * proficiencies[11] + int.Parse(intModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll11.Text = sign + (int)(profBonus * proficiencies[11] + int.Parse(intModLabel.Text));
+            if (profBonus * proficiencies[7] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll07.Text = sign + (int)(profBonus * proficiencies[7] + int.Parse(intmodlabel.Text));
+            if (profBonus * proficiencies[8] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll08.Text = sign + (int)(profBonus * proficiencies[8] + int.Parse(intmodlabel.Text));
+            if (profBonus * proficiencies[9] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll09.Text = sign + (int)(profBonus * proficiencies[9] + int.Parse(intmodlabel.Text));
+            if (profBonus * proficiencies[10] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll10.Text = sign + (int)(profBonus * proficiencies[10] + int.Parse(intmodlabel.Text));
+            if (profBonus * proficiencies[11] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll11.Text = sign + (int)(profBonus * proficiencies[11] + int.Parse(intmodlabel.Text));
 
-            if (profBonus * proficiencies[13] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll13.Text = sign + (int)(profBonus * proficiencies[13] + int.Parse(wisModLabel.Text));
-            if (profBonus * proficiencies[14] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll14.Text = sign + (int)(profBonus * proficiencies[14] + int.Parse(wisModLabel.Text));
-            if (profBonus * proficiencies[15] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll15.Text = sign + (int)(profBonus * proficiencies[15] + int.Parse(wisModLabel.Text));
-            if (profBonus * proficiencies[16] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll16.Text = sign + (int)(profBonus * proficiencies[16] + int.Parse(wisModLabel.Text));
-            if (profBonus * proficiencies[17] + int.Parse(wisModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll17.Text = sign + (int)(profBonus * proficiencies[17] + int.Parse(wisModLabel.Text));
+            if (profBonus * proficiencies[13] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll13.Text = sign + (int)(profBonus * proficiencies[13] + int.Parse(wismodlabel.Text));
+            if (profBonus * proficiencies[14] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll14.Text = sign + (int)(profBonus * proficiencies[14] + int.Parse(wismodlabel.Text));
+            if (profBonus * proficiencies[15] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll15.Text = sign + (int)(profBonus * proficiencies[15] + int.Parse(wismodlabel.Text));
+            if (profBonus * proficiencies[16] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll16.Text = sign + (int)(profBonus * proficiencies[16] + int.Parse(wismodlabel.Text));
+            if (profBonus * proficiencies[17] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll17.Text = sign + (int)(profBonus * proficiencies[17] + int.Parse(wismodlabel.Text));
 
-            if (profBonus * proficiencies[19] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll19.Text = sign + (int)(profBonus * proficiencies[19] + int.Parse(chrModLabel.Text));
-            if (profBonus * proficiencies[20] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll20.Text = sign + (int)(profBonus * proficiencies[20] + int.Parse(chrModLabel.Text));
-            if (profBonus * proficiencies[21] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll21.Text = sign + (int)(profBonus * proficiencies[21] + int.Parse(chrModLabel.Text));
-            if (profBonus * proficiencies[22] + int.Parse(chrModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll22.Text = sign + (int)(profBonus * proficiencies[22] + int.Parse(chrModLabel.Text));
+            if (profBonus * proficiencies[19] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll19.Text = sign + (int)(profBonus * proficiencies[19] + int.Parse(charmodlabel.Text));
+            if (profBonus * proficiencies[20] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll20.Text = sign + (int)(profBonus * proficiencies[20] + int.Parse(charmodlabel.Text));
+            if (profBonus * proficiencies[21] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll21.Text = sign + (int)(profBonus * proficiencies[21] + int.Parse(charmodlabel.Text));
+            if (profBonus * proficiencies[22] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
+            profRoll22.Text = sign + (int)(profBonus * proficiencies[22] + int.Parse(charmodlabel.Text));
 
             //set spell dc/atk bonus boxes
             if (classSpellType > 0)
@@ -1626,19 +1627,19 @@ namespace WindowsFormsApp1
                 output.Write(nameLabel.Text);               //char name
                 output.Write(levelTextBox.Text);            //char level/class
                 //stats
-                output.Write(strDisplayBox.Text);
-                output.Write(dexDisplayBox.Text);
-                output.Write(conDisplayBox.Text);
-                output.Write(intDisplayBox.Text);
-                output.Write(wisDisplayBox.Text);
-                output.Write(chrDisplayBox.Text);
+                output.Write(strLabel.Text);
+                output.Write(dexlabel.Text);
+                output.Write(conlabel.Text);
+                output.Write(intlabel.Text);
+                output.Write(wislabel.Text);
+                output.Write(charlabel.Text);
                 //stat proficiencies
-                output.Write(strProfBox.Checked);
-                output.Write(dexProfBox.Checked);
-                output.Write(conProfBox.Checked);
-                output.Write(intProfBox.Checked);
-                output.Write(wisProfBox.Checked);
-                output.Write(chrProfBox.Checked);
+                output.Write(strProf.Checked);
+                output.Write(dexProf.Checked);
+                output.Write(conProf.Checked);
+                output.Write(intProf.Checked);
+                output.Write(wisProf.Checked);
+                output.Write(charProf.Checked);
                 //
                 output.Write(profBonusBox.Value);           //proficiency bonus
                 output.Write(raceTextBox.Text);             //race 
@@ -1843,19 +1844,19 @@ namespace WindowsFormsApp1
                 nameLabel.Text = reader.ReadString();       //char name
                 levelTextBox.Text = reader.ReadString();    //char level/class
                 //stats
-                strDisplayBox.Text = reader.ReadString();
-                dexDisplayBox.Text = reader.ReadString();
-                conDisplayBox.Text = reader.ReadString();
-                intDisplayBox.Text = reader.ReadString();
-                wisDisplayBox.Text = reader.ReadString();
-                chrDisplayBox.Text = reader.ReadString();
+                strLabel.Text = reader.ReadString();
+                dexlabel.Text = reader.ReadString();
+                conlabel.Text = reader.ReadString();
+                intlabel.Text = reader.ReadString();
+                wislabel.Text = reader.ReadString();
+                charlabel.Text = reader.ReadString();
                 //stat proficincies
-                strProfBox.Checked = reader.ReadBoolean();
-                dexProfBox.Checked = reader.ReadBoolean();
-                conProfBox.Checked = reader.ReadBoolean();
-                intProfBox.Checked = reader.ReadBoolean();
-                wisProfBox.Checked = reader.ReadBoolean();
-                chrProfBox.Checked = reader.ReadBoolean();
+                strProf.Checked = reader.ReadBoolean();
+                dexProf.Checked = reader.ReadBoolean();
+                conProf.Checked = reader.ReadBoolean();
+                intProf.Checked = reader.ReadBoolean();
+                wisProf.Checked = reader.ReadBoolean();
+                charProf.Checked = reader.ReadBoolean();
                 //
                 profBonusBox.Value = reader.ReadDecimal();      //proficiency bonus
                 profBonus = (int)profBonusBox.Value;
@@ -2103,18 +2104,18 @@ namespace WindowsFormsApp1
         private void NewCharacter()
         {
             //stats
-            strDisplayBox.Text = "10";
-            dexDisplayBox.Text = "10";
-            conDisplayBox.Text = "10";
-            intDisplayBox.Text = "10";
-            wisDisplayBox.Text = "10";
-            chrDisplayBox.Text = "10";
-            strProfBox.Checked = false;
-            dexProfBox.Checked = false;
-            conProfBox.Checked = false;
-            intProfBox.Checked = false;
-            wisProfBox.Checked = false;
-            chrProfBox.Checked = false;
+            strLabel.Text = "10";
+            dexlabel.Text = "10";
+            conlabel.Text = "10";
+            intlabel.Text = "10";
+            wislabel.Text = "10";
+            charlabel.Text = "10";
+            strProf.Checked = false;
+            dexProf.Checked = false;
+            conProf.Checked = false;
+            intProf.Checked = false;
+            wisProf.Checked = false;
+            charProf.Checked = false;
             profBonusBox.Value = 2;
             SpeedTextBox.Text = "30";
             raceTextBox.Text = "Click to Edit";
