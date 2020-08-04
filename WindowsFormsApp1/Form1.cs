@@ -1105,12 +1105,12 @@ namespace WindowsFormsApp1
         //use hit dice button
         private void buttonNoPadding1_Click(object sender, EventArgs e)
         {
-            HitDiced6NumBox.Value = Math.Min(HitDiced6NumBox.Value, currentHitDice[0]);
-            HitDiced8NumBox.Value = Math.Min(HitDiced8NumBox.Value, currentHitDice[1]);
-            HitDiced10NumBox.Value = Math.Min(HitDiced10NumBox.Value, currentHitDice[2]);
-            HitDiced12NumBox.Value = Math.Min(HitDiced12NumBox.Value, currentHitDice[3]);
+            d6NumUpDown.Value = Math.Min(d6NumUpDown.Value, currentHitDice[0]);
+            d8NumUpDown.Value = Math.Min(d8NumUpDown.Value, currentHitDice[1]);
+            d10NumUpDown.Value = Math.Min(d10NumUpDown.Value, currentHitDice[2]);
+            d12NumUpDown.Value = Math.Min(d12NumUpDown.Value, currentHitDice[3]);
 
-            if (HitDiced6NumBox.Value + HitDiced8NumBox.Value + HitDiced10NumBox.Value + HitDiced12NumBox.Value == 0)
+            if (d6NumUpDown.Value + d8NumUpDown.Value + d10NumUpDown.Value + d12NumUpDown.Value == 0)
             {
                 return;
             }
@@ -1127,7 +1127,7 @@ namespace WindowsFormsApp1
             int lastNum = 0;
 
 
-            for (int i = 0; i < (int)HitDiced6NumBox.Value; i++)
+            for (int i = 0; i < (int)d6NumUpDown.Value; i++)
             {
                 rolls[0].Add(Roll.RollSingleDie(6));
                 Totalsum += rolls[0][i];
@@ -1135,9 +1135,9 @@ namespace WindowsFormsApp1
                 lastNum++;
             }
             if (partialSum != 0)
-                result += HitDiced6NumBox.Value + "d6: " + partialSum + ",  ";
+                result += d6NumUpDown.Value + "d6: " + partialSum + ",  ";
             partialSum = 0;
-            for (int i = 0; i < (int)HitDiced8NumBox.Value; i++)
+            for (int i = 0; i < (int)d8NumUpDown.Value; i++)
             {
                 rolls[1].Add(Roll.RollSingleDie(8));
                 Totalsum += rolls[1][i];
@@ -1145,9 +1145,9 @@ namespace WindowsFormsApp1
                 lastNum++;
             }
             if (partialSum != 0)
-                result += HitDiced8NumBox.Value + "d8: " + partialSum + ",  ";
+                result += d8NumUpDown.Value + "d8: " + partialSum + ",  ";
             partialSum = 0;
-            for (int i = 0; i < (int)HitDiced10NumBox.Value; i++)
+            for (int i = 0; i < (int)d10NumUpDown.Value; i++)
             {
                 rolls[2].Add(Roll.RollSingleDie(10));
                 Totalsum += rolls[2][i];
@@ -1155,9 +1155,9 @@ namespace WindowsFormsApp1
                 lastNum++;
             }
             if (partialSum != 0)
-                result += HitDiced10NumBox.Value + "d10: " + partialSum + ",  ";
+                result += d10NumUpDown.Value + "d10: " + partialSum + ",  ";
             partialSum = 0;
-            for (int i = 0; i < (int)HitDiced12NumBox.Value; i++)
+            for (int i = 0; i < (int)d12NumUpDown.Value; i++)
             {
                 rolls[3].Add(Roll.RollSingleDie(12));
                 Totalsum += rolls[3][i];
@@ -1165,16 +1165,16 @@ namespace WindowsFormsApp1
                 lastNum++;
             }
             if (partialSum != 0)
-                result += HitDiced12NumBox.Value + "d12: " + partialSum + ",  ";
+                result += d12NumUpDown.Value + "d12: " + partialSum + ",  ";
 
             UpdateOutput("Total Healing: " + Totalsum + result.Substring(0, result.Length - 3) + ")");
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
 
 
-            currentHitDice[0] = currentHitDice[0] - (int)HitDiced6NumBox.Value;
-            currentHitDice[1] = currentHitDice[1] - (int)HitDiced8NumBox.Value;
-            currentHitDice[2] = currentHitDice[2] - (int)HitDiced10NumBox.Value;
-            currentHitDice[3] = currentHitDice[3] - (int)HitDiced12NumBox.Value;
+            currentHitDice[0] = currentHitDice[0] - (int)d6NumUpDown.Value;
+            currentHitDice[1] = currentHitDice[1] - (int)d8NumUpDown.Value;
+            currentHitDice[2] = currentHitDice[2] - (int)d10NumUpDown.Value;
+            currentHitDice[3] = currentHitDice[3] - (int)d12NumUpDown.Value;
 
 
             if (autoHealHitDice.Checked)
@@ -1198,12 +1198,12 @@ namespace WindowsFormsApp1
         //set max hit dice
         private void HitDiceSetMaxButton_Click(object sender, EventArgs e)
         {
-            if (HitDiced6NumBox.Value + HitDiced8NumBox.Value + HitDiced10NumBox.Value + HitDiced12NumBox.Value > 0)
+            if (d6NumUpDown.Value + d8NumUpDown.Value + d10NumUpDown.Value + d12NumUpDown.Value > 0)
             {
-                maxHitDice[0] = (int)HitDiced6NumBox.Value;
-                maxHitDice[1] = (int)HitDiced8NumBox.Value;
-                maxHitDice[2] = (int)HitDiced10NumBox.Value;
-                maxHitDice[3] = (int)HitDiced12NumBox.Value;
+                maxHitDice[0] = (int)d6NumUpDown.Value;
+                maxHitDice[1] = (int)d8NumUpDown.Value;
+                maxHitDice[2] = (int)d10NumUpDown.Value;
+                maxHitDice[3] = (int)d12NumUpDown.Value;
 
                 string s = "";
                 for (int i = 0; i < 4; i++)
@@ -1213,10 +1213,10 @@ namespace WindowsFormsApp1
                 }
                 MaxHitDiceDisplayLabel.Text = "Max: " + s.Substring(0, s.Length - 2);
 
-                HitDiced6NumBox.Value = 0;
-                HitDiced8NumBox.Value = 0;
-                HitDiced10NumBox.Value = 0;
-                HitDiced12NumBox.Value = 0;
+                d6NumUpDown.Value = 0;
+                d8NumUpDown.Value = 0;
+                d10NumUpDown.Value = 0;
+                d12NumUpDown.Value = 0;
 
             }
         }
@@ -1247,15 +1247,15 @@ namespace WindowsFormsApp1
         //partial refill
         private void HitDicePartialRefillButton_Click(object sender, EventArgs e)
         {
-            currentHitDice[0] = Math.Min(currentHitDice[0] + (int)HitDiced6NumBox.Value, maxHitDice[0]);
-            currentHitDice[1] = currentHitDice[1] + (int)HitDiced8NumBox.Value;
-            currentHitDice[2] = currentHitDice[2] + (int)HitDiced10NumBox.Value;
-            currentHitDice[3] = currentHitDice[3] + (int)HitDiced12NumBox.Value;
+            currentHitDice[0] = Math.Min(currentHitDice[0] + d6NumUpDown.Value, maxHitDice[0]);
+            currentHitDice[1] = Math.Min(currentHitDice[1] + d8NumUpDown.Value, maxHitDice[1]);
+            currentHitDice[2] = Math.Min(currentHitDice[2] + d10NumUpDown.Value, maxHitDice[2]);
+            currentHitDice[3] = Math.Min(currentHitDice[3] + d12NumUpDown.Value, maxHitDice[3]);
 
-            HitDiced6NumBox.Value = 0;
-            HitDiced8NumBox.Value = 0;
-            HitDiced10NumBox.Value = 0;
-            HitDiced12NumBox.Value = 0;
+            d6NumUpDown.Value = 0;
+            d8NumUpDown.Value = 0;
+            d10NumUpDown.Value = 0;
+            d12NumUpDown.Value = 0;
 
             string s = "";
             for (int i = 0; i < 4; i++)
@@ -2140,10 +2140,10 @@ namespace WindowsFormsApp1
             autoHealHitDice.Checked = false;
             currentHitDiceDisplayLabel.Text = "Current: ";
             MaxHitDiceDisplayLabel.Text = "Max: ";
-            HitDiced6NumBox.Value = 0;
-            HitDiced8NumBox.Value = 0;
-            HitDiced10NumBox.Value = 0;
-            HitDiced12NumBox.Value = 0;
+            d6NumUpDown.Value = 0;
+            d8NumUpDown.Value = 0;
+            d10NumUpDown.Value = 0;
+            d12NumUpDown.Value = 0;
             nameLabel.Text = "Character Name";
             levelTextBox.Text = "Level / Class";
             weaponPropTextBox.Text = "";
