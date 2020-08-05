@@ -1019,101 +1019,6 @@ namespace WindowsFormsApp1
             ((TextBox)sender).SelectionLength = 0;
         }
 
-        //press hp buttons
-        private void HPButtonClick(object sender, EventArgs e)
-        {
-            if (((CustomButtons.ButtonNoPadding)sender).Tag.ToString() == "current") //current
-            {
-                if (CurrentAmountBox.Text != "")
-                {
-                    if (((CustomButtons.ButtonNoPadding)sender).Text == "+")
-                    {
-                        currentHP = Math.Min(MaxHP, currentHP + int.Parse(CurrentAmountBox.Text));
-                        currentHPnumberlabel.Text = currentHP.ToString();
-                    }
-                    else if (((CustomButtons.ButtonNoPadding)sender).Text == "-")
-                    {
-                        currentHP = Math.Min(MaxHP, currentHP - int.Parse(CurrentAmountBox.Text));
-                        currentHPnumberlabel.Text = currentHP.ToString();
-                    }
-                    else //=
-                    {
-                        currentHP = Math.Min(MaxHP, int.Parse(CurrentAmountBox.Text));
-                        currentHPnumberlabel.Text = currentHP.ToString();
-                        CurrentAmountBox.Text = "";
-                    }
-                }
-                CurrentAmountBox.Focus();
-                CurrentAmountBox.SelectAll();
-            }
-            else // temp
-            {
-                if (TempAmountBox.Text != "")
-                {
-
-                    if (((CustomButtons.ButtonNoPadding)sender).Text == "-")
-                    {
-                        tempHP = tempHP - int.Parse(TempAmountBox.Text);
-                        temphpnumberslabel.Text = tempHP.ToString();
-                        TempAmountBox.Text = "";
-                        TempAmountBox.Focus();
-                    }
-                    else //set 
-                    {
-                        tempHP = int.Parse(TempAmountBox.Text);
-                        temphpnumberslabel.Text = tempHP.ToString();
-                        TempAmountBox.Text = "";
-                        TempAmountBox.Focus();
-                    }
-                }
-            }
-        }
-
-
-        //enter key pressed on hp boxes
-        private void PuAddHPBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (int.TryParse(((TextBox)sender).Text, out int num) && e.KeyChar == (Char)13)
-            {
-                if ((string)((TextBox)sender).Tag == "max")
-                {
-                    MaxHP = int.Parse(MaxHPAmountBox.Text);
-                    maxHPNumberLabel.Text = MaxHPAmountBox.Text;
-                    MaxHPAmountBox.Text = "";
-                }
-                else if ((string)((TextBox)sender).Tag == "current")
-                {
-                    currentHP = Math.Min(MaxHP, int.Parse(CurrentAmountBox.Text));
-                    currentHPnumberlabel.Text = currentHP.ToString();
-                    CurrentAmountBox.Text = "";
-                    CurrentAmountBox.Focus();
-                    //CurrentAmountBox.SelectAll();
-                }
-                else if ((string)((TextBox)sender).Tag == "temp")
-                {
-                    if (TempAmountBox.Text[0] == '-')
-                        tempHP = tempHP + int.Parse(TempAmountBox.Text);
-                    else
-                        tempHP = int.Parse(TempAmountBox.Text);
-                    temphpnumberslabel.Text = tempHP.ToString();
-                    TempAmountBox.Text = "";
-                }
-                ((TextBox)sender).Size = new Size(21, 17);
-            }
-            if (e.KeyChar == (Char)13)
-                e.Handled = true;
-        }
-
-        //HP buttons
-        private void SetMaxHP_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(MaxHPAmountBox.Text, out int i))
-                MaxHP = int.Parse(MaxHPAmountBox.Text);
-            maxHPNumberLabel.Text = MaxHP.ToString();
-            MaxHPAmountBox.Focus();
-            MaxHPAmountBox.Text = "";
-        }
-
         private void SelectTextOnEnter(object sender, EventArgs e)
         {
             ((TextBox)sender).SelectAll();
@@ -1201,7 +1106,7 @@ namespace WindowsFormsApp1
             if (autoHealHitDice.Checked)
             {
                 currentHP = Math.Min(currentHP + Totalsum, MaxHP);
-                currentHPnumberlabel.Text = currentHP.ToString();
+                currentHPlabel.Text = currentHP.ToString();
             }
 
             string s = "";
@@ -1320,7 +1225,7 @@ namespace WindowsFormsApp1
             if (int.TryParse(ACMiscBox.Text, out int i3))
                 misc = i3;
 
-            ACBox.Text = (armor + dex + misc).ToString();
+            ACDisplayLabel.Text = (armor + dex + misc).ToString();
         }
 
 
@@ -1681,9 +1586,9 @@ namespace WindowsFormsApp1
                 output.Write(ACDexBox.Text);
                 output.Write(ACMiscBox.Text);
                 //hp
-                output.Write(currentHPnumberlabel.Text);
-                output.Write(temphpnumberslabel.Text);
-                output.Write(maxHPNumberLabel.Text);
+                output.Write(currentHPlabel.Text);
+                output.Write(tempHPlabel.Text);
+                output.Write(MaxHPlabel.Text);
                 //hit dice
                 output.Write(autoHealHitDice.Checked);
                 output.Write(currentHitDiceDisplayLabel.Text);
@@ -1900,11 +1805,11 @@ namespace WindowsFormsApp1
                 ACMiscBox.Text = reader.ReadString();
                 //hp
                 currentHP = int.Parse(reader.ReadString());
-                currentHPnumberlabel.Text = currentHP.ToString();
+                currentHPlabel.Text = currentHP.ToString();
                 tempHP = int.Parse(reader.ReadString());
-                temphpnumberslabel.Text = tempHP.ToString();
+                tempHPlabel.Text = tempHP.ToString();
                 MaxHP = int.Parse(reader.ReadString());
-                maxHPNumberLabel.Text = MaxHP.ToString();
+                MaxHPlabel.Text = MaxHP.ToString();
                 //hit dice
                 autoHealHitDice.Checked = reader.ReadBoolean();
                 currentHitDiceDisplayLabel.Text = reader.ReadString();
@@ -2153,13 +2058,13 @@ namespace WindowsFormsApp1
             InitiativeTextBoxNum.Text = "";
             InitiativeRollDisplay.Text = "";
             ACArmorBox.Text = "10";
-            ACBox.Text = "10";
+            ACDisplayLabel.Text = "10";
             ACDexBox.Text = "0";
             ACMiscBox.Text = "0";
             InventoryTextBox.Text = "";
-            currentHPnumberlabel.Text = "0";
-            maxHPNumberLabel.Text = "10";
-            temphpnumberslabel.Text = "0";
+            currentHPlabel.Text = "10";
+            MaxHPlabel.Text = "10";
+            tempHPlabel.Text = "0";
             autoHealHitDice.Checked = false;
             currentHitDiceDisplayLabel.Text = "Current: ";
             MaxHitDiceDisplayLabel.Text = "Max: ";

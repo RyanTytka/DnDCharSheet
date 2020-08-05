@@ -93,24 +93,7 @@
             this.InventoryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ACLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TempSetButton = new CustomButtons.ButtonNoPadding();
-            this.TempMinusButton = new CustomButtons.ButtonNoPadding();
-            this.TempAmountBox = new System.Windows.Forms.TextBox();
-            this.CurrentSetButton = new CustomButtons.ButtonNoPadding();
-            this.CurrentMinusButton = new CustomButtons.ButtonNoPadding();
-            this.CurrentPlusButton = new CustomButtons.ButtonNoPadding();
-            this.CurrentAmountBox = new System.Windows.Forms.TextBox();
-            this.SetMaxHP = new CustomButtons.ButtonNoPadding();
-            this.MaxHPAmountBox = new System.Windows.Forms.TextBox();
-            this.maxHPNumberLabel = new System.Windows.Forms.Label();
-            this.currentHPnumberlabel = new System.Windows.Forms.Label();
-            this.temphpnumberslabel = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.HPLabel = new System.Windows.Forms.Label();
-            this.ACBox = new System.Windows.Forms.TextBox();
             this.ACMiscBox = new System.Windows.Forms.TextBox();
             this.ACDexBox = new System.Windows.Forms.TextBox();
             this.ACArmorBox = new System.Windows.Forms.TextBox();
@@ -138,13 +121,14 @@
             this.InitiativeRollButton = new CustomButtons.ButtonNoPadding();
             this.InitiativeRollDisplay = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ACDisplayLabel = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.exportButton = new CustomButtons.ButtonNoPadding();
-            this.importButton = new CustomButtons.ButtonNoPadding();
             this.newCharButton = new CustomButtons.ButtonNoPadding();
+            this.importButton = new CustomButtons.ButtonNoPadding();
             this.loadButton = new CustomButtons.ButtonNoPadding();
             this.SaveAsButton = new CustomButtons.ButtonNoPadding();
             this.saveButton = new CustomButtons.ButtonNoPadding();
@@ -156,12 +140,9 @@
             this.customCheckBox1 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.label35 = new System.Windows.Forms.Label();
             this.settingsButton = new CustomButtons.ButtonNoPadding();
-            this.label14 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.featShortRestButton = new CustomButtons.ButtonNoPadding();
-            this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
             this.otherFeatButton = new CustomButtons.ButtonNoPadding();
-            this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
             this.featLongRestButton = new CustomButtons.ButtonNoPadding();
             this.featDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.newFeatButton = new CustomButtons.ButtonNoPadding();
@@ -169,6 +150,8 @@
             this.featDeleteButton = new CustomButtons.ButtonNoPadding();
             this.featEditButton = new CustomButtons.ButtonNoPadding();
             this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
             this.nameLabel = new System.Windows.Forms.TextBox();
             this.levelTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -314,13 +297,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.customTextBox1name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1levelClass = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox3alignment = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox2background = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1race = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
-            this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.label52 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.conSaveButton = new CustomButtons.ButtonNoPadding();
@@ -366,16 +342,26 @@
             this.strLabel = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.profDownLabel = new CustomButtons.ButtonNoPadding();
-            this.profUpButton = new CustomButtons.ButtonNoPadding();
             this.profBonusLabel = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.speedTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.customTextBox1name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox1levelClass = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
+            this.customTextBox3alignment = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox2background = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox1race = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
+            this.miscRollbutton = new CustomButtons.ButtonNoPadding();
+            this.label29 = new System.Windows.Forms.Label();
+            this.profDownLabel = new CustomButtons.ButtonNoPadding();
+            this.profUpButton = new CustomButtons.ButtonNoPadding();
+            this.label30 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -568,9 +554,9 @@
             this.profLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.profLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
             this.profLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.profLabel.Location = new System.Drawing.Point(221, 81);
+            this.profLabel.Location = new System.Drawing.Point(221, 128);
             this.profLabel.Name = "profLabel";
-            this.profLabel.Size = new System.Drawing.Size(188, 20);
+            this.profLabel.Size = new System.Drawing.Size(185, 20);
             this.profLabel.TabIndex = 44;
             this.profLabel.Text = "Proficiencies";
             this.profLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -647,7 +633,7 @@
             this.profPanel.Controls.Add(this.ProficienciesChecks);
             this.profPanel.Controls.Add(this.profChecksX2);
             this.profPanel.Controls.Add(this.profCheckshalf);
-            this.profPanel.Location = new System.Drawing.Point(217, 117);
+            this.profPanel.Location = new System.Drawing.Point(217, 164);
             this.profPanel.Name = "profPanel";
             this.profPanel.Size = new System.Drawing.Size(191, 23);
             this.profPanel.TabIndex = 46;
@@ -1275,209 +1261,13 @@
             // ACLabel
             // 
             this.ACLabel.AutoSize = true;
-            this.ACLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold);
-            this.ACLabel.Location = new System.Drawing.Point(5, 2);
+            this.ACLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
+            this.ACLabel.Location = new System.Drawing.Point(-2, 8);
             this.ACLabel.Name = "ACLabel";
-            this.ACLabel.Size = new System.Drawing.Size(36, 24);
+            this.ACLabel.Size = new System.Drawing.Size(43, 25);
             this.ACLabel.TabIndex = 44;
-            this.ACLabel.Text = "Armor\r\nClass";
+            this.ACLabel.Text = "AC";
             this.ACLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.TempSetButton);
-            this.panel1.Controls.Add(this.TempMinusButton);
-            this.panel1.Controls.Add(this.TempAmountBox);
-            this.panel1.Controls.Add(this.CurrentSetButton);
-            this.panel1.Controls.Add(this.CurrentMinusButton);
-            this.panel1.Controls.Add(this.CurrentPlusButton);
-            this.panel1.Controls.Add(this.CurrentAmountBox);
-            this.panel1.Controls.Add(this.SetMaxHP);
-            this.panel1.Controls.Add(this.MaxHPAmountBox);
-            this.panel1.Controls.Add(this.maxHPNumberLabel);
-            this.panel1.Controls.Add(this.currentHPnumberlabel);
-            this.panel1.Controls.Add(this.temphpnumberslabel);
-            this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Location = new System.Drawing.Point(417, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 63);
-            this.panel1.TabIndex = 73;
-            // 
-            // TempSetButton
-            // 
-            this.TempSetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TempSetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.TempSetButton.Location = new System.Drawing.Point(98, 39);
-            this.TempSetButton.Name = "TempSetButton";
-            this.TempSetButton.Size = new System.Drawing.Size(37, 19);
-            this.TempSetButton.TabIndex = 108;
-            this.TempSetButton.Tag = "temp";
-            this.TempSetButton.Text = "Set";
-            this.TempSetButton.UseVisualStyleBackColor = true;
-            this.TempSetButton.Click += new System.EventHandler(this.HPButtonClick);
-            // 
-            // TempMinusButton
-            // 
-            this.TempMinusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TempMinusButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.TempMinusButton.Location = new System.Drawing.Point(79, 39);
-            this.TempMinusButton.Name = "TempMinusButton";
-            this.TempMinusButton.Size = new System.Drawing.Size(19, 19);
-            this.TempMinusButton.TabIndex = 107;
-            this.TempMinusButton.Tag = "temp";
-            this.TempMinusButton.Text = "-";
-            this.TempMinusButton.UseVisualStyleBackColor = true;
-            this.TempMinusButton.Click += new System.EventHandler(this.HPButtonClick);
-            // 
-            // TempAmountBox
-            // 
-            this.TempAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.TempAmountBox.Location = new System.Drawing.Point(136, 40);
-            this.TempAmountBox.Multiline = true;
-            this.TempAmountBox.Name = "TempAmountBox";
-            this.TempAmountBox.Size = new System.Drawing.Size(21, 17);
-            this.TempAmountBox.TabIndex = 103;
-            this.TempAmountBox.Tag = "temp";
-            this.TempAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
-            this.TempAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
-            this.TempAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
-            // 
-            // CurrentSetButton
-            // 
-            this.CurrentSetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentSetButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.CurrentSetButton.Location = new System.Drawing.Point(116, 3);
-            this.CurrentSetButton.Name = "CurrentSetButton";
-            this.CurrentSetButton.Size = new System.Drawing.Size(19, 19);
-            this.CurrentSetButton.TabIndex = 104;
-            this.CurrentSetButton.Tag = "current";
-            this.CurrentSetButton.Text = "=";
-            this.CurrentSetButton.UseVisualStyleBackColor = true;
-            this.CurrentSetButton.Click += new System.EventHandler(this.HPButtonClick);
-            // 
-            // CurrentMinusButton
-            // 
-            this.CurrentMinusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentMinusButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.CurrentMinusButton.Location = new System.Drawing.Point(98, 3);
-            this.CurrentMinusButton.Name = "CurrentMinusButton";
-            this.CurrentMinusButton.Size = new System.Drawing.Size(19, 19);
-            this.CurrentMinusButton.TabIndex = 103;
-            this.CurrentMinusButton.Tag = "current";
-            this.CurrentMinusButton.Text = "-";
-            this.CurrentMinusButton.UseVisualStyleBackColor = true;
-            this.CurrentMinusButton.Click += new System.EventHandler(this.HPButtonClick);
-            // 
-            // CurrentPlusButton
-            // 
-            this.CurrentPlusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentPlusButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.CurrentPlusButton.Location = new System.Drawing.Point(79, 3);
-            this.CurrentPlusButton.Name = "CurrentPlusButton";
-            this.CurrentPlusButton.Size = new System.Drawing.Size(19, 19);
-            this.CurrentPlusButton.TabIndex = 100;
-            this.CurrentPlusButton.Tag = "current";
-            this.CurrentPlusButton.Text = "+";
-            this.CurrentPlusButton.UseVisualStyleBackColor = true;
-            this.CurrentPlusButton.Click += new System.EventHandler(this.HPButtonClick);
-            // 
-            // CurrentAmountBox
-            // 
-            this.CurrentAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.CurrentAmountBox.Location = new System.Drawing.Point(136, 4);
-            this.CurrentAmountBox.Multiline = true;
-            this.CurrentAmountBox.Name = "CurrentAmountBox";
-            this.CurrentAmountBox.Size = new System.Drawing.Size(21, 17);
-            this.CurrentAmountBox.TabIndex = 101;
-            this.CurrentAmountBox.Tag = "current";
-            this.CurrentAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
-            this.CurrentAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
-            this.CurrentAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
-            // 
-            // SetMaxHP
-            // 
-            this.SetMaxHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SetMaxHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.SetMaxHP.Location = new System.Drawing.Point(79, 21);
-            this.SetMaxHP.Name = "SetMaxHP";
-            this.SetMaxHP.Size = new System.Drawing.Size(38, 19);
-            this.SetMaxHP.TabIndex = 96;
-            this.SetMaxHP.Text = "Set";
-            this.SetMaxHP.UseVisualStyleBackColor = true;
-            this.SetMaxHP.Click += new System.EventHandler(this.SetMaxHP_Click);
-            // 
-            // MaxHPAmountBox
-            // 
-            this.MaxHPAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.MaxHPAmountBox.Location = new System.Drawing.Point(117, 22);
-            this.MaxHPAmountBox.Multiline = true;
-            this.MaxHPAmountBox.Name = "MaxHPAmountBox";
-            this.MaxHPAmountBox.Size = new System.Drawing.Size(21, 17);
-            this.MaxHPAmountBox.TabIndex = 102;
-            this.MaxHPAmountBox.Tag = "max";
-            this.MaxHPAmountBox.Click += new System.EventHandler(this.SelectTextOnEnter);
-            this.MaxHPAmountBox.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
-            this.MaxHPAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PuAddHPBox_KeyPress);
-            // 
-            // maxHPNumberLabel
-            // 
-            this.maxHPNumberLabel.AutoSize = true;
-            this.maxHPNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.maxHPNumberLabel.Location = new System.Drawing.Point(56, 22);
-            this.maxHPNumberLabel.Name = "maxHPNumberLabel";
-            this.maxHPNumberLabel.Size = new System.Drawing.Size(24, 16);
-            this.maxHPNumberLabel.TabIndex = 100;
-            this.maxHPNumberLabel.Text = "10\r\n";
-            this.maxHPNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.maxHPNumberLabel.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // currentHPnumberlabel
-            // 
-            this.currentHPnumberlabel.AutoSize = true;
-            this.currentHPnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.currentHPnumberlabel.Location = new System.Drawing.Point(57, 4);
-            this.currentHPnumberlabel.Name = "currentHPnumberlabel";
-            this.currentHPnumberlabel.Size = new System.Drawing.Size(16, 16);
-            this.currentHPnumberlabel.TabIndex = 99;
-            this.currentHPnumberlabel.Text = "0";
-            this.currentHPnumberlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.currentHPnumberlabel.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // temphpnumberslabel
-            // 
-            this.temphpnumberslabel.AutoSize = true;
-            this.temphpnumberslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.temphpnumberslabel.Location = new System.Drawing.Point(57, 41);
-            this.temphpnumberslabel.Name = "temphpnumberslabel";
-            this.temphpnumberslabel.Size = new System.Drawing.Size(16, 16);
-            this.temphpnumberslabel.TabIndex = 70;
-            this.temphpnumberslabel.Text = "0";
-            this.temphpnumberslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.temphpnumberslabel.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.SystemColors.Control;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(10, 40);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(50, 16);
-            this.label30.TabIndex = 226;
-            this.label30.Text = "Temp: ";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.SystemColors.Control;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(0, 22);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(58, 16);
-            this.label29.TabIndex = 225;
-            this.label29.Text = "Max HP:";
             // 
             // label28
             // 
@@ -1490,33 +1280,9 @@
             this.label28.TabIndex = 224;
             this.label28.Text = "Current  Max  Temp";
             // 
-            // HPLabel
-            // 
-            this.HPLabel.AutoSize = true;
-            this.HPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.HPLabel.Location = new System.Drawing.Point(485, 82);
-            this.HPLabel.Name = "HPLabel";
-            this.HPLabel.Size = new System.Drawing.Size(29, 16);
-            this.HPLabel.TabIndex = 46;
-            this.HPLabel.Text = "HP";
-            this.HPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ACBox
-            // 
-            this.ACBox.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ACBox.Location = new System.Drawing.Point(4, 28);
-            this.ACBox.Multiline = true;
-            this.ACBox.Name = "ACBox";
-            this.ACBox.ReadOnly = true;
-            this.ACBox.Size = new System.Drawing.Size(40, 40);
-            this.ACBox.TabIndex = 44;
-            this.ACBox.Text = "10";
-            this.ACBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ACBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
             // ACMiscBox
             // 
-            this.ACMiscBox.Location = new System.Drawing.Point(48, 48);
+            this.ACMiscBox.Location = new System.Drawing.Point(166, 20);
             this.ACMiscBox.Name = "ACMiscBox";
             this.ACMiscBox.Size = new System.Drawing.Size(21, 20);
             this.ACMiscBox.TabIndex = 152;
@@ -1525,7 +1291,7 @@
             // 
             // ACDexBox
             // 
-            this.ACDexBox.Location = new System.Drawing.Point(48, 26);
+            this.ACDexBox.Location = new System.Drawing.Point(126, 21);
             this.ACDexBox.Name = "ACDexBox";
             this.ACDexBox.Size = new System.Drawing.Size(21, 20);
             this.ACDexBox.TabIndex = 151;
@@ -1534,7 +1300,7 @@
             // 
             // ACArmorBox
             // 
-            this.ACArmorBox.Location = new System.Drawing.Point(48, 4);
+            this.ACArmorBox.Location = new System.Drawing.Point(81, 21);
             this.ACArmorBox.Name = "ACArmorBox";
             this.ACArmorBox.Size = new System.Drawing.Size(21, 20);
             this.ACArmorBox.TabIndex = 150;
@@ -1559,7 +1325,7 @@
             this.panel2.Controls.Add(this.label57);
             this.panel2.Controls.Add(this.label58);
             this.panel2.Controls.Add(this.currentHitDiceDisplayLabel);
-            this.panel2.Location = new System.Drawing.Point(5, 425);
+            this.panel2.Location = new System.Drawing.Point(5, 472);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(192, 173);
             this.panel2.TabIndex = 100;
@@ -1808,28 +1574,38 @@
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.ACDisplayLabel);
             this.panel4.Controls.Add(this.label33);
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.label31);
-            this.panel4.Controls.Add(this.ACBox);
             this.panel4.Controls.Add(this.ACArmorBox);
             this.panel4.Controls.Add(this.ACDexBox);
             this.panel4.Controls.Add(this.ACMiscBox);
             this.panel4.Controls.Add(this.ACLabel);
-            this.panel4.Location = new System.Drawing.Point(600, 5);
+            this.panel4.Location = new System.Drawing.Point(221, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(119, 74);
+            this.panel4.Size = new System.Drawing.Size(213, 41);
             this.panel4.TabIndex = 156;
+            // 
+            // ACDisplayLabel
+            // 
+            this.ACDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
+            this.ACDisplayLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.ACDisplayLabel.Location = new System.Drawing.Point(37, 4);
+            this.ACDisplayLabel.Name = "ACDisplayLabel";
+            this.ACDisplayLabel.Size = new System.Drawing.Size(37, 33);
+            this.ACDisplayLabel.TabIndex = 230;
+            this.ACDisplayLabel.Text = "18";
+            this.ACDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.SystemColors.Control;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(70, 50);
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(159, 4);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(36, 16);
+            this.label33.Size = new System.Drawing.Size(40, 16);
             this.label33.TabIndex = 229;
             this.label33.Text = "Misc";
             // 
@@ -1837,10 +1613,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.SystemColors.Control;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(69, 28);
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(122, 5);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 16);
+            this.label32.Size = new System.Drawing.Size(35, 16);
             this.label32.TabIndex = 228;
             this.label32.Text = "Dex";
             // 
@@ -1848,66 +1624,65 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.SystemColors.Control;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(69, 6);
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(72, 5);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(44, 16);
+            this.label31.Size = new System.Drawing.Size(49, 16);
             this.label31.TabIndex = 227;
             this.label31.Text = "Armor";
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.exportButton);
-            this.panel5.Controls.Add(this.importButton);
             this.panel5.Controls.Add(this.newCharButton);
+            this.panel5.Controls.Add(this.importButton);
             this.panel5.Controls.Add(this.loadButton);
             this.panel5.Controls.Add(this.SaveAsButton);
             this.panel5.Controls.Add(this.saveButton);
-            this.panel5.Location = new System.Drawing.Point(452, 222);
+            this.panel5.Location = new System.Drawing.Point(5, 78);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(117, 74);
+            this.panel5.Size = new System.Drawing.Size(212, 41);
             this.panel5.TabIndex = 157;
             // 
             // exportButton
             // 
             this.exportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportButton.Location = new System.Drawing.Point(58, 26);
+            this.exportButton.Location = new System.Drawing.Point(141, 22);
             this.exportButton.Name = "exportButton";
-            this.exportButton.Size = new System.Drawing.Size(54, 21);
+            this.exportButton.Size = new System.Drawing.Size(67, 17);
             this.exportButton.TabIndex = 169;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = true;
             this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
-            // importButton
-            // 
-            this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importButton.Location = new System.Drawing.Point(58, 3);
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(54, 21);
-            this.importButton.TabIndex = 168;
-            this.importButton.Text = "Import";
-            this.importButton.UseVisualStyleBackColor = true;
-            this.importButton.Click += new System.EventHandler(this.importButton_Click);
-            // 
             // newCharButton
             // 
             this.newCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newCharButton.Location = new System.Drawing.Point(58, 49);
+            this.newCharButton.Location = new System.Drawing.Point(71, 22);
             this.newCharButton.Name = "newCharButton";
-            this.newCharButton.Size = new System.Drawing.Size(54, 20);
+            this.newCharButton.Size = new System.Drawing.Size(69, 17);
             this.newCharButton.TabIndex = 167;
             this.newCharButton.Text = "New";
             this.newCharButton.UseVisualStyleBackColor = true;
             this.newCharButton.Click += new System.EventHandler(this.NewCharacter);
             // 
+            // importButton
+            // 
+            this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importButton.Location = new System.Drawing.Point(141, 3);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(67, 18);
+            this.importButton.TabIndex = 168;
+            this.importButton.Text = "Import";
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
+            // 
             // loadButton
             // 
             this.loadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadButton.Location = new System.Drawing.Point(3, 49);
+            this.loadButton.Location = new System.Drawing.Point(71, 3);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(54, 20);
+            this.loadButton.Size = new System.Drawing.Size(69, 18);
             this.loadButton.TabIndex = 166;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -1916,9 +1691,9 @@
             // SaveAsButton
             // 
             this.SaveAsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAsButton.Location = new System.Drawing.Point(3, 26);
+            this.SaveAsButton.Location = new System.Drawing.Point(3, 22);
             this.SaveAsButton.Name = "SaveAsButton";
-            this.SaveAsButton.Size = new System.Drawing.Size(54, 21);
+            this.SaveAsButton.Size = new System.Drawing.Size(67, 17);
             this.SaveAsButton.TabIndex = 165;
             this.SaveAsButton.Text = "Save As";
             this.SaveAsButton.UseVisualStyleBackColor = true;
@@ -1929,7 +1704,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Location = new System.Drawing.Point(3, 3);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(54, 22);
+            this.saveButton.Size = new System.Drawing.Size(67, 18);
             this.saveButton.TabIndex = 164;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -1967,12 +1742,9 @@
             this.featsPanel.Controls.Add(this.customCheckBox1);
             this.featsPanel.Controls.Add(this.label35);
             this.featsPanel.Controls.Add(this.settingsButton);
-            this.featsPanel.Controls.Add(this.label14);
             this.featsPanel.Controls.Add(this.label34);
             this.featsPanel.Controls.Add(this.featShortRestButton);
-            this.featsPanel.Controls.Add(this.spellTypeDropdown);
             this.featsPanel.Controls.Add(this.otherFeatButton);
-            this.featsPanel.Controls.Add(this.BackgroundInfobutton);
             this.featsPanel.Controls.Add(this.featLongRestButton);
             this.featsPanel.Controls.Add(this.featDescriptionTextbox);
             this.featsPanel.Controls.Add(this.newFeatButton);
@@ -2041,17 +1813,6 @@
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.buttonNoPadding3_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(191, 138);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 13);
-            this.label14.TabIndex = 224;
-            this.label14.Text = "Spellcasting";
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -2077,31 +1838,6 @@
             this.featShortRestButton.UseVisualStyleBackColor = true;
             this.featShortRestButton.Click += new System.EventHandler(this.featRefillButton);
             // 
-            // spellTypeDropdown
-            // 
-            this.spellTypeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.spellTypeDropdown.DropDownWidth = 130;
-            this.spellTypeDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.spellTypeDropdown.FormattingEnabled = true;
-            this.spellTypeDropdown.Items.AddRange(new object[] {
-            "None",
-            "Artificer",
-            "Bard",
-            "Cleric",
-            "Druid",
-            "Fighter(Eldritch Knight)",
-            "Paladin",
-            "Ranger",
-            "Rogue(Arcane Trickster)",
-            "Sorcerer",
-            "Warlock",
-            "Wizard"});
-            this.spellTypeDropdown.Location = new System.Drawing.Point(185, 152);
-            this.spellTypeDropdown.Name = "spellTypeDropdown";
-            this.spellTypeDropdown.Size = new System.Drawing.Size(87, 21);
-            this.spellTypeDropdown.TabIndex = 175;
-            this.spellTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.ChangeSpellType);
-            // 
             // otherFeatButton
             // 
             this.otherFeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2115,17 +1851,6 @@
             this.otherFeatButton.Text = "Other";
             this.otherFeatButton.UseVisualStyleBackColor = true;
             this.otherFeatButton.Click += new System.EventHandler(this.featRefillButton);
-            // 
-            // BackgroundInfobutton
-            // 
-            this.BackgroundInfobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackgroundInfobutton.Location = new System.Drawing.Point(164, 91);
-            this.BackgroundInfobutton.Name = "BackgroundInfobutton";
-            this.BackgroundInfobutton.Size = new System.Drawing.Size(87, 14);
-            this.BackgroundInfobutton.TabIndex = 170;
-            this.BackgroundInfobutton.Text = "Character Info";
-            this.BackgroundInfobutton.UseVisualStyleBackColor = true;
-            this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
             // 
             // featLongRestButton
             // 
@@ -2213,6 +1938,42 @@
             this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 165;
             this.label4.Text = "Description";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(576, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 13);
+            this.label14.TabIndex = 224;
+            this.label14.Text = "Spellcasting";
+            // 
+            // spellTypeDropdown
+            // 
+            this.spellTypeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spellTypeDropdown.DropDownWidth = 130;
+            this.spellTypeDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.spellTypeDropdown.FormattingEnabled = true;
+            this.spellTypeDropdown.Items.AddRange(new object[] {
+            "None",
+            "Artificer",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Fighter(Eldritch Knight)",
+            "Paladin",
+            "Ranger",
+            "Rogue(Arcane Trickster)",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"});
+            this.spellTypeDropdown.Location = new System.Drawing.Point(570, 47);
+            this.spellTypeDropdown.Name = "spellTypeDropdown";
+            this.spellTypeDropdown.Size = new System.Drawing.Size(90, 21);
+            this.spellTypeDropdown.TabIndex = 175;
+            this.spellTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.ChangeSpellType);
             // 
             // nameLabel
             // 
@@ -4049,61 +3810,6 @@
             this.label51.TabIndex = 241;
             this.label51.Text = "_______________________";
             // 
-            // customTextBox1name
-            // 
-            this.customTextBox1name.Location = new System.Drawing.Point(5, 5);
-            this.customTextBox1name.Name = "customTextBox1name";
-            this.customTextBox1name.Size = new System.Drawing.Size(209, 22);
-            this.customTextBox1name.TabIndex = 245;
-            // 
-            // customTextBox1levelClass
-            // 
-            this.customTextBox1levelClass.Location = new System.Drawing.Point(4, 34);
-            this.customTextBox1levelClass.Name = "customTextBox1levelClass";
-            this.customTextBox1levelClass.Size = new System.Drawing.Size(209, 14);
-            this.customTextBox1levelClass.TabIndex = 244;
-            // 
-            // customTextBox3alignment
-            // 
-            this.customTextBox3alignment.Location = new System.Drawing.Point(141, 55);
-            this.customTextBox3alignment.Name = "customTextBox3alignment";
-            this.customTextBox3alignment.Size = new System.Drawing.Size(72, 14);
-            this.customTextBox3alignment.TabIndex = 243;
-            // 
-            // customTextBox2background
-            // 
-            this.customTextBox2background.Location = new System.Drawing.Point(75, 55);
-            this.customTextBox2background.Name = "customTextBox2background";
-            this.customTextBox2background.Size = new System.Drawing.Size(62, 14);
-            this.customTextBox2background.TabIndex = 242;
-            // 
-            // customTextBox1race
-            // 
-            this.customTextBox1race.Location = new System.Drawing.Point(5, 55);
-            this.customTextBox1race.Name = "customTextBox1race";
-            this.customTextBox1race.Size = new System.Drawing.Size(66, 14);
-            this.customTextBox1race.TabIndex = 239;
-            // 
-            // proficienciesCheckBoxes
-            // 
-            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 99);
-            this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
-            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
-            this.proficienciesCheckBoxes.TabIndex = 234;
-            // 
-            // miscRollbutton
-            // 
-            this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(534, 565);
-            this.miscRollbutton.Name = "miscRollbutton";
-            this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
-            this.miscRollbutton.TabIndex = 193;
-            this.miscRollbutton.Text = "Roll";
-            this.miscRollbutton.UseVisualStyleBackColor = true;
-            this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
-            // 
             // label52
             // 
             this.label52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -4111,7 +3817,7 @@
             this.label52.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label52.Location = new System.Drawing.Point(2, 2);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(188, 20);
+            this.label52.Size = new System.Drawing.Size(207, 20);
             this.label52.TabIndex = 246;
             this.label52.Text = "Attributes";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4167,9 +3873,9 @@
             this.panel13.Controls.Add(this.dexLabeltitle);
             this.panel13.Controls.Add(this.strLabel);
             this.panel13.Controls.Add(this.label55);
-            this.panel13.Location = new System.Drawing.Point(5, 79);
+            this.panel13.Location = new System.Drawing.Point(5, 126);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(192, 339);
+            this.panel13.Size = new System.Drawing.Size(210, 339);
             this.panel13.TabIndex = 247;
             // 
             // conSaveButton
@@ -4729,38 +4435,6 @@
             this.label60.Text = "Prof\r\nBonus";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // profDownLabel
-            // 
-            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profDownLabel.FlatAppearance.BorderSize = 0;
-            this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.profDownLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.profDownLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profDownLabel.Location = new System.Drawing.Point(472, 57);
-            this.profDownLabel.Name = "profDownLabel";
-            this.profDownLabel.Size = new System.Drawing.Size(17, 13);
-            this.profDownLabel.TabIndex = 287;
-            this.profDownLabel.Text = null;
-            this.profDownLabel.UseVisualStyleBackColor = true;
-            this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
-            // 
-            // profUpButton
-            // 
-            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profUpButton.FlatAppearance.BorderSize = 0;
-            this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.profUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.profUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profUpButton.Location = new System.Drawing.Point(472, 41);
-            this.profUpButton.Name = "profUpButton";
-            this.profUpButton.Size = new System.Drawing.Size(17, 13);
-            this.profUpButton.TabIndex = 286;
-            this.profUpButton.Text = null;
-            this.profUpButton.UseVisualStyleBackColor = true;
-            this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
-            // 
             // profBonusLabel
             // 
             this.profBonusLabel.BackColor = System.Drawing.SystemColors.Control;
@@ -4804,6 +4478,16 @@
             this.label63.TabIndex = 289;
             this.label63.Text = "______";
             // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.SystemColors.Control;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(567, 56);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 17);
+            this.label15.TabIndex = 290;
+            this.label15.Text = "__________";
+            // 
             // speedTextBox
             // 
             this.speedTextBox.Location = new System.Drawing.Point(513, 43);
@@ -4811,22 +4495,145 @@
             this.speedTextBox.Size = new System.Drawing.Size(45, 25);
             this.speedTextBox.TabIndex = 239;
             // 
+            // customTextBox1name
+            // 
+            this.customTextBox1name.Location = new System.Drawing.Point(5, 5);
+            this.customTextBox1name.Name = "customTextBox1name";
+            this.customTextBox1name.Size = new System.Drawing.Size(209, 22);
+            this.customTextBox1name.TabIndex = 245;
+            // 
+            // customTextBox1levelClass
+            // 
+            this.customTextBox1levelClass.Location = new System.Drawing.Point(4, 34);
+            this.customTextBox1levelClass.Name = "customTextBox1levelClass";
+            this.customTextBox1levelClass.Size = new System.Drawing.Size(209, 14);
+            this.customTextBox1levelClass.TabIndex = 244;
+            // 
+            // BackgroundInfobutton
+            // 
+            this.BackgroundInfobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackgroundInfobutton.Location = new System.Drawing.Point(570, 10);
+            this.BackgroundInfobutton.Name = "BackgroundInfobutton";
+            this.BackgroundInfobutton.Size = new System.Drawing.Size(90, 20);
+            this.BackgroundInfobutton.TabIndex = 170;
+            this.BackgroundInfobutton.Text = "Character Info";
+            this.BackgroundInfobutton.UseVisualStyleBackColor = true;
+            this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
+            // 
+            // customTextBox3alignment
+            // 
+            this.customTextBox3alignment.Location = new System.Drawing.Point(141, 55);
+            this.customTextBox3alignment.Name = "customTextBox3alignment";
+            this.customTextBox3alignment.Size = new System.Drawing.Size(72, 14);
+            this.customTextBox3alignment.TabIndex = 243;
+            // 
+            // customTextBox2background
+            // 
+            this.customTextBox2background.Location = new System.Drawing.Point(75, 55);
+            this.customTextBox2background.Name = "customTextBox2background";
+            this.customTextBox2background.Size = new System.Drawing.Size(62, 14);
+            this.customTextBox2background.TabIndex = 242;
+            // 
+            // customTextBox1race
+            // 
+            this.customTextBox1race.Location = new System.Drawing.Point(5, 55);
+            this.customTextBox1race.Name = "customTextBox1race";
+            this.customTextBox1race.Size = new System.Drawing.Size(66, 14);
+            this.customTextBox1race.TabIndex = 239;
+            // 
+            // proficienciesCheckBoxes
+            // 
+            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 146);
+            this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
+            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
+            this.proficienciesCheckBoxes.TabIndex = 234;
+            // 
+            // miscRollbutton
+            // 
+            this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
+            this.miscRollbutton.Location = new System.Drawing.Point(534, 565);
+            this.miscRollbutton.Name = "miscRollbutton";
+            this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
+            this.miscRollbutton.TabIndex = 193;
+            this.miscRollbutton.Text = "Roll";
+            this.miscRollbutton.UseVisualStyleBackColor = true;
+            this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
+            // 
+            // label29
+            // 
+            this.label29.BackColor = System.Drawing.SystemColors.Control;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label29.Location = new System.Drawing.Point(2, 105);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(215, 17);
+            this.label29.TabIndex = 291;
+            this.label29.Text = "_______________________";
+            // 
+            // profDownLabel
+            // 
+            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profDownLabel.FlatAppearance.BorderSize = 0;
+            this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profDownLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profDownLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profDownLabel.Location = new System.Drawing.Point(472, 57);
+            this.profDownLabel.Name = "profDownLabel";
+            this.profDownLabel.Size = new System.Drawing.Size(17, 13);
+            this.profDownLabel.TabIndex = 287;
+            this.profDownLabel.Text = null;
+            this.profDownLabel.UseVisualStyleBackColor = true;
+            this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
+            // 
+            // profUpButton
+            // 
+            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profUpButton.FlatAppearance.BorderSize = 0;
+            this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profUpButton.Location = new System.Drawing.Point(472, 41);
+            this.profUpButton.Name = "profUpButton";
+            this.profUpButton.Size = new System.Drawing.Size(17, 13);
+            this.profUpButton.TabIndex = 286;
+            this.profUpButton.Text = null;
+            this.profUpButton.UseVisualStyleBackColor = true;
+            this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.SystemColors.Control;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(219, 106);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(215, 17);
+            this.label30.TabIndex = 292;
+            this.label30.Text = "_______________________";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1204, 665);
+            this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.speedTextBox);
-            this.Controls.Add(this.label63);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.label60);
             this.Controls.Add(this.profDownLabel);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.profUpButton);
             this.Controls.Add(this.customTextBox1name);
+            this.Controls.Add(this.spellTypeDropdown);
             this.Controls.Add(this.profBonusLabel);
             this.Controls.Add(this.customTextBox1levelClass);
+            this.Controls.Add(this.BackgroundInfobutton);
             this.Controls.Add(this.customTextBox3alignment);
             this.Controls.Add(this.customTextBox2background);
             this.Controls.Add(this.customTextBox1race);
@@ -4843,19 +4650,15 @@
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.spelllabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.featsPanel);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InventoryTextBox);
             this.Controls.Add(this.Weapon1);
             this.Controls.Add(this.profPanel);
-            this.Controls.Add(this.HPLabel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.label6);
@@ -4865,6 +4668,9 @@
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.label27);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label63);
+            this.Controls.Add(this.label30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -4876,8 +4682,6 @@
             this.profPanel.PerformLayout();
             this.Weapon1.ResumeLayout(false);
             this.Weapon1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -4984,24 +4788,9 @@
         private System.Windows.Forms.TextBox InventoryTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ACLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox ACBox;
-        private System.Windows.Forms.TextBox MaxHPAmountBox;
-        private System.Windows.Forms.Label HPLabel;
-        private System.Windows.Forms.Label temphpnumberslabel;
-        private CustomButtons.ButtonNoPadding SetMaxHP;
         private System.Windows.Forms.TextBox ACMiscBox;
         private System.Windows.Forms.TextBox ACDexBox;
         private System.Windows.Forms.TextBox ACArmorBox;
-        private System.Windows.Forms.Label maxHPNumberLabel;
-        private System.Windows.Forms.Label currentHPnumberlabel;
-        private CustomButtons.ButtonNoPadding CurrentPlusButton;
-        private System.Windows.Forms.TextBox CurrentAmountBox;
-        private CustomButtons.ButtonNoPadding CurrentSetButton;
-        private CustomButtons.ButtonNoPadding CurrentMinusButton;
-        private CustomButtons.ButtonNoPadding TempSetButton;
-        private CustomButtons.ButtonNoPadding TempMinusButton;
-        private System.Windows.Forms.TextBox TempAmountBox;
         private System.Windows.Forms.Panel panel2;
         private CustomButtons.ButtonNoPadding HitDiceUseButton;
         private CustomButtons.ButtonNoPadding HitDicePartialRefillButton;
@@ -5163,8 +4952,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
@@ -5271,6 +5058,10 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label63;
         private CustomControls.CustomTextBoxCentered speedTextBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label ACDisplayLabel;
+        private System.Windows.Forms.Label label30;
     }
 }
 
