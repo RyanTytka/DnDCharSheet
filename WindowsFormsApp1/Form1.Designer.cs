@@ -92,11 +92,8 @@
             this.weapon1Name = new System.Windows.Forms.Label();
             this.InventoryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ACLabel = new System.Windows.Forms.Label();
+            this.AC = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.ACMiscBox = new System.Windows.Forms.TextBox();
-            this.ACDexBox = new System.Windows.Forms.TextBox();
-            this.ACArmorBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.d12NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.d10NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
@@ -121,7 +118,10 @@
             this.InitiativeRollButton = new CustomButtons.ButtonNoPadding();
             this.InitiativeRollDisplay = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.MiscarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.ACDisplayLabel = new System.Windows.Forms.Label();
+            this.DexarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.ACarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -357,9 +357,9 @@
             this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.profDownLabel = new CustomButtons.ButtonNoPadding();
             this.profUpButton = new CustomButtons.ButtonNoPadding();
-            this.label30 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1258,16 +1258,16 @@
             this.label1.TabIndex = 69;
             this.label1.Text = "Inventory";
             // 
-            // ACLabel
+            // AC
             // 
-            this.ACLabel.AutoSize = true;
-            this.ACLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
-            this.ACLabel.Location = new System.Drawing.Point(-2, 8);
-            this.ACLabel.Name = "ACLabel";
-            this.ACLabel.Size = new System.Drawing.Size(43, 25);
-            this.ACLabel.TabIndex = 44;
-            this.ACLabel.Text = "AC";
-            this.ACLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AC.AutoSize = true;
+            this.AC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.AC.Location = new System.Drawing.Point(1, 5);
+            this.AC.Name = "AC";
+            this.AC.Size = new System.Drawing.Size(45, 30);
+            this.AC.TabIndex = 44;
+            this.AC.Text = "Armor\r\nClass";
+            this.AC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label28
             // 
@@ -1279,33 +1279,6 @@
             this.label28.Size = new System.Drawing.Size(150, 17);
             this.label28.TabIndex = 224;
             this.label28.Text = "Current  Max  Temp";
-            // 
-            // ACMiscBox
-            // 
-            this.ACMiscBox.Location = new System.Drawing.Point(166, 20);
-            this.ACMiscBox.Name = "ACMiscBox";
-            this.ACMiscBox.Size = new System.Drawing.Size(21, 20);
-            this.ACMiscBox.TabIndex = 152;
-            this.ACMiscBox.Text = "0";
-            this.ACMiscBox.TextChanged += new System.EventHandler(this.ACTextBoxChange);
-            // 
-            // ACDexBox
-            // 
-            this.ACDexBox.Location = new System.Drawing.Point(126, 21);
-            this.ACDexBox.Name = "ACDexBox";
-            this.ACDexBox.Size = new System.Drawing.Size(21, 20);
-            this.ACDexBox.TabIndex = 151;
-            this.ACDexBox.Text = "0";
-            this.ACDexBox.TextChanged += new System.EventHandler(this.ACTextBoxChange);
-            // 
-            // ACArmorBox
-            // 
-            this.ACArmorBox.Location = new System.Drawing.Point(81, 21);
-            this.ACArmorBox.Name = "ACArmorBox";
-            this.ACArmorBox.Size = new System.Drawing.Size(21, 20);
-            this.ACArmorBox.TabIndex = 150;
-            this.ACArmorBox.Text = "10";
-            this.ACArmorBox.TextChanged += new System.EventHandler(this.ACTextBoxChange);
             // 
             // panel2
             // 
@@ -1574,36 +1547,57 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.MiscarmorTextbox);
             this.panel4.Controls.Add(this.ACDisplayLabel);
+            this.panel4.Controls.Add(this.DexarmorTextbox);
+            this.panel4.Controls.Add(this.ACarmorTextbox);
             this.panel4.Controls.Add(this.label33);
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.label31);
-            this.panel4.Controls.Add(this.ACArmorBox);
-            this.panel4.Controls.Add(this.ACDexBox);
-            this.panel4.Controls.Add(this.ACMiscBox);
-            this.panel4.Controls.Add(this.ACLabel);
+            this.panel4.Controls.Add(this.AC);
             this.panel4.Location = new System.Drawing.Point(221, 78);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(213, 41);
             this.panel4.TabIndex = 156;
             // 
+            // MiscarmorTextbox
+            // 
+            this.MiscarmorTextbox.Location = new System.Drawing.Point(176, 20);
+            this.MiscarmorTextbox.Name = "MiscarmorTextbox";
+            this.MiscarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.MiscarmorTextbox.TabIndex = 241;
+            // 
             // ACDisplayLabel
             // 
-            this.ACDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
+            this.ACDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.ACDisplayLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.ACDisplayLabel.Location = new System.Drawing.Point(37, 4);
+            this.ACDisplayLabel.Image = global::WindowsFormsApp1.Properties.Resources.shield3;
+            this.ACDisplayLabel.Location = new System.Drawing.Point(43, 4);
             this.ACDisplayLabel.Name = "ACDisplayLabel";
-            this.ACDisplayLabel.Size = new System.Drawing.Size(37, 33);
+            this.ACDisplayLabel.Size = new System.Drawing.Size(43, 35);
             this.ACDisplayLabel.TabIndex = 230;
-            this.ACDisplayLabel.Text = "18";
             this.ACDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DexarmorTextbox
+            // 
+            this.DexarmorTextbox.Location = new System.Drawing.Point(134, 20);
+            this.DexarmorTextbox.Name = "DexarmorTextbox";
+            this.DexarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.DexarmorTextbox.TabIndex = 240;
+            // 
+            // ACarmorTextbox
+            // 
+            this.ACarmorTextbox.Location = new System.Drawing.Point(91, 20);
+            this.ACarmorTextbox.Name = "ACarmorTextbox";
+            this.ACarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.ACarmorTextbox.TabIndex = 239;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.SystemColors.Control;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(159, 4);
+            this.label33.Location = new System.Drawing.Point(172, 4);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(40, 16);
             this.label33.TabIndex = 229;
@@ -1614,7 +1608,7 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.SystemColors.Control;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(122, 5);
+            this.label32.Location = new System.Drawing.Point(133, 4);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(35, 16);
             this.label32.TabIndex = 228;
@@ -1625,7 +1619,7 @@
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.SystemColors.Control;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(72, 5);
+            this.label31.Location = new System.Drawing.Point(84, 4);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(49, 16);
             this.label31.TabIndex = 227;
@@ -4571,6 +4565,16 @@
             this.label29.TabIndex = 291;
             this.label29.Text = "_______________________";
             // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.SystemColors.Control;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(219, 106);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(215, 17);
+            this.label30.TabIndex = 292;
+            this.label30.Text = "_______________________";
+            // 
             // profDownLabel
             // 
             this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
@@ -4602,16 +4606,6 @@
             this.profUpButton.Text = null;
             this.profUpButton.UseVisualStyleBackColor = true;
             this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.SystemColors.Control;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label30.Location = new System.Drawing.Point(219, 106);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(215, 17);
-            this.label30.TabIndex = 292;
-            this.label30.Text = "_______________________";
             // 
             // Form1
             // 
@@ -4787,10 +4781,7 @@
         private System.Windows.Forms.TextBox weaponPropTextBox;
         private System.Windows.Forms.TextBox InventoryTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label ACLabel;
-        private System.Windows.Forms.TextBox ACMiscBox;
-        private System.Windows.Forms.TextBox ACDexBox;
-        private System.Windows.Forms.TextBox ACArmorBox;
+        private System.Windows.Forms.Label AC;
         private System.Windows.Forms.Panel panel2;
         private CustomButtons.ButtonNoPadding HitDiceUseButton;
         private CustomButtons.ButtonNoPadding HitDicePartialRefillButton;
@@ -5062,6 +5053,9 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label ACDisplayLabel;
         private System.Windows.Forms.Label label30;
+        private CustomControls.CustomTextBoxCentered MiscarmorTextbox;
+        private CustomControls.CustomTextBoxCentered DexarmorTextbox;
+        private CustomControls.CustomTextBoxCentered ACarmorTextbox;
     }
 }
 

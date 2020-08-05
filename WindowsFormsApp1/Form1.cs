@@ -207,6 +207,11 @@ namespace WindowsFormsApp1
             box = ((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox);
             box.FontSize = 18;
 
+            //ac
+            getBox(ACarmorTextbox).TextChanged += ACTextBoxChange;
+            getBox(DexarmorTextbox).TextChanged += ACTextBoxChange;
+            getBox(MiscarmorTextbox).TextChanged += ACTextBoxChange;
+
             #endregion
         }
 
@@ -1201,8 +1206,9 @@ namespace WindowsFormsApp1
         //set total AC box text
         private void ACTextBoxChange(object sender, EventArgs e)
         {
+            var box = sender as System.Windows.Controls.TextBox;
             //remove letters
-            string s = ((TextBox)sender).Text;
+            string s = box.Text;
             string end = "";
             for (int i = 0; i < s.Length; i++)
             {
@@ -1212,17 +1218,17 @@ namespace WindowsFormsApp1
                     end += s[i];
                 }
             }
-            ((TextBox)sender).Text = end;
-            ((TextBox)sender).SelectionStart = ((TextBox)sender).Text.Length;
-            ((TextBox)sender).SelectionLength = 0;
+            box.Text = end;
+            box.SelectionStart = box.Text.Length;
+            box.SelectionLength = 0;
 
-
+            //calculate
             int armor = 0, dex = 0, misc = 0;
-            if (int.TryParse(ACArmorBox.Text, out int i1))
+            if (int.TryParse(getBox(ACarmorTextbox).Text, out int i1))
                 armor = i1;
-            if (int.TryParse(ACDexBox.Text, out int i2))
+            if (int.TryParse(getBox(DexarmorTextbox).Text, out int i2))
                 dex = i2;
-            if (int.TryParse(ACMiscBox.Text, out int i3))
+            if (int.TryParse(getBox(MiscarmorTextbox).Text, out int i3))
                 misc = i3;
 
             ACDisplayLabel.Text = (armor + dex + misc).ToString();
@@ -1582,9 +1588,9 @@ namespace WindowsFormsApp1
                 //
                 output.Write(InitiativeTextBoxNum.Text);                //initiative misc bonus
                 //armor class
-                output.Write(ACArmorBox.Text);
-                output.Write(ACDexBox.Text);
-                output.Write(ACMiscBox.Text);
+                output.Write(getBox(ACarmorTextbox).Text);
+                output.Write(getBox(DexarmorTextbox).Text);
+                output.Write(getBox(MiscarmorTextbox).Text);
                 //hp
                 output.Write(currentHPlabel.Text);
                 output.Write(tempHPlabel.Text);
@@ -1800,9 +1806,9 @@ namespace WindowsFormsApp1
                 //
                 InitiativeTextBoxNum.Text = reader.ReadString();                    //initiative misc bonus
                 //armor class
-                ACArmorBox.Text = reader.ReadString();
-                ACDexBox.Text = reader.ReadString();
-                ACMiscBox.Text = reader.ReadString();
+                getBox(ACarmorTextbox).Text = reader.ReadString();
+                getBox(DexarmorTextbox).Text = reader.ReadString();
+                getBox(MiscarmorTextbox).Text = reader.ReadString();
                 //hp
                 currentHP = int.Parse(reader.ReadString());
                 currentHPlabel.Text = currentHP.ToString();
@@ -2057,10 +2063,10 @@ namespace WindowsFormsApp1
                 profChecksX2.SetItemChecked(i, false);
             InitiativeTextBoxNum.Text = "";
             InitiativeRollDisplay.Text = "";
-            ACArmorBox.Text = "10";
+            getBox(ACarmorTextbox).Text = "10";
             ACDisplayLabel.Text = "10";
-            ACDexBox.Text = "0";
-            ACMiscBox.Text = "0";
+            getBox(DexarmorTextbox).Text = "";
+            getBox(MiscarmorTextbox).Text = "";
             InventoryTextBox.Text = "";
             currentHPlabel.Text = "10";
             MaxHPlabel.Text = "10";
@@ -2308,6 +2314,12 @@ namespace WindowsFormsApp1
         #endregion
 
         #region helper methods
+
+        private System.Windows.Controls.TextBox getBox(Control c)
+        {
+            return (c.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+        }
+
 
         private void ClearText(object sender, EventArgs e)
         {
