@@ -131,7 +131,6 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.currentHitDiceDisplayLabel = new System.Windows.Forms.Label();
-            this.profBonusBox = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -149,7 +148,6 @@
             this.loadButton = new CustomButtons.ButtonNoPadding();
             this.SaveAsButton = new CustomButtons.ButtonNoPadding();
             this.saveButton = new CustomButtons.ButtonNoPadding();
-            this.SpeedTextBox = new System.Windows.Forms.TextBox();
             this.backgroundtextBox = new System.Windows.Forms.TextBox();
             this.AlignmenttextBox = new System.Windows.Forms.TextBox();
             this.featsPanel = new System.Windows.Forms.Panel();
@@ -303,9 +301,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.raceTextBox = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tempHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
@@ -369,11 +365,18 @@
             this.strModLabel = new System.Windows.Forms.Label();
             this.strLabel = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.profDownLabel = new CustomButtons.ButtonNoPadding();
+            this.profUpButton = new CustomButtons.ButtonNoPadding();
+            this.profBonusLabel = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.speedTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profBonusBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -1568,6 +1571,7 @@
             this.d12NumUpDown.Name = "d12NumUpDown";
             this.d12NumUpDown.Size = new System.Drawing.Size(46, 23);
             this.d12NumUpDown.TabIndex = 289;
+            this.d12NumUpDown.Value = 0;
             // 
             // d10NumUpDown
             // 
@@ -1576,6 +1580,7 @@
             this.d10NumUpDown.Name = "d10NumUpDown";
             this.d10NumUpDown.Size = new System.Drawing.Size(46, 23);
             this.d10NumUpDown.TabIndex = 288;
+            this.d10NumUpDown.Value = 0;
             // 
             // d8NumUpDown
             // 
@@ -1584,6 +1589,7 @@
             this.d8NumUpDown.Name = "d8NumUpDown";
             this.d8NumUpDown.Size = new System.Drawing.Size(46, 23);
             this.d8NumUpDown.TabIndex = 287;
+            this.d8NumUpDown.Value = 0;
             // 
             // d6NumUpDown
             // 
@@ -1592,6 +1598,7 @@
             this.d6NumUpDown.Name = "d6NumUpDown";
             this.d6NumUpDown.Size = new System.Drawing.Size(46, 23);
             this.d6NumUpDown.TabIndex = 286;
+            this.d6NumUpDown.Value = 0;
             // 
             // label36
             // 
@@ -1731,20 +1738,6 @@
             this.currentHitDiceDisplayLabel.TabIndex = 232;
             this.currentHitDiceDisplayLabel.Text = "Current:";
             // 
-            // profBonusBox
-            // 
-            this.profBonusBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.profBonusBox.Location = new System.Drawing.Point(95, 18);
-            this.profBonusBox.Name = "profBonusBox";
-            this.profBonusBox.Size = new System.Drawing.Size(36, 24);
-            this.profBonusBox.TabIndex = 118;
-            this.profBonusBox.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.profBonusBox.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1753,7 +1746,7 @@
             this.panel3.Controls.Add(this.InitiativeTextBoxNum);
             this.panel3.Controls.Add(this.InitiativeRollButton);
             this.panel3.Controls.Add(this.InitiativeRollDisplay);
-            this.panel3.Location = new System.Drawing.Point(483, 5);
+            this.panel3.Location = new System.Drawing.Point(534, 175);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(111, 74);
             this.panel3.TabIndex = 109;
@@ -1942,17 +1935,6 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButtonClick);
             // 
-            // SpeedTextBox
-            // 
-            this.SpeedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.SpeedTextBox.Location = new System.Drawing.Point(12, 19);
-            this.SpeedTextBox.Name = "SpeedTextBox";
-            this.SpeedTextBox.Size = new System.Drawing.Size(27, 23);
-            this.SpeedTextBox.TabIndex = 154;
-            this.SpeedTextBox.Text = "30";
-            this.SpeedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SpeedTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
             // backgroundtextBox
             // 
             this.backgroundtextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -2010,6 +1992,7 @@
             this.customUpDown1.Name = "customUpDown1";
             this.customUpDown1.Size = new System.Drawing.Size(48, 23);
             this.customUpDown1.TabIndex = 234;
+            this.customUpDown1.Value = 0;
             // 
             // proficiencyCheckBox1
             // 
@@ -3885,13 +3868,9 @@
             this.panel11.Controls.Add(this.label18);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.label16);
-            this.panel11.Controls.Add(this.label15);
-            this.panel11.Controls.Add(this.profBonusBox);
             this.panel11.Controls.Add(this.raceTextBox);
             this.panel11.Controls.Add(this.backgroundtextBox);
             this.panel11.Controls.Add(this.AlignmenttextBox);
-            this.panel11.Controls.Add(this.SpeedTextBox);
-            this.panel11.Controls.Add(this.label27);
             this.panel11.Location = new System.Drawing.Point(702, 389);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(140, 90);
@@ -3933,17 +3912,6 @@
             this.label16.Text = "Race";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.Control;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(1, 2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 15);
-            this.label15.TabIndex = 224;
-            this.label15.Text = "Speed";
-            // 
             // raceTextBox
             // 
             this.raceTextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -3955,17 +3923,6 @@
             this.raceTextBox.TabIndex = 109;
             this.raceTextBox.Text = "Click to Edit";
             this.raceTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.SystemColors.Control;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label27.Location = new System.Drawing.Point(54, 4);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 26);
-            this.label27.TabIndex = 224;
-            this.label27.Text = "Proficiency\r\nBonus";
             // 
             // panel12
             // 
@@ -4290,7 +4247,7 @@
             this.charmodlabel.Name = "charmodlabel";
             this.charmodlabel.Size = new System.Drawing.Size(46, 27);
             this.charmodlabel.TabIndex = 279;
-            this.charmodlabel.Text = "+0";
+            this.charmodlabel.Text = "0";
             this.charmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // charlabel
@@ -4381,7 +4338,7 @@
             this.wismodlabel.Name = "wismodlabel";
             this.wismodlabel.Size = new System.Drawing.Size(46, 27);
             this.wismodlabel.TabIndex = 272;
-            this.wismodlabel.Text = "+0";
+            this.wismodlabel.Text = "0";
             this.wismodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wislabel
@@ -4472,7 +4429,7 @@
             this.intmodlabel.Name = "intmodlabel";
             this.intmodlabel.Size = new System.Drawing.Size(46, 27);
             this.intmodlabel.TabIndex = 265;
-            this.intmodlabel.Text = "+0";
+            this.intmodlabel.Text = "0";
             this.intmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // intlabel
@@ -4552,7 +4509,7 @@
             this.conmodlabel.Name = "conmodlabel";
             this.conmodlabel.Size = new System.Drawing.Size(46, 27);
             this.conmodlabel.TabIndex = 258;
-            this.conmodlabel.Text = "+0";
+            this.conmodlabel.Text = "0";
             this.conmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // conlabel
@@ -4643,7 +4600,7 @@
             this.dexmodlabel.Name = "dexmodlabel";
             this.dexmodlabel.Size = new System.Drawing.Size(46, 27);
             this.dexmodlabel.TabIndex = 251;
-            this.dexmodlabel.Text = "+0";
+            this.dexmodlabel.Text = "0";
             this.dexmodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dexlabel
@@ -4734,7 +4691,7 @@
             this.strModLabel.Name = "strModLabel";
             this.strModLabel.Size = new System.Drawing.Size(46, 27);
             this.strModLabel.TabIndex = 239;
-            this.strModLabel.Text = "+0";
+            this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // strLabel
@@ -4761,14 +4718,114 @@
             this.label55.TabIndex = 248;
             this.label55.Text = "_______________________";
             // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold);
+            this.label60.Location = new System.Drawing.Point(438, 5);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(56, 36);
+            this.label60.TabIndex = 284;
+            this.label60.Text = "Prof\r\nBonus";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // profDownLabel
+            // 
+            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profDownLabel.FlatAppearance.BorderSize = 0;
+            this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profDownLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profDownLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profDownLabel.Location = new System.Drawing.Point(472, 57);
+            this.profDownLabel.Name = "profDownLabel";
+            this.profDownLabel.Size = new System.Drawing.Size(17, 13);
+            this.profDownLabel.TabIndex = 287;
+            this.profDownLabel.Text = null;
+            this.profDownLabel.UseVisualStyleBackColor = true;
+            this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
+            // 
+            // profUpButton
+            // 
+            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profUpButton.FlatAppearance.BorderSize = 0;
+            this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profUpButton.Location = new System.Drawing.Point(472, 41);
+            this.profUpButton.Name = "profUpButton";
+            this.profUpButton.Size = new System.Drawing.Size(17, 13);
+            this.profUpButton.TabIndex = 286;
+            this.profUpButton.Text = null;
+            this.profUpButton.UseVisualStyleBackColor = true;
+            this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
+            // 
+            // profBonusLabel
+            // 
+            this.profBonusLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.profBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profBonusLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.profBonusLabel.Location = new System.Drawing.Point(431, 39);
+            this.profBonusLabel.Name = "profBonusLabel";
+            this.profBonusLabel.Size = new System.Drawing.Size(48, 30);
+            this.profBonusLabel.TabIndex = 285;
+            this.profBonusLabel.Text = "2";
+            this.profBonusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.SystemColors.Control;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label27.Location = new System.Drawing.Point(435, 56);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(71, 17);
+            this.label27.TabIndex = 239;
+            this.label27.Text = "______";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F, System.Drawing.FontStyle.Bold);
+            this.label61.Location = new System.Drawing.Point(502, 18);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(61, 20);
+            this.label61.TabIndex = 288;
+            this.label61.Text = "Speed";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label63
+            // 
+            this.label63.BackColor = System.Drawing.SystemColors.Control;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label63.Location = new System.Drawing.Point(504, 56);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(71, 17);
+            this.label63.TabIndex = 289;
+            this.label63.Text = "______";
+            // 
+            // speedTextBox
+            // 
+            this.speedTextBox.Location = new System.Drawing.Point(513, 43);
+            this.speedTextBox.Name = "speedTextBox";
+            this.speedTextBox.Size = new System.Drawing.Size(45, 25);
+            this.speedTextBox.TabIndex = 239;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 665);
+            this.Controls.Add(this.speedTextBox);
+            this.Controls.Add(this.label63);
+            this.Controls.Add(this.label61);
+            this.Controls.Add(this.label60);
+            this.Controls.Add(this.profDownLabel);
             this.Controls.Add(this.panel13);
+            this.Controls.Add(this.profUpButton);
             this.Controls.Add(this.customTextBox1name);
+            this.Controls.Add(this.profBonusLabel);
             this.Controls.Add(this.customTextBox1levelClass);
             this.Controls.Add(this.customTextBox3alignment);
             this.Controls.Add(this.customTextBox2background);
@@ -4807,6 +4864,7 @@
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label51);
+            this.Controls.Add(this.label27);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -4822,7 +4880,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profBonusBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -4950,14 +5007,12 @@
         private CustomButtons.ButtonNoPadding HitDicePartialRefillButton;
         private CustomButtons.ButtonNoPadding HitDiceFullRefillButton;
         private CustomButtons.ButtonNoPadding HitDiceSetMaxButton;
-        private System.Windows.Forms.NumericUpDown profBonusBox;
         private System.Windows.Forms.Panel panel3;
         private CustomButtons.ButtonNoPadding InitiativeRollButton;
         private System.Windows.Forms.TextBox InitiativeRollDisplay;
         private System.Windows.Forms.TextBox InitiativeTextBoxNum;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox SpeedTextBox;
         private System.Windows.Forms.TextBox backgroundtextBox;
         private System.Windows.Forms.TextBox AlignmenttextBox;
         private System.Windows.Forms.Panel featsPanel;
@@ -5100,7 +5155,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
@@ -5115,7 +5169,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
@@ -5210,6 +5263,14 @@
         private CustomControls.CustomUpDown d12NumUpDown;
         private CustomControls.CustomUpDown d10NumUpDown;
         private CustomControls.CustomUpDown d8NumUpDown;
+        private System.Windows.Forms.Label label60;
+        private CustomButtons.ButtonNoPadding profDownLabel;
+        private CustomButtons.ButtonNoPadding profUpButton;
+        private System.Windows.Forms.Label profBonusLabel;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label63;
+        private CustomControls.CustomTextBoxCentered speedTextBox;
     }
 }
 

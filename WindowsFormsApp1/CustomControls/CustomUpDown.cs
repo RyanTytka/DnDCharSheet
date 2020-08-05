@@ -14,10 +14,16 @@ namespace WindowsFormsApp1.CustomControls
     public partial class CustomUpDown : UserControl
     {
         string prevText = "";
-        public int Value;
+        private int value;
         public Color DrawColor;
         private System.Windows.Controls.TextBox box;
         bool alreadyFocused;
+
+        public int Value
+        {
+            get { return value; }
+            set { this.value = value; box.Text = this.value.ToString(); }
+        }
 
         public CustomUpDown()
         {

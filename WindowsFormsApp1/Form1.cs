@@ -203,7 +203,9 @@ namespace WindowsFormsApp1
             box.Text = "Alignment";
             box.FontSize = 10;
 
-            // attributes
+            // speed
+            box = ((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox);
+            box.FontSize = 18;
 
             #endregion
         }
@@ -316,6 +318,25 @@ namespace WindowsFormsApp1
         #endregion
 
         #region Attribute Modifiers / Proficiencies
+
+        //increase prof Bonus
+        private void profUpButton_Click(object sender, EventArgs e)
+        {
+            profBonus++;
+            profBonusLabel.Text = profBonus.ToString();
+            proficienciesCheckBoxes.profBonus = profBonus;
+            UpdateProficiencies(sender, null);
+            SetUnsaved();
+        }
+        //decrease prof bonus
+        private void profDownLabel_Click(object sender, EventArgs e)
+        {
+            profBonus--;
+            profBonusLabel.Text = profBonus.ToString();
+            proficienciesCheckBoxes.profBonus = profBonus;
+            UpdateProficiencies(sender, null);
+            SetUnsaved();
+        }
 
         private void saveAdvantage_CheckedChanged(object sender, EventArgs e)
         {
@@ -1641,10 +1662,11 @@ namespace WindowsFormsApp1
                 output.Write(wisProf.Checked);
                 output.Write(charProf.Checked);
                 //
-                output.Write(profBonusBox.Value);           //proficiency bonus
+                output.Write(profBonus);           //proficiency bonus
                 output.Write(raceTextBox.Text);             //race 
                 output.Write(backgroundtextBox.Text);       //background
                 output.Write(AlignmenttextBox.Text);        //alignment
+                output.Write(((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox).Text);  //speed
                 //proficiencies
                 for (int i = 0; i < 23; i++)
                     output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
@@ -1858,8 +1880,8 @@ namespace WindowsFormsApp1
                 wisProf.Checked = reader.ReadBoolean();
                 charProf.Checked = reader.ReadBoolean();
                 //
-                profBonusBox.Value = reader.ReadDecimal();      //proficiency bonus
-                profBonus = (int)profBonusBox.Value;
+                profBonus = reader.ReadInt32();      //proficiency bonus
+                profBonusLabel.Text = profBonus.ToString();
                 raceTextBox.Text = reader.ReadString();         //race
                 backgroundtextBox.Text = reader.ReadString();   //background
                 AlignmenttextBox.Text = reader.ReadString();    //alignment
@@ -2116,8 +2138,9 @@ namespace WindowsFormsApp1
             intProf.Checked = false;
             wisProf.Checked = false;
             charProf.Checked = false;
-            profBonusBox.Value = 2;
-            SpeedTextBox.Text = "30";
+            profBonus = 2;
+            profBonusLabel.Text = "2";
+            ((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox).Text = "";
             raceTextBox.Text = "Click to Edit";
             backgroundtextBox.Text = "Click to Edit";
             AlignmenttextBox.Text = "Click to Edit";
@@ -2302,14 +2325,6 @@ namespace WindowsFormsApp1
         {
             CharacterInfo charInfo = new CharacterInfo();
             charInfo.Show(this);
-        }
-
-        //set internal prof bonus
-        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
-        {
-            profBonus = (int)profBonusBox.Value;
-            UpdateProficiencies(sender, null);
-            SetUnsaved();
         }
 
         private void InitiativeRollButton_Click(object sender, EventArgs e)
