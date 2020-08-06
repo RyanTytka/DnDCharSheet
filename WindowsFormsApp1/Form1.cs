@@ -1586,7 +1586,7 @@ namespace WindowsFormsApp1
                 for (int i = 0; i < 23; i++)
                     output.Write(profChecksX2.GetItemChecked(i));           //expertise
                 //
-                output.Write(InitiativeTextBoxNum.Text);                //initiative misc bonus
+                output.Write(initiativeNumUpDown.Value.ToString());                //initiative misc bonus
                 //armor class
                 output.Write(getBox(ACarmorTextbox).Text);
                 output.Write(getBox(DexarmorTextbox).Text);
@@ -1804,7 +1804,7 @@ namespace WindowsFormsApp1
                 for (int i = 0; i < 23; i++)
                     profChecksX2.SetItemChecked(i, reader.ReadBoolean());           //expertise
                 //
-                InitiativeTextBoxNum.Text = reader.ReadString();                    //initiative misc bonus
+                initiativeNumUpDown.Value = int.Parse(reader.ReadString());                    //initiative misc bonus
                 //armor class
                 getBox(ACarmorTextbox).Text = reader.ReadString();
                 getBox(DexarmorTextbox).Text = reader.ReadString();
@@ -2061,8 +2061,8 @@ namespace WindowsFormsApp1
                 profCheckshalf.SetItemChecked(i, false);
             for (int i = 0; i < 23; i++)
                 profChecksX2.SetItemChecked(i, false);
-            InitiativeTextBoxNum.Text = "";
-            InitiativeRollDisplay.Text = "";
+            initiativeNumUpDown.Value = 0;
+            initiativeLabel.Text = "";
             getBox(ACarmorTextbox).Text = "10";
             ACDisplayLabel.Text = "10";
             getBox(DexarmorTextbox).Text = "";
@@ -2240,15 +2240,23 @@ namespace WindowsFormsApp1
 
         private void InitiativeRollButton_Click(object sender, EventArgs e)
         {
+            string adv = "";
             int roll = Roll.RollSingleDie(20);
+            if (initiativeAdvCheckbox.Checked)
+            {
+                int roll2 = Roll.RollSingleDie(20);
+                roll = Math.Max(roll, roll2);
+                adv = "(advantage)";
+            }
+
             string misc = "";
-            if (int.TryParse(InitiativeTextBoxNum.Text, out int x) && x != 0)
-                misc = ", Misc: " + x;
-            int total = roll + statMods[1] + x;
+            if (initiativeNumUpDown.Value != 0)
+                misc = ", Misc: " + initiativeNumUpDown.Value;
+            int total = roll + statMods[1] + initiativeNumUpDown.Value;
 
-            InitiativeRollDisplay.Text = total.ToString();
+            initiativeLabel.Text = total.ToString();
 
-            UpdateOutput("Initiative Roll: " + total + "  (Roll: " + roll + ", Dex: " + statMods[1] + misc + ")");
+            UpdateOutput("Initiative Roll" + adv + ": " + total + " (Roll: " + roll + ", Dex: " + statMods[1] + misc + ")");
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
 

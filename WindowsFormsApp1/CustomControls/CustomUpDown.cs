@@ -14,7 +14,7 @@ namespace WindowsFormsApp1.CustomControls
     public partial class CustomUpDown : UserControl
     {
         string prevText = "";
-        private int value;
+        private int value = 0;
         public Color DrawColor;
         private System.Windows.Controls.TextBox box;
         bool alreadyFocused;

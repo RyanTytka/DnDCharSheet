@@ -111,12 +111,8 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.currentHitDiceDisplayLabel = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.InitiativeTextBoxNum = new System.Windows.Forms.TextBox();
             this.InitiativeRollButton = new CustomButtons.ButtonNoPadding();
-            this.InitiativeRollDisplay = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.MiscarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.ACDisplayLabel = new System.Windows.Forms.Label();
@@ -360,10 +356,14 @@
             this.label30 = new System.Windows.Forms.Label();
             this.profDownLabel = new CustomButtons.ButtonNoPadding();
             this.profUpButton = new CustomButtons.ButtonNoPadding();
+            this.label64 = new System.Windows.Forms.Label();
+            this.initiativeLabel = new System.Windows.Forms.Label();
+            this.initiativeNumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.label67 = new System.Windows.Forms.Label();
+            this.initiativeAdvCheckbox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.featsPanel.SuspendLayout();
@@ -1477,73 +1477,29 @@
             this.currentHitDiceDisplayLabel.TabIndex = 232;
             this.currentHitDiceDisplayLabel.Text = "Current:";
             // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.InitiativeTextBoxNum);
-            this.panel3.Controls.Add(this.InitiativeRollButton);
-            this.panel3.Controls.Add(this.InitiativeRollDisplay);
-            this.panel3.Location = new System.Drawing.Point(534, 175);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(111, 74);
-            this.panel3.TabIndex = 109;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.Control;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(34, 42);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 26);
-            this.label20.TabIndex = 224;
-            this.label20.Text = "Misc Bonus\r\n(Not Dex)";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.SystemColors.Control;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label19.Location = new System.Drawing.Point(4, 3);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(434, 75);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(61, 15);
+            this.label19.Size = new System.Drawing.Size(77, 20);
             this.label19.TabIndex = 224;
             this.label19.Text = "Initiative";
-            // 
-            // InitiativeTextBoxNum
-            // 
-            this.InitiativeTextBoxNum.Location = new System.Drawing.Point(11, 44);
-            this.InitiativeTextBoxNum.Name = "InitiativeTextBoxNum";
-            this.InitiativeTextBoxNum.Size = new System.Drawing.Size(21, 20);
-            this.InitiativeTextBoxNum.TabIndex = 155;
-            this.InitiativeTextBoxNum.Text = "0";
-            this.InitiativeTextBoxNum.TextChanged += new System.EventHandler(this.RemoveLetters);
             // 
             // InitiativeRollButton
             // 
             this.InitiativeRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InitiativeRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.InitiativeRollButton.Location = new System.Drawing.Point(9, 19);
+            this.InitiativeRollButton.Location = new System.Drawing.Point(481, 102);
             this.InitiativeRollButton.Name = "InitiativeRollButton";
-            this.InitiativeRollButton.Size = new System.Drawing.Size(53, 19);
+            this.InitiativeRollButton.Size = new System.Drawing.Size(32, 16);
             this.InitiativeRollButton.TabIndex = 109;
             this.InitiativeRollButton.Tag = "temp";
             this.InitiativeRollButton.Text = "Roll";
             this.InitiativeRollButton.UseVisualStyleBackColor = true;
             this.InitiativeRollButton.Click += new System.EventHandler(this.InitiativeRollButton_Click);
-            // 
-            // InitiativeRollDisplay
-            // 
-            this.InitiativeRollDisplay.Font = new System.Drawing.Font("Impact", 16.75F);
-            this.InitiativeRollDisplay.Location = new System.Drawing.Point(71, 6);
-            this.InitiativeRollDisplay.Multiline = true;
-            this.InitiativeRollDisplay.Name = "InitiativeRollDisplay";
-            this.InitiativeRollDisplay.ReadOnly = true;
-            this.InitiativeRollDisplay.Size = new System.Drawing.Size(32, 32);
-            this.InitiativeRollDisplay.TabIndex = 153;
-            this.InitiativeRollDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
@@ -1746,7 +1702,7 @@
             this.featsPanel.Controls.Add(this.featDeleteButton);
             this.featsPanel.Controls.Add(this.featEditButton);
             this.featsPanel.Controls.Add(this.label4);
-            this.featsPanel.Location = new System.Drawing.Point(590, 99);
+            this.featsPanel.Location = new System.Drawing.Point(561, 158);
             this.featsPanel.Name = "featsPanel";
             this.featsPanel.Size = new System.Drawing.Size(277, 218);
             this.featsPanel.TabIndex = 96;
@@ -1999,7 +1955,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(696, 79);
+            this.label2.Location = new System.Drawing.Point(742, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 168;
@@ -3328,7 +3284,7 @@
             this.panel7.Controls.Add(this.label45);
             this.panel7.Controls.Add(this.label44);
             this.panel7.Controls.Add(this.label43);
-            this.panel7.Location = new System.Drawing.Point(725, 5);
+            this.panel7.Location = new System.Drawing.Point(696, 83);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(142, 73);
             this.panel7.TabIndex = 109;
@@ -4607,12 +4563,72 @@
             this.profUpButton.UseVisualStyleBackColor = true;
             this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
             // 
+            // label64
+            // 
+            this.label64.BackColor = System.Drawing.SystemColors.Control;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label64.Location = new System.Drawing.Point(435, 106);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(182, 17);
+            this.label64.TabIndex = 293;
+            this.label64.Text = "__________________";
+            // 
+            // initiativeLabel
+            // 
+            this.initiativeLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.initiativeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.initiativeLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.initiativeLabel.Location = new System.Drawing.Point(434, 92);
+            this.initiativeLabel.Name = "initiativeLabel";
+            this.initiativeLabel.Size = new System.Drawing.Size(48, 28);
+            this.initiativeLabel.TabIndex = 294;
+            this.initiativeLabel.Text = "20";
+            this.initiativeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // initiativeNumUpDown
+            // 
+            this.initiativeNumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.initiativeNumUpDown.Location = new System.Drawing.Point(517, 77);
+            this.initiativeNumUpDown.Name = "initiativeNumUpDown";
+            this.initiativeNumUpDown.Size = new System.Drawing.Size(48, 23);
+            this.initiativeNumUpDown.TabIndex = 235;
+            this.initiativeNumUpDown.Value = 0;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.SystemColors.Control;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label67.Location = new System.Drawing.Point(561, 74);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(42, 26);
+            this.label67.TabIndex = 236;
+            this.label67.Text = "Misc\r\nBonus";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // initiativeAdvCheckbox
+            // 
+            this.initiativeAdvCheckbox.AutoSize = true;
+            this.initiativeAdvCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.initiativeAdvCheckbox.Location = new System.Drawing.Point(519, 102);
+            this.initiativeAdvCheckbox.Name = "initiativeAdvCheckbox";
+            this.initiativeAdvCheckbox.Size = new System.Drawing.Size(87, 17);
+            this.initiativeAdvCheckbox.TabIndex = 235;
+            this.initiativeAdvCheckbox.Text = "Advantage";
+            this.initiativeAdvCheckbox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.InitiativeRollButton);
+            this.Controls.Add(this.initiativeAdvCheckbox);
+            this.Controls.Add(this.initiativeNumUpDown);
+            this.Controls.Add(this.initiativeLabel);
+            this.Controls.Add(this.label64);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label29);
@@ -4646,7 +4662,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.featsPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -4665,6 +4680,7 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label63);
             this.Controls.Add(this.label30);
+            this.Controls.Add(this.label67);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -4678,8 +4694,6 @@
             this.Weapon1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -4787,10 +4801,7 @@
         private CustomButtons.ButtonNoPadding HitDicePartialRefillButton;
         private CustomButtons.ButtonNoPadding HitDiceFullRefillButton;
         private CustomButtons.ButtonNoPadding HitDiceSetMaxButton;
-        private System.Windows.Forms.Panel panel3;
         private CustomButtons.ButtonNoPadding InitiativeRollButton;
-        private System.Windows.Forms.TextBox InitiativeRollDisplay;
-        private System.Windows.Forms.TextBox InitiativeTextBoxNum;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox backgroundtextBox;
@@ -4941,7 +4952,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label33;
@@ -5056,6 +5066,11 @@
         private CustomControls.CustomTextBoxCentered MiscarmorTextbox;
         private CustomControls.CustomTextBoxCentered DexarmorTextbox;
         private CustomControls.CustomTextBoxCentered ACarmorTextbox;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label initiativeLabel;
+        private CustomControls.CustomUpDown initiativeNumUpDown;
+        private System.Windows.Forms.Label label67;
+        private CustomControls.CustomCheckBox initiativeAdvCheckbox;
     }
 }
 
