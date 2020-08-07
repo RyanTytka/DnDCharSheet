@@ -343,14 +343,7 @@
             this.label61 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.speedTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
-            this.customTextBox1name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1levelClass = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
-            this.customTextBox3alignment = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox2background = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1race = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -358,9 +351,28 @@
             this.profUpButton = new CustomButtons.ButtonNoPadding();
             this.label64 = new System.Windows.Forms.Label();
             this.initiativeLabel = new System.Windows.Forms.Label();
-            this.initiativeNumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.label67 = new System.Windows.Forms.Label();
             this.initiativeAdvCheckbox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.initiativeNumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.speedTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.customTextBox1name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox1levelClass = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox3alignment = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox2background = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.customTextBox1race = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.copperTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.silverTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.platTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.label73 = new System.Windows.Forms.Label();
+            this.goldTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.label74 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1894,7 +1906,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.Control;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(576, 33);
+            this.label14.Location = new System.Drawing.Point(578, 33);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 224;
@@ -1919,7 +1931,7 @@
             "Sorcerer",
             "Warlock",
             "Wizard"});
-            this.spellTypeDropdown.Location = new System.Drawing.Point(570, 47);
+            this.spellTypeDropdown.Location = new System.Drawing.Point(572, 47);
             this.spellTypeDropdown.Name = "spellTypeDropdown";
             this.spellTypeDropdown.Size = new System.Drawing.Size(90, 21);
             this.spellTypeDropdown.TabIndex = 175;
@@ -3284,7 +3296,7 @@
             this.panel7.Controls.Add(this.label45);
             this.panel7.Controls.Add(this.label44);
             this.panel7.Controls.Add(this.label43);
-            this.panel7.Location = new System.Drawing.Point(696, 83);
+            this.panel7.Location = new System.Drawing.Point(437, 158);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(142, 73);
             this.panel7.TabIndex = 109;
@@ -3300,7 +3312,6 @@
             this.moneyAmountTextBox.Tag = "current";
             this.moneyAmountTextBox.Click += new System.EventHandler(this.SelectTextOnEnter);
             this.moneyAmountTextBox.TextChanged += new System.EventHandler(this.RemoveLetters);
-            this.moneyAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MoneyAmount_PressEnter);
             // 
             // moneyDropDown
             // 
@@ -3363,7 +3374,6 @@
             this.setMoneyButton.Tag = "current";
             this.setMoneyButton.Text = "=";
             this.setMoneyButton.UseVisualStyleBackColor = true;
-            this.setMoneyButton.Click += new System.EventHandler(this.setMoneyButton_Click);
             // 
             // minusMoneyButton
             // 
@@ -3376,7 +3386,6 @@
             this.minusMoneyButton.Tag = "current";
             this.minusMoneyButton.Text = "-";
             this.minusMoneyButton.UseVisualStyleBackColor = true;
-            this.minusMoneyButton.Click += new System.EventHandler(this.minusMoneyButton_Click);
             // 
             // addMoneyButton
             // 
@@ -3389,7 +3398,6 @@
             this.addMoneyButton.Tag = "current";
             this.addMoneyButton.Text = "+";
             this.addMoneyButton.UseVisualStyleBackColor = true;
-            this.addMoneyButton.Click += new System.EventHandler(this.addMoneyButton_Click);
             // 
             // copperAmountLabel
             // 
@@ -4411,7 +4419,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F, System.Drawing.FontStyle.Bold);
-            this.label61.Location = new System.Drawing.Point(502, 18);
+            this.label61.Location = new System.Drawing.Point(501, 18);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(61, 20);
             this.label61.TabIndex = 288;
@@ -4422,7 +4430,7 @@
             // 
             this.label63.BackColor = System.Drawing.SystemColors.Control;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label63.Location = new System.Drawing.Point(504, 56);
+            this.label63.Location = new System.Drawing.Point(503, 56);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(71, 17);
             this.label63.TabIndex = 289;
@@ -4432,71 +4440,22 @@
             // 
             this.label15.BackColor = System.Drawing.SystemColors.Control;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(567, 56);
+            this.label15.Location = new System.Drawing.Point(569, 56);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(103, 17);
             this.label15.TabIndex = 290;
             this.label15.Text = "__________";
             // 
-            // speedTextBox
-            // 
-            this.speedTextBox.Location = new System.Drawing.Point(513, 43);
-            this.speedTextBox.Name = "speedTextBox";
-            this.speedTextBox.Size = new System.Drawing.Size(45, 25);
-            this.speedTextBox.TabIndex = 239;
-            // 
-            // customTextBox1name
-            // 
-            this.customTextBox1name.Location = new System.Drawing.Point(5, 5);
-            this.customTextBox1name.Name = "customTextBox1name";
-            this.customTextBox1name.Size = new System.Drawing.Size(209, 22);
-            this.customTextBox1name.TabIndex = 245;
-            // 
-            // customTextBox1levelClass
-            // 
-            this.customTextBox1levelClass.Location = new System.Drawing.Point(4, 34);
-            this.customTextBox1levelClass.Name = "customTextBox1levelClass";
-            this.customTextBox1levelClass.Size = new System.Drawing.Size(209, 14);
-            this.customTextBox1levelClass.TabIndex = 244;
-            // 
             // BackgroundInfobutton
             // 
             this.BackgroundInfobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackgroundInfobutton.Location = new System.Drawing.Point(570, 10);
+            this.BackgroundInfobutton.Location = new System.Drawing.Point(572, 10);
             this.BackgroundInfobutton.Name = "BackgroundInfobutton";
             this.BackgroundInfobutton.Size = new System.Drawing.Size(90, 20);
             this.BackgroundInfobutton.TabIndex = 170;
             this.BackgroundInfobutton.Text = "Character Info";
             this.BackgroundInfobutton.UseVisualStyleBackColor = true;
             this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
-            // 
-            // customTextBox3alignment
-            // 
-            this.customTextBox3alignment.Location = new System.Drawing.Point(141, 55);
-            this.customTextBox3alignment.Name = "customTextBox3alignment";
-            this.customTextBox3alignment.Size = new System.Drawing.Size(72, 14);
-            this.customTextBox3alignment.TabIndex = 243;
-            // 
-            // customTextBox2background
-            // 
-            this.customTextBox2background.Location = new System.Drawing.Point(75, 55);
-            this.customTextBox2background.Name = "customTextBox2background";
-            this.customTextBox2background.Size = new System.Drawing.Size(62, 14);
-            this.customTextBox2background.TabIndex = 242;
-            // 
-            // customTextBox1race
-            // 
-            this.customTextBox1race.Location = new System.Drawing.Point(5, 55);
-            this.customTextBox1race.Name = "customTextBox1race";
-            this.customTextBox1race.Size = new System.Drawing.Size(66, 14);
-            this.customTextBox1race.TabIndex = 239;
-            // 
-            // proficienciesCheckBoxes
-            // 
-            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 146);
-            this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
-            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
-            this.proficienciesCheckBoxes.TabIndex = 234;
             // 
             // miscRollbutton
             // 
@@ -4585,15 +4544,6 @@
             this.initiativeLabel.Text = "20";
             this.initiativeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // initiativeNumUpDown
-            // 
-            this.initiativeNumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.initiativeNumUpDown.Location = new System.Drawing.Point(517, 77);
-            this.initiativeNumUpDown.Name = "initiativeNumUpDown";
-            this.initiativeNumUpDown.Size = new System.Drawing.Size(48, 23);
-            this.initiativeNumUpDown.TabIndex = 235;
-            this.initiativeNumUpDown.Value = 0;
-            // 
             // label67
             // 
             this.label67.AutoSize = true;
@@ -4617,12 +4567,198 @@
             this.initiativeAdvCheckbox.Text = "Advantage";
             this.initiativeAdvCheckbox.UseVisualStyleBackColor = true;
             // 
+            // initiativeNumUpDown
+            // 
+            this.initiativeNumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.initiativeNumUpDown.Location = new System.Drawing.Point(517, 77);
+            this.initiativeNumUpDown.Name = "initiativeNumUpDown";
+            this.initiativeNumUpDown.Size = new System.Drawing.Size(48, 23);
+            this.initiativeNumUpDown.TabIndex = 235;
+            this.initiativeNumUpDown.Value = 0;
+            // 
+            // speedTextBox
+            // 
+            this.speedTextBox.Location = new System.Drawing.Point(512, 43);
+            this.speedTextBox.Name = "speedTextBox";
+            this.speedTextBox.Size = new System.Drawing.Size(45, 25);
+            this.speedTextBox.TabIndex = 239;
+            // 
+            // customTextBox1name
+            // 
+            this.customTextBox1name.Location = new System.Drawing.Point(5, 5);
+            this.customTextBox1name.Name = "customTextBox1name";
+            this.customTextBox1name.Size = new System.Drawing.Size(209, 22);
+            this.customTextBox1name.TabIndex = 245;
+            // 
+            // customTextBox1levelClass
+            // 
+            this.customTextBox1levelClass.Location = new System.Drawing.Point(4, 34);
+            this.customTextBox1levelClass.Name = "customTextBox1levelClass";
+            this.customTextBox1levelClass.Size = new System.Drawing.Size(209, 14);
+            this.customTextBox1levelClass.TabIndex = 244;
+            // 
+            // customTextBox3alignment
+            // 
+            this.customTextBox3alignment.Location = new System.Drawing.Point(141, 55);
+            this.customTextBox3alignment.Name = "customTextBox3alignment";
+            this.customTextBox3alignment.Size = new System.Drawing.Size(72, 14);
+            this.customTextBox3alignment.TabIndex = 243;
+            // 
+            // customTextBox2background
+            // 
+            this.customTextBox2background.Location = new System.Drawing.Point(75, 55);
+            this.customTextBox2background.Name = "customTextBox2background";
+            this.customTextBox2background.Size = new System.Drawing.Size(62, 14);
+            this.customTextBox2background.TabIndex = 242;
+            // 
+            // customTextBox1race
+            // 
+            this.customTextBox1race.Location = new System.Drawing.Point(5, 55);
+            this.customTextBox1race.Name = "customTextBox1race";
+            this.customTextBox1race.Size = new System.Drawing.Size(66, 14);
+            this.customTextBox1race.TabIndex = 239;
+            // 
+            // proficienciesCheckBoxes
+            // 
+            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 146);
+            this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
+            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
+            this.proficienciesCheckBoxes.TabIndex = 234;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.SystemColors.Control;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(634, 83);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(97, 16);
+            this.label66.TabIndex = 242;
+            this.label66.Text = "Death Saves";
+            // 
+            // label69
+            // 
+            this.label69.BackColor = System.Drawing.SystemColors.Control;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label69.Location = new System.Drawing.Point(672, 56);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(121, 17);
+            this.label69.TabIndex = 296;
+            this.label69.Text = "___________";
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.SystemColors.Control;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(608, 106);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(182, 17);
+            this.label20.TabIndex = 297;
+            this.label20.Text = "__________________";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.BackColor = System.Drawing.SystemColors.Control;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label70.ForeColor = System.Drawing.Color.Maroon;
+            this.label70.Location = new System.Drawing.Point(674, 4);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(53, 15);
+            this.label70.TabIndex = 242;
+            this.label70.Text = "Copper";
+            // 
+            // copperTextbox
+            // 
+            this.copperTextbox.Location = new System.Drawing.Point(675, 21);
+            this.copperTextbox.Name = "copperTextbox";
+            this.copperTextbox.Size = new System.Drawing.Size(49, 15);
+            this.copperTextbox.TabIndex = 239;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.BackColor = System.Drawing.SystemColors.Control;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold);
+            this.label71.Location = new System.Drawing.Point(796, 104);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(58, 18);
+            this.label71.TabIndex = 299;
+            this.label71.Text = "Money";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.BackColor = System.Drawing.SystemColors.Control;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label72.ForeColor = System.Drawing.Color.Maroon;
+            this.label72.Location = new System.Drawing.Point(678, 38);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(43, 15);
+            this.label72.TabIndex = 300;
+            this.label72.Text = "Silver";
+            // 
+            // silverTextbox
+            // 
+            this.silverTextbox.Location = new System.Drawing.Point(675, 53);
+            this.silverTextbox.Name = "silverTextbox";
+            this.silverTextbox.Size = new System.Drawing.Size(49, 15);
+            this.silverTextbox.TabIndex = 301;
+            // 
+            // platTextbox
+            // 
+            this.platTextbox.Location = new System.Drawing.Point(727, 53);
+            this.platTextbox.Name = "platTextbox";
+            this.platTextbox.Size = new System.Drawing.Size(49, 15);
+            this.platTextbox.TabIndex = 305;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.BackColor = System.Drawing.SystemColors.Control;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label73.ForeColor = System.Drawing.Color.Maroon;
+            this.label73.Location = new System.Drawing.Point(735, 38);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(32, 15);
+            this.label73.TabIndex = 304;
+            this.label73.Text = "Plat";
+            // 
+            // goldTextbox
+            // 
+            this.goldTextbox.Location = new System.Drawing.Point(727, 21);
+            this.goldTextbox.Name = "goldTextbox";
+            this.goldTextbox.Size = new System.Drawing.Size(49, 15);
+            this.goldTextbox.TabIndex = 302;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.BackColor = System.Drawing.SystemColors.Control;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label74.ForeColor = System.Drawing.Color.Maroon;
+            this.label74.Location = new System.Drawing.Point(734, 4);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(37, 15);
+            this.label74.TabIndex = 303;
+            this.label74.Text = "Gold";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.platTextbox);
+            this.Controls.Add(this.label73);
+            this.Controls.Add(this.goldTextbox);
+            this.Controls.Add(this.label74);
+            this.Controls.Add(this.silverTextbox);
+            this.Controls.Add(this.label72);
+            this.Controls.Add(this.copperTextbox);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.label66);
             this.Controls.Add(this.InitiativeRollButton);
             this.Controls.Add(this.initiativeAdvCheckbox);
             this.Controls.Add(this.initiativeNumUpDown);
@@ -4681,6 +4817,8 @@
             this.Controls.Add(this.label63);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label67);
+            this.Controls.Add(this.label71);
+            this.Controls.Add(this.label70);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -5071,6 +5209,18 @@
         private CustomControls.CustomUpDown initiativeNumUpDown;
         private System.Windows.Forms.Label label67;
         private CustomControls.CustomCheckBox initiativeAdvCheckbox;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label70;
+        private CustomControls.CustomTextBoxCentered copperTextbox;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private CustomControls.CustomTextBoxCentered silverTextbox;
+        private CustomControls.CustomTextBoxCentered platTextbox;
+        private System.Windows.Forms.Label label73;
+        private CustomControls.CustomTextBoxCentered goldTextbox;
+        private System.Windows.Forms.Label label74;
     }
 }
 

@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
         int[] warlockSpellSlots;      //spell slots of a warlock  [current/max]
         Label[] moneyLabels;        //money amount labels for easier modifications
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\DnD Data"; //where data is saved to
+        int[] moneyStore; //holds value while adding/subtracting to money
 
         string fileName;
         bool saved = true;
@@ -155,6 +156,8 @@ namespace WindowsFormsApp1
             proficienciesCheckBoxes.modifiers = proficiencies;
             proficienciesCheckBoxes.profBonus = profBonus;
 
+            moneyStore = new int[4];
+
             // sets appreances and events of custom textboxes
             #region Custom Textboxes Setup
 
@@ -211,6 +214,31 @@ namespace WindowsFormsApp1
             getBox(ACarmorTextbox).TextChanged += ACTextBoxChange;
             getBox(DexarmorTextbox).TextChanged += ACTextBoxChange;
             getBox(MiscarmorTextbox).TextChanged += ACTextBoxChange;
+
+            //money
+            box = getBox(copperTextbox);
+            box.FontSize = 10;
+            box.MouseDoubleClick += copperTextbox_DoubleClick;
+            box.KeyDown += copperTextbox_KeyPress;
+            box.Tag = "0";
+
+            box = getBox(silverTextbox);
+            box.FontSize = 10;
+            box.MouseDoubleClick += copperTextbox_DoubleClick;
+            box.KeyDown += copperTextbox_KeyPress;
+            box.Tag = "1";
+
+            box = getBox(goldTextbox);
+            box.FontSize = 10;
+            box.MouseDoubleClick += copperTextbox_DoubleClick;
+            box.KeyDown += copperTextbox_KeyPress;
+            box.Tag = "2";
+
+            box = getBox(platTextbox);
+            box.FontSize = 10;
+            box.MouseDoubleClick += copperTextbox_DoubleClick;
+            box.KeyDown += copperTextbox_KeyPress;
+            box.Tag = "3";
 
             #endregion
         }
@@ -2184,40 +2212,38 @@ namespace WindowsFormsApp1
 
         #region Money
 
-        private void addMoneyButton_Click(object sender, EventArgs e)
+        private void copperTextbox_DoubleClick(object sender, EventArgs e)
         {
-            Label label = moneyLabels[moneyDropDown.SelectedIndex];
-            int amountAdding = int.Parse(moneyAmountTextBox.Text);
-            int originalAmount = int.Parse(label.Text);
-            label.Text = (originalAmount + amountAdding).ToString();
-            moneyAmountTextBox.Focus();
-            moneyAmountTextBox.SelectAll();
-        }
-
-        private void minusMoneyButton_Click(object sender, EventArgs e)
-        {
-            Label label = moneyLabels[moneyDropDown.SelectedIndex];
-            int amountAdding = int.Parse(moneyAmountTextBox.Text);
-            int originalAmount = int.Parse(label.Text);
-            label.Text = (originalAmount - amountAdding).ToString();
+            var box = sender as System.Windows.Controls.TextBox;
+            if (box.Background == System.Windows.Media.Brushes.White)
+                return;
+            if (int.TryParse(box.Text, out int i))
+                moneyStore[int.Parse(box.Tag.ToString())] = i;
+            else
+                return;
+            box.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 135, 20, 20));
+            box.Background = System.Windows.Media.Brushes.White;
+            box.Text = "";
+            box.Select(0, 0);
 
         }
 
-        private void setMoneyButton_Click(object sender, EventArgs e)
+        private void copperTextbox_KeyPress(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            moneyLabels[moneyDropDown.SelectedIndex].Text = moneyAmountTextBox.Text;
-            moneyAmountTextBox.Text = "";
-        }
-
-        //press enter while typing amount in text box
-        private void MoneyAmount_PressEnter(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13)
+            if (e.Key == System.Windows.Input.Key.Enter)
             {
-                moneyLabels[moneyDropDown.SelectedIndex].Text = moneyAmountTextBox.Text;
-                moneyAmountTextBox.Text = "";
+                var box = sender as System.Windows.Controls.TextBox;
+                if (box.Background == System.Windows.Media.Brushes.LightGray)
+                    return;
+                box.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 0, 0, 0));
+                box.Background = System.Windows.Media.Brushes.LightGray;
+                if (int.TryParse(box.Text, out int i))
+                    moneyStore[int.Parse(box.Tag.ToString())] += i;
+                box.Text = moneyStore[int.Parse(box.Tag.ToString())].ToString();
+
             }
         }
+
 
         #endregion
 
@@ -3040,7 +3066,6 @@ namespace WindowsFormsApp1
                 saveButton.Enabled = false;
             }
         }
-
 
 
         #endregion
