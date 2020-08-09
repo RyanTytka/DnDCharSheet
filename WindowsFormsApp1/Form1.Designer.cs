@@ -254,21 +254,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.moneyAmountTextBox = new System.Windows.Forms.TextBox();
-            this.moneyDropDown = new System.Windows.Forms.ComboBox();
-            this.PlatinumAmountLabel = new System.Windows.Forms.Label();
-            this.GoldAmountLabel = new System.Windows.Forms.Label();
-            this.silverAmountLabel = new System.Windows.Forms.Label();
-            this.setMoneyButton = new CustomButtons.ButtonNoPadding();
-            this.minusMoneyButton = new CustomButtons.ButtonNoPadding();
-            this.addMoneyButton = new CustomButtons.ButtonNoPadding();
-            this.copperAmountLabel = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
             this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -347,8 +332,6 @@
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.profDownLabel = new CustomButtons.ButtonNoPadding();
-            this.profUpButton = new CustomButtons.ButtonNoPadding();
             this.label64 = new System.Windows.Forms.Label();
             this.initiativeLabel = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
@@ -366,13 +349,24 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.copperTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
-            this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.silverTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.platTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.label73 = new System.Windows.Forms.Label();
             this.goldTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.label74 = new System.Windows.Forms.Label();
+            this.DeathPass1 = new System.Windows.Forms.PictureBox();
+            this.profDownLabel = new CustomButtons.ButtonNoPadding();
+            this.profUpButton = new CustomButtons.ButtonNoPadding();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.DeathPass2 = new System.Windows.Forms.PictureBox();
+            this.DeathPass3 = new System.Windows.Forms.PictureBox();
+            this.DeathFail3 = new System.Windows.Forms.PictureBox();
+            this.DeathFail1 = new System.Windows.Forms.PictureBox();
+            this.DeathFail2 = new System.Windows.Forms.PictureBox();
+            this.deathSaveRollButton = new CustomButtons.ButtonNoPadding();
+            this.deathSaveResetButton = new CustomButtons.ButtonNoPadding();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -393,7 +387,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.otherBonusnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MultipliernumericUpDown)).BeginInit();
             this.spellListPanel.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
@@ -401,6 +394,12 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).BeginInit();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -3279,192 +3278,6 @@
             this.label42.Text = "Current";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.moneyAmountTextBox);
-            this.panel7.Controls.Add(this.moneyDropDown);
-            this.panel7.Controls.Add(this.PlatinumAmountLabel);
-            this.panel7.Controls.Add(this.GoldAmountLabel);
-            this.panel7.Controls.Add(this.silverAmountLabel);
-            this.panel7.Controls.Add(this.setMoneyButton);
-            this.panel7.Controls.Add(this.minusMoneyButton);
-            this.panel7.Controls.Add(this.addMoneyButton);
-            this.panel7.Controls.Add(this.copperAmountLabel);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label46);
-            this.panel7.Controls.Add(this.label45);
-            this.panel7.Controls.Add(this.label44);
-            this.panel7.Controls.Add(this.label43);
-            this.panel7.Location = new System.Drawing.Point(437, 158);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(142, 73);
-            this.panel7.TabIndex = 109;
-            // 
-            // moneyAmountTextBox
-            // 
-            this.moneyAmountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.moneyAmountTextBox.Location = new System.Drawing.Point(2, 30);
-            this.moneyAmountTextBox.Multiline = true;
-            this.moneyAmountTextBox.Name = "moneyAmountTextBox";
-            this.moneyAmountTextBox.Size = new System.Drawing.Size(57, 17);
-            this.moneyAmountTextBox.TabIndex = 101;
-            this.moneyAmountTextBox.Tag = "current";
-            this.moneyAmountTextBox.Click += new System.EventHandler(this.SelectTextOnEnter);
-            this.moneyAmountTextBox.TextChanged += new System.EventHandler(this.RemoveLetters);
-            // 
-            // moneyDropDown
-            // 
-            this.moneyDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.moneyDropDown.DropDownWidth = 48;
-            this.moneyDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.moneyDropDown.FormattingEnabled = true;
-            this.moneyDropDown.ItemHeight = 12;
-            this.moneyDropDown.Items.AddRange(new object[] {
-            "Copper",
-            "Silver",
-            "Gold",
-            "Platinum"});
-            this.moneyDropDown.Location = new System.Drawing.Point(3, 49);
-            this.moneyDropDown.Name = "moneyDropDown";
-            this.moneyDropDown.Size = new System.Drawing.Size(56, 20);
-            this.moneyDropDown.TabIndex = 176;
-            // 
-            // PlatinumAmountLabel
-            // 
-            this.PlatinumAmountLabel.AutoSize = true;
-            this.PlatinumAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.PlatinumAmountLabel.Location = new System.Drawing.Point(78, 53);
-            this.PlatinumAmountLabel.Name = "PlatinumAmountLabel";
-            this.PlatinumAmountLabel.Size = new System.Drawing.Size(16, 16);
-            this.PlatinumAmountLabel.TabIndex = 110;
-            this.PlatinumAmountLabel.Text = "0";
-            this.PlatinumAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // GoldAmountLabel
-            // 
-            this.GoldAmountLabel.AutoSize = true;
-            this.GoldAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.GoldAmountLabel.Location = new System.Drawing.Point(78, 36);
-            this.GoldAmountLabel.Name = "GoldAmountLabel";
-            this.GoldAmountLabel.Size = new System.Drawing.Size(16, 16);
-            this.GoldAmountLabel.TabIndex = 109;
-            this.GoldAmountLabel.Text = "0";
-            this.GoldAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // silverAmountLabel
-            // 
-            this.silverAmountLabel.AutoSize = true;
-            this.silverAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.silverAmountLabel.Location = new System.Drawing.Point(78, 19);
-            this.silverAmountLabel.Name = "silverAmountLabel";
-            this.silverAmountLabel.Size = new System.Drawing.Size(16, 16);
-            this.silverAmountLabel.TabIndex = 108;
-            this.silverAmountLabel.Text = "0";
-            this.silverAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // setMoneyButton
-            // 
-            this.setMoneyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setMoneyButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.setMoneyButton.Location = new System.Drawing.Point(40, 12);
-            this.setMoneyButton.Name = "setMoneyButton";
-            this.setMoneyButton.Size = new System.Drawing.Size(17, 17);
-            this.setMoneyButton.TabIndex = 104;
-            this.setMoneyButton.Tag = "current";
-            this.setMoneyButton.Text = "=";
-            this.setMoneyButton.UseVisualStyleBackColor = true;
-            // 
-            // minusMoneyButton
-            // 
-            this.minusMoneyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minusMoneyButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.minusMoneyButton.Location = new System.Drawing.Point(22, 12);
-            this.minusMoneyButton.Name = "minusMoneyButton";
-            this.minusMoneyButton.Size = new System.Drawing.Size(17, 17);
-            this.minusMoneyButton.TabIndex = 103;
-            this.minusMoneyButton.Tag = "current";
-            this.minusMoneyButton.Text = "-";
-            this.minusMoneyButton.UseVisualStyleBackColor = true;
-            // 
-            // addMoneyButton
-            // 
-            this.addMoneyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMoneyButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.addMoneyButton.Location = new System.Drawing.Point(4, 12);
-            this.addMoneyButton.Name = "addMoneyButton";
-            this.addMoneyButton.Size = new System.Drawing.Size(17, 17);
-            this.addMoneyButton.TabIndex = 100;
-            this.addMoneyButton.Tag = "current";
-            this.addMoneyButton.Text = "+";
-            this.addMoneyButton.UseVisualStyleBackColor = true;
-            // 
-            // copperAmountLabel
-            // 
-            this.copperAmountLabel.AutoSize = true;
-            this.copperAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.copperAmountLabel.Location = new System.Drawing.Point(78, 3);
-            this.copperAmountLabel.Name = "copperAmountLabel";
-            this.copperAmountLabel.Size = new System.Drawing.Size(16, 16);
-            this.copperAmountLabel.TabIndex = 99;
-            this.copperAmountLabel.Text = "0";
-            this.copperAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(2, -2);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 15);
-            this.label13.TabIndex = 177;
-            this.label13.Text = "MONEY";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.SystemColors.Control;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(63, 52);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(20, 16);
-            this.label46.TabIndex = 233;
-            this.label46.Text = "P:";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.SystemColors.Control;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(63, 35);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(21, 16);
-            this.label45.TabIndex = 232;
-            this.label45.Text = "G:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.SystemColors.Control;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(63, 19);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(20, 16);
-            this.label44.TabIndex = 231;
-            this.label44.Text = "S:";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.SystemColors.Control;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(63, 2);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(20, 16);
-            this.label43.TabIndex = 230;
-            this.label43.Text = "C:";
-            // 
             // miscRollAmountnumericUpDown
             // 
             this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
@@ -4490,38 +4303,6 @@
             this.label30.TabIndex = 292;
             this.label30.Text = "_______________________";
             // 
-            // profDownLabel
-            // 
-            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profDownLabel.FlatAppearance.BorderSize = 0;
-            this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.profDownLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.profDownLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profDownLabel.Location = new System.Drawing.Point(472, 57);
-            this.profDownLabel.Name = "profDownLabel";
-            this.profDownLabel.Size = new System.Drawing.Size(17, 13);
-            this.profDownLabel.TabIndex = 287;
-            this.profDownLabel.Text = null;
-            this.profDownLabel.UseVisualStyleBackColor = true;
-            this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
-            // 
-            // profUpButton
-            // 
-            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profUpButton.FlatAppearance.BorderSize = 0;
-            this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.profUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.profUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profUpButton.Location = new System.Drawing.Point(472, 41);
-            this.profUpButton.Name = "profUpButton";
-            this.profUpButton.Size = new System.Drawing.Size(17, 13);
-            this.profUpButton.TabIndex = 286;
-            this.profUpButton.Text = null;
-            this.profUpButton.UseVisualStyleBackColor = true;
-            this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
-            // 
             // label64
             // 
             this.label64.BackColor = System.Drawing.SystemColors.Control;
@@ -4630,7 +4411,7 @@
             this.label66.AutoSize = true;
             this.label66.BackColor = System.Drawing.SystemColors.Control;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(634, 83);
+            this.label66.Location = new System.Drawing.Point(643, 75);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(97, 16);
             this.label66.TabIndex = 242;
@@ -4674,17 +4455,6 @@
             this.copperTextbox.Name = "copperTextbox";
             this.copperTextbox.Size = new System.Drawing.Size(49, 15);
             this.copperTextbox.TabIndex = 239;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.BackColor = System.Drawing.SystemColors.Control;
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold);
-            this.label71.Location = new System.Drawing.Point(796, 104);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(58, 18);
-            this.label71.TabIndex = 299;
-            this.label71.Text = "Money";
             // 
             // label72
             // 
@@ -4743,12 +4513,160 @@
             this.label74.TabIndex = 303;
             this.label74.Text = "Gold";
             // 
+            // DeathPass1
+            // 
+            this.DeathPass1.Image = ((System.Drawing.Image)(resources.GetObject("DeathPass1.Image")));
+            this.DeathPass1.Location = new System.Drawing.Point(660, 92);
+            this.DeathPass1.Name = "DeathPass1";
+            this.DeathPass1.Size = new System.Drawing.Size(14, 14);
+            this.DeathPass1.TabIndex = 306;
+            this.DeathPass1.TabStop = false;
+            this.DeathPass1.Visible = false;
+            // 
+            // profDownLabel
+            // 
+            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profDownLabel.FlatAppearance.BorderSize = 0;
+            this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profDownLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profDownLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profDownLabel.Location = new System.Drawing.Point(472, 57);
+            this.profDownLabel.Name = "profDownLabel";
+            this.profDownLabel.Size = new System.Drawing.Size(17, 13);
+            this.profDownLabel.TabIndex = 287;
+            this.profDownLabel.Text = null;
+            this.profDownLabel.UseVisualStyleBackColor = true;
+            this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
+            // 
+            // profUpButton
+            // 
+            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profUpButton.FlatAppearance.BorderSize = 0;
+            this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.profUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.profUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profUpButton.Location = new System.Drawing.Point(472, 41);
+            this.profUpButton.Name = "profUpButton";
+            this.profUpButton.Size = new System.Drawing.Size(17, 13);
+            this.profUpButton.TabIndex = 286;
+            this.profUpButton.Text = null;
+            this.profUpButton.UseVisualStyleBackColor = true;
+            this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.Control;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(611, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 13);
+            this.label13.TabIndex = 307;
+            this.label13.Text = "Passes";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.SystemColors.Control;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label43.Location = new System.Drawing.Point(623, 107);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(33, 13);
+            this.label43.TabIndex = 308;
+            this.label43.Text = "Fails";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DeathPass2
+            // 
+            this.DeathPass2.Image = ((System.Drawing.Image)(resources.GetObject("DeathPass2.Image")));
+            this.DeathPass2.Location = new System.Drawing.Point(676, 92);
+            this.DeathPass2.Name = "DeathPass2";
+            this.DeathPass2.Size = new System.Drawing.Size(14, 14);
+            this.DeathPass2.TabIndex = 309;
+            this.DeathPass2.TabStop = false;
+            this.DeathPass2.Visible = false;
+            // 
+            // DeathPass3
+            // 
+            this.DeathPass3.Image = ((System.Drawing.Image)(resources.GetObject("DeathPass3.Image")));
+            this.DeathPass3.Location = new System.Drawing.Point(692, 92);
+            this.DeathPass3.Name = "DeathPass3";
+            this.DeathPass3.Size = new System.Drawing.Size(14, 14);
+            this.DeathPass3.TabIndex = 310;
+            this.DeathPass3.TabStop = false;
+            this.DeathPass3.Visible = false;
+            // 
+            // DeathFail3
+            // 
+            this.DeathFail3.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail3.Location = new System.Drawing.Point(692, 106);
+            this.DeathFail3.Name = "DeathFail3";
+            this.DeathFail3.Size = new System.Drawing.Size(14, 14);
+            this.DeathFail3.TabIndex = 312;
+            this.DeathFail3.TabStop = false;
+            this.DeathFail3.Visible = false;
+            // 
+            // DeathFail1
+            // 
+            this.DeathFail1.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail1.Location = new System.Drawing.Point(660, 106);
+            this.DeathFail1.Name = "DeathFail1";
+            this.DeathFail1.Size = new System.Drawing.Size(14, 14);
+            this.DeathFail1.TabIndex = 311;
+            this.DeathFail1.TabStop = false;
+            this.DeathFail1.Visible = false;
+            // 
+            // DeathFail2
+            // 
+            this.DeathFail2.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail2.Location = new System.Drawing.Point(676, 106);
+            this.DeathFail2.Name = "DeathFail2";
+            this.DeathFail2.Size = new System.Drawing.Size(14, 14);
+            this.DeathFail2.TabIndex = 313;
+            this.DeathFail2.TabStop = false;
+            this.DeathFail2.Visible = false;
+            // 
+            // deathSaveRollButton
+            // 
+            this.deathSaveRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deathSaveRollButton.Location = new System.Drawing.Point(716, 91);
+            this.deathSaveRollButton.Name = "deathSaveRollButton";
+            this.deathSaveRollButton.Size = new System.Drawing.Size(58, 14);
+            this.deathSaveRollButton.TabIndex = 170;
+            this.deathSaveRollButton.Text = "Roll";
+            this.deathSaveRollButton.UseVisualStyleBackColor = true;
+            this.deathSaveRollButton.Click += new System.EventHandler(this.deathSaveRollButton_Click);
+            // 
+            // deathSaveResetButton
+            // 
+            this.deathSaveResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deathSaveResetButton.Location = new System.Drawing.Point(716, 107);
+            this.deathSaveResetButton.Name = "deathSaveResetButton";
+            this.deathSaveResetButton.Size = new System.Drawing.Size(58, 14);
+            this.deathSaveResetButton.TabIndex = 314;
+            this.deathSaveResetButton.Text = "Reset";
+            this.deathSaveResetButton.UseVisualStyleBackColor = true;
+            this.deathSaveResetButton.Click += new System.EventHandler(this.deathSaveResetButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.deathSaveResetButton);
+            this.Controls.Add(this.deathSaveRollButton);
+            this.Controls.Add(this.DeathFail2);
+            this.Controls.Add(this.DeathFail3);
+            this.Controls.Add(this.DeathFail1);
+            this.Controls.Add(this.DeathPass3);
+            this.Controls.Add(this.DeathPass2);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.DeathPass1);
             this.Controls.Add(this.platTextbox);
             this.Controls.Add(this.label73);
             this.Controls.Add(this.goldTextbox);
@@ -4792,7 +4710,6 @@
             this.Controls.Add(this.miscRollbutton);
             this.Controls.Add(this.miscRollNumnumericUpDown);
             this.Controls.Add(this.miscRollAmountnumericUpDown);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.spelllabel);
             this.Controls.Add(this.label2);
@@ -4817,7 +4734,6 @@
             this.Controls.Add(this.label63);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label67);
-            this.Controls.Add(this.label71);
             this.Controls.Add(this.label70);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -4858,8 +4774,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.otherBonusnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MultipliernumericUpDown)).EndInit();
             this.spellListPanel.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
@@ -4870,6 +4784,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathPass3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5039,17 +4959,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown warlockSpellLevelnumericUpDown;
-        private System.Windows.Forms.Panel panel7;
-        private CustomButtons.ButtonNoPadding setMoneyButton;
-        private CustomButtons.ButtonNoPadding minusMoneyButton;
-        private CustomButtons.ButtonNoPadding addMoneyButton;
-        private System.Windows.Forms.TextBox moneyAmountTextBox;
-        private System.Windows.Forms.Label copperAmountLabel;
-        private System.Windows.Forms.Label PlatinumAmountLabel;
-        private System.Windows.Forms.Label GoldAmountLabel;
-        private System.Windows.Forms.Label silverAmountLabel;
-        private System.Windows.Forms.ComboBox moneyDropDown;
-        private System.Windows.Forms.Label label13;
         private CustomButtons.ButtonNoPadding forgetSpellButton;
         private System.Windows.Forms.TextBox spellSaveDCdisplayLabel;
         private System.Windows.Forms.Panel panel8;
@@ -5109,10 +5018,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label47;
         private CustomControls.CustomCheckBox customCheckBox1;
         private CustomControls.ProficiencyCheckBox proficiencyCheckBox1;
@@ -5214,13 +5119,22 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label70;
         private CustomControls.CustomTextBoxCentered copperTextbox;
-        private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
         private CustomControls.CustomTextBoxCentered silverTextbox;
         private CustomControls.CustomTextBoxCentered platTextbox;
         private System.Windows.Forms.Label label73;
         private CustomControls.CustomTextBoxCentered goldTextbox;
         private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.PictureBox DeathPass1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.PictureBox DeathPass2;
+        private System.Windows.Forms.PictureBox DeathPass3;
+        private System.Windows.Forms.PictureBox DeathFail3;
+        private System.Windows.Forms.PictureBox DeathFail1;
+        private System.Windows.Forms.PictureBox DeathFail2;
+        private CustomButtons.ButtonNoPadding deathSaveRollButton;
+        private CustomButtons.ButtonNoPadding deathSaveResetButton;
     }
 }
 

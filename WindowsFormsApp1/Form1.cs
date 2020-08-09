@@ -58,7 +58,6 @@ namespace WindowsFormsApp1
         bool[] prepareSpells;       //which classes prepare spells
         bool[] usedArcanums;        //true if arcanum has been used
         int[] warlockSpellSlots;      //spell slots of a warlock  [current/max]
-        Label[] moneyLabels;        //money amount labels for easier modifications
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\DnD Data"; //where data is saved to
         int[] moneyStore; //holds value while adding/subtracting to money
 
@@ -135,13 +134,6 @@ namespace WindowsFormsApp1
             spellSlotsLabels.Add(lvl9slotslabel);
             LoadSpells();
             spellTypeDropdown.Text = "None";
-
-            moneyDropDown.Text = "Gold";
-            moneyLabels = new Label[4];
-            moneyLabels[0] = copperAmountLabel;
-            moneyLabels[1] = silverAmountLabel;
-            moneyLabels[2] = GoldAmountLabel;
-            moneyLabels[3] = PlatinumAmountLabel;
 
             miscRollDropDown.SelectedIndex = 0;
 
@@ -2183,10 +2175,10 @@ namespace WindowsFormsApp1
             durationlabel.Enabled = false;
             componentlabel.Enabled = false;
             //money
-            copperAmountLabel.Text = "0";
-            silverAmountLabel.Text = "0";
-            GoldAmountLabel.Text = "0";
-            PlatinumAmountLabel.Text = "0";
+            getBox(copperTextbox).Text = "0";
+            getBox(silverTextbox).Text = "0";
+            getBox(goldTextbox).Text = "0";
+            getBox(platTextbox).Text = "0";
             //char info
             portrait = null;
             charInfo = new string[8];
@@ -3065,6 +3057,90 @@ namespace WindowsFormsApp1
                 saveFile(fileName);
                 saveButton.Enabled = false;
             }
+        }
+
+
+
+        #endregion
+
+        #region Death Saves
+
+        // make death save
+        private void deathSaveRollButton_Click(object sender, EventArgs e)
+        {
+            int roll = Roll.RollSingleDie(20);
+
+            UpdateOutput("Death save roll: " + roll);
+            UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+
+            if (roll > 10)
+            {
+                if (!DeathPass1.Visible)
+                {
+                    DeathPass1.Visible = true;
+                }
+                else if (!DeathPass2.Visible)
+                {
+                    DeathPass2.Visible = true;
+                }
+                else
+                {
+                    DeathPass3.Visible = true;
+                    deathSaveRollButton.Enabled = false;
+                }
+                if (roll == 20)
+                {
+                    if (!DeathPass2.Visible)
+                    {
+                        DeathPass2.Visible = true;
+                    }
+                    else
+                    {
+                        DeathPass3.Visible = true;
+                        deathSaveRollButton.Enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                if (!DeathFail1.Visible)
+                {
+                    DeathFail1.Visible = true;
+                }
+                else if (!DeathFail2.Visible)
+                {
+                    DeathFail2.Visible = true;
+                }
+                else
+                {
+                    DeathFail3.Visible = true;
+                    deathSaveRollButton.Enabled = false;
+                }
+                if (roll == 1)
+                {
+                    if (!DeathFail2.Visible)
+                    {
+                        DeathFail2.Visible = true;
+                    }
+                    else
+                    {
+                        DeathFail3.Visible = true;
+                        deathSaveRollButton.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        // enable roll button and hide pictures
+        private void deathSaveResetButton_Click(object sender, EventArgs e)
+        {
+            DeathPass1.Visible = false;
+            DeathPass2.Visible = false;
+            DeathPass3.Visible = false;
+            DeathFail1.Visible = false;
+            DeathFail2.Visible = false;
+            DeathFail3.Visible = false;
+            deathSaveRollButton.Enabled = true;
         }
 
 
