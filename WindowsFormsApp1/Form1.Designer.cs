@@ -73,23 +73,24 @@
             this.profRoll05 = new System.Windows.Forms.Button();
             this.profRoll01 = new System.Windows.Forms.Button();
             this.Weapon1 = new System.Windows.Forms.Panel();
+            this.dmgPictureBox = new System.Windows.Forms.PictureBox();
+            this.atkPictureBox = new System.Windows.Forms.PictureBox();
+            this.weaponRadioButton8 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton7 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton6 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton5 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton4 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton3 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton2 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
             this.weaponPropTextBox = new System.Windows.Forms.TextBox();
             this.newWeaponButton = new CustomButtons.ButtonNoPadding();
             this.dmgRoll2 = new CustomButtons.ButtonNoPadding();
             this.weapondDelButton = new CustomButtons.ButtonNoPadding();
             this.weaponEditButton = new CustomButtons.ButtonNoPadding();
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
-            this.bonusButtonDisplay = new CustomButtons.ButtonNoPadding();
-            this.propertiesButtonDisplay = new CustomButtons.ButtonNoPadding();
-            this.weaponRadioButton8 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton7 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton6 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton5 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton4 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton3 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton2 = new System.Windows.Forms.RadioButton();
-            this.weaponRadioButton1 = new System.Windows.Forms.RadioButton();
-            this.weapon1Name = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.InventoryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AC = new System.Windows.Forms.Label();
@@ -131,11 +132,7 @@
             this.backgroundtextBox = new System.Windows.Forms.TextBox();
             this.AlignmenttextBox = new System.Windows.Forms.TextBox();
             this.featsPanel = new System.Windows.Forms.Panel();
-            this.customUpDown1 = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.proficiencyCheckBox1 = new WindowsFormsApp1.CustomControls.ProficiencyCheckBox();
-            this.customCheckBox1 = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.settingsButton = new CustomButtons.ButtonNoPadding();
             this.label34 = new System.Windows.Forms.Label();
             this.featShortRestButton = new CustomButtons.ButtonNoPadding();
             this.otherFeatButton = new CustomButtons.ButtonNoPadding();
@@ -146,11 +143,11 @@
             this.featDeleteButton = new CustomButtons.ButtonNoPadding();
             this.featEditButton = new CustomButtons.ButtonNoPadding();
             this.label4 = new System.Windows.Forms.Label();
+            this.settingsButton = new CustomButtons.ButtonNoPadding();
             this.label14 = new System.Windows.Forms.Label();
             this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
             this.nameLabel = new System.Windows.Forms.TextBox();
             this.levelTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.spelllabel = new System.Windows.Forms.Label();
             this.spellPanel = new System.Windows.Forms.Panel();
             this.spellListLabel = new System.Windows.Forms.Label();
@@ -367,8 +364,12 @@
             this.DeathFail2 = new System.Windows.Forms.PictureBox();
             this.deathSaveRollButton = new CustomButtons.ButtonNoPadding();
             this.deathSaveResetButton = new CustomButtons.ButtonNoPadding();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -1007,15 +1008,10 @@
             // 
             // Weapon1
             // 
-            this.Weapon1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Weapon1.Controls.Add(this.weaponPropTextBox);
             this.Weapon1.Controls.Add(this.newWeaponButton);
-            this.Weapon1.Controls.Add(this.dmgRoll2);
-            this.Weapon1.Controls.Add(this.weapondDelButton);
-            this.Weapon1.Controls.Add(this.weaponEditButton);
-            this.Weapon1.Controls.Add(this.atkRoll1);
-            this.Weapon1.Controls.Add(this.bonusButtonDisplay);
-            this.Weapon1.Controls.Add(this.propertiesButtonDisplay);
+            this.Weapon1.Controls.Add(this.label46);
+            this.Weapon1.Controls.Add(this.dmgPictureBox);
+            this.Weapon1.Controls.Add(this.atkPictureBox);
             this.Weapon1.Controls.Add(this.weaponRadioButton8);
             this.Weapon1.Controls.Add(this.weaponRadioButton7);
             this.Weapon1.Controls.Add(this.weaponRadioButton6);
@@ -1024,28 +1020,157 @@
             this.Weapon1.Controls.Add(this.weaponRadioButton3);
             this.Weapon1.Controls.Add(this.weaponRadioButton2);
             this.Weapon1.Controls.Add(this.weaponRadioButton1);
-            this.Weapon1.Controls.Add(this.weapon1Name);
-            this.Weapon1.Location = new System.Drawing.Point(418, 322);
+            this.Weapon1.Controls.Add(this.weaponPropTextBox);
+            this.Weapon1.Controls.Add(this.dmgRoll2);
+            this.Weapon1.Controls.Add(this.weapondDelButton);
+            this.Weapon1.Controls.Add(this.weaponEditButton);
+            this.Weapon1.Controls.Add(this.atkRoll1);
+            this.Weapon1.Controls.Add(this.label44);
+            this.Weapon1.Controls.Add(this.label45);
+            this.Weapon1.Location = new System.Drawing.Point(414, 150);
             this.Weapon1.Name = "Weapon1";
-            this.Weapon1.Size = new System.Drawing.Size(220, 168);
+            this.Weapon1.Size = new System.Drawing.Size(188, 314);
             this.Weapon1.TabIndex = 71;
+            // 
+            // dmgPictureBox
+            // 
+            this.dmgPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.dmgIcon;
+            this.dmgPictureBox.Location = new System.Drawing.Point(167, 174);
+            this.dmgPictureBox.Name = "dmgPictureBox";
+            this.dmgPictureBox.Size = new System.Drawing.Size(20, 20);
+            this.dmgPictureBox.TabIndex = 317;
+            this.dmgPictureBox.TabStop = false;
+            // 
+            // atkPictureBox
+            // 
+            this.atkPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.attackIcon;
+            this.atkPictureBox.Location = new System.Drawing.Point(167, 152);
+            this.atkPictureBox.Name = "atkPictureBox";
+            this.atkPictureBox.Size = new System.Drawing.Size(20, 20);
+            this.atkPictureBox.TabIndex = 316;
+            this.atkPictureBox.TabStop = false;
+            // 
+            // weaponRadioButton8
+            // 
+            this.weaponRadioButton8.AutoSize = true;
+            this.weaponRadioButton8.Location = new System.Drawing.Point(3, 127);
+            this.weaponRadioButton8.Name = "weaponRadioButton8";
+            this.weaponRadioButton8.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton8.TabIndex = 103;
+            this.weaponRadioButton8.TabStop = true;
+            this.weaponRadioButton8.Text = "Weapon Name 8";
+            this.weaponRadioButton8.UseVisualStyleBackColor = true;
+            this.weaponRadioButton8.Visible = false;
+            this.weaponRadioButton8.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton7
+            // 
+            this.weaponRadioButton7.AutoSize = true;
+            this.weaponRadioButton7.Location = new System.Drawing.Point(3, 109);
+            this.weaponRadioButton7.Name = "weaponRadioButton7";
+            this.weaponRadioButton7.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton7.TabIndex = 102;
+            this.weaponRadioButton7.TabStop = true;
+            this.weaponRadioButton7.Text = "Weapon Name 7";
+            this.weaponRadioButton7.UseVisualStyleBackColor = true;
+            this.weaponRadioButton7.Visible = false;
+            this.weaponRadioButton7.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton6
+            // 
+            this.weaponRadioButton6.AutoSize = true;
+            this.weaponRadioButton6.Location = new System.Drawing.Point(3, 91);
+            this.weaponRadioButton6.Name = "weaponRadioButton6";
+            this.weaponRadioButton6.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton6.TabIndex = 101;
+            this.weaponRadioButton6.TabStop = true;
+            this.weaponRadioButton6.Text = "Weapon Name 6";
+            this.weaponRadioButton6.UseVisualStyleBackColor = true;
+            this.weaponRadioButton6.Visible = false;
+            this.weaponRadioButton6.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton5
+            // 
+            this.weaponRadioButton5.AutoSize = true;
+            this.weaponRadioButton5.Location = new System.Drawing.Point(3, 73);
+            this.weaponRadioButton5.Name = "weaponRadioButton5";
+            this.weaponRadioButton5.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton5.TabIndex = 100;
+            this.weaponRadioButton5.TabStop = true;
+            this.weaponRadioButton5.Text = "Weapon Name 5";
+            this.weaponRadioButton5.UseVisualStyleBackColor = true;
+            this.weaponRadioButton5.Visible = false;
+            this.weaponRadioButton5.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton4
+            // 
+            this.weaponRadioButton4.AutoSize = true;
+            this.weaponRadioButton4.Location = new System.Drawing.Point(3, 56);
+            this.weaponRadioButton4.Name = "weaponRadioButton4";
+            this.weaponRadioButton4.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton4.TabIndex = 99;
+            this.weaponRadioButton4.TabStop = true;
+            this.weaponRadioButton4.Text = "Weapon Name 4";
+            this.weaponRadioButton4.UseVisualStyleBackColor = true;
+            this.weaponRadioButton4.Visible = false;
+            this.weaponRadioButton4.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton3
+            // 
+            this.weaponRadioButton3.AutoSize = true;
+            this.weaponRadioButton3.Location = new System.Drawing.Point(3, 39);
+            this.weaponRadioButton3.Name = "weaponRadioButton3";
+            this.weaponRadioButton3.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton3.TabIndex = 98;
+            this.weaponRadioButton3.TabStop = true;
+            this.weaponRadioButton3.Text = "Weapon Name 3";
+            this.weaponRadioButton3.UseVisualStyleBackColor = true;
+            this.weaponRadioButton3.Visible = false;
+            this.weaponRadioButton3.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton2
+            // 
+            this.weaponRadioButton2.AutoSize = true;
+            this.weaponRadioButton2.Location = new System.Drawing.Point(3, 22);
+            this.weaponRadioButton2.Name = "weaponRadioButton2";
+            this.weaponRadioButton2.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton2.TabIndex = 97;
+            this.weaponRadioButton2.TabStop = true;
+            this.weaponRadioButton2.Text = "Weapon Name 2";
+            this.weaponRadioButton2.UseVisualStyleBackColor = true;
+            this.weaponRadioButton2.Visible = false;
+            this.weaponRadioButton2.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton1
+            // 
+            this.weaponRadioButton1.AutoSize = true;
+            this.weaponRadioButton1.Location = new System.Drawing.Point(3, 4);
+            this.weaponRadioButton1.Name = "weaponRadioButton1";
+            this.weaponRadioButton1.Size = new System.Drawing.Size(100, 17);
+            this.weaponRadioButton1.TabIndex = 96;
+            this.weaponRadioButton1.Text = "Wepon Name 1";
+            this.weaponRadioButton1.UseVisualStyleBackColor = true;
+            this.weaponRadioButton1.Visible = false;
+            this.weaponRadioButton1.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
             // 
             // weaponPropTextBox
             // 
-            this.weaponPropTextBox.Location = new System.Drawing.Point(108, 55);
+            this.weaponPropTextBox.BackColor = System.Drawing.Color.LightGray;
+            this.weaponPropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.weaponPropTextBox.Location = new System.Drawing.Point(4, 211);
             this.weaponPropTextBox.Multiline = true;
             this.weaponPropTextBox.Name = "weaponPropTextBox";
-            this.weaponPropTextBox.Size = new System.Drawing.Size(106, 108);
+            this.weaponPropTextBox.ReadOnly = true;
+            this.weaponPropTextBox.Size = new System.Drawing.Size(79, 93);
             this.weaponPropTextBox.TabIndex = 95;
             this.weaponPropTextBox.Tag = "";
-            this.weaponPropTextBox.Visible = false;
             this.weaponPropTextBox.Leave += new System.EventHandler(this.ClearText);
             // 
             // newWeaponButton
             // 
             this.newWeaponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newWeaponButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newWeaponButton.Location = new System.Drawing.Point(13, 19);
+            this.newWeaponButton.Location = new System.Drawing.Point(51, 3);
             this.newWeaponButton.Name = "newWeaponButton";
             this.newWeaponButton.Size = new System.Drawing.Size(86, 19);
             this.newWeaponButton.TabIndex = 94;
@@ -1058,10 +1183,10 @@
             this.dmgRoll2.Enabled = false;
             this.dmgRoll2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dmgRoll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dmgRoll2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.dmgRoll2.Location = new System.Drawing.Point(137, 20);
+            this.dmgRoll2.ForeColor = System.Drawing.Color.Black;
+            this.dmgRoll2.Location = new System.Drawing.Point(85, 174);
             this.dmgRoll2.Name = "dmgRoll2";
-            this.dmgRoll2.Size = new System.Drawing.Size(78, 19);
+            this.dmgRoll2.Size = new System.Drawing.Size(80, 20);
             this.dmgRoll2.TabIndex = 93;
             this.dmgRoll2.Text = "Damage Roll";
             this.dmgRoll2.UseVisualStyleBackColor = true;
@@ -1072,9 +1197,9 @@
             this.weapondDelButton.Enabled = false;
             this.weapondDelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weapondDelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.weapondDelButton.Location = new System.Drawing.Point(108, 1);
+            this.weapondDelButton.Location = new System.Drawing.Point(3, 152);
             this.weapondDelButton.Name = "weapondDelButton";
-            this.weapondDelButton.Size = new System.Drawing.Size(42, 19);
+            this.weapondDelButton.Size = new System.Drawing.Size(80, 20);
             this.weapondDelButton.TabIndex = 92;
             this.weapondDelButton.Text = "Delete";
             this.weapondDelButton.UseVisualStyleBackColor = true;
@@ -1085,9 +1210,9 @@
             this.weaponEditButton.Enabled = false;
             this.weaponEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weaponEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.weaponEditButton.Location = new System.Drawing.Point(108, 20);
+            this.weaponEditButton.Location = new System.Drawing.Point(3, 174);
             this.weaponEditButton.Name = "weaponEditButton";
-            this.weaponEditButton.Size = new System.Drawing.Size(28, 19);
+            this.weaponEditButton.Size = new System.Drawing.Size(80, 20);
             this.weaponEditButton.TabIndex = 91;
             this.weaponEditButton.Text = "Edit";
             this.weaponEditButton.UseVisualStyleBackColor = true;
@@ -1098,157 +1223,34 @@
             this.atkRoll1.Enabled = false;
             this.atkRoll1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.atkRoll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.atkRoll1.ForeColor = System.Drawing.Color.Red;
-            this.atkRoll1.Location = new System.Drawing.Point(151, 1);
+            this.atkRoll1.ForeColor = System.Drawing.Color.Black;
+            this.atkRoll1.Location = new System.Drawing.Point(85, 152);
             this.atkRoll1.Name = "atkRoll1";
-            this.atkRoll1.Size = new System.Drawing.Size(63, 19);
+            this.atkRoll1.Size = new System.Drawing.Size(80, 20);
             this.atkRoll1.TabIndex = 90;
             this.atkRoll1.Text = "Attack Roll";
             this.atkRoll1.UseVisualStyleBackColor = true;
             this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
             // 
-            // bonusButtonDisplay
+            // label44
             // 
-            this.bonusButtonDisplay.BackColor = System.Drawing.Color.DimGray;
-            this.bonusButtonDisplay.Enabled = false;
-            this.bonusButtonDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bonusButtonDisplay.Location = new System.Drawing.Point(167, 39);
-            this.bonusButtonDisplay.Name = "bonusButtonDisplay";
-            this.bonusButtonDisplay.Size = new System.Drawing.Size(47, 16);
-            this.bonusButtonDisplay.TabIndex = 88;
-            this.bonusButtonDisplay.Tag = "bonus";
-            this.bonusButtonDisplay.Text = "bonus";
-            this.bonusButtonDisplay.UseVisualStyleBackColor = false;
-            this.bonusButtonDisplay.Click += new System.EventHandler(this.SwitchWeaponDisplay);
+            this.label44.BackColor = System.Drawing.SystemColors.Control;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label44.Location = new System.Drawing.Point(-2, 130);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(202, 17);
+            this.label44.TabIndex = 316;
+            this.label44.Text = "_____________________";
             // 
-            // propertiesButtonDisplay
+            // label45
             // 
-            this.propertiesButtonDisplay.BackColor = System.Drawing.Color.DimGray;
-            this.propertiesButtonDisplay.Enabled = false;
-            this.propertiesButtonDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.propertiesButtonDisplay.Location = new System.Drawing.Point(108, 39);
-            this.propertiesButtonDisplay.Name = "propertiesButtonDisplay";
-            this.propertiesButtonDisplay.Size = new System.Drawing.Size(60, 16);
-            this.propertiesButtonDisplay.TabIndex = 73;
-            this.propertiesButtonDisplay.Tag = "properties";
-            this.propertiesButtonDisplay.Text = "properties";
-            this.propertiesButtonDisplay.UseVisualStyleBackColor = false;
-            this.propertiesButtonDisplay.Click += new System.EventHandler(this.SwitchWeaponDisplay);
-            // 
-            // weaponRadioButton8
-            // 
-            this.weaponRadioButton8.AutoSize = true;
-            this.weaponRadioButton8.Location = new System.Drawing.Point(3, 145);
-            this.weaponRadioButton8.Name = "weaponRadioButton8";
-            this.weaponRadioButton8.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton8.TabIndex = 87;
-            this.weaponRadioButton8.TabStop = true;
-            this.weaponRadioButton8.Text = "Weapon 8 Name";
-            this.weaponRadioButton8.UseVisualStyleBackColor = true;
-            this.weaponRadioButton8.Visible = false;
-            this.weaponRadioButton8.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton7
-            // 
-            this.weaponRadioButton7.AutoSize = true;
-            this.weaponRadioButton7.Location = new System.Drawing.Point(3, 126);
-            this.weaponRadioButton7.Name = "weaponRadioButton7";
-            this.weaponRadioButton7.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton7.TabIndex = 86;
-            this.weaponRadioButton7.TabStop = true;
-            this.weaponRadioButton7.Text = "Weapon 7 Name";
-            this.weaponRadioButton7.UseVisualStyleBackColor = true;
-            this.weaponRadioButton7.Visible = false;
-            this.weaponRadioButton7.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton6
-            // 
-            this.weaponRadioButton6.AutoSize = true;
-            this.weaponRadioButton6.Location = new System.Drawing.Point(3, 108);
-            this.weaponRadioButton6.Name = "weaponRadioButton6";
-            this.weaponRadioButton6.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton6.TabIndex = 81;
-            this.weaponRadioButton6.TabStop = true;
-            this.weaponRadioButton6.Text = "Weapon 6 Name";
-            this.weaponRadioButton6.UseVisualStyleBackColor = true;
-            this.weaponRadioButton6.Visible = false;
-            this.weaponRadioButton6.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton5
-            // 
-            this.weaponRadioButton5.AutoSize = true;
-            this.weaponRadioButton5.Location = new System.Drawing.Point(3, 90);
-            this.weaponRadioButton5.Name = "weaponRadioButton5";
-            this.weaponRadioButton5.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton5.TabIndex = 80;
-            this.weaponRadioButton5.TabStop = true;
-            this.weaponRadioButton5.Text = "Weapon 5 Name";
-            this.weaponRadioButton5.UseVisualStyleBackColor = true;
-            this.weaponRadioButton5.Visible = false;
-            this.weaponRadioButton5.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton4
-            // 
-            this.weaponRadioButton4.AutoSize = true;
-            this.weaponRadioButton4.Location = new System.Drawing.Point(3, 73);
-            this.weaponRadioButton4.Name = "weaponRadioButton4";
-            this.weaponRadioButton4.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton4.TabIndex = 79;
-            this.weaponRadioButton4.TabStop = true;
-            this.weaponRadioButton4.Text = "Weapon 4 Name";
-            this.weaponRadioButton4.UseVisualStyleBackColor = true;
-            this.weaponRadioButton4.Visible = false;
-            this.weaponRadioButton4.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton3
-            // 
-            this.weaponRadioButton3.AutoSize = true;
-            this.weaponRadioButton3.Location = new System.Drawing.Point(3, 55);
-            this.weaponRadioButton3.Name = "weaponRadioButton3";
-            this.weaponRadioButton3.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton3.TabIndex = 78;
-            this.weaponRadioButton3.TabStop = true;
-            this.weaponRadioButton3.Text = "Weapon 3 Name";
-            this.weaponRadioButton3.UseVisualStyleBackColor = true;
-            this.weaponRadioButton3.Visible = false;
-            this.weaponRadioButton3.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton2
-            // 
-            this.weaponRadioButton2.AutoSize = true;
-            this.weaponRadioButton2.Location = new System.Drawing.Point(3, 38);
-            this.weaponRadioButton2.Name = "weaponRadioButton2";
-            this.weaponRadioButton2.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton2.TabIndex = 77;
-            this.weaponRadioButton2.TabStop = true;
-            this.weaponRadioButton2.Text = "Weapon 2 Name";
-            this.weaponRadioButton2.UseVisualStyleBackColor = true;
-            this.weaponRadioButton2.Visible = false;
-            this.weaponRadioButton2.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton1
-            // 
-            this.weaponRadioButton1.AutoSize = true;
-            this.weaponRadioButton1.Location = new System.Drawing.Point(3, 20);
-            this.weaponRadioButton1.Name = "weaponRadioButton1";
-            this.weaponRadioButton1.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton1.TabIndex = 76;
-            this.weaponRadioButton1.TabStop = true;
-            this.weaponRadioButton1.Text = "Weapon 1 Name";
-            this.weaponRadioButton1.UseVisualStyleBackColor = true;
-            this.weaponRadioButton1.Visible = false;
-            this.weaponRadioButton1.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weapon1Name
-            // 
-            this.weapon1Name.AutoSize = true;
-            this.weapon1Name.BackColor = System.Drawing.SystemColors.Control;
-            this.weapon1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weapon1Name.Location = new System.Drawing.Point(20, 3);
-            this.weapon1Name.Name = "weapon1Name";
-            this.weapon1Name.Size = new System.Drawing.Size(66, 15);
-            this.weapon1Name.TabIndex = 72;
-            this.weapon1Name.Text = "Weapons";
+            this.label45.BackColor = System.Drawing.SystemColors.Control;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label45.Location = new System.Drawing.Point(-5, 291);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(202, 17);
+            this.label45.TabIndex = 318;
+            this.label45.Text = "_____________________";
             // 
             // InventoryTextBox
             // 
@@ -1698,11 +1700,7 @@
             // featsPanel
             // 
             this.featsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.featsPanel.Controls.Add(this.customUpDown1);
-            this.featsPanel.Controls.Add(this.proficiencyCheckBox1);
-            this.featsPanel.Controls.Add(this.customCheckBox1);
             this.featsPanel.Controls.Add(this.label35);
-            this.featsPanel.Controls.Add(this.settingsButton);
             this.featsPanel.Controls.Add(this.label34);
             this.featsPanel.Controls.Add(this.featShortRestButton);
             this.featsPanel.Controls.Add(this.otherFeatButton);
@@ -1713,41 +1711,10 @@
             this.featsPanel.Controls.Add(this.featDeleteButton);
             this.featsPanel.Controls.Add(this.featEditButton);
             this.featsPanel.Controls.Add(this.label4);
-            this.featsPanel.Location = new System.Drawing.Point(561, 158);
+            this.featsPanel.Location = new System.Drawing.Point(646, 139);
             this.featsPanel.Name = "featsPanel";
             this.featsPanel.Size = new System.Drawing.Size(277, 218);
             this.featsPanel.TabIndex = 96;
-            // 
-            // customUpDown1
-            // 
-            this.customUpDown1.BackColor = System.Drawing.SystemColors.Control;
-            this.customUpDown1.Location = new System.Drawing.Point(140, 43);
-            this.customUpDown1.Name = "customUpDown1";
-            this.customUpDown1.Size = new System.Drawing.Size(48, 23);
-            this.customUpDown1.TabIndex = 234;
-            this.customUpDown1.Value = 0;
-            // 
-            // proficiencyCheckBox1
-            // 
-            this.proficiencyCheckBox1.AutoSize = true;
-            this.proficiencyCheckBox1.FullBox = true;
-            this.proficiencyCheckBox1.Location = new System.Drawing.Point(139, 28);
-            this.proficiencyCheckBox1.Name = "proficiencyCheckBox1";
-            this.proficiencyCheckBox1.Size = new System.Drawing.Size(112, 17);
-            this.proficiencyCheckBox1.TabIndex = 233;
-            this.proficiencyCheckBox1.Text = "Proficiency Check";
-            this.proficiencyCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // customCheckBox1
-            // 
-            this.customCheckBox1.AutoSize = true;
-            this.customCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.customCheckBox1.Location = new System.Drawing.Point(140, 5);
-            this.customCheckBox1.Name = "customCheckBox1";
-            this.customCheckBox1.Size = new System.Drawing.Size(117, 19);
-            this.customCheckBox1.TabIndex = 232;
-            this.customCheckBox1.Text = "Custom Check";
-            this.customCheckBox1.UseVisualStyleBackColor = true;
             // 
             // label35
             // 
@@ -1759,20 +1726,6 @@
             this.label35.Size = new System.Drawing.Size(96, 13);
             this.label35.TabIndex = 231;
             this.label35.Text = "Mystic Arcanum";
-            // 
-            // settingsButton
-            // 
-            this.settingsButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.gear;
-            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Image = global::WindowsFormsApp1.Properties.Resources.gear;
-            this.settingsButton.Location = new System.Drawing.Point(183, 106);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(23, 23);
-            this.settingsButton.TabIndex = 227;
-            this.settingsButton.Text = null;
-            this.settingsButton.UseVisualStyleBackColor = true;
-            this.settingsButton.Click += new System.EventHandler(this.buttonNoPadding3_Click);
             // 
             // label34
             // 
@@ -1900,6 +1853,20 @@
             this.label4.TabIndex = 165;
             this.label4.Text = "Description";
             // 
+            // settingsButton
+            // 
+            this.settingsButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.gear;
+            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Image = global::WindowsFormsApp1.Properties.Resources.gear;
+            this.settingsButton.Location = new System.Drawing.Point(490, -1);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(23, 23);
+            this.settingsButton.TabIndex = 227;
+            this.settingsButton.Text = null;
+            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.buttonNoPadding3_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1961,16 +1928,6 @@
             this.levelTextBox.TabIndex = 167;
             this.levelTextBox.Text = "Level / Class";
             this.levelTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(742, 141);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 168;
-            this.label2.Text = "Feats";
             // 
             // spelllabel
             // 
@@ -4651,13 +4608,38 @@
             this.deathSaveResetButton.UseVisualStyleBackColor = true;
             this.deathSaveResetButton.Click += new System.EventHandler(this.deathSaveResetButton_Click);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(414, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 20);
+            this.label2.TabIndex = 315;
+            this.label2.Text = "Weapons";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.SystemColors.Control;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label46.Location = new System.Drawing.Point(7, 194);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(73, 15);
+            this.label46.TabIndex = 242;
+            this.label46.Text = "Properties";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.deathSaveResetButton);
+            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.deathSaveRollButton);
             this.Controls.Add(this.DeathFail2);
             this.Controls.Add(this.DeathFail3);
@@ -4712,7 +4694,6 @@
             this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.spelllabel);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.featsPanel);
@@ -4746,6 +4727,8 @@
             this.profPanel.PerformLayout();
             this.Weapon1.ResumeLayout(false);
             this.Weapon1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -4834,17 +4817,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel Weapon1;
-        private System.Windows.Forms.Label weapon1Name;
-        private System.Windows.Forms.RadioButton weaponRadioButton2;
-        private System.Windows.Forms.RadioButton weaponRadioButton1;
-        private System.Windows.Forms.RadioButton weaponRadioButton6;
-        private System.Windows.Forms.RadioButton weaponRadioButton5;
-        private System.Windows.Forms.RadioButton weaponRadioButton4;
-        private System.Windows.Forms.RadioButton weaponRadioButton3;
-        private System.Windows.Forms.RadioButton weaponRadioButton8;
-        private System.Windows.Forms.RadioButton weaponRadioButton7;
-        private CustomButtons.ButtonNoPadding propertiesButtonDisplay;
-        private CustomButtons.ButtonNoPadding bonusButtonDisplay;
         private CustomButtons.ButtonNoPadding weapondDelButton;
         private CustomButtons.ButtonNoPadding weaponEditButton;
         private CustomButtons.ButtonNoPadding atkRoll1;
@@ -4880,7 +4852,6 @@
         private CustomButtons.ButtonNoPadding featLongRestButton;
         private CustomButtons.ButtonNoPadding featShortRestButton;
         private CustomButtons.ButtonNoPadding otherFeatButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label spelllabel;
         private System.Windows.Forms.ComboBox spellTypeDropdown;
         private CustomButtons.ButtonNoPadding browseSpellsButton;
@@ -5019,10 +4990,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label47;
-        private CustomControls.CustomCheckBox customCheckBox1;
-        private CustomControls.ProficiencyCheckBox proficiencyCheckBox1;
         private CustomControls.CustomCheckedList proficienciesCheckBoxes;
-        private CustomControls.CustomUpDown customUpDown1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label currentHPlabel;
         private System.Windows.Forms.Label tempHPlabel;
@@ -5135,6 +5103,20 @@
         private System.Windows.Forms.PictureBox DeathFail2;
         private CustomButtons.ButtonNoPadding deathSaveRollButton;
         private CustomButtons.ButtonNoPadding deathSaveResetButton;
+        private System.Windows.Forms.Label label2;
+        private CustomControls.CustomRadioButton weaponRadioButton1;
+        private CustomControls.CustomRadioButton weaponRadioButton8;
+        private CustomControls.CustomRadioButton weaponRadioButton7;
+        private CustomControls.CustomRadioButton weaponRadioButton6;
+        private CustomControls.CustomRadioButton weaponRadioButton5;
+        private CustomControls.CustomRadioButton weaponRadioButton4;
+        private CustomControls.CustomRadioButton weaponRadioButton3;
+        private CustomControls.CustomRadioButton weaponRadioButton2;
+        private System.Windows.Forms.PictureBox dmgPictureBox;
+        private System.Windows.Forms.PictureBox atkPictureBox;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
     }
 }
 

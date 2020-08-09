@@ -640,14 +640,11 @@ namespace WindowsFormsApp1
             if (weapons.Count == 1)
             {
                 weaponRadioButton1.Checked = true;
-                weaponPropTextBox.Tag = "properties";
-                propertiesButtonDisplay.Enabled = true;
-                bonusButtonDisplay.Enabled = true;
                 weapondDelButton.Enabled = true;
                 weaponEditButton.Enabled = true;
                 atkRoll1.Enabled = true;
                 dmgRoll2.Enabled = true;
-                SwitchWeaponDisplay(propertiesButtonDisplay, null);
+                UpdateWeaponDisplay();
             }
             UpdateWeaponDisplay();
             SetUnsaved();
@@ -703,10 +700,6 @@ namespace WindowsFormsApp1
             SetUnsaved();
             if (weapons.Count == 0)
             {
-                //set text boxes to gray
-                propertiesButtonDisplay.BackColor = Color.DimGray;
-                bonusButtonDisplay.BackColor = Color.DimGray;
-                weaponPropTextBox.Visible = false;
                 //delete bonus roll controls
                 foreach (Control c in currentBonusRolls)
                 {
@@ -776,146 +769,126 @@ namespace WindowsFormsApp1
         {
             if (weapons.Count > 0)
             {
-                if ((string)weaponPropTextBox.Tag == "properties")
+
+                //show properties
+                weaponPropTextBox.Text = weapons[currentWeapon].Properties;
+
+                //delete bonus roll controls
+                foreach (Control c in currentBonusRolls)
                 {
-                    //show properties
-                    weaponPropTextBox.Text = weapons[currentWeapon].Properties;
+                    Weapon1.Controls.Remove(c);
                 }
-                else
+                for(int i = 0; i < Weapon1.Controls.Count; i++)
                 {
-                    //delete bonus roll controls
-                    foreach (Control c in currentBonusRolls)
+                    if (Weapon1.Controls[i].Tag?.ToString() == "temp")
                     {
-                        Weapon1.Controls.Remove(c);
-                    }
-                    currentBonusRolls.Clear();
-                    //show bonus rolls
-                    weaponPropTextBox.Text = "";
-                    int rollNum = weapons[currentWeapon].BonusRolls.Count - 1;
-                    foreach (Roll r in weapons[currentWeapon].BonusRolls)
-                    {
-                        if (r.Optional)
-                        {
-                            CheckBox newLabel = new CheckBox();
-                            newLabel.Location = new Point(110, 58 + rollNum * 18);
-                            newLabel.Checked =
-                                weapons[currentWeapon].BonusRolls[weapons[currentWeapon].BonusRolls.Count - rollNum - 1].CurrentState;
-                            newLabel.Text = r.Name;
-                            if (r.Type == 1)
-                                newLabel.ForeColor = Color.Red;
-                            if (r.Type == 2)
-                                newLabel.ForeColor = Color.RoyalBlue;
-                            if (r.Type == 3)
-                                newLabel.ForeColor = Color.Purple;
-                            newLabel.BringToFront();
-                            newLabel.CheckedChanged += new EventHandler(BonusCheckChanged);
-                            newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
-                            Weapon1.Controls.Add(newLabel);
-                            currentBonusRolls.Add(newLabel);
-                        }
-                        else
-                        {
-                            Label newLabel = new Label();
-                            newLabel.Location = new Point(110, 61 + rollNum * 18);
-                            newLabel.Text = r.Name;
-                            if (r.Type == 1)
-                                newLabel.ForeColor = Color.Red;
-                            if (r.Type == 2)
-                                newLabel.ForeColor = Color.RoyalBlue;
-                            if (r.Type == 3)
-                                newLabel.ForeColor = Color.Purple;
-                            newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
-                            newLabel.BringToFront();
-                            Weapon1.Controls.Add(newLabel);
-                            currentBonusRolls.Add(newLabel);
-                        }
-                        rollNum--;
-
-
+                        Weapon1.Controls.Remove(Weapon1.Controls[i]);
+                        i--;
                     }
                 }
+                currentBonusRolls.Clear();
+                //show bonus rolls
+                int rollNum = weapons[currentWeapon].BonusRolls.Count - 1;
+                foreach (Roll r in weapons[currentWeapon].BonusRolls)
+                {
+                    if (r.Optional)
+                    {
+                        CheckBox newLabel = new CheckBox();
+                        newLabel.Location = new Point(85, 198 + rollNum * 18);
+                        newLabel.Checked =
+                            weapons[currentWeapon].BonusRolls[weapons[currentWeapon].BonusRolls.Count - rollNum - 1].CurrentState;
+                        newLabel.Text = r.Name;
+                        if (r.Type == 1 || r.Type == 3)
+                        {
+                            newLabel.Location = new Point(105, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(85, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = atkPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        if (r.Type == 2)
+                        {
+                            newLabel.Location = new Point(105, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(85, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = dmgPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        if (r.Type == 3)
+                        {
+                            newLabel.Location = new Point(125, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(105, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = dmgPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        newLabel.BringToFront();
+                        newLabel.CheckedChanged += new EventHandler(BonusCheckChanged);
+                        newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
+                        Weapon1.Controls.Add(newLabel);
+                        currentBonusRolls.Add(newLabel);
+                    }
+                    else
+                    {
+                        Label newLabel = new Label();
+                        newLabel.Location = new Point(85, 198 + rollNum * 18);
+                        newLabel.Text = r.Name;
+                        if (r.Type == 1 || r.Type == 3)
+                        {
+                            newLabel.Location = new Point(105, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(85, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = atkPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        if (r.Type == 2)
+                        {
+                            newLabel.Location = new Point(105, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(85, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = dmgPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        if (r.Type == 3)
+                        {
+                            newLabel.Location = new Point(125, 198 + rollNum * 18);
+                            PictureBox pb = new PictureBox();
+                            pb.Location = new Point(105, 200 + rollNum * 18);
+                            pb.Size = new Size(18, 18);
+                            pb.BackgroundImage = dmgPictureBox.Image;
+                            pb.BackgroundImageLayout = ImageLayout.Stretch;
+                            pb.Tag = "temp";
+                            Weapon1.Controls.Add(pb);
+                        }
+                        newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
+                        newLabel.BringToFront();
+                        Weapon1.Controls.Add(newLabel);
+                        currentBonusRolls.Add(newLabel);
+                    }
+                    rollNum--;
+
+
+                }
+
             }
         }
 
-        //switch between properties tab and bonus rolls tab
-        private void SwitchWeaponDisplay(object sender, EventArgs e)
-        {
-            if (((string)weaponPropTextBox.Tag) != "" && weapons.Count > 0)
-            {
-                weaponPropTextBox.Tag = ((Button)sender).Tag;
-                //change colors/tag
-                if ((string)((Button)sender).Tag == "properties")
-                { //set properties box to active
-                    propertiesButtonDisplay.BackColor = Color.WhiteSmoke;
-                    bonusButtonDisplay.BackColor = Color.DimGray;
-                    weaponPropTextBox.Text = weapons[currentWeapon].Properties;
-                    weaponPropTextBox.Visible = true;
-                    //delete bonus roll controls
-                    foreach (Control c in currentBonusRolls)
-                    {
-                        Weapon1.Controls.Remove(c);
-                    }
-                }
-                else
-                {
-                    weaponPropTextBox.Visible = false;
-                    propertiesButtonDisplay.BackColor = Color.DimGray;
-                    bonusButtonDisplay.BackColor = Color.WhiteSmoke;
-                    weaponPropTextBox.Text = "";
-
-                    //delete bonus roll controls
-                    foreach (Control c in currentBonusRolls)
-                    {
-                        Weapon1.Controls.Remove(c);
-                    }
-                    currentBonusRolls.Clear();
-                    //show bonus rolls
-                    weaponPropTextBox.Text = "";
-                    int rollNum = weapons[currentWeapon].BonusRolls.Count - 1;
-                    foreach (Roll r in weapons[currentWeapon].BonusRolls)
-                    {
-                        if (r.Optional)
-                        {
-                            CheckBox newLabel = new CheckBox();
-                            newLabel.Location = new Point(110, 58 + rollNum * 18);
-                            newLabel.Text = r.Name;
-                            newLabel.Checked =
-                                weapons[currentWeapon].BonusRolls[weapons[currentWeapon].BonusRolls.Count - rollNum - 1].CurrentState;
-                            newLabel.CheckedChanged += new EventHandler(BonusCheckChanged);
-                            newLabel.BringToFront();
-                            if (r.Type == 1)
-                                newLabel.ForeColor = Color.Red;
-                            if (r.Type == 2)
-                                newLabel.ForeColor = Color.RoyalBlue;
-                            if (r.Type == 3)
-                                newLabel.ForeColor = Color.Purple;
-                            newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
-                            Weapon1.Controls.Add(newLabel);
-                            currentBonusRolls.Add(newLabel);
-                        }
-                        else
-                        {
-                            Label newLabel = new Label();
-                            if (r.Type == 1)
-                                newLabel.ForeColor = Color.Red;
-                            if (r.Type == 2)
-                                newLabel.ForeColor = Color.RoyalBlue;
-                            if (r.Type == 3)
-                                newLabel.ForeColor = Color.Purple;
-                            newLabel.Location = new Point(110, 61 + rollNum * 18);
-                            newLabel.Text = r.Name;
-                            newLabel.Font = new Font("Arial", 9.25f, FontStyle.Regular);
-                            newLabel.BringToFront();
-                            Weapon1.Controls.Add(newLabel);
-                            currentBonusRolls.Add(newLabel);
-                        }
-                        rollNum--;
-
-                    }
-                }
-            }
-
-        }
+        
 
         /// <summary> 
         ///updates current stats of roll when check box is clicked
@@ -1920,9 +1893,6 @@ namespace WindowsFormsApp1
                 if (weapons.Count >= 1)
                 {
                     weaponRadioButton1.Checked = true;
-                    weaponPropTextBox.Tag = "properties";
-                    propertiesButtonDisplay.Enabled = true;
-                    bonusButtonDisplay.Enabled = true;
                     weapondDelButton.Enabled = true;
                     weaponEditButton.Enabled = true;
                     atkRoll1.Enabled = true;

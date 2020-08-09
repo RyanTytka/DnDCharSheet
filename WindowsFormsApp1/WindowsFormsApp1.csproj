@@ -71,6 +71,12 @@
     <Compile Include="CustomControls\CustomCheckedList.Designer.cs">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomRadioButton.Designer.cs">
+      <DependentUpon>CustomRadioButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\CustomTextboxCentered.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,6 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dmgIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
