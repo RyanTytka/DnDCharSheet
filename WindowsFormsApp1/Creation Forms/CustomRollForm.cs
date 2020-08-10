@@ -45,6 +45,8 @@ namespace WindowsFormsApp1
         private void CustomRollForm_Load(object sender, EventArgs e)
         {
             dieNumBox.Value = intDieNum;
+
+            flatNumBox.Controls[0].TextChanged += flatNumBox_ValueChanged;
         }
 
 
