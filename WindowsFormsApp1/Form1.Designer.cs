@@ -92,7 +92,6 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.InventoryTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.AC = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -131,8 +130,6 @@
             this.saveButton = new CustomButtons.ButtonNoPadding();
             this.backgroundtextBox = new System.Windows.Forms.TextBox();
             this.AlignmenttextBox = new System.Windows.Forms.TextBox();
-            this.featsPanel = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.featShortRestButton = new CustomButtons.ButtonNoPadding();
             this.otherFeatButton = new CustomButtons.ButtonNoPadding();
@@ -366,6 +363,13 @@
             this.deathSaveResetButton = new CustomButtons.ButtonNoPadding();
             this.label2 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.featsPanel = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
@@ -373,7 +377,6 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.featsPanel.SuspendLayout();
             this.spellPanel.SuspendLayout();
             this.preparedHelppanel.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -406,11 +409,11 @@
             // outputTextBox
             // 
             this.outputTextBox.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTextBox.Location = new System.Drawing.Point(340, 533);
+            this.outputTextBox.Location = new System.Drawing.Point(217, 552);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
-            this.outputTextBox.Size = new System.Drawing.Size(518, 93);
+            this.outputTextBox.Size = new System.Drawing.Size(607, 93);
             this.outputTextBox.TabIndex = 0;
             // 
             // outputLabel
@@ -1009,7 +1012,6 @@
             // Weapon1
             // 
             this.Weapon1.Controls.Add(this.newWeaponButton);
-            this.Weapon1.Controls.Add(this.label46);
             this.Weapon1.Controls.Add(this.dmgPictureBox);
             this.Weapon1.Controls.Add(this.atkPictureBox);
             this.Weapon1.Controls.Add(this.weaponRadioButton8);
@@ -1027,15 +1029,17 @@
             this.Weapon1.Controls.Add(this.atkRoll1);
             this.Weapon1.Controls.Add(this.label44);
             this.Weapon1.Controls.Add(this.label45);
+            this.Weapon1.Controls.Add(this.label77);
+            this.Weapon1.Controls.Add(this.label46);
             this.Weapon1.Location = new System.Drawing.Point(414, 150);
             this.Weapon1.Name = "Weapon1";
-            this.Weapon1.Size = new System.Drawing.Size(188, 314);
+            this.Weapon1.Size = new System.Drawing.Size(173, 314);
             this.Weapon1.TabIndex = 71;
             // 
             // dmgPictureBox
             // 
             this.dmgPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.dmgIcon;
-            this.dmgPictureBox.Location = new System.Drawing.Point(167, 174);
+            this.dmgPictureBox.Location = new System.Drawing.Point(149, 174);
             this.dmgPictureBox.Name = "dmgPictureBox";
             this.dmgPictureBox.Size = new System.Drawing.Size(20, 20);
             this.dmgPictureBox.TabIndex = 317;
@@ -1044,7 +1048,7 @@
             // atkPictureBox
             // 
             this.atkPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.attackIcon;
-            this.atkPictureBox.Location = new System.Drawing.Point(167, 152);
+            this.atkPictureBox.Location = new System.Drawing.Point(149, 152);
             this.atkPictureBox.Name = "atkPictureBox";
             this.atkPictureBox.Size = new System.Drawing.Size(20, 20);
             this.atkPictureBox.TabIndex = 316;
@@ -1157,11 +1161,12 @@
             // 
             this.weaponPropTextBox.BackColor = System.Drawing.Color.LightGray;
             this.weaponPropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.weaponPropTextBox.Location = new System.Drawing.Point(4, 211);
+            this.weaponPropTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.weaponPropTextBox.Location = new System.Drawing.Point(4, 215);
             this.weaponPropTextBox.Multiline = true;
             this.weaponPropTextBox.Name = "weaponPropTextBox";
             this.weaponPropTextBox.ReadOnly = true;
-            this.weaponPropTextBox.Size = new System.Drawing.Size(79, 93);
+            this.weaponPropTextBox.Size = new System.Drawing.Size(68, 89);
             this.weaponPropTextBox.TabIndex = 95;
             this.weaponPropTextBox.Tag = "";
             this.weaponPropTextBox.Leave += new System.EventHandler(this.ClearText);
@@ -1184,9 +1189,9 @@
             this.dmgRoll2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dmgRoll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dmgRoll2.ForeColor = System.Drawing.Color.Black;
-            this.dmgRoll2.Location = new System.Drawing.Point(85, 174);
+            this.dmgRoll2.Location = new System.Drawing.Point(73, 174);
             this.dmgRoll2.Name = "dmgRoll2";
-            this.dmgRoll2.Size = new System.Drawing.Size(80, 20);
+            this.dmgRoll2.Size = new System.Drawing.Size(74, 20);
             this.dmgRoll2.TabIndex = 93;
             this.dmgRoll2.Text = "Damage Roll";
             this.dmgRoll2.UseVisualStyleBackColor = true;
@@ -1199,7 +1204,7 @@
             this.weapondDelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.weapondDelButton.Location = new System.Drawing.Point(3, 152);
             this.weapondDelButton.Name = "weapondDelButton";
-            this.weapondDelButton.Size = new System.Drawing.Size(80, 20);
+            this.weapondDelButton.Size = new System.Drawing.Size(68, 20);
             this.weapondDelButton.TabIndex = 92;
             this.weapondDelButton.Text = "Delete";
             this.weapondDelButton.UseVisualStyleBackColor = true;
@@ -1212,7 +1217,7 @@
             this.weaponEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.weaponEditButton.Location = new System.Drawing.Point(3, 174);
             this.weaponEditButton.Name = "weaponEditButton";
-            this.weaponEditButton.Size = new System.Drawing.Size(80, 20);
+            this.weaponEditButton.Size = new System.Drawing.Size(68, 20);
             this.weaponEditButton.TabIndex = 91;
             this.weaponEditButton.Text = "Edit";
             this.weaponEditButton.UseVisualStyleBackColor = true;
@@ -1224,9 +1229,9 @@
             this.atkRoll1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.atkRoll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atkRoll1.ForeColor = System.Drawing.Color.Black;
-            this.atkRoll1.Location = new System.Drawing.Point(85, 152);
+            this.atkRoll1.Location = new System.Drawing.Point(73, 152);
             this.atkRoll1.Name = "atkRoll1";
-            this.atkRoll1.Size = new System.Drawing.Size(80, 20);
+            this.atkRoll1.Size = new System.Drawing.Size(74, 20);
             this.atkRoll1.TabIndex = 90;
             this.atkRoll1.Text = "Attack Roll";
             this.atkRoll1.UseVisualStyleBackColor = true;
@@ -1236,6 +1241,7 @@
             // 
             this.label44.BackColor = System.Drawing.SystemColors.Control;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label44.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label44.Location = new System.Drawing.Point(-2, 130);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(202, 17);
@@ -1254,22 +1260,14 @@
             // 
             // InventoryTextBox
             // 
-            this.InventoryTextBox.Location = new System.Drawing.Point(646, 338);
+            this.InventoryTextBox.BackColor = System.Drawing.Color.LightGray;
+            this.InventoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InventoryTextBox.Location = new System.Drawing.Point(598, 402);
             this.InventoryTextBox.Multiline = true;
             this.InventoryTextBox.Name = "InventoryTextBox";
-            this.InventoryTextBox.Size = new System.Drawing.Size(221, 249);
+            this.InventoryTextBox.Size = new System.Drawing.Size(226, 138);
             this.InventoryTextBox.TabIndex = 72;
             this.InventoryTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(714, 316);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Inventory";
             // 
             // AC
             // 
@@ -1697,55 +1695,25 @@
             this.AlignmenttextBox.Text = "Click to Edit";
             this.AlignmenttextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
-            // featsPanel
-            // 
-            this.featsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.featsPanel.Controls.Add(this.label35);
-            this.featsPanel.Controls.Add(this.label34);
-            this.featsPanel.Controls.Add(this.featShortRestButton);
-            this.featsPanel.Controls.Add(this.otherFeatButton);
-            this.featsPanel.Controls.Add(this.featLongRestButton);
-            this.featsPanel.Controls.Add(this.featDescriptionTextbox);
-            this.featsPanel.Controls.Add(this.newFeatButton);
-            this.featsPanel.Controls.Add(this.featRollButton);
-            this.featsPanel.Controls.Add(this.featDeleteButton);
-            this.featsPanel.Controls.Add(this.featEditButton);
-            this.featsPanel.Controls.Add(this.label4);
-            this.featsPanel.Location = new System.Drawing.Point(646, 139);
-            this.featsPanel.Name = "featsPanel";
-            this.featsPanel.Size = new System.Drawing.Size(277, 218);
-            this.featsPanel.TabIndex = 96;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.SystemColors.Control;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label35.Location = new System.Drawing.Point(545, 308);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(96, 13);
-            this.label35.TabIndex = 231;
-            this.label35.Text = "Mystic Arcanum";
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.SystemColors.Control;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label34.Location = new System.Drawing.Point(2, 168);
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(780, 38);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(53, 40);
+            this.label34.Size = new System.Drawing.Size(43, 18);
             this.label34.TabIndex = 230;
-            this.label34.Text = "Refill\r\nUses:";
+            this.label34.Text = "Rest";
             // 
             // featShortRestButton
             // 
             this.featShortRestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.featShortRestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featShortRestButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featShortRestButton.Location = new System.Drawing.Point(56, 196);
+            this.featShortRestButton.Location = new System.Drawing.Point(782, 90);
             this.featShortRestButton.Name = "featShortRestButton";
-            this.featShortRestButton.Size = new System.Drawing.Size(73, 17);
+            this.featShortRestButton.Size = new System.Drawing.Size(40, 29);
             this.featShortRestButton.TabIndex = 166;
             this.featShortRestButton.Tag = "SHORT";
             this.featShortRestButton.Text = "Short Rest";
@@ -1757,12 +1725,12 @@
             this.otherFeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.otherFeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.otherFeatButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.otherFeatButton.Location = new System.Drawing.Point(56, 162);
+            this.otherFeatButton.Location = new System.Drawing.Point(599, 353);
             this.otherFeatButton.Name = "otherFeatButton";
-            this.otherFeatButton.Size = new System.Drawing.Size(73, 17);
+            this.otherFeatButton.Size = new System.Drawing.Size(113, 16);
             this.otherFeatButton.TabIndex = 168;
             this.otherFeatButton.Tag = "OTHER";
-            this.otherFeatButton.Text = "Other";
+            this.otherFeatButton.Text = "Refill Other Slots";
             this.otherFeatButton.UseVisualStyleBackColor = true;
             this.otherFeatButton.Click += new System.EventHandler(this.featRefillButton);
             // 
@@ -1771,9 +1739,9 @@
             this.featLongRestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.featLongRestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featLongRestButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featLongRestButton.Location = new System.Drawing.Point(56, 179);
+            this.featLongRestButton.Location = new System.Drawing.Point(782, 57);
             this.featLongRestButton.Name = "featLongRestButton";
-            this.featLongRestButton.Size = new System.Drawing.Size(73, 17);
+            this.featLongRestButton.Size = new System.Drawing.Size(40, 29);
             this.featLongRestButton.TabIndex = 167;
             this.featLongRestButton.Tag = "LONG";
             this.featLongRestButton.Text = "Long Rest";
@@ -1782,11 +1750,13 @@
             // 
             // featDescriptionTextbox
             // 
-            this.featDescriptionTextbox.Location = new System.Drawing.Point(3, 55);
+            this.featDescriptionTextbox.BackColor = System.Drawing.Color.LightGray;
+            this.featDescriptionTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.featDescriptionTextbox.Location = new System.Drawing.Point(598, 208);
             this.featDescriptionTextbox.Multiline = true;
             this.featDescriptionTextbox.Name = "featDescriptionTextbox";
             this.featDescriptionTextbox.ReadOnly = true;
-            this.featDescriptionTextbox.Size = new System.Drawing.Size(126, 105);
+            this.featDescriptionTextbox.Size = new System.Drawing.Size(114, 141);
             this.featDescriptionTextbox.TabIndex = 95;
             this.featDescriptionTextbox.Tag = "";
             // 
@@ -1794,9 +1764,9 @@
             // 
             this.newFeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newFeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newFeatButton.Location = new System.Drawing.Point(56, 3);
+            this.newFeatButton.Location = new System.Drawing.Point(655, 154);
             this.newFeatButton.Name = "newFeatButton";
-            this.newFeatButton.Size = new System.Drawing.Size(74, 18);
+            this.newFeatButton.Size = new System.Drawing.Size(57, 18);
             this.newFeatButton.TabIndex = 94;
             this.newFeatButton.Text = "New Feat";
             this.newFeatButton.UseVisualStyleBackColor = true;
@@ -1808,9 +1778,9 @@
             this.featRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.featRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featRollButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.featRollButton.Location = new System.Drawing.Point(3, 3);
+            this.featRollButton.Location = new System.Drawing.Point(598, 154);
             this.featRollButton.Name = "featRollButton";
-            this.featRollButton.Size = new System.Drawing.Size(53, 18);
+            this.featRollButton.Size = new System.Drawing.Size(55, 18);
             this.featRollButton.TabIndex = 93;
             this.featRollButton.Text = "Roll";
             this.featRollButton.UseVisualStyleBackColor = true;
@@ -1821,9 +1791,9 @@
             this.featDeleteButton.Enabled = false;
             this.featDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.featDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.featDeleteButton.Location = new System.Drawing.Point(56, 21);
+            this.featDeleteButton.Location = new System.Drawing.Point(655, 174);
             this.featDeleteButton.Name = "featDeleteButton";
-            this.featDeleteButton.Size = new System.Drawing.Size(74, 18);
+            this.featDeleteButton.Size = new System.Drawing.Size(57, 18);
             this.featDeleteButton.TabIndex = 92;
             this.featDeleteButton.Text = "Delete";
             this.featDeleteButton.UseVisualStyleBackColor = true;
@@ -1834,9 +1804,9 @@
             this.featEditButton.Enabled = false;
             this.featEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.featEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.featEditButton.Location = new System.Drawing.Point(3, 21);
+            this.featEditButton.Location = new System.Drawing.Point(598, 174);
             this.featEditButton.Name = "featEditButton";
-            this.featEditButton.Size = new System.Drawing.Size(53, 18);
+            this.featEditButton.Size = new System.Drawing.Size(55, 18);
             this.featEditButton.TabIndex = 91;
             this.featEditButton.Text = "Edit";
             this.featEditButton.UseVisualStyleBackColor = true;
@@ -1847,7 +1817,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 38);
+            this.label4.Location = new System.Drawing.Point(616, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 165;
@@ -1909,7 +1879,7 @@
             this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.nameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.nameLabel.Location = new System.Drawing.Point(707, 341);
+            this.nameLabel.Location = new System.Drawing.Point(5, 14);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(202, 22);
             this.nameLabel.TabIndex = 166;
@@ -1921,7 +1891,7 @@
             this.levelTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.levelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.levelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelTextBox.Location = new System.Drawing.Point(679, 361);
+            this.levelTextBox.Location = new System.Drawing.Point(229, 74);
             this.levelTextBox.Multiline = true;
             this.levelTextBox.Name = "levelTextBox";
             this.levelTextBox.Size = new System.Drawing.Size(202, 14);
@@ -3238,7 +3208,7 @@
             // miscRollAmountnumericUpDown
             // 
             this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(535, 512);
+            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(489, 499);
             this.miscRollAmountnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3264,7 +3234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(547, 491);
+            this.label6.Location = new System.Drawing.Point(461, 472);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 20);
             this.label6.TabIndex = 194;
@@ -3275,7 +3245,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(578, 513);
+            this.label10.Location = new System.Drawing.Point(532, 500);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 17);
             this.label10.TabIndex = 223;
@@ -3284,7 +3254,7 @@
             // miscRollNumnumericUpDown
             // 
             this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(596, 512);
+            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(550, 499);
             this.miscRollNumnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3311,7 +3281,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(569, 541);
+            this.label11.Location = new System.Drawing.Point(523, 528);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 15);
             this.label11.TabIndex = 225;
@@ -3320,7 +3290,7 @@
             // MiscRollflatnumericUpDown
             // 
             this.MiscRollflatnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(535, 538);
+            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(489, 525);
             this.MiscRollflatnumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -3346,7 +3316,7 @@
             "None",
             "Advantage",
             "Disadvantage"});
-            this.miscRollDropDown.Location = new System.Drawing.Point(574, 566);
+            this.miscRollDropDown.Location = new System.Drawing.Point(414, 526);
             this.miscRollDropDown.Name = "miscRollDropDown";
             this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
             this.miscRollDropDown.TabIndex = 193;
@@ -3360,7 +3330,9 @@
             this.panel11.Controls.Add(this.raceTextBox);
             this.panel11.Controls.Add(this.backgroundtextBox);
             this.panel11.Controls.Add(this.AlignmenttextBox);
-            this.panel11.Location = new System.Drawing.Point(702, 389);
+            this.panel11.Controls.Add(this.nameLabel);
+            this.panel11.Controls.Add(this.levelTextBox);
+            this.panel11.Location = new System.Drawing.Point(675, 439);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(140, 90);
             this.panel11.TabIndex = 156;
@@ -4232,7 +4204,7 @@
             this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(534, 565);
+            this.miscRollbutton.Location = new System.Drawing.Point(409, 497);
             this.miscRollbutton.Name = "miscRollbutton";
             this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
             this.miscRollbutton.TabIndex = 193;
@@ -4368,7 +4340,7 @@
             this.label66.AutoSize = true;
             this.label66.BackColor = System.Drawing.SystemColors.Control;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(643, 75);
+            this.label66.Location = new System.Drawing.Point(643, 74);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(97, 16);
             this.label66.TabIndex = 242;
@@ -4390,7 +4362,7 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label20.Location = new System.Drawing.Point(608, 106);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(182, 17);
+            this.label20.Size = new System.Drawing.Size(174, 17);
             this.label20.TabIndex = 297;
             this.label20.Text = "__________________";
             // 
@@ -4589,7 +4561,7 @@
             // deathSaveRollButton
             // 
             this.deathSaveRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deathSaveRollButton.Location = new System.Drawing.Point(716, 91);
+            this.deathSaveRollButton.Location = new System.Drawing.Point(716, 90);
             this.deathSaveRollButton.Name = "deathSaveRollButton";
             this.deathSaveRollButton.Size = new System.Drawing.Size(58, 14);
             this.deathSaveRollButton.TabIndex = 170;
@@ -4600,7 +4572,7 @@
             // deathSaveResetButton
             // 
             this.deathSaveResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deathSaveResetButton.Location = new System.Drawing.Point(716, 107);
+            this.deathSaveResetButton.Location = new System.Drawing.Point(716, 106);
             this.deathSaveResetButton.Name = "deathSaveResetButton";
             this.deathSaveResetButton.Size = new System.Drawing.Size(58, 14);
             this.deathSaveResetButton.TabIndex = 314;
@@ -4615,7 +4587,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(414, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 20);
+            this.label2.Size = new System.Drawing.Size(174, 20);
             this.label2.TabIndex = 315;
             this.label2.Text = "Weapons";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4625,11 +4597,83 @@
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.SystemColors.Control;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label46.Location = new System.Drawing.Point(7, 194);
+            this.label46.Location = new System.Drawing.Point(2, 198);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(73, 15);
             this.label46.TabIndex = 242;
             this.label46.Text = "Properties";
+            // 
+            // label71
+            // 
+            this.label71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label71.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label71.Location = new System.Drawing.Point(596, 128);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(228, 20);
+            this.label71.TabIndex = 316;
+            this.label71.Text = "Feats";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // featsPanel
+            // 
+            this.featsPanel.Location = new System.Drawing.Point(715, 153);
+            this.featsPanel.Name = "featsPanel";
+            this.featsPanel.Size = new System.Drawing.Size(108, 216);
+            this.featsPanel.TabIndex = 317;
+            // 
+            // label35
+            // 
+            this.label35.BackColor = System.Drawing.SystemColors.Control;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label35.Location = new System.Drawing.Point(595, 357);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(238, 17);
+            this.label35.TabIndex = 319;
+            this.label35.Text = "___________________________";
+            // 
+            // label75
+            // 
+            this.label75.BackColor = System.Drawing.SystemColors.Control;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label75.Location = new System.Drawing.Point(764, 106);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(71, 17);
+            this.label75.TabIndex = 320;
+            this.label75.Text = "______";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(597, 377);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 20);
+            this.label1.TabIndex = 321;
+            this.label1.Text = "Inventory";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label76
+            // 
+            this.label76.BackColor = System.Drawing.SystemColors.Control;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label76.Location = new System.Drawing.Point(596, 528);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(238, 17);
+            this.label76.TabIndex = 322;
+            this.label76.Text = "___________________________";
+            // 
+            // label77
+            // 
+            this.label77.BackColor = System.Drawing.SystemColors.Control;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label77.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label77.Location = new System.Drawing.Point(-34, 182);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(215, 17);
+            this.label77.TabIndex = 284;
+            this.label77.Text = "_______________________";
             // 
             // Form1
             // 
@@ -4637,12 +4681,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.featsPanel);
+            this.Controls.Add(this.label71);
+            this.Controls.Add(this.featDescriptionTextbox);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.featShortRestButton);
+            this.Controls.Add(this.otherFeatButton);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.featLongRestButton);
             this.Controls.Add(this.deathSaveResetButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.deathSaveRollButton);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.newFeatButton);
             this.Controls.Add(this.DeathFail2);
+            this.Controls.Add(this.featRollButton);
             this.Controls.Add(this.DeathFail3);
+            this.Controls.Add(this.featDeleteButton);
+            this.Controls.Add(this.featEditButton);
             this.Controls.Add(this.DeathFail1);
             this.Controls.Add(this.DeathPass3);
             this.Controls.Add(this.DeathPass2);
@@ -4694,11 +4751,7 @@
             this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.spelllabel);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.levelTextBox);
-            this.Controls.Add(this.featsPanel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.InventoryTextBox);
             this.Controls.Add(this.Weapon1);
             this.Controls.Add(this.profPanel);
@@ -4716,6 +4769,9 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.label70);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label75);
+            this.Controls.Add(this.label76);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -4734,8 +4790,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.featsPanel.ResumeLayout(false);
-            this.featsPanel.PerformLayout();
             this.spellPanel.ResumeLayout(false);
             this.spellPanel.PerformLayout();
             this.preparedHelppanel.ResumeLayout(false);
@@ -4824,7 +4878,6 @@
         private CustomButtons.ButtonNoPadding newWeaponButton;
         private System.Windows.Forms.TextBox weaponPropTextBox;
         private System.Windows.Forms.TextBox InventoryTextBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AC;
         private System.Windows.Forms.Panel panel2;
         private CustomButtons.ButtonNoPadding HitDiceUseButton;
@@ -4836,7 +4889,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox backgroundtextBox;
         private System.Windows.Forms.TextBox AlignmenttextBox;
-        private System.Windows.Forms.Panel featsPanel;
         private System.Windows.Forms.TextBox featDescriptionTextbox;
         private CustomButtons.ButtonNoPadding newFeatButton;
         private CustomButtons.ButtonNoPadding featRollButton;
@@ -4976,7 +5028,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label MaxHitDiceDisplayLabel;
         private System.Windows.Forms.Label currentHitDiceDisplayLabel;
@@ -5117,6 +5168,13 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Panel featsPanel;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
     }
 }
 

@@ -1236,8 +1236,9 @@ namespace WindowsFormsApp1
         {
             feats.Add(f);
             //add radioButton
-            RadioButton newButton = new RadioButton();
+            CustomControls.CustomRadioButton newButton = new CustomControls.CustomRadioButton();
             newButton.Width = 350;
+            newButton.Height = 18;
             if (f.LimitedUse)
             {
                 newButton.Text = "(" + f.UsesLeft + "/" + f.NumUses + ") " + f.Name;
@@ -1246,10 +1247,10 @@ namespace WindowsFormsApp1
             {
                 newButton.Text = f.Name;
             }
-            newButton.Location = new Point(132, -20 + feats.Count * 20);
+            newButton.Location = new Point(0, -20 + feats.Count * 20);
             newButton.BringToFront();
             newButton.CheckedChanged += new EventHandler(SelectFeat);
-            newButton.Font = new Font("Arial", 9.25f, FontStyle.Regular);
+            newButton.Font = new Font("Arial", 8.25f, FontStyle.Regular);
             newButton.Tag = feats.Count - 1;
             featsPanel.Controls.Add(newButton);
             featButtons.Add(newButton);
@@ -1273,7 +1274,7 @@ namespace WindowsFormsApp1
         {
             //find selected feat
             int i = 0, index = 0;
-            foreach (RadioButton b in featButtons)
+            foreach (CustomControls.CustomRadioButton b in featButtons)
             {
                 if (b.Checked)
                     index = i;
@@ -1290,7 +1291,7 @@ namespace WindowsFormsApp1
             featButtons.RemoveAt(index);
             //reset tags
             i = 0;
-            foreach (RadioButton b in featButtons)
+            foreach (CustomControls.CustomRadioButton b in featButtons)
             {
                 b.Tag = i;
                 i++;
@@ -1318,10 +1319,10 @@ namespace WindowsFormsApp1
         //set description when selecting a new feat to display
         private void SelectFeat(object sender, EventArgs e)
         {
-            Feat feat = feats[int.Parse(((RadioButton)sender).Tag.ToString())];
+            Feat feat = feats[int.Parse(((CustomControls.CustomRadioButton)sender).Tag.ToString())];
 
             //change description text box to checked box
-            if (((RadioButton)sender).Checked)
+            if (((CustomControls.CustomRadioButton)sender).Checked)
                 featDescriptionTextbox.Text = feat.Abilities;
             //check to enable/disable roll button
             if (feat.UseRoll)
@@ -1366,7 +1367,7 @@ namespace WindowsFormsApp1
         {
             //find selected feat
             int index = 0;
-            foreach (RadioButton button in featButtons)
+            foreach (CustomControls.CustomRadioButton button in featButtons)
             {
                 if (button.Checked)
                 {
