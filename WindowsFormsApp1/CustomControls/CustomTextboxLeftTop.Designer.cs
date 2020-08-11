@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.CustomControls
 {
-    partial class CustomTextboxLeftTop
+    partial class CustomTextboxLeft
     {
         /// <summary> 
         /// Required designer variable.

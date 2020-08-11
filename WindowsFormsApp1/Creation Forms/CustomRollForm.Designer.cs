@@ -86,7 +86,7 @@
             this.dieNumBox.Name = "dieNumBox";
             this.dieNumBox.Size = new System.Drawing.Size(46, 23);
             this.dieNumBox.TabIndex = 13;
-            this.dieNumBox.Value = 0;
+            this.dieNumBox.Value = 1;
             // 
             // dieAmountBox
             // 
@@ -95,7 +95,7 @@
             this.dieAmountBox.Name = "dieAmountBox";
             this.dieAmountBox.Size = new System.Drawing.Size(46, 23);
             this.dieAmountBox.TabIndex = 12;
-            this.dieAmountBox.Value = 0;
+            this.dieAmountBox.Value = 1;
             // 
             // saveButton
             // 
@@ -137,7 +137,7 @@
             this.Controls.Add(this.totalRollLabel);
             this.Controls.Add(this.dLabel);
             this.Controls.Add(this.flatLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomRollForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Custom Roll";

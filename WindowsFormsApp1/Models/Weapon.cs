@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     {
         //fields
         string name;
-        string[] properties;
+        string properties;
         List<Roll> bonusRolls;
         bool finesse, profiient;
         Roll damageRoll;
@@ -40,21 +40,12 @@ namespace WindowsFormsApp1
         {
             get
             {
-                string s = "";
-                foreach (string s2 in properties)
-                {
-                    s += s2 + Environment.NewLine;
-                }
-                return s;
+                return properties;
             }
-        }
-        public string[] PropertiesArray
-        {
-            get { return properties; }
         }
 
         
-        public Weapon(string nm, List<Roll> bonus, string[] prop, bool fin, bool prof, Roll damage)
+        public Weapon(string nm, List<Roll> bonus, string prop, bool fin, bool prof, Roll damage)
         {
             bonusRolls = new List<Roll>();
 

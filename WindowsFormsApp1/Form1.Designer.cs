@@ -1169,7 +1169,6 @@
             this.weaponPropTextBox.Size = new System.Drawing.Size(68, 89);
             this.weaponPropTextBox.TabIndex = 95;
             this.weaponPropTextBox.Tag = "";
-            this.weaponPropTextBox.Leave += new System.EventHandler(this.ClearText);
             // 
             // newWeaponButton
             // 

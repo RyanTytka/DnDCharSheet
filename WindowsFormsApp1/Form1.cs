@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-//using System.Windows.Controls;
 using System.Windows.Forms.Integration;
 
 
@@ -1608,12 +1607,7 @@ namespace WindowsFormsApp1
                     output.Write(w.Name);              //weapon name
                     output.Write(w.Finesse);           //finesse
                     output.Write(w.Proficient);        //proficient
-                    //properties
-                    output.Write(w.PropertiesArray.Length);     //how many times to loop
-                    foreach (string s in w.PropertiesArray)
-                    {
-                        output.Write(s);
-                    }
+                    output.Write(w.Properties);     //properties
                     //damage roll
                     foreach (int i in w.Damage.DieNum)
                     {
@@ -1831,13 +1825,7 @@ namespace WindowsFormsApp1
                     string name = reader.ReadString();          //read name
                     bool finesse = reader.ReadBoolean();        //finesse
                     bool prof = reader.ReadBoolean();           //proficient
-                    //properties
-                    int numOfProps = reader.ReadInt32();
-                    string[] properties = new string[numOfProps];
-                    for (int i = 0; i < numOfProps; i++)
-                    {
-                        properties[i] = reader.ReadString();
-                    }
+                    string properties = reader.ReadString();    //props
                     //damage
                     List<int> damageDieNums = new List<int>();
                     List<int> damageDieAmounts = new List<int>();

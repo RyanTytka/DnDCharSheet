@@ -8,18 +8,19 @@ using System.Windows.Media;
 
 namespace WindowsFormsApp1.CustomControls
 {
-    public class CustomTextBoxLeft : System.Windows.Forms.UserControl
+    public class CustomTextBoxLeftTop : System.Windows.Forms.UserControl
     {
         private ElementHost elementHost = new ElementHost();
         private TextBox textBox = new TextBox();
-        public CustomTextBoxLeft()
+        public CustomTextBoxLeftTop()
         {
             textBox.FontSize = 14;
             textBox.Background = new SolidColorBrush(Colors.LightGray);
             textBox.BorderThickness = new Thickness(0);
             textBox.SelectionBrush = new SolidColorBrush(Colors.Gray);
             textBox.SelectionOpacity = 0.5;
-            textBox.VerticalContentAlignment = VerticalAlignment.Center;
+            textBox.VerticalAlignment = VerticalAlignment.Top;
+            textBox.TextWrapping = TextWrapping.Wrap;
             elementHost.Dock = System.Windows.Forms.DockStyle.Fill;
             elementHost.Name = "elementHost";
             elementHost.Child = textBox;

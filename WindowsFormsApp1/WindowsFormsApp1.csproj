@@ -83,6 +83,12 @@
     <Compile Include="CustomControls\CustomTextboxCentered.Designer.cs">
       <DependentUpon>CustomTextboxCentered.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomTextboxLeftTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomTextboxLeftTop.Designer.cs">
+      <DependentUpon>CustomTextboxLeftTop.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\CustomTextboxLeft.cs">
       <SubType>UserControl</SubType>
     </Compile>

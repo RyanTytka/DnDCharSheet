@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +17,9 @@ namespace WindowsFormsApp1
         List<Roll> bonusRolls;
         List<Button> rollButtons;
         List<Label> rollLabels;
+        System.Windows.Controls.TextBox propBox;
+        System.Windows.Controls.TextBox rollBox;
+        System.Windows.Controls.TextBox nameBox;
 
         Weapon selectedWeapon;
         int index;
@@ -35,12 +39,12 @@ namespace WindowsFormsApp1
         {
             if (selectedWeapon == null)
             {
-                ((Form1)Owner).AddWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
+                ((Form1)Owner).AddWeapon(new Weapon(nameBox.Text, bonusRolls, propBox.Text,
                     finessCheckBox.Checked, profCheckBox.Checked, damageRoll));
             }
             else
             {
-                ((Form1)Owner).SetWeapon(new Weapon(nameTextBox.Text, bonusRolls, propertiesTextBox.Lines,
+                ((Form1)Owner).SetWeapon(new Weapon(nameBox.Text, bonusRolls, propBox.Text,
                     finessCheckBox.Checked, profCheckBox.Checked, damageRoll), index);
             }
             this.Close();
@@ -76,7 +80,6 @@ namespace WindowsFormsApp1
             newButton.Font = new Font("Arial", 5.25f, FontStyle.Regular);
             newButton.Tag = "" + rollButtons.Count;
             newButton.Text = "x";
-            rollNameTextBox.ForeColor = Color.DimGray;
             newButton.Click += new EventHandler(XButtonClick);
             if (_type != -1)
             {
@@ -87,10 +90,11 @@ namespace WindowsFormsApp1
             else
             {
                 //creating weapon
-                bonusRolls.Add(new Roll(nums, dice, flat, type, rollNameTextBox.Text, rollOptionalCheckBox.Checked));
-                newBox.Text = rollNameTextBox.Text;
+                bonusRolls.Add(new Roll(nums, dice, flat, type, rollBox.Text, rollOptionalCheckBox.Checked));
+                newBox.Text = rollBox.Text;
             }
-            rollNameTextBox.Text = "roll name";
+            rollBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+            rollBox.Text = "roll name";
             this.Controls.Add(newBox);
             this.Controls.Add(newButton);
             rollButtons.Add(newButton);
@@ -102,43 +106,50 @@ namespace WindowsFormsApp1
 
         private void WeaponCreation_Load(object sender, EventArgs e)
         {
+            nameBox = (nameControl.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            propBox = (props.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            rollBox = (rollNameTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            rollBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+            rollBox.Text = "roll name";
+
             bothRadioButton.Checked = true;
             if(selectedWeapon != null)
             {
                 //enter in weapon stats to controls
-                nameTextBox.Text = selectedWeapon.Name;
-                propertiesTextBox.Text = selectedWeapon.Properties;
+                nameBox.Text = selectedWeapon.Name;
+                propBox.Text = selectedWeapon.Properties;
                 profCheckBox.Checked = selectedWeapon.Proficient;
                 finessCheckBox.Checked = selectedWeapon.Finesse;
                 damageRoll = selectedWeapon.Damage;
                 damageRollDisplay.Text = damageRoll.ToString();
                 saveButton.Text = "Save Weapon";
-                foreach(Roll r in selectedWeapon.BonusRolls)
+                titleLabel.Text = "Edit Weapon";
+                foreach (Roll r in selectedWeapon.BonusRolls)
                 {
                     AddBonusRolls(r.DieNum, r.DieAmount, r.Flat, r.Name, r.Type, r.Optional);
                 }
             }
             else
             {
-                this.ActiveControl = nameTextBox;
+                this.ActiveControl = nameControl;
             }
         }
 
         //clear text of roll name
         private void rollNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (rollNameTextBox.Text == "roll name")
+            if (rollBox.Text == "roll name")
             {
-                rollNameTextBox.Text = "";
-                rollNameTextBox.ForeColor = DefaultForeColor;
+                rollBox.Text = "";
+                rollBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0));
             }
         }
         private void rollNameTextBox_Leave(object sender, EventArgs e)
         {
-            if (rollNameTextBox.Text == "")
+            if (rollBox.Text == "")
             {
-                rollNameTextBox.ForeColor = Color.DimGray;
-                rollNameTextBox.Text = "roll name";
+                rollBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105,105,105));
+                rollBox.Text = "roll name";
             }
         }
 
