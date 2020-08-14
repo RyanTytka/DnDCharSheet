@@ -28,34 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProftextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.personalitytextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.idealstextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.bondstextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.flawstextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.alliestextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.backstorytextBox = new System.Windows.Forms.TextBox();
             this.portrait = new System.Windows.Forms.PictureBox();
             this.setPicButton = new CustomButtons.ButtonNoPadding();
-            this.misctextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.prof = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.personalityTraits = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.ideals = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.bonds = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.flaws = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.backstory = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.allies = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.notes = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
             ((System.ComponentModel.ISupportInitialize)(this.portrait)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ProftextBox
-            // 
-            this.ProftextBox.Location = new System.Drawing.Point(12, 234);
-            this.ProftextBox.Multiline = true;
-            this.ProftextBox.Name = "ProftextBox";
-            this.ProftextBox.Size = new System.Drawing.Size(184, 131);
-            this.ProftextBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -77,14 +69,6 @@
             this.label3.Text = "Personality Traits";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // personalitytextBox
-            // 
-            this.personalitytextBox.Location = new System.Drawing.Point(209, 22);
-            this.personalitytextBox.Multiline = true;
-            this.personalitytextBox.Name = "personalitytextBox";
-            this.personalitytextBox.Size = new System.Drawing.Size(184, 109);
-            this.personalitytextBox.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,14 +78,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Ideals";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // idealstextBox
-            // 
-            this.idealstextBox.Location = new System.Drawing.Point(209, 151);
-            this.idealstextBox.Multiline = true;
-            this.idealstextBox.Name = "idealstextBox";
-            this.idealstextBox.Size = new System.Drawing.Size(184, 58);
-            this.idealstextBox.TabIndex = 5;
             // 
             // label5
             // 
@@ -113,14 +89,6 @@
             this.label5.Text = "Bonds";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bondstextBox
-            // 
-            this.bondstextBox.Location = new System.Drawing.Point(209, 229);
-            this.bondstextBox.Multiline = true;
-            this.bondstextBox.Name = "bondstextBox";
-            this.bondstextBox.Size = new System.Drawing.Size(184, 58);
-            this.bondstextBox.TabIndex = 7;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,14 +98,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Flaws";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flawstextBox
-            // 
-            this.flawstextBox.Location = new System.Drawing.Point(209, 307);
-            this.flawstextBox.Multiline = true;
-            this.flawstextBox.Name = "flawstextBox";
-            this.flawstextBox.Size = new System.Drawing.Size(184, 58);
-            this.flawstextBox.TabIndex = 9;
             // 
             // label8
             // 
@@ -149,14 +109,6 @@
             this.label8.Text = "Allies / Organizations";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // alliestextBox
-            // 
-            this.alliestextBox.Location = new System.Drawing.Point(399, 229);
-            this.alliestextBox.Multiline = true;
-            this.alliestextBox.Name = "alliestextBox";
-            this.alliestextBox.Size = new System.Drawing.Size(184, 136);
-            this.alliestextBox.TabIndex = 15;
-            // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,14 +118,6 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Backstory";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // backstorytextBox
-            // 
-            this.backstorytextBox.Location = new System.Drawing.Point(399, 22);
-            this.backstorytextBox.Multiline = true;
-            this.backstorytextBox.Name = "backstorytextBox";
-            this.backstorytextBox.Size = new System.Drawing.Size(184, 187);
-            this.backstorytextBox.TabIndex = 11;
             // 
             // portrait
             // 
@@ -185,6 +129,7 @@
             // 
             // setPicButton
             // 
+            this.setPicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.setPicButton.Location = new System.Drawing.Point(69, 191);
             this.setPicButton.Name = "setPicButton";
             this.setPicButton.Size = new System.Drawing.Size(75, 18);
@@ -192,14 +137,6 @@
             this.setPicButton.Text = "Set Picture";
             this.setPicButton.UseVisualStyleBackColor = true;
             this.setPicButton.Click += new System.EventHandler(this.setPicButton_Click);
-            // 
-            // misctextBox
-            // 
-            this.misctextBox.Location = new System.Drawing.Point(596, 22);
-            this.misctextBox.Multiline = true;
-            this.misctextBox.Name = "misctextBox";
-            this.misctextBox.Size = new System.Drawing.Size(184, 343);
-            this.misctextBox.TabIndex = 19;
             // 
             // label2
             // 
@@ -211,58 +148,113 @@
             this.label2.Text = "Notes / Misc.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // prof
+            // 
+            this.prof.Location = new System.Drawing.Point(17, 236);
+            this.prof.Name = "prof";
+            this.prof.Size = new System.Drawing.Size(179, 129);
+            this.prof.TabIndex = 21;
+            // 
+            // personalityTraits
+            // 
+            this.personalityTraits.Location = new System.Drawing.Point(214, 24);
+            this.personalityTraits.Name = "personalityTraits";
+            this.personalityTraits.Size = new System.Drawing.Size(179, 109);
+            this.personalityTraits.TabIndex = 22;
+            // 
+            // ideals
+            // 
+            this.ideals.Location = new System.Drawing.Point(214, 153);
+            this.ideals.Name = "ideals";
+            this.ideals.Size = new System.Drawing.Size(179, 57);
+            this.ideals.TabIndex = 23;
+            // 
+            // bonds
+            // 
+            this.bonds.Location = new System.Drawing.Point(214, 231);
+            this.bonds.Name = "bonds";
+            this.bonds.Size = new System.Drawing.Size(179, 57);
+            this.bonds.TabIndex = 24;
+            // 
+            // flaws
+            // 
+            this.flaws.Location = new System.Drawing.Point(214, 308);
+            this.flaws.Name = "flaws";
+            this.flaws.Size = new System.Drawing.Size(179, 57);
+            this.flaws.TabIndex = 25;
+            // 
+            // backstory
+            // 
+            this.backstory.Location = new System.Drawing.Point(404, 24);
+            this.backstory.Name = "backstory";
+            this.backstory.Size = new System.Drawing.Size(179, 186);
+            this.backstory.TabIndex = 26;
+            // 
+            // allies
+            // 
+            this.allies.Location = new System.Drawing.Point(404, 231);
+            this.allies.Name = "allies";
+            this.allies.Size = new System.Drawing.Size(179, 134);
+            this.allies.TabIndex = 27;
+            // 
+            // notes
+            // 
+            this.notes.Location = new System.Drawing.Point(601, 24);
+            this.notes.Name = "notes";
+            this.notes.Size = new System.Drawing.Size(179, 341);
+            this.notes.TabIndex = 28;
+            // 
             // CharacterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 377);
+            this.Controls.Add(this.notes);
+            this.Controls.Add(this.allies);
+            this.Controls.Add(this.backstory);
+            this.Controls.Add(this.flaws);
+            this.Controls.Add(this.bonds);
+            this.Controls.Add(this.ideals);
+            this.Controls.Add(this.personalityTraits);
+            this.Controls.Add(this.prof);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.misctextBox);
             this.Controls.Add(this.setPicButton);
             this.Controls.Add(this.portrait);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.alliestextBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.backstorytextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.flawstextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bondstextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.idealstextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.personalitytextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ProftextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CharacterInfo";
             this.Text = "Character Info";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CharacterInfo_FormClosed);
             this.Load += new System.EventHandler(this.CharacterInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.portrait)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox ProftextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox personalitytextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox idealstextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox bondstextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox flawstextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox alliestextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox backstorytextBox;
         private System.Windows.Forms.PictureBox portrait;
         private CustomButtons.ButtonNoPadding setPicButton;
-        private System.Windows.Forms.TextBox misctextBox;
         private System.Windows.Forms.Label label2;
+        private CustomControls.CustomTextBoxLeftTop prof;
+        private CustomControls.CustomTextBoxLeftTop personalityTraits;
+        private CustomControls.CustomTextBoxLeftTop ideals;
+        private CustomControls.CustomTextBoxLeftTop bonds;
+        private CustomControls.CustomTextBoxLeftTop flaws;
+        private CustomControls.CustomTextBoxLeftTop backstory;
+        private CustomControls.CustomTextBoxLeftTop allies;
+        private CustomControls.CustomTextBoxLeftTop notes;
     }
 }

@@ -2302,7 +2302,7 @@ namespace WindowsFormsApp1
 
         private System.Windows.Controls.TextBox getBox(Control c)
         {
-            return (c.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            return (c.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;  
         }
 
 

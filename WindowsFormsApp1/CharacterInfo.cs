@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1
 {
     public partial class CharacterInfo : Form
     {
         byte[] portraitBytes = null;
+
+        System.Windows.Controls.TextBox profBox, personalityTraitsBox, idealsBox, bondsBox, flawsBox, backstoryBox, alliesBox, notesBox;
+
         public CharacterInfo()
         {
             InitializeComponent();
@@ -68,18 +72,28 @@ namespace WindowsFormsApp1
         {
             Form1 form1 = this.Owner as Form1;
             form1.portrait = portraitBytes;
-            form1.charInfo[0] = ProftextBox.Text;
-            form1.charInfo[1] = personalitytextBox.Text;
-            form1.charInfo[2] = idealstextBox.Text;
-            form1.charInfo[3] = bondstextBox.Text;
-            form1.charInfo[4] = flawstextBox.Text;
-            form1.charInfo[5] = backstorytextBox.Text;
-            form1.charInfo[6] = alliestextBox.Text;
-            form1.charInfo[7] = misctextBox.Text;
+            form1.charInfo[0] = profBox.Text;
+            form1.charInfo[1] = personalityTraitsBox.Text;
+            form1.charInfo[2] = idealsBox.Text;
+            form1.charInfo[3] = bondsBox.Text;
+            form1.charInfo[4] = flawsBox.Text;
+            form1.charInfo[5] = backstoryBox.Text;
+            form1.charInfo[6] = alliesBox.Text;
+            form1.charInfo[7] = notesBox.Text;
         }
 
         private void CharacterInfo_Load(object sender, EventArgs e)
         {
+            profBox = (prof.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            personalityTraitsBox = (personalityTraits.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            idealsBox = (ideals.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            bondsBox = (bonds.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            flawsBox = (flaws.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            backstoryBox = (backstory.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            alliesBox = (allies.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            notesBox = (notes.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+
+
             Form1 form1 = this.Owner as Form1;
             if (form1.portrait != null)
             {
@@ -87,15 +101,15 @@ namespace WindowsFormsApp1
                 portrait.Image = (Bitmap)((new ImageConverter()).ConvertFrom(portraitBytes));
                 portrait.SizeMode = PictureBoxSizeMode.StretchImage; 
             }
-            ProftextBox.Text = form1.charInfo[0];
-            personalitytextBox.Text = form1.charInfo[1];
-            idealstextBox.Text = form1.charInfo[2];
-            bondstextBox.Text = form1.charInfo[3];
-            flawstextBox.Text = form1.charInfo[4];
-            backstorytextBox.Text = form1.charInfo[5];
-            alliestextBox.Text = form1.charInfo[6];
-            misctextBox.Text = form1.charInfo[7];
-            ProftextBox.Select(ProftextBox.Text.Length, 0);
+            profBox.Text = form1.charInfo[0];
+            personalityTraitsBox.Text = form1.charInfo[1];
+            idealsBox.Text = form1.charInfo[2];
+            bondsBox.Text = form1.charInfo[3];
+            flawsBox.Text = form1.charInfo[4];
+            backstoryBox.Text = form1.charInfo[5];
+            alliesBox.Text = form1.charInfo[6];
+            notesBox.Text = form1.charInfo[7];
+            profBox.Select(prof.Text.Length, 0);
         }
     }
 }
