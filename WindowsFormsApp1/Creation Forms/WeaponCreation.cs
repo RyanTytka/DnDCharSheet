@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
             //add bonus roll textbox
             Button newButton = new Button();
             Label newBox = new Label();
+            newBox.ForeColor = Color.Maroon;
             newBox.Location = new Point(bonusRollsLabel.Location.X + 8, bonusRollsLabel.Location.Y - 4);
             newButton.Location = new Point(bonusRollsLabel.Location.X - 8, bonusRollsLabel.Location.Y - 4);
             newButton.Size = new Size(16,16);

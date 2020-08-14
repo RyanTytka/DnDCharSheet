@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +17,13 @@ namespace WindowsFormsApp1
         Spell selectedSpell;
         int index;
         List<Control> rollButtons, rollLabels;
+        System.Windows.Controls.TextBox spellNameBox;
+        System.Windows.Controls.TextBox rangeBox;
+        System.Windows.Controls.TextBox castTimeBox;
+        System.Windows.Controls.TextBox durationBox;
+        System.Windows.Controls.TextBox componentsBox;
+        System.Windows.Controls.TextBox rollNameBox;
+        System.Windows.Controls.TextBox descriptionBox;
 
         public SpellCreationForm(Spell s = null, int index = 0)
         {
@@ -34,15 +42,15 @@ namespace WindowsFormsApp1
             if (selectedSpell == null)
             {
                 Form1.nextSpellId++;
-                ((Form1)Owner.Owner).AddSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text, 
-                    DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value, 
-                    descriptionTextBox.Text, AttackRollcheckBox.Checked, Form1.nextSpellId));
+                ((Form1)Owner.Owner).AddSpell(new Spell(spellNameBox.Text, castTimeBox.Text, rangeBox.Text, 
+                    durationBox.Text, componentsBox.Text, rolls, (int)LevelnumericUpDown.Value, 
+                    descriptionBox.Text, AttackRollcheckBox.Checked, Form1.nextSpellId));
             }
             else
             {
-                ((Form1)Owner.Owner).SetSpell(new Spell(nameTextBox.Text, CastTimetextBox.Text, RangetextBox.Text,
-                    DurationtextBox.Text, ComponentsTextBox.Text, rolls, (int)LevelnumericUpDown.Value,
-                    descriptionTextBox.Text, AttackRollcheckBox.Checked, selectedSpell.ID), index);
+                ((Form1)Owner.Owner).SetSpell(new Spell(spellNameBox.Text, castTimeBox.Text, rangeBox.Text,
+                    durationBox.Text, componentsBox.Text, rolls, (int)LevelnumericUpDown.Value,
+                    descriptionBox.Text, AttackRollcheckBox.Checked, selectedSpell.ID), index);
             }
             ((SpellMenu)Owner).RefreshSpells("null");
             this.Close();
@@ -59,7 +67,7 @@ namespace WindowsFormsApp1
         //add the roll to the lists
         public void AddRoll(List<int> nums, List<int> dice, int flat)
         {
-            Roll r = new Roll(nums, dice, flat, rollNameTextBox.Text, (int)DieAmountnumericUpDown.Value, 
+            Roll r = new Roll(nums, dice, flat, rollNameBox.Text, (int)DieAmountnumericUpDown.Value, 
                 (int)DieNumnumericUpDown.Value, multipliercheckBox.Checked);
             rolls.Add(r);
             //add bonus roll textbox
@@ -71,31 +79,41 @@ namespace WindowsFormsApp1
             newButton.Font = new Font("Arial", 5.25f, FontStyle.Regular);
             newButton.Text = "x";
             newButton.Click += new EventHandler(XButtonClick);
-            newLabel.Text = rollNameTextBox.Text;
+            newLabel.Text = rollNameBox.Text;
             newLabel.BringToFront();
             newButton.Tag = "" + rollButtons.Count;
             rollButtons.Add(newButton);
             rollLabels.Add(newLabel);
-            rollNameTextBox.ForeColor = Color.DimGray;
-            rollNameTextBox.Text = "roll name";
+            rollNameBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+            rollNameBox.Text = "roll name";
             this.Controls.Add(newLabel);
             this.Controls.Add(newButton);
         }
 
         private void SpellCreation_Load(object sender, EventArgs e)
         {
-           
-            if(selectedSpell != null)
+            spellNameBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            rangeBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            castTimeBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            durationBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            rollNameBox = (rollNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            componentsBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            descriptionBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+
+            rollNameBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+            rollNameBox.Text = "roll name";
+
+            if (selectedSpell != null)
             {
                 //enter in spell stats to controls
-                nameTextBox.Text = selectedSpell.Name;
-                saveButton.Text = "Save Spell";
+                spellNameBox.Text = selectedSpell.Name;
+                SaveButton.Text = "Save Spell";
                 headerLabel.Text = "Edit Spell";
-                CastTimetextBox.Text = selectedSpell.CastTime;
-                RangetextBox.Text = selectedSpell.Range;
-                DurationtextBox.Text = selectedSpell.Duration;
-                ComponentsTextBox.Text = selectedSpell.Components;
-                descriptionTextBox.Text = selectedSpell.Description;
+                castTimeBox.Text = selectedSpell.CastTime;
+                rangeBox.Text = selectedSpell.Range;
+                durationBox.Text = selectedSpell.Duration;
+                componentsBox.Text = selectedSpell.Components;
+                descriptionBox.Text = selectedSpell.Description;
                 LevelnumericUpDown.Value = selectedSpell.Level;
                 AttackRollcheckBox.Checked = selectedSpell.UsesAttack;
                 foreach(Roll r in selectedSpell.Rolls)
@@ -105,7 +123,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                this.ActiveControl = nameTextBox;
+                this.ActiveControl = spellNameTextbox;
             }
             
         }
@@ -113,18 +131,18 @@ namespace WindowsFormsApp1
         //clear text of roll name
         private void rollNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (rollNameTextBox.Text == "roll name")
+            if (rollNameBox.Text == "roll name")
             {
-                rollNameTextBox.Text = "";
-                rollNameTextBox.ForeColor = DefaultForeColor;
+                rollNameBox.Text = "";
+                rollNameBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0));
             }
         }
         private void rollNameTextBox_Leave(object sender, EventArgs e)
         {
-            if (rollNameTextBox.Text == "")
+            if (rollNameBox.Text == "")
             {
-                rollNameTextBox.ForeColor = Color.DimGray;
-                rollNameTextBox.Text = "roll name";
+                rollNameBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+                rollNameBox.Text = "roll name";
             }
         }
 

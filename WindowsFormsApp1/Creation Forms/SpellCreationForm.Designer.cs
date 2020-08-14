@@ -29,113 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpellCreationForm));
-            this.saveButton = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.addRollButton = new System.Windows.Forms.Button();
             this.propertiesLabel = new System.Windows.Forms.Label();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.rollNameTextBox = new System.Windows.Forms.TextBox();
             this.bonusRollsLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.CastTimetextBox = new System.Windows.Forms.TextBox();
-            this.RangetextBox = new System.Windows.Forms.TextBox();
-            this.DurationtextBox = new System.Windows.Forms.TextBox();
-            this.ComponentsTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.LevelnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.DieNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.multiplierLabel = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DieAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.helpLabel = new System.Windows.Forms.Label();
             this.helpDisplaylabel = new System.Windows.Forms.Label();
-            this.multipliercheckBox = new System.Windows.Forms.CheckBox();
-            this.AttackRollcheckBox = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).BeginInit();
+            this.SaveButton = new CustomButtons.ButtonNoPadding();
+            this.spellNameTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.castTimeTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.durationTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.RangeTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.componentsTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.descriptionTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
+            this.rollNameTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.addRollButton = new CustomButtons.ButtonNoPadding();
+            this.AttackRollcheckBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.multipliercheckBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.DieAmountnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DieNumnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.LevelnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.SuspendLayout();
-            // 
-            // saveButton
-            // 
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(232, 48);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(108, 62);
-            this.saveButton.TabIndex = 0;
-            this.saveButton.Text = "Create Spell";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.SaveSpell);
             // 
             // headerLabel
             // 
-            this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.Location = new System.Drawing.Point(99, -1);
+            this.headerLabel.Location = new System.Drawing.Point(5, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(151, 36);
+            this.headerLabel.Size = new System.Drawing.Size(335, 36);
             this.headerLabel.TabIndex = 1;
             this.headerLabel.Text = "New Spell";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.nameTextBox.Location = new System.Drawing.Point(5, 50);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(216, 23);
-            this.nameTextBox.TabIndex = 3;
-            // 
-            // addRollButton
-            // 
-            this.addRollButton.Location = new System.Drawing.Point(233, 236);
-            this.addRollButton.Name = "addRollButton";
-            this.addRollButton.Size = new System.Drawing.Size(108, 23);
-            this.addRollButton.TabIndex = 12;
-            this.addRollButton.Text = "Add Roll";
-            this.addRollButton.UseVisualStyleBackColor = true;
-            this.addRollButton.Click += new System.EventHandler(this.AddRollButton_click);
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // propertiesLabel
             // 
             this.propertiesLabel.AutoSize = true;
             this.propertiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.propertiesLabel.Location = new System.Drawing.Point(74, 146);
+            this.propertiesLabel.Location = new System.Drawing.Point(74, 148);
             this.propertiesLabel.Name = "propertiesLabel";
             this.propertiesLabel.Size = new System.Drawing.Size(79, 13);
             this.propertiesLabel.TabIndex = 13;
             this.propertiesLabel.Text = "Description  ";
             // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.descriptionTextBox.Location = new System.Drawing.Point(5, 160);
-            this.descriptionTextBox.Multiline = true;
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(216, 318);
-            this.descriptionTextBox.TabIndex = 14;
-            // 
-            // rollNameTextBox
-            // 
-            this.rollNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rollNameTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.rollNameTextBox.Location = new System.Drawing.Point(235, 159);
-            this.rollNameTextBox.Name = "rollNameTextBox";
-            this.rollNameTextBox.Size = new System.Drawing.Size(105, 20);
-            this.rollNameTextBox.TabIndex = 18;
-            this.rollNameTextBox.Text = "roll name";
-            this.rollNameTextBox.Enter += new System.EventHandler(this.rollNameTextBox_Enter);
-            this.rollNameTextBox.Leave += new System.EventHandler(this.rollNameTextBox_Leave);
-            // 
             // bonusRollsLabel
             // 
             this.bonusRollsLabel.AutoSize = true;
             this.bonusRollsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.bonusRollsLabel.Location = new System.Drawing.Point(264, 141);
+            this.bonusRollsLabel.Location = new System.Drawing.Point(261, 108);
             this.bonusRollsLabel.Name = "bonusRollsLabel";
             this.bonusRollsLabel.Size = new System.Drawing.Size(48, 16);
             this.bonusRollsLabel.TabIndex = 20;
@@ -151,47 +98,11 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Spell Name ";
             // 
-            // CastTimetextBox
-            // 
-            this.CastTimetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CastTimetextBox.ForeColor = System.Drawing.Color.Black;
-            this.CastTimetextBox.Location = new System.Drawing.Point(6, 89);
-            this.CastTimetextBox.Name = "CastTimetextBox";
-            this.CastTimetextBox.Size = new System.Drawing.Size(83, 20);
-            this.CastTimetextBox.TabIndex = 22;
-            // 
-            // RangetextBox
-            // 
-            this.RangetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangetextBox.ForeColor = System.Drawing.Color.Black;
-            this.RangetextBox.Location = new System.Drawing.Point(6, 123);
-            this.RangetextBox.Name = "RangetextBox";
-            this.RangetextBox.Size = new System.Drawing.Size(83, 20);
-            this.RangetextBox.TabIndex = 23;
-            // 
-            // DurationtextBox
-            // 
-            this.DurationtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DurationtextBox.ForeColor = System.Drawing.Color.Black;
-            this.DurationtextBox.Location = new System.Drawing.Point(94, 88);
-            this.DurationtextBox.Name = "DurationtextBox";
-            this.DurationtextBox.Size = new System.Drawing.Size(90, 20);
-            this.DurationtextBox.TabIndex = 24;
-            // 
-            // ComponentsTextBox
-            // 
-            this.ComponentsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComponentsTextBox.ForeColor = System.Drawing.Color.Black;
-            this.ComponentsTextBox.Location = new System.Drawing.Point(95, 123);
-            this.ComponentsTextBox.Name = "ComponentsTextBox";
-            this.ComponentsTextBox.Size = new System.Drawing.Size(126, 20);
-            this.ComponentsTextBox.TabIndex = 25;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 75);
+            this.label3.Location = new System.Drawing.Point(7, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 26;
@@ -211,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 74);
+            this.label5.Location = new System.Drawing.Point(112, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 28;
@@ -221,89 +132,38 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(131, 109);
+            this.label6.Location = new System.Drawing.Point(122, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 29;
             this.label6.Text = "Components";
             // 
-            // LevelnumericUpDown
-            // 
-            this.LevelnumericUpDown.Location = new System.Drawing.Point(187, 88);
-            this.LevelnumericUpDown.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.LevelnumericUpDown.Name = "LevelnumericUpDown";
-            this.LevelnumericUpDown.Size = new System.Drawing.Size(34, 20);
-            this.LevelnumericUpDown.TabIndex = 30;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(185, 74);
+            this.label7.Location = new System.Drawing.Point(183, 72);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 31;
             this.label7.Text = "Level";
             // 
-            // DieNumnumericUpDown
-            // 
-            this.DieNumnumericUpDown.Location = new System.Drawing.Point(294, 214);
-            this.DieNumnumericUpDown.Name = "DieNumnumericUpDown";
-            this.DieNumnumericUpDown.Size = new System.Drawing.Size(34, 20);
-            this.DieNumnumericUpDown.TabIndex = 36;
-            this.DieNumnumericUpDown.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
             // multiplierLabel
             // 
             this.multiplierLabel.AutoSize = true;
             this.multiplierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
-            this.multiplierLabel.Location = new System.Drawing.Point(243, 199);
+            this.multiplierLabel.Location = new System.Drawing.Point(240, 168);
             this.multiplierLabel.Name = "multiplierLabel";
             this.multiplierLabel.Size = new System.Drawing.Size(87, 13);
             this.multiplierLabel.TabIndex = 37;
             this.multiplierLabel.Text = "Multiplier Dice";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(275, 215);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 16);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "d";
-            // 
-            // DieAmountnumericUpDown
-            // 
-            this.DieAmountnumericUpDown.Location = new System.Drawing.Point(240, 214);
-            this.DieAmountnumericUpDown.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.DieAmountnumericUpDown.Name = "DieAmountnumericUpDown";
-            this.DieAmountnumericUpDown.Size = new System.Drawing.Size(34, 20);
-            this.DieAmountnumericUpDown.TabIndex = 39;
-            this.DieAmountnumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // helpLabel
             // 
             this.helpLabel.AutoSize = true;
             this.helpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.helpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
-            this.helpLabel.Location = new System.Drawing.Point(329, 200);
+            this.helpLabel.Location = new System.Drawing.Point(317, 151);
             this.helpLabel.Name = "helpLabel";
             this.helpLabel.Size = new System.Drawing.Size(12, 11);
             this.helpLabel.TabIndex = 41;
@@ -316,110 +176,222 @@
             this.helpDisplaylabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.helpDisplaylabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.helpDisplaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
-            this.helpDisplaylabel.Location = new System.Drawing.Point(164, 209);
+            this.helpDisplaylabel.Location = new System.Drawing.Point(170, 299);
             this.helpDisplaylabel.Name = "helpDisplaylabel";
             this.helpDisplaylabel.Size = new System.Drawing.Size(177, 172);
             this.helpDisplaylabel.TabIndex = 42;
             this.helpDisplaylabel.Text = resources.GetString("helpDisplaylabel.Text");
             this.helpDisplaylabel.Visible = false;
             // 
-            // multipliercheckBox
+            // SaveButton
             // 
-            this.multipliercheckBox.AutoSize = true;
-            this.multipliercheckBox.Checked = true;
-            this.multipliercheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.multipliercheckBox.Location = new System.Drawing.Point(256, 182);
-            this.multipliercheckBox.Name = "multipliercheckBox";
-            this.multipliercheckBox.Size = new System.Drawing.Size(67, 17);
-            this.multipliercheckBox.TabIndex = 43;
-            this.multipliercheckBox.Text = "Multiplier";
-            this.multipliercheckBox.UseVisualStyleBackColor = true;
-            this.multipliercheckBox.CheckedChanged += new System.EventHandler(this.multipliercheckBox_CheckedChanged);
+            this.SaveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.SaveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(232, 50);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(106, 20);
+            this.SaveButton.TabIndex = 45;
+            this.SaveButton.Text = "Create Spell";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveSpell);
+            // 
+            // spellNameTextbox
+            // 
+            this.spellNameTextbox.Location = new System.Drawing.Point(5, 50);
+            this.spellNameTextbox.Name = "spellNameTextbox";
+            this.spellNameTextbox.Size = new System.Drawing.Size(216, 19);
+            this.spellNameTextbox.TabIndex = 46;
+            // 
+            // castTimeTextbox
+            // 
+            this.castTimeTextbox.Location = new System.Drawing.Point(5, 87);
+            this.castTimeTextbox.Name = "castTimeTextbox";
+            this.castTimeTextbox.Size = new System.Drawing.Size(82, 19);
+            this.castTimeTextbox.TabIndex = 47;
+            // 
+            // durationTextbox
+            // 
+            this.durationTextbox.Location = new System.Drawing.Point(93, 87);
+            this.durationTextbox.Name = "durationTextbox";
+            this.durationTextbox.Size = new System.Drawing.Size(82, 19);
+            this.durationTextbox.TabIndex = 48;
+            // 
+            // RangeTextbox
+            // 
+            this.RangeTextbox.Location = new System.Drawing.Point(5, 125);
+            this.RangeTextbox.Name = "RangeTextbox";
+            this.RangeTextbox.Size = new System.Drawing.Size(82, 19);
+            this.RangeTextbox.TabIndex = 49;
+            // 
+            // componentsTextBox
+            // 
+            this.componentsTextBox.Location = new System.Drawing.Point(93, 125);
+            this.componentsTextBox.Name = "componentsTextBox";
+            this.componentsTextBox.Size = new System.Drawing.Size(128, 19);
+            this.componentsTextBox.TabIndex = 50;
+            // 
+            // descriptionTextbox
+            // 
+            this.descriptionTextbox.Location = new System.Drawing.Point(5, 165);
+            this.descriptionTextbox.Name = "descriptionTextbox";
+            this.descriptionTextbox.Size = new System.Drawing.Size(216, 307);
+            this.descriptionTextbox.TabIndex = 51;
+            // 
+            // rollNameTextbox
+            // 
+            this.rollNameTextbox.Location = new System.Drawing.Point(230, 125);
+            this.rollNameTextbox.Name = "rollNameTextbox";
+            this.rollNameTextbox.Size = new System.Drawing.Size(108, 19);
+            this.rollNameTextbox.TabIndex = 52;
+            this.rollNameTextbox.Enter += new System.EventHandler(this.rollNameTextBox_Enter);
+            this.rollNameTextbox.Leave += new System.EventHandler(this.rollNameTextBox_Leave);
+            // 
+            // addRollButton
+            // 
+            this.addRollButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.addRollButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.addRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addRollButton.Location = new System.Drawing.Point(230, 213);
+            this.addRollButton.Name = "addRollButton";
+            this.addRollButton.Size = new System.Drawing.Size(108, 20);
+            this.addRollButton.TabIndex = 53;
+            this.addRollButton.Text = "Add Roll";
+            this.addRollButton.UseVisualStyleBackColor = true;
+            this.addRollButton.Click += new System.EventHandler(this.AddRollButton_click);
             // 
             // AttackRollcheckBox
             // 
             this.AttackRollcheckBox.AutoSize = true;
             this.AttackRollcheckBox.Checked = true;
             this.AttackRollcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AttackRollcheckBox.Location = new System.Drawing.Point(233, 122);
+            this.AttackRollcheckBox.Location = new System.Drawing.Point(233, 86);
             this.AttackRollcheckBox.Name = "AttackRollcheckBox";
             this.AttackRollcheckBox.Size = new System.Drawing.Size(105, 17);
-            this.AttackRollcheckBox.TabIndex = 44;
+            this.AttackRollcheckBox.TabIndex = 54;
             this.AttackRollcheckBox.Text = "Uses Attack Roll";
             this.AttackRollcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // multipliercheckBox
+            // 
+            this.multipliercheckBox.AutoSize = true;
+            this.multipliercheckBox.Checked = true;
+            this.multipliercheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.multipliercheckBox.Location = new System.Drawing.Point(250, 149);
+            this.multipliercheckBox.Name = "multipliercheckBox";
+            this.multipliercheckBox.Size = new System.Drawing.Size(67, 17);
+            this.multipliercheckBox.TabIndex = 55;
+            this.multipliercheckBox.Text = "Multiplier";
+            this.multipliercheckBox.UseVisualStyleBackColor = true;
+            this.multipliercheckBox.CheckedChanged += new System.EventHandler(this.multipliercheckBox_CheckedChanged);
+            // 
+            // DieAmountnumericUpDown
+            // 
+            this.DieAmountnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.DieAmountnumericUpDown.Location = new System.Drawing.Point(231, 184);
+            this.DieAmountnumericUpDown.Name = "DieAmountnumericUpDown";
+            this.DieAmountnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.DieAmountnumericUpDown.TabIndex = 56;
+            this.DieAmountnumericUpDown.Value = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(276, 186);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 16);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "d";
+            // 
+            // DieNumnumericUpDown
+            // 
+            this.DieNumnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.DieNumnumericUpDown.Location = new System.Drawing.Point(295, 184);
+            this.DieNumnumericUpDown.Name = "DieNumnumericUpDown";
+            this.DieNumnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.DieNumnumericUpDown.TabIndex = 57;
+            this.DieNumnumericUpDown.Value = 6;
+            // 
+            // LevelnumericUpDown
+            // 
+            this.LevelnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.LevelnumericUpDown.Location = new System.Drawing.Point(181, 86);
+            this.LevelnumericUpDown.Name = "LevelnumericUpDown";
+            this.LevelnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.LevelnumericUpDown.TabIndex = 58;
+            this.LevelnumericUpDown.Value = 0;
             // 
             // SpellCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 480);
-            this.Controls.Add(this.AttackRollcheckBox);
-            this.Controls.Add(this.multipliercheckBox);
-            this.Controls.Add(this.helpLabel);
+            this.Controls.Add(this.LevelnumericUpDown);
+            this.Controls.Add(this.DieNumnumericUpDown);
             this.Controls.Add(this.DieAmountnumericUpDown);
+            this.Controls.Add(this.multipliercheckBox);
+            this.Controls.Add(this.AttackRollcheckBox);
+            this.Controls.Add(this.addRollButton);
+            this.Controls.Add(this.rollNameTextbox);
+            this.Controls.Add(this.descriptionTextbox);
+            this.Controls.Add(this.componentsTextBox);
+            this.Controls.Add(this.RangeTextbox);
+            this.Controls.Add(this.durationTextbox);
+            this.Controls.Add(this.castTimeTextbox);
+            this.Controls.Add(this.spellNameTextbox);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.helpLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.multiplierLabel);
-            this.Controls.Add(this.DieNumnumericUpDown);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.LevelnumericUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ComponentsTextBox);
-            this.Controls.Add(this.DurationtextBox);
-            this.Controls.Add(this.RangetextBox);
-            this.Controls.Add(this.CastTimetextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bonusRollsLabel);
-            this.Controls.Add(this.rollNameTextBox);
-            this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.propertiesLabel);
-            this.Controls.Add(this.addRollButton);
-            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.headerLabel);
-            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.helpDisplaylabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SpellCreationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Spell";
             this.Load += new System.EventHandler(this.SpellCreation_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.LevelnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DieNumnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DieAmountnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Button addRollButton;
         private System.Windows.Forms.Label propertiesLabel;
-        private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox rollNameTextBox;
         private System.Windows.Forms.Label bonusRollsLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CastTimetextBox;
-        private System.Windows.Forms.TextBox RangetextBox;
-        private System.Windows.Forms.TextBox DurationtextBox;
-        private System.Windows.Forms.TextBox ComponentsTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown LevelnumericUpDown;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown DieNumnumericUpDown;
         private System.Windows.Forms.Label multiplierLabel;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown DieAmountnumericUpDown;
         private System.Windows.Forms.Label helpLabel;
         private System.Windows.Forms.Label helpDisplaylabel;
-        private System.Windows.Forms.CheckBox multipliercheckBox;
-        private System.Windows.Forms.CheckBox AttackRollcheckBox;
+        private CustomButtons.ButtonNoPadding SaveButton;
+        private CustomControls.CustomTextBoxLeft spellNameTextbox;
+        private CustomControls.CustomTextBoxLeft castTimeTextbox;
+        private CustomControls.CustomTextBoxLeft durationTextbox;
+        private CustomControls.CustomTextBoxLeft RangeTextbox;
+        private CustomControls.CustomTextBoxLeft componentsTextBox;
+        private CustomControls.CustomTextBoxLeftTop descriptionTextbox;
+        private CustomControls.CustomTextBoxLeft rollNameTextbox;
+        private CustomButtons.ButtonNoPadding addRollButton;
+        private CustomControls.CustomCheckBox AttackRollcheckBox;
+        private CustomControls.CustomCheckBox multipliercheckBox;
+        private CustomControls.CustomUpDown DieAmountnumericUpDown;
+        private System.Windows.Forms.Label label9;
+        private CustomControls.CustomUpDown DieNumnumericUpDown;
+        private CustomControls.CustomUpDown LevelnumericUpDown;
     }
 }
