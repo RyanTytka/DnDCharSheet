@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +17,7 @@ namespace WindowsFormsApp1
         List<string> chars = new List<string>();
         int saveOrLoad;
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\DnD Data";
+        System.Windows.Controls.TextBox nameBox, descBox;
 
         /// <param name="saveOrLoad">1=save, 2=load</param>
         public LoadCharMenu(int _saveOrLoad, string _name = "", string _description = "")
@@ -23,8 +25,8 @@ namespace WindowsFormsApp1
             saveOrLoad = _saveOrLoad;
             if(_name != "")
             {
-                nametextBox.Text = _name;
-                descriptiontextBox.Text = _description;
+                name.Text = _name;
+                description.Text = _description;
             }
 
             InitializeComponent();
@@ -33,6 +35,9 @@ namespace WindowsFormsApp1
         //on load
         private void LoadCharMenu_Load(object sender, EventArgs e)
         {
+            nameBox = (name.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            descBox = (description.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+
             if (saveOrLoad == 1)
             {
                 SubmitButton.Text = "Save";
@@ -95,9 +100,9 @@ namespace WindowsFormsApp1
         {
             if (SubmitButton.Text == "Save")
             {
-                if (!chars.Contains(nametextBox.Text + "   -   " + descriptiontextBox.Text))
-                    chars.Add(nametextBox.Text + "   -   " + descriptiontextBox.Text);
-                ((Form1)Owner).saveFile(directory + "\\" + nametextBox.Text + "   -   " + descriptiontextBox.Text);
+                if (!chars.Contains(nameBox.Text + "   -   " + descBox.Text))
+                    chars.Add(nameBox.Text + "   -   " + descBox.Text);
+                ((Form1)Owner).saveFile(directory + "\\" + nameBox.Text + "   -   " + descBox.Text);
                 saveCharData();
             }
             else
@@ -116,8 +121,8 @@ namespace WindowsFormsApp1
             SubmitButton.Enabled = true;
 
             string fullStr = characterListBox.SelectedItem.ToString();
-            nametextBox.Text =  fullStr.Substring(0, fullStr.IndexOf("   -   "));
-            descriptiontextBox.Text =  fullStr.Substring(fullStr.IndexOf("   -   ") + 7);
+            nameBox.Text =  fullStr.Substring(0, fullStr.IndexOf("   -   "));
+            descBox.Text =  fullStr.Substring(fullStr.IndexOf("   -   ") + 7);
         }
 
         // submit when double clicked
@@ -144,8 +149,8 @@ namespace WindowsFormsApp1
             chars.Remove(characterListBox.SelectedItem.ToString());
             characterListBox.Items.Remove(characterListBox.SelectedItem);
             saveCharData();
-                nametextBox.Text = "";
-                descriptiontextBox.Text = "";
+            nameBox.Text = "";
+            descBox.Text = "";
             if (saveOrLoad == 2)
             {
                 SubmitButton.Enabled = false;

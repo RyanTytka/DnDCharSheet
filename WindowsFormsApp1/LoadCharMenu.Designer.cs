@@ -30,11 +30,11 @@
         {
             this.characterListBox = new System.Windows.Forms.ListBox();
             this.SubmitButton = new CustomButtons.ButtonNoPadding();
-            this.nametextBox = new System.Windows.Forms.TextBox();
-            this.descriptiontextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.deletebutton = new CustomButtons.ButtonNoPadding();
+            this.description = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.SuspendLayout();
             // 
             // characterListBox
@@ -52,6 +52,7 @@
             // 
             // SubmitButton
             // 
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.SubmitButton.Location = new System.Drawing.Point(341, 169);
             this.SubmitButton.Name = "SubmitButton";
@@ -60,20 +61,6 @@
             this.SubmitButton.Text = "Save";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
-            // 
-            // nametextBox
-            // 
-            this.nametextBox.Location = new System.Drawing.Point(337, 31);
-            this.nametextBox.Name = "nametextBox";
-            this.nametextBox.Size = new System.Drawing.Size(145, 20);
-            this.nametextBox.TabIndex = 3;
-            // 
-            // descriptiontextBox
-            // 
-            this.descriptiontextBox.Location = new System.Drawing.Point(338, 76);
-            this.descriptiontextBox.Name = "descriptiontextBox";
-            this.descriptiontextBox.Size = new System.Drawing.Size(144, 20);
-            this.descriptiontextBox.TabIndex = 4;
             // 
             // label1
             // 
@@ -97,6 +84,7 @@
             // 
             // deletebutton
             // 
+            this.deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.deletebutton.Location = new System.Drawing.Point(415, 169);
             this.deletebutton.Name = "deletebutton";
@@ -106,18 +94,33 @@
             this.deletebutton.UseVisualStyleBackColor = true;
             this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
             // 
+            // description
+            // 
+            this.description.Location = new System.Drawing.Point(337, 76);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(144, 21);
+            this.description.TabIndex = 8;
+            // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(338, 30);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(144, 21);
+            this.name.TabIndex = 9;
+            // 
             // LoadCharMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 202);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.deletebutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.descriptiontextBox);
-            this.Controls.Add(this.nametextBox);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.characterListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoadCharMenu";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -132,10 +135,10 @@
 
         private System.Windows.Forms.ListBox characterListBox;
         private CustomButtons.ButtonNoPadding SubmitButton;
-        private System.Windows.Forms.TextBox nametextBox;
-        private System.Windows.Forms.TextBox descriptiontextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private CustomButtons.ButtonNoPadding deletebutton;
+        private CustomControls.CustomTextBoxLeft description;
+        private CustomControls.CustomTextBoxLeft name;
     }
 }
