@@ -38,15 +38,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.descriptionlabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.castTimelabel = new System.Windows.Forms.Label();
             this.rangelabel = new System.Windows.Forms.Label();
             this.durationlabel = new System.Windows.Forms.Label();
             this.componentslabel = new System.Windows.Forms.Label();
             this.learnSpellbutton = new CustomButtons.ButtonNoPadding();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.xSearchButton = new CustomButtons.ButtonNoPadding();
+            this.search = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.desc = new WindowsFormsApp1.CustomControls.CustomTextBoxLeftTop();
             this.SuspendLayout();
             // 
             // spellListBox
@@ -64,6 +64,7 @@
             // 
             // buttonNoPadding1
             // 
+            this.buttonNoPadding1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNoPadding1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNoPadding1.Location = new System.Drawing.Point(12, 218);
             this.buttonNoPadding1.Name = "buttonNoPadding1";
@@ -75,6 +76,7 @@
             // 
             // deleteSpellButton
             // 
+            this.deleteSpellButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteSpellButton.Location = new System.Drawing.Point(120, 218);
             this.deleteSpellButton.Name = "deleteSpellButton";
@@ -86,6 +88,7 @@
             // 
             // editSpellButton
             // 
+            this.editSpellButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editSpellButton.Location = new System.Drawing.Point(339, 218);
             this.editSpellButton.Name = "editSpellButton";
@@ -119,6 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
             this.label3.Location = new System.Drawing.Point(333, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
@@ -129,6 +133,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
             this.label4.Location = new System.Drawing.Point(333, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
@@ -139,6 +144,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
             this.label5.Location = new System.Drawing.Point(333, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
@@ -149,28 +155,19 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(333, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Components";
             // 
-            // descriptionlabel
-            // 
-            this.descriptionlabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.descriptionlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.descriptionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.descriptionlabel.Location = new System.Drawing.Point(450, 25);
-            this.descriptionlabel.Name = "descriptionlabel";
-            this.descriptionlabel.Size = new System.Drawing.Size(310, 238);
-            this.descriptionlabel.TabIndex = 11;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(453, 3);
+            this.label8.Location = new System.Drawing.Point(449, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(305, 20);
+            this.label8.Size = new System.Drawing.Size(309, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "Description";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,6 +210,7 @@
             // 
             // learnSpellbutton
             // 
+            this.learnSpellbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.learnSpellbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.learnSpellbutton.Location = new System.Drawing.Point(230, 218);
             this.learnSpellbutton.Name = "learnSpellbutton";
@@ -222,20 +220,9 @@
             this.learnSpellbutton.UseVisualStyleBackColor = true;
             this.learnSpellbutton.Click += new System.EventHandler(this.learnSpellbutton_Click);
             // 
-            // searchBox
-            // 
-            this.searchBox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchBox.Location = new System.Drawing.Point(117, 3);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(139, 20);
-            this.searchBox.TabIndex = 18;
-            this.searchBox.Text = "search by name or level";
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.SearchBox_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.SearchBox_Leave);
-            // 
             // xSearchButton
             // 
+            this.xSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
             this.xSearchButton.Location = new System.Drawing.Point(259, 5);
             this.xSearchButton.Name = "xSearchButton";
@@ -245,20 +232,36 @@
             this.xSearchButton.UseVisualStyleBackColor = true;
             this.xSearchButton.Click += new System.EventHandler(this.xSearchButton_Click);
             // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(123, 5);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(133, 17);
+            this.search.TabIndex = 20;
+            this.search.Enter += new System.EventHandler(this.SearchBox_Enter);
+            this.search.Leave += new System.EventHandler(this.SearchBox_Leave);
+            // 
+            // desc
+            // 
+            this.desc.Location = new System.Drawing.Point(448, 25);
+            this.desc.Name = "desc";
+            this.desc.Size = new System.Drawing.Size(310, 238);
+            this.desc.TabIndex = 21;
+            // 
             // SpellMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 273);
+            this.Controls.Add(this.desc);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.xSearchButton);
-            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.learnSpellbutton);
             this.Controls.Add(this.componentslabel);
             this.Controls.Add(this.durationlabel);
             this.Controls.Add(this.rangelabel);
             this.Controls.Add(this.castTimelabel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.descriptionlabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -269,6 +272,7 @@
             this.Controls.Add(this.deleteSpellButton);
             this.Controls.Add(this.buttonNoPadding1);
             this.Controls.Add(this.spellListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SpellMenu";
             this.Text = "Spells";
             this.Load += new System.EventHandler(this.SpellMenu_Load);
@@ -289,14 +293,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label descriptionlabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label castTimelabel;
         private System.Windows.Forms.Label rangelabel;
         private System.Windows.Forms.Label durationlabel;
         private System.Windows.Forms.Label componentslabel;
         private CustomButtons.ButtonNoPadding learnSpellbutton;
-        private System.Windows.Forms.TextBox searchBox;
         private CustomButtons.ButtonNoPadding xSearchButton;
+        private CustomControls.CustomTextBoxLeft search;
+        private CustomControls.CustomTextBoxLeftTop desc;
     }
 }

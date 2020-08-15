@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 
 namespace WindowsFormsApp1
 {
+
     public partial class SpellMenu : Form
     {
+        //global brushes with ordinary/selected colors
+        private SolidBrush reportsForegroundBrushSelected = new SolidBrush(Color.White);
+        private SolidBrush reportsForegroundBrush = new SolidBrush(Color.Black);
+        private SolidBrush reportsBackgroundBrushSelected = new SolidBrush(Color.Maroon);
+        private SolidBrush reportsBackgroundBrush1 = new SolidBrush(Color.White);
+        //private SolidBrush reportsBackgroundBrush2 = new SolidBrush(Color.Gray);
+
         List<Spell> spells;
-        int lastIndexSelected;
         List<Spell> searchSpells;
+        object lastSelectedSpell;
+
+        System.Windows.Controls.TextBox searchBox, descBox;
 
 
         public SpellMenu(List<Spell> spells)
@@ -26,6 +37,16 @@ namespace WindowsFormsApp1
 
         private void SpellMenu_Load(object sender, EventArgs e)
         {
+            searchBox = (search.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            descBox = (desc.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            searchBox.TextChanged += searchBox_TextChanged;
+            searchBox.Text = "search by name or level";
+            searchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
+            searchBox.FontSize = 10;
+
+            spellListBox.DrawMode = DrawMode.OwnerDrawFixed;
+            spellListBox.DrawItem += listbox_DrawItem;
+
             RefreshSpells();
             if (spellListBox.Items.Count > 0)
                 spellListBox.SetSelected(0, true);
@@ -160,16 +181,31 @@ namespace WindowsFormsApp1
         //when a spell is selected
         private void spellListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (spellListBox.Items.Count == 0)
+            {
+                castTimelabel.Text = "";
+                rangelabel.Text = "";
+                durationlabel.Text = "";
+                componentslabel.Text = "";
+                descBox.Text = "";
+                return;
+            }
+
             if (spellListBox.SelectedIndex < 0)
-                spellListBox.SetSelected(lastIndexSelected, true);
+            {
+                if (spellListBox.Items.IndexOf(lastSelectedSpell?? new object()) < 0)
+                    spellListBox.SetSelected(0, true);
+                else
+                    spellListBox.SetSelected(spellListBox.Items.IndexOf(lastSelectedSpell), true);
+            }
             else
-                lastIndexSelected = spellListBox.SelectedIndex;
+                lastSelectedSpell = spellListBox.SelectedItem;
             Spell s = searchSpells[spellListBox.SelectedIndex];
             castTimelabel.Text = s.CastTime;
             rangelabel.Text = s.Range;
             durationlabel.Text = s.Duration;
             componentslabel.Text = s.Components;
-            descriptionlabel.Text = s.Description;
+            descBox.Text = s.Description;
             //if multiple items are selected
             if(spellListBox.SelectedIndices.Count > 1)
             {
@@ -213,14 +249,14 @@ namespace WindowsFormsApp1
             if (searchBox.Text == "search by name or level")
             {
                 searchBox.Text = "";
-                searchBox.ForeColor = DefaultForeColor;
+                searchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0));
             }
         }
         private void SearchBox_Leave(object sender, EventArgs e)
         {
             if (searchBox.Text == "")
             {
-                searchBox.ForeColor = Color.DimGray;
+                searchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
                 searchBox.Text = "search by name or level";
             }
         }
@@ -228,17 +264,49 @@ namespace WindowsFormsApp1
         //sort spell list box
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            string search = ((TextBox)sender).Text;
-            if (search == "search by name or level")
-                search = "";
-            RefreshSpells(search);
+            string s = searchBox.Text;
+            if (s == "search by name or level")
+                s = "";
+            RefreshSpells(s);
+            spellListBox_SelectedIndexChanged(null, null);
         }
 
         //clear spell search box
         private void xSearchButton_Click(object sender, EventArgs e)
         {
-            searchBox.ForeColor = Color.DimGray;
+            searchBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
             searchBox.Text = "search by name or level";
         }
+
+        //custom method to draw the items, don't forget to set DrawMode of the ListBox to OwnerDrawFixed
+        private void listbox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            bool selected = ((e.State & DrawItemState.Selected) == DrawItemState.Selected);
+
+            int index = e.Index;
+            if (index >= 0 && index < spellListBox.Items.Count)
+            {
+                string text = spellListBox.Items[index].ToString();
+                Graphics g = e.Graphics;
+
+                //background:
+                SolidBrush backgroundBrush;   
+                if (selected)
+                    backgroundBrush = reportsBackgroundBrushSelected;
+                else //if ((index % 2) == 0)
+                    backgroundBrush = reportsBackgroundBrush1;
+                //else
+                    //backgroundBrush = reportsBackgroundBrush2;
+                g.FillRectangle(backgroundBrush, e.Bounds);
+
+                //text:
+                SolidBrush foregroundBrush = (selected) ? reportsForegroundBrushSelected : reportsForegroundBrush;
+                g.DrawString(text, e.Font, foregroundBrush, spellListBox.GetItemRectangle(index).Location);
+            }
+
+            e.DrawFocusRectangle();
+        }
+
     }
 }

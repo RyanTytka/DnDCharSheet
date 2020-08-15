@@ -21,6 +21,7 @@ namespace WindowsFormsApp1.CustomControls
             textBox.SelectionOpacity = 0.5;
             textBox.VerticalAlignment = VerticalAlignment.Top;
             textBox.TextWrapping = TextWrapping.Wrap;
+            textBox.VerticalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Auto;
             elementHost.Dock = System.Windows.Forms.DockStyle.Fill;
             elementHost.Name = "elementHost";
             elementHost.Child = textBox;
