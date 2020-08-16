@@ -2985,7 +2985,8 @@ namespace WindowsFormsApp1
         private void warlockSpellPanel_VisibleChanged(object sender, EventArgs e)
         {
             warlockSpellButton1.Checked = true;
-            spellLevelButtons[1].Checked = true;
+            if(spellLevelButtons != null)
+                spellLevelButtons[1].Checked = true;
             spellListLabel.Text = "Level 1 spells";
         }
 

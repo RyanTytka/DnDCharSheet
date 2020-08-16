@@ -14,6 +14,12 @@ namespace WindowsFormsApp1
 {
     public partial class LoadCharMenu : Form
     {
+        //global brushes with ordinary/selected colors
+        private SolidBrush reportsForegroundBrushSelected = new SolidBrush(Color.White);
+        private SolidBrush reportsForegroundBrush = new SolidBrush(Color.Black);
+        private SolidBrush reportsBackgroundBrushSelected = new SolidBrush(Color.Maroon);
+        private SolidBrush reportsBackgroundBrush1 = new SolidBrush(Color.White);
+
         List<string> chars = new List<string>();
         int saveOrLoad;
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\DnD Data";
@@ -47,6 +53,9 @@ namespace WindowsFormsApp1
                 SubmitButton.Text = "Load";
                 SubmitButton.Enabled = false;
             }
+
+            characterListBox.DrawMode = DrawMode.OwnerDrawFixed;
+            characterListBox.DrawItem += listbox_DrawItem;
 
             loadCharData();
         }
@@ -155,6 +164,34 @@ namespace WindowsFormsApp1
             {
                 SubmitButton.Enabled = false;
             }
+        }
+
+        //custom method to draw the items
+        private void listbox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            bool selected = ((e.State & DrawItemState.Selected) == DrawItemState.Selected);
+
+            int index = e.Index;
+            if (index >= 0 && index < characterListBox.Items.Count)
+            {
+                string text = characterListBox.Items[index].ToString();
+                Graphics g = e.Graphics;
+
+                //background:
+                SolidBrush backgroundBrush;
+                if (selected)
+                    backgroundBrush = reportsBackgroundBrushSelected;
+                else
+                    backgroundBrush = reportsBackgroundBrush1;
+                g.FillRectangle(backgroundBrush, e.Bounds);
+
+                //text:
+                SolidBrush foregroundBrush = (selected) ? reportsForegroundBrushSelected : reportsForegroundBrush;
+                g.DrawString(text, e.Font, foregroundBrush, characterListBox.GetItemRectangle(index).Location);
+            }
+
+            e.DrawFocusRectangle();
         }
     }
 }

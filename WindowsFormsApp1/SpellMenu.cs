@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
         private SolidBrush reportsForegroundBrush = new SolidBrush(Color.Black);
         private SolidBrush reportsBackgroundBrushSelected = new SolidBrush(Color.Maroon);
         private SolidBrush reportsBackgroundBrush1 = new SolidBrush(Color.White);
-        //private SolidBrush reportsBackgroundBrush2 = new SolidBrush(Color.Gray);
 
         List<Spell> spells;
         List<Spell> searchSpells;
@@ -278,7 +277,7 @@ namespace WindowsFormsApp1
             searchBox.Text = "search by name or level";
         }
 
-        //custom method to draw the items, don't forget to set DrawMode of the ListBox to OwnerDrawFixed
+        //custom method to draw the items
         private void listbox_DrawItem(object sender, DrawItemEventArgs e)
         {
             e.DrawBackground();
@@ -294,10 +293,8 @@ namespace WindowsFormsApp1
                 SolidBrush backgroundBrush;   
                 if (selected)
                     backgroundBrush = reportsBackgroundBrushSelected;
-                else //if ((index % 2) == 0)
+                else
                     backgroundBrush = reportsBackgroundBrush1;
-                //else
-                    //backgroundBrush = reportsBackgroundBrush2;
                 g.FillRectangle(backgroundBrush, e.Bounds);
 
                 //text:
