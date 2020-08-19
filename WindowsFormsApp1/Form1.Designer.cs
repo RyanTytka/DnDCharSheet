@@ -158,13 +158,12 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.warlockSpellPanel = new System.Windows.Forms.Panel();
-            this.label84 = new System.Windows.Forms.Label();
+            this.warlockSLotsDisplayLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.WarlockSlotsLabel = new System.Windows.Forms.TextBox();
             this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -377,7 +376,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label85 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
@@ -1501,7 +1500,6 @@
             this.spellPanel.Controls.Add(this.label79);
             this.spellPanel.Controls.Add(this.label82);
             this.spellPanel.Controls.Add(this.spellListLabel);
-            this.spellPanel.Controls.Add(this.label85);
             this.spellPanel.Location = new System.Drawing.Point(832, 23);
             this.spellPanel.Name = "spellPanel";
             this.spellPanel.Size = new System.Drawing.Size(275, 622);
@@ -1990,7 +1988,7 @@
             this.spellListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
             this.spellListLabel.Location = new System.Drawing.Point(3, 322);
             this.spellListLabel.Name = "spellListLabel";
-            this.spellListLabel.Size = new System.Drawing.Size(272, 14);
+            this.spellListLabel.Size = new System.Drawing.Size(272, 16);
             this.spellListLabel.TabIndex = 236;
             this.spellListLabel.Text = "Level 1 Spells";
             this.spellListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2020,7 +2018,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(108, 17);
             this.panel10.TabIndex = 227;
-            this.panel10.Visible = false;
             // 
             // textBox33
             // 
@@ -2044,15 +2041,15 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(108, 69);
             this.panel9.TabIndex = 226;
-            this.panel9.Visible = false;
             // 
             // textBox32
             // 
             this.textBox32.BackColor = System.Drawing.SystemColors.Control;
             this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox32.Location = new System.Drawing.Point(3, 0);
+            this.textBox32.Location = new System.Drawing.Point(3, 1);
             this.textBox32.Multiline = true;
             this.textBox32.Name = "textBox32";
+            this.textBox32.ReadOnly = true;
             this.textBox32.Size = new System.Drawing.Size(100, 65);
             this.textBox32.TabIndex = 192;
             this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
@@ -2102,6 +2099,7 @@
             // warlockSpellPanel
             // 
             this.warlockSpellPanel.Controls.Add(this.label84);
+            this.warlockSpellPanel.Controls.Add(this.warlockSLotsDisplayLabel);
             this.warlockSpellPanel.Controls.Add(this.warlockSpellLevelnumericUpDown);
             this.warlockSpellPanel.Controls.Add(this.label5);
             this.warlockSpellPanel.Controls.Add(this.Arcanum9checkBox);
@@ -2124,7 +2122,6 @@
             this.warlockSpellPanel.Controls.Add(this.warlockMinusCurrentSlotButton);
             this.warlockSpellPanel.Controls.Add(this.warlockPlusCurrentSlotButton);
             this.warlockSpellPanel.Controls.Add(this.label3);
-            this.warlockSpellPanel.Controls.Add(this.WarlockSlotsLabel);
             this.warlockSpellPanel.Controls.Add(this.warlockMinusSlotButton);
             this.warlockSpellPanel.Controls.Add(this.warlockPlusSlotButton);
             this.warlockSpellPanel.Controls.Add(this.WarlockRefillSlotsButton);
@@ -2134,17 +2131,17 @@
             this.warlockSpellPanel.TabIndex = 199;
             this.warlockSpellPanel.VisibleChanged += new System.EventHandler(this.warlockSpellPanel_VisibleChanged);
             // 
-            // label84
+            // warlockSLotsDisplayLabel
             // 
-            this.label84.BackColor = System.Drawing.SystemColors.Control;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label84.ForeColor = System.Drawing.Color.Maroon;
-            this.label84.Location = new System.Drawing.Point(62, 71);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(39, 16);
-            this.label84.TabIndex = 333;
-            this.label84.Text = "0/0";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.warlockSLotsDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.warlockSLotsDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.warlockSLotsDisplayLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.warlockSLotsDisplayLabel.Location = new System.Drawing.Point(62, 71);
+            this.warlockSLotsDisplayLabel.Name = "warlockSLotsDisplayLabel";
+            this.warlockSLotsDisplayLabel.Size = new System.Drawing.Size(39, 16);
+            this.warlockSLotsDisplayLabel.TabIndex = 333;
+            this.warlockSLotsDisplayLabel.Text = "0/0";
+            this.warlockSLotsDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -2201,19 +2198,6 @@
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 189;
             this.label3.Text = "Mystic Arcanum";
-            // 
-            // WarlockSlotsLabel
-            // 
-            this.WarlockSlotsLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.WarlockSlotsLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.WarlockSlotsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.WarlockSlotsLabel.Location = new System.Drawing.Point(59, 58);
-            this.WarlockSlotsLabel.Multiline = true;
-            this.WarlockSlotsLabel.Name = "WarlockSlotsLabel";
-            this.WarlockSlotsLabel.Size = new System.Drawing.Size(48, 33);
-            this.WarlockSlotsLabel.TabIndex = 213;
-            this.WarlockSlotsLabel.Text = " Slots: \r\n0/0";
-            this.WarlockSlotsLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // miscRollAmountnumericUpDown
             // 
@@ -2342,7 +2326,7 @@
             this.panel11.Controls.Add(this.AlignmenttextBox);
             this.panel11.Controls.Add(this.nameLabel);
             this.panel11.Controls.Add(this.levelTextBox);
-            this.panel11.Location = new System.Drawing.Point(1121, 130);
+            this.panel11.Location = new System.Drawing.Point(646, 416);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(140, 90);
             this.panel11.TabIndex = 156;
@@ -4730,7 +4714,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(14, 14);
             this.pictureBox2.TabIndex = 334;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             // 
             // pictureBox3
             // 
@@ -4741,7 +4724,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(14, 14);
             this.pictureBox3.TabIndex = 335;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // pictureBox4
             // 
@@ -4752,25 +4734,25 @@
             this.pictureBox4.Size = new System.Drawing.Size(14, 14);
             this.pictureBox4.TabIndex = 336;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
             // 
-            // label85
+            // label84
             // 
-            this.label85.BackColor = System.Drawing.SystemColors.Control;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label85.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label85.Location = new System.Drawing.Point(-4, 345);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(292, 17);
-            this.label85.TabIndex = 319;
-            this.label85.Text = "________________________________";
+            this.label84.BackColor = System.Drawing.SystemColors.Control;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label84.ForeColor = System.Drawing.Color.Black;
+            this.label84.Location = new System.Drawing.Point(63, 57);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(39, 16);
+            this.label84.TabIndex = 334;
+            this.label84.Text = "Slots:";
+            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1204, 648);
+            this.ClientSize = new System.Drawing.Size(1115, 648);
             this.Controls.Add(this.label81);
             this.Controls.Add(this.label78);
             this.Controls.Add(this.label1);
@@ -5030,7 +5012,6 @@
         private CustomButtons.ButtonNoPadding warlockMinusSlotButton;
         private CustomButtons.ButtonNoPadding warlockPlusSlotButton;
         private CustomButtons.ButtonNoPadding WarlockRefillSlotsButton;
-        private System.Windows.Forms.TextBox WarlockSlotsLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private CustomButtons.ButtonNoPadding warlockMinusCurrentSlotButton;
@@ -5265,11 +5246,11 @@
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label81;
         private CustomControls.CustomUpDown preparednumericUpDown;
-        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label warlockSLotsDisplayLabel;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label84;
     }
 }
 

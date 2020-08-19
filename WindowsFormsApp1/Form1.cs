@@ -1981,7 +1981,7 @@ namespace WindowsFormsApp1
                     {
                         warlockSpellSlots[0] = reader.ReadInt32();
                         warlockSpellSlots[1] = reader.ReadInt32();
-                        WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+                        warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
                         warlockSpellLevelnumericUpDown.Value = reader.ReadInt32();
                         Arcanum6checkBox.Checked = reader.ReadBoolean();
                         Arcanum7checkBox.Checked = reader.ReadBoolean();
@@ -2134,7 +2134,7 @@ namespace WindowsFormsApp1
             addModDisplayLabel.Text = "";
             warlockSpellSlots = new int[2];
             warlockSpellLevelnumericUpDown.Value = 0;
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
             Arcanum6checkBox.Checked = false;
             Arcanum7checkBox.Checked = false;
             Arcanum8checkBox.Checked = false;
@@ -2369,12 +2369,12 @@ namespace WindowsFormsApp1
             if (((ComboBox)sender).Text == "None")
             {
                 spellPanel.Visible = false;
-                this.Size = new Size(892, 637);
+                this.Size = new Size(844, 687);
             }
             else
             {
                 spellPanel.Visible = true;
-                this.Size = new Size(1156, 637);
+                this.Size = new Size(1131, 687);
             }
             this.CenterToScreen();
             addModDisplayLabel.Text = "(" + attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]] + ")";
@@ -2398,12 +2398,12 @@ namespace WindowsFormsApp1
             preparednumericUpDown.Visible = prepared;
             if(prepared)
             {
-                spellListPanel.Location = new Point(4, 360);
+                spellListPanel.Location = new Point(2, 360);
                 spellListPanel.Size = new Size(241, 216);
             }
             else
             {
-                spellListPanel.Location = new Point(4, 338);
+                spellListPanel.Location = new Point(2, 338);
                 spellListPanel.Size = new Size(241, 236);
             }
 
@@ -2550,7 +2550,7 @@ namespace WindowsFormsApp1
             preparednumericUpDown.Visible = prepared;
             if (prepared)
             {
-                spellListPanel.Location = new Point(2, 360);
+                spellListPanel.Location = new Point(2, 364);
                 spellListPanel.Size = new Size(272, 216);
             }
             else
@@ -2793,26 +2793,26 @@ namespace WindowsFormsApp1
         private void warlockPlusSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[1]++;
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
         }
         //max
         private void warlockMinusSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[1] = Math.Max(warlockSpellSlots[1] - 1, 0);
             warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0], warlockSpellSlots[1]); //move current slot down if higher than max
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
         }
 
         private void warlockPlusCurrentSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0] + 1, warlockSpellSlots[1]);
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
         }
 
         private void warlockMinusCurrentSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[0] = Math.Max(warlockSpellSlots[0] - 1, 0);
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
         }
         #endregion
 
@@ -2830,7 +2830,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < 4; i++)
                 usedArcanums[i] = false;
             warlockSpellSlots[0] = warlockSpellSlots[1];
-            WarlockSlotsLabel.Text = $"Slots:\n {warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
             Arcanum6checkBox.Checked = false;
             Arcanum7checkBox.Checked = false;
             Arcanum8checkBox.Checked = false;
