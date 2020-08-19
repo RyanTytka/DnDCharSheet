@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
 
             saveButton.Enabled = false;
 
-            classModifierTypes = new int[] { 3, 5, 4, 4, 3, 4, 4, 3, 5, 5, 3 };
+            classModifierTypes = new int[] { 3, 5, 4, 4, 3, 5, 4, 3, 5, 5, 3 };
             prepareSpells = new bool[] { true, false, true, true, false, true, false, false, false, false, true };
             preparedSpells = new List<int>();
             usedArcanums = new bool[4];
@@ -230,6 +230,10 @@ namespace WindowsFormsApp1
             box.MouseDoubleClick += copperTextbox_DoubleClick;
             box.KeyDown += copperTextbox_KeyPress;
             box.Tag = "3";
+
+            //spell bonuses
+            getBox(spellAtkBonusnumUpDown.Controls[0]).TextChanged += UpdateProficiencies;
+            getBox(spellsavedcnumupdown.Controls[0]).TextChanged += UpdateProficiencies;
 
             #endregion
         }
@@ -408,6 +412,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             strModLabel.Text = sign + statMods[0];
+            UpdateProficiencies(sender, null);
         }
         private void dexModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -419,6 +424,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             dexmodlabel.Text = sign + statMods[1];
+            UpdateProficiencies(sender, null);
         }
         private void conModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -430,6 +436,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             conmodlabel.Text = sign + statMods[2];
+            UpdateProficiencies(sender, null);
         }
         private void intModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -441,6 +448,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             intmodlabel.Text = sign + statMods[3];
+            UpdateProficiencies(sender, null);
         }
         private void wisModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -452,6 +460,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             wismodlabel.Text = sign + statMods[4];
+            UpdateProficiencies(sender, null);
         }
         private void chrModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -463,6 +472,7 @@ namespace WindowsFormsApp1
                 sign = "+";
 
             charmodlabel.Text = sign + statMods[5];
+            UpdateProficiencies(sender, null);
         }
 
         #endregion
@@ -2352,7 +2362,7 @@ namespace WindowsFormsApp1
 
         #region Spells
 
-        //resize form1 to show/hide spells tab
+        //when spell class is selected
         private void ChangeSpellType(object sender, EventArgs e)
         {
             classSpellType = spellTypeDropdown.SelectedIndex;
@@ -2368,6 +2378,7 @@ namespace WindowsFormsApp1
             }
             this.CenterToScreen();
             addModDisplayLabel.Text = "(" + attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]] + ")";
+            spellcastingAbilityDisplayLabel.Text = attributeNames[classModifierTypes[Math.Max(classSpellType - 1, 0)]];
             //warlock
             warlockSpellPanel.Visible = ((ComboBox)sender).Text == "Warlock";
 
@@ -2387,12 +2398,12 @@ namespace WindowsFormsApp1
             preparednumericUpDown.Visible = prepared;
             if(prepared)
             {
-                spellListPanel.Location = new Point(4, 342);
+                spellListPanel.Location = new Point(4, 360);
                 spellListPanel.Size = new Size(241, 216);
             }
             else
             {
-                spellListPanel.Location = new Point(4, 322);
+                spellListPanel.Location = new Point(4, 338);
                 spellListPanel.Size = new Size(241, 236);
             }
 
@@ -2402,6 +2413,7 @@ namespace WindowsFormsApp1
             spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
         }
 
+        /*
         private void SpellDescriptionShow(object sender, EventArgs e)
         {
             if (Spells[currentSpell].Description == "")
@@ -2419,11 +2431,14 @@ namespace WindowsFormsApp1
             int xPos = Math.Max( Math.Min(113, 235 - spellDescriptionTextbox.Width), 11);
             spellDescriptionTextbox.Location = new Point(xPos, 300);
         }
+        */
 
-        private void SpellDescriptionHide(object sender, EventArgs e)
+
+        //open form with spell info
+        private void SpellDescriptionButton_Click(object sender, EventArgs e)
         {
-            spellDescriptionTextbox.Visible = false;
-            spellDesLabel.BackColor = Color.Gainsboro;
+            SpellInfoDisplay info = new SpellInfoDisplay(Spells[currentSpell]);
+            info.Show();
         }
 
         //open spell menu to select spell to edit
@@ -2535,13 +2550,13 @@ namespace WindowsFormsApp1
             preparednumericUpDown.Visible = prepared;
             if (prepared)
             {
-                spellListPanel.Location = new Point(4, 342);
-                spellListPanel.Size = new Size(241, 216);
+                spellListPanel.Location = new Point(2, 360);
+                spellListPanel.Size = new Size(272, 216);
             }
             else
             {
-                spellListPanel.Location = new Point(4, 322);
-                spellListPanel.Size = new Size(241, 236);
+                spellListPanel.Location = new Point(2, 338);
+                spellListPanel.Size = new Size(272, 236);
             }
             spellListLabel.Text = "Level " + currentSpellLevel + " Spells";
             if (currentSpellLevel == 0)
@@ -2556,7 +2571,7 @@ namespace WindowsFormsApp1
             rangelabel.Enabled = false;
             durationlabel.Enabled = false;
             componentlabel.Enabled = false;
-            spellDesLabel.Enabled = false;
+            SpellDescriptionButton.Enabled = false;
             castTimedisplaylabel.Text = "";
             rangeDisplaylabel.Text = "";
             DurationDisplaylabel.Text = "";
@@ -2583,13 +2598,14 @@ namespace WindowsFormsApp1
                     rangelabel.Enabled = true;
                     durationlabel.Enabled = true;
                     componentlabel.Enabled = true;
-                    spellDesLabel.Enabled = true;
+                    SpellDescriptionButton.Enabled = true;
                     //add new control
-                    RadioButton newButton = new RadioButton();
+                    CustomControls.CustomRadioButton newButton = new CustomControls.CustomRadioButton();
                     newButton.Text = FindSpellFromID(KnownSpells[i]).Name;
+                    newButton.Height = 18;
                     newButton.Width = 300;
                     newButton.Tag = Spells.IndexOf(FindSpellFromID(KnownSpells[i]));   //adds the spells index in spells to the tag
-                    int xPos = 5;
+                    int xPos = 8;
                     if (currentSpellLevel > 0 && prepareSpells[classSpellType - 1])
                         xPos = 22;
                     newButton.Location = new Point(xPos, spellsDisplayed * 20 + 5);
@@ -2601,19 +2617,17 @@ namespace WindowsFormsApp1
                     if(currentSpellLevel > 0 && prepareSpells[classSpellType - 1])
                     {
                         //create checkBox
-                        CheckBox newCheck = new CheckBox();
-                        newCheck.ThreeState = true;
-                        newCheck.Text = "";
-                        newCheck.Tag = KnownSpells[i];
-                        newCheck.Checked = preparedSpells.Contains(KnownSpells[i]);
-                        if (alwaysPreparedSpells.Contains(KnownSpells[i]))
-                            newCheck.CheckState = CheckState.Indeterminate;
-                        newCheck.CheckStateChanged += ChangePrepared;
-                        newCheck.Location = new Point(5, spellsDisplayed * 20 + 5);
-                        //add to lists
-                        spellListPanel.Controls.Add(newCheck);
-                        //spellRadioButtons.Add(newButton);
-
+                        CustomControls.CustomPreparedCheck check = new CustomControls.CustomPreparedCheck();
+                        check.Tag = KnownSpells[i];
+                        if(preparedSpells.Contains(KnownSpells[i]))
+                            check.SetState(CheckState.Checked);
+                        else if (alwaysPreparedSpells.Contains(KnownSpells[i]))
+                            check.SetState(CheckState.Indeterminate);
+                        else
+                            check.SetState(CheckState.Unchecked);
+                        check.TabIndexChanged += ChangePrepared;
+                        check.Location = new Point(2, spellsDisplayed * 20 + 6);
+                        spellListPanel.Controls.Add(check);
                     }
                     spellsDisplayed++;
                 }
@@ -2639,13 +2653,13 @@ namespace WindowsFormsApp1
         //add or remove the id from preparedSpells when the checkbox is clicked
         private void ChangePrepared(object sender, EventArgs e)
         {
-            int id = int.Parse(((CheckBox)sender).Tag.ToString());
-            if (((CheckBox)sender).CheckState == CheckState.Checked)
+            int id = int.Parse(((CustomControls.CustomPreparedCheck)sender).Tag.ToString());
+            if (((CustomControls.CustomPreparedCheck)sender).State == 1)
             {
                 preparedSpells.Add(id);
                 alwaysPreparedSpells.Remove(id);
             }
-            else if (((CheckBox)sender).CheckState == CheckState.Indeterminate)
+            else if (((CustomControls.CustomPreparedCheck)sender).State == 2)
             {
                 preparedSpells.Remove(id);
                 alwaysPreparedSpells.Add(id);
@@ -2693,7 +2707,6 @@ namespace WindowsFormsApp1
                 multiplierDicedisplaylabel.Text = " n/a";
             miscBonuslabel.Enabled = s.Rolls.Count > 0;
             otherBonusnumericUpDown.Enabled = s.Rolls.Count > 0;
-            spellDescriptionTextbox.Text = s.Description;
         }
 
         public void SetSpell(Spell s, int id)
@@ -3102,8 +3115,6 @@ namespace WindowsFormsApp1
             DeathFail3.Visible = false;
             deathSaveRollButton.Enabled = true;
         }
-
-
         #endregion
 
         #region Misc Rolls

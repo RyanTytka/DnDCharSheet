@@ -71,6 +71,12 @@
     <Compile Include="CustomControls\CustomCheckedList.Designer.cs">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomPreparedCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomPreparedCheck.Designer.cs">
+      <DependentUpon>CustomPreparedCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\CustomRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -139,6 +145,12 @@
       <DependentUpon>NoPaddingButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Spell.cs" />
+    <Compile Include="SpellInfoDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellInfoDisplay.Designer.cs">
+      <DependentUpon>SpellInfoDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpellMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,9 @@
     <EmbeddedResource Include="CustomControls\CustomCheckedList.resx">
       <DependentUpon>CustomCheckedList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomPreparedCheck.resx">
+      <DependentUpon>CustomPreparedCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\CustomUpDown.resx">
       <DependentUpon>CustomUpDown.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creation Forms\SpellCreationForm.resx">
       <DependentUpon>SpellCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellInfoDisplay.resx">
+      <DependentUpon>SpellInfoDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SpellMenu.resx">
       <DependentUpon>SpellMenu.cs</DependentUpon>
@@ -264,6 +282,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dmgIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
