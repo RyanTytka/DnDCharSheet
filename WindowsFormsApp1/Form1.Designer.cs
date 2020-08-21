@@ -98,15 +98,11 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.backgroundtextBox = new System.Windows.Forms.TextBox();
-            this.AlignmenttextBox = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.featDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
-            this.nameLabel = new System.Windows.Forms.TextBox();
-            this.levelTextBox = new System.Windows.Forms.TextBox();
             this.spellPanel = new System.Windows.Forms.Panel();
             this.spellListPanel = new System.Windows.Forms.Panel();
             this.label80 = new System.Windows.Forms.Label();
@@ -165,17 +161,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.miscRollNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.MiscRollflatnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.miscRollDropDown = new System.Windows.Forms.ComboBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.raceTextBox = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label83 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -314,12 +304,12 @@
             this.strUpButton = new CustomButtons.ButtonNoPadding();
             this.strProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.profUpButton = new CustomButtons.ButtonNoPadding();
-            this.customTextBox1name = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1levelClass = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.nameTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.levelTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.BackgroundInfobutton = new CustomButtons.ButtonNoPadding();
-            this.customTextBox3alignment = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox2background = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
-            this.customTextBox1race = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.alignmentTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.backgroundTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.raceTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.tempHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.maxHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.currentHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
@@ -377,6 +367,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label84 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
@@ -394,7 +387,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
-            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
@@ -407,6 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -1331,30 +1324,6 @@
             this.panel5.Size = new System.Drawing.Size(212, 41);
             this.panel5.TabIndex = 157;
             // 
-            // backgroundtextBox
-            // 
-            this.backgroundtextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.backgroundtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.backgroundtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.backgroundtextBox.Location = new System.Drawing.Point(73, 56);
-            this.backgroundtextBox.Name = "backgroundtextBox";
-            this.backgroundtextBox.Size = new System.Drawing.Size(116, 14);
-            this.backgroundtextBox.TabIndex = 161;
-            this.backgroundtextBox.Text = "Click to Edit";
-            this.backgroundtextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
-            // AlignmenttextBox
-            // 
-            this.AlignmenttextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.AlignmenttextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AlignmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.AlignmenttextBox.Location = new System.Drawing.Point(73, 71);
-            this.AlignmenttextBox.Name = "AlignmenttextBox";
-            this.AlignmenttextBox.Size = new System.Drawing.Size(117, 14);
-            this.AlignmenttextBox.TabIndex = 162;
-            this.AlignmenttextBox.Text = "Click to Edit";
-            this.AlignmenttextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -1424,32 +1393,6 @@
             this.spellTypeDropdown.Size = new System.Drawing.Size(90, 21);
             this.spellTypeDropdown.TabIndex = 175;
             this.spellTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.ChangeSpellType);
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.nameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.nameLabel.Location = new System.Drawing.Point(5, 14);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(202, 22);
-            this.nameLabel.TabIndex = 166;
-            this.nameLabel.Text = "Character Name";
-            this.nameLabel.TextChanged += new System.EventHandler(this.nameLabel_TextChanged);
-            // 
-            // levelTextBox
-            // 
-            this.levelTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.levelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.levelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelTextBox.Location = new System.Drawing.Point(229, 74);
-            this.levelTextBox.Multiline = true;
-            this.levelTextBox.Name = "levelTextBox";
-            this.levelTextBox.Size = new System.Drawing.Size(202, 14);
-            this.levelTextBox.TabIndex = 167;
-            this.levelTextBox.Text = "Level / Class";
-            this.levelTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
             // spellPanel
             // 
@@ -2202,7 +2145,7 @@
             // miscRollAmountnumericUpDown
             // 
             this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(489, 499);
+            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(67, 5);
             this.miscRollAmountnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2224,22 +2167,12 @@
             this.miscRollAmountnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
             this.miscRollAmountnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(461, 472);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 194;
-            this.label6.Text = "Misc Roll";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(532, 500);
+            this.label10.Location = new System.Drawing.Point(110, 6);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 17);
             this.label10.TabIndex = 223;
@@ -2248,7 +2181,7 @@
             // miscRollNumnumericUpDown
             // 
             this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(550, 499);
+            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(128, 5);
             this.miscRollNumnumericUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2275,7 +2208,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(523, 528);
+            this.label11.Location = new System.Drawing.Point(101, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 15);
             this.label11.TabIndex = 225;
@@ -2284,7 +2217,7 @@
             // MiscRollflatnumericUpDown
             // 
             this.MiscRollflatnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(489, 525);
+            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(67, 30);
             this.MiscRollflatnumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2310,74 +2243,10 @@
             "None",
             "Advantage",
             "Disadvantage"});
-            this.miscRollDropDown.Location = new System.Drawing.Point(414, 526);
+            this.miscRollDropDown.Location = new System.Drawing.Point(-1, 31);
             this.miscRollDropDown.Name = "miscRollDropDown";
             this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
             this.miscRollDropDown.TabIndex = 193;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Controls.Add(this.label17);
-            this.panel11.Controls.Add(this.label16);
-            this.panel11.Controls.Add(this.raceTextBox);
-            this.panel11.Controls.Add(this.backgroundtextBox);
-            this.panel11.Controls.Add(this.AlignmenttextBox);
-            this.panel11.Controls.Add(this.nameLabel);
-            this.panel11.Controls.Add(this.levelTextBox);
-            this.panel11.Location = new System.Drawing.Point(646, 416);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(140, 90);
-            this.panel11.TabIndex = 156;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.Control;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(11, 72);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 13);
-            this.label18.TabIndex = 226;
-            this.label18.Text = "Alignment";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.Control;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(-1, 58);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 13);
-            this.label17.TabIndex = 225;
-            this.label17.Text = "Background";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.Control;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(36, 45);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 224;
-            this.label16.Text = "Race";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // raceTextBox
-            // 
-            this.raceTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.raceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.raceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.raceTextBox.Location = new System.Drawing.Point(73, 42);
-            this.raceTextBox.Name = "raceTextBox";
-            this.raceTextBox.Size = new System.Drawing.Size(116, 14);
-            this.raceTextBox.TabIndex = 109;
-            this.raceTextBox.Text = "Click to Edit";
-            this.raceTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
             // panel12
             // 
@@ -2882,7 +2751,6 @@
             this.initiativeLabel.Name = "initiativeLabel";
             this.initiativeLabel.Size = new System.Drawing.Size(48, 28);
             this.initiativeLabel.TabIndex = 294;
-            this.initiativeLabel.Text = "20";
             this.initiativeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label67
@@ -3150,7 +3018,7 @@
             this.label81.AutoSize = true;
             this.label81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
-            this.label81.Location = new System.Drawing.Point(721, 39);
+            this.label81.Location = new System.Drawing.Point(771, 4);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(12, 11);
             this.label81.TabIndex = 333;
@@ -4046,19 +3914,19 @@
             this.profUpButton.UseVisualStyleBackColor = true;
             this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
             // 
-            // customTextBox1name
+            // nameTextBox
             // 
-            this.customTextBox1name.Location = new System.Drawing.Point(5, 5);
-            this.customTextBox1name.Name = "customTextBox1name";
-            this.customTextBox1name.Size = new System.Drawing.Size(209, 22);
-            this.customTextBox1name.TabIndex = 245;
+            this.nameTextBox.Location = new System.Drawing.Point(5, 5);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(209, 22);
+            this.nameTextBox.TabIndex = 245;
             // 
-            // customTextBox1levelClass
+            // levelTextBox
             // 
-            this.customTextBox1levelClass.Location = new System.Drawing.Point(4, 34);
-            this.customTextBox1levelClass.Name = "customTextBox1levelClass";
-            this.customTextBox1levelClass.Size = new System.Drawing.Size(209, 14);
-            this.customTextBox1levelClass.TabIndex = 244;
+            this.levelTextBox.Location = new System.Drawing.Point(4, 34);
+            this.levelTextBox.Name = "levelTextBox";
+            this.levelTextBox.Size = new System.Drawing.Size(209, 14);
+            this.levelTextBox.TabIndex = 244;
             // 
             // BackgroundInfobutton
             // 
@@ -4071,26 +3939,26 @@
             this.BackgroundInfobutton.UseVisualStyleBackColor = true;
             this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
             // 
-            // customTextBox3alignment
+            // alignmentTextbox
             // 
-            this.customTextBox3alignment.Location = new System.Drawing.Point(141, 55);
-            this.customTextBox3alignment.Name = "customTextBox3alignment";
-            this.customTextBox3alignment.Size = new System.Drawing.Size(72, 14);
-            this.customTextBox3alignment.TabIndex = 243;
+            this.alignmentTextbox.Location = new System.Drawing.Point(141, 55);
+            this.alignmentTextbox.Name = "alignmentTextbox";
+            this.alignmentTextbox.Size = new System.Drawing.Size(72, 14);
+            this.alignmentTextbox.TabIndex = 243;
             // 
-            // customTextBox2background
+            // backgroundTextbox
             // 
-            this.customTextBox2background.Location = new System.Drawing.Point(75, 55);
-            this.customTextBox2background.Name = "customTextBox2background";
-            this.customTextBox2background.Size = new System.Drawing.Size(62, 14);
-            this.customTextBox2background.TabIndex = 242;
+            this.backgroundTextbox.Location = new System.Drawing.Point(75, 55);
+            this.backgroundTextbox.Name = "backgroundTextbox";
+            this.backgroundTextbox.Size = new System.Drawing.Size(62, 14);
+            this.backgroundTextbox.TabIndex = 242;
             // 
-            // customTextBox1race
+            // raceTextbox
             // 
-            this.customTextBox1race.Location = new System.Drawing.Point(5, 55);
-            this.customTextBox1race.Name = "customTextBox1race";
-            this.customTextBox1race.Size = new System.Drawing.Size(66, 14);
-            this.customTextBox1race.TabIndex = 239;
+            this.raceTextbox.Location = new System.Drawing.Point(5, 55);
+            this.raceTextbox.Name = "raceTextbox";
+            this.raceTextbox.Size = new System.Drawing.Size(66, 14);
+            this.raceTextbox.TabIndex = 239;
             // 
             // tempHPTextbox
             // 
@@ -4125,7 +3993,7 @@
             this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(409, 497);
+            this.miscRollbutton.Location = new System.Drawing.Point(0, 3);
             this.miscRollbutton.Name = "miscRollbutton";
             this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
             this.miscRollbutton.TabIndex = 193;
@@ -4747,12 +4615,51 @@
             this.label84.Text = "Slots:";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(414, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 20);
+            this.label6.TabIndex = 334;
+            this.label6.Text = "Misc Roll";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.SystemColors.Control;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(-4, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(191, 17);
+            this.label16.TabIndex = 319;
+            this.label16.Text = "_____________________";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.miscRollAmountnumericUpDown);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.miscRollNumnumericUpDown);
+            this.panel1.Controls.Add(this.miscRollbutton);
+            this.panel1.Controls.Add(this.MiscRollflatnumericUpDown);
+            this.panel1.Controls.Add(this.miscRollDropDown);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Location = new System.Drawing.Point(414, 489);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(174, 58);
+            this.panel1.TabIndex = 335;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1115, 648);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label81);
             this.Controls.Add(this.label78);
             this.Controls.Add(this.label1);
@@ -4807,23 +4714,17 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.profUpButton);
-            this.Controls.Add(this.customTextBox1name);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.spellTypeDropdown);
             this.Controls.Add(this.profBonusLabel);
-            this.Controls.Add(this.customTextBox1levelClass);
+            this.Controls.Add(this.levelTextBox);
             this.Controls.Add(this.BackgroundInfobutton);
-            this.Controls.Add(this.customTextBox3alignment);
-            this.Controls.Add(this.customTextBox2background);
-            this.Controls.Add(this.customTextBox1race);
+            this.Controls.Add(this.alignmentTextbox);
+            this.Controls.Add(this.backgroundTextbox);
+            this.Controls.Add(this.raceTextbox);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.profLabel);
             this.Controls.Add(this.proficienciesCheckBoxes);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.miscRollDropDown);
-            this.Controls.Add(this.MiscRollflatnumericUpDown);
-            this.Controls.Add(this.miscRollbutton);
-            this.Controls.Add(this.miscRollNumnumericUpDown);
-            this.Controls.Add(this.miscRollAmountnumericUpDown);
             this.Controls.Add(this.spellPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.InventoryTextBox);
@@ -4831,9 +4732,6 @@
             this.Controls.Add(this.profPanel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputTextBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label51);
@@ -4880,8 +4778,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -4896,6 +4792,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4956,8 +4854,6 @@
         private CustomButtons.ButtonNoPadding InitiativeRollButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox backgroundtextBox;
-        private System.Windows.Forms.TextBox AlignmenttextBox;
         private System.Windows.Forms.TextBox featDescriptionTextbox;
         private CustomButtons.ButtonNoPadding newFeatButton;
         private CustomButtons.ButtonNoPadding featRollButton;
@@ -4966,8 +4862,6 @@
         private System.Windows.Forms.Label label4;
         private CustomButtons.ButtonNoPadding saveButton;
         private CustomButtons.ButtonNoPadding SaveAsButton;
-        private System.Windows.Forms.TextBox nameLabel;
-        private System.Windows.Forms.TextBox levelTextBox;
         private CustomButtons.ButtonNoPadding loadButton;
         private CustomButtons.ButtonNoPadding newCharButton;
         private CustomButtons.ButtonNoPadding featLongRestButton;
@@ -5033,7 +4927,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.NumericUpDown miscRollAmountnumericUpDown;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown miscRollNumnumericUpDown;
         private CustomButtons.ButtonNoPadding miscRollbutton;
@@ -5043,12 +4936,8 @@
         private CustomButtons.ButtonNoPadding exportButton;
         private CustomButtons.ButtonNoPadding importButton;
         private CustomButtons.ButtonNoPadding BackgroundInfobutton;
-        private System.Windows.Forms.Panel panel11;
         private CustomButtons.ButtonNoPadding settingsButton;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
@@ -5087,12 +4976,11 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
-        private CustomControls.CustomTextBoxLeft customTextBox1race;
-        private CustomControls.CustomTextBoxLeft customTextBox2background;
-        private CustomControls.CustomTextBoxLeft customTextBox3alignment;
-        private System.Windows.Forms.TextBox raceTextBox;
-        private CustomControls.CustomTextBoxLeft customTextBox1levelClass;
-        private CustomControls.CustomTextBoxLeft customTextBox1name;
+        private CustomControls.CustomTextBoxLeft raceTextbox;
+        private CustomControls.CustomTextBoxLeft backgroundTextbox;
+        private CustomControls.CustomTextBoxLeft alignmentTextbox;
+        private CustomControls.CustomTextBoxLeft levelTextBox;
+        private CustomControls.CustomTextBoxLeft nameTextBox;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label strModLabel;
@@ -5251,6 +5139,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

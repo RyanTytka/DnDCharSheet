@@ -174,26 +174,26 @@ namespace WindowsFormsApp1
             box.LostFocus += ClearText;
 
             //name/class
-            box = (customTextBox1name.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box = (nameTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Character Name";
             box.FontSize = 18;
             box.FontWeight = System.Windows.FontWeights.Bold;
             box.Foreground = redBrush;
 
-            box = (customTextBox1levelClass.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box = (levelTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Level / Class";
             box.FontSize = 12;
             box.FontWeight = System.Windows.FontWeights.Bold;
 
-            box = (customTextBox1race.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box = (raceTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Background";
             box.FontSize = 10;
 
-            box = (customTextBox2background.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box = (backgroundTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Race";
             box.FontSize = 10;
 
-            box = (customTextBox3alignment.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            box = (alignmentTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Alignment";
             box.FontSize = 10;
 
@@ -211,24 +211,28 @@ namespace WindowsFormsApp1
             box.FontSize = 10;
             box.MouseDoubleClick += copperTextbox_DoubleClick;
             box.KeyDown += copperTextbox_KeyPress;
+            box.Text = "0";
             box.Tag = "0";
 
             box = getBox(silverTextbox);
             box.FontSize = 10;
             box.MouseDoubleClick += copperTextbox_DoubleClick;
             box.KeyDown += copperTextbox_KeyPress;
+            box.Text = "0";
             box.Tag = "1";
 
             box = getBox(goldTextbox);
             box.FontSize = 10;
             box.MouseDoubleClick += copperTextbox_DoubleClick;
             box.KeyDown += copperTextbox_KeyPress;
+            box.Text = "0";
             box.Tag = "2";
 
             box = getBox(platTextbox);
             box.FontSize = 10;
             box.MouseDoubleClick += copperTextbox_DoubleClick;
             box.KeyDown += copperTextbox_KeyPress;
+            box.Text = "0";
             box.Tag = "3";
 
             //spell bonuses
@@ -1559,7 +1563,7 @@ namespace WindowsFormsApp1
                 Stream outStream = File.OpenWrite(saveFilePath);
                 BinaryWriter output = new BinaryWriter(outStream);
                 //save data into file
-                output.Write(nameLabel.Text);               //char name
+                output.Write(getBox(nameTextBox).Text);               //char name
                 output.Write(levelTextBox.Text);            //char level/class
                 //stats
                 output.Write(strLabel.Text);
@@ -1577,10 +1581,10 @@ namespace WindowsFormsApp1
                 output.Write(charProf.Checked);
                 //
                 output.Write(profBonus);           //proficiency bonus
-                output.Write(raceTextBox.Text);             //race 
-                output.Write(backgroundtextBox.Text);       //background
-                output.Write(AlignmenttextBox.Text);        //alignment
-                output.Write(((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox).Text);  //speed
+                output.Write(getBox(raceTextbox).Text);             //race 
+                output.Write(getBox(backgroundTextbox).Text);       //background
+                output.Write(getBox(alignmentTextbox).Text);        //alignment
+                output.Write(getBox(speedTextBox).Text);  //speed
                 //proficiencies
                 for (int i = 0; i < 23; i++)
                     output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
@@ -1588,8 +1592,10 @@ namespace WindowsFormsApp1
                     output.Write(profCheckshalf.GetItemChecked(i));         //half prof
                 for (int i = 0; i < 23; i++)
                     output.Write(profChecksX2.GetItemChecked(i));           //expertise
-                //
-                output.Write(initiativeNumUpDown.Value.ToString());                //initiative misc bonus
+                //Initiative
+                output.Write(initiativeNumUpDown.Value.ToString());     //misc bonus
+                output.Write(initiativeLabel.Text);                     
+                output.Write(initiativeAdvCheckbox.Checked);
                 //armor class
                 output.Write(getBox(ACarmorTextbox).Text);
                 output.Write(getBox(DexarmorTextbox).Text);
@@ -1751,6 +1757,18 @@ namespace WindowsFormsApp1
                 {
                     output.Write(s);
                 }
+                //money
+                output.Write(getBox(copperTextbox).Text);
+                output.Write(getBox(silverTextbox).Text);
+                output.Write(getBox(goldTextbox).Text);
+                output.Write(getBox(platTextbox).Text);
+                //death saves
+                output.Write(DeathPass1.Visible);
+                output.Write(DeathPass2.Visible);
+                output.Write(DeathPass3.Visible);
+                output.Write(DeathFail1.Visible);
+                output.Write(DeathFail2.Visible);
+                output.Write(DeathFail3.Visible);
 
                 saveButton.Enabled = true;
                 if (!saved)
@@ -1772,7 +1790,7 @@ namespace WindowsFormsApp1
             {
                 Stream inStream = File.OpenRead(filePath);
                 BinaryReader reader = new BinaryReader(inStream);
-                nameLabel.Text = reader.ReadString();       //char name
+                getBox(nameTextBox).Text = reader.ReadString();       //char name
                 levelTextBox.Text = reader.ReadString();    //char level/class
                 //stats
                 strLabel.Text = reader.ReadString();
@@ -1791,9 +1809,10 @@ namespace WindowsFormsApp1
                 //
                 profBonus = reader.ReadInt32();      //proficiency bonus
                 profBonusLabel.Text = profBonus.ToString();
-                raceTextBox.Text = reader.ReadString();         //race
-                backgroundtextBox.Text = reader.ReadString();   //background
-                AlignmenttextBox.Text = reader.ReadString();    //alignment
+                getBox(raceTextbox).Text = reader.ReadString();         //race
+                getBox(backgroundTextbox).Text = reader.ReadString();   //background
+                getBox(alignmentTextbox).Text = reader.ReadString();    //alignment
+                getBox(speedTextBox).Text = reader.ReadString();
                 //proficiencies
                 for (int i = 0; i < 23; i++)
                     ProficienciesChecks.SetItemChecked(i, reader.ReadBoolean());    //normal prof
@@ -1801,8 +1820,10 @@ namespace WindowsFormsApp1
                     profCheckshalf.SetItemChecked(i, reader.ReadBoolean());         //half prof
                 for (int i = 0; i < 23; i++)
                     profChecksX2.SetItemChecked(i, reader.ReadBoolean());           //expertise
-                //
-                initiativeNumUpDown.Value = int.Parse(reader.ReadString());                    //initiative misc bonus
+                //Initiative
+                initiativeNumUpDown.Value = int.Parse(reader.ReadString());     //misc bonus
+                initiativeLabel.Text = reader.ReadString();
+                initiativeAdvCheckbox.Checked = reader.ReadBoolean();
                 //armor class
                 getBox(ACarmorTextbox).Text = reader.ReadString();
                 getBox(DexarmorTextbox).Text = reader.ReadString();
@@ -2011,11 +2032,23 @@ namespace WindowsFormsApp1
                 {
                     charInfo[i] = reader.ReadString();
                 }
+                //money
+                getBox(copperTextbox).Text = reader.ReadString();
+                getBox(silverTextbox).Text = reader.ReadString();
+                getBox(goldTextbox).Text = reader.ReadString();
+                getBox(platTextbox).Text = reader.ReadString();
+                //death saves
+                DeathPass1.Visible = reader.ReadBoolean();
+                DeathPass2.Visible = reader.ReadBoolean();
+                DeathPass3.Visible = reader.ReadBoolean();
+                DeathFail1.Visible = reader.ReadBoolean();
+                DeathFail2.Visible = reader.ReadBoolean();
+                DeathFail3.Visible = reader.ReadBoolean();
 
                 UpdateProficiencies(null, null); // Update Expertise and half prof
                 saveButton.Enabled = true;
                 saved = true;
-                this.Text = nameLabel.Text + " Character sheet";
+                this.Text = getBox(nameTextBox).Text + " Character sheet";
                 fileName = filePath;
                 reader.Close();
             }
@@ -2041,9 +2074,9 @@ namespace WindowsFormsApp1
             profBonus = 2;
             profBonusLabel.Text = "2";
             ((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox).Text = "";
-            raceTextBox.Text = "Click to Edit";
-            backgroundtextBox.Text = "Click to Edit";
-            AlignmenttextBox.Text = "Click to Edit";
+            getBox(raceTextbox).Text = "Race";
+            getBox(backgroundTextbox).Text = "Background";
+            getBox(alignmentTextbox).Text = "Alignment";
             for (int i = 0; i < 23; i++)
                 ProficienciesChecks.SetItemChecked(i, false);
             for (int i = 0; i < 23; i++)
@@ -2052,6 +2085,7 @@ namespace WindowsFormsApp1
                 profChecksX2.SetItemChecked(i, false);
             initiativeNumUpDown.Value = 0;
             initiativeLabel.Text = "";
+            initiativeAdvCheckbox.Checked = false;
             getBox(ACarmorTextbox).Text = "10";
             ACDisplayLabel.Text = "10";
             getBox(DexarmorTextbox).Text = "";
@@ -2067,7 +2101,7 @@ namespace WindowsFormsApp1
             d8NumUpDown.Value = 0;
             d10NumUpDown.Value = 0;
             d12NumUpDown.Value = 0;
-            nameLabel.Text = "Character Name";
+            getBox(nameTextBox).Text = "Character Name";
             levelTextBox.Text = "Level / Class";
             weaponPropTextBox.Text = "";
             //buttons
@@ -2155,6 +2189,13 @@ namespace WindowsFormsApp1
             {
                 charInfo[i] = "";
             }
+            //death saves
+            DeathPass1.Visible = false;
+            DeathPass2.Visible = false;
+            DeathPass3.Visible = false;
+            DeathFail1.Visible = false;
+            DeathFail2.Visible = false;
+            DeathFail3.Visible = false;
 
             saveButton.Enabled = false;
         }
@@ -2276,7 +2317,7 @@ namespace WindowsFormsApp1
         private void nameLabel_TextChanged(object sender, EventArgs e)
         {
             saved = false;
-            this.Text = nameLabel.Text + " Character sheet *";
+            this.Text = getBox(nameTextBox).Text + " Character sheet *";
         }
 
 
@@ -3046,7 +3087,7 @@ namespace WindowsFormsApp1
             UpdateOutput("Death save roll: " + roll);
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
 
-            if (roll > 10)
+            if (roll >= 10)
             {
                 if (!DeathPass1.Visible)
                 {
