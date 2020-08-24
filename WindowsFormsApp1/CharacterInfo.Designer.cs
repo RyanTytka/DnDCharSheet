@@ -134,6 +134,7 @@
             this.setPicButton.Name = "setPicButton";
             this.setPicButton.Size = new System.Drawing.Size(75, 18);
             this.setPicButton.TabIndex = 18;
+            this.setPicButton.TabStop = false;
             this.setPicButton.Text = "Set Picture";
             this.setPicButton.UseVisualStyleBackColor = true;
             this.setPicButton.Click += new System.EventHandler(this.setPicButton_Click);

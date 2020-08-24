@@ -114,6 +114,7 @@
             this.finessCheckBox.Name = "finessCheckBox";
             this.finessCheckBox.Size = new System.Drawing.Size(62, 17);
             this.finessCheckBox.TabIndex = 25;
+            this.finessCheckBox.TabStop = false;
             this.finessCheckBox.Text = "Finesse";
             this.finessCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -124,6 +125,7 @@
             this.profCheckBox.Name = "profCheckBox";
             this.profCheckBox.Size = new System.Drawing.Size(70, 17);
             this.profCheckBox.TabIndex = 24;
+            this.profCheckBox.TabStop = false;
             this.profCheckBox.Text = "Proficient";
             this.profCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -135,6 +137,7 @@
             this.editDamageButton.Name = "editDamageButton";
             this.editDamageButton.Size = new System.Drawing.Size(29, 18);
             this.editDamageButton.TabIndex = 22;
+            this.editDamageButton.TabStop = false;
             this.editDamageButton.Text = "set";
             this.editDamageButton.UseVisualStyleBackColor = true;
             this.editDamageButton.Click += new System.EventHandler(this.editDamageButton_Click);
@@ -144,7 +147,7 @@
             this.props.Location = new System.Drawing.Point(11, 129);
             this.props.Name = "props";
             this.props.Size = new System.Drawing.Size(99, 105);
-            this.props.TabIndex = 26;
+            this.props.TabIndex = 2;
             // 
             // atkRadioButton
             // 
@@ -153,7 +156,6 @@
             this.atkRadioButton.Name = "atkRadioButton";
             this.atkRadioButton.Size = new System.Drawing.Size(82, 17);
             this.atkRadioButton.TabIndex = 27;
-            this.atkRadioButton.TabStop = true;
             this.atkRadioButton.Text = "Attack Rolls";
             this.atkRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -164,7 +166,6 @@
             this.dmgRadioButton.Name = "dmgRadioButton";
             this.dmgRadioButton.Size = new System.Drawing.Size(91, 17);
             this.dmgRadioButton.TabIndex = 28;
-            this.dmgRadioButton.TabStop = true;
             this.dmgRadioButton.Text = "Damage Rolls";
             this.dmgRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +176,6 @@
             this.bothRadioButton.Name = "bothRadioButton";
             this.bothRadioButton.Size = new System.Drawing.Size(47, 17);
             this.bothRadioButton.TabIndex = 29;
-            this.bothRadioButton.TabStop = true;
             this.bothRadioButton.Text = "Both";
             this.bothRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -186,6 +186,7 @@
             this.rollOptionalCheckBox.Name = "rollOptionalCheckBox";
             this.rollOptionalCheckBox.Size = new System.Drawing.Size(65, 17);
             this.rollOptionalCheckBox.TabIndex = 30;
+            this.rollOptionalCheckBox.TabStop = false;
             this.rollOptionalCheckBox.Text = "Optional";
             this.rollOptionalCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -199,6 +200,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(96, 46);
             this.saveButton.TabIndex = 31;
+            this.saveButton.TabStop = false;
             this.saveButton.Text = "Create Weapon";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.button1_Click);
@@ -213,6 +215,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 20);
             this.button2.TabIndex = 32;
+            this.button2.TabStop = false;
             this.button2.Text = "Add Bonus Roll";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -222,7 +225,7 @@
             this.rollNameTextBox.Location = new System.Drawing.Point(122, 203);
             this.rollNameTextBox.Name = "rollNameTextBox";
             this.rollNameTextBox.Size = new System.Drawing.Size(97, 20);
-            this.rollNameTextBox.TabIndex = 33;
+            this.rollNameTextBox.TabIndex = 3;
             this.rollNameTextBox.Enter += new System.EventHandler(this.rollNameTextBox_Enter);
             this.rollNameTextBox.Leave += new System.EventHandler(this.rollNameTextBox_Leave);
             // 
@@ -231,7 +234,7 @@
             this.nameControl.Location = new System.Drawing.Point(90, 47);
             this.nameControl.Name = "nameControl";
             this.nameControl.Size = new System.Drawing.Size(120, 20);
-            this.nameControl.TabIndex = 34;
+            this.nameControl.TabIndex = 1;
             // 
             // WeaponCreation
             // 

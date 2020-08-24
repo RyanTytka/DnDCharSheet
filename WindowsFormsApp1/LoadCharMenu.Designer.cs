@@ -46,7 +46,7 @@
             this.characterListBox.Name = "characterListBox";
             this.characterListBox.ScrollAlwaysVisible = true;
             this.characterListBox.Size = new System.Drawing.Size(321, 184);
-            this.characterListBox.TabIndex = 1;
+            this.characterListBox.TabIndex = 0;
             this.characterListBox.SelectedIndexChanged += new System.EventHandler(this.characterListBox_SelectedIndexChanged);
             this.characterListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.characterListBox_MouseDoubleClick);
             // 
@@ -58,6 +58,7 @@
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(67, 27);
             this.SubmitButton.TabIndex = 2;
+            this.SubmitButton.TabStop = false;
             this.SubmitButton.Text = "Save";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -90,6 +91,7 @@
             this.deletebutton.Name = "deletebutton";
             this.deletebutton.Size = new System.Drawing.Size(67, 27);
             this.deletebutton.TabIndex = 7;
+            this.deletebutton.TabStop = false;
             this.deletebutton.Text = "Delete";
             this.deletebutton.UseVisualStyleBackColor = true;
             this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
@@ -99,14 +101,14 @@
             this.description.Location = new System.Drawing.Point(337, 76);
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(144, 21);
-            this.description.TabIndex = 8;
+            this.description.TabIndex = 2;
             // 
             // name
             // 
             this.name.Location = new System.Drawing.Point(338, 30);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(144, 21);
-            this.name.TabIndex = 9;
+            this.name.TabIndex = 1;
             // 
             // LoadCharMenu
             // 

@@ -193,6 +193,7 @@
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(106, 20);
             this.SaveButton.TabIndex = 45;
+            this.SaveButton.TabStop = false;
             this.SaveButton.Text = "Create Spell";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveSpell);
@@ -202,49 +203,49 @@
             this.spellNameTextbox.Location = new System.Drawing.Point(5, 50);
             this.spellNameTextbox.Name = "spellNameTextbox";
             this.spellNameTextbox.Size = new System.Drawing.Size(216, 19);
-            this.spellNameTextbox.TabIndex = 46;
+            this.spellNameTextbox.TabIndex = 1;
             // 
             // castTimeTextbox
             // 
             this.castTimeTextbox.Location = new System.Drawing.Point(5, 87);
             this.castTimeTextbox.Name = "castTimeTextbox";
             this.castTimeTextbox.Size = new System.Drawing.Size(82, 19);
-            this.castTimeTextbox.TabIndex = 47;
+            this.castTimeTextbox.TabIndex = 2;
             // 
             // durationTextbox
             // 
             this.durationTextbox.Location = new System.Drawing.Point(93, 87);
             this.durationTextbox.Name = "durationTextbox";
             this.durationTextbox.Size = new System.Drawing.Size(82, 19);
-            this.durationTextbox.TabIndex = 48;
+            this.durationTextbox.TabIndex = 3;
             // 
             // RangeTextbox
             // 
             this.RangeTextbox.Location = new System.Drawing.Point(5, 125);
             this.RangeTextbox.Name = "RangeTextbox";
             this.RangeTextbox.Size = new System.Drawing.Size(82, 19);
-            this.RangeTextbox.TabIndex = 49;
+            this.RangeTextbox.TabIndex = 5;
             // 
             // componentsTextBox
             // 
             this.componentsTextBox.Location = new System.Drawing.Point(93, 125);
             this.componentsTextBox.Name = "componentsTextBox";
             this.componentsTextBox.Size = new System.Drawing.Size(128, 19);
-            this.componentsTextBox.TabIndex = 50;
+            this.componentsTextBox.TabIndex = 6;
             // 
             // descriptionTextbox
             // 
             this.descriptionTextbox.Location = new System.Drawing.Point(5, 165);
             this.descriptionTextbox.Name = "descriptionTextbox";
             this.descriptionTextbox.Size = new System.Drawing.Size(216, 307);
-            this.descriptionTextbox.TabIndex = 51;
+            this.descriptionTextbox.TabIndex = 7;
             // 
             // rollNameTextbox
             // 
             this.rollNameTextbox.Location = new System.Drawing.Point(230, 125);
             this.rollNameTextbox.Name = "rollNameTextbox";
             this.rollNameTextbox.Size = new System.Drawing.Size(108, 19);
-            this.rollNameTextbox.TabIndex = 52;
+            this.rollNameTextbox.TabIndex = 8;
             this.rollNameTextbox.Enter += new System.EventHandler(this.rollNameTextBox_Enter);
             this.rollNameTextbox.Leave += new System.EventHandler(this.rollNameTextBox_Leave);
             // 
@@ -257,6 +258,7 @@
             this.addRollButton.Name = "addRollButton";
             this.addRollButton.Size = new System.Drawing.Size(108, 20);
             this.addRollButton.TabIndex = 53;
+            this.addRollButton.TabStop = false;
             this.addRollButton.Text = "Add Roll";
             this.addRollButton.UseVisualStyleBackColor = true;
             this.addRollButton.Click += new System.EventHandler(this.AddRollButton_click);
@@ -270,6 +272,7 @@
             this.AttackRollcheckBox.Name = "AttackRollcheckBox";
             this.AttackRollcheckBox.Size = new System.Drawing.Size(105, 17);
             this.AttackRollcheckBox.TabIndex = 54;
+            this.AttackRollcheckBox.TabStop = false;
             this.AttackRollcheckBox.Text = "Uses Attack Roll";
             this.AttackRollcheckBox.UseVisualStyleBackColor = true;
             // 
@@ -282,6 +285,7 @@
             this.multipliercheckBox.Name = "multipliercheckBox";
             this.multipliercheckBox.Size = new System.Drawing.Size(67, 17);
             this.multipliercheckBox.TabIndex = 55;
+            this.multipliercheckBox.TabStop = false;
             this.multipliercheckBox.Text = "Multiplier";
             this.multipliercheckBox.UseVisualStyleBackColor = true;
             this.multipliercheckBox.CheckedChanged += new System.EventHandler(this.multipliercheckBox_CheckedChanged);
@@ -292,7 +296,7 @@
             this.DieAmountnumericUpDown.Location = new System.Drawing.Point(231, 184);
             this.DieAmountnumericUpDown.Name = "DieAmountnumericUpDown";
             this.DieAmountnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.DieAmountnumericUpDown.TabIndex = 56;
+            this.DieAmountnumericUpDown.TabIndex = 9;
             this.DieAmountnumericUpDown.Value = 1;
             // 
             // label9
@@ -311,7 +315,7 @@
             this.DieNumnumericUpDown.Location = new System.Drawing.Point(295, 184);
             this.DieNumnumericUpDown.Name = "DieNumnumericUpDown";
             this.DieNumnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.DieNumnumericUpDown.TabIndex = 57;
+            this.DieNumnumericUpDown.TabIndex = 10;
             this.DieNumnumericUpDown.Value = 6;
             // 
             // LevelnumericUpDown
@@ -320,7 +324,7 @@
             this.LevelnumericUpDown.Location = new System.Drawing.Point(181, 86);
             this.LevelnumericUpDown.Name = "LevelnumericUpDown";
             this.LevelnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.LevelnumericUpDown.TabIndex = 58;
+            this.LevelnumericUpDown.TabIndex = 4;
             this.LevelnumericUpDown.Value = 0;
             // 
             // SpellCreationForm

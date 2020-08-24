@@ -104,6 +104,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
             this.spellPanel = new System.Windows.Forms.Panel();
+            this.preparedHelppanel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.spellListPanel = new System.Windows.Forms.Panel();
             this.label80 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -111,9 +122,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.spellsPreparedAmountlabel = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.spellattackBonusDisplayBox = new System.Windows.Forms.TextBox();
             this.preparedhelpLabel = new System.Windows.Forms.Label();
-            this.spellSaveDCdisplayLabel = new System.Windows.Forms.TextBox();
             this.lvl1slotslabel = new System.Windows.Forms.Label();
             this.lvl9slotslabel = new System.Windows.Forms.Label();
             this.lvl8slotslabel = new System.Windows.Forms.Label();
@@ -145,15 +154,8 @@
             this.label79 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.spellListLabel = new System.Windows.Forms.Label();
-            this.preparedHelppanel = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.warlockSpellPanel = new System.Windows.Forms.Panel();
+            this.label84 = new System.Windows.Forms.Label();
             this.warlockSLotsDisplayLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -231,6 +233,10 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.featShortRestButton = new CustomButtons.ButtonNoPadding();
             this.otherFeatButton = new CustomButtons.ButtonNoPadding();
             this.featLongRestButton = new CustomButtons.ButtonNoPadding();
@@ -314,7 +320,6 @@
             this.maxHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.currentHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
-            this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.forgetSpellButton = new CustomButtons.ButtonNoPadding();
             this.preparednumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.Level9SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
@@ -363,13 +368,8 @@
             this.weapondDelButton = new CustomButtons.ButtonNoPadding();
             this.weaponEditButton = new CustomButtons.ButtonNoPadding();
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.spellattackBonusDisplayBox = new System.Windows.Forms.Label();
+            this.spellSaveDCdisplayLabel = new System.Windows.Forms.Label();
             this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
@@ -378,11 +378,14 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.spellPanel.SuspendLayout();
-            this.spellListPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.preparedHelppanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.spellListPanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.warlockSpellPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
@@ -396,9 +399,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -411,6 +411,7 @@
             this.outputTextBox.ReadOnly = true;
             this.outputTextBox.Size = new System.Drawing.Size(607, 93);
             this.outputTextBox.TabIndex = 0;
+            this.outputTextBox.TabStop = false;
             // 
             // outputLabel
             // 
@@ -1061,6 +1062,7 @@
             this.weaponPropTextBox.ReadOnly = true;
             this.weaponPropTextBox.Size = new System.Drawing.Size(68, 89);
             this.weaponPropTextBox.TabIndex = 95;
+            this.weaponPropTextBox.TabStop = false;
             this.weaponPropTextBox.Tag = "";
             // 
             // label44
@@ -1114,7 +1116,7 @@
             this.InventoryTextBox.Multiline = true;
             this.InventoryTextBox.Name = "InventoryTextBox";
             this.InventoryTextBox.Size = new System.Drawing.Size(226, 138);
-            this.InventoryTextBox.TabIndex = 72;
+            this.InventoryTextBox.TabIndex = 26;
             this.InventoryTextBox.TextChanged += new System.EventHandler(this.SetUnsaved);
             // 
             // AC
@@ -1160,7 +1162,7 @@
             this.panel2.Location = new System.Drawing.Point(5, 472);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(192, 173);
-            this.panel2.TabIndex = 100;
+            this.panel2.TabIndex = 17;
             // 
             // label36
             // 
@@ -1265,7 +1267,7 @@
             this.panel4.Location = new System.Drawing.Point(221, 78);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(213, 41);
-            this.panel4.TabIndex = 156;
+            this.panel4.TabIndex = 15;
             // 
             // ACDisplayLabel
             // 
@@ -1345,6 +1347,7 @@
             this.featDescriptionTextbox.ReadOnly = true;
             this.featDescriptionTextbox.Size = new System.Drawing.Size(114, 141);
             this.featDescriptionTextbox.TabIndex = 95;
+            this.featDescriptionTextbox.TabStop = false;
             this.featDescriptionTextbox.Tag = "";
             // 
             // label4
@@ -1392,10 +1395,12 @@
             this.spellTypeDropdown.Name = "spellTypeDropdown";
             this.spellTypeDropdown.Size = new System.Drawing.Size(90, 21);
             this.spellTypeDropdown.TabIndex = 175;
+            this.spellTypeDropdown.TabStop = false;
             this.spellTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.ChangeSpellType);
             // 
             // spellPanel
             // 
+            this.spellPanel.Controls.Add(this.spellattackBonusDisplayBox);
             this.spellPanel.Controls.Add(this.preparedHelppanel);
             this.spellPanel.Controls.Add(this.spellListPanel);
             this.spellPanel.Controls.Add(this.preparednumericUpDown);
@@ -1417,9 +1422,7 @@
             this.spellPanel.Controls.Add(this.label38);
             this.spellPanel.Controls.Add(this.spellsPreparedAmountlabel);
             this.spellPanel.Controls.Add(this.label37);
-            this.spellPanel.Controls.Add(this.spellattackBonusDisplayBox);
             this.spellPanel.Controls.Add(this.preparedhelpLabel);
-            this.spellPanel.Controls.Add(this.spellSaveDCdisplayLabel);
             this.spellPanel.Controls.Add(this.MinusCurrentSlotbutton);
             this.spellPanel.Controls.Add(this.plusCurrentSlotbutton);
             this.spellPanel.Controls.Add(this.minusMaxSlotbutton);
@@ -1443,10 +1446,144 @@
             this.spellPanel.Controls.Add(this.label79);
             this.spellPanel.Controls.Add(this.label82);
             this.spellPanel.Controls.Add(this.spellListLabel);
+            this.spellPanel.Controls.Add(this.spellSaveDCdisplayLabel);
             this.spellPanel.Location = new System.Drawing.Point(832, 23);
             this.spellPanel.Name = "spellPanel";
             this.spellPanel.Size = new System.Drawing.Size(275, 622);
-            this.spellPanel.TabIndex = 176;
+            this.spellPanel.TabIndex = 200;
+            // 
+            // preparedHelppanel
+            // 
+            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.preparedHelppanel.Controls.Add(this.pictureBox4);
+            this.preparedHelppanel.Controls.Add(this.pictureBox3);
+            this.preparedHelppanel.Controls.Add(this.pictureBox2);
+            this.preparedHelppanel.Controls.Add(this.panel10);
+            this.preparedHelppanel.Controls.Add(this.panel9);
+            this.preparedHelppanel.Controls.Add(this.checkBox3);
+            this.preparedHelppanel.Controls.Add(this.checkBox2);
+            this.preparedHelppanel.Controls.Add(this.checkBox1);
+            this.preparedHelppanel.Location = new System.Drawing.Point(14, 356);
+            this.preparedHelppanel.Name = "preparedHelppanel";
+            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
+            this.preparedHelppanel.TabIndex = 224;
+            this.preparedHelppanel.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockIcon;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(14, 14);
+            this.pictureBox4.TabIndex = 336;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.X;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(14, 14);
+            this.pictureBox3.TabIndex = 335;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.check;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(14, 14);
+            this.pictureBox2.TabIndex = 334;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.textBox33);
+            this.panel10.Location = new System.Drawing.Point(-1, -1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(108, 17);
+            this.panel10.TabIndex = 227;
+            // 
+            // textBox33
+            // 
+            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.textBox33.Location = new System.Drawing.Point(20, -1);
+            this.textBox33.Multiline = true;
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(70, 19);
+            this.textBox33.TabIndex = 202;
+            this.textBox33.Text = "Key:";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox33.WordWrap = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.textBox32);
+            this.panel9.Location = new System.Drawing.Point(-1, 68);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(108, 69);
+            this.panel9.TabIndex = 226;
+            // 
+            // textBox32
+            // 
+            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox32.Location = new System.Drawing.Point(3, 1);
+            this.textBox32.Multiline = true;
+            this.textBox32.Name = "textBox32";
+            this.textBox32.ReadOnly = true;
+            this.textBox32.Size = new System.Drawing.Size(100, 65);
+            this.textBox32.TabIndex = 192;
+            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
+    "ed down)";
+            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.checkBox3.Location = new System.Drawing.Point(3, 52);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(105, 17);
+            this.checkBox3.TabIndex = 225;
+            this.checkBox3.Tag = "0";
+            this.checkBox3.Text = "Always Prepared";
+            this.checkBox3.ThreeState = true;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(3, 35);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(69, 17);
+            this.checkBox2.TabIndex = 224;
+            this.checkBox2.Tag = "0";
+            this.checkBox2.Text = "Prepared";
+            this.checkBox2.ThreeState = true;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 18);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 17);
+            this.checkBox1.TabIndex = 223;
+            this.checkBox1.Tag = "0";
+            this.checkBox1.Text = "Not Prepared";
+            this.checkBox1.ThreeState = true;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // spellListPanel
             // 
@@ -1526,21 +1663,6 @@
             this.label37.Text = "Spellcasting\r\nAbility:";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // spellattackBonusDisplayBox
-            // 
-            this.spellattackBonusDisplayBox.BackColor = System.Drawing.SystemColors.Control;
-            this.spellattackBonusDisplayBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.spellattackBonusDisplayBox.Font = new System.Drawing.Font("Impact", 18.25F);
-            this.spellattackBonusDisplayBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.spellattackBonusDisplayBox.Location = new System.Drawing.Point(89, 22);
-            this.spellattackBonusDisplayBox.Multiline = true;
-            this.spellattackBonusDisplayBox.Name = "spellattackBonusDisplayBox";
-            this.spellattackBonusDisplayBox.ReadOnly = true;
-            this.spellattackBonusDisplayBox.Size = new System.Drawing.Size(50, 26);
-            this.spellattackBonusDisplayBox.TabIndex = 191;
-            this.spellattackBonusDisplayBox.Text = "+10";
-            this.spellattackBonusDisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // preparedhelpLabel
             // 
             this.preparedhelpLabel.AutoSize = true;
@@ -1553,21 +1675,6 @@
             this.preparedhelpLabel.Text = "?";
             this.preparedhelpLabel.MouseEnter += new System.EventHandler(this.ShowPreparedSpellHelpPanel);
             this.preparedhelpLabel.MouseLeave += new System.EventHandler(this.preparedhelpLabel_MouseLeave);
-            // 
-            // spellSaveDCdisplayLabel
-            // 
-            this.spellSaveDCdisplayLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.spellSaveDCdisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.spellSaveDCdisplayLabel.Font = new System.Drawing.Font("Impact", 18.25F);
-            this.spellSaveDCdisplayLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.spellSaveDCdisplayLabel.Location = new System.Drawing.Point(190, 22);
-            this.spellSaveDCdisplayLabel.Multiline = true;
-            this.spellSaveDCdisplayLabel.Name = "spellSaveDCdisplayLabel";
-            this.spellSaveDCdisplayLabel.ReadOnly = true;
-            this.spellSaveDCdisplayLabel.Size = new System.Drawing.Size(35, 28);
-            this.spellSaveDCdisplayLabel.TabIndex = 153;
-            this.spellSaveDCdisplayLabel.Text = "10";
-            this.spellSaveDCdisplayLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lvl1slotslabel
             // 
@@ -1772,6 +1879,7 @@
             this.spellrolldropdown.Name = "spellrolldropdown";
             this.spellrolldropdown.Size = new System.Drawing.Size(105, 21);
             this.spellrolldropdown.TabIndex = 177;
+            this.spellrolldropdown.TabStop = false;
             this.spellrolldropdown.TextChanged += new System.EventHandler(this.UpdateMultiplierLabel);
             // 
             // durationlabel
@@ -1936,109 +2044,6 @@
             this.spellListLabel.Text = "Level 1 Spells";
             this.spellListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // preparedHelppanel
-            // 
-            this.preparedHelppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.preparedHelppanel.Controls.Add(this.pictureBox4);
-            this.preparedHelppanel.Controls.Add(this.pictureBox3);
-            this.preparedHelppanel.Controls.Add(this.pictureBox2);
-            this.preparedHelppanel.Controls.Add(this.panel10);
-            this.preparedHelppanel.Controls.Add(this.panel9);
-            this.preparedHelppanel.Controls.Add(this.checkBox3);
-            this.preparedHelppanel.Controls.Add(this.checkBox2);
-            this.preparedHelppanel.Controls.Add(this.checkBox1);
-            this.preparedHelppanel.Location = new System.Drawing.Point(14, 356);
-            this.preparedHelppanel.Name = "preparedHelppanel";
-            this.preparedHelppanel.Size = new System.Drawing.Size(108, 138);
-            this.preparedHelppanel.TabIndex = 224;
-            this.preparedHelppanel.Visible = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.textBox33);
-            this.panel10.Location = new System.Drawing.Point(-1, -1);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(108, 17);
-            this.panel10.TabIndex = 227;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
-            this.textBox33.Location = new System.Drawing.Point(20, -1);
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(70, 19);
-            this.textBox33.TabIndex = 202;
-            this.textBox33.Text = "Key:";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox33.WordWrap = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.textBox32);
-            this.panel9.Location = new System.Drawing.Point(-1, 68);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(108, 69);
-            this.panel9.TabIndex = 226;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox32.Location = new System.Drawing.Point(3, 1);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(100, 65);
-            this.textBox32.TabIndex = 192;
-            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
-    "ed down)";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBox3.Location = new System.Drawing.Point(3, 52);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(105, 17);
-            this.checkBox3.TabIndex = 225;
-            this.checkBox3.Tag = "0";
-            this.checkBox3.Text = "Always Prepared";
-            this.checkBox3.ThreeState = true;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(3, 35);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 17);
-            this.checkBox2.TabIndex = 224;
-            this.checkBox2.Tag = "0";
-            this.checkBox2.Text = "Prepared";
-            this.checkBox2.ThreeState = true;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
-            this.checkBox1.TabIndex = 223;
-            this.checkBox1.Tag = "0";
-            this.checkBox1.Text = "Not Prepared";
-            this.checkBox1.ThreeState = true;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // warlockSpellPanel
             // 
             this.warlockSpellPanel.Controls.Add(this.label84);
@@ -2073,6 +2078,18 @@
             this.warlockSpellPanel.Size = new System.Drawing.Size(107, 230);
             this.warlockSpellPanel.TabIndex = 199;
             this.warlockSpellPanel.VisibleChanged += new System.EventHandler(this.warlockSpellPanel_VisibleChanged);
+            // 
+            // label84
+            // 
+            this.label84.BackColor = System.Drawing.SystemColors.Control;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label84.ForeColor = System.Drawing.Color.Black;
+            this.label84.Location = new System.Drawing.Point(63, 57);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(39, 16);
+            this.label84.TabIndex = 334;
+            this.label84.Text = "Slots:";
+            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // warlockSLotsDisplayLabel
             // 
@@ -2247,6 +2264,7 @@
             this.miscRollDropDown.Name = "miscRollDropDown";
             this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
             this.miscRollDropDown.TabIndex = 193;
+            this.miscRollDropDown.TabStop = false;
             // 
             // panel12
             // 
@@ -2263,7 +2281,7 @@
             this.panel12.Location = new System.Drawing.Point(218, 9);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(216, 70);
-            this.panel12.TabIndex = 235;
+            this.panel12.TabIndex = 5;
             // 
             // label83
             // 
@@ -3024,6 +3042,57 @@
             this.label81.TabIndex = 333;
             this.label81.Text = "?";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(414, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 20);
+            this.label6.TabIndex = 334;
+            this.label6.Text = "Misc Roll";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.SystemColors.Control;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(-4, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(191, 17);
+            this.label16.TabIndex = 319;
+            this.label16.Text = "_____________________";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.miscRollAmountnumericUpDown);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.miscRollNumnumericUpDown);
+            this.panel1.Controls.Add(this.miscRollbutton);
+            this.panel1.Controls.Add(this.MiscRollflatnumericUpDown);
+            this.panel1.Controls.Add(this.miscRollDropDown);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Location = new System.Drawing.Point(414, 489);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(174, 58);
+            this.panel1.TabIndex = 18;
+            // 
+            // miscRollbutton
+            // 
+            this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
+            this.miscRollbutton.Location = new System.Drawing.Point(0, 3);
+            this.miscRollbutton.Name = "miscRollbutton";
+            this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
+            this.miscRollbutton.TabIndex = 193;
+            this.miscRollbutton.TabStop = false;
+            this.miscRollbutton.Text = "Roll";
+            this.miscRollbutton.UseVisualStyleBackColor = true;
+            this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
+            // 
             // featShortRestButton
             // 
             this.featShortRestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -3033,6 +3102,7 @@
             this.featShortRestButton.Name = "featShortRestButton";
             this.featShortRestButton.Size = new System.Drawing.Size(40, 29);
             this.featShortRestButton.TabIndex = 166;
+            this.featShortRestButton.TabStop = false;
             this.featShortRestButton.Tag = "SHORT";
             this.featShortRestButton.Text = "Short Rest";
             this.featShortRestButton.UseVisualStyleBackColor = true;
@@ -3047,6 +3117,7 @@
             this.otherFeatButton.Name = "otherFeatButton";
             this.otherFeatButton.Size = new System.Drawing.Size(113, 16);
             this.otherFeatButton.TabIndex = 168;
+            this.otherFeatButton.TabStop = false;
             this.otherFeatButton.Tag = "OTHER";
             this.otherFeatButton.Text = "Refill Other Slots";
             this.otherFeatButton.UseVisualStyleBackColor = true;
@@ -3061,6 +3132,7 @@
             this.featLongRestButton.Name = "featLongRestButton";
             this.featLongRestButton.Size = new System.Drawing.Size(40, 29);
             this.featLongRestButton.TabIndex = 167;
+            this.featLongRestButton.TabStop = false;
             this.featLongRestButton.Tag = "LONG";
             this.featLongRestButton.Text = "Long Rest";
             this.featLongRestButton.UseVisualStyleBackColor = true;
@@ -3073,6 +3145,7 @@
             this.deathSaveResetButton.Name = "deathSaveResetButton";
             this.deathSaveResetButton.Size = new System.Drawing.Size(58, 14);
             this.deathSaveResetButton.TabIndex = 314;
+            this.deathSaveResetButton.TabStop = false;
             this.deathSaveResetButton.Text = "Reset";
             this.deathSaveResetButton.UseVisualStyleBackColor = true;
             this.deathSaveResetButton.Click += new System.EventHandler(this.deathSaveResetButton_Click);
@@ -3087,6 +3160,7 @@
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(23, 23);
             this.settingsButton.TabIndex = 227;
+            this.settingsButton.TabStop = false;
             this.settingsButton.Text = null;
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.buttonNoPadding3_Click);
@@ -3098,6 +3172,7 @@
             this.deathSaveRollButton.Name = "deathSaveRollButton";
             this.deathSaveRollButton.Size = new System.Drawing.Size(58, 14);
             this.deathSaveRollButton.TabIndex = 170;
+            this.deathSaveRollButton.TabStop = false;
             this.deathSaveRollButton.Text = "Roll";
             this.deathSaveRollButton.UseVisualStyleBackColor = true;
             this.deathSaveRollButton.Click += new System.EventHandler(this.deathSaveRollButton_Click);
@@ -3108,7 +3183,7 @@
             this.warlockSpellLevelnumericUpDown.Location = new System.Drawing.Point(61, 31);
             this.warlockSpellLevelnumericUpDown.Name = "warlockSpellLevelnumericUpDown";
             this.warlockSpellLevelnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.warlockSpellLevelnumericUpDown.TabIndex = 331;
+            this.warlockSpellLevelnumericUpDown.TabIndex = 3;
             this.warlockSpellLevelnumericUpDown.Value = 0;
             // 
             // Arcanum9checkBox
@@ -3118,6 +3193,7 @@
             this.Arcanum9checkBox.Name = "Arcanum9checkBox";
             this.Arcanum9checkBox.Size = new System.Drawing.Size(29, 17);
             this.Arcanum9checkBox.TabIndex = 234;
+            this.Arcanum9checkBox.TabStop = false;
             this.Arcanum9checkBox.Tag = "3";
             this.Arcanum9checkBox.Text = " ";
             this.Arcanum9checkBox.UseVisualStyleBackColor = true;
@@ -3130,6 +3206,7 @@
             this.Arcanum8checkBox.Name = "Arcanum8checkBox";
             this.Arcanum8checkBox.Size = new System.Drawing.Size(29, 17);
             this.Arcanum8checkBox.TabIndex = 233;
+            this.Arcanum8checkBox.TabStop = false;
             this.Arcanum8checkBox.Tag = "2";
             this.Arcanum8checkBox.Text = " ";
             this.Arcanum8checkBox.UseVisualStyleBackColor = true;
@@ -3142,6 +3219,7 @@
             this.Arcanum7checkBox.Name = "Arcanum7checkBox";
             this.Arcanum7checkBox.Size = new System.Drawing.Size(29, 17);
             this.Arcanum7checkBox.TabIndex = 232;
+            this.Arcanum7checkBox.TabStop = false;
             this.Arcanum7checkBox.Tag = "1";
             this.Arcanum7checkBox.Text = " ";
             this.Arcanum7checkBox.UseVisualStyleBackColor = true;
@@ -3154,6 +3232,7 @@
             this.Arcanum6checkBox.Name = "Arcanum6checkBox";
             this.Arcanum6checkBox.Size = new System.Drawing.Size(29, 17);
             this.Arcanum6checkBox.TabIndex = 0;
+            this.Arcanum6checkBox.TabStop = false;
             this.Arcanum6checkBox.Tag = "0";
             this.Arcanum6checkBox.Text = " ";
             this.Arcanum6checkBox.UseVisualStyleBackColor = true;
@@ -3289,6 +3368,7 @@
             this.warlockMinusCurrentSlotButton.Name = "warlockMinusCurrentSlotButton";
             this.warlockMinusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
             this.warlockMinusCurrentSlotButton.TabIndex = 218;
+            this.warlockMinusCurrentSlotButton.TabStop = false;
             this.warlockMinusCurrentSlotButton.Tag = "current";
             this.warlockMinusCurrentSlotButton.Text = "-";
             this.warlockMinusCurrentSlotButton.UseVisualStyleBackColor = true;
@@ -3302,6 +3382,7 @@
             this.warlockPlusCurrentSlotButton.Name = "warlockPlusCurrentSlotButton";
             this.warlockPlusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
             this.warlockPlusCurrentSlotButton.TabIndex = 217;
+            this.warlockPlusCurrentSlotButton.TabStop = false;
             this.warlockPlusCurrentSlotButton.Tag = "current";
             this.warlockPlusCurrentSlotButton.Text = "+";
             this.warlockPlusCurrentSlotButton.UseVisualStyleBackColor = true;
@@ -3315,6 +3396,7 @@
             this.warlockMinusSlotButton.Name = "warlockMinusSlotButton";
             this.warlockMinusSlotButton.Size = new System.Drawing.Size(17, 17);
             this.warlockMinusSlotButton.TabIndex = 211;
+            this.warlockMinusSlotButton.TabStop = false;
             this.warlockMinusSlotButton.Tag = "current";
             this.warlockMinusSlotButton.Text = "-";
             this.warlockMinusSlotButton.UseVisualStyleBackColor = true;
@@ -3328,6 +3410,7 @@
             this.warlockPlusSlotButton.Name = "warlockPlusSlotButton";
             this.warlockPlusSlotButton.Size = new System.Drawing.Size(17, 17);
             this.warlockPlusSlotButton.TabIndex = 210;
+            this.warlockPlusSlotButton.TabStop = false;
             this.warlockPlusSlotButton.Tag = "current";
             this.warlockPlusSlotButton.Text = "+";
             this.warlockPlusSlotButton.UseVisualStyleBackColor = true;
@@ -3341,6 +3424,7 @@
             this.WarlockRefillSlotsButton.Name = "WarlockRefillSlotsButton";
             this.WarlockRefillSlotsButton.Size = new System.Drawing.Size(105, 18);
             this.WarlockRefillSlotsButton.TabIndex = 209;
+            this.WarlockRefillSlotsButton.TabStop = false;
             this.WarlockRefillSlotsButton.Text = "Refill All Slots";
             this.WarlockRefillSlotsButton.UseVisualStyleBackColor = true;
             this.WarlockRefillSlotsButton.Click += new System.EventHandler(this.WarlockRefillSlotsButton_Click);
@@ -3353,6 +3437,7 @@
             this.newFeatButton.Name = "newFeatButton";
             this.newFeatButton.Size = new System.Drawing.Size(57, 18);
             this.newFeatButton.TabIndex = 94;
+            this.newFeatButton.TabStop = false;
             this.newFeatButton.Text = "New Feat";
             this.newFeatButton.UseVisualStyleBackColor = true;
             this.newFeatButton.Click += new System.EventHandler(this.newFeatButton_Click);
@@ -3367,6 +3452,7 @@
             this.featRollButton.Name = "featRollButton";
             this.featRollButton.Size = new System.Drawing.Size(55, 18);
             this.featRollButton.TabIndex = 93;
+            this.featRollButton.TabStop = false;
             this.featRollButton.Text = "Roll";
             this.featRollButton.UseVisualStyleBackColor = true;
             this.featRollButton.Click += new System.EventHandler(this.featRoll);
@@ -3380,6 +3466,7 @@
             this.featDeleteButton.Name = "featDeleteButton";
             this.featDeleteButton.Size = new System.Drawing.Size(57, 18);
             this.featDeleteButton.TabIndex = 92;
+            this.featDeleteButton.TabStop = false;
             this.featDeleteButton.Text = "Delete";
             this.featDeleteButton.UseVisualStyleBackColor = true;
             this.featDeleteButton.Click += new System.EventHandler(this.DeleteFeat);
@@ -3393,6 +3480,7 @@
             this.featEditButton.Name = "featEditButton";
             this.featEditButton.Size = new System.Drawing.Size(55, 18);
             this.featEditButton.TabIndex = 91;
+            this.featEditButton.TabStop = false;
             this.featEditButton.Text = "Edit";
             this.featEditButton.UseVisualStyleBackColor = true;
             this.featEditButton.Click += new System.EventHandler(this.EditFeat);
@@ -3402,28 +3490,28 @@
             this.platTextbox.Location = new System.Drawing.Point(727, 53);
             this.platTextbox.Name = "platTextbox";
             this.platTextbox.Size = new System.Drawing.Size(49, 15);
-            this.platTextbox.TabIndex = 305;
+            this.platTextbox.TabIndex = 12;
             // 
             // goldTextbox
             // 
             this.goldTextbox.Location = new System.Drawing.Point(727, 21);
             this.goldTextbox.Name = "goldTextbox";
             this.goldTextbox.Size = new System.Drawing.Size(49, 15);
-            this.goldTextbox.TabIndex = 302;
+            this.goldTextbox.TabIndex = 10;
             // 
             // silverTextbox
             // 
             this.silverTextbox.Location = new System.Drawing.Point(675, 53);
             this.silverTextbox.Name = "silverTextbox";
             this.silverTextbox.Size = new System.Drawing.Size(49, 15);
-            this.silverTextbox.TabIndex = 301;
+            this.silverTextbox.TabIndex = 11;
             // 
             // copperTextbox
             // 
             this.copperTextbox.Location = new System.Drawing.Point(675, 21);
             this.copperTextbox.Name = "copperTextbox";
             this.copperTextbox.Size = new System.Drawing.Size(49, 15);
-            this.copperTextbox.TabIndex = 239;
+            this.copperTextbox.TabIndex = 9;
             // 
             // InitiativeRollButton
             // 
@@ -3433,6 +3521,7 @@
             this.InitiativeRollButton.Name = "InitiativeRollButton";
             this.InitiativeRollButton.Size = new System.Drawing.Size(32, 16);
             this.InitiativeRollButton.TabIndex = 109;
+            this.InitiativeRollButton.TabStop = false;
             this.InitiativeRollButton.Tag = "temp";
             this.InitiativeRollButton.Text = "Roll";
             this.InitiativeRollButton.UseVisualStyleBackColor = true;
@@ -3446,6 +3535,7 @@
             this.initiativeAdvCheckbox.Name = "initiativeAdvCheckbox";
             this.initiativeAdvCheckbox.Size = new System.Drawing.Size(87, 17);
             this.initiativeAdvCheckbox.TabIndex = 235;
+            this.initiativeAdvCheckbox.TabStop = false;
             this.initiativeAdvCheckbox.Text = "Advantage";
             this.initiativeAdvCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -3455,7 +3545,7 @@
             this.initiativeNumUpDown.Location = new System.Drawing.Point(517, 77);
             this.initiativeNumUpDown.Name = "initiativeNumUpDown";
             this.initiativeNumUpDown.Size = new System.Drawing.Size(48, 23);
-            this.initiativeNumUpDown.TabIndex = 235;
+            this.initiativeNumUpDown.TabIndex = 16;
             this.initiativeNumUpDown.Value = 0;
             // 
             // MiscarmorTextbox
@@ -3463,21 +3553,21 @@
             this.MiscarmorTextbox.Location = new System.Drawing.Point(176, 20);
             this.MiscarmorTextbox.Name = "MiscarmorTextbox";
             this.MiscarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.MiscarmorTextbox.TabIndex = 241;
+            this.MiscarmorTextbox.TabIndex = 15;
             // 
             // DexarmorTextbox
             // 
             this.DexarmorTextbox.Location = new System.Drawing.Point(134, 20);
             this.DexarmorTextbox.Name = "DexarmorTextbox";
             this.DexarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.DexarmorTextbox.TabIndex = 240;
+            this.DexarmorTextbox.TabIndex = 14;
             // 
             // ACarmorTextbox
             // 
             this.ACarmorTextbox.Location = new System.Drawing.Point(91, 20);
             this.ACarmorTextbox.Name = "ACarmorTextbox";
             this.ACarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.ACarmorTextbox.TabIndex = 239;
+            this.ACarmorTextbox.TabIndex = 13;
             // 
             // exportButton
             // 
@@ -3486,6 +3576,7 @@
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(67, 17);
             this.exportButton.TabIndex = 169;
+            this.exportButton.TabStop = false;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = true;
             this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
@@ -3497,6 +3588,7 @@
             this.newCharButton.Name = "newCharButton";
             this.newCharButton.Size = new System.Drawing.Size(69, 17);
             this.newCharButton.TabIndex = 167;
+            this.newCharButton.TabStop = false;
             this.newCharButton.Text = "New";
             this.newCharButton.UseVisualStyleBackColor = true;
             this.newCharButton.Click += new System.EventHandler(this.NewCharacter);
@@ -3508,6 +3600,7 @@
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(67, 18);
             this.importButton.TabIndex = 168;
+            this.importButton.TabStop = false;
             this.importButton.Text = "Import";
             this.importButton.UseVisualStyleBackColor = true;
             this.importButton.Click += new System.EventHandler(this.importButton_Click);
@@ -3519,6 +3612,7 @@
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(69, 18);
             this.loadButton.TabIndex = 166;
+            this.loadButton.TabStop = false;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = true;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
@@ -3530,6 +3624,7 @@
             this.SaveAsButton.Name = "SaveAsButton";
             this.SaveAsButton.Size = new System.Drawing.Size(67, 17);
             this.SaveAsButton.TabIndex = 165;
+            this.SaveAsButton.TabStop = false;
             this.SaveAsButton.Text = "Save As";
             this.SaveAsButton.UseVisualStyleBackColor = true;
             this.SaveAsButton.Click += new System.EventHandler(this.SaveAsButtonClick);
@@ -3541,6 +3636,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(67, 18);
             this.saveButton.TabIndex = 164;
+            this.saveButton.TabStop = false;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButtonClick);
@@ -3550,7 +3646,7 @@
             this.speedTextBox.Location = new System.Drawing.Point(512, 43);
             this.speedTextBox.Name = "speedTextBox";
             this.speedTextBox.Size = new System.Drawing.Size(45, 25);
-            this.speedTextBox.TabIndex = 239;
+            this.speedTextBox.TabIndex = 8;
             // 
             // profDownLabel
             // 
@@ -3564,6 +3660,7 @@
             this.profDownLabel.Name = "profDownLabel";
             this.profDownLabel.Size = new System.Drawing.Size(17, 13);
             this.profDownLabel.TabIndex = 287;
+            this.profDownLabel.TabStop = false;
             this.profDownLabel.Text = null;
             this.profDownLabel.UseVisualStyleBackColor = true;
             this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
@@ -3575,6 +3672,7 @@
             this.conSaveButton.Name = "conSaveButton";
             this.conSaveButton.Size = new System.Drawing.Size(82, 16);
             this.conSaveButton.TabIndex = 256;
+            this.conSaveButton.TabStop = false;
             this.conSaveButton.Text = "Save Throw";
             this.conSaveButton.UseVisualStyleBackColor = true;
             this.conSaveButton.Click += new System.EventHandler(this.conSaveButton_Click);
@@ -3586,6 +3684,7 @@
             this.charSaveButton.Name = "charSaveButton";
             this.charSaveButton.Size = new System.Drawing.Size(82, 16);
             this.charSaveButton.TabIndex = 277;
+            this.charSaveButton.TabStop = false;
             this.charSaveButton.Text = "Save Throw";
             this.charSaveButton.UseVisualStyleBackColor = true;
             this.charSaveButton.Click += new System.EventHandler(this.chrSaveButton_Click);
@@ -3602,6 +3701,7 @@
             this.buttonNoPadding11.Name = "buttonNoPadding11";
             this.buttonNoPadding11.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding11.TabIndex = 282;
+            this.buttonNoPadding11.TabStop = false;
             this.buttonNoPadding11.Text = null;
             this.buttonNoPadding11.UseVisualStyleBackColor = true;
             this.buttonNoPadding11.Click += new System.EventHandler(this.chrDecreaseButton_Click);
@@ -3618,6 +3718,7 @@
             this.buttonNoPadding12.Name = "buttonNoPadding12";
             this.buttonNoPadding12.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding12.TabIndex = 281;
+            this.buttonNoPadding12.TabStop = false;
             this.buttonNoPadding12.Text = null;
             this.buttonNoPadding12.UseVisualStyleBackColor = true;
             this.buttonNoPadding12.Click += new System.EventHandler(this.chrAddButton_Click);
@@ -3630,6 +3731,7 @@
             this.charProf.Name = "charProf";
             this.charProf.Size = new System.Drawing.Size(87, 19);
             this.charProf.TabIndex = 278;
+            this.charProf.TabStop = false;
             this.charProf.Text = "Proficient";
             this.charProf.UseVisualStyleBackColor = true;
             this.charProf.CheckedChanged += new System.EventHandler(this.chrProfBox_CheckedChanged);
@@ -3641,6 +3743,7 @@
             this.wisSaveButton.Name = "wisSaveButton";
             this.wisSaveButton.Size = new System.Drawing.Size(82, 16);
             this.wisSaveButton.TabIndex = 270;
+            this.wisSaveButton.TabStop = false;
             this.wisSaveButton.Text = "Save Throw";
             this.wisSaveButton.UseVisualStyleBackColor = true;
             this.wisSaveButton.Click += new System.EventHandler(this.wisSaveButton_Click);
@@ -3657,6 +3760,7 @@
             this.buttonNoPadding14.Name = "buttonNoPadding14";
             this.buttonNoPadding14.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding14.TabIndex = 275;
+            this.buttonNoPadding14.TabStop = false;
             this.buttonNoPadding14.Text = null;
             this.buttonNoPadding14.UseVisualStyleBackColor = true;
             this.buttonNoPadding14.Click += new System.EventHandler(this.wisDecreaseButton_Click);
@@ -3673,6 +3777,7 @@
             this.buttonNoPadding15.Name = "buttonNoPadding15";
             this.buttonNoPadding15.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding15.TabIndex = 274;
+            this.buttonNoPadding15.TabStop = false;
             this.buttonNoPadding15.Text = null;
             this.buttonNoPadding15.UseVisualStyleBackColor = true;
             this.buttonNoPadding15.Click += new System.EventHandler(this.wisAddButton_Click);
@@ -3685,6 +3790,7 @@
             this.wisProf.Name = "wisProf";
             this.wisProf.Size = new System.Drawing.Size(87, 19);
             this.wisProf.TabIndex = 271;
+            this.wisProf.TabStop = false;
             this.wisProf.Text = "Proficient";
             this.wisProf.UseVisualStyleBackColor = true;
             this.wisProf.CheckedChanged += new System.EventHandler(this.wisProfBox_CheckedChanged);
@@ -3696,6 +3802,7 @@
             this.intSaveButton.Name = "intSaveButton";
             this.intSaveButton.Size = new System.Drawing.Size(82, 16);
             this.intSaveButton.TabIndex = 263;
+            this.intSaveButton.TabStop = false;
             this.intSaveButton.Text = "Save Throw";
             this.intSaveButton.UseVisualStyleBackColor = true;
             this.intSaveButton.Click += new System.EventHandler(this.intSaveButton_Click);
@@ -3712,6 +3819,7 @@
             this.buttonNoPadding5.Name = "buttonNoPadding5";
             this.buttonNoPadding5.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding5.TabIndex = 268;
+            this.buttonNoPadding5.TabStop = false;
             this.buttonNoPadding5.Text = null;
             this.buttonNoPadding5.UseVisualStyleBackColor = true;
             this.buttonNoPadding5.Click += new System.EventHandler(this.intDecreaseButton_Click);
@@ -3728,6 +3836,7 @@
             this.buttonNoPadding6.Name = "buttonNoPadding6";
             this.buttonNoPadding6.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding6.TabIndex = 267;
+            this.buttonNoPadding6.TabStop = false;
             this.buttonNoPadding6.Text = null;
             this.buttonNoPadding6.UseVisualStyleBackColor = true;
             this.buttonNoPadding6.Click += new System.EventHandler(this.intAddButton_Click);
@@ -3740,6 +3849,7 @@
             this.intProf.Name = "intProf";
             this.intProf.Size = new System.Drawing.Size(87, 19);
             this.intProf.TabIndex = 264;
+            this.intProf.TabStop = false;
             this.intProf.Text = "Proficient";
             this.intProf.UseVisualStyleBackColor = true;
             this.intProf.CheckedChanged += new System.EventHandler(this.intProfBox_CheckedChanged);
@@ -3756,6 +3866,7 @@
             this.buttonNoPadding8.Name = "buttonNoPadding8";
             this.buttonNoPadding8.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding8.TabIndex = 261;
+            this.buttonNoPadding8.TabStop = false;
             this.buttonNoPadding8.Text = null;
             this.buttonNoPadding8.UseVisualStyleBackColor = true;
             this.buttonNoPadding8.Click += new System.EventHandler(this.conDecreaseButton_Click);
@@ -3772,6 +3883,7 @@
             this.buttonNoPadding9.Name = "buttonNoPadding9";
             this.buttonNoPadding9.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding9.TabIndex = 260;
+            this.buttonNoPadding9.TabStop = false;
             this.buttonNoPadding9.Text = null;
             this.buttonNoPadding9.UseVisualStyleBackColor = true;
             this.buttonNoPadding9.Click += new System.EventHandler(this.conAddButton_Click);
@@ -3784,6 +3896,7 @@
             this.conProf.Name = "conProf";
             this.conProf.Size = new System.Drawing.Size(87, 19);
             this.conProf.TabIndex = 257;
+            this.conProf.TabStop = false;
             this.conProf.Text = "Proficient";
             this.conProf.UseVisualStyleBackColor = true;
             this.conProf.CheckedChanged += new System.EventHandler(this.conProfBox_CheckedChanged);
@@ -3795,6 +3908,7 @@
             this.dexSaveButton.Name = "dexSaveButton";
             this.dexSaveButton.Size = new System.Drawing.Size(82, 16);
             this.dexSaveButton.TabIndex = 249;
+            this.dexSaveButton.TabStop = false;
             this.dexSaveButton.Text = "Save Throw";
             this.dexSaveButton.UseVisualStyleBackColor = true;
             this.dexSaveButton.Click += new System.EventHandler(this.dexSaveButton_Click);
@@ -3811,6 +3925,7 @@
             this.buttonNoPadding2.Name = "buttonNoPadding2";
             this.buttonNoPadding2.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding2.TabIndex = 254;
+            this.buttonNoPadding2.TabStop = false;
             this.buttonNoPadding2.Text = null;
             this.buttonNoPadding2.UseVisualStyleBackColor = true;
             this.buttonNoPadding2.Click += new System.EventHandler(this.dexDecreaseButton_Click);
@@ -3827,6 +3942,7 @@
             this.buttonNoPadding3.Name = "buttonNoPadding3";
             this.buttonNoPadding3.Size = new System.Drawing.Size(17, 13);
             this.buttonNoPadding3.TabIndex = 253;
+            this.buttonNoPadding3.TabStop = false;
             this.buttonNoPadding3.Text = null;
             this.buttonNoPadding3.UseVisualStyleBackColor = true;
             this.buttonNoPadding3.Click += new System.EventHandler(this.dexAddButton_Click);
@@ -3839,6 +3955,7 @@
             this.dexProf.Name = "dexProf";
             this.dexProf.Size = new System.Drawing.Size(87, 19);
             this.dexProf.TabIndex = 250;
+            this.dexProf.TabStop = false;
             this.dexProf.Text = "Proficient";
             this.dexProf.UseVisualStyleBackColor = true;
             this.dexProf.CheckedChanged += new System.EventHandler(this.dexProfBox_CheckedChanged);
@@ -3850,6 +3967,7 @@
             this.strSaveButton.Name = "strSaveButton";
             this.strSaveButton.Size = new System.Drawing.Size(82, 16);
             this.strSaveButton.TabIndex = 170;
+            this.strSaveButton.TabStop = false;
             this.strSaveButton.Text = "Save Throw";
             this.strSaveButton.UseVisualStyleBackColor = true;
             this.strSaveButton.Click += new System.EventHandler(this.strSaveButton_Click);
@@ -3866,6 +3984,7 @@
             this.strDownButton.Name = "strDownButton";
             this.strDownButton.Size = new System.Drawing.Size(17, 13);
             this.strDownButton.TabIndex = 248;
+            this.strDownButton.TabStop = false;
             this.strDownButton.Text = null;
             this.strDownButton.UseVisualStyleBackColor = true;
             this.strDownButton.Click += new System.EventHandler(this.strDecreaseButton_Click);
@@ -3882,6 +4001,7 @@
             this.strUpButton.Name = "strUpButton";
             this.strUpButton.Size = new System.Drawing.Size(17, 13);
             this.strUpButton.TabIndex = 247;
+            this.strUpButton.TabStop = false;
             this.strUpButton.Text = null;
             this.strUpButton.UseVisualStyleBackColor = true;
             this.strUpButton.Click += new System.EventHandler(this.strAddButton_Click);
@@ -3894,6 +4014,7 @@
             this.strProf.Name = "strProf";
             this.strProf.Size = new System.Drawing.Size(87, 19);
             this.strProf.TabIndex = 235;
+            this.strProf.TabStop = false;
             this.strProf.Text = "Proficient";
             this.strProf.UseVisualStyleBackColor = true;
             this.strProf.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
@@ -3910,6 +4031,7 @@
             this.profUpButton.Name = "profUpButton";
             this.profUpButton.Size = new System.Drawing.Size(17, 13);
             this.profUpButton.TabIndex = 286;
+            this.profUpButton.TabStop = false;
             this.profUpButton.Text = null;
             this.profUpButton.UseVisualStyleBackColor = true;
             this.profUpButton.Click += new System.EventHandler(this.profUpButton_Click);
@@ -3919,14 +4041,14 @@
             this.nameTextBox.Location = new System.Drawing.Point(5, 5);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(209, 22);
-            this.nameTextBox.TabIndex = 245;
+            this.nameTextBox.TabIndex = 0;
             // 
             // levelTextBox
             // 
             this.levelTextBox.Location = new System.Drawing.Point(4, 34);
             this.levelTextBox.Name = "levelTextBox";
             this.levelTextBox.Size = new System.Drawing.Size(209, 14);
-            this.levelTextBox.TabIndex = 244;
+            this.levelTextBox.TabIndex = 1;
             // 
             // BackgroundInfobutton
             // 
@@ -3935,6 +4057,7 @@
             this.BackgroundInfobutton.Name = "BackgroundInfobutton";
             this.BackgroundInfobutton.Size = new System.Drawing.Size(90, 20);
             this.BackgroundInfobutton.TabIndex = 170;
+            this.BackgroundInfobutton.TabStop = false;
             this.BackgroundInfobutton.Text = "Character Info";
             this.BackgroundInfobutton.UseVisualStyleBackColor = true;
             this.BackgroundInfobutton.Click += new System.EventHandler(this.BackgroundInfobutton_Click);
@@ -3944,42 +4067,42 @@
             this.alignmentTextbox.Location = new System.Drawing.Point(141, 55);
             this.alignmentTextbox.Name = "alignmentTextbox";
             this.alignmentTextbox.Size = new System.Drawing.Size(72, 14);
-            this.alignmentTextbox.TabIndex = 243;
+            this.alignmentTextbox.TabIndex = 4;
             // 
             // backgroundTextbox
             // 
             this.backgroundTextbox.Location = new System.Drawing.Point(75, 55);
             this.backgroundTextbox.Name = "backgroundTextbox";
             this.backgroundTextbox.Size = new System.Drawing.Size(62, 14);
-            this.backgroundTextbox.TabIndex = 242;
+            this.backgroundTextbox.TabIndex = 3;
             // 
             // raceTextbox
             // 
             this.raceTextbox.Location = new System.Drawing.Point(5, 55);
             this.raceTextbox.Name = "raceTextbox";
             this.raceTextbox.Size = new System.Drawing.Size(66, 14);
-            this.raceTextbox.TabIndex = 239;
+            this.raceTextbox.TabIndex = 2;
             // 
             // tempHPTextbox
             // 
             this.tempHPTextbox.Location = new System.Drawing.Point(175, 40);
             this.tempHPTextbox.Name = "tempHPTextbox";
             this.tempHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.tempHPTextbox.TabIndex = 236;
+            this.tempHPTextbox.TabIndex = 7;
             // 
             // maxHPTextbox
             // 
             this.maxHPTextbox.Location = new System.Drawing.Point(129, 40);
             this.maxHPTextbox.Name = "maxHPTextbox";
             this.maxHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.maxHPTextbox.TabIndex = 235;
+            this.maxHPTextbox.TabIndex = 6;
             // 
             // currentHPTextbox
             // 
             this.currentHPTextbox.Location = new System.Drawing.Point(79, 40);
             this.currentHPTextbox.Name = "currentHPTextbox";
             this.currentHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.currentHPTextbox.TabIndex = 234;
+            this.currentHPTextbox.TabIndex = 5;
             // 
             // proficienciesCheckBoxes
             // 
@@ -3987,19 +4110,6 @@
             this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
             this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
             this.proficienciesCheckBoxes.TabIndex = 234;
-            // 
-            // miscRollbutton
-            // 
-            this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(0, 3);
-            this.miscRollbutton.Name = "miscRollbutton";
-            this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
-            this.miscRollbutton.TabIndex = 193;
-            this.miscRollbutton.Text = "Roll";
-            this.miscRollbutton.UseVisualStyleBackColor = true;
-            this.miscRollbutton.Click += new System.EventHandler(this.miscRollbutton_Click);
             // 
             // forgetSpellButton
             // 
@@ -4009,6 +4119,7 @@
             this.forgetSpellButton.Name = "forgetSpellButton";
             this.forgetSpellButton.Size = new System.Drawing.Size(75, 18);
             this.forgetSpellButton.TabIndex = 223;
+            this.forgetSpellButton.TabStop = false;
             this.forgetSpellButton.Text = "Forget Spell";
             this.forgetSpellButton.UseVisualStyleBackColor = true;
             this.forgetSpellButton.Click += new System.EventHandler(this.forgetSpellButton_Click);
@@ -4019,7 +4130,7 @@
             this.preparednumericUpDown.Location = new System.Drawing.Point(157, 338);
             this.preparednumericUpDown.Name = "preparednumericUpDown";
             this.preparednumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.preparednumericUpDown.TabIndex = 197;
+            this.preparednumericUpDown.TabIndex = 6;
             this.preparednumericUpDown.Value = 0;
             // 
             // Level9SpellButton
@@ -4150,7 +4261,7 @@
             this.spellsavedcnumupdown.Location = new System.Drawing.Point(226, 26);
             this.spellsavedcnumupdown.Name = "spellsavedcnumupdown";
             this.spellsavedcnumupdown.Size = new System.Drawing.Size(46, 23);
-            this.spellsavedcnumupdown.TabIndex = 239;
+            this.spellsavedcnumupdown.TabIndex = 2;
             this.spellsavedcnumupdown.Value = 0;
             // 
             // spellAtkBonusnumUpDown
@@ -4159,7 +4270,7 @@
             this.spellAtkBonusnumUpDown.Location = new System.Drawing.Point(138, 26);
             this.spellAtkBonusnumUpDown.Name = "spellAtkBonusnumUpDown";
             this.spellAtkBonusnumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.spellAtkBonusnumUpDown.TabIndex = 238;
+            this.spellAtkBonusnumUpDown.TabIndex = 1;
             this.spellAtkBonusnumUpDown.Value = 0;
             // 
             // MinusCurrentSlotbutton
@@ -4170,6 +4281,7 @@
             this.MinusCurrentSlotbutton.Name = "MinusCurrentSlotbutton";
             this.MinusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
             this.MinusCurrentSlotbutton.TabIndex = 197;
+            this.MinusCurrentSlotbutton.TabStop = false;
             this.MinusCurrentSlotbutton.Tag = "current";
             this.MinusCurrentSlotbutton.Text = "-";
             this.MinusCurrentSlotbutton.UseVisualStyleBackColor = true;
@@ -4183,6 +4295,7 @@
             this.plusCurrentSlotbutton.Name = "plusCurrentSlotbutton";
             this.plusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
             this.plusCurrentSlotbutton.TabIndex = 196;
+            this.plusCurrentSlotbutton.TabStop = false;
             this.plusCurrentSlotbutton.Tag = "current";
             this.plusCurrentSlotbutton.Text = "+";
             this.plusCurrentSlotbutton.UseVisualStyleBackColor = true;
@@ -4196,6 +4309,7 @@
             this.minusMaxSlotbutton.Name = "minusMaxSlotbutton";
             this.minusMaxSlotbutton.Size = new System.Drawing.Size(17, 17);
             this.minusMaxSlotbutton.TabIndex = 110;
+            this.minusMaxSlotbutton.TabStop = false;
             this.minusMaxSlotbutton.Tag = "current";
             this.minusMaxSlotbutton.Text = "-";
             this.minusMaxSlotbutton.UseVisualStyleBackColor = true;
@@ -4209,6 +4323,7 @@
             this.PlusMaxSLotbutton.Name = "PlusMaxSLotbutton";
             this.PlusMaxSLotbutton.Size = new System.Drawing.Size(17, 17);
             this.PlusMaxSLotbutton.TabIndex = 109;
+            this.PlusMaxSLotbutton.TabStop = false;
             this.PlusMaxSLotbutton.Tag = "current";
             this.PlusMaxSLotbutton.Text = "+";
             this.PlusMaxSLotbutton.UseVisualStyleBackColor = true;
@@ -4220,7 +4335,7 @@
             this.MultipliernumericUpDown.Location = new System.Drawing.Point(9, 228);
             this.MultipliernumericUpDown.Name = "MultipliernumericUpDown";
             this.MultipliernumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.MultipliernumericUpDown.TabIndex = 196;
+            this.MultipliernumericUpDown.TabIndex = 4;
             this.MultipliernumericUpDown.Value = 0;
             // 
             // otherBonusnumericUpDown
@@ -4229,7 +4344,7 @@
             this.otherBonusnumericUpDown.Location = new System.Drawing.Point(69, 228);
             this.otherBonusnumericUpDown.Name = "otherBonusnumericUpDown";
             this.otherBonusnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.otherBonusnumericUpDown.TabIndex = 195;
+            this.otherBonusnumericUpDown.TabIndex = 5;
             this.otherBonusnumericUpDown.Value = 0;
             // 
             // addModcheckBox
@@ -4240,6 +4355,7 @@
             this.addModcheckBox.Name = "addModcheckBox";
             this.addModcheckBox.Size = new System.Drawing.Size(97, 17);
             this.addModcheckBox.TabIndex = 194;
+            this.addModcheckBox.TabStop = false;
             this.addModcheckBox.Text = "Add Modifier";
             this.addModcheckBox.UseVisualStyleBackColor = true;
             // 
@@ -4253,6 +4369,7 @@
             this.SpellDescriptionButton.Name = "SpellDescriptionButton";
             this.SpellDescriptionButton.Size = new System.Drawing.Size(81, 19);
             this.SpellDescriptionButton.TabIndex = 193;
+            this.SpellDescriptionButton.TabStop = false;
             this.SpellDescriptionButton.Text = "Description";
             this.SpellDescriptionButton.UseVisualStyleBackColor = true;
             this.SpellDescriptionButton.Click += new System.EventHandler(this.SpellDescriptionButton_Click);
@@ -4267,6 +4384,7 @@
             this.spellAttackButton.Name = "spellAttackButton";
             this.spellAttackButton.Size = new System.Drawing.Size(81, 19);
             this.spellAttackButton.TabIndex = 182;
+            this.spellAttackButton.TabStop = false;
             this.spellAttackButton.Text = "Attack Roll";
             this.spellAttackButton.UseVisualStyleBackColor = true;
             this.spellAttackButton.Click += new System.EventHandler(this.SpellAttackRoll);
@@ -4281,6 +4399,7 @@
             this.SpellMiscRollButton.Name = "SpellMiscRollButton";
             this.SpellMiscRollButton.Size = new System.Drawing.Size(57, 21);
             this.SpellMiscRollButton.TabIndex = 97;
+            this.SpellMiscRollButton.TabStop = false;
             this.SpellMiscRollButton.Text = "Roll:";
             this.SpellMiscRollButton.UseVisualStyleBackColor = true;
             this.SpellMiscRollButton.Click += new System.EventHandler(this.SpellMiscRollButton_Click);
@@ -4293,6 +4412,7 @@
             this.browseSpellsButton.Name = "browseSpellsButton";
             this.browseSpellsButton.Size = new System.Drawing.Size(104, 18);
             this.browseSpellsButton.TabIndex = 169;
+            this.browseSpellsButton.TabStop = false;
             this.browseSpellsButton.Text = "Browse Spells";
             this.browseSpellsButton.UseVisualStyleBackColor = true;
             this.browseSpellsButton.Click += new System.EventHandler(this.BrowseSpells);
@@ -4305,6 +4425,7 @@
             this.refillSpellSlotsButton.Name = "refillSpellSlotsButton";
             this.refillSpellSlotsButton.Size = new System.Drawing.Size(105, 18);
             this.refillSpellSlotsButton.TabIndex = 183;
+            this.refillSpellSlotsButton.TabStop = false;
             this.refillSpellSlotsButton.Text = "Refill All Slots";
             this.refillSpellSlotsButton.UseVisualStyleBackColor = true;
             this.refillSpellSlotsButton.Click += new System.EventHandler(this.RefillSpellSlots);
@@ -4315,7 +4436,7 @@
             this.d12NumUpDown.Location = new System.Drawing.Point(144, 103);
             this.d12NumUpDown.Name = "d12NumUpDown";
             this.d12NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d12NumUpDown.TabIndex = 289;
+            this.d12NumUpDown.TabIndex = 23;
             this.d12NumUpDown.Value = 0;
             // 
             // d10NumUpDown
@@ -4324,7 +4445,7 @@
             this.d10NumUpDown.Location = new System.Drawing.Point(96, 103);
             this.d10NumUpDown.Name = "d10NumUpDown";
             this.d10NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d10NumUpDown.TabIndex = 288;
+            this.d10NumUpDown.TabIndex = 22;
             this.d10NumUpDown.Value = 0;
             // 
             // d8NumUpDown
@@ -4333,7 +4454,7 @@
             this.d8NumUpDown.Location = new System.Drawing.Point(46, 103);
             this.d8NumUpDown.Name = "d8NumUpDown";
             this.d8NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d8NumUpDown.TabIndex = 287;
+            this.d8NumUpDown.TabIndex = 21;
             this.d8NumUpDown.Value = 0;
             // 
             // d6NumUpDown
@@ -4342,7 +4463,7 @@
             this.d6NumUpDown.Location = new System.Drawing.Point(-2, 103);
             this.d6NumUpDown.Name = "d6NumUpDown";
             this.d6NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d6NumUpDown.TabIndex = 286;
+            this.d6NumUpDown.TabIndex = 20;
             this.d6NumUpDown.Value = 0;
             // 
             // autoHealHitDice
@@ -4353,6 +4474,7 @@
             this.autoHealHitDice.Name = "autoHealHitDice";
             this.autoHealHitDice.Size = new System.Drawing.Size(176, 19);
             this.autoHealHitDice.TabIndex = 235;
+            this.autoHealHitDice.TabStop = false;
             this.autoHealHitDice.Text = "Apply Healing Automatically";
             this.autoHealHitDice.UseVisualStyleBackColor = true;
             // 
@@ -4364,6 +4486,7 @@
             this.HitDicePartialRefillButton.Name = "HitDicePartialRefillButton";
             this.HitDicePartialRefillButton.Size = new System.Drawing.Size(95, 17);
             this.HitDicePartialRefillButton.TabIndex = 117;
+            this.HitDicePartialRefillButton.TabStop = false;
             this.HitDicePartialRefillButton.Text = "Partial Refill";
             this.HitDicePartialRefillButton.UseVisualStyleBackColor = true;
             this.HitDicePartialRefillButton.Click += new System.EventHandler(this.HitDicePartialRefillButton_Click);
@@ -4376,6 +4499,7 @@
             this.HitDiceFullRefillButton.Name = "HitDiceFullRefillButton";
             this.HitDiceFullRefillButton.Size = new System.Drawing.Size(95, 17);
             this.HitDiceFullRefillButton.TabIndex = 116;
+            this.HitDiceFullRefillButton.TabStop = false;
             this.HitDiceFullRefillButton.Text = "Full Refill";
             this.HitDiceFullRefillButton.UseVisualStyleBackColor = true;
             this.HitDiceFullRefillButton.Click += new System.EventHandler(this.HitDiceFullRefillButton_Click);
@@ -4388,6 +4512,7 @@
             this.HitDiceSetMaxButton.Name = "HitDiceSetMaxButton";
             this.HitDiceSetMaxButton.Size = new System.Drawing.Size(94, 17);
             this.HitDiceSetMaxButton.TabIndex = 115;
+            this.HitDiceSetMaxButton.TabStop = false;
             this.HitDiceSetMaxButton.Text = "Set Max";
             this.HitDiceSetMaxButton.UseVisualStyleBackColor = true;
             this.HitDiceSetMaxButton.Click += new System.EventHandler(this.HitDiceSetMaxButton_Click);
@@ -4400,6 +4525,7 @@
             this.HitDiceUseButton.Name = "HitDiceUseButton";
             this.HitDiceUseButton.Size = new System.Drawing.Size(94, 18);
             this.HitDiceUseButton.TabIndex = 109;
+            this.HitDiceUseButton.TabStop = false;
             this.HitDiceUseButton.Text = "Use";
             this.HitDiceUseButton.UseVisualStyleBackColor = true;
             this.HitDiceUseButton.Click += new System.EventHandler(this.buttonNoPadding1_Click);
@@ -4408,10 +4534,11 @@
             // 
             this.newWeaponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newWeaponButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newWeaponButton.Location = new System.Drawing.Point(51, 3);
+            this.newWeaponButton.Location = new System.Drawing.Point(44, 3);
             this.newWeaponButton.Name = "newWeaponButton";
             this.newWeaponButton.Size = new System.Drawing.Size(86, 19);
             this.newWeaponButton.TabIndex = 94;
+            this.newWeaponButton.TabStop = false;
             this.newWeaponButton.Text = "New Weapon";
             this.newWeaponButton.UseVisualStyleBackColor = true;
             this.newWeaponButton.Click += new System.EventHandler(this.createWeapon_Click);
@@ -4529,6 +4656,7 @@
             this.dmgRoll2.Name = "dmgRoll2";
             this.dmgRoll2.Size = new System.Drawing.Size(74, 20);
             this.dmgRoll2.TabIndex = 93;
+            this.dmgRoll2.TabStop = false;
             this.dmgRoll2.Text = "Damage Roll";
             this.dmgRoll2.UseVisualStyleBackColor = true;
             this.dmgRoll2.Click += new System.EventHandler(this.dmgRoll2_Click);
@@ -4542,6 +4670,7 @@
             this.weapondDelButton.Name = "weapondDelButton";
             this.weapondDelButton.Size = new System.Drawing.Size(68, 20);
             this.weapondDelButton.TabIndex = 92;
+            this.weapondDelButton.TabStop = false;
             this.weapondDelButton.Text = "Delete";
             this.weapondDelButton.UseVisualStyleBackColor = true;
             this.weapondDelButton.Click += new System.EventHandler(this.DeleteWeapon);
@@ -4555,6 +4684,7 @@
             this.weaponEditButton.Name = "weaponEditButton";
             this.weaponEditButton.Size = new System.Drawing.Size(68, 20);
             this.weaponEditButton.TabIndex = 91;
+            this.weaponEditButton.TabStop = false;
             this.weaponEditButton.Text = "Edit";
             this.weaponEditButton.UseVisualStyleBackColor = true;
             this.weaponEditButton.Click += new System.EventHandler(this.EditWeapon);
@@ -4569,88 +4699,34 @@
             this.atkRoll1.Name = "atkRoll1";
             this.atkRoll1.Size = new System.Drawing.Size(74, 20);
             this.atkRoll1.TabIndex = 90;
+            this.atkRoll1.TabStop = false;
             this.atkRoll1.Text = "Attack Roll";
             this.atkRoll1.UseVisualStyleBackColor = true;
             this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
             // 
-            // pictureBox2
+            // spellattackBonusDisplayBox
             // 
-            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.check;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(14, 14);
-            this.pictureBox2.TabIndex = 334;
-            this.pictureBox2.TabStop = false;
+            this.spellattackBonusDisplayBox.BackColor = System.Drawing.SystemColors.Control;
+            this.spellattackBonusDisplayBox.Font = new System.Drawing.Font("Impact", 18.25F);
+            this.spellattackBonusDisplayBox.ForeColor = System.Drawing.Color.Maroon;
+            this.spellattackBonusDisplayBox.Location = new System.Drawing.Point(87, 19);
+            this.spellattackBonusDisplayBox.Name = "spellattackBonusDisplayBox";
+            this.spellattackBonusDisplayBox.Size = new System.Drawing.Size(53, 30);
+            this.spellattackBonusDisplayBox.TabIndex = 335;
+            this.spellattackBonusDisplayBox.Text = "+10";
+            this.spellattackBonusDisplayBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // spellSaveDCdisplayLabel
             // 
-            this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.X;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(14, 14);
-            this.pictureBox3.TabIndex = 335;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockIcon;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 52);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(14, 14);
-            this.pictureBox4.TabIndex = 336;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label84
-            // 
-            this.label84.BackColor = System.Drawing.SystemColors.Control;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Bold);
-            this.label84.ForeColor = System.Drawing.Color.Black;
-            this.label84.Location = new System.Drawing.Point(63, 57);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(39, 16);
-            this.label84.TabIndex = 334;
-            this.label84.Text = "Slots:";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(414, 467);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 20);
-            this.label6.TabIndex = 334;
-            this.label6.Text = "Misc Roll";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.SystemColors.Control;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(-4, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(191, 17);
-            this.label16.TabIndex = 319;
-            this.label16.Text = "_____________________";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.miscRollAmountnumericUpDown);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.miscRollNumnumericUpDown);
-            this.panel1.Controls.Add(this.miscRollbutton);
-            this.panel1.Controls.Add(this.MiscRollflatnumericUpDown);
-            this.panel1.Controls.Add(this.miscRollDropDown);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Location = new System.Drawing.Point(414, 489);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(174, 58);
-            this.panel1.TabIndex = 335;
+            this.spellSaveDCdisplayLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.spellSaveDCdisplayLabel.Font = new System.Drawing.Font("Impact", 18.25F);
+            this.spellSaveDCdisplayLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.spellSaveDCdisplayLabel.Location = new System.Drawing.Point(190, 19);
+            this.spellSaveDCdisplayLabel.Name = "spellSaveDCdisplayLabel";
+            this.spellSaveDCdisplayLabel.Size = new System.Drawing.Size(40, 30);
+            this.spellSaveDCdisplayLabel.TabIndex = 336;
+            this.spellSaveDCdisplayLabel.Text = "10";
+            this.spellSaveDCdisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -4764,15 +4840,18 @@
             this.panel5.ResumeLayout(false);
             this.spellPanel.ResumeLayout(false);
             this.spellPanel.PerformLayout();
-            this.spellListPanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.preparedHelppanel.ResumeLayout(false);
             this.preparedHelppanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.spellListPanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.warlockSpellPanel.ResumeLayout(false);
             this.warlockSpellPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
@@ -4789,9 +4868,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -4914,8 +4990,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private CustomButtons.ButtonNoPadding forgetSpellButton;
-        private System.Windows.Forms.TextBox spellSaveDCdisplayLabel;
-        private System.Windows.Forms.TextBox spellattackBonusDisplayBox;
         private System.Windows.Forms.Label preparedhelpLabel;
         private System.Windows.Forms.Label spellsPreparedAmountlabel;
         private System.Windows.Forms.Panel preparedHelppanel;
@@ -5142,6 +5216,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label spellattackBonusDisplayBox;
+        private System.Windows.Forms.Label spellSaveDCdisplayLabel;
     }
 }
 

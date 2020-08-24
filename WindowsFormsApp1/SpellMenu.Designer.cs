@@ -59,7 +59,7 @@
             this.spellListBox.ScrollAlwaysVisible = true;
             this.spellListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.spellListBox.Size = new System.Drawing.Size(321, 184);
-            this.spellListBox.TabIndex = 0;
+            this.spellListBox.TabIndex = 1;
             this.spellListBox.SelectedIndexChanged += new System.EventHandler(this.spellListBox_SelectedIndexChanged);
             // 
             // buttonNoPadding1
@@ -70,6 +70,7 @@
             this.buttonNoPadding1.Name = "buttonNoPadding1";
             this.buttonNoPadding1.Size = new System.Drawing.Size(103, 45);
             this.buttonNoPadding1.TabIndex = 1;
+            this.buttonNoPadding1.TabStop = false;
             this.buttonNoPadding1.Text = "Create Spell";
             this.buttonNoPadding1.UseVisualStyleBackColor = true;
             this.buttonNoPadding1.Click += new System.EventHandler(this.CreateSpell_ButtonClick);
@@ -82,6 +83,7 @@
             this.deleteSpellButton.Name = "deleteSpellButton";
             this.deleteSpellButton.Size = new System.Drawing.Size(103, 45);
             this.deleteSpellButton.TabIndex = 2;
+            this.deleteSpellButton.TabStop = false;
             this.deleteSpellButton.Text = "Delete\r\nSpell";
             this.deleteSpellButton.UseVisualStyleBackColor = true;
             this.deleteSpellButton.Click += new System.EventHandler(this.deleteSpellButton_Click);
@@ -94,6 +96,7 @@
             this.editSpellButton.Name = "editSpellButton";
             this.editSpellButton.Size = new System.Drawing.Size(103, 45);
             this.editSpellButton.TabIndex = 3;
+            this.editSpellButton.TabStop = false;
             this.editSpellButton.Text = "Edit\r\nSpell";
             this.editSpellButton.UseVisualStyleBackColor = true;
             this.editSpellButton.Click += new System.EventHandler(this.editSpellButton_Click);
@@ -216,6 +219,7 @@
             this.learnSpellbutton.Name = "learnSpellbutton";
             this.learnSpellbutton.Size = new System.Drawing.Size(103, 45);
             this.learnSpellbutton.TabIndex = 17;
+            this.learnSpellbutton.TabStop = false;
             this.learnSpellbutton.Text = "Learn\r\nSpell";
             this.learnSpellbutton.UseVisualStyleBackColor = true;
             this.learnSpellbutton.Click += new System.EventHandler(this.learnSpellbutton_Click);
@@ -228,6 +232,7 @@
             this.xSearchButton.Name = "xSearchButton";
             this.xSearchButton.Size = new System.Drawing.Size(17, 17);
             this.xSearchButton.TabIndex = 19;
+            this.xSearchButton.TabStop = false;
             this.xSearchButton.Text = "X";
             this.xSearchButton.UseVisualStyleBackColor = true;
             this.xSearchButton.Click += new System.EventHandler(this.xSearchButton_Click);
@@ -237,7 +242,7 @@
             this.search.Location = new System.Drawing.Point(123, 5);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(133, 17);
-            this.search.TabIndex = 20;
+            this.search.TabIndex = 0;
             this.search.Enter += new System.EventHandler(this.SearchBox_Enter);
             this.search.Leave += new System.EventHandler(this.SearchBox_Leave);
             // 
@@ -247,6 +252,7 @@
             this.desc.Name = "desc";
             this.desc.Size = new System.Drawing.Size(310, 238);
             this.desc.TabIndex = 21;
+            this.desc.TabStop = false;
             // 
             // SpellMenu
             // 

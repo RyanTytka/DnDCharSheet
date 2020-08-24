@@ -629,6 +629,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(104, 14);
             this.button17.TabIndex = 129;
+            this.button17.TabStop = false;
             this.button17.Tag = "17";
             this.button17.Text = "Persuasion";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -644,6 +645,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(104, 14);
             this.button16.TabIndex = 128;
+            this.button16.TabStop = false;
             this.button16.Tag = "16";
             this.button16.Text = "Performance";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -659,6 +661,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(104, 14);
             this.button15.TabIndex = 127;
+            this.button15.TabStop = false;
             this.button15.Tag = "15";
             this.button15.Text = "Inimidation";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -674,6 +677,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(104, 14);
             this.button14.TabIndex = 126;
+            this.button14.TabStop = false;
             this.button14.Tag = "14";
             this.button14.Text = "Deception";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -688,6 +692,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(104, 14);
             this.button13.TabIndex = 125;
+            this.button13.TabStop = false;
             this.button13.Tag = "13";
             this.button13.Text = "Survival";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -702,6 +707,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(104, 14);
             this.button12.TabIndex = 124;
+            this.button12.TabStop = false;
             this.button12.Tag = "12";
             this.button12.Text = "Perception";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -717,6 +723,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(104, 14);
             this.button11.TabIndex = 123;
+            this.button11.TabStop = false;
             this.button11.Tag = "11";
             this.button11.Text = "Medicine";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -732,6 +739,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(104, 14);
             this.button10.TabIndex = 122;
+            this.button10.TabStop = false;
             this.button10.Tag = "10";
             this.button10.Text = "Insight";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -747,6 +755,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(104, 14);
             this.button9.TabIndex = 121;
+            this.button9.TabStop = false;
             this.button9.Tag = "9";
             this.button9.Text = "Animal Handling";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -761,6 +770,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(104, 14);
             this.button8.TabIndex = 120;
+            this.button8.TabStop = false;
             this.button8.Tag = "8";
             this.button8.Text = "Religion";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -775,6 +785,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(104, 14);
             this.button7.TabIndex = 119;
+            this.button7.TabStop = false;
             this.button7.Tag = "7";
             this.button7.Text = "Nature";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -790,6 +801,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(104, 14);
             this.button6.TabIndex = 118;
+            this.button6.TabStop = false;
             this.button6.Tag = "6";
             this.button6.Text = "Investigation";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -805,6 +817,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(104, 14);
             this.button5.TabIndex = 117;
+            this.button5.TabStop = false;
             this.button5.Tag = "5";
             this.button5.Text = "History";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -820,6 +833,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 14);
             this.button4.TabIndex = 116;
+            this.button4.TabStop = false;
             this.button4.Tag = "4";
             this.button4.Text = "Arcana";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -834,6 +848,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 14);
             this.button3.TabIndex = 115;
+            this.button3.TabStop = false;
             this.button3.Tag = "3";
             this.button3.Text = "Stealth";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -848,6 +863,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 14);
             this.button2.TabIndex = 114;
+            this.button2.TabStop = false;
             this.button2.Tag = "2";
             this.button2.Text = "Sleight of Hand";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -863,6 +879,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 14);
             this.button1.TabIndex = 113;
+            this.button1.TabStop = false;
             this.button1.Tag = "1";
             this.button1.Text = "Acrobatics";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -877,6 +894,7 @@
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(104, 14);
             this.button0.TabIndex = 112;
+            this.button0.TabStop = false;
             this.button0.Tag = "0";
             this.button0.Text = "Athletics";
             this.button0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -891,6 +909,7 @@
             this.proficiencyCheckBox46.Name = "proficiencyCheckBox46";
             this.proficiencyCheckBox46.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox46.TabIndex = 87;
+            this.proficiencyCheckBox46.TabStop = false;
             this.proficiencyCheckBox46.Tag = "3-17";
             this.proficiencyCheckBox46.Text = " ";
             this.proficiencyCheckBox46.UseVisualStyleBackColor = true;
@@ -904,6 +923,7 @@
             this.proficiencyCheckBox47.Name = "proficiencyCheckBox47";
             this.proficiencyCheckBox47.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox47.TabIndex = 86;
+            this.proficiencyCheckBox47.TabStop = false;
             this.proficiencyCheckBox47.Tag = "2-17";
             this.proficiencyCheckBox47.Text = " ";
             this.proficiencyCheckBox47.UseVisualStyleBackColor = true;
@@ -917,6 +937,7 @@
             this.proficiencyCheckBox48.Name = "proficiencyCheckBox48";
             this.proficiencyCheckBox48.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox48.TabIndex = 85;
+            this.proficiencyCheckBox48.TabStop = false;
             this.proficiencyCheckBox48.Tag = "1-17";
             this.proficiencyCheckBox48.Text = " ";
             this.proficiencyCheckBox48.UseVisualStyleBackColor = true;
@@ -930,6 +951,7 @@
             this.proficiencyCheckBox49.Name = "proficiencyCheckBox49";
             this.proficiencyCheckBox49.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox49.TabIndex = 83;
+            this.proficiencyCheckBox49.TabStop = false;
             this.proficiencyCheckBox49.Tag = "3-16";
             this.proficiencyCheckBox49.Text = " ";
             this.proficiencyCheckBox49.UseVisualStyleBackColor = true;
@@ -943,6 +965,7 @@
             this.proficiencyCheckBox50.Name = "proficiencyCheckBox50";
             this.proficiencyCheckBox50.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox50.TabIndex = 82;
+            this.proficiencyCheckBox50.TabStop = false;
             this.proficiencyCheckBox50.Tag = "2-16";
             this.proficiencyCheckBox50.Text = " ";
             this.proficiencyCheckBox50.UseVisualStyleBackColor = true;
@@ -956,6 +979,7 @@
             this.proficiencyCheckBox51.Name = "proficiencyCheckBox51";
             this.proficiencyCheckBox51.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox51.TabIndex = 81;
+            this.proficiencyCheckBox51.TabStop = false;
             this.proficiencyCheckBox51.Tag = "1-16";
             this.proficiencyCheckBox51.Text = " ";
             this.proficiencyCheckBox51.UseVisualStyleBackColor = true;
@@ -969,6 +993,7 @@
             this.proficiencyCheckBox52.Name = "proficiencyCheckBox52";
             this.proficiencyCheckBox52.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox52.TabIndex = 79;
+            this.proficiencyCheckBox52.TabStop = false;
             this.proficiencyCheckBox52.Tag = "3-15";
             this.proficiencyCheckBox52.Text = " ";
             this.proficiencyCheckBox52.UseVisualStyleBackColor = true;
@@ -982,6 +1007,7 @@
             this.proficiencyCheckBox53.Name = "proficiencyCheckBox53";
             this.proficiencyCheckBox53.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox53.TabIndex = 78;
+            this.proficiencyCheckBox53.TabStop = false;
             this.proficiencyCheckBox53.Tag = "2-15";
             this.proficiencyCheckBox53.Text = " ";
             this.proficiencyCheckBox53.UseVisualStyleBackColor = true;
@@ -995,6 +1021,7 @@
             this.proficiencyCheckBox54.Name = "proficiencyCheckBox54";
             this.proficiencyCheckBox54.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox54.TabIndex = 77;
+            this.proficiencyCheckBox54.TabStop = false;
             this.proficiencyCheckBox54.Tag = "1-15";
             this.proficiencyCheckBox54.Text = " ";
             this.proficiencyCheckBox54.UseVisualStyleBackColor = true;
@@ -1008,6 +1035,7 @@
             this.proficiencyCheckBox55.Name = "proficiencyCheckBox55";
             this.proficiencyCheckBox55.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox55.TabIndex = 75;
+            this.proficiencyCheckBox55.TabStop = false;
             this.proficiencyCheckBox55.Tag = "3-14";
             this.proficiencyCheckBox55.Text = " ";
             this.proficiencyCheckBox55.UseVisualStyleBackColor = true;
@@ -1021,6 +1049,7 @@
             this.proficiencyCheckBox56.Name = "proficiencyCheckBox56";
             this.proficiencyCheckBox56.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox56.TabIndex = 74;
+            this.proficiencyCheckBox56.TabStop = false;
             this.proficiencyCheckBox56.Tag = "2-14";
             this.proficiencyCheckBox56.Text = " ";
             this.proficiencyCheckBox56.UseVisualStyleBackColor = true;
@@ -1034,6 +1063,7 @@
             this.proficiencyCheckBox57.Name = "proficiencyCheckBox57";
             this.proficiencyCheckBox57.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox57.TabIndex = 73;
+            this.proficiencyCheckBox57.TabStop = false;
             this.proficiencyCheckBox57.Tag = "1-14";
             this.proficiencyCheckBox57.Text = " ";
             this.proficiencyCheckBox57.UseVisualStyleBackColor = true;
@@ -1047,6 +1077,7 @@
             this.proficiencyCheckBox13.Name = "proficiencyCheckBox13";
             this.proficiencyCheckBox13.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox13.TabIndex = 69;
+            this.proficiencyCheckBox13.TabStop = false;
             this.proficiencyCheckBox13.Tag = "3-13";
             this.proficiencyCheckBox13.Text = " ";
             this.proficiencyCheckBox13.UseVisualStyleBackColor = true;
@@ -1060,6 +1091,7 @@
             this.proficiencyCheckBox14.Name = "proficiencyCheckBox14";
             this.proficiencyCheckBox14.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox14.TabIndex = 68;
+            this.proficiencyCheckBox14.TabStop = false;
             this.proficiencyCheckBox14.Tag = "2-13";
             this.proficiencyCheckBox14.Text = " ";
             this.proficiencyCheckBox14.UseVisualStyleBackColor = true;
@@ -1073,6 +1105,7 @@
             this.proficiencyCheckBox15.Name = "proficiencyCheckBox15";
             this.proficiencyCheckBox15.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox15.TabIndex = 67;
+            this.proficiencyCheckBox15.TabStop = false;
             this.proficiencyCheckBox15.Tag = "1-13";
             this.proficiencyCheckBox15.Text = " ";
             this.proficiencyCheckBox15.UseVisualStyleBackColor = true;
@@ -1086,6 +1119,7 @@
             this.proficiencyCheckBox16.Name = "proficiencyCheckBox16";
             this.proficiencyCheckBox16.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox16.TabIndex = 65;
+            this.proficiencyCheckBox16.TabStop = false;
             this.proficiencyCheckBox16.Tag = "3-12";
             this.proficiencyCheckBox16.Text = " ";
             this.proficiencyCheckBox16.UseVisualStyleBackColor = true;
@@ -1099,6 +1133,7 @@
             this.proficiencyCheckBox17.Name = "proficiencyCheckBox17";
             this.proficiencyCheckBox17.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox17.TabIndex = 64;
+            this.proficiencyCheckBox17.TabStop = false;
             this.proficiencyCheckBox17.Tag = "2-12";
             this.proficiencyCheckBox17.Text = " ";
             this.proficiencyCheckBox17.UseVisualStyleBackColor = true;
@@ -1112,6 +1147,7 @@
             this.proficiencyCheckBox18.Name = "proficiencyCheckBox18";
             this.proficiencyCheckBox18.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox18.TabIndex = 63;
+            this.proficiencyCheckBox18.TabStop = false;
             this.proficiencyCheckBox18.Tag = "1-12";
             this.proficiencyCheckBox18.Text = " ";
             this.proficiencyCheckBox18.UseVisualStyleBackColor = true;
@@ -1125,6 +1161,7 @@
             this.proficiencyCheckBox34.Name = "proficiencyCheckBox34";
             this.proficiencyCheckBox34.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox34.TabIndex = 61;
+            this.proficiencyCheckBox34.TabStop = false;
             this.proficiencyCheckBox34.Tag = "3-11";
             this.proficiencyCheckBox34.Text = " ";
             this.proficiencyCheckBox34.UseVisualStyleBackColor = true;
@@ -1138,6 +1175,7 @@
             this.proficiencyCheckBox35.Name = "proficiencyCheckBox35";
             this.proficiencyCheckBox35.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox35.TabIndex = 60;
+            this.proficiencyCheckBox35.TabStop = false;
             this.proficiencyCheckBox35.Tag = "2-11";
             this.proficiencyCheckBox35.Text = " ";
             this.proficiencyCheckBox35.UseVisualStyleBackColor = true;
@@ -1151,6 +1189,7 @@
             this.proficiencyCheckBox36.Name = "proficiencyCheckBox36";
             this.proficiencyCheckBox36.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox36.TabIndex = 59;
+            this.proficiencyCheckBox36.TabStop = false;
             this.proficiencyCheckBox36.Tag = "1-11";
             this.proficiencyCheckBox36.Text = " ";
             this.proficiencyCheckBox36.UseVisualStyleBackColor = true;
@@ -1164,6 +1203,7 @@
             this.proficiencyCheckBox37.Name = "proficiencyCheckBox37";
             this.proficiencyCheckBox37.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox37.TabIndex = 57;
+            this.proficiencyCheckBox37.TabStop = false;
             this.proficiencyCheckBox37.Tag = "3-10";
             this.proficiencyCheckBox37.Text = " ";
             this.proficiencyCheckBox37.UseVisualStyleBackColor = true;
@@ -1177,6 +1217,7 @@
             this.proficiencyCheckBox38.Name = "proficiencyCheckBox38";
             this.proficiencyCheckBox38.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox38.TabIndex = 56;
+            this.proficiencyCheckBox38.TabStop = false;
             this.proficiencyCheckBox38.Tag = "2-10";
             this.proficiencyCheckBox38.Text = " ";
             this.proficiencyCheckBox38.UseVisualStyleBackColor = true;
@@ -1190,6 +1231,7 @@
             this.proficiencyCheckBox39.Name = "proficiencyCheckBox39";
             this.proficiencyCheckBox39.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox39.TabIndex = 55;
+            this.proficiencyCheckBox39.TabStop = false;
             this.proficiencyCheckBox39.Tag = "1-10";
             this.proficiencyCheckBox39.Text = " ";
             this.proficiencyCheckBox39.UseVisualStyleBackColor = true;
@@ -1203,6 +1245,7 @@
             this.proficiencyCheckBox40.Name = "proficiencyCheckBox40";
             this.proficiencyCheckBox40.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox40.TabIndex = 53;
+            this.proficiencyCheckBox40.TabStop = false;
             this.proficiencyCheckBox40.Tag = "3-09";
             this.proficiencyCheckBox40.Text = " ";
             this.proficiencyCheckBox40.UseVisualStyleBackColor = true;
@@ -1216,6 +1259,7 @@
             this.proficiencyCheckBox41.Name = "proficiencyCheckBox41";
             this.proficiencyCheckBox41.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox41.TabIndex = 52;
+            this.proficiencyCheckBox41.TabStop = false;
             this.proficiencyCheckBox41.Tag = "2-09";
             this.proficiencyCheckBox41.Text = " ";
             this.proficiencyCheckBox41.UseVisualStyleBackColor = true;
@@ -1229,6 +1273,7 @@
             this.proficiencyCheckBox42.Name = "proficiencyCheckBox42";
             this.proficiencyCheckBox42.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox42.TabIndex = 51;
+            this.proficiencyCheckBox42.TabStop = false;
             this.proficiencyCheckBox42.Tag = "1-09";
             this.proficiencyCheckBox42.Text = " ";
             this.proficiencyCheckBox42.UseVisualStyleBackColor = true;
@@ -1242,6 +1287,7 @@
             this.proficiencyCheckBox19.Name = "proficiencyCheckBox19";
             this.proficiencyCheckBox19.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox19.TabIndex = 47;
+            this.proficiencyCheckBox19.TabStop = false;
             this.proficiencyCheckBox19.Tag = "3-08";
             this.proficiencyCheckBox19.Text = " ";
             this.proficiencyCheckBox19.UseVisualStyleBackColor = true;
@@ -1255,6 +1301,7 @@
             this.proficiencyCheckBox20.Name = "proficiencyCheckBox20";
             this.proficiencyCheckBox20.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox20.TabIndex = 46;
+            this.proficiencyCheckBox20.TabStop = false;
             this.proficiencyCheckBox20.Tag = "2-08";
             this.proficiencyCheckBox20.Text = " ";
             this.proficiencyCheckBox20.UseVisualStyleBackColor = true;
@@ -1268,6 +1315,7 @@
             this.proficiencyCheckBox21.Name = "proficiencyCheckBox21";
             this.proficiencyCheckBox21.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox21.TabIndex = 45;
+            this.proficiencyCheckBox21.TabStop = false;
             this.proficiencyCheckBox21.Tag = "1-08";
             this.proficiencyCheckBox21.Text = " ";
             this.proficiencyCheckBox21.UseVisualStyleBackColor = true;
@@ -1281,6 +1329,7 @@
             this.proficiencyCheckBox22.Name = "proficiencyCheckBox22";
             this.proficiencyCheckBox22.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox22.TabIndex = 43;
+            this.proficiencyCheckBox22.TabStop = false;
             this.proficiencyCheckBox22.Tag = "3-07";
             this.proficiencyCheckBox22.Text = " ";
             this.proficiencyCheckBox22.UseVisualStyleBackColor = true;
@@ -1294,6 +1343,7 @@
             this.proficiencyCheckBox23.Name = "proficiencyCheckBox23";
             this.proficiencyCheckBox23.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox23.TabIndex = 42;
+            this.proficiencyCheckBox23.TabStop = false;
             this.proficiencyCheckBox23.Tag = "2-07";
             this.proficiencyCheckBox23.Text = " ";
             this.proficiencyCheckBox23.UseVisualStyleBackColor = true;
@@ -1307,6 +1357,7 @@
             this.proficiencyCheckBox24.Name = "proficiencyCheckBox24";
             this.proficiencyCheckBox24.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox24.TabIndex = 41;
+            this.proficiencyCheckBox24.TabStop = false;
             this.proficiencyCheckBox24.Tag = "1-07";
             this.proficiencyCheckBox24.Text = " ";
             this.proficiencyCheckBox24.UseVisualStyleBackColor = true;
@@ -1320,6 +1371,7 @@
             this.proficiencyCheckBox25.Name = "proficiencyCheckBox25";
             this.proficiencyCheckBox25.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox25.TabIndex = 39;
+            this.proficiencyCheckBox25.TabStop = false;
             this.proficiencyCheckBox25.Tag = "3-06";
             this.proficiencyCheckBox25.Text = " ";
             this.proficiencyCheckBox25.UseVisualStyleBackColor = true;
@@ -1333,6 +1385,7 @@
             this.proficiencyCheckBox26.Name = "proficiencyCheckBox26";
             this.proficiencyCheckBox26.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox26.TabIndex = 38;
+            this.proficiencyCheckBox26.TabStop = false;
             this.proficiencyCheckBox26.Tag = "2-06";
             this.proficiencyCheckBox26.Text = " ";
             this.proficiencyCheckBox26.UseVisualStyleBackColor = true;
@@ -1346,6 +1399,7 @@
             this.proficiencyCheckBox27.Name = "proficiencyCheckBox27";
             this.proficiencyCheckBox27.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox27.TabIndex = 37;
+            this.proficiencyCheckBox27.TabStop = false;
             this.proficiencyCheckBox27.Tag = "1-06";
             this.proficiencyCheckBox27.Text = " ";
             this.proficiencyCheckBox27.UseVisualStyleBackColor = true;
@@ -1359,6 +1413,7 @@
             this.proficiencyCheckBox28.Name = "proficiencyCheckBox28";
             this.proficiencyCheckBox28.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox28.TabIndex = 35;
+            this.proficiencyCheckBox28.TabStop = false;
             this.proficiencyCheckBox28.Tag = "3-05";
             this.proficiencyCheckBox28.Text = " ";
             this.proficiencyCheckBox28.UseVisualStyleBackColor = true;
@@ -1372,6 +1427,7 @@
             this.proficiencyCheckBox29.Name = "proficiencyCheckBox29";
             this.proficiencyCheckBox29.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox29.TabIndex = 34;
+            this.proficiencyCheckBox29.TabStop = false;
             this.proficiencyCheckBox29.Tag = "2-05";
             this.proficiencyCheckBox29.Text = " ";
             this.proficiencyCheckBox29.UseVisualStyleBackColor = true;
@@ -1385,6 +1441,7 @@
             this.proficiencyCheckBox30.Name = "proficiencyCheckBox30";
             this.proficiencyCheckBox30.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox30.TabIndex = 33;
+            this.proficiencyCheckBox30.TabStop = false;
             this.proficiencyCheckBox30.Tag = "1-05";
             this.proficiencyCheckBox30.Text = " ";
             this.proficiencyCheckBox30.UseVisualStyleBackColor = true;
@@ -1398,6 +1455,7 @@
             this.proficiencyCheckBox31.Name = "proficiencyCheckBox31";
             this.proficiencyCheckBox31.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox31.TabIndex = 31;
+            this.proficiencyCheckBox31.TabStop = false;
             this.proficiencyCheckBox31.Tag = "3-04";
             this.proficiencyCheckBox31.Text = " ";
             this.proficiencyCheckBox31.UseVisualStyleBackColor = true;
@@ -1411,6 +1469,7 @@
             this.proficiencyCheckBox32.Name = "proficiencyCheckBox32";
             this.proficiencyCheckBox32.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox32.TabIndex = 30;
+            this.proficiencyCheckBox32.TabStop = false;
             this.proficiencyCheckBox32.Tag = "2-04";
             this.proficiencyCheckBox32.Text = " ";
             this.proficiencyCheckBox32.UseVisualStyleBackColor = true;
@@ -1424,6 +1483,7 @@
             this.proficiencyCheckBox33.Name = "proficiencyCheckBox33";
             this.proficiencyCheckBox33.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox33.TabIndex = 29;
+            this.proficiencyCheckBox33.TabStop = false;
             this.proficiencyCheckBox33.Tag = "1-04";
             this.proficiencyCheckBox33.Text = " ";
             this.proficiencyCheckBox33.UseVisualStyleBackColor = true;
@@ -1437,6 +1497,7 @@
             this.proficiencyCheckBox10.Name = "proficiencyCheckBox10";
             this.proficiencyCheckBox10.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox10.TabIndex = 16;
+            this.proficiencyCheckBox10.TabStop = false;
             this.proficiencyCheckBox10.Tag = "3-03";
             this.proficiencyCheckBox10.Text = " ";
             this.proficiencyCheckBox10.UseVisualStyleBackColor = true;
@@ -1450,6 +1511,7 @@
             this.proficiencyCheckBox11.Name = "proficiencyCheckBox11";
             this.proficiencyCheckBox11.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox11.TabIndex = 15;
+            this.proficiencyCheckBox11.TabStop = false;
             this.proficiencyCheckBox11.Tag = "2-03";
             this.proficiencyCheckBox11.Text = " ";
             this.proficiencyCheckBox11.UseVisualStyleBackColor = true;
@@ -1463,6 +1525,7 @@
             this.proficiencyCheckBox12.Name = "proficiencyCheckBox12";
             this.proficiencyCheckBox12.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox12.TabIndex = 14;
+            this.proficiencyCheckBox12.TabStop = false;
             this.proficiencyCheckBox12.Tag = "1-03";
             this.proficiencyCheckBox12.Text = " ";
             this.proficiencyCheckBox12.UseVisualStyleBackColor = true;
@@ -1476,6 +1539,7 @@
             this.proficiencyCheckBox7.Name = "proficiencyCheckBox7";
             this.proficiencyCheckBox7.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox7.TabIndex = 12;
+            this.proficiencyCheckBox7.TabStop = false;
             this.proficiencyCheckBox7.Tag = "3-02";
             this.proficiencyCheckBox7.Text = " ";
             this.proficiencyCheckBox7.UseVisualStyleBackColor = true;
@@ -1489,6 +1553,7 @@
             this.proficiencyCheckBox8.Name = "proficiencyCheckBox8";
             this.proficiencyCheckBox8.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox8.TabIndex = 11;
+            this.proficiencyCheckBox8.TabStop = false;
             this.proficiencyCheckBox8.Tag = "2-02";
             this.proficiencyCheckBox8.Text = " ";
             this.proficiencyCheckBox8.UseVisualStyleBackColor = true;
@@ -1502,6 +1567,7 @@
             this.proficiencyCheckBox9.Name = "proficiencyCheckBox9";
             this.proficiencyCheckBox9.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox9.TabIndex = 10;
+            this.proficiencyCheckBox9.TabStop = false;
             this.proficiencyCheckBox9.Tag = "1-02";
             this.proficiencyCheckBox9.Text = " ";
             this.proficiencyCheckBox9.UseVisualStyleBackColor = true;
@@ -1515,6 +1581,7 @@
             this.proficiencyCheckBox4.Name = "proficiencyCheckBox4";
             this.proficiencyCheckBox4.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox4.TabIndex = 8;
+            this.proficiencyCheckBox4.TabStop = false;
             this.proficiencyCheckBox4.Tag = "3-01";
             this.proficiencyCheckBox4.Text = " ";
             this.proficiencyCheckBox4.UseVisualStyleBackColor = true;
@@ -1528,6 +1595,7 @@
             this.proficiencyCheckBox5.Name = "proficiencyCheckBox5";
             this.proficiencyCheckBox5.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox5.TabIndex = 7;
+            this.proficiencyCheckBox5.TabStop = false;
             this.proficiencyCheckBox5.Tag = "2-01";
             this.proficiencyCheckBox5.Text = " ";
             this.proficiencyCheckBox5.UseVisualStyleBackColor = true;
@@ -1541,6 +1609,7 @@
             this.proficiencyCheckBox6.Name = "proficiencyCheckBox6";
             this.proficiencyCheckBox6.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox6.TabIndex = 6;
+            this.proficiencyCheckBox6.TabStop = false;
             this.proficiencyCheckBox6.Tag = "1-01";
             this.proficiencyCheckBox6.Text = " ";
             this.proficiencyCheckBox6.UseVisualStyleBackColor = true;
@@ -1554,6 +1623,7 @@
             this.proficiencyCheckBox3.Name = "proficiencyCheckBox3";
             this.proficiencyCheckBox3.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox3.TabIndex = 2;
+            this.proficiencyCheckBox3.TabStop = false;
             this.proficiencyCheckBox3.Tag = "3-00";
             this.proficiencyCheckBox3.Text = " ";
             this.proficiencyCheckBox3.UseVisualStyleBackColor = true;
@@ -1567,6 +1637,7 @@
             this.proficiencyCheckBox2.Name = "proficiencyCheckBox2";
             this.proficiencyCheckBox2.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox2.TabIndex = 1;
+            this.proficiencyCheckBox2.TabStop = false;
             this.proficiencyCheckBox2.Tag = "2-00";
             this.proficiencyCheckBox2.Text = " ";
             this.proficiencyCheckBox2.UseVisualStyleBackColor = true;
@@ -1580,6 +1651,7 @@
             this.proficiencyCheckBox1.Name = "proficiencyCheckBox1";
             this.proficiencyCheckBox1.Size = new System.Drawing.Size(29, 17);
             this.proficiencyCheckBox1.TabIndex = 0;
+            this.proficiencyCheckBox1.TabStop = false;
             this.proficiencyCheckBox1.Tag = "1-00";
             this.proficiencyCheckBox1.Text = " ";
             this.proficiencyCheckBox1.UseVisualStyleBackColor = true;

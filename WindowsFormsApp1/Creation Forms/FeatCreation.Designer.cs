@@ -35,23 +35,25 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.saveButton = new System.Windows.Forms.Button();
             this.numUsesBox = new System.Windows.Forms.NumericUpDown();
             this.rollDisplayTextBox = new System.Windows.Forms.Label();
             this.LimitedUsecheckBox = new System.Windows.Forms.CheckBox();
             this.longRestradioButton = new System.Windows.Forms.RadioButton();
             this.shortRestRadioButton = new System.Windows.Forms.RadioButton();
             this.OtherradioButton = new System.Windows.Forms.RadioButton();
+            this.saveButton = new CustomButtons.ButtonNoPadding();
             ((System.ComponentModel.ISupportInitialize)(this.numUsesBox)).BeginInit();
             this.SuspendLayout();
             // 
             // setRollButton
             // 
+            this.setRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.setRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.setRollButton.Location = new System.Drawing.Point(111, 212);
             this.setRollButton.Name = "setRollButton";
             this.setRollButton.Size = new System.Drawing.Size(47, 18);
             this.setRollButton.TabIndex = 40;
+            this.setRollButton.TabStop = false;
             this.setRollButton.Text = "set roll";
             this.setRollButton.UseVisualStyleBackColor = true;
             this.setRollButton.Click += new System.EventHandler(this.newRoll);
@@ -115,17 +117,6 @@
             this.label1.Size = new System.Drawing.Size(200, 36);
             this.label1.TabIndex = 25;
             this.label1.Text = "New Weapon";
-            // 
-            // saveButton
-            // 
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(164, 182);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(104, 49);
-            this.saveButton.TabIndex = 24;
-            this.saveButton.Text = "Create Feat";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.CreateFeat);
             // 
             // numUsesBox
             // 
@@ -205,11 +196,25 @@
             this.OtherradioButton.Text = "other";
             this.OtherradioButton.UseVisualStyleBackColor = true;
             // 
+            // saveButton
+            // 
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(164, 183);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(104, 47);
+            this.saveButton.TabIndex = 49;
+            this.saveButton.TabStop = false;
+            this.saveButton.Text = "Create Feat";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.CreateFeat);
+            // 
             // FeatCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 259);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.shortRestRadioButton);
             this.Controls.Add(this.longRestradioButton);
             this.Controls.Add(this.numUsesBox);
@@ -222,8 +227,8 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.OtherradioButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FeatCreation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Feat";
@@ -242,12 +247,12 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.NumericUpDown numUsesBox;
         private System.Windows.Forms.Label rollDisplayTextBox;
         private System.Windows.Forms.CheckBox LimitedUsecheckBox;
         private System.Windows.Forms.RadioButton longRestradioButton;
         private System.Windows.Forms.RadioButton shortRestRadioButton;
         private System.Windows.Forms.RadioButton OtherradioButton;
+        private CustomButtons.ButtonNoPadding saveButton;
     }
 }

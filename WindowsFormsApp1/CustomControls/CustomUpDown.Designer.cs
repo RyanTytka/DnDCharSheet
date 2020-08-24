@@ -50,6 +50,7 @@
             this.downButton.Name = "downButton";
             this.downButton.Size = new System.Drawing.Size(16, 10);
             this.downButton.TabIndex = 229;
+            this.downButton.TabStop = false;
             this.downButton.Text = null;
             this.downButton.UseVisualStyleBackColor = true;
             this.downButton.Click += new System.EventHandler(this.downBox_Click);
@@ -64,6 +65,7 @@
             this.upButton.Name = "upButton";
             this.upButton.Size = new System.Drawing.Size(16, 10);
             this.upButton.TabIndex = 228;
+            this.upButton.TabStop = false;
             this.upButton.Text = null;
             this.upButton.UseVisualStyleBackColor = true;
             this.upButton.Click += new System.EventHandler(this.upBox_Click);

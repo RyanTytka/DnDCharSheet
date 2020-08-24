@@ -76,7 +76,7 @@
             this.flatNumBox.Location = new System.Drawing.Point(65, 61);
             this.flatNumBox.Name = "flatNumBox";
             this.flatNumBox.Size = new System.Drawing.Size(46, 23);
-            this.flatNumBox.TabIndex = 14;
+            this.flatNumBox.TabIndex = 2;
             this.flatNumBox.Value = 0;
             // 
             // dieNumBox
@@ -85,7 +85,7 @@
             this.dieNumBox.Location = new System.Drawing.Point(129, 33);
             this.dieNumBox.Name = "dieNumBox";
             this.dieNumBox.Size = new System.Drawing.Size(46, 23);
-            this.dieNumBox.TabIndex = 13;
+            this.dieNumBox.TabIndex = 1;
             this.dieNumBox.Value = 1;
             // 
             // dieAmountBox
@@ -94,7 +94,7 @@
             this.dieAmountBox.Location = new System.Drawing.Point(65, 33);
             this.dieAmountBox.Name = "dieAmountBox";
             this.dieAmountBox.Size = new System.Drawing.Size(46, 23);
-            this.dieAmountBox.TabIndex = 12;
+            this.dieAmountBox.TabIndex = 0;
             this.dieAmountBox.Value = 1;
             // 
             // saveButton
@@ -107,6 +107,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(56, 23);
             this.saveButton.TabIndex = 11;
+            this.saveButton.TabStop = false;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.button2_Click);
@@ -120,6 +121,7 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(56, 23);
             this.addButton.TabIndex = 10;
+            this.addButton.TabStop = false;
             this.addButton.Text = "Add Dice";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);

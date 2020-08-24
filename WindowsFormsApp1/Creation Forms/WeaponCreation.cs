@@ -132,8 +132,10 @@ namespace WindowsFormsApp1
             }
             else
             {
+                saveButton.Enabled = false;
                 this.ActiveControl = nameControl;
             }
+            nameBox.TextChanged += nameBoxTextChanged;
         }
 
         //clear text of roll name
@@ -193,6 +195,20 @@ namespace WindowsFormsApp1
         {
             damageRoll = r;
             damageRollDisplay.Text = r.ToString();
+            if(nameBox.Text != "")
+                saveButton.Enabled = true;
+        }
+
+        private void nameBoxTextChanged(object sender, EventArgs e)
+        {
+            if (nameBox.Text != "" && damageRoll != null)
+            {
+                saveButton.Enabled = true;
+            }
+            else
+            {
+                saveButton.Enabled = false;
+            }
         }
     }
 }
