@@ -18,9 +18,9 @@ namespace WindowsFormsApp1.CustomControls
         private int[] indexToModifer;   // converts prof index to stat mod
 
         private Label[] displayLabels;
-        private ProficiencyCheckBox[] checks1 { get; set; }
-        private ProficiencyCheckBox[] checks2 { get; set; }
-        private ProficiencyCheckBox[] halfChecks { get; set; }
+        public ProficiencyCheckBox[] checks1;
+        public ProficiencyCheckBox[] checks2;
+        public ProficiencyCheckBox[] halfChecks;
 
         public CustomCheckedList()
         {

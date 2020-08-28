@@ -37,41 +37,7 @@
             this.conLabeltitle = new System.Windows.Forms.Label();
             this.dexLabeltitle = new System.Windows.Forms.Label();
             this.stengthLabel = new System.Windows.Forms.Label();
-            this.ProficienciesChecks = new System.Windows.Forms.CheckedListBox();
-            this.profCheckshalf = new System.Windows.Forms.CheckedListBox();
             this.profLabel = new System.Windows.Forms.Label();
-            this.profChecksX2 = new System.Windows.Forms.CheckedListBox();
-            this.profPanel = new System.Windows.Forms.Panel();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.profRoll21 = new System.Windows.Forms.Button();
-            this.profRoll22 = new System.Windows.Forms.Button();
-            this.profRoll19 = new System.Windows.Forms.Button();
-            this.profRoll15 = new System.Windows.Forms.Button();
-            this.profRoll17 = new System.Windows.Forms.Button();
-            this.profRoll11 = new System.Windows.Forms.Button();
-            this.profRoll20 = new System.Windows.Forms.Button();
-            this.profRoll14 = new System.Windows.Forms.Button();
-            this.profRoll08 = new System.Windows.Forms.Button();
-            this.profRoll16 = new System.Windows.Forms.Button();
-            this.profRoll10 = new System.Windows.Forms.Button();
-            this.profRoll13 = new System.Windows.Forms.Button();
-            this.profRoll07 = new System.Windows.Forms.Button();
-            this.profRoll09 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.profRoll04 = new System.Windows.Forms.Button();
-            this.profRoll03 = new System.Windows.Forms.Button();
-            this.profRoll05 = new System.Windows.Forms.Button();
-            this.profRoll01 = new System.Windows.Forms.Button();
             this.Weapon1 = new System.Windows.Forms.Panel();
             this.dmgPictureBox = new System.Windows.Forms.PictureBox();
             this.atkPictureBox = new System.Windows.Forms.PictureBox();
@@ -370,7 +336,6 @@
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.spellattackBonusDisplayBox = new System.Windows.Forms.Label();
             this.spellSaveDCdisplayLabel = new System.Windows.Forms.Label();
-            this.profPanel.SuspendLayout();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).BeginInit();
@@ -489,78 +454,6 @@
             this.stengthLabel.Text = "Strength";
             this.stengthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ProficienciesChecks
-            // 
-            this.ProficienciesChecks.BackColor = System.Drawing.SystemColors.Menu;
-            this.ProficienciesChecks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProficienciesChecks.CheckOnClick = true;
-            this.ProficienciesChecks.FormattingEnabled = true;
-            this.ProficienciesChecks.Items.AddRange(new object[] {
-            " ",
-            "Athletics",
-            " ",
-            "Acrobatics",
-            "Sleight of Hand",
-            "Stealth",
-            " ",
-            "Arcana",
-            "History",
-            "Investigation",
-            "Nature",
-            "Religion",
-            " ",
-            "Animal Handling",
-            "Insight",
-            "Medicine",
-            "Perception",
-            "Survival",
-            " ",
-            "Deception",
-            "Intimidation",
-            "Performance",
-            "Persuasion"});
-            this.ProficienciesChecks.Location = new System.Drawing.Point(36, 21);
-            this.ProficienciesChecks.Name = "ProficienciesChecks";
-            this.ProficienciesChecks.Size = new System.Drawing.Size(107, 347);
-            this.ProficienciesChecks.TabIndex = 3;
-            this.ProficienciesChecks.SelectedIndexChanged += new System.EventHandler(this.ProficienciesChecks_SelectedIndexChanged);
-            // 
-            // profCheckshalf
-            // 
-            this.profCheckshalf.BackColor = System.Drawing.SystemColors.Menu;
-            this.profCheckshalf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.profCheckshalf.CheckOnClick = true;
-            this.profCheckshalf.FormattingEnabled = true;
-            this.profCheckshalf.Items.AddRange(new object[] {
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "});
-            this.profCheckshalf.Location = new System.Drawing.Point(4, 22);
-            this.profCheckshalf.Name = "profCheckshalf";
-            this.profCheckshalf.Size = new System.Drawing.Size(20, 345);
-            this.profCheckshalf.TabIndex = 5;
-            this.profCheckshalf.SelectedIndexChanged += new System.EventHandler(this.ProficienciesChecks_SelectedIndexChanged);
-            // 
             // profLabel
             // 
             this.profLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -572,439 +465,6 @@
             this.profLabel.TabIndex = 44;
             this.profLabel.Text = "Proficiencies";
             this.profLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // profChecksX2
-            // 
-            this.profChecksX2.BackColor = System.Drawing.SystemColors.Menu;
-            this.profChecksX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.profChecksX2.CheckOnClick = true;
-            this.profChecksX2.FormattingEnabled = true;
-            this.profChecksX2.Items.AddRange(new object[] {
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "});
-            this.profChecksX2.Location = new System.Drawing.Point(19, 22);
-            this.profChecksX2.Name = "profChecksX2";
-            this.profChecksX2.Size = new System.Drawing.Size(20, 360);
-            this.profChecksX2.TabIndex = 45;
-            this.profChecksX2.SelectedIndexChanged += new System.EventHandler(this.ProficienciesChecks_SelectedIndexChanged);
-            // 
-            // profPanel
-            // 
-            this.profPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profPanel.Controls.Add(this.label47);
-            this.profPanel.Controls.Add(this.label26);
-            this.profPanel.Controls.Add(this.label25);
-            this.profPanel.Controls.Add(this.label24);
-            this.profPanel.Controls.Add(this.label23);
-            this.profPanel.Controls.Add(this.label22);
-            this.profPanel.Controls.Add(this.label21);
-            this.profPanel.Controls.Add(this.textBox4);
-            this.profPanel.Controls.Add(this.textBox10);
-            this.profPanel.Controls.Add(this.textBox9);
-            this.profPanel.Controls.Add(this.profRoll21);
-            this.profPanel.Controls.Add(this.profRoll22);
-            this.profPanel.Controls.Add(this.profRoll19);
-            this.profPanel.Controls.Add(this.profRoll15);
-            this.profPanel.Controls.Add(this.profRoll17);
-            this.profPanel.Controls.Add(this.profRoll11);
-            this.profPanel.Controls.Add(this.profRoll20);
-            this.profPanel.Controls.Add(this.profRoll14);
-            this.profPanel.Controls.Add(this.profRoll08);
-            this.profPanel.Controls.Add(this.profRoll16);
-            this.profPanel.Controls.Add(this.profRoll10);
-            this.profPanel.Controls.Add(this.profRoll13);
-            this.profPanel.Controls.Add(this.profRoll07);
-            this.profPanel.Controls.Add(this.profRoll09);
-            this.profPanel.Controls.Add(this.textBox8);
-            this.profPanel.Controls.Add(this.textBox7);
-            this.profPanel.Controls.Add(this.profRoll04);
-            this.profPanel.Controls.Add(this.profRoll03);
-            this.profPanel.Controls.Add(this.profRoll05);
-            this.profPanel.Controls.Add(this.profRoll01);
-            this.profPanel.Controls.Add(this.ProficienciesChecks);
-            this.profPanel.Controls.Add(this.profChecksX2);
-            this.profPanel.Controls.Add(this.profCheckshalf);
-            this.profPanel.Location = new System.Drawing.Point(217, 164);
-            this.profPanel.Name = "profPanel";
-            this.profPanel.Size = new System.Drawing.Size(191, 23);
-            this.profPanel.TabIndex = 46;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.SystemColors.Control;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label47.Location = new System.Drawing.Point(149, 18);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(35, 16);
-            this.label47.TabIndex = 234;
-            this.label47.Text = "Roll:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.SystemColors.Control;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label26.Location = new System.Drawing.Point(0, 24);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(36, 13);
-            this.label26.TabIndex = 224;
-            this.label26.Text = "1/2 x2";
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.SystemColors.Control;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(38, 292);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(103, 15);
-            this.label25.TabIndex = 228;
-            this.label25.Text = "Charisma";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.SystemColors.Control;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(38, 202);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(103, 15);
-            this.label24.TabIndex = 227;
-            this.label24.Text = "Wisdom";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.SystemColors.Control;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(38, 112);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(103, 15);
-            this.label23.TabIndex = 226;
-            this.label23.Text = "Intelligence";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.SystemColors.Control;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label22.Location = new System.Drawing.Point(38, 52);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 15);
-            this.label22.TabIndex = 225;
-            this.label22.Text = "Dexterity";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.SystemColors.Control;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(38, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 15);
-            this.label21.TabIndex = 224;
-            this.label21.Text = "Strength";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(3, 293);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(30, 13);
-            this.textBox4.TabIndex = 66;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(2, 203);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(31, 13);
-            this.textBox10.TabIndex = 65;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(4, 113);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(31, 13);
-            this.textBox9.TabIndex = 63;
-            // 
-            // profRoll21
-            // 
-            this.profRoll21.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll21.Location = new System.Drawing.Point(146, 337);
-            this.profRoll21.Name = "profRoll21";
-            this.profRoll21.Size = new System.Drawing.Size(39, 16);
-            this.profRoll21.TabIndex = 62;
-            this.profRoll21.Tag = "Performance";
-            this.profRoll21.Text = "0";
-            this.profRoll21.UseVisualStyleBackColor = true;
-            this.profRoll21.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll21.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll22
-            // 
-            this.profRoll22.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll22.Location = new System.Drawing.Point(146, 352);
-            this.profRoll22.Name = "profRoll22";
-            this.profRoll22.Size = new System.Drawing.Size(39, 16);
-            this.profRoll22.TabIndex = 61;
-            this.profRoll22.Tag = "Persuasion";
-            this.profRoll22.Text = "0";
-            this.profRoll22.UseVisualStyleBackColor = true;
-            this.profRoll22.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll22.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll19
-            // 
-            this.profRoll19.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll19.Location = new System.Drawing.Point(146, 307);
-            this.profRoll19.Name = "profRoll19";
-            this.profRoll19.Size = new System.Drawing.Size(39, 16);
-            this.profRoll19.TabIndex = 55;
-            this.profRoll19.Tag = "Deception";
-            this.profRoll19.Text = "0";
-            this.profRoll19.UseVisualStyleBackColor = true;
-            this.profRoll19.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll19.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll15
-            // 
-            this.profRoll15.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll15.Location = new System.Drawing.Point(146, 245);
-            this.profRoll15.Name = "profRoll15";
-            this.profRoll15.Size = new System.Drawing.Size(39, 16);
-            this.profRoll15.TabIndex = 55;
-            this.profRoll15.Tag = "Medicine";
-            this.profRoll15.Text = "0";
-            this.profRoll15.UseVisualStyleBackColor = true;
-            this.profRoll15.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll15.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll17
-            // 
-            this.profRoll17.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll17.Location = new System.Drawing.Point(146, 275);
-            this.profRoll17.Name = "profRoll17";
-            this.profRoll17.Size = new System.Drawing.Size(39, 16);
-            this.profRoll17.TabIndex = 54;
-            this.profRoll17.Tag = "Survival";
-            this.profRoll17.Text = "0";
-            this.profRoll17.UseVisualStyleBackColor = true;
-            this.profRoll17.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll17.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll11
-            // 
-            this.profRoll11.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll11.Location = new System.Drawing.Point(146, 186);
-            this.profRoll11.Name = "profRoll11";
-            this.profRoll11.Size = new System.Drawing.Size(39, 16);
-            this.profRoll11.TabIndex = 55;
-            this.profRoll11.Tag = "Religion";
-            this.profRoll11.Text = "0";
-            this.profRoll11.UseVisualStyleBackColor = true;
-            this.profRoll11.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll11.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll20
-            // 
-            this.profRoll20.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll20.Location = new System.Drawing.Point(146, 322);
-            this.profRoll20.Name = "profRoll20";
-            this.profRoll20.Size = new System.Drawing.Size(39, 16);
-            this.profRoll20.TabIndex = 53;
-            this.profRoll20.Tag = "Intimidation";
-            this.profRoll20.Text = "0";
-            this.profRoll20.UseVisualStyleBackColor = true;
-            this.profRoll20.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll20.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll14
-            // 
-            this.profRoll14.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll14.Location = new System.Drawing.Point(146, 230);
-            this.profRoll14.Name = "profRoll14";
-            this.profRoll14.Size = new System.Drawing.Size(39, 16);
-            this.profRoll14.TabIndex = 54;
-            this.profRoll14.Tag = "Insight";
-            this.profRoll14.Text = "0";
-            this.profRoll14.UseVisualStyleBackColor = true;
-            this.profRoll14.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll14.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll08
-            // 
-            this.profRoll08.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll08.Location = new System.Drawing.Point(146, 141);
-            this.profRoll08.Name = "profRoll08";
-            this.profRoll08.Size = new System.Drawing.Size(39, 16);
-            this.profRoll08.TabIndex = 60;
-            this.profRoll08.Tag = "History";
-            this.profRoll08.Text = "0";
-            this.profRoll08.UseVisualStyleBackColor = true;
-            this.profRoll08.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll08.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll16
-            // 
-            this.profRoll16.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll16.Location = new System.Drawing.Point(146, 260);
-            this.profRoll16.Name = "profRoll16";
-            this.profRoll16.Size = new System.Drawing.Size(39, 16);
-            this.profRoll16.TabIndex = 53;
-            this.profRoll16.Tag = "Perception";
-            this.profRoll16.Text = "0";
-            this.profRoll16.UseVisualStyleBackColor = true;
-            this.profRoll16.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll16.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll10
-            // 
-            this.profRoll10.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll10.Location = new System.Drawing.Point(146, 171);
-            this.profRoll10.Name = "profRoll10";
-            this.profRoll10.Size = new System.Drawing.Size(39, 16);
-            this.profRoll10.TabIndex = 54;
-            this.profRoll10.Tag = "Nature";
-            this.profRoll10.Text = "0";
-            this.profRoll10.UseVisualStyleBackColor = true;
-            this.profRoll10.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll10.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll13
-            // 
-            this.profRoll13.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll13.Location = new System.Drawing.Point(146, 214);
-            this.profRoll13.Name = "profRoll13";
-            this.profRoll13.Size = new System.Drawing.Size(39, 16);
-            this.profRoll13.TabIndex = 53;
-            this.profRoll13.Tag = "Animal Handling";
-            this.profRoll13.Text = "0";
-            this.profRoll13.UseVisualStyleBackColor = true;
-            this.profRoll13.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll13.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll07
-            // 
-            this.profRoll07.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll07.Location = new System.Drawing.Point(146, 126);
-            this.profRoll07.Name = "profRoll07";
-            this.profRoll07.Size = new System.Drawing.Size(39, 16);
-            this.profRoll07.TabIndex = 59;
-            this.profRoll07.Tag = "Arcana";
-            this.profRoll07.Text = "0";
-            this.profRoll07.UseVisualStyleBackColor = true;
-            this.profRoll07.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll07.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll09
-            // 
-            this.profRoll09.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll09.Location = new System.Drawing.Point(146, 156);
-            this.profRoll09.Name = "profRoll09";
-            this.profRoll09.Size = new System.Drawing.Size(39, 16);
-            this.profRoll09.TabIndex = 58;
-            this.profRoll09.Tag = "Investigation";
-            this.profRoll09.Text = "0";
-            this.profRoll09.UseVisualStyleBackColor = true;
-            this.profRoll09.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll09.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(3, 23);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(31, 13);
-            this.textBox8.TabIndex = 57;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(2, 53);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(31, 13);
-            this.textBox7.TabIndex = 56;
-            // 
-            // profRoll04
-            // 
-            this.profRoll04.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll04.Location = new System.Drawing.Point(146, 82);
-            this.profRoll04.Name = "profRoll04";
-            this.profRoll04.Size = new System.Drawing.Size(39, 16);
-            this.profRoll04.TabIndex = 52;
-            this.profRoll04.Tag = "Sleight of Hand";
-            this.profRoll04.Text = "0";
-            this.profRoll04.UseVisualStyleBackColor = true;
-            this.profRoll04.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll04.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll03
-            // 
-            this.profRoll03.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll03.Location = new System.Drawing.Point(146, 67);
-            this.profRoll03.Name = "profRoll03";
-            this.profRoll03.Size = new System.Drawing.Size(39, 16);
-            this.profRoll03.TabIndex = 51;
-            this.profRoll03.Tag = "Acrobatics";
-            this.profRoll03.Text = "0";
-            this.profRoll03.UseVisualStyleBackColor = true;
-            this.profRoll03.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll03.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll05
-            // 
-            this.profRoll05.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll05.Location = new System.Drawing.Point(146, 97);
-            this.profRoll05.Name = "profRoll05";
-            this.profRoll05.Size = new System.Drawing.Size(39, 16);
-            this.profRoll05.TabIndex = 50;
-            this.profRoll05.Tag = "Stealth";
-            this.profRoll05.Text = "0";
-            this.profRoll05.UseVisualStyleBackColor = true;
-            this.profRoll05.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll05.Click += new System.EventHandler(this.rollEditButton_Click);
-            // 
-            // profRoll01
-            // 
-            this.profRoll01.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profRoll01.Location = new System.Drawing.Point(146, 36);
-            this.profRoll01.Name = "profRoll01";
-            this.profRoll01.Size = new System.Drawing.Size(39, 16);
-            this.profRoll01.TabIndex = 47;
-            this.profRoll01.Tag = "Athletics";
-            this.profRoll01.Text = "0";
-            this.profRoll01.UseVisualStyleBackColor = true;
-            this.profRoll01.TextChanged += new System.EventHandler(this.SetUnsaved);
-            this.profRoll01.Click += new System.EventHandler(this.rollEditButton_Click);
             // 
             // Weapon1
             // 
@@ -4106,9 +3566,9 @@
             // 
             // proficienciesCheckBoxes
             // 
-            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 146);
+            this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 148);
             this.proficienciesCheckBoxes.Name = "proficienciesCheckBoxes";
-            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 404);
+            this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 401);
             this.proficienciesCheckBoxes.TabIndex = 234;
             // 
             // forgetSpellButton
@@ -4805,7 +4265,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.InventoryTextBox);
             this.Controls.Add(this.Weapon1);
-            this.Controls.Add(this.profPanel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.label49);
@@ -4827,8 +4286,6 @@
             this.Text = " Character Name";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.profPanel.ResumeLayout(false);
-            this.profPanel.PerformLayout();
             this.Weapon1.ResumeLayout(false);
             this.Weapon1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).EndInit();
@@ -4885,34 +4342,7 @@
         private System.Windows.Forms.Label intLabeltitle;
         private System.Windows.Forms.Label conLabeltitle;
         private System.Windows.Forms.Label dexLabeltitle;
-        private System.Windows.Forms.CheckedListBox ProficienciesChecks;
-        private System.Windows.Forms.CheckedListBox profCheckshalf;
         private System.Windows.Forms.Label profLabel;
-        private System.Windows.Forms.CheckedListBox profChecksX2;
-        private System.Windows.Forms.Panel profPanel;
-        private System.Windows.Forms.Button profRoll01;
-        private System.Windows.Forms.Button profRoll04;
-        private System.Windows.Forms.Button profRoll03;
-        private System.Windows.Forms.Button profRoll05;
-        private System.Windows.Forms.Button profRoll21;
-        private System.Windows.Forms.Button profRoll22;
-        private System.Windows.Forms.Button profRoll19;
-        private System.Windows.Forms.Button profRoll15;
-        private System.Windows.Forms.Button profRoll17;
-        private System.Windows.Forms.Button profRoll11;
-        private System.Windows.Forms.Button profRoll20;
-        private System.Windows.Forms.Button profRoll14;
-        private System.Windows.Forms.Button profRoll08;
-        private System.Windows.Forms.Button profRoll16;
-        private System.Windows.Forms.Button profRoll10;
-        private System.Windows.Forms.Button profRoll13;
-        private System.Windows.Forms.Button profRoll07;
-        private System.Windows.Forms.Button profRoll09;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel Weapon1;
         private CustomButtons.ButtonNoPadding weapondDelButton;
         private CustomButtons.ButtonNoPadding weaponEditButton;
@@ -5012,12 +4442,6 @@
         private CustomButtons.ButtonNoPadding BackgroundInfobutton;
         private CustomButtons.ButtonNoPadding settingsButton;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label33;
@@ -5036,7 +4460,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label47;
         private CustomControls.CustomCheckedList proficienciesCheckBoxes;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label currentHPlabel;

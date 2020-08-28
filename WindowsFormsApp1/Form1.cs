@@ -498,69 +498,7 @@ namespace WindowsFormsApp1
         //update each of the text on the prof roll buttons
         private void UpdateProficiencies(object sender, EventArgs e)
         {
-            for (int i = 0; i < ProficienciesChecks.Items.Count; i++)
-            {
-                //update arrays
-                if (ProficienciesChecks.GetItemChecked(i))
-                {
-                    if (profChecksX2.GetItemChecked(i))
-                        proficiencies[i] = 2;
-                    else
-                        proficiencies[i] = 1;
-                }
-                else
-                {
-                    if (profCheckshalf.GetItemChecked(i))
-                        proficiencies[i] = .5;
-                    else
-                        proficiencies[i] = 0;
-                }
-            }
-
-            //proficienciesCheckBoxes.CalculateModifiers(proficiencies);
-
-            string sign;
-
-            if (profBonus * proficiencies[1] + int.Parse(strModLabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll01.Text = sign + (int)(profBonus * proficiencies[1] + int.Parse(strModLabel.Text));
-
-            if (profBonus * proficiencies[3] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll03.Text = sign + (int)(profBonus * proficiencies[3] + int.Parse(dexmodlabel.Text));
-            if (profBonus * proficiencies[4] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll04.Text = sign + (int)(profBonus * proficiencies[4] + int.Parse(dexmodlabel.Text));
-            if (profBonus * proficiencies[5] + int.Parse(dexmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll05.Text = sign + (int)(profBonus * proficiencies[5] + int.Parse(dexmodlabel.Text));
-
-            if (profBonus * proficiencies[7] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll07.Text = sign + (int)(profBonus * proficiencies[7] + int.Parse(intmodlabel.Text));
-            if (profBonus * proficiencies[8] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll08.Text = sign + (int)(profBonus * proficiencies[8] + int.Parse(intmodlabel.Text));
-            if (profBonus * proficiencies[9] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll09.Text = sign + (int)(profBonus * proficiencies[9] + int.Parse(intmodlabel.Text));
-            if (profBonus * proficiencies[10] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll10.Text = sign + (int)(profBonus * proficiencies[10] + int.Parse(intmodlabel.Text));
-            if (profBonus * proficiencies[11] + int.Parse(intmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll11.Text = sign + (int)(profBonus * proficiencies[11] + int.Parse(intmodlabel.Text));
-
-            if (profBonus * proficiencies[13] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll13.Text = sign + (int)(profBonus * proficiencies[13] + int.Parse(wismodlabel.Text));
-            if (profBonus * proficiencies[14] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll14.Text = sign + (int)(profBonus * proficiencies[14] + int.Parse(wismodlabel.Text));
-            if (profBonus * proficiencies[15] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll15.Text = sign + (int)(profBonus * proficiencies[15] + int.Parse(wismodlabel.Text));
-            if (profBonus * proficiencies[16] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll16.Text = sign + (int)(profBonus * proficiencies[16] + int.Parse(wismodlabel.Text));
-            if (profBonus * proficiencies[17] + int.Parse(wismodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll17.Text = sign + (int)(profBonus * proficiencies[17] + int.Parse(wismodlabel.Text));
-
-            if (profBonus * proficiencies[19] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll19.Text = sign + (int)(profBonus * proficiencies[19] + int.Parse(charmodlabel.Text));
-            if (profBonus * proficiencies[20] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll20.Text = sign + (int)(profBonus * proficiencies[20] + int.Parse(charmodlabel.Text));
-            if (profBonus * proficiencies[21] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll21.Text = sign + (int)(profBonus * proficiencies[21] + int.Parse(charmodlabel.Text));
-            if (profBonus * proficiencies[22] + int.Parse(charmodlabel.Text) > 0) sign = "+"; else sign = "";
-            profRoll22.Text = sign + (int)(profBonus * proficiencies[22] + int.Parse(charmodlabel.Text));
+            proficienciesCheckBoxes.CalculateModifiers(proficiencies);
 
             //set spell dc/atk bonus boxes
             if (classSpellType > 0)
@@ -569,68 +507,6 @@ namespace WindowsFormsApp1
                 spellSaveDCdisplayLabel.Text = (8 + profBonus + spellsavedcnumupdown.Value + statMods[classModifierTypes[classSpellType - 1]]).ToString();
             }
         }
-
-
-        private void ProficienciesChecks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //update proficiencies array
-            int ID = ((CheckedListBox)sender).SelectedIndex;
-
-            if (ID != -1)
-            {
-                //update check boxes
-                if (sender == ProficienciesChecks)
-                {
-                    if (ProficienciesChecks.GetItemChecked(ID))
-                    { //prof is checked
-                        profCheckshalf.SetItemChecked(ID, false);
-                    }
-                    else
-                    { //prof unchecked
-                        profChecksX2.SetItemChecked(ID, false);
-                    }
-                }
-                else if (sender == profChecksX2)
-                {
-                    if (profChecksX2.GetItemChecked(ID))
-                    { //prof is checked
-                        profCheckshalf.SetItemChecked(ID, false);
-                        ProficienciesChecks.SetItemChecked(ID, true);
-                    }
-                }
-                else
-                {
-                    if (profCheckshalf.GetItemChecked(ID))
-                    { //prof is checked
-                        ProficienciesChecks.SetItemChecked(ID, false);
-                        profChecksX2.SetItemChecked(ID, false);
-                    }
-                }
-                //update arrays
-                if (ProficienciesChecks.GetItemChecked(ID))
-                {
-                    if (profChecksX2.GetItemChecked(ID))
-                        proficiencies[ID] = 2;
-                    else
-                        proficiencies[ID] = 1;
-                }
-                else
-                {
-                    if (profCheckshalf.GetItemChecked(ID))
-                        proficiencies[ID] = .5;
-                    else
-                        proficiencies[ID] = 0;
-                }
-            }
-
-            UpdateProficiencies(null, null);
-            SetUnsaved();
-            //clear highlight from check lists
-            ((CheckedListBox)sender).ClearSelected();
-
-        }
-
-
 
         #endregion
 
@@ -1550,6 +1426,13 @@ namespace WindowsFormsApp1
         //click new button
         private void NewCharacter(object sender, EventArgs e)
         {
+            if (!saved)
+            {
+                if (MessageBox.Show("There are unsaved changes.  Are you sure you want to create a new character?", "Unsaved changes", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
             NewCharacter();
             saved = true;
             saveButton.Enabled = false;
@@ -1586,12 +1469,12 @@ namespace WindowsFormsApp1
                 output.Write(getBox(alignmentTextbox).Text);        //alignment
                 output.Write(getBox(speedTextBox).Text);  //speed
                 //proficiencies
-                for (int i = 0; i < 23; i++)
-                    output.Write(ProficienciesChecks.GetItemChecked(i));    //normal prof
-                for (int i = 0; i < 23; i++)
-                    output.Write(profCheckshalf.GetItemChecked(i));         //half prof
-                for (int i = 0; i < 23; i++)
-                    output.Write(profChecksX2.GetItemChecked(i));           //expertise
+                foreach(CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks1)
+                    output.Write(c.Checked);
+                foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks2)
+                    output.Write(c.Checked);
+                foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.halfChecks)
+                    output.Write(c.Checked);
                 //Initiative
                 output.Write(initiativeNumUpDown.Value.ToString());     //misc bonus
                 output.Write(initiativeLabel.Text);                     
@@ -1814,12 +1697,12 @@ namespace WindowsFormsApp1
                 getBox(alignmentTextbox).Text = reader.ReadString();    //alignment
                 getBox(speedTextBox).Text = reader.ReadString();
                 //proficiencies
-                for (int i = 0; i < 23; i++)
-                    ProficienciesChecks.SetItemChecked(i, reader.ReadBoolean());    //normal prof
-                for (int i = 0; i < 23; i++)
-                    profCheckshalf.SetItemChecked(i, reader.ReadBoolean());         //half prof
-                for (int i = 0; i < 23; i++)
-                    profChecksX2.SetItemChecked(i, reader.ReadBoolean());           //expertise
+                foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks1)
+                    c.Checked = reader.ReadBoolean();
+                foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks2)
+                    c.Checked = reader.ReadBoolean();
+                foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.halfChecks)
+                    c.Checked = reader.ReadBoolean();
                 //Initiative
                 initiativeNumUpDown.Value = int.Parse(reader.ReadString());     //misc bonus
                 initiativeLabel.Text = reader.ReadString();
@@ -2077,12 +1960,12 @@ namespace WindowsFormsApp1
             getBox(raceTextbox).Text = "Race";
             getBox(backgroundTextbox).Text = "Background";
             getBox(alignmentTextbox).Text = "Alignment";
-            for (int i = 0; i < 23; i++)
-                ProficienciesChecks.SetItemChecked(i, false);
-            for (int i = 0; i < 23; i++)
-                profCheckshalf.SetItemChecked(i, false);
-            for (int i = 0; i < 23; i++)
-                profChecksX2.SetItemChecked(i, false);
+            foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks1)
+                c.Checked = false;
+            foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.checks2)
+                c.Checked = false;
+            foreach (CustomControls.ProficiencyCheckBox c in proficienciesCheckBoxes.halfChecks)
+                c.Checked = false;
             initiativeNumUpDown.Value = 0;
             initiativeLabel.Text = "";
             initiativeAdvCheckbox.Checked = false;
