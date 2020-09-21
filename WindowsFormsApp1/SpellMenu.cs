@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
                 int numOfDashes = line.Length;
                 bool tooLong = false;
                 SizeF MessageSize = spellListBox.CreateGraphics().MeasureString(line, spellListBox.Font);
-                while(MessageSize.Width > 265)
+                while(MessageSize.Width > 245)
                 {
                     //trim down names that are too long
                     line = line.Substring(0, line.Length - 1);
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                     line += "...";
                 }
                 //create space on right side
-                while (MessageSize.Width < 265 && !tooLong)
+                while (MessageSize.Width < 245 && !tooLong)
                 {
                     //add i's until the string is a certain length
                     line += "i";
@@ -208,14 +208,14 @@ namespace WindowsFormsApp1
             //if multiple items are selected
             if(spellListBox.SelectedIndices.Count > 1)
             {
-                deleteSpellButton.Text = "Delete  Spells";
-                learnSpellbutton.Text = "Learn  Spells";
+                deleteSpellButton.Text = "Delete\nSpells";
+                learnSpellbutton.Text = "Learn\nSpells";
                 editSpellButton.Enabled = false;
             }
             else
             {
-                deleteSpellButton.Text = "Delete  Spell";
-                learnSpellbutton.Text = "Learn    Spell";
+                deleteSpellButton.Text = "Delete\nSpell";
+                learnSpellbutton.Text = "Learn\nSpell";
                 editSpellButton.Enabled = true;
 
             }
