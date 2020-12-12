@@ -71,14 +71,41 @@ namespace WindowsFormsApp1
         private void CharacterInfo_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 form1 = this.Owner as Form1;
+
+            if (form1.portrait != portraitBytes)
+                form1.SetUnsaved();
             form1.portrait = portraitBytes;
+
+            if(form1.charInfo[0] != profBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[0] = profBox.Text;
+
+            if (form1.charInfo[1] != personalityTraitsBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[1] = personalityTraitsBox.Text;
+
+            if (form1.charInfo[2] != idealsBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[2] = idealsBox.Text;
+
+            if (form1.charInfo[3] != bondsBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[3] = bondsBox.Text;
+
+            if (form1.charInfo[4] != flawsBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[4] = flawsBox.Text;
+
+            if (form1.charInfo[5] != backstoryBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[5] = backstoryBox.Text;
+
+            if (form1.charInfo[6] != alliesBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[6] = alliesBox.Text;
+
+            if (form1.charInfo[7] != notesBox.Text)
+                form1.SetUnsaved();
             form1.charInfo[7] = notesBox.Text;
         }
 

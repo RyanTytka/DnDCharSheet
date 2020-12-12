@@ -68,8 +68,13 @@ namespace WindowsFormsApp1
         public List<Spell> Spells { get; private set; }  //spells loaded from the spells.data file
         public List<int> KnownSpells { get; private set; }  //list of spell id's that the player knows
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            //this.AutoScaleMode = AutoScaleMode.None;
+            //set dpi scale % in settings to 100% to fix scaling issues
+
             weapons = new List<Weapon>();
             currentBonusRolls = new List<Control>();
             mods = new Label[23];
@@ -149,8 +154,8 @@ namespace WindowsFormsApp1
 
             moneyStore = new int[4];
 
-            // sets appreances and events of custom textboxes
             #region Custom Textboxes Setup
+            // sets appreances and events of custom textboxes
 
             var redBrush = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 135, 20, 20));
 
@@ -176,29 +181,47 @@ namespace WindowsFormsApp1
             //name/class
             box = (nameTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Character Name";
+            box.TextChanged += SetUnsaved;
             box.FontSize = 18;
             box.FontWeight = System.Windows.FontWeights.Bold;
             box.Foreground = redBrush;
 
             box = (levelTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Level / Class";
+            box.TextChanged += SetUnsaved;
             box.FontSize = 12;
             box.FontWeight = System.Windows.FontWeights.Bold;
 
             box = (raceTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            box.Text = "Background";
+            box.Text = "Race";
+            box.TextChanged += SetUnsaved;
             box.FontSize = 10;
 
             box = (backgroundTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            box.Text = "Race";
+            box.Text = "Background";
+            box.TextChanged += SetUnsaved;
             box.FontSize = 10;
 
             box = (alignmentTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Alignment";
+            box.TextChanged += SetUnsaved;
             box.FontSize = 10;
+
+            //prof check list
+            var boxes = proficienciesCheckBoxes.Controls;
+            foreach(Control c in boxes)
+            {
+                if (c is Label)
+                    c.TextChanged += SetUnsaved;
+            }
+
+            //initiative
+            box = getBox(initiativeNumUpDown.Controls.Find("textBox", false)[0]);
+            box.TextChanged += SetUnsaved;
 
             // speed
             box = ((speedTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox);
+            box.TextChanged += SetUnsaved;
             box.FontSize = 18;
 
             //ac
@@ -213,6 +236,7 @@ namespace WindowsFormsApp1
             box.KeyDown += copperTextbox_KeyPress;
             box.Text = "0";
             box.Tag = "0";
+            box.TextChanged += SetUnsaved;
 
             box = getBox(silverTextbox);
             box.FontSize = 10;
@@ -220,6 +244,7 @@ namespace WindowsFormsApp1
             box.KeyDown += copperTextbox_KeyPress;
             box.Text = "0";
             box.Tag = "1";
+            box.TextChanged += SetUnsaved;
 
             box = getBox(goldTextbox);
             box.FontSize = 10;
@@ -227,6 +252,7 @@ namespace WindowsFormsApp1
             box.KeyDown += copperTextbox_KeyPress;
             box.Text = "0";
             box.Tag = "2";
+            box.TextChanged += SetUnsaved;
 
             box = getBox(platTextbox);
             box.FontSize = 10;
@@ -234,10 +260,16 @@ namespace WindowsFormsApp1
             box.KeyDown += copperTextbox_KeyPress;
             box.Text = "0";
             box.Tag = "3";
+            box.TextChanged += SetUnsaved;
 
             //spell bonuses
-            getBox(spellAtkBonusnumUpDown.Controls[0]).TextChanged += UpdateProficiencies;
-            getBox(spellsavedcnumupdown.Controls[0]).TextChanged += UpdateProficiencies;
+            box = getBox(spellAtkBonusnumUpDown.Controls[0]);
+            box.TextChanged += UpdateProficiencies;
+            box.TextChanged += SetUnsaved;
+
+            box = getBox(spellsavedcnumupdown.Controls[0]);
+            box.TextChanged += UpdateProficiencies;
+            box.TextChanged += SetUnsaved;
 
             #endregion
         }
@@ -417,6 +449,7 @@ namespace WindowsFormsApp1
 
             strModLabel.Text = sign + statMods[0];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
         private void dexModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -429,6 +462,7 @@ namespace WindowsFormsApp1
 
             dexmodlabel.Text = sign + statMods[1];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
         private void conModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -441,6 +475,7 @@ namespace WindowsFormsApp1
 
             conmodlabel.Text = sign + statMods[2];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
         private void intModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -453,6 +488,7 @@ namespace WindowsFormsApp1
 
             intmodlabel.Text = sign + statMods[3];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
         private void wisModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -465,6 +501,7 @@ namespace WindowsFormsApp1
 
             wismodlabel.Text = sign + statMods[4];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
         private void chrModLabel_TextChanged(object sender, EventArgs e)
         {
@@ -477,6 +514,7 @@ namespace WindowsFormsApp1
 
             charmodlabel.Text = sign + statMods[5];
             UpdateProficiencies(sender, null);
+            SetUnsaved();
         }
 
         #endregion
@@ -1003,6 +1041,7 @@ namespace WindowsFormsApp1
                     s += currentHitDice[i] + "d" + (i * 2 + 6) + ", ";
             }
             currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0, Math.Max(0, s.Length - 2));
+            SetUnsaved();
         }
 
 
@@ -1031,6 +1070,7 @@ namespace WindowsFormsApp1
                 d10NumUpDown.Value = 0;
                 d12NumUpDown.Value = 0;
 
+                SetUnsaved();
             }
         }
 
@@ -1050,7 +1090,7 @@ namespace WindowsFormsApp1
                     s += currentHitDice[i] + "d" + (i * 2 + 6) + ", ";
             }
             currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0, s.Length - 2);
-
+            SetUnsaved();
         }
 
 
@@ -1077,6 +1117,7 @@ namespace WindowsFormsApp1
                     s += currentHitDice[i] + "d" + (i * 2 + 6) + ", ";
             }
             currentHitDiceDisplayLabel.Text = "Current: " + s.Substring(0, Math.Max(0, s.Length - 2));
+            SetUnsaved();
         }
 
 
@@ -1114,6 +1155,7 @@ namespace WindowsFormsApp1
                 misc = i3;
 
             ACDisplayLabel.Text = (armor + dex + misc).ToString();
+            SetUnsaved();
         }
 
 
@@ -1395,7 +1437,7 @@ namespace WindowsFormsApp1
         }
 
         //internal method, sets saved to false and append name
-        private void SetUnsaved()
+        public void SetUnsaved()
         {
             if (saved)
                 this.Text += " *";
@@ -2169,6 +2211,8 @@ namespace WindowsFormsApp1
 
             UpdateOutput("Initiative Roll" + adv + ": " + total + " (Roll: " + roll + ", Dex: " + statMods[1] + misc + ")");
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
+
+            SetUnsaved();
         }
 
         private string RollDice()
@@ -2335,6 +2379,8 @@ namespace WindowsFormsApp1
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
 
             spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
+
+            SetUnsaved();
         }
 
         /*
@@ -2457,6 +2503,7 @@ namespace WindowsFormsApp1
         {
             KnownSpells.Add(id);
             SelectSpellLevel(spellLevelButtons[currentSpellLevel] , null);
+            SetUnsaved();
         }
 
         //select spell level radio button
@@ -2594,6 +2641,7 @@ namespace WindowsFormsApp1
                 alwaysPreparedSpells.Remove(id);
             }
             spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
+            SetUnsaved();
         }
 
 
@@ -2680,6 +2728,7 @@ namespace WindowsFormsApp1
                 spellSlotsLabels[currentSpellLevel - 1].Text =
                     spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
             }
+            SetUnsaved();
         }
         private void MinusMaxSlot(object sender, EventArgs e)
         {
@@ -2689,6 +2738,7 @@ namespace WindowsFormsApp1
                 spellSlotsLabels[currentSpellLevel - 1].Text =
                     spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
             }
+            SetUnsaved();
         }
         private void AddCurrentSlot(object sender, EventArgs e)
         {
@@ -2699,6 +2749,7 @@ namespace WindowsFormsApp1
                 spellSlotsLabels[currentSpellLevel - 1].Text =
                     spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
             }
+            SetUnsaved();
         }
         private void MinusCurrentSlot(object sender, EventArgs e)
         {
@@ -2708,6 +2759,7 @@ namespace WindowsFormsApp1
                 spellSlotsLabels[currentSpellLevel - 1].Text =
                     spellSlots[currentSpellLevel - 1, 0] + "/" + spellSlots[currentSpellLevel - 1, 1];
             }
+            SetUnsaved();
         }
         #endregion
 
@@ -2718,6 +2770,7 @@ namespace WindowsFormsApp1
         {
             warlockSpellSlots[1]++;
             warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            SetUnsaved();
         }
         //max
         private void warlockMinusSlotButton_Click(object sender, EventArgs e)
@@ -2725,18 +2778,21 @@ namespace WindowsFormsApp1
             warlockSpellSlots[1] = Math.Max(warlockSpellSlots[1] - 1, 0);
             warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0], warlockSpellSlots[1]); //move current slot down if higher than max
             warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            SetUnsaved();
         }
 
         private void warlockPlusCurrentSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[0] = Math.Min(warlockSpellSlots[0] + 1, warlockSpellSlots[1]);
             warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            SetUnsaved();
         }
 
         private void warlockMinusCurrentSlotButton_Click(object sender, EventArgs e)
         {
             warlockSpellSlots[0] = Math.Max(warlockSpellSlots[0] - 1, 0);
             warlockSLotsDisplayLabel.Text = $"{warlockSpellSlots[0]}/{warlockSpellSlots[1]}";
+            SetUnsaved();
         }
         #endregion
 
@@ -2746,6 +2802,7 @@ namespace WindowsFormsApp1
             {
                 spellSlots[i, 0] = spellSlots[i, 1];
                 spellSlotsLabels[i].Text = spellSlots[i, 0] + "/" + spellSlots[i, 1];
+                SetUnsaved();
             }
         }
 
@@ -2759,18 +2816,21 @@ namespace WindowsFormsApp1
             Arcanum7checkBox.Checked = false;
             Arcanum8checkBox.Checked = false;
             Arcanum9checkBox.Checked = false;
+            SetUnsaved();
         }
 
         private void ArcanumChecKChanged(object sender, EventArgs e)
         {
             int index = int.Parse((sender as CheckBox).Tag.ToString());
             usedArcanums[index] = (sender as CheckBox).Checked;
+            SetUnsaved();
         }
 
         private void forgetSpellButton_Click(object sender, EventArgs e)
         {
             KnownSpells.Remove(Spells[currentSpell].ID);
             SelectSpellLevel(spellLevelButtons[currentSpellLevel], null);
+            SetUnsaved();
         }
 
         private void ShowPreparedSpellHelpPanel(object sender, EventArgs e)
@@ -3026,6 +3086,7 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            SetUnsaved();
         }
 
         // enable roll button and hide pictures
@@ -3038,6 +3099,7 @@ namespace WindowsFormsApp1
             DeathFail2.Visible = false;
             DeathFail3.Visible = false;
             deathSaveRollButton.Enabled = true;
+            SetUnsaved();
         }
         #endregion
 
