@@ -272,6 +272,8 @@ namespace WindowsFormsApp1
             box.TextChanged += SetUnsaved;
 
             #endregion
+
+            LoadSettings();
         }
 
 
@@ -2182,12 +2184,81 @@ namespace WindowsFormsApp1
 
         #region Misc
 
-        //changes color
-        private void buttonNoPadding3_Click(object sender, EventArgs e)
+        private void ApplySettings(bool showHelp)
         {
+            helpLabel_HP.Visible = showHelp;
+            helpLabel_Money.Visible = showHelp;
+            helpLabel_preparedSpells.Visible = showHelp;
+            helpLabel_Prof.Visible = showHelp;
+        }
+
+        private void LoadSettings()
+        {
+            //find settings file
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            if (!File.Exists(directory + "\\settings"))
+            {
+                //create initial spell settings file
+                Stream outStream = File.OpenWrite(directory + "\\settings");
+                BinaryWriter output = new BinaryWriter(outStream);
+                output.Write(true);
+                output.Close();
+            }
+
+            //load settings
+            Stream inStream = File.OpenRead(directory + "\\settings");
+            BinaryReader reader = new BinaryReader(inStream);
+            bool showHelp = reader.ReadBoolean();
+
+            //apply
+            ApplySettings(showHelp);
+        }
+
+        public void SaveSettings(bool showHelp)
+        {
+            //find settings file
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if (!File.Exists(directory + "\\settings"))
+            {
+                File.Create(directory + "\\settings");
+            }
+
+            //open writer
+            string saveFilePath = directory + "\\settings";
+            Stream outStream = File.OpenWrite(saveFilePath);
+            BinaryWriter output = new BinaryWriter(outStream);
+            //write settings
+            output.Write(showHelp);
+            output.Close();
+
+            //apply
+            ApplySettings(showHelp);
+        }
+
+        //open settings form
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            //load settings
+            Stream inStream = File.OpenRead(directory + "\\settings");
+            BinaryReader reader = new BinaryReader(inStream);
+            bool showHelp = reader.ReadBoolean();
+            reader.Close();
+
+            SettingsForm settings = new SettingsForm(showHelp);
+            settings.ShowDialog(this);
+
+            /*
             ColorDialog cd = new ColorDialog();
             if(cd.ShowDialog() == DialogResult.OK)
                 this.BackColor = cd.Color;
+            */
         }
 
         // open char info window
@@ -2367,7 +2438,7 @@ namespace WindowsFormsApp1
                 return;
 
             bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
-            preparedhelpLabel.Visible = prepared;
+            helpLabel_preparedSpells.Visible = prepared;
             spellsPreparedAmountlabel.Visible = prepared;
             preparednumericUpDown.Visible = prepared;
             if(prepared)
@@ -2522,7 +2593,7 @@ namespace WindowsFormsApp1
             //get selected level and update labels
             currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
             bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
-            preparedhelpLabel.Visible = prepared;
+            helpLabel_preparedSpells.Visible = prepared;
             spellsPreparedAmountlabel.Visible = prepared;
             preparednumericUpDown.Visible = prepared;
             if (prepared)

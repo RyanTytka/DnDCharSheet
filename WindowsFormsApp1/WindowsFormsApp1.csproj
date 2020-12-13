@@ -145,6 +145,12 @@
       <DependentUpon>NoPaddingButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Spell.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpellInfoDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creation Forms\SpellCreationForm.resx">
       <DependentUpon>SpellCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SpellInfoDisplay.resx">
       <DependentUpon>SpellInfoDisplay.cs</DependentUpon>
