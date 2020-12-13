@@ -140,9 +140,10 @@ namespace WindowsFormsApp1.CustomControls
             int ID = int.Parse((sender as CustomButtons.ButtonNoPadding).Tag.ToString());
             int roll = Roll.RollSingleDie(20);
 
+            int prof = (int)(modifiers[ID] * profBonus);
             (Parent as Form1).UpdateOutput(((Button)sender).Text + " ability check: " + 
-                (roll + modifiers[ID] * profBonus + attributes[indexToModifer[ID]]) +
-                " (Roll: " + roll + ", Proficiency Bonus: " + (modifiers[ID] * profBonus) + ", " +
+                (roll + prof + attributes[indexToModifer[ID]]) +
+                " (Roll: " + roll + ", Proficiency Bonus: " + prof + ", " +
                 "Ability Modifier: " + attributes[indexToModifer[ID]] + ")");
             (Parent as Form1).UpdateOutput(Environment.NewLine); (Parent as Form1).UpdateOutput(Environment.NewLine);
         }

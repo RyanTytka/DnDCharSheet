@@ -93,12 +93,12 @@ namespace WindowsFormsApp1
         private void SpellCreation_Load(object sender, EventArgs e)
         {
             spellNameBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            rangeBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            castTimeBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            durationBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            rangeBox = (RangeTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            castTimeBox = (castTimeTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            durationBox = (durationTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             rollNameBox = (rollNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            componentsBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
-            descriptionBox = (spellNameTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            componentsBox = (componentsTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
+            descriptionBox = (descriptionTextbox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
 
             rollNameBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(105, 105, 105));
             rollNameBox.Text = "roll name";

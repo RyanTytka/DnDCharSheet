@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             //name/class
             box = (nameTextBox.Controls[0] as ElementHost).Child as System.Windows.Controls.TextBox;
             box.Text = "Character Name";
-            box.TextChanged += SetUnsaved;
+            box.TextChanged += UpdateTitle;
             box.FontSize = 18;
             box.FontWeight = System.Windows.FontWeights.Bold;
             box.Foreground = redBrush;
@@ -527,8 +527,9 @@ namespace WindowsFormsApp1
             int ID = int.Parse(((Button)sender).Name.Substring(((Button)sender).Name.Length - 2));
             int roll = Roll.RollSingleDie(20);
 
-            UpdateOutput(((Button)sender).Tag + " ability check: " + (roll + proficiencies[ID] * profBonus + int.Parse(mods[ID].Text)) +
-                " (Roll: " + roll + ", Proficiency Bonus: " + (proficiencies[ID] * profBonus) + ", " +
+            int prof = (int)(proficiencies[ID] * profBonus);
+            UpdateOutput(((Button)sender).Tag + " ability check: " + (roll + prof + int.Parse(mods[ID].Text)) +
+                " (Roll: " + roll + ", Proficiency Bonus: " + prof + ", " +
                 "Ability Modifier: " + int.Parse(mods[ID].Text) + ")");
             UpdateOutput(Environment.NewLine); UpdateOutput(Environment.NewLine);
         }
@@ -1444,6 +1445,11 @@ namespace WindowsFormsApp1
             saved = false;
         }
 
+        private void UpdateTitle(object sender, EventArgs e)
+        {
+            this.Text = nameTextBox.Text + " *";
+            saved = false;
+        }
 
         private void SaveAsButtonClick(object sender, EventArgs e)
         {
@@ -1973,7 +1979,7 @@ namespace WindowsFormsApp1
                 UpdateProficiencies(null, null); // Update Expertise and half prof
                 saveButton.Enabled = true;
                 saved = true;
-                this.Text = getBox(nameTextBox).Text + " Character sheet";
+                this.Text = getBox(nameTextBox).Text;
                 fileName = filePath;
                 reader.Close();
             }

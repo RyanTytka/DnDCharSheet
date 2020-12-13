@@ -1140,6 +1140,7 @@
             this.preparedhelpLabel.AutoSize = true;
             this.preparedhelpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.preparedhelpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
+            this.preparedhelpLabel.ForeColor = System.Drawing.Color.Maroon;
             this.preparedhelpLabel.Location = new System.Drawing.Point(2, 345);
             this.preparedhelpLabel.Name = "preparedhelpLabel";
             this.preparedhelpLabel.Size = new System.Drawing.Size(12, 11);
@@ -1772,6 +1773,7 @@
             this.label83.AutoSize = true;
             this.label83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
+            this.label83.ForeColor = System.Drawing.Color.Maroon;
             this.label83.Location = new System.Drawing.Point(61, 48);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(12, 11);
@@ -2520,6 +2522,7 @@
             this.label81.AutoSize = true;
             this.label81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
+            this.label81.ForeColor = System.Drawing.Color.Maroon;
             this.label81.Location = new System.Drawing.Point(771, 4);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(12, 11);
