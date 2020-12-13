@@ -47,10 +47,12 @@ namespace WindowsFormsApp1
             if (saveOrLoad == 1)
             {
                 SubmitButton.Text = "Save";
+                this.Text = "Save Character";
             }
             else
             {
                 SubmitButton.Text = "Load";
+                this.Text = "Load Character";
                 SubmitButton.Enabled = false;
             }
 

@@ -2607,6 +2607,18 @@ namespace WindowsFormsApp1
                 spellRadioButtons[0].Checked = true;
             forgetSpellButton.Visible = spellRadioButtons.Count > 0;
             spellsPreparedAmountlabel.Text = $"Prepared: {preparedSpells.Count}/";
+
+            //disable spell slot buttons if cantrip
+            warlockMinusCurrentSlotButton.Enabled = currentSpellLevel > 0;
+            warlockPlusCurrentSlotButton.Enabled = currentSpellLevel > 0;
+            warlockMinusSlotButton.Enabled = currentSpellLevel > 0;
+            warlockPlusSlotButton.Enabled = currentSpellLevel > 0;
+
+            minusMaxSlotbutton.Enabled = currentSpellLevel > 0;
+            MinusCurrentSlotbutton.Enabled = currentSpellLevel > 0;
+            plusCurrentSlotbutton.Enabled = currentSpellLevel > 0;
+            PlusMaxSLotbutton.Enabled = currentSpellLevel > 0;
+
         }
 
         //when a spell display radio button is checked

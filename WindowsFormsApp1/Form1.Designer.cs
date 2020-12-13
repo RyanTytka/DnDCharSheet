@@ -70,6 +70,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.spellTypeDropdown = new System.Windows.Forms.ComboBox();
             this.spellPanel = new System.Windows.Forms.Panel();
+            this.spellattackBonusDisplayBox = new System.Windows.Forms.Label();
             this.preparedHelppanel = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -120,6 +121,7 @@
             this.label79 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.spellListLabel = new System.Windows.Forms.Label();
+            this.spellSaveDCdisplayLabel = new System.Windows.Forms.Label();
             this.warlockSpellPanel = new System.Windows.Forms.Panel();
             this.label84 = new System.Windows.Forms.Label();
             this.warlockSLotsDisplayLabel = new System.Windows.Forms.Label();
@@ -334,8 +336,6 @@
             this.weapondDelButton = new CustomButtons.ButtonNoPadding();
             this.weaponEditButton = new CustomButtons.ButtonNoPadding();
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
-            this.spellattackBonusDisplayBox = new System.Windows.Forms.Label();
-            this.spellSaveDCdisplayLabel = new System.Windows.Forms.Label();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).BeginInit();
@@ -911,6 +911,18 @@
             this.spellPanel.Name = "spellPanel";
             this.spellPanel.Size = new System.Drawing.Size(275, 622);
             this.spellPanel.TabIndex = 200;
+            // 
+            // spellattackBonusDisplayBox
+            // 
+            this.spellattackBonusDisplayBox.BackColor = System.Drawing.SystemColors.Control;
+            this.spellattackBonusDisplayBox.Font = new System.Drawing.Font("Impact", 18.25F);
+            this.spellattackBonusDisplayBox.ForeColor = System.Drawing.Color.Maroon;
+            this.spellattackBonusDisplayBox.Location = new System.Drawing.Point(87, 19);
+            this.spellattackBonusDisplayBox.Name = "spellattackBonusDisplayBox";
+            this.spellattackBonusDisplayBox.Size = new System.Drawing.Size(53, 30);
+            this.spellattackBonusDisplayBox.TabIndex = 335;
+            this.spellattackBonusDisplayBox.Text = "+10";
+            this.spellattackBonusDisplayBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // preparedHelppanel
             // 
@@ -1503,6 +1515,18 @@
             this.spellListLabel.TabIndex = 236;
             this.spellListLabel.Text = "Level 1 Spells";
             this.spellListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // spellSaveDCdisplayLabel
+            // 
+            this.spellSaveDCdisplayLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.spellSaveDCdisplayLabel.Font = new System.Drawing.Font("Impact", 18.25F);
+            this.spellSaveDCdisplayLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.spellSaveDCdisplayLabel.Location = new System.Drawing.Point(190, 19);
+            this.spellSaveDCdisplayLabel.Name = "spellSaveDCdisplayLabel";
+            this.spellSaveDCdisplayLabel.Size = new System.Drawing.Size(40, 30);
+            this.spellSaveDCdisplayLabel.TabIndex = 336;
+            this.spellSaveDCdisplayLabel.Text = "10";
+            this.spellSaveDCdisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // warlockSpellPanel
             // 
@@ -4163,30 +4187,6 @@
             this.atkRoll1.Text = "Attack Roll";
             this.atkRoll1.UseVisualStyleBackColor = true;
             this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
-            // 
-            // spellattackBonusDisplayBox
-            // 
-            this.spellattackBonusDisplayBox.BackColor = System.Drawing.SystemColors.Control;
-            this.spellattackBonusDisplayBox.Font = new System.Drawing.Font("Impact", 18.25F);
-            this.spellattackBonusDisplayBox.ForeColor = System.Drawing.Color.Maroon;
-            this.spellattackBonusDisplayBox.Location = new System.Drawing.Point(87, 19);
-            this.spellattackBonusDisplayBox.Name = "spellattackBonusDisplayBox";
-            this.spellattackBonusDisplayBox.Size = new System.Drawing.Size(53, 30);
-            this.spellattackBonusDisplayBox.TabIndex = 335;
-            this.spellattackBonusDisplayBox.Text = "+10";
-            this.spellattackBonusDisplayBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // spellSaveDCdisplayLabel
-            // 
-            this.spellSaveDCdisplayLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.spellSaveDCdisplayLabel.Font = new System.Drawing.Font("Impact", 18.25F);
-            this.spellSaveDCdisplayLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.spellSaveDCdisplayLabel.Location = new System.Drawing.Point(190, 19);
-            this.spellSaveDCdisplayLabel.Name = "spellSaveDCdisplayLabel";
-            this.spellSaveDCdisplayLabel.Size = new System.Drawing.Size(40, 30);
-            this.spellSaveDCdisplayLabel.TabIndex = 336;
-            this.spellSaveDCdisplayLabel.Text = "10";
-            this.spellSaveDCdisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
