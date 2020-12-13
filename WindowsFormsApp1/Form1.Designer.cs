@@ -130,11 +130,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.miscRollAmountnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.miscRollNumnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.MiscRollflatnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.miscRollDropDown = new System.Windows.Forms.ComboBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label83 = new System.Windows.Forms.Label();
@@ -336,6 +333,9 @@
             this.weapondDelButton = new CustomButtons.ButtonNoPadding();
             this.weaponEditButton = new CustomButtons.ButtonNoPadding();
             this.atkRoll1 = new CustomButtons.ButtonNoPadding();
+            this.miscRollNumnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.miscRollAmountnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.MiscRollflatnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).BeginInit();
@@ -352,9 +352,6 @@
             this.spellListPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.warlockSpellPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
@@ -1644,97 +1641,27 @@
             this.label3.TabIndex = 189;
             this.label3.Text = "Mystic Arcanum";
             // 
-            // miscRollAmountnumericUpDown
-            // 
-            this.miscRollAmountnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(67, 5);
-            this.miscRollAmountnumericUpDown.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.miscRollAmountnumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.miscRollAmountnumericUpDown.Name = "miscRollAmountnumericUpDown";
-            this.miscRollAmountnumericUpDown.Size = new System.Drawing.Size(42, 21);
-            this.miscRollAmountnumericUpDown.TabIndex = 193;
-            this.miscRollAmountnumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.miscRollAmountnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
-            this.miscRollAmountnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(110, 6);
+            this.label10.Location = new System.Drawing.Point(111, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 17);
             this.label10.TabIndex = 223;
             this.label10.Text = "d";
             // 
-            // miscRollNumnumericUpDown
-            // 
-            this.miscRollNumnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(128, 5);
-            this.miscRollNumnumericUpDown.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.miscRollNumnumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.miscRollNumnumericUpDown.Name = "miscRollNumnumericUpDown";
-            this.miscRollNumnumericUpDown.Size = new System.Drawing.Size(42, 21);
-            this.miscRollNumnumericUpDown.TabIndex = 224;
-            this.miscRollNumnumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.miscRollNumnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
-            this.miscRollNumnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(101, 33);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(112, 29);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 15);
+            this.label11.Size = new System.Drawing.Size(36, 24);
             this.label11.TabIndex = 225;
-            this.label11.Text = "Flat bonus";
-            // 
-            // MiscRollflatnumericUpDown
-            // 
-            this.MiscRollflatnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(67, 30);
-            this.MiscRollflatnumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.MiscRollflatnumericUpDown.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.MiscRollflatnumericUpDown.Name = "MiscRollflatnumericUpDown";
-            this.MiscRollflatnumericUpDown.Size = new System.Drawing.Size(34, 21);
-            this.MiscRollflatnumericUpDown.TabIndex = 226;
-            this.MiscRollflatnumericUpDown.Enter += new System.EventHandler(this.miscRollAmountnumericUpDown_Enter);
-            this.MiscRollflatnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            this.label11.Text = "Flat\r\nBonus";
             // 
             // miscRollDropDown
             // 
@@ -1742,10 +1669,10 @@
             this.miscRollDropDown.DropDownWidth = 81;
             this.miscRollDropDown.FormattingEnabled = true;
             this.miscRollDropDown.Items.AddRange(new object[] {
-            "None",
+            "Normal",
             "Advantage",
             "Disadvantage"});
-            this.miscRollDropDown.Location = new System.Drawing.Point(-1, 31);
+            this.miscRollDropDown.Location = new System.Drawing.Point(1, 31);
             this.miscRollDropDown.Name = "miscRollDropDown";
             this.miscRollDropDown.Size = new System.Drawing.Size(64, 21);
             this.miscRollDropDown.TabIndex = 193;
@@ -2553,13 +2480,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.miscRollAmountnumericUpDown);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.miscRollNumnumericUpDown);
-            this.panel1.Controls.Add(this.miscRollbutton);
             this.panel1.Controls.Add(this.MiscRollflatnumericUpDown);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.miscRollbutton);
             this.panel1.Controls.Add(this.miscRollDropDown);
+            this.panel1.Controls.Add(this.miscRollNumnumericUpDown);
             this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.miscRollAmountnumericUpDown);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Location = new System.Drawing.Point(414, 489);
             this.panel1.Name = "panel1";
@@ -2571,7 +2498,7 @@
             this.miscRollbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscRollbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.miscRollbutton.ForeColor = System.Drawing.Color.Black;
-            this.miscRollbutton.Location = new System.Drawing.Point(0, 3);
+            this.miscRollbutton.Location = new System.Drawing.Point(1, 3);
             this.miscRollbutton.Name = "miscRollbutton";
             this.miscRollbutton.Size = new System.Drawing.Size(36, 23);
             this.miscRollbutton.TabIndex = 193;
@@ -4191,6 +4118,36 @@
             this.atkRoll1.UseVisualStyleBackColor = true;
             this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
             // 
+            // miscRollNumnumericUpDown
+            // 
+            this.miscRollNumnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.miscRollNumnumericUpDown.Location = new System.Drawing.Point(125, 4);
+            this.miscRollNumnumericUpDown.Name = "miscRollNumnumericUpDown";
+            this.miscRollNumnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.miscRollNumnumericUpDown.TabIndex = 320;
+            this.miscRollNumnumericUpDown.Value = 1;
+            this.miscRollNumnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            // 
+            // miscRollAmountnumericUpDown
+            // 
+            this.miscRollAmountnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.miscRollAmountnumericUpDown.Location = new System.Drawing.Point(69, 4);
+            this.miscRollAmountnumericUpDown.Name = "miscRollAmountnumericUpDown";
+            this.miscRollAmountnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.miscRollAmountnumericUpDown.TabIndex = 321;
+            this.miscRollAmountnumericUpDown.Value = 1;
+            this.miscRollAmountnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            // 
+            // MiscRollflatnumericUpDown
+            // 
+            this.MiscRollflatnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.MiscRollflatnumericUpDown.Location = new System.Drawing.Point(69, 31);
+            this.MiscRollflatnumericUpDown.Name = "MiscRollflatnumericUpDown";
+            this.MiscRollflatnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.MiscRollflatnumericUpDown.TabIndex = 322;
+            this.MiscRollflatnumericUpDown.Value = 0;
+            this.MiscRollflatnumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiscRollKeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4314,9 +4271,6 @@
             this.panel6.PerformLayout();
             this.warlockSpellPanel.ResumeLayout(false);
             this.warlockSpellPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.miscRollAmountnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miscRollNumnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscRollflatnumericUpDown)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -4433,12 +4387,9 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.NumericUpDown miscRollAmountnumericUpDown;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown miscRollNumnumericUpDown;
         private CustomButtons.ButtonNoPadding miscRollbutton;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown MiscRollflatnumericUpDown;
         private System.Windows.Forms.ComboBox miscRollDropDown;
         private CustomButtons.ButtonNoPadding exportButton;
         private CustomButtons.ButtonNoPadding importButton;
@@ -4644,6 +4595,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label spellattackBonusDisplayBox;
         private System.Windows.Forms.Label spellSaveDCdisplayLabel;
+        private CustomControls.CustomUpDown MiscRollflatnumericUpDown;
+        private CustomControls.CustomUpDown miscRollNumnumericUpDown;
+        private CustomControls.CustomUpDown miscRollAmountnumericUpDown;
     }
 }
 
