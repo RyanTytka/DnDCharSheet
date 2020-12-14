@@ -42,7 +42,7 @@
             // 
             // downButton
             // 
-            this.downButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.downButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.downButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.downButton.FlatAppearance.BorderSize = 0;
             this.downButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -57,7 +57,7 @@
             // 
             // upButton
             // 
-            this.upButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.upButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.upButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.upButton.FlatAppearance.BorderSize = 0;
             this.upButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

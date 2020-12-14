@@ -35,7 +35,7 @@
             // 
             // notPreparedButton
             // 
-            this.notPreparedButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.X;
+            this.notPreparedButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.X;
             this.notPreparedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.notPreparedButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.notPreparedButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
@@ -51,7 +51,7 @@
             // 
             // preparedButton
             // 
-            this.preparedButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.check;
+            this.preparedButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.check;
             this.preparedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.preparedButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.preparedButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
@@ -67,7 +67,7 @@
             // 
             // lockedButton
             // 
-            this.lockedButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockIcon;
+            this.lockedButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.LockIcon;
             this.lockedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lockedButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.lockedButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));

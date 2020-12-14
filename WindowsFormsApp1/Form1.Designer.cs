@@ -502,7 +502,7 @@
             // 
             // dmgPictureBox
             // 
-            this.dmgPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.dmgIcon;
+            this.dmgPictureBox.Image = global::InteractiveCharacterSheet.Properties.Resources.dmgIcon;
             this.dmgPictureBox.Location = new System.Drawing.Point(149, 174);
             this.dmgPictureBox.Name = "dmgPictureBox";
             this.dmgPictureBox.Size = new System.Drawing.Size(20, 20);
@@ -511,7 +511,7 @@
             // 
             // atkPictureBox
             // 
-            this.atkPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.attackIcon;
+            this.atkPictureBox.Image = global::InteractiveCharacterSheet.Properties.Resources.attackIcon;
             this.atkPictureBox.Location = new System.Drawing.Point(149, 152);
             this.atkPictureBox.Name = "atkPictureBox";
             this.atkPictureBox.Size = new System.Drawing.Size(20, 20);
@@ -740,7 +740,7 @@
             // 
             this.ACDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.ACDisplayLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.ACDisplayLabel.Image = global::WindowsFormsApp1.Properties.Resources.shield3;
+            this.ACDisplayLabel.Image = global::InteractiveCharacterSheet.Properties.Resources.shield3;
             this.ACDisplayLabel.Location = new System.Drawing.Point(43, 4);
             this.ACDisplayLabel.Name = "ACDisplayLabel";
             this.ACDisplayLabel.Size = new System.Drawing.Size(43, 35);
@@ -950,7 +950,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockIcon;
+            this.pictureBox4.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.LockIcon;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(3, 52);
             this.pictureBox4.Name = "pictureBox4";
@@ -960,7 +960,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.X;
+            this.pictureBox3.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.X;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(3, 19);
             this.pictureBox3.Name = "pictureBox3";
@@ -970,7 +970,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.check;
+            this.pictureBox2.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.check;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(3, 36);
             this.pictureBox2.Name = "pictureBox2";
@@ -1721,7 +1721,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.hpicon1;
+            this.pictureBox1.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.hpicon1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(5, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -2343,7 +2343,7 @@
             // 
             // DeathFail3
             // 
-            this.DeathFail3.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail3.Image = global::InteractiveCharacterSheet.Properties.Resources.skull;
             this.DeathFail3.Location = new System.Drawing.Point(692, 106);
             this.DeathFail3.Name = "DeathFail3";
             this.DeathFail3.Size = new System.Drawing.Size(14, 14);
@@ -2353,7 +2353,7 @@
             // 
             // DeathFail1
             // 
-            this.DeathFail1.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail1.Image = global::InteractiveCharacterSheet.Properties.Resources.skull;
             this.DeathFail1.Location = new System.Drawing.Point(660, 106);
             this.DeathFail1.Name = "DeathFail1";
             this.DeathFail1.Size = new System.Drawing.Size(14, 14);
@@ -2363,7 +2363,7 @@
             // 
             // DeathFail2
             // 
-            this.DeathFail2.Image = global::WindowsFormsApp1.Properties.Resources.skull;
+            this.DeathFail2.Image = global::InteractiveCharacterSheet.Properties.Resources.skull;
             this.DeathFail2.Location = new System.Drawing.Point(676, 106);
             this.DeathFail2.Name = "DeathFail2";
             this.DeathFail2.Size = new System.Drawing.Size(14, 14);
@@ -2693,10 +2693,10 @@
             // 
             // settingsButton
             // 
-            this.settingsButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.gear;
+            this.settingsButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.gear;
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Image = global::WindowsFormsApp1.Properties.Resources.gear;
+            this.settingsButton.Image = global::InteractiveCharacterSheet.Properties.Resources.gear;
             this.settingsButton.Location = new System.Drawing.Point(789, 10);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(23, 23);
@@ -3191,7 +3191,7 @@
             // 
             // profDownLabel
             // 
-            this.profDownLabel.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.profDownLabel.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.profDownLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.profDownLabel.FlatAppearance.BorderSize = 0;
             this.profDownLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3232,7 +3232,7 @@
             // 
             // buttonNoPadding11
             // 
-            this.buttonNoPadding11.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding11.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.buttonNoPadding11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding11.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3249,7 +3249,7 @@
             // 
             // buttonNoPadding12
             // 
-            this.buttonNoPadding12.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding12.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.buttonNoPadding12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding12.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3291,7 +3291,7 @@
             // 
             // buttonNoPadding14
             // 
-            this.buttonNoPadding14.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding14.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.buttonNoPadding14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding14.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3308,7 +3308,7 @@
             // 
             // buttonNoPadding15
             // 
-            this.buttonNoPadding15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding15.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.buttonNoPadding15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding15.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3350,7 +3350,7 @@
             // 
             // buttonNoPadding5
             // 
-            this.buttonNoPadding5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding5.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.buttonNoPadding5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding5.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3367,7 +3367,7 @@
             // 
             // buttonNoPadding6
             // 
-            this.buttonNoPadding6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding6.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.buttonNoPadding6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding6.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3397,7 +3397,7 @@
             // 
             // buttonNoPadding8
             // 
-            this.buttonNoPadding8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding8.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.buttonNoPadding8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding8.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3414,7 +3414,7 @@
             // 
             // buttonNoPadding9
             // 
-            this.buttonNoPadding9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding9.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.buttonNoPadding9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding9.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3456,7 +3456,7 @@
             // 
             // buttonNoPadding2
             // 
-            this.buttonNoPadding2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding2.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.buttonNoPadding2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding2.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3473,7 +3473,7 @@
             // 
             // buttonNoPadding3
             // 
-            this.buttonNoPadding3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding3.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.buttonNoPadding3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNoPadding3.FlatAppearance.BorderSize = 0;
             this.buttonNoPadding3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3515,7 +3515,7 @@
             // 
             // strDownButton
             // 
-            this.strDownButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.strDownButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.downArrow;
             this.strDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.strDownButton.FlatAppearance.BorderSize = 0;
             this.strDownButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3532,7 +3532,7 @@
             // 
             // strUpButton
             // 
-            this.strUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.strUpButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.strUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.strUpButton.FlatAppearance.BorderSize = 0;
             this.strUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -3562,7 +3562,7 @@
             // 
             // profUpButton
             // 
-            this.profUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.profUpButton.BackgroundImage = global::InteractiveCharacterSheet.Properties.Resources.upArrow;
             this.profUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.profUpButton.FlatAppearance.BorderSize = 0;
             this.profUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
