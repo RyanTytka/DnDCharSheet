@@ -39,22 +39,9 @@
             this.stengthLabel = new System.Windows.Forms.Label();
             this.profLabel = new System.Windows.Forms.Label();
             this.Weapon1 = new System.Windows.Forms.Panel();
-            this.newWeaponButton = new CustomButtons.ButtonNoPadding();
             this.dmgPictureBox = new System.Windows.Forms.PictureBox();
             this.atkPictureBox = new System.Windows.Forms.PictureBox();
-            this.weaponRadioButton8 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton7 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton6 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton5 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton4 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton3 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton2 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.weaponRadioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
             this.weaponPropTextBox = new System.Windows.Forms.TextBox();
-            this.dmgRoll2 = new CustomButtons.ButtonNoPadding();
-            this.weapondDelButton = new CustomButtons.ButtonNoPadding();
-            this.weaponEditButton = new CustomButtons.ButtonNoPadding();
-            this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
@@ -63,38 +50,20 @@
             this.AC = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.d12NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.d10NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.d8NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.d6NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.label36 = new System.Windows.Forms.Label();
-            this.autoHealHitDice = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.label53 = new System.Windows.Forms.Label();
             this.MaxHitDiceDisplayLabel = new System.Windows.Forms.Label();
-            this.HitDicePartialRefillButton = new CustomButtons.ButtonNoPadding();
-            this.HitDiceFullRefillButton = new CustomButtons.ButtonNoPadding();
-            this.HitDiceSetMaxButton = new CustomButtons.ButtonNoPadding();
-            this.HitDiceUseButton = new CustomButtons.ButtonNoPadding();
             this.label54 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.currentHitDiceDisplayLabel = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.MiscarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.ACDisplayLabel = new System.Windows.Forms.Label();
-            this.DexarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
-            this.ACarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.exportButton = new CustomButtons.ButtonNoPadding();
-            this.newCharButton = new CustomButtons.ButtonNoPadding();
-            this.importButton = new CustomButtons.ButtonNoPadding();
-            this.loadButton = new CustomButtons.ButtonNoPadding();
-            this.SaveAsButton = new CustomButtons.ButtonNoPadding();
-            this.saveButton = new CustomButtons.ButtonNoPadding();
             this.label34 = new System.Windows.Forms.Label();
             this.featDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -114,33 +83,15 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.spellListPanel = new System.Windows.Forms.Panel();
-            this.forgetSpellButton = new CustomButtons.ButtonNoPadding();
-            this.preparednumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.Level9SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level8SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level7SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level6SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level5SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level4SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level3SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level2SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level1SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.Level0SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
             this.label80 = new System.Windows.Forms.Label();
-            this.spellsavedcnumupdown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.spellAtkBonusnumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.spellsPreparedAmountlabel = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.helpLabel_preparedSpells = new System.Windows.Forms.Label();
-            this.MinusCurrentSlotbutton = new CustomButtons.ButtonNoPadding();
-            this.plusCurrentSlotbutton = new CustomButtons.ButtonNoPadding();
-            this.minusMaxSlotbutton = new CustomButtons.ButtonNoPadding();
             this.lvl1slotslabel = new System.Windows.Forms.Label();
             this.lvl9slotslabel = new System.Windows.Forms.Label();
-            this.PlusMaxSLotbutton = new CustomButtons.ButtonNoPadding();
             this.lvl8slotslabel = new System.Windows.Forms.Label();
             this.lvl7slotslabel = new System.Windows.Forms.Label();
             this.lvl6slotslabel = new System.Windows.Forms.Label();
@@ -150,12 +101,7 @@
             this.lvl2slotslabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.addModDisplayLabel = new System.Windows.Forms.Label();
-            this.MultipliernumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.otherBonusnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
-            this.addModcheckBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.SpellDescriptionButton = new CustomButtons.ButtonNoPadding();
             this.mullabel = new System.Windows.Forms.Label();
-            this.spellAttackButton = new CustomButtons.ButtonNoPadding();
             this.miscBonuslabel = new System.Windows.Forms.Label();
             this.DurationDisplaylabel = new System.Windows.Forms.Label();
             this.rangeDisplaylabel = new System.Windows.Forms.Label();
@@ -165,12 +111,9 @@
             this.componentlabel = new System.Windows.Forms.Label();
             this.rangelabel = new System.Windows.Forms.Label();
             this.castTimelabel = new System.Windows.Forms.Label();
-            this.SpellMiscRollButton = new CustomButtons.ButtonNoPadding();
             this.spellnamelabel = new System.Windows.Forms.Label();
             this.componentsDisplaylabel = new System.Windows.Forms.Label();
             this.multiplierDicedisplaylabel = new System.Windows.Forms.Label();
-            this.browseSpellsButton = new CustomButtons.ButtonNoPadding();
-            this.refillSpellSlotsButton = new CustomButtons.ButtonNoPadding();
             this.label12 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -182,40 +125,17 @@
             this.warlockSpellPanel = new System.Windows.Forms.Panel();
             this.label84 = new System.Windows.Forms.Label();
             this.warlockSLotsDisplayLabel = new System.Windows.Forms.Label();
-            this.warlockSpellLevelnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.Arcanum9checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.Arcanum8checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.Arcanum7checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.Arcanum6checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
-            this.customRadioButton7 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton8 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton6 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton5 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton4 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton2 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton3 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.customRadioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.warlockSpellButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
-            this.radioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.warlockMinusCurrentSlotButton = new CustomButtons.ButtonNoPadding();
-            this.warlockPlusCurrentSlotButton = new CustomButtons.ButtonNoPadding();
             this.label3 = new System.Windows.Forms.Label();
-            this.warlockMinusSlotButton = new CustomButtons.ButtonNoPadding();
-            this.warlockPlusSlotButton = new CustomButtons.ButtonNoPadding();
-            this.WarlockRefillSlotsButton = new CustomButtons.ButtonNoPadding();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.miscRollDropDown = new System.Windows.Forms.ComboBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.helpLabel_HP = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tempHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
-            this.maxHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
-            this.currentHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.tempHPlabel = new System.Windows.Forms.Label();
             this.MaxHPlabel = new System.Windows.Forms.Label();
             this.currentHPlabel = new System.Windows.Forms.Label();
@@ -225,45 +145,21 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.conSaveButton = new CustomButtons.ButtonNoPadding();
-            this.charSaveButton = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding11 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding12 = new CustomButtons.ButtonNoPadding();
-            this.charProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.charmodlabel = new System.Windows.Forms.Label();
             this.charlabel = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.wisSaveButton = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding14 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding15 = new CustomButtons.ButtonNoPadding();
-            this.wisProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.wismodlabel = new System.Windows.Forms.Label();
             this.wislabel = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.intSaveButton = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
-            this.intProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.intmodlabel = new System.Windows.Forms.Label();
             this.intlabel = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding9 = new CustomButtons.ButtonNoPadding();
-            this.conProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.conmodlabel = new System.Windows.Forms.Label();
             this.conlabel = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.dexSaveButton = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
-            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
-            this.dexProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.dexmodlabel = new System.Windows.Forms.Label();
             this.dexlabel = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
-            this.strSaveButton = new CustomButtons.ButtonNoPadding();
-            this.strDownButton = new CustomButtons.ButtonNoPadding();
-            this.strUpButton = new CustomButtons.ButtonNoPadding();
-            this.strProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.strModLabel = new System.Windows.Forms.Label();
             this.strLabel = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
@@ -305,6 +201,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.helpLabel_Prof = new System.Windows.Forms.Label();
+            this.helpPanel_Money = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.helpPanel_HP = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.helpPanel_prof = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.MiscRollflatnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
             this.miscRollbutton = new CustomButtons.ButtonNoPadding();
             this.miscRollNumnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
@@ -315,6 +218,26 @@
             this.deathSaveResetButton = new CustomButtons.ButtonNoPadding();
             this.settingsButton = new CustomButtons.ButtonNoPadding();
             this.deathSaveRollButton = new CustomButtons.ButtonNoPadding();
+            this.warlockSpellLevelnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.Arcanum9checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.Arcanum8checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.Arcanum7checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.Arcanum6checkBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.customRadioButton7 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton8 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton6 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton5 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton4 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton2 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton3 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.customRadioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.warlockSpellButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.radioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.warlockMinusCurrentSlotButton = new CustomButtons.ButtonNoPadding();
+            this.warlockPlusCurrentSlotButton = new CustomButtons.ButtonNoPadding();
+            this.warlockMinusSlotButton = new CustomButtons.ButtonNoPadding();
+            this.warlockPlusSlotButton = new CustomButtons.ButtonNoPadding();
+            this.WarlockRefillSlotsButton = new CustomButtons.ButtonNoPadding();
             this.newFeatButton = new CustomButtons.ButtonNoPadding();
             this.featRollButton = new CustomButtons.ButtonNoPadding();
             this.featDeleteButton = new CustomButtons.ButtonNoPadding();
@@ -326,8 +249,41 @@
             this.InitiativeRollButton = new CustomButtons.ButtonNoPadding();
             this.initiativeAdvCheckbox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.initiativeNumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.MiscarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.DexarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.ACarmorTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.exportButton = new CustomButtons.ButtonNoPadding();
+            this.newCharButton = new CustomButtons.ButtonNoPadding();
+            this.importButton = new CustomButtons.ButtonNoPadding();
+            this.loadButton = new CustomButtons.ButtonNoPadding();
+            this.SaveAsButton = new CustomButtons.ButtonNoPadding();
+            this.saveButton = new CustomButtons.ButtonNoPadding();
             this.speedTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.profDownLabel = new CustomButtons.ButtonNoPadding();
+            this.conSaveButton = new CustomButtons.ButtonNoPadding();
+            this.charSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding11 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding12 = new CustomButtons.ButtonNoPadding();
+            this.charProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.wisSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding14 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding15 = new CustomButtons.ButtonNoPadding();
+            this.wisProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.intSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding5 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding6 = new CustomButtons.ButtonNoPadding();
+            this.intProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.buttonNoPadding8 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding9 = new CustomButtons.ButtonNoPadding();
+            this.conProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.dexSaveButton = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding2 = new CustomButtons.ButtonNoPadding();
+            this.buttonNoPadding3 = new CustomButtons.ButtonNoPadding();
+            this.dexProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.strSaveButton = new CustomButtons.ButtonNoPadding();
+            this.strDownButton = new CustomButtons.ButtonNoPadding();
+            this.strUpButton = new CustomButtons.ButtonNoPadding();
+            this.strProf = new WindowsFormsApp1.CustomControls.CustomCheckBox();
             this.profUpButton = new CustomButtons.ButtonNoPadding();
             this.nameTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.levelTextBox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
@@ -335,8 +291,58 @@
             this.alignmentTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.backgroundTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
             this.raceTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxLeft();
+            this.tempHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.maxHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
+            this.currentHPTextbox = new WindowsFormsApp1.CustomControls.CustomTextBoxCentered();
             this.proficienciesCheckBoxes = new WindowsFormsApp1.CustomControls.CustomCheckedList();
-            this.helpLabel_Prof = new System.Windows.Forms.Label();
+            this.forgetSpellButton = new CustomButtons.ButtonNoPadding();
+            this.preparednumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.Level9SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level8SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level7SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level6SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level5SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level4SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level3SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level2SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level1SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.Level0SpellButton = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.spellsavedcnumupdown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.spellAtkBonusnumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.MinusCurrentSlotbutton = new CustomButtons.ButtonNoPadding();
+            this.plusCurrentSlotbutton = new CustomButtons.ButtonNoPadding();
+            this.minusMaxSlotbutton = new CustomButtons.ButtonNoPadding();
+            this.PlusMaxSLotbutton = new CustomButtons.ButtonNoPadding();
+            this.MultipliernumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.otherBonusnumericUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.addModcheckBox = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.SpellDescriptionButton = new CustomButtons.ButtonNoPadding();
+            this.spellAttackButton = new CustomButtons.ButtonNoPadding();
+            this.SpellMiscRollButton = new CustomButtons.ButtonNoPadding();
+            this.browseSpellsButton = new CustomButtons.ButtonNoPadding();
+            this.refillSpellSlotsButton = new CustomButtons.ButtonNoPadding();
+            this.d12NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.d10NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.d8NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.d6NumUpDown = new WindowsFormsApp1.CustomControls.CustomUpDown();
+            this.autoHealHitDice = new WindowsFormsApp1.CustomControls.CustomCheckBox();
+            this.HitDicePartialRefillButton = new CustomButtons.ButtonNoPadding();
+            this.HitDiceFullRefillButton = new CustomButtons.ButtonNoPadding();
+            this.HitDiceSetMaxButton = new CustomButtons.ButtonNoPadding();
+            this.HitDiceUseButton = new CustomButtons.ButtonNoPadding();
+            this.newWeaponButton = new CustomButtons.ButtonNoPadding();
+            this.weaponRadioButton8 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton7 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton6 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton5 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton4 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton3 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton2 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.weaponRadioButton1 = new WindowsFormsApp1.CustomControls.CustomRadioButton();
+            this.dmgRoll2 = new CustomButtons.ButtonNoPadding();
+            this.weapondDelButton = new CustomButtons.ButtonNoPadding();
+            this.weaponEditButton = new CustomButtons.ButtonNoPadding();
+            this.atkRoll1 = new CustomButtons.ButtonNoPadding();
             this.Weapon1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dmgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atkPictureBox)).BeginInit();
@@ -363,6 +369,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.helpPanel_Money.SuspendLayout();
+            this.helpPanel_HP.SuspendLayout();
+            this.helpPanel_prof.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputTextBox
@@ -491,19 +500,6 @@
             this.Weapon1.Size = new System.Drawing.Size(173, 314);
             this.Weapon1.TabIndex = 71;
             // 
-            // newWeaponButton
-            // 
-            this.newWeaponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newWeaponButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newWeaponButton.Location = new System.Drawing.Point(44, 3);
-            this.newWeaponButton.Name = "newWeaponButton";
-            this.newWeaponButton.Size = new System.Drawing.Size(86, 19);
-            this.newWeaponButton.TabIndex = 94;
-            this.newWeaponButton.TabStop = false;
-            this.newWeaponButton.Text = "New Weapon";
-            this.newWeaponButton.UseVisualStyleBackColor = true;
-            this.newWeaponButton.Click += new System.EventHandler(this.createWeapon_Click);
-            // 
             // dmgPictureBox
             // 
             this.dmgPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.dmgIcon;
@@ -522,109 +518,6 @@
             this.atkPictureBox.TabIndex = 316;
             this.atkPictureBox.TabStop = false;
             // 
-            // weaponRadioButton8
-            // 
-            this.weaponRadioButton8.AutoSize = true;
-            this.weaponRadioButton8.Location = new System.Drawing.Point(3, 127);
-            this.weaponRadioButton8.Name = "weaponRadioButton8";
-            this.weaponRadioButton8.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton8.TabIndex = 103;
-            this.weaponRadioButton8.TabStop = true;
-            this.weaponRadioButton8.Text = "Weapon Name 8";
-            this.weaponRadioButton8.UseVisualStyleBackColor = true;
-            this.weaponRadioButton8.Visible = false;
-            this.weaponRadioButton8.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton7
-            // 
-            this.weaponRadioButton7.AutoSize = true;
-            this.weaponRadioButton7.Location = new System.Drawing.Point(3, 109);
-            this.weaponRadioButton7.Name = "weaponRadioButton7";
-            this.weaponRadioButton7.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton7.TabIndex = 102;
-            this.weaponRadioButton7.TabStop = true;
-            this.weaponRadioButton7.Text = "Weapon Name 7";
-            this.weaponRadioButton7.UseVisualStyleBackColor = true;
-            this.weaponRadioButton7.Visible = false;
-            this.weaponRadioButton7.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton6
-            // 
-            this.weaponRadioButton6.AutoSize = true;
-            this.weaponRadioButton6.Location = new System.Drawing.Point(3, 91);
-            this.weaponRadioButton6.Name = "weaponRadioButton6";
-            this.weaponRadioButton6.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton6.TabIndex = 101;
-            this.weaponRadioButton6.TabStop = true;
-            this.weaponRadioButton6.Text = "Weapon Name 6";
-            this.weaponRadioButton6.UseVisualStyleBackColor = true;
-            this.weaponRadioButton6.Visible = false;
-            this.weaponRadioButton6.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton5
-            // 
-            this.weaponRadioButton5.AutoSize = true;
-            this.weaponRadioButton5.Location = new System.Drawing.Point(3, 73);
-            this.weaponRadioButton5.Name = "weaponRadioButton5";
-            this.weaponRadioButton5.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton5.TabIndex = 100;
-            this.weaponRadioButton5.TabStop = true;
-            this.weaponRadioButton5.Text = "Weapon Name 5";
-            this.weaponRadioButton5.UseVisualStyleBackColor = true;
-            this.weaponRadioButton5.Visible = false;
-            this.weaponRadioButton5.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton4
-            // 
-            this.weaponRadioButton4.AutoSize = true;
-            this.weaponRadioButton4.Location = new System.Drawing.Point(3, 56);
-            this.weaponRadioButton4.Name = "weaponRadioButton4";
-            this.weaponRadioButton4.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton4.TabIndex = 99;
-            this.weaponRadioButton4.TabStop = true;
-            this.weaponRadioButton4.Text = "Weapon Name 4";
-            this.weaponRadioButton4.UseVisualStyleBackColor = true;
-            this.weaponRadioButton4.Visible = false;
-            this.weaponRadioButton4.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton3
-            // 
-            this.weaponRadioButton3.AutoSize = true;
-            this.weaponRadioButton3.Location = new System.Drawing.Point(3, 39);
-            this.weaponRadioButton3.Name = "weaponRadioButton3";
-            this.weaponRadioButton3.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton3.TabIndex = 98;
-            this.weaponRadioButton3.TabStop = true;
-            this.weaponRadioButton3.Text = "Weapon Name 3";
-            this.weaponRadioButton3.UseVisualStyleBackColor = true;
-            this.weaponRadioButton3.Visible = false;
-            this.weaponRadioButton3.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton2
-            // 
-            this.weaponRadioButton2.AutoSize = true;
-            this.weaponRadioButton2.Location = new System.Drawing.Point(3, 22);
-            this.weaponRadioButton2.Name = "weaponRadioButton2";
-            this.weaponRadioButton2.Size = new System.Drawing.Size(106, 17);
-            this.weaponRadioButton2.TabIndex = 97;
-            this.weaponRadioButton2.TabStop = true;
-            this.weaponRadioButton2.Text = "Weapon Name 2";
-            this.weaponRadioButton2.UseVisualStyleBackColor = true;
-            this.weaponRadioButton2.Visible = false;
-            this.weaponRadioButton2.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
-            // weaponRadioButton1
-            // 
-            this.weaponRadioButton1.AutoSize = true;
-            this.weaponRadioButton1.Location = new System.Drawing.Point(3, 4);
-            this.weaponRadioButton1.Name = "weaponRadioButton1";
-            this.weaponRadioButton1.Size = new System.Drawing.Size(100, 17);
-            this.weaponRadioButton1.TabIndex = 96;
-            this.weaponRadioButton1.Text = "Wepon Name 1";
-            this.weaponRadioButton1.UseVisualStyleBackColor = true;
-            this.weaponRadioButton1.Visible = false;
-            this.weaponRadioButton1.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
-            // 
             // weaponPropTextBox
             // 
             this.weaponPropTextBox.BackColor = System.Drawing.Color.LightGray;
@@ -638,64 +531,6 @@
             this.weaponPropTextBox.TabIndex = 95;
             this.weaponPropTextBox.TabStop = false;
             this.weaponPropTextBox.Tag = "";
-            // 
-            // dmgRoll2
-            // 
-            this.dmgRoll2.Enabled = false;
-            this.dmgRoll2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dmgRoll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dmgRoll2.ForeColor = System.Drawing.Color.Black;
-            this.dmgRoll2.Location = new System.Drawing.Point(73, 174);
-            this.dmgRoll2.Name = "dmgRoll2";
-            this.dmgRoll2.Size = new System.Drawing.Size(74, 20);
-            this.dmgRoll2.TabIndex = 93;
-            this.dmgRoll2.TabStop = false;
-            this.dmgRoll2.Text = "Damage Roll";
-            this.dmgRoll2.UseVisualStyleBackColor = true;
-            this.dmgRoll2.Click += new System.EventHandler(this.dmgRoll2_Click);
-            // 
-            // weapondDelButton
-            // 
-            this.weapondDelButton.Enabled = false;
-            this.weapondDelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weapondDelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.weapondDelButton.Location = new System.Drawing.Point(3, 152);
-            this.weapondDelButton.Name = "weapondDelButton";
-            this.weapondDelButton.Size = new System.Drawing.Size(68, 20);
-            this.weapondDelButton.TabIndex = 92;
-            this.weapondDelButton.TabStop = false;
-            this.weapondDelButton.Text = "Delete";
-            this.weapondDelButton.UseVisualStyleBackColor = true;
-            this.weapondDelButton.Click += new System.EventHandler(this.DeleteWeapon);
-            // 
-            // weaponEditButton
-            // 
-            this.weaponEditButton.Enabled = false;
-            this.weaponEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weaponEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.weaponEditButton.Location = new System.Drawing.Point(3, 174);
-            this.weaponEditButton.Name = "weaponEditButton";
-            this.weaponEditButton.Size = new System.Drawing.Size(68, 20);
-            this.weaponEditButton.TabIndex = 91;
-            this.weaponEditButton.TabStop = false;
-            this.weaponEditButton.Text = "Edit";
-            this.weaponEditButton.UseVisualStyleBackColor = true;
-            this.weaponEditButton.Click += new System.EventHandler(this.EditWeapon);
-            // 
-            // atkRoll1
-            // 
-            this.atkRoll1.Enabled = false;
-            this.atkRoll1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.atkRoll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.atkRoll1.ForeColor = System.Drawing.Color.Black;
-            this.atkRoll1.Location = new System.Drawing.Point(73, 152);
-            this.atkRoll1.Name = "atkRoll1";
-            this.atkRoll1.Size = new System.Drawing.Size(74, 20);
-            this.atkRoll1.TabIndex = 90;
-            this.atkRoll1.TabStop = false;
-            this.atkRoll1.Text = "Attack Roll";
-            this.atkRoll1.UseVisualStyleBackColor = true;
-            this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
             // 
             // label44
             // 
@@ -796,42 +631,6 @@
             this.panel2.Size = new System.Drawing.Size(192, 173);
             this.panel2.TabIndex = 17;
             // 
-            // d12NumUpDown
-            // 
-            this.d12NumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.d12NumUpDown.Location = new System.Drawing.Point(144, 103);
-            this.d12NumUpDown.Name = "d12NumUpDown";
-            this.d12NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d12NumUpDown.TabIndex = 23;
-            this.d12NumUpDown.Value = 0;
-            // 
-            // d10NumUpDown
-            // 
-            this.d10NumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.d10NumUpDown.Location = new System.Drawing.Point(96, 103);
-            this.d10NumUpDown.Name = "d10NumUpDown";
-            this.d10NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d10NumUpDown.TabIndex = 22;
-            this.d10NumUpDown.Value = 0;
-            // 
-            // d8NumUpDown
-            // 
-            this.d8NumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.d8NumUpDown.Location = new System.Drawing.Point(46, 103);
-            this.d8NumUpDown.Name = "d8NumUpDown";
-            this.d8NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d8NumUpDown.TabIndex = 21;
-            this.d8NumUpDown.Value = 0;
-            // 
-            // d6NumUpDown
-            // 
-            this.d6NumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.d6NumUpDown.Location = new System.Drawing.Point(-2, 103);
-            this.d6NumUpDown.Name = "d6NumUpDown";
-            this.d6NumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.d6NumUpDown.TabIndex = 20;
-            this.d6NumUpDown.Value = 0;
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -843,18 +642,6 @@
             this.label36.Size = new System.Drawing.Size(179, 20);
             this.label36.TabIndex = 232;
             this.label36.Text = "d6     d8     d10    d12";
-            // 
-            // autoHealHitDice
-            // 
-            this.autoHealHitDice.AutoSize = true;
-            this.autoHealHitDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoHealHitDice.Location = new System.Drawing.Point(5, 62);
-            this.autoHealHitDice.Name = "autoHealHitDice";
-            this.autoHealHitDice.Size = new System.Drawing.Size(176, 19);
-            this.autoHealHitDice.TabIndex = 235;
-            this.autoHealHitDice.TabStop = false;
-            this.autoHealHitDice.Text = "Apply Healing Automatically";
-            this.autoHealHitDice.UseVisualStyleBackColor = true;
             // 
             // label53
             // 
@@ -878,58 +665,6 @@
             this.MaxHitDiceDisplayLabel.Size = new System.Drawing.Size(44, 18);
             this.MaxHitDiceDisplayLabel.TabIndex = 233;
             this.MaxHitDiceDisplayLabel.Text = "Max:";
-            // 
-            // HitDicePartialRefillButton
-            // 
-            this.HitDicePartialRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HitDicePartialRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDicePartialRefillButton.Location = new System.Drawing.Point(96, 129);
-            this.HitDicePartialRefillButton.Name = "HitDicePartialRefillButton";
-            this.HitDicePartialRefillButton.Size = new System.Drawing.Size(95, 17);
-            this.HitDicePartialRefillButton.TabIndex = 117;
-            this.HitDicePartialRefillButton.TabStop = false;
-            this.HitDicePartialRefillButton.Text = "Partial Refill";
-            this.HitDicePartialRefillButton.UseVisualStyleBackColor = true;
-            this.HitDicePartialRefillButton.Click += new System.EventHandler(this.HitDicePartialRefillButton_Click);
-            // 
-            // HitDiceFullRefillButton
-            // 
-            this.HitDiceFullRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HitDiceFullRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceFullRefillButton.Location = new System.Drawing.Point(96, 148);
-            this.HitDiceFullRefillButton.Name = "HitDiceFullRefillButton";
-            this.HitDiceFullRefillButton.Size = new System.Drawing.Size(95, 17);
-            this.HitDiceFullRefillButton.TabIndex = 116;
-            this.HitDiceFullRefillButton.TabStop = false;
-            this.HitDiceFullRefillButton.Text = "Full Refill";
-            this.HitDiceFullRefillButton.UseVisualStyleBackColor = true;
-            this.HitDiceFullRefillButton.Click += new System.EventHandler(this.HitDiceFullRefillButton_Click);
-            // 
-            // HitDiceSetMaxButton
-            // 
-            this.HitDiceSetMaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HitDiceSetMaxButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceSetMaxButton.Location = new System.Drawing.Point(0, 148);
-            this.HitDiceSetMaxButton.Name = "HitDiceSetMaxButton";
-            this.HitDiceSetMaxButton.Size = new System.Drawing.Size(94, 17);
-            this.HitDiceSetMaxButton.TabIndex = 115;
-            this.HitDiceSetMaxButton.TabStop = false;
-            this.HitDiceSetMaxButton.Text = "Set Max";
-            this.HitDiceSetMaxButton.UseVisualStyleBackColor = true;
-            this.HitDiceSetMaxButton.Click += new System.EventHandler(this.HitDiceSetMaxButton_Click);
-            // 
-            // HitDiceUseButton
-            // 
-            this.HitDiceUseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HitDiceUseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.HitDiceUseButton.Location = new System.Drawing.Point(0, 129);
-            this.HitDiceUseButton.Name = "HitDiceUseButton";
-            this.HitDiceUseButton.Size = new System.Drawing.Size(94, 18);
-            this.HitDiceUseButton.TabIndex = 109;
-            this.HitDiceUseButton.TabStop = false;
-            this.HitDiceUseButton.Text = "Use";
-            this.HitDiceUseButton.UseVisualStyleBackColor = true;
-            this.HitDiceUseButton.Click += new System.EventHandler(this.buttonNoPadding1_Click);
             // 
             // label54
             // 
@@ -1001,13 +736,6 @@
             this.panel4.Size = new System.Drawing.Size(213, 41);
             this.panel4.TabIndex = 15;
             // 
-            // MiscarmorTextbox
-            // 
-            this.MiscarmorTextbox.Location = new System.Drawing.Point(176, 20);
-            this.MiscarmorTextbox.Name = "MiscarmorTextbox";
-            this.MiscarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.MiscarmorTextbox.TabIndex = 15;
-            // 
             // ACDisplayLabel
             // 
             this.ACDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -1018,20 +746,6 @@
             this.ACDisplayLabel.Size = new System.Drawing.Size(43, 35);
             this.ACDisplayLabel.TabIndex = 230;
             this.ACDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DexarmorTextbox
-            // 
-            this.DexarmorTextbox.Location = new System.Drawing.Point(134, 20);
-            this.DexarmorTextbox.Name = "DexarmorTextbox";
-            this.DexarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.DexarmorTextbox.TabIndex = 14;
-            // 
-            // ACarmorTextbox
-            // 
-            this.ACarmorTextbox.Location = new System.Drawing.Point(91, 20);
-            this.ACarmorTextbox.Name = "ACarmorTextbox";
-            this.ACarmorTextbox.Size = new System.Drawing.Size(32, 19);
-            this.ACarmorTextbox.TabIndex = 13;
             // 
             // label33
             // 
@@ -1078,78 +792,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(212, 41);
             this.panel5.TabIndex = 157;
-            // 
-            // exportButton
-            // 
-            this.exportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportButton.Location = new System.Drawing.Point(141, 22);
-            this.exportButton.Name = "exportButton";
-            this.exportButton.Size = new System.Drawing.Size(67, 17);
-            this.exportButton.TabIndex = 169;
-            this.exportButton.TabStop = false;
-            this.exportButton.Text = "Export";
-            this.exportButton.UseVisualStyleBackColor = true;
-            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
-            // 
-            // newCharButton
-            // 
-            this.newCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newCharButton.Location = new System.Drawing.Point(71, 22);
-            this.newCharButton.Name = "newCharButton";
-            this.newCharButton.Size = new System.Drawing.Size(69, 17);
-            this.newCharButton.TabIndex = 167;
-            this.newCharButton.TabStop = false;
-            this.newCharButton.Text = "New";
-            this.newCharButton.UseVisualStyleBackColor = true;
-            this.newCharButton.Click += new System.EventHandler(this.NewCharacter);
-            // 
-            // importButton
-            // 
-            this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importButton.Location = new System.Drawing.Point(141, 3);
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(67, 18);
-            this.importButton.TabIndex = 168;
-            this.importButton.TabStop = false;
-            this.importButton.Text = "Import";
-            this.importButton.UseVisualStyleBackColor = true;
-            this.importButton.Click += new System.EventHandler(this.importButton_Click);
-            // 
-            // loadButton
-            // 
-            this.loadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadButton.Location = new System.Drawing.Point(71, 3);
-            this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(69, 18);
-            this.loadButton.TabIndex = 166;
-            this.loadButton.TabStop = false;
-            this.loadButton.Text = "Load";
-            this.loadButton.UseVisualStyleBackColor = true;
-            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
-            // 
-            // SaveAsButton
-            // 
-            this.SaveAsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAsButton.Location = new System.Drawing.Point(3, 22);
-            this.SaveAsButton.Name = "SaveAsButton";
-            this.SaveAsButton.Size = new System.Drawing.Size(67, 17);
-            this.SaveAsButton.TabIndex = 165;
-            this.SaveAsButton.TabStop = false;
-            this.SaveAsButton.Text = "Save As";
-            this.SaveAsButton.UseVisualStyleBackColor = true;
-            this.SaveAsButton.Click += new System.EventHandler(this.SaveAsButtonClick);
-            // 
-            // saveButton
-            // 
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(3, 3);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(67, 18);
-            this.saveButton.TabIndex = 164;
-            this.saveButton.TabStop = false;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.SaveButtonClick);
             // 
             // label34
             // 
@@ -1378,8 +1020,8 @@
             this.textBox32.ReadOnly = true;
             this.textBox32.Size = new System.Drawing.Size(100, 65);
             this.textBox32.TabIndex = 192;
-            this.textBox32.Text = "Number of spells prepared = spellcasting modifer + half spellcasting level (round" +
-    "ed down)";
+            this.textBox32.Text = "Max number of spells prepared = spellcasting modifer + half spellcasting level (r" +
+    "ounded down)";
             this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkBox3
@@ -1431,150 +1073,6 @@
             this.spellListPanel.TabIndex = 181;
             this.spellListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.spellListPanel_Paint);
             // 
-            // forgetSpellButton
-            // 
-            this.forgetSpellButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forgetSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.forgetSpellButton.Location = new System.Drawing.Point(193, 2);
-            this.forgetSpellButton.Name = "forgetSpellButton";
-            this.forgetSpellButton.Size = new System.Drawing.Size(75, 18);
-            this.forgetSpellButton.TabIndex = 223;
-            this.forgetSpellButton.TabStop = false;
-            this.forgetSpellButton.Text = "Forget Spell";
-            this.forgetSpellButton.UseVisualStyleBackColor = true;
-            this.forgetSpellButton.Click += new System.EventHandler(this.forgetSpellButton_Click);
-            // 
-            // preparednumericUpDown
-            // 
-            this.preparednumericUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.preparednumericUpDown.Location = new System.Drawing.Point(157, 338);
-            this.preparednumericUpDown.Name = "preparednumericUpDown";
-            this.preparednumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.preparednumericUpDown.TabIndex = 6;
-            this.preparednumericUpDown.Value = 0;
-            // 
-            // Level9SpellButton
-            // 
-            this.Level9SpellButton.AutoSize = true;
-            this.Level9SpellButton.Location = new System.Drawing.Point(38, 239);
-            this.Level9SpellButton.Name = "Level9SpellButton";
-            this.Level9SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level9SpellButton.TabIndex = 330;
-            this.Level9SpellButton.Tag = "9";
-            this.Level9SpellButton.Text = "Level 9";
-            this.Level9SpellButton.UseVisualStyleBackColor = true;
-            this.Level9SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level8SpellButton
-            // 
-            this.Level8SpellButton.AutoSize = true;
-            this.Level8SpellButton.Location = new System.Drawing.Point(38, 222);
-            this.Level8SpellButton.Name = "Level8SpellButton";
-            this.Level8SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level8SpellButton.TabIndex = 329;
-            this.Level8SpellButton.Tag = "8";
-            this.Level8SpellButton.Text = "Level 8";
-            this.Level8SpellButton.UseVisualStyleBackColor = true;
-            this.Level8SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level7SpellButton
-            // 
-            this.Level7SpellButton.AutoSize = true;
-            this.Level7SpellButton.Location = new System.Drawing.Point(38, 205);
-            this.Level7SpellButton.Name = "Level7SpellButton";
-            this.Level7SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level7SpellButton.TabIndex = 328;
-            this.Level7SpellButton.Tag = "7";
-            this.Level7SpellButton.Text = "Level 7";
-            this.Level7SpellButton.UseVisualStyleBackColor = true;
-            this.Level7SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level6SpellButton
-            // 
-            this.Level6SpellButton.AutoSize = true;
-            this.Level6SpellButton.Location = new System.Drawing.Point(38, 188);
-            this.Level6SpellButton.Name = "Level6SpellButton";
-            this.Level6SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level6SpellButton.TabIndex = 327;
-            this.Level6SpellButton.Tag = "6";
-            this.Level6SpellButton.Text = "Level 6";
-            this.Level6SpellButton.UseVisualStyleBackColor = true;
-            this.Level6SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level5SpellButton
-            // 
-            this.Level5SpellButton.AutoSize = true;
-            this.Level5SpellButton.Location = new System.Drawing.Point(38, 171);
-            this.Level5SpellButton.Name = "Level5SpellButton";
-            this.Level5SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level5SpellButton.TabIndex = 326;
-            this.Level5SpellButton.Tag = "5";
-            this.Level5SpellButton.Text = "Level 5";
-            this.Level5SpellButton.UseVisualStyleBackColor = true;
-            this.Level5SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level4SpellButton
-            // 
-            this.Level4SpellButton.AutoSize = true;
-            this.Level4SpellButton.Location = new System.Drawing.Point(38, 154);
-            this.Level4SpellButton.Name = "Level4SpellButton";
-            this.Level4SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level4SpellButton.TabIndex = 325;
-            this.Level4SpellButton.Tag = "4";
-            this.Level4SpellButton.Text = "Level 4";
-            this.Level4SpellButton.UseVisualStyleBackColor = true;
-            this.Level4SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level3SpellButton
-            // 
-            this.Level3SpellButton.AutoSize = true;
-            this.Level3SpellButton.Location = new System.Drawing.Point(38, 138);
-            this.Level3SpellButton.Name = "Level3SpellButton";
-            this.Level3SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level3SpellButton.TabIndex = 324;
-            this.Level3SpellButton.Tag = "3";
-            this.Level3SpellButton.Text = "Level 3";
-            this.Level3SpellButton.UseVisualStyleBackColor = true;
-            this.Level3SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level2SpellButton
-            // 
-            this.Level2SpellButton.AutoSize = true;
-            this.Level2SpellButton.Location = new System.Drawing.Point(38, 121);
-            this.Level2SpellButton.Name = "Level2SpellButton";
-            this.Level2SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level2SpellButton.TabIndex = 323;
-            this.Level2SpellButton.Tag = "2";
-            this.Level2SpellButton.Text = "Level 2";
-            this.Level2SpellButton.UseVisualStyleBackColor = true;
-            this.Level2SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level1SpellButton
-            // 
-            this.Level1SpellButton.AutoSize = true;
-            this.Level1SpellButton.Checked = true;
-            this.Level1SpellButton.Location = new System.Drawing.Point(38, 104);
-            this.Level1SpellButton.Name = "Level1SpellButton";
-            this.Level1SpellButton.Size = new System.Drawing.Size(60, 17);
-            this.Level1SpellButton.TabIndex = 322;
-            this.Level1SpellButton.TabStop = true;
-            this.Level1SpellButton.Tag = "1";
-            this.Level1SpellButton.Text = "Level 1";
-            this.Level1SpellButton.UseVisualStyleBackColor = true;
-            this.Level1SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // Level0SpellButton
-            // 
-            this.Level0SpellButton.AutoSize = true;
-            this.Level0SpellButton.Location = new System.Drawing.Point(38, 88);
-            this.Level0SpellButton.Name = "Level0SpellButton";
-            this.Level0SpellButton.Size = new System.Drawing.Size(63, 17);
-            this.Level0SpellButton.TabIndex = 321;
-            this.Level0SpellButton.Tag = "0";
-            this.Level0SpellButton.Text = "Cantrips";
-            this.Level0SpellButton.UseVisualStyleBackColor = true;
-            this.Level0SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
             // label80
             // 
             this.label80.BackColor = System.Drawing.SystemColors.Control;
@@ -1585,24 +1083,6 @@
             this.label80.TabIndex = 320;
             this.label80.Text = "Misc Bonus";
             this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // spellsavedcnumupdown
-            // 
-            this.spellsavedcnumupdown.BackColor = System.Drawing.SystemColors.Control;
-            this.spellsavedcnumupdown.Location = new System.Drawing.Point(226, 26);
-            this.spellsavedcnumupdown.Name = "spellsavedcnumupdown";
-            this.spellsavedcnumupdown.Size = new System.Drawing.Size(46, 23);
-            this.spellsavedcnumupdown.TabIndex = 2;
-            this.spellsavedcnumupdown.Value = 0;
-            // 
-            // spellAtkBonusnumUpDown
-            // 
-            this.spellAtkBonusnumUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.spellAtkBonusnumUpDown.Location = new System.Drawing.Point(138, 26);
-            this.spellAtkBonusnumUpDown.Name = "spellAtkBonusnumUpDown";
-            this.spellAtkBonusnumUpDown.Size = new System.Drawing.Size(46, 23);
-            this.spellAtkBonusnumUpDown.TabIndex = 1;
-            this.spellAtkBonusnumUpDown.Value = 0;
             // 
             // label40
             // 
@@ -1676,48 +1156,6 @@
             this.helpLabel_preparedSpells.MouseEnter += new System.EventHandler(this.ShowPreparedSpellHelpPanel);
             this.helpLabel_preparedSpells.MouseLeave += new System.EventHandler(this.preparedhelpLabel_MouseLeave);
             // 
-            // MinusCurrentSlotbutton
-            // 
-            this.MinusCurrentSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinusCurrentSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.MinusCurrentSlotbutton.Location = new System.Drawing.Point(2, 277);
-            this.MinusCurrentSlotbutton.Name = "MinusCurrentSlotbutton";
-            this.MinusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
-            this.MinusCurrentSlotbutton.TabIndex = 197;
-            this.MinusCurrentSlotbutton.TabStop = false;
-            this.MinusCurrentSlotbutton.Tag = "current";
-            this.MinusCurrentSlotbutton.Text = "-";
-            this.MinusCurrentSlotbutton.UseVisualStyleBackColor = true;
-            this.MinusCurrentSlotbutton.Click += new System.EventHandler(this.MinusCurrentSlot);
-            // 
-            // plusCurrentSlotbutton
-            // 
-            this.plusCurrentSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plusCurrentSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.plusCurrentSlotbutton.Location = new System.Drawing.Point(21, 277);
-            this.plusCurrentSlotbutton.Name = "plusCurrentSlotbutton";
-            this.plusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
-            this.plusCurrentSlotbutton.TabIndex = 196;
-            this.plusCurrentSlotbutton.TabStop = false;
-            this.plusCurrentSlotbutton.Tag = "current";
-            this.plusCurrentSlotbutton.Text = "+";
-            this.plusCurrentSlotbutton.UseVisualStyleBackColor = true;
-            this.plusCurrentSlotbutton.Click += new System.EventHandler(this.AddCurrentSlot);
-            // 
-            // minusMaxSlotbutton
-            // 
-            this.minusMaxSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minusMaxSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.minusMaxSlotbutton.Location = new System.Drawing.Point(2, 258);
-            this.minusMaxSlotbutton.Name = "minusMaxSlotbutton";
-            this.minusMaxSlotbutton.Size = new System.Drawing.Size(17, 17);
-            this.minusMaxSlotbutton.TabIndex = 110;
-            this.minusMaxSlotbutton.TabStop = false;
-            this.minusMaxSlotbutton.Tag = "current";
-            this.minusMaxSlotbutton.Text = "-";
-            this.minusMaxSlotbutton.UseVisualStyleBackColor = true;
-            this.minusMaxSlotbutton.Click += new System.EventHandler(this.MinusMaxSlot);
-            // 
             // lvl1slotslabel
             // 
             this.lvl1slotslabel.AutoSize = true;
@@ -1739,20 +1177,6 @@
             this.lvl9slotslabel.Size = new System.Drawing.Size(26, 16);
             this.lvl9slotslabel.TabIndex = 194;
             this.lvl9slotslabel.Text = "0/0";
-            // 
-            // PlusMaxSLotbutton
-            // 
-            this.PlusMaxSLotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlusMaxSLotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.PlusMaxSLotbutton.Location = new System.Drawing.Point(21, 258);
-            this.PlusMaxSLotbutton.Name = "PlusMaxSLotbutton";
-            this.PlusMaxSLotbutton.Size = new System.Drawing.Size(17, 17);
-            this.PlusMaxSLotbutton.TabIndex = 109;
-            this.PlusMaxSLotbutton.TabStop = false;
-            this.PlusMaxSLotbutton.Tag = "current";
-            this.PlusMaxSLotbutton.Text = "+";
-            this.PlusMaxSLotbutton.UseVisualStyleBackColor = true;
-            this.PlusMaxSLotbutton.Click += new System.EventHandler(this.AddMaxSlot);
             // 
             // lvl8slotslabel
             // 
@@ -1871,51 +1295,6 @@
             this.addModDisplayLabel.Text = "(Intelligence)";
             this.addModDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MultipliernumericUpDown
-            // 
-            this.MultipliernumericUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.MultipliernumericUpDown.Location = new System.Drawing.Point(9, 228);
-            this.MultipliernumericUpDown.Name = "MultipliernumericUpDown";
-            this.MultipliernumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.MultipliernumericUpDown.TabIndex = 4;
-            this.MultipliernumericUpDown.Value = 0;
-            // 
-            // otherBonusnumericUpDown
-            // 
-            this.otherBonusnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.otherBonusnumericUpDown.Location = new System.Drawing.Point(69, 228);
-            this.otherBonusnumericUpDown.Name = "otherBonusnumericUpDown";
-            this.otherBonusnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.otherBonusnumericUpDown.TabIndex = 5;
-            this.otherBonusnumericUpDown.Value = 0;
-            // 
-            // addModcheckBox
-            // 
-            this.addModcheckBox.AutoSize = true;
-            this.addModcheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addModcheckBox.Location = new System.Drawing.Point(71, 196);
-            this.addModcheckBox.Name = "addModcheckBox";
-            this.addModcheckBox.Size = new System.Drawing.Size(97, 17);
-            this.addModcheckBox.TabIndex = 194;
-            this.addModcheckBox.TabStop = false;
-            this.addModcheckBox.Text = "Add Modifier";
-            this.addModcheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SpellDescriptionButton
-            // 
-            this.SpellDescriptionButton.Enabled = false;
-            this.SpellDescriptionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SpellDescriptionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellDescriptionButton.ForeColor = System.Drawing.Color.Black;
-            this.SpellDescriptionButton.Location = new System.Drawing.Point(0, 149);
-            this.SpellDescriptionButton.Name = "SpellDescriptionButton";
-            this.SpellDescriptionButton.Size = new System.Drawing.Size(81, 19);
-            this.SpellDescriptionButton.TabIndex = 193;
-            this.SpellDescriptionButton.TabStop = false;
-            this.SpellDescriptionButton.Text = "Description";
-            this.SpellDescriptionButton.UseVisualStyleBackColor = true;
-            this.SpellDescriptionButton.Click += new System.EventHandler(this.SpellDescriptionButton_Click);
-            // 
             // mullabel
             // 
             this.mullabel.AutoSize = true;
@@ -1927,21 +1306,6 @@
             this.mullabel.Size = new System.Drawing.Size(58, 13);
             this.mullabel.TabIndex = 183;
             this.mullabel.Text = "Multiplier";
-            // 
-            // spellAttackButton
-            // 
-            this.spellAttackButton.Enabled = false;
-            this.spellAttackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.spellAttackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellAttackButton.ForeColor = System.Drawing.Color.Black;
-            this.spellAttackButton.Location = new System.Drawing.Point(83, 149);
-            this.spellAttackButton.Name = "spellAttackButton";
-            this.spellAttackButton.Size = new System.Drawing.Size(81, 19);
-            this.spellAttackButton.TabIndex = 182;
-            this.spellAttackButton.TabStop = false;
-            this.spellAttackButton.Text = "Attack Roll";
-            this.spellAttackButton.UseVisualStyleBackColor = true;
-            this.spellAttackButton.Click += new System.EventHandler(this.SpellAttackRoll);
             // 
             // miscBonuslabel
             // 
@@ -2046,21 +1410,6 @@
             this.castTimelabel.TabIndex = 174;
             this.castTimelabel.Text = "Cast Time";
             // 
-            // SpellMiscRollButton
-            // 
-            this.SpellMiscRollButton.Enabled = false;
-            this.SpellMiscRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SpellMiscRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellMiscRollButton.ForeColor = System.Drawing.Color.Black;
-            this.SpellMiscRollButton.Location = new System.Drawing.Point(0, 171);
-            this.SpellMiscRollButton.Name = "SpellMiscRollButton";
-            this.SpellMiscRollButton.Size = new System.Drawing.Size(57, 21);
-            this.SpellMiscRollButton.TabIndex = 97;
-            this.SpellMiscRollButton.TabStop = false;
-            this.SpellMiscRollButton.Text = "Roll:";
-            this.SpellMiscRollButton.UseVisualStyleBackColor = true;
-            this.SpellMiscRollButton.Click += new System.EventHandler(this.SpellMiscRollButton_Click);
-            // 
             // spellnamelabel
             // 
             this.spellnamelabel.BackColor = System.Drawing.SystemColors.Control;
@@ -2093,32 +1442,6 @@
             this.multiplierDicedisplaylabel.Size = new System.Drawing.Size(42, 13);
             this.multiplierDicedisplaylabel.TabIndex = 187;
             this.multiplierDicedisplaylabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // browseSpellsButton
-            // 
-            this.browseSpellsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browseSpellsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.browseSpellsButton.Location = new System.Drawing.Point(2, 68);
-            this.browseSpellsButton.Name = "browseSpellsButton";
-            this.browseSpellsButton.Size = new System.Drawing.Size(104, 18);
-            this.browseSpellsButton.TabIndex = 169;
-            this.browseSpellsButton.TabStop = false;
-            this.browseSpellsButton.Text = "Browse Spells";
-            this.browseSpellsButton.UseVisualStyleBackColor = true;
-            this.browseSpellsButton.Click += new System.EventHandler(this.BrowseSpells);
-            // 
-            // refillSpellSlotsButton
-            // 
-            this.refillSpellSlotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refillSpellSlotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.refillSpellSlotsButton.Location = new System.Drawing.Point(2, 298);
-            this.refillSpellSlotsButton.Name = "refillSpellSlotsButton";
-            this.refillSpellSlotsButton.Size = new System.Drawing.Size(105, 18);
-            this.refillSpellSlotsButton.TabIndex = 183;
-            this.refillSpellSlotsButton.TabStop = false;
-            this.refillSpellSlotsButton.Text = "Refill All Slots";
-            this.refillSpellSlotsButton.UseVisualStyleBackColor = true;
-            this.refillSpellSlotsButton.Click += new System.EventHandler(this.RefillSpellSlots);
             // 
             // label12
             // 
@@ -2272,15 +1595,6 @@
             this.warlockSLotsDisplayLabel.Text = "0/0";
             this.warlockSLotsDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // warlockSpellLevelnumericUpDown
-            // 
-            this.warlockSpellLevelnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
-            this.warlockSpellLevelnumericUpDown.Location = new System.Drawing.Point(61, 31);
-            this.warlockSpellLevelnumericUpDown.Name = "warlockSpellLevelnumericUpDown";
-            this.warlockSpellLevelnumericUpDown.Size = new System.Drawing.Size(46, 23);
-            this.warlockSpellLevelnumericUpDown.TabIndex = 3;
-            this.warlockSpellLevelnumericUpDown.Value = 0;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -2291,180 +1605,6 @@
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 189;
             this.label5.Text = "used";
-            // 
-            // Arcanum9checkBox
-            // 
-            this.Arcanum9checkBox.AutoSize = true;
-            this.Arcanum9checkBox.Location = new System.Drawing.Point(63, 190);
-            this.Arcanum9checkBox.Name = "Arcanum9checkBox";
-            this.Arcanum9checkBox.Size = new System.Drawing.Size(29, 17);
-            this.Arcanum9checkBox.TabIndex = 234;
-            this.Arcanum9checkBox.TabStop = false;
-            this.Arcanum9checkBox.Tag = "3";
-            this.Arcanum9checkBox.Text = " ";
-            this.Arcanum9checkBox.UseVisualStyleBackColor = true;
-            this.Arcanum9checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
-            // 
-            // Arcanum8checkBox
-            // 
-            this.Arcanum8checkBox.AutoSize = true;
-            this.Arcanum8checkBox.Location = new System.Drawing.Point(63, 173);
-            this.Arcanum8checkBox.Name = "Arcanum8checkBox";
-            this.Arcanum8checkBox.Size = new System.Drawing.Size(29, 17);
-            this.Arcanum8checkBox.TabIndex = 233;
-            this.Arcanum8checkBox.TabStop = false;
-            this.Arcanum8checkBox.Tag = "2";
-            this.Arcanum8checkBox.Text = " ";
-            this.Arcanum8checkBox.UseVisualStyleBackColor = true;
-            this.Arcanum8checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
-            // 
-            // Arcanum7checkBox
-            // 
-            this.Arcanum7checkBox.AutoSize = true;
-            this.Arcanum7checkBox.Location = new System.Drawing.Point(63, 156);
-            this.Arcanum7checkBox.Name = "Arcanum7checkBox";
-            this.Arcanum7checkBox.Size = new System.Drawing.Size(29, 17);
-            this.Arcanum7checkBox.TabIndex = 232;
-            this.Arcanum7checkBox.TabStop = false;
-            this.Arcanum7checkBox.Tag = "1";
-            this.Arcanum7checkBox.Text = " ";
-            this.Arcanum7checkBox.UseVisualStyleBackColor = true;
-            this.Arcanum7checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
-            // 
-            // Arcanum6checkBox
-            // 
-            this.Arcanum6checkBox.AutoSize = true;
-            this.Arcanum6checkBox.Location = new System.Drawing.Point(63, 139);
-            this.Arcanum6checkBox.Name = "Arcanum6checkBox";
-            this.Arcanum6checkBox.Size = new System.Drawing.Size(29, 17);
-            this.Arcanum6checkBox.TabIndex = 0;
-            this.Arcanum6checkBox.TabStop = false;
-            this.Arcanum6checkBox.Tag = "0";
-            this.Arcanum6checkBox.Text = " ";
-            this.Arcanum6checkBox.UseVisualStyleBackColor = true;
-            this.Arcanum6checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
-            // 
-            // customRadioButton7
-            // 
-            this.customRadioButton7.AutoSize = true;
-            this.customRadioButton7.Location = new System.Drawing.Point(3, 191);
-            this.customRadioButton7.Name = "customRadioButton7";
-            this.customRadioButton7.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton7.TabIndex = 231;
-            this.customRadioButton7.Tag = "9";
-            this.customRadioButton7.Text = "Level 9";
-            this.customRadioButton7.UseVisualStyleBackColor = true;
-            this.customRadioButton7.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton8
-            // 
-            this.customRadioButton8.AutoSize = true;
-            this.customRadioButton8.Location = new System.Drawing.Point(3, 174);
-            this.customRadioButton8.Name = "customRadioButton8";
-            this.customRadioButton8.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton8.TabIndex = 230;
-            this.customRadioButton8.Tag = "8";
-            this.customRadioButton8.Text = "Level 8";
-            this.customRadioButton8.UseVisualStyleBackColor = true;
-            this.customRadioButton8.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton6
-            // 
-            this.customRadioButton6.AutoSize = true;
-            this.customRadioButton6.Location = new System.Drawing.Point(3, 156);
-            this.customRadioButton6.Name = "customRadioButton6";
-            this.customRadioButton6.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton6.TabIndex = 229;
-            this.customRadioButton6.Tag = "7";
-            this.customRadioButton6.Text = "Level 7";
-            this.customRadioButton6.UseVisualStyleBackColor = true;
-            this.customRadioButton6.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton5
-            // 
-            this.customRadioButton5.AutoSize = true;
-            this.customRadioButton5.Location = new System.Drawing.Point(3, 139);
-            this.customRadioButton5.Name = "customRadioButton5";
-            this.customRadioButton5.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton5.TabIndex = 228;
-            this.customRadioButton5.Tag = "6";
-            this.customRadioButton5.Text = "Level 6";
-            this.customRadioButton5.UseVisualStyleBackColor = true;
-            this.customRadioButton5.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton4
-            // 
-            this.customRadioButton4.AutoSize = true;
-            this.customRadioButton4.Location = new System.Drawing.Point(3, 79);
-            this.customRadioButton4.Name = "customRadioButton4";
-            this.customRadioButton4.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton4.TabIndex = 227;
-            this.customRadioButton4.Tag = "5";
-            this.customRadioButton4.Text = "Level 5";
-            this.customRadioButton4.UseVisualStyleBackColor = true;
-            this.customRadioButton4.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton2
-            // 
-            this.customRadioButton2.AutoSize = true;
-            this.customRadioButton2.Location = new System.Drawing.Point(3, 63);
-            this.customRadioButton2.Name = "customRadioButton2";
-            this.customRadioButton2.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton2.TabIndex = 226;
-            this.customRadioButton2.Tag = "4";
-            this.customRadioButton2.Text = "Level 4";
-            this.customRadioButton2.UseVisualStyleBackColor = true;
-            this.customRadioButton2.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton3
-            // 
-            this.customRadioButton3.AutoSize = true;
-            this.customRadioButton3.Location = new System.Drawing.Point(3, 47);
-            this.customRadioButton3.Name = "customRadioButton3";
-            this.customRadioButton3.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton3.TabIndex = 225;
-            this.customRadioButton3.Tag = "3";
-            this.customRadioButton3.Text = "Level 3";
-            this.customRadioButton3.UseVisualStyleBackColor = true;
-            this.customRadioButton3.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // customRadioButton1
-            // 
-            this.customRadioButton1.AutoSize = true;
-            this.customRadioButton1.Location = new System.Drawing.Point(3, 31);
-            this.customRadioButton1.Name = "customRadioButton1";
-            this.customRadioButton1.Size = new System.Drawing.Size(60, 17);
-            this.customRadioButton1.TabIndex = 224;
-            this.customRadioButton1.Tag = "2";
-            this.customRadioButton1.Text = "Level 2";
-            this.customRadioButton1.UseVisualStyleBackColor = true;
-            this.customRadioButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // warlockSpellButton1
-            // 
-            this.warlockSpellButton1.AutoSize = true;
-            this.warlockSpellButton1.Checked = true;
-            this.warlockSpellButton1.Location = new System.Drawing.Point(3, 15);
-            this.warlockSpellButton1.Name = "warlockSpellButton1";
-            this.warlockSpellButton1.Size = new System.Drawing.Size(60, 17);
-            this.warlockSpellButton1.TabIndex = 223;
-            this.warlockSpellButton1.TabStop = true;
-            this.warlockSpellButton1.Tag = "1";
-            this.warlockSpellButton1.Text = "Level 1";
-            this.warlockSpellButton1.UseVisualStyleBackColor = true;
-            this.warlockSpellButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, -1);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.Tag = "0";
-            this.radioButton1.Text = "Cantrips";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
             // 
             // label9
             // 
@@ -2500,34 +1640,6 @@
             this.label7.TabIndex = 220;
             this.label7.Text = "Max";
             // 
-            // warlockMinusCurrentSlotButton
-            // 
-            this.warlockMinusCurrentSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.warlockMinusCurrentSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.warlockMinusCurrentSlotButton.Location = new System.Drawing.Point(12, 109);
-            this.warlockMinusCurrentSlotButton.Name = "warlockMinusCurrentSlotButton";
-            this.warlockMinusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
-            this.warlockMinusCurrentSlotButton.TabIndex = 218;
-            this.warlockMinusCurrentSlotButton.TabStop = false;
-            this.warlockMinusCurrentSlotButton.Tag = "current";
-            this.warlockMinusCurrentSlotButton.Text = "-";
-            this.warlockMinusCurrentSlotButton.UseVisualStyleBackColor = true;
-            this.warlockMinusCurrentSlotButton.Click += new System.EventHandler(this.warlockMinusCurrentSlotButton_Click);
-            // 
-            // warlockPlusCurrentSlotButton
-            // 
-            this.warlockPlusCurrentSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.warlockPlusCurrentSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.warlockPlusCurrentSlotButton.Location = new System.Drawing.Point(31, 109);
-            this.warlockPlusCurrentSlotButton.Name = "warlockPlusCurrentSlotButton";
-            this.warlockPlusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
-            this.warlockPlusCurrentSlotButton.TabIndex = 217;
-            this.warlockPlusCurrentSlotButton.TabStop = false;
-            this.warlockPlusCurrentSlotButton.Tag = "current";
-            this.warlockPlusCurrentSlotButton.Text = "+";
-            this.warlockPlusCurrentSlotButton.UseVisualStyleBackColor = true;
-            this.warlockPlusCurrentSlotButton.Click += new System.EventHandler(this.warlockPlusCurrentSlotButton_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -2538,47 +1650,6 @@
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 189;
             this.label3.Text = "Mystic Arcanum";
-            // 
-            // warlockMinusSlotButton
-            // 
-            this.warlockMinusSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.warlockMinusSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.warlockMinusSlotButton.Location = new System.Drawing.Point(65, 108);
-            this.warlockMinusSlotButton.Name = "warlockMinusSlotButton";
-            this.warlockMinusSlotButton.Size = new System.Drawing.Size(17, 17);
-            this.warlockMinusSlotButton.TabIndex = 211;
-            this.warlockMinusSlotButton.TabStop = false;
-            this.warlockMinusSlotButton.Tag = "current";
-            this.warlockMinusSlotButton.Text = "-";
-            this.warlockMinusSlotButton.UseVisualStyleBackColor = true;
-            this.warlockMinusSlotButton.Click += new System.EventHandler(this.warlockMinusSlotButton_Click);
-            // 
-            // warlockPlusSlotButton
-            // 
-            this.warlockPlusSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.warlockPlusSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
-            this.warlockPlusSlotButton.Location = new System.Drawing.Point(84, 108);
-            this.warlockPlusSlotButton.Name = "warlockPlusSlotButton";
-            this.warlockPlusSlotButton.Size = new System.Drawing.Size(17, 17);
-            this.warlockPlusSlotButton.TabIndex = 210;
-            this.warlockPlusSlotButton.TabStop = false;
-            this.warlockPlusSlotButton.Tag = "current";
-            this.warlockPlusSlotButton.Text = "+";
-            this.warlockPlusSlotButton.UseVisualStyleBackColor = true;
-            this.warlockPlusSlotButton.Click += new System.EventHandler(this.warlockPlusSlotButton_Click);
-            // 
-            // WarlockRefillSlotsButton
-            // 
-            this.WarlockRefillSlotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WarlockRefillSlotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.WarlockRefillSlotsButton.Location = new System.Drawing.Point(0, 208);
-            this.WarlockRefillSlotsButton.Name = "WarlockRefillSlotsButton";
-            this.WarlockRefillSlotsButton.Size = new System.Drawing.Size(105, 18);
-            this.WarlockRefillSlotsButton.TabIndex = 209;
-            this.WarlockRefillSlotsButton.TabStop = false;
-            this.WarlockRefillSlotsButton.Text = "Refill All Slots";
-            this.WarlockRefillSlotsButton.UseVisualStyleBackColor = true;
-            this.WarlockRefillSlotsButton.Click += new System.EventHandler(this.WarlockRefillSlotsButton_Click);
             // 
             // label10
             // 
@@ -2645,6 +1716,8 @@
             this.helpLabel_HP.Size = new System.Drawing.Size(12, 11);
             this.helpLabel_HP.TabIndex = 334;
             this.helpLabel_HP.Text = "?";
+            this.helpLabel_HP.MouseEnter += new System.EventHandler(this.helpLabel_HP_MouseEnter);
+            this.helpLabel_HP.MouseLeave += new System.EventHandler(this.helpLabel_HP_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -2655,27 +1728,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(58, 55);
             this.pictureBox1.TabIndex = 237;
             this.pictureBox1.TabStop = false;
-            // 
-            // tempHPTextbox
-            // 
-            this.tempHPTextbox.Location = new System.Drawing.Point(175, 40);
-            this.tempHPTextbox.Name = "tempHPTextbox";
-            this.tempHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.tempHPTextbox.TabIndex = 7;
-            // 
-            // maxHPTextbox
-            // 
-            this.maxHPTextbox.Location = new System.Drawing.Point(129, 40);
-            this.maxHPTextbox.Name = "maxHPTextbox";
-            this.maxHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.maxHPTextbox.TabIndex = 6;
-            // 
-            // currentHPTextbox
-            // 
-            this.currentHPTextbox.Location = new System.Drawing.Point(79, 40);
-            this.currentHPTextbox.Name = "currentHPTextbox";
-            this.currentHPTextbox.Size = new System.Drawing.Size(32, 19);
-            this.currentHPTextbox.TabIndex = 5;
             // 
             // tempHPlabel
             // 
@@ -2823,77 +1875,6 @@
             this.panel13.Size = new System.Drawing.Size(210, 339);
             this.panel13.TabIndex = 247;
             // 
-            // conSaveButton
-            // 
-            this.conSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.conSaveButton.Location = new System.Drawing.Point(105, 130);
-            this.conSaveButton.Name = "conSaveButton";
-            this.conSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.conSaveButton.TabIndex = 256;
-            this.conSaveButton.TabStop = false;
-            this.conSaveButton.Text = "Save Throw";
-            this.conSaveButton.UseVisualStyleBackColor = true;
-            this.conSaveButton.Click += new System.EventHandler(this.conSaveButton_Click);
-            // 
-            // charSaveButton
-            // 
-            this.charSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.charSaveButton.Location = new System.Drawing.Point(105, 286);
-            this.charSaveButton.Name = "charSaveButton";
-            this.charSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.charSaveButton.TabIndex = 277;
-            this.charSaveButton.TabStop = false;
-            this.charSaveButton.Text = "Save Throw";
-            this.charSaveButton.UseVisualStyleBackColor = true;
-            this.charSaveButton.Click += new System.EventHandler(this.chrSaveButton_Click);
-            // 
-            // buttonNoPadding11
-            // 
-            this.buttonNoPadding11.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding11.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding11.Location = new System.Drawing.Point(40, 318);
-            this.buttonNoPadding11.Name = "buttonNoPadding11";
-            this.buttonNoPadding11.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding11.TabIndex = 282;
-            this.buttonNoPadding11.TabStop = false;
-            this.buttonNoPadding11.Text = null;
-            this.buttonNoPadding11.UseVisualStyleBackColor = true;
-            this.buttonNoPadding11.Click += new System.EventHandler(this.chrDecreaseButton_Click);
-            // 
-            // buttonNoPadding12
-            // 
-            this.buttonNoPadding12.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding12.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding12.Location = new System.Drawing.Point(40, 302);
-            this.buttonNoPadding12.Name = "buttonNoPadding12";
-            this.buttonNoPadding12.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding12.TabIndex = 281;
-            this.buttonNoPadding12.TabStop = false;
-            this.buttonNoPadding12.Text = null;
-            this.buttonNoPadding12.UseVisualStyleBackColor = true;
-            this.buttonNoPadding12.Click += new System.EventHandler(this.chrAddButton_Click);
-            // 
-            // charProf
-            // 
-            this.charProf.AutoSize = true;
-            this.charProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.charProf.Location = new System.Drawing.Point(105, 309);
-            this.charProf.Name = "charProf";
-            this.charProf.Size = new System.Drawing.Size(87, 19);
-            this.charProf.TabIndex = 278;
-            this.charProf.TabStop = false;
-            this.charProf.Text = "Proficient";
-            this.charProf.UseVisualStyleBackColor = true;
-            this.charProf.CheckedChanged += new System.EventHandler(this.chrProfBox_CheckedChanged);
-            // 
             // charmodlabel
             // 
             this.charmodlabel.BackColor = System.Drawing.SystemColors.Control;
@@ -2929,65 +1910,6 @@
             this.label65.Size = new System.Drawing.Size(215, 17);
             this.label65.TabIndex = 283;
             this.label65.Text = "_______________________";
-            // 
-            // wisSaveButton
-            // 
-            this.wisSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wisSaveButton.Location = new System.Drawing.Point(105, 234);
-            this.wisSaveButton.Name = "wisSaveButton";
-            this.wisSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.wisSaveButton.TabIndex = 270;
-            this.wisSaveButton.TabStop = false;
-            this.wisSaveButton.Text = "Save Throw";
-            this.wisSaveButton.UseVisualStyleBackColor = true;
-            this.wisSaveButton.Click += new System.EventHandler(this.wisSaveButton_Click);
-            // 
-            // buttonNoPadding14
-            // 
-            this.buttonNoPadding14.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding14.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding14.Location = new System.Drawing.Point(40, 266);
-            this.buttonNoPadding14.Name = "buttonNoPadding14";
-            this.buttonNoPadding14.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding14.TabIndex = 275;
-            this.buttonNoPadding14.TabStop = false;
-            this.buttonNoPadding14.Text = null;
-            this.buttonNoPadding14.UseVisualStyleBackColor = true;
-            this.buttonNoPadding14.Click += new System.EventHandler(this.wisDecreaseButton_Click);
-            // 
-            // buttonNoPadding15
-            // 
-            this.buttonNoPadding15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding15.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding15.Location = new System.Drawing.Point(40, 250);
-            this.buttonNoPadding15.Name = "buttonNoPadding15";
-            this.buttonNoPadding15.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding15.TabIndex = 274;
-            this.buttonNoPadding15.TabStop = false;
-            this.buttonNoPadding15.Text = null;
-            this.buttonNoPadding15.UseVisualStyleBackColor = true;
-            this.buttonNoPadding15.Click += new System.EventHandler(this.wisAddButton_Click);
-            // 
-            // wisProf
-            // 
-            this.wisProf.AutoSize = true;
-            this.wisProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.wisProf.Location = new System.Drawing.Point(105, 257);
-            this.wisProf.Name = "wisProf";
-            this.wisProf.Size = new System.Drawing.Size(87, 19);
-            this.wisProf.TabIndex = 271;
-            this.wisProf.TabStop = false;
-            this.wisProf.Text = "Proficient";
-            this.wisProf.UseVisualStyleBackColor = true;
-            this.wisProf.CheckedChanged += new System.EventHandler(this.wisProfBox_CheckedChanged);
             // 
             // wismodlabel
             // 
@@ -3025,65 +1947,6 @@
             this.label68.TabIndex = 276;
             this.label68.Text = "_______________________";
             // 
-            // intSaveButton
-            // 
-            this.intSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.intSaveButton.Location = new System.Drawing.Point(105, 182);
-            this.intSaveButton.Name = "intSaveButton";
-            this.intSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.intSaveButton.TabIndex = 263;
-            this.intSaveButton.TabStop = false;
-            this.intSaveButton.Text = "Save Throw";
-            this.intSaveButton.UseVisualStyleBackColor = true;
-            this.intSaveButton.Click += new System.EventHandler(this.intSaveButton_Click);
-            // 
-            // buttonNoPadding5
-            // 
-            this.buttonNoPadding5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding5.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding5.Location = new System.Drawing.Point(40, 214);
-            this.buttonNoPadding5.Name = "buttonNoPadding5";
-            this.buttonNoPadding5.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding5.TabIndex = 268;
-            this.buttonNoPadding5.TabStop = false;
-            this.buttonNoPadding5.Text = null;
-            this.buttonNoPadding5.UseVisualStyleBackColor = true;
-            this.buttonNoPadding5.Click += new System.EventHandler(this.intDecreaseButton_Click);
-            // 
-            // buttonNoPadding6
-            // 
-            this.buttonNoPadding6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding6.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding6.Location = new System.Drawing.Point(40, 198);
-            this.buttonNoPadding6.Name = "buttonNoPadding6";
-            this.buttonNoPadding6.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding6.TabIndex = 267;
-            this.buttonNoPadding6.TabStop = false;
-            this.buttonNoPadding6.Text = null;
-            this.buttonNoPadding6.UseVisualStyleBackColor = true;
-            this.buttonNoPadding6.Click += new System.EventHandler(this.intAddButton_Click);
-            // 
-            // intProf
-            // 
-            this.intProf.AutoSize = true;
-            this.intProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.intProf.Location = new System.Drawing.Point(105, 205);
-            this.intProf.Name = "intProf";
-            this.intProf.Size = new System.Drawing.Size(87, 19);
-            this.intProf.TabIndex = 264;
-            this.intProf.TabStop = false;
-            this.intProf.Text = "Proficient";
-            this.intProf.UseVisualStyleBackColor = true;
-            this.intProf.CheckedChanged += new System.EventHandler(this.intProfBox_CheckedChanged);
-            // 
             // intmodlabel
             // 
             this.intmodlabel.BackColor = System.Drawing.SystemColors.Control;
@@ -3119,53 +1982,6 @@
             this.label59.Size = new System.Drawing.Size(215, 17);
             this.label59.TabIndex = 269;
             this.label59.Text = "_______________________";
-            // 
-            // buttonNoPadding8
-            // 
-            this.buttonNoPadding8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding8.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding8.Location = new System.Drawing.Point(40, 162);
-            this.buttonNoPadding8.Name = "buttonNoPadding8";
-            this.buttonNoPadding8.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding8.TabIndex = 261;
-            this.buttonNoPadding8.TabStop = false;
-            this.buttonNoPadding8.Text = null;
-            this.buttonNoPadding8.UseVisualStyleBackColor = true;
-            this.buttonNoPadding8.Click += new System.EventHandler(this.conDecreaseButton_Click);
-            // 
-            // buttonNoPadding9
-            // 
-            this.buttonNoPadding9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding9.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding9.Location = new System.Drawing.Point(40, 146);
-            this.buttonNoPadding9.Name = "buttonNoPadding9";
-            this.buttonNoPadding9.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding9.TabIndex = 260;
-            this.buttonNoPadding9.TabStop = false;
-            this.buttonNoPadding9.Text = null;
-            this.buttonNoPadding9.UseVisualStyleBackColor = true;
-            this.buttonNoPadding9.Click += new System.EventHandler(this.conAddButton_Click);
-            // 
-            // conProf
-            // 
-            this.conProf.AutoSize = true;
-            this.conProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.conProf.Location = new System.Drawing.Point(105, 153);
-            this.conProf.Name = "conProf";
-            this.conProf.Size = new System.Drawing.Size(87, 19);
-            this.conProf.TabIndex = 257;
-            this.conProf.TabStop = false;
-            this.conProf.Text = "Proficient";
-            this.conProf.UseVisualStyleBackColor = true;
-            this.conProf.CheckedChanged += new System.EventHandler(this.conProfBox_CheckedChanged);
             // 
             // conmodlabel
             // 
@@ -3203,65 +2019,6 @@
             this.label62.TabIndex = 262;
             this.label62.Text = "_______________________";
             // 
-            // dexSaveButton
-            // 
-            this.dexSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dexSaveButton.Location = new System.Drawing.Point(105, 78);
-            this.dexSaveButton.Name = "dexSaveButton";
-            this.dexSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.dexSaveButton.TabIndex = 249;
-            this.dexSaveButton.TabStop = false;
-            this.dexSaveButton.Text = "Save Throw";
-            this.dexSaveButton.UseVisualStyleBackColor = true;
-            this.dexSaveButton.Click += new System.EventHandler(this.dexSaveButton_Click);
-            // 
-            // buttonNoPadding2
-            // 
-            this.buttonNoPadding2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.buttonNoPadding2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding2.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding2.Location = new System.Drawing.Point(40, 110);
-            this.buttonNoPadding2.Name = "buttonNoPadding2";
-            this.buttonNoPadding2.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding2.TabIndex = 254;
-            this.buttonNoPadding2.TabStop = false;
-            this.buttonNoPadding2.Text = null;
-            this.buttonNoPadding2.UseVisualStyleBackColor = true;
-            this.buttonNoPadding2.Click += new System.EventHandler(this.dexDecreaseButton_Click);
-            // 
-            // buttonNoPadding3
-            // 
-            this.buttonNoPadding3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.buttonNoPadding3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNoPadding3.FlatAppearance.BorderSize = 0;
-            this.buttonNoPadding3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.buttonNoPadding3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.buttonNoPadding3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNoPadding3.Location = new System.Drawing.Point(40, 94);
-            this.buttonNoPadding3.Name = "buttonNoPadding3";
-            this.buttonNoPadding3.Size = new System.Drawing.Size(17, 13);
-            this.buttonNoPadding3.TabIndex = 253;
-            this.buttonNoPadding3.TabStop = false;
-            this.buttonNoPadding3.Text = null;
-            this.buttonNoPadding3.UseVisualStyleBackColor = true;
-            this.buttonNoPadding3.Click += new System.EventHandler(this.dexAddButton_Click);
-            // 
-            // dexProf
-            // 
-            this.dexProf.AutoSize = true;
-            this.dexProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.dexProf.Location = new System.Drawing.Point(105, 101);
-            this.dexProf.Name = "dexProf";
-            this.dexProf.Size = new System.Drawing.Size(87, 19);
-            this.dexProf.TabIndex = 250;
-            this.dexProf.TabStop = false;
-            this.dexProf.Text = "Proficient";
-            this.dexProf.UseVisualStyleBackColor = true;
-            this.dexProf.CheckedChanged += new System.EventHandler(this.dexProfBox_CheckedChanged);
-            // 
             // dexmodlabel
             // 
             this.dexmodlabel.BackColor = System.Drawing.SystemColors.Control;
@@ -3297,65 +2054,6 @@
             this.label56.Size = new System.Drawing.Size(215, 17);
             this.label56.TabIndex = 255;
             this.label56.Text = "_______________________";
-            // 
-            // strSaveButton
-            // 
-            this.strSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.strSaveButton.Location = new System.Drawing.Point(105, 26);
-            this.strSaveButton.Name = "strSaveButton";
-            this.strSaveButton.Size = new System.Drawing.Size(82, 16);
-            this.strSaveButton.TabIndex = 170;
-            this.strSaveButton.TabStop = false;
-            this.strSaveButton.Text = "Save Throw";
-            this.strSaveButton.UseVisualStyleBackColor = true;
-            this.strSaveButton.Click += new System.EventHandler(this.strSaveButton_Click);
-            // 
-            // strDownButton
-            // 
-            this.strDownButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
-            this.strDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.strDownButton.FlatAppearance.BorderSize = 0;
-            this.strDownButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.strDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.strDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.strDownButton.Location = new System.Drawing.Point(40, 58);
-            this.strDownButton.Name = "strDownButton";
-            this.strDownButton.Size = new System.Drawing.Size(17, 13);
-            this.strDownButton.TabIndex = 248;
-            this.strDownButton.TabStop = false;
-            this.strDownButton.Text = null;
-            this.strDownButton.UseVisualStyleBackColor = true;
-            this.strDownButton.Click += new System.EventHandler(this.strDecreaseButton_Click);
-            // 
-            // strUpButton
-            // 
-            this.strUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
-            this.strUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.strUpButton.FlatAppearance.BorderSize = 0;
-            this.strUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.strUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.strUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.strUpButton.Location = new System.Drawing.Point(40, 42);
-            this.strUpButton.Name = "strUpButton";
-            this.strUpButton.Size = new System.Drawing.Size(17, 13);
-            this.strUpButton.TabIndex = 247;
-            this.strUpButton.TabStop = false;
-            this.strUpButton.Text = null;
-            this.strUpButton.UseVisualStyleBackColor = true;
-            this.strUpButton.Click += new System.EventHandler(this.strAddButton_Click);
-            // 
-            // strProf
-            // 
-            this.strProf.AutoSize = true;
-            this.strProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.strProf.Location = new System.Drawing.Point(105, 49);
-            this.strProf.Name = "strProf";
-            this.strProf.Size = new System.Drawing.Size(87, 19);
-            this.strProf.TabIndex = 235;
-            this.strProf.TabStop = false;
-            this.strProf.Text = "Proficient";
-            this.strProf.UseVisualStyleBackColor = true;
-            this.strProf.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
             // 
             // strModLabel
             // 
@@ -3769,6 +2467,8 @@
             this.helpLabel_Money.Size = new System.Drawing.Size(12, 11);
             this.helpLabel_Money.TabIndex = 333;
             this.helpLabel_Money.Text = "?";
+            this.helpLabel_Money.MouseEnter += new System.EventHandler(this.helpLabel_Money_MouseEnter);
+            this.helpLabel_Money.MouseLeave += new System.EventHandler(this.helpLabel_Money_MouseLeave);
             // 
             // label6
             // 
@@ -3806,6 +2506,89 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(174, 58);
             this.panel1.TabIndex = 18;
+            // 
+            // helpLabel_Prof
+            // 
+            this.helpLabel_Prof.AutoSize = true;
+            this.helpLabel_Prof.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpLabel_Prof.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
+            this.helpLabel_Prof.ForeColor = System.Drawing.Color.Maroon;
+            this.helpLabel_Prof.Location = new System.Drawing.Point(284, 153);
+            this.helpLabel_Prof.Name = "helpLabel_Prof";
+            this.helpLabel_Prof.Size = new System.Drawing.Size(12, 11);
+            this.helpLabel_Prof.TabIndex = 335;
+            this.helpLabel_Prof.Text = "?";
+            this.helpLabel_Prof.MouseEnter += new System.EventHandler(this.helpLabel_Prof_MouseEnter);
+            this.helpLabel_Prof.MouseLeave += new System.EventHandler(this.helpLabel_Prof_MouseLeave);
+            // 
+            // helpPanel_Money
+            // 
+            this.helpPanel_Money.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpPanel_Money.Controls.Add(this.textBox1);
+            this.helpPanel_Money.Location = new System.Drawing.Point(626, 14);
+            this.helpPanel_Money.Name = "helpPanel_Money";
+            this.helpPanel_Money.Size = new System.Drawing.Size(146, 79);
+            this.helpPanel_Money.TabIndex = 336;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(2, -1);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(140, 76);
+            this.textBox1.TabIndex = 193;
+            this.textBox1.Text = "Click once on a textbox to set the amount of money, or double click and put a + o" +
+    "r - in front of the number then press enter to add or subtract from the amount";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // helpPanel_HP
+            // 
+            this.helpPanel_HP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpPanel_HP.Controls.Add(this.textBox2);
+            this.helpPanel_HP.Location = new System.Drawing.Point(290, 67);
+            this.helpPanel_HP.Name = "helpPanel_HP";
+            this.helpPanel_HP.Size = new System.Drawing.Size(149, 81);
+            this.helpPanel_HP.TabIndex = 337;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(2, -1);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(143, 78);
+            this.textBox2.TabIndex = 193;
+            this.textBox2.Text = "Type a number in a textbox then press enter to apply it to the health total above" +
+    " it.  Using a + or - before the number adds or subtracts, and using neither sets" +
+    " the total.";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // helpPanel_prof
+            // 
+            this.helpPanel_prof.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpPanel_prof.Controls.Add(this.textBox3);
+            this.helpPanel_prof.Location = new System.Drawing.Point(295, 163);
+            this.helpPanel_prof.Name = "helpPanel_prof";
+            this.helpPanel_prof.Size = new System.Drawing.Size(161, 42);
+            this.helpPanel_prof.TabIndex = 338;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(2, -1);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(155, 39);
+            this.textBox3.TabIndex = 193;
+            this.textBox3.Text = "One box filled: normal proficiency\r\nTwo boxes filled: expertise\r\nTriangle filled:" +
+    " Half proficiency";
             // 
             // MiscRollflatnumericUpDown
             // 
@@ -3935,6 +2718,258 @@
             this.deathSaveRollButton.UseVisualStyleBackColor = true;
             this.deathSaveRollButton.Click += new System.EventHandler(this.deathSaveRollButton_Click);
             // 
+            // warlockSpellLevelnumericUpDown
+            // 
+            this.warlockSpellLevelnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.warlockSpellLevelnumericUpDown.Location = new System.Drawing.Point(61, 31);
+            this.warlockSpellLevelnumericUpDown.Name = "warlockSpellLevelnumericUpDown";
+            this.warlockSpellLevelnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.warlockSpellLevelnumericUpDown.TabIndex = 3;
+            this.warlockSpellLevelnumericUpDown.Value = 0;
+            // 
+            // Arcanum9checkBox
+            // 
+            this.Arcanum9checkBox.AutoSize = true;
+            this.Arcanum9checkBox.Location = new System.Drawing.Point(63, 190);
+            this.Arcanum9checkBox.Name = "Arcanum9checkBox";
+            this.Arcanum9checkBox.Size = new System.Drawing.Size(29, 17);
+            this.Arcanum9checkBox.TabIndex = 234;
+            this.Arcanum9checkBox.TabStop = false;
+            this.Arcanum9checkBox.Tag = "3";
+            this.Arcanum9checkBox.Text = " ";
+            this.Arcanum9checkBox.UseVisualStyleBackColor = true;
+            this.Arcanum9checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
+            // 
+            // Arcanum8checkBox
+            // 
+            this.Arcanum8checkBox.AutoSize = true;
+            this.Arcanum8checkBox.Location = new System.Drawing.Point(63, 173);
+            this.Arcanum8checkBox.Name = "Arcanum8checkBox";
+            this.Arcanum8checkBox.Size = new System.Drawing.Size(29, 17);
+            this.Arcanum8checkBox.TabIndex = 233;
+            this.Arcanum8checkBox.TabStop = false;
+            this.Arcanum8checkBox.Tag = "2";
+            this.Arcanum8checkBox.Text = " ";
+            this.Arcanum8checkBox.UseVisualStyleBackColor = true;
+            this.Arcanum8checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
+            // 
+            // Arcanum7checkBox
+            // 
+            this.Arcanum7checkBox.AutoSize = true;
+            this.Arcanum7checkBox.Location = new System.Drawing.Point(63, 156);
+            this.Arcanum7checkBox.Name = "Arcanum7checkBox";
+            this.Arcanum7checkBox.Size = new System.Drawing.Size(29, 17);
+            this.Arcanum7checkBox.TabIndex = 232;
+            this.Arcanum7checkBox.TabStop = false;
+            this.Arcanum7checkBox.Tag = "1";
+            this.Arcanum7checkBox.Text = " ";
+            this.Arcanum7checkBox.UseVisualStyleBackColor = true;
+            this.Arcanum7checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
+            // 
+            // Arcanum6checkBox
+            // 
+            this.Arcanum6checkBox.AutoSize = true;
+            this.Arcanum6checkBox.Location = new System.Drawing.Point(63, 139);
+            this.Arcanum6checkBox.Name = "Arcanum6checkBox";
+            this.Arcanum6checkBox.Size = new System.Drawing.Size(29, 17);
+            this.Arcanum6checkBox.TabIndex = 0;
+            this.Arcanum6checkBox.TabStop = false;
+            this.Arcanum6checkBox.Tag = "0";
+            this.Arcanum6checkBox.Text = " ";
+            this.Arcanum6checkBox.UseVisualStyleBackColor = true;
+            this.Arcanum6checkBox.CheckedChanged += new System.EventHandler(this.ArcanumChecKChanged);
+            // 
+            // customRadioButton7
+            // 
+            this.customRadioButton7.AutoSize = true;
+            this.customRadioButton7.Location = new System.Drawing.Point(3, 191);
+            this.customRadioButton7.Name = "customRadioButton7";
+            this.customRadioButton7.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton7.TabIndex = 231;
+            this.customRadioButton7.Tag = "9";
+            this.customRadioButton7.Text = "Level 9";
+            this.customRadioButton7.UseVisualStyleBackColor = true;
+            this.customRadioButton7.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton8
+            // 
+            this.customRadioButton8.AutoSize = true;
+            this.customRadioButton8.Location = new System.Drawing.Point(3, 174);
+            this.customRadioButton8.Name = "customRadioButton8";
+            this.customRadioButton8.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton8.TabIndex = 230;
+            this.customRadioButton8.Tag = "8";
+            this.customRadioButton8.Text = "Level 8";
+            this.customRadioButton8.UseVisualStyleBackColor = true;
+            this.customRadioButton8.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton6
+            // 
+            this.customRadioButton6.AutoSize = true;
+            this.customRadioButton6.Location = new System.Drawing.Point(3, 156);
+            this.customRadioButton6.Name = "customRadioButton6";
+            this.customRadioButton6.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton6.TabIndex = 229;
+            this.customRadioButton6.Tag = "7";
+            this.customRadioButton6.Text = "Level 7";
+            this.customRadioButton6.UseVisualStyleBackColor = true;
+            this.customRadioButton6.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton5
+            // 
+            this.customRadioButton5.AutoSize = true;
+            this.customRadioButton5.Location = new System.Drawing.Point(3, 139);
+            this.customRadioButton5.Name = "customRadioButton5";
+            this.customRadioButton5.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton5.TabIndex = 228;
+            this.customRadioButton5.Tag = "6";
+            this.customRadioButton5.Text = "Level 6";
+            this.customRadioButton5.UseVisualStyleBackColor = true;
+            this.customRadioButton5.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton4
+            // 
+            this.customRadioButton4.AutoSize = true;
+            this.customRadioButton4.Location = new System.Drawing.Point(3, 79);
+            this.customRadioButton4.Name = "customRadioButton4";
+            this.customRadioButton4.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton4.TabIndex = 227;
+            this.customRadioButton4.Tag = "5";
+            this.customRadioButton4.Text = "Level 5";
+            this.customRadioButton4.UseVisualStyleBackColor = true;
+            this.customRadioButton4.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton2
+            // 
+            this.customRadioButton2.AutoSize = true;
+            this.customRadioButton2.Location = new System.Drawing.Point(3, 63);
+            this.customRadioButton2.Name = "customRadioButton2";
+            this.customRadioButton2.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton2.TabIndex = 226;
+            this.customRadioButton2.Tag = "4";
+            this.customRadioButton2.Text = "Level 4";
+            this.customRadioButton2.UseVisualStyleBackColor = true;
+            this.customRadioButton2.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton3
+            // 
+            this.customRadioButton3.AutoSize = true;
+            this.customRadioButton3.Location = new System.Drawing.Point(3, 47);
+            this.customRadioButton3.Name = "customRadioButton3";
+            this.customRadioButton3.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton3.TabIndex = 225;
+            this.customRadioButton3.Tag = "3";
+            this.customRadioButton3.Text = "Level 3";
+            this.customRadioButton3.UseVisualStyleBackColor = true;
+            this.customRadioButton3.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // customRadioButton1
+            // 
+            this.customRadioButton1.AutoSize = true;
+            this.customRadioButton1.Location = new System.Drawing.Point(3, 31);
+            this.customRadioButton1.Name = "customRadioButton1";
+            this.customRadioButton1.Size = new System.Drawing.Size(60, 17);
+            this.customRadioButton1.TabIndex = 224;
+            this.customRadioButton1.Tag = "2";
+            this.customRadioButton1.Text = "Level 2";
+            this.customRadioButton1.UseVisualStyleBackColor = true;
+            this.customRadioButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // warlockSpellButton1
+            // 
+            this.warlockSpellButton1.AutoSize = true;
+            this.warlockSpellButton1.Checked = true;
+            this.warlockSpellButton1.Location = new System.Drawing.Point(3, 15);
+            this.warlockSpellButton1.Name = "warlockSpellButton1";
+            this.warlockSpellButton1.Size = new System.Drawing.Size(60, 17);
+            this.warlockSpellButton1.TabIndex = 223;
+            this.warlockSpellButton1.TabStop = true;
+            this.warlockSpellButton1.Tag = "1";
+            this.warlockSpellButton1.Text = "Level 1";
+            this.warlockSpellButton1.UseVisualStyleBackColor = true;
+            this.warlockSpellButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, -1);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(63, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.Tag = "0";
+            this.radioButton1.Text = "Cantrips";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // warlockMinusCurrentSlotButton
+            // 
+            this.warlockMinusCurrentSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warlockMinusCurrentSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.warlockMinusCurrentSlotButton.Location = new System.Drawing.Point(12, 109);
+            this.warlockMinusCurrentSlotButton.Name = "warlockMinusCurrentSlotButton";
+            this.warlockMinusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
+            this.warlockMinusCurrentSlotButton.TabIndex = 218;
+            this.warlockMinusCurrentSlotButton.TabStop = false;
+            this.warlockMinusCurrentSlotButton.Tag = "current";
+            this.warlockMinusCurrentSlotButton.Text = "-";
+            this.warlockMinusCurrentSlotButton.UseVisualStyleBackColor = true;
+            this.warlockMinusCurrentSlotButton.Click += new System.EventHandler(this.warlockMinusCurrentSlotButton_Click);
+            // 
+            // warlockPlusCurrentSlotButton
+            // 
+            this.warlockPlusCurrentSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warlockPlusCurrentSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.warlockPlusCurrentSlotButton.Location = new System.Drawing.Point(31, 109);
+            this.warlockPlusCurrentSlotButton.Name = "warlockPlusCurrentSlotButton";
+            this.warlockPlusCurrentSlotButton.Size = new System.Drawing.Size(17, 17);
+            this.warlockPlusCurrentSlotButton.TabIndex = 217;
+            this.warlockPlusCurrentSlotButton.TabStop = false;
+            this.warlockPlusCurrentSlotButton.Tag = "current";
+            this.warlockPlusCurrentSlotButton.Text = "+";
+            this.warlockPlusCurrentSlotButton.UseVisualStyleBackColor = true;
+            this.warlockPlusCurrentSlotButton.Click += new System.EventHandler(this.warlockPlusCurrentSlotButton_Click);
+            // 
+            // warlockMinusSlotButton
+            // 
+            this.warlockMinusSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warlockMinusSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.warlockMinusSlotButton.Location = new System.Drawing.Point(65, 108);
+            this.warlockMinusSlotButton.Name = "warlockMinusSlotButton";
+            this.warlockMinusSlotButton.Size = new System.Drawing.Size(17, 17);
+            this.warlockMinusSlotButton.TabIndex = 211;
+            this.warlockMinusSlotButton.TabStop = false;
+            this.warlockMinusSlotButton.Tag = "current";
+            this.warlockMinusSlotButton.Text = "-";
+            this.warlockMinusSlotButton.UseVisualStyleBackColor = true;
+            this.warlockMinusSlotButton.Click += new System.EventHandler(this.warlockMinusSlotButton_Click);
+            // 
+            // warlockPlusSlotButton
+            // 
+            this.warlockPlusSlotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warlockPlusSlotButton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.warlockPlusSlotButton.Location = new System.Drawing.Point(84, 108);
+            this.warlockPlusSlotButton.Name = "warlockPlusSlotButton";
+            this.warlockPlusSlotButton.Size = new System.Drawing.Size(17, 17);
+            this.warlockPlusSlotButton.TabIndex = 210;
+            this.warlockPlusSlotButton.TabStop = false;
+            this.warlockPlusSlotButton.Tag = "current";
+            this.warlockPlusSlotButton.Text = "+";
+            this.warlockPlusSlotButton.UseVisualStyleBackColor = true;
+            this.warlockPlusSlotButton.Click += new System.EventHandler(this.warlockPlusSlotButton_Click);
+            // 
+            // WarlockRefillSlotsButton
+            // 
+            this.WarlockRefillSlotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WarlockRefillSlotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.WarlockRefillSlotsButton.Location = new System.Drawing.Point(0, 208);
+            this.WarlockRefillSlotsButton.Name = "WarlockRefillSlotsButton";
+            this.WarlockRefillSlotsButton.Size = new System.Drawing.Size(105, 18);
+            this.WarlockRefillSlotsButton.TabIndex = 209;
+            this.WarlockRefillSlotsButton.TabStop = false;
+            this.WarlockRefillSlotsButton.Text = "Refill All Slots";
+            this.WarlockRefillSlotsButton.UseVisualStyleBackColor = true;
+            this.WarlockRefillSlotsButton.Click += new System.EventHandler(this.WarlockRefillSlotsButton_Click);
+            // 
             // newFeatButton
             // 
             this.newFeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -4054,6 +3089,99 @@
             this.initiativeNumUpDown.TabIndex = 16;
             this.initiativeNumUpDown.Value = 0;
             // 
+            // MiscarmorTextbox
+            // 
+            this.MiscarmorTextbox.Location = new System.Drawing.Point(176, 20);
+            this.MiscarmorTextbox.Name = "MiscarmorTextbox";
+            this.MiscarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.MiscarmorTextbox.TabIndex = 15;
+            // 
+            // DexarmorTextbox
+            // 
+            this.DexarmorTextbox.Location = new System.Drawing.Point(134, 20);
+            this.DexarmorTextbox.Name = "DexarmorTextbox";
+            this.DexarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.DexarmorTextbox.TabIndex = 14;
+            // 
+            // ACarmorTextbox
+            // 
+            this.ACarmorTextbox.Location = new System.Drawing.Point(91, 20);
+            this.ACarmorTextbox.Name = "ACarmorTextbox";
+            this.ACarmorTextbox.Size = new System.Drawing.Size(32, 19);
+            this.ACarmorTextbox.TabIndex = 13;
+            // 
+            // exportButton
+            // 
+            this.exportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportButton.Location = new System.Drawing.Point(141, 22);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(67, 17);
+            this.exportButton.TabIndex = 169;
+            this.exportButton.TabStop = false;
+            this.exportButton.Text = "Export";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
+            // 
+            // newCharButton
+            // 
+            this.newCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newCharButton.Location = new System.Drawing.Point(71, 22);
+            this.newCharButton.Name = "newCharButton";
+            this.newCharButton.Size = new System.Drawing.Size(69, 17);
+            this.newCharButton.TabIndex = 167;
+            this.newCharButton.TabStop = false;
+            this.newCharButton.Text = "New";
+            this.newCharButton.UseVisualStyleBackColor = true;
+            this.newCharButton.Click += new System.EventHandler(this.NewCharacter);
+            // 
+            // importButton
+            // 
+            this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importButton.Location = new System.Drawing.Point(141, 3);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(67, 18);
+            this.importButton.TabIndex = 168;
+            this.importButton.TabStop = false;
+            this.importButton.Text = "Import";
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
+            // 
+            // loadButton
+            // 
+            this.loadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadButton.Location = new System.Drawing.Point(71, 3);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(69, 18);
+            this.loadButton.TabIndex = 166;
+            this.loadButton.TabStop = false;
+            this.loadButton.Text = "Load";
+            this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
+            // SaveAsButton
+            // 
+            this.SaveAsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAsButton.Location = new System.Drawing.Point(3, 22);
+            this.SaveAsButton.Name = "SaveAsButton";
+            this.SaveAsButton.Size = new System.Drawing.Size(67, 17);
+            this.SaveAsButton.TabIndex = 165;
+            this.SaveAsButton.TabStop = false;
+            this.SaveAsButton.Text = "Save As";
+            this.SaveAsButton.UseVisualStyleBackColor = true;
+            this.SaveAsButton.Click += new System.EventHandler(this.SaveAsButtonClick);
+            // 
+            // saveButton
+            // 
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Location = new System.Drawing.Point(3, 3);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(67, 18);
+            this.saveButton.TabIndex = 164;
+            this.saveButton.TabStop = false;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButtonClick);
+            // 
             // speedTextBox
             // 
             this.speedTextBox.Location = new System.Drawing.Point(512, 43);
@@ -4077,6 +3205,360 @@
             this.profDownLabel.Text = null;
             this.profDownLabel.UseVisualStyleBackColor = true;
             this.profDownLabel.Click += new System.EventHandler(this.profDownLabel_Click);
+            // 
+            // conSaveButton
+            // 
+            this.conSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conSaveButton.Location = new System.Drawing.Point(105, 130);
+            this.conSaveButton.Name = "conSaveButton";
+            this.conSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.conSaveButton.TabIndex = 256;
+            this.conSaveButton.TabStop = false;
+            this.conSaveButton.Text = "Save Throw";
+            this.conSaveButton.UseVisualStyleBackColor = true;
+            this.conSaveButton.Click += new System.EventHandler(this.conSaveButton_Click);
+            // 
+            // charSaveButton
+            // 
+            this.charSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.charSaveButton.Location = new System.Drawing.Point(105, 286);
+            this.charSaveButton.Name = "charSaveButton";
+            this.charSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.charSaveButton.TabIndex = 277;
+            this.charSaveButton.TabStop = false;
+            this.charSaveButton.Text = "Save Throw";
+            this.charSaveButton.UseVisualStyleBackColor = true;
+            this.charSaveButton.Click += new System.EventHandler(this.chrSaveButton_Click);
+            // 
+            // buttonNoPadding11
+            // 
+            this.buttonNoPadding11.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding11.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding11.Location = new System.Drawing.Point(40, 318);
+            this.buttonNoPadding11.Name = "buttonNoPadding11";
+            this.buttonNoPadding11.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding11.TabIndex = 282;
+            this.buttonNoPadding11.TabStop = false;
+            this.buttonNoPadding11.Text = null;
+            this.buttonNoPadding11.UseVisualStyleBackColor = true;
+            this.buttonNoPadding11.Click += new System.EventHandler(this.chrDecreaseButton_Click);
+            // 
+            // buttonNoPadding12
+            // 
+            this.buttonNoPadding12.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding12.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding12.Location = new System.Drawing.Point(40, 302);
+            this.buttonNoPadding12.Name = "buttonNoPadding12";
+            this.buttonNoPadding12.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding12.TabIndex = 281;
+            this.buttonNoPadding12.TabStop = false;
+            this.buttonNoPadding12.Text = null;
+            this.buttonNoPadding12.UseVisualStyleBackColor = true;
+            this.buttonNoPadding12.Click += new System.EventHandler(this.chrAddButton_Click);
+            // 
+            // charProf
+            // 
+            this.charProf.AutoSize = true;
+            this.charProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.charProf.Location = new System.Drawing.Point(105, 309);
+            this.charProf.Name = "charProf";
+            this.charProf.Size = new System.Drawing.Size(87, 19);
+            this.charProf.TabIndex = 278;
+            this.charProf.TabStop = false;
+            this.charProf.Text = "Proficient";
+            this.charProf.UseVisualStyleBackColor = true;
+            this.charProf.CheckedChanged += new System.EventHandler(this.chrProfBox_CheckedChanged);
+            // 
+            // wisSaveButton
+            // 
+            this.wisSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wisSaveButton.Location = new System.Drawing.Point(105, 234);
+            this.wisSaveButton.Name = "wisSaveButton";
+            this.wisSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.wisSaveButton.TabIndex = 270;
+            this.wisSaveButton.TabStop = false;
+            this.wisSaveButton.Text = "Save Throw";
+            this.wisSaveButton.UseVisualStyleBackColor = true;
+            this.wisSaveButton.Click += new System.EventHandler(this.wisSaveButton_Click);
+            // 
+            // buttonNoPadding14
+            // 
+            this.buttonNoPadding14.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding14.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding14.Location = new System.Drawing.Point(40, 266);
+            this.buttonNoPadding14.Name = "buttonNoPadding14";
+            this.buttonNoPadding14.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding14.TabIndex = 275;
+            this.buttonNoPadding14.TabStop = false;
+            this.buttonNoPadding14.Text = null;
+            this.buttonNoPadding14.UseVisualStyleBackColor = true;
+            this.buttonNoPadding14.Click += new System.EventHandler(this.wisDecreaseButton_Click);
+            // 
+            // buttonNoPadding15
+            // 
+            this.buttonNoPadding15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding15.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding15.Location = new System.Drawing.Point(40, 250);
+            this.buttonNoPadding15.Name = "buttonNoPadding15";
+            this.buttonNoPadding15.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding15.TabIndex = 274;
+            this.buttonNoPadding15.TabStop = false;
+            this.buttonNoPadding15.Text = null;
+            this.buttonNoPadding15.UseVisualStyleBackColor = true;
+            this.buttonNoPadding15.Click += new System.EventHandler(this.wisAddButton_Click);
+            // 
+            // wisProf
+            // 
+            this.wisProf.AutoSize = true;
+            this.wisProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.wisProf.Location = new System.Drawing.Point(105, 257);
+            this.wisProf.Name = "wisProf";
+            this.wisProf.Size = new System.Drawing.Size(87, 19);
+            this.wisProf.TabIndex = 271;
+            this.wisProf.TabStop = false;
+            this.wisProf.Text = "Proficient";
+            this.wisProf.UseVisualStyleBackColor = true;
+            this.wisProf.CheckedChanged += new System.EventHandler(this.wisProfBox_CheckedChanged);
+            // 
+            // intSaveButton
+            // 
+            this.intSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.intSaveButton.Location = new System.Drawing.Point(105, 182);
+            this.intSaveButton.Name = "intSaveButton";
+            this.intSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.intSaveButton.TabIndex = 263;
+            this.intSaveButton.TabStop = false;
+            this.intSaveButton.Text = "Save Throw";
+            this.intSaveButton.UseVisualStyleBackColor = true;
+            this.intSaveButton.Click += new System.EventHandler(this.intSaveButton_Click);
+            // 
+            // buttonNoPadding5
+            // 
+            this.buttonNoPadding5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding5.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding5.Location = new System.Drawing.Point(40, 214);
+            this.buttonNoPadding5.Name = "buttonNoPadding5";
+            this.buttonNoPadding5.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding5.TabIndex = 268;
+            this.buttonNoPadding5.TabStop = false;
+            this.buttonNoPadding5.Text = null;
+            this.buttonNoPadding5.UseVisualStyleBackColor = true;
+            this.buttonNoPadding5.Click += new System.EventHandler(this.intDecreaseButton_Click);
+            // 
+            // buttonNoPadding6
+            // 
+            this.buttonNoPadding6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding6.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding6.Location = new System.Drawing.Point(40, 198);
+            this.buttonNoPadding6.Name = "buttonNoPadding6";
+            this.buttonNoPadding6.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding6.TabIndex = 267;
+            this.buttonNoPadding6.TabStop = false;
+            this.buttonNoPadding6.Text = null;
+            this.buttonNoPadding6.UseVisualStyleBackColor = true;
+            this.buttonNoPadding6.Click += new System.EventHandler(this.intAddButton_Click);
+            // 
+            // intProf
+            // 
+            this.intProf.AutoSize = true;
+            this.intProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.intProf.Location = new System.Drawing.Point(105, 205);
+            this.intProf.Name = "intProf";
+            this.intProf.Size = new System.Drawing.Size(87, 19);
+            this.intProf.TabIndex = 264;
+            this.intProf.TabStop = false;
+            this.intProf.Text = "Proficient";
+            this.intProf.UseVisualStyleBackColor = true;
+            this.intProf.CheckedChanged += new System.EventHandler(this.intProfBox_CheckedChanged);
+            // 
+            // buttonNoPadding8
+            // 
+            this.buttonNoPadding8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding8.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding8.Location = new System.Drawing.Point(40, 162);
+            this.buttonNoPadding8.Name = "buttonNoPadding8";
+            this.buttonNoPadding8.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding8.TabIndex = 261;
+            this.buttonNoPadding8.TabStop = false;
+            this.buttonNoPadding8.Text = null;
+            this.buttonNoPadding8.UseVisualStyleBackColor = true;
+            this.buttonNoPadding8.Click += new System.EventHandler(this.conDecreaseButton_Click);
+            // 
+            // buttonNoPadding9
+            // 
+            this.buttonNoPadding9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding9.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding9.Location = new System.Drawing.Point(40, 146);
+            this.buttonNoPadding9.Name = "buttonNoPadding9";
+            this.buttonNoPadding9.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding9.TabIndex = 260;
+            this.buttonNoPadding9.TabStop = false;
+            this.buttonNoPadding9.Text = null;
+            this.buttonNoPadding9.UseVisualStyleBackColor = true;
+            this.buttonNoPadding9.Click += new System.EventHandler(this.conAddButton_Click);
+            // 
+            // conProf
+            // 
+            this.conProf.AutoSize = true;
+            this.conProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.conProf.Location = new System.Drawing.Point(105, 153);
+            this.conProf.Name = "conProf";
+            this.conProf.Size = new System.Drawing.Size(87, 19);
+            this.conProf.TabIndex = 257;
+            this.conProf.TabStop = false;
+            this.conProf.Text = "Proficient";
+            this.conProf.UseVisualStyleBackColor = true;
+            this.conProf.CheckedChanged += new System.EventHandler(this.conProfBox_CheckedChanged);
+            // 
+            // dexSaveButton
+            // 
+            this.dexSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dexSaveButton.Location = new System.Drawing.Point(105, 78);
+            this.dexSaveButton.Name = "dexSaveButton";
+            this.dexSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.dexSaveButton.TabIndex = 249;
+            this.dexSaveButton.TabStop = false;
+            this.dexSaveButton.Text = "Save Throw";
+            this.dexSaveButton.UseVisualStyleBackColor = true;
+            this.dexSaveButton.Click += new System.EventHandler(this.dexSaveButton_Click);
+            // 
+            // buttonNoPadding2
+            // 
+            this.buttonNoPadding2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.buttonNoPadding2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding2.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding2.Location = new System.Drawing.Point(40, 110);
+            this.buttonNoPadding2.Name = "buttonNoPadding2";
+            this.buttonNoPadding2.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding2.TabIndex = 254;
+            this.buttonNoPadding2.TabStop = false;
+            this.buttonNoPadding2.Text = null;
+            this.buttonNoPadding2.UseVisualStyleBackColor = true;
+            this.buttonNoPadding2.Click += new System.EventHandler(this.dexDecreaseButton_Click);
+            // 
+            // buttonNoPadding3
+            // 
+            this.buttonNoPadding3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.buttonNoPadding3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNoPadding3.FlatAppearance.BorderSize = 0;
+            this.buttonNoPadding3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonNoPadding3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.buttonNoPadding3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNoPadding3.Location = new System.Drawing.Point(40, 94);
+            this.buttonNoPadding3.Name = "buttonNoPadding3";
+            this.buttonNoPadding3.Size = new System.Drawing.Size(17, 13);
+            this.buttonNoPadding3.TabIndex = 253;
+            this.buttonNoPadding3.TabStop = false;
+            this.buttonNoPadding3.Text = null;
+            this.buttonNoPadding3.UseVisualStyleBackColor = true;
+            this.buttonNoPadding3.Click += new System.EventHandler(this.dexAddButton_Click);
+            // 
+            // dexProf
+            // 
+            this.dexProf.AutoSize = true;
+            this.dexProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.dexProf.Location = new System.Drawing.Point(105, 101);
+            this.dexProf.Name = "dexProf";
+            this.dexProf.Size = new System.Drawing.Size(87, 19);
+            this.dexProf.TabIndex = 250;
+            this.dexProf.TabStop = false;
+            this.dexProf.Text = "Proficient";
+            this.dexProf.UseVisualStyleBackColor = true;
+            this.dexProf.CheckedChanged += new System.EventHandler(this.dexProfBox_CheckedChanged);
+            // 
+            // strSaveButton
+            // 
+            this.strSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strSaveButton.Location = new System.Drawing.Point(105, 26);
+            this.strSaveButton.Name = "strSaveButton";
+            this.strSaveButton.Size = new System.Drawing.Size(82, 16);
+            this.strSaveButton.TabIndex = 170;
+            this.strSaveButton.TabStop = false;
+            this.strSaveButton.Text = "Save Throw";
+            this.strSaveButton.UseVisualStyleBackColor = true;
+            this.strSaveButton.Click += new System.EventHandler(this.strSaveButton_Click);
+            // 
+            // strDownButton
+            // 
+            this.strDownButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.downArrow;
+            this.strDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.strDownButton.FlatAppearance.BorderSize = 0;
+            this.strDownButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.strDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.strDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strDownButton.Location = new System.Drawing.Point(40, 58);
+            this.strDownButton.Name = "strDownButton";
+            this.strDownButton.Size = new System.Drawing.Size(17, 13);
+            this.strDownButton.TabIndex = 248;
+            this.strDownButton.TabStop = false;
+            this.strDownButton.Text = null;
+            this.strDownButton.UseVisualStyleBackColor = true;
+            this.strDownButton.Click += new System.EventHandler(this.strDecreaseButton_Click);
+            // 
+            // strUpButton
+            // 
+            this.strUpButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.upArrow;
+            this.strUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.strUpButton.FlatAppearance.BorderSize = 0;
+            this.strUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.strUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.strUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strUpButton.Location = new System.Drawing.Point(40, 42);
+            this.strUpButton.Name = "strUpButton";
+            this.strUpButton.Size = new System.Drawing.Size(17, 13);
+            this.strUpButton.TabIndex = 247;
+            this.strUpButton.TabStop = false;
+            this.strUpButton.Text = null;
+            this.strUpButton.UseVisualStyleBackColor = true;
+            this.strUpButton.Click += new System.EventHandler(this.strAddButton_Click);
+            // 
+            // strProf
+            // 
+            this.strProf.AutoSize = true;
+            this.strProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.strProf.Location = new System.Drawing.Point(105, 49);
+            this.strProf.Name = "strProf";
+            this.strProf.Size = new System.Drawing.Size(87, 19);
+            this.strProf.TabIndex = 235;
+            this.strProf.TabStop = false;
+            this.strProf.Text = "Proficient";
+            this.strProf.UseVisualStyleBackColor = true;
+            this.strProf.CheckedChanged += new System.EventHandler(this.strProfBox_CheckedChanged);
             // 
             // profUpButton
             // 
@@ -4142,6 +3624,27 @@
             this.raceTextbox.Size = new System.Drawing.Size(66, 14);
             this.raceTextbox.TabIndex = 2;
             // 
+            // tempHPTextbox
+            // 
+            this.tempHPTextbox.Location = new System.Drawing.Point(175, 40);
+            this.tempHPTextbox.Name = "tempHPTextbox";
+            this.tempHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.tempHPTextbox.TabIndex = 7;
+            // 
+            // maxHPTextbox
+            // 
+            this.maxHPTextbox.Location = new System.Drawing.Point(129, 40);
+            this.maxHPTextbox.Name = "maxHPTextbox";
+            this.maxHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.maxHPTextbox.TabIndex = 6;
+            // 
+            // currentHPTextbox
+            // 
+            this.currentHPTextbox.Location = new System.Drawing.Point(79, 40);
+            this.currentHPTextbox.Name = "currentHPTextbox";
+            this.currentHPTextbox.Size = new System.Drawing.Size(32, 19);
+            this.currentHPTextbox.TabIndex = 5;
+            // 
             // proficienciesCheckBoxes
             // 
             this.proficienciesCheckBoxes.Location = new System.Drawing.Point(220, 148);
@@ -4149,17 +3652,598 @@
             this.proficienciesCheckBoxes.Size = new System.Drawing.Size(189, 401);
             this.proficienciesCheckBoxes.TabIndex = 234;
             // 
-            // helpLabel_Prof
+            // forgetSpellButton
             // 
-            this.helpLabel_Prof.AutoSize = true;
-            this.helpLabel_Prof.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.helpLabel_Prof.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F, System.Drawing.FontStyle.Bold);
-            this.helpLabel_Prof.ForeColor = System.Drawing.Color.Maroon;
-            this.helpLabel_Prof.Location = new System.Drawing.Point(284, 153);
-            this.helpLabel_Prof.Name = "helpLabel_Prof";
-            this.helpLabel_Prof.Size = new System.Drawing.Size(12, 11);
-            this.helpLabel_Prof.TabIndex = 335;
-            this.helpLabel_Prof.Text = "?";
+            this.forgetSpellButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forgetSpellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.forgetSpellButton.Location = new System.Drawing.Point(193, 2);
+            this.forgetSpellButton.Name = "forgetSpellButton";
+            this.forgetSpellButton.Size = new System.Drawing.Size(75, 18);
+            this.forgetSpellButton.TabIndex = 223;
+            this.forgetSpellButton.TabStop = false;
+            this.forgetSpellButton.Text = "Forget Spell";
+            this.forgetSpellButton.UseVisualStyleBackColor = true;
+            this.forgetSpellButton.Click += new System.EventHandler(this.forgetSpellButton_Click);
+            // 
+            // preparednumericUpDown
+            // 
+            this.preparednumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.preparednumericUpDown.Location = new System.Drawing.Point(157, 338);
+            this.preparednumericUpDown.Name = "preparednumericUpDown";
+            this.preparednumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.preparednumericUpDown.TabIndex = 6;
+            this.preparednumericUpDown.Value = 0;
+            // 
+            // Level9SpellButton
+            // 
+            this.Level9SpellButton.AutoSize = true;
+            this.Level9SpellButton.Location = new System.Drawing.Point(38, 239);
+            this.Level9SpellButton.Name = "Level9SpellButton";
+            this.Level9SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level9SpellButton.TabIndex = 330;
+            this.Level9SpellButton.Tag = "9";
+            this.Level9SpellButton.Text = "Level 9";
+            this.Level9SpellButton.UseVisualStyleBackColor = true;
+            this.Level9SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level8SpellButton
+            // 
+            this.Level8SpellButton.AutoSize = true;
+            this.Level8SpellButton.Location = new System.Drawing.Point(38, 222);
+            this.Level8SpellButton.Name = "Level8SpellButton";
+            this.Level8SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level8SpellButton.TabIndex = 329;
+            this.Level8SpellButton.Tag = "8";
+            this.Level8SpellButton.Text = "Level 8";
+            this.Level8SpellButton.UseVisualStyleBackColor = true;
+            this.Level8SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level7SpellButton
+            // 
+            this.Level7SpellButton.AutoSize = true;
+            this.Level7SpellButton.Location = new System.Drawing.Point(38, 205);
+            this.Level7SpellButton.Name = "Level7SpellButton";
+            this.Level7SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level7SpellButton.TabIndex = 328;
+            this.Level7SpellButton.Tag = "7";
+            this.Level7SpellButton.Text = "Level 7";
+            this.Level7SpellButton.UseVisualStyleBackColor = true;
+            this.Level7SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level6SpellButton
+            // 
+            this.Level6SpellButton.AutoSize = true;
+            this.Level6SpellButton.Location = new System.Drawing.Point(38, 188);
+            this.Level6SpellButton.Name = "Level6SpellButton";
+            this.Level6SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level6SpellButton.TabIndex = 327;
+            this.Level6SpellButton.Tag = "6";
+            this.Level6SpellButton.Text = "Level 6";
+            this.Level6SpellButton.UseVisualStyleBackColor = true;
+            this.Level6SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level5SpellButton
+            // 
+            this.Level5SpellButton.AutoSize = true;
+            this.Level5SpellButton.Location = new System.Drawing.Point(38, 171);
+            this.Level5SpellButton.Name = "Level5SpellButton";
+            this.Level5SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level5SpellButton.TabIndex = 326;
+            this.Level5SpellButton.Tag = "5";
+            this.Level5SpellButton.Text = "Level 5";
+            this.Level5SpellButton.UseVisualStyleBackColor = true;
+            this.Level5SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level4SpellButton
+            // 
+            this.Level4SpellButton.AutoSize = true;
+            this.Level4SpellButton.Location = new System.Drawing.Point(38, 154);
+            this.Level4SpellButton.Name = "Level4SpellButton";
+            this.Level4SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level4SpellButton.TabIndex = 325;
+            this.Level4SpellButton.Tag = "4";
+            this.Level4SpellButton.Text = "Level 4";
+            this.Level4SpellButton.UseVisualStyleBackColor = true;
+            this.Level4SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level3SpellButton
+            // 
+            this.Level3SpellButton.AutoSize = true;
+            this.Level3SpellButton.Location = new System.Drawing.Point(38, 138);
+            this.Level3SpellButton.Name = "Level3SpellButton";
+            this.Level3SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level3SpellButton.TabIndex = 324;
+            this.Level3SpellButton.Tag = "3";
+            this.Level3SpellButton.Text = "Level 3";
+            this.Level3SpellButton.UseVisualStyleBackColor = true;
+            this.Level3SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level2SpellButton
+            // 
+            this.Level2SpellButton.AutoSize = true;
+            this.Level2SpellButton.Location = new System.Drawing.Point(38, 121);
+            this.Level2SpellButton.Name = "Level2SpellButton";
+            this.Level2SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level2SpellButton.TabIndex = 323;
+            this.Level2SpellButton.Tag = "2";
+            this.Level2SpellButton.Text = "Level 2";
+            this.Level2SpellButton.UseVisualStyleBackColor = true;
+            this.Level2SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level1SpellButton
+            // 
+            this.Level1SpellButton.AutoSize = true;
+            this.Level1SpellButton.Checked = true;
+            this.Level1SpellButton.Location = new System.Drawing.Point(38, 104);
+            this.Level1SpellButton.Name = "Level1SpellButton";
+            this.Level1SpellButton.Size = new System.Drawing.Size(60, 17);
+            this.Level1SpellButton.TabIndex = 322;
+            this.Level1SpellButton.TabStop = true;
+            this.Level1SpellButton.Tag = "1";
+            this.Level1SpellButton.Text = "Level 1";
+            this.Level1SpellButton.UseVisualStyleBackColor = true;
+            this.Level1SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // Level0SpellButton
+            // 
+            this.Level0SpellButton.AutoSize = true;
+            this.Level0SpellButton.Location = new System.Drawing.Point(38, 88);
+            this.Level0SpellButton.Name = "Level0SpellButton";
+            this.Level0SpellButton.Size = new System.Drawing.Size(63, 17);
+            this.Level0SpellButton.TabIndex = 321;
+            this.Level0SpellButton.Tag = "0";
+            this.Level0SpellButton.Text = "Cantrips";
+            this.Level0SpellButton.UseVisualStyleBackColor = true;
+            this.Level0SpellButton.CheckedChanged += new System.EventHandler(this.SelectSpellLevel);
+            // 
+            // spellsavedcnumupdown
+            // 
+            this.spellsavedcnumupdown.BackColor = System.Drawing.SystemColors.Control;
+            this.spellsavedcnumupdown.Location = new System.Drawing.Point(226, 26);
+            this.spellsavedcnumupdown.Name = "spellsavedcnumupdown";
+            this.spellsavedcnumupdown.Size = new System.Drawing.Size(46, 23);
+            this.spellsavedcnumupdown.TabIndex = 2;
+            this.spellsavedcnumupdown.Value = 0;
+            // 
+            // spellAtkBonusnumUpDown
+            // 
+            this.spellAtkBonusnumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.spellAtkBonusnumUpDown.Location = new System.Drawing.Point(138, 26);
+            this.spellAtkBonusnumUpDown.Name = "spellAtkBonusnumUpDown";
+            this.spellAtkBonusnumUpDown.Size = new System.Drawing.Size(46, 23);
+            this.spellAtkBonusnumUpDown.TabIndex = 1;
+            this.spellAtkBonusnumUpDown.Value = 0;
+            // 
+            // MinusCurrentSlotbutton
+            // 
+            this.MinusCurrentSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinusCurrentSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.MinusCurrentSlotbutton.Location = new System.Drawing.Point(2, 277);
+            this.MinusCurrentSlotbutton.Name = "MinusCurrentSlotbutton";
+            this.MinusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
+            this.MinusCurrentSlotbutton.TabIndex = 197;
+            this.MinusCurrentSlotbutton.TabStop = false;
+            this.MinusCurrentSlotbutton.Tag = "current";
+            this.MinusCurrentSlotbutton.Text = "-";
+            this.MinusCurrentSlotbutton.UseVisualStyleBackColor = true;
+            this.MinusCurrentSlotbutton.Click += new System.EventHandler(this.MinusCurrentSlot);
+            // 
+            // plusCurrentSlotbutton
+            // 
+            this.plusCurrentSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plusCurrentSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.plusCurrentSlotbutton.Location = new System.Drawing.Point(21, 277);
+            this.plusCurrentSlotbutton.Name = "plusCurrentSlotbutton";
+            this.plusCurrentSlotbutton.Size = new System.Drawing.Size(17, 17);
+            this.plusCurrentSlotbutton.TabIndex = 196;
+            this.plusCurrentSlotbutton.TabStop = false;
+            this.plusCurrentSlotbutton.Tag = "current";
+            this.plusCurrentSlotbutton.Text = "+";
+            this.plusCurrentSlotbutton.UseVisualStyleBackColor = true;
+            this.plusCurrentSlotbutton.Click += new System.EventHandler(this.AddCurrentSlot);
+            // 
+            // minusMaxSlotbutton
+            // 
+            this.minusMaxSlotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minusMaxSlotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.minusMaxSlotbutton.Location = new System.Drawing.Point(2, 258);
+            this.minusMaxSlotbutton.Name = "minusMaxSlotbutton";
+            this.minusMaxSlotbutton.Size = new System.Drawing.Size(17, 17);
+            this.minusMaxSlotbutton.TabIndex = 110;
+            this.minusMaxSlotbutton.TabStop = false;
+            this.minusMaxSlotbutton.Tag = "current";
+            this.minusMaxSlotbutton.Text = "-";
+            this.minusMaxSlotbutton.UseVisualStyleBackColor = true;
+            this.minusMaxSlotbutton.Click += new System.EventHandler(this.MinusMaxSlot);
+            // 
+            // PlusMaxSLotbutton
+            // 
+            this.PlusMaxSLotbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusMaxSLotbutton.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F, System.Drawing.FontStyle.Bold);
+            this.PlusMaxSLotbutton.Location = new System.Drawing.Point(21, 258);
+            this.PlusMaxSLotbutton.Name = "PlusMaxSLotbutton";
+            this.PlusMaxSLotbutton.Size = new System.Drawing.Size(17, 17);
+            this.PlusMaxSLotbutton.TabIndex = 109;
+            this.PlusMaxSLotbutton.TabStop = false;
+            this.PlusMaxSLotbutton.Tag = "current";
+            this.PlusMaxSLotbutton.Text = "+";
+            this.PlusMaxSLotbutton.UseVisualStyleBackColor = true;
+            this.PlusMaxSLotbutton.Click += new System.EventHandler(this.AddMaxSlot);
+            // 
+            // MultipliernumericUpDown
+            // 
+            this.MultipliernumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.MultipliernumericUpDown.Location = new System.Drawing.Point(9, 228);
+            this.MultipliernumericUpDown.Name = "MultipliernumericUpDown";
+            this.MultipliernumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.MultipliernumericUpDown.TabIndex = 4;
+            this.MultipliernumericUpDown.Value = 0;
+            // 
+            // otherBonusnumericUpDown
+            // 
+            this.otherBonusnumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.otherBonusnumericUpDown.Location = new System.Drawing.Point(69, 228);
+            this.otherBonusnumericUpDown.Name = "otherBonusnumericUpDown";
+            this.otherBonusnumericUpDown.Size = new System.Drawing.Size(46, 23);
+            this.otherBonusnumericUpDown.TabIndex = 5;
+            this.otherBonusnumericUpDown.Value = 0;
+            // 
+            // addModcheckBox
+            // 
+            this.addModcheckBox.AutoSize = true;
+            this.addModcheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addModcheckBox.Location = new System.Drawing.Point(71, 196);
+            this.addModcheckBox.Name = "addModcheckBox";
+            this.addModcheckBox.Size = new System.Drawing.Size(97, 17);
+            this.addModcheckBox.TabIndex = 194;
+            this.addModcheckBox.TabStop = false;
+            this.addModcheckBox.Text = "Add Modifier";
+            this.addModcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SpellDescriptionButton
+            // 
+            this.SpellDescriptionButton.Enabled = false;
+            this.SpellDescriptionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SpellDescriptionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpellDescriptionButton.ForeColor = System.Drawing.Color.Black;
+            this.SpellDescriptionButton.Location = new System.Drawing.Point(0, 149);
+            this.SpellDescriptionButton.Name = "SpellDescriptionButton";
+            this.SpellDescriptionButton.Size = new System.Drawing.Size(81, 19);
+            this.SpellDescriptionButton.TabIndex = 193;
+            this.SpellDescriptionButton.TabStop = false;
+            this.SpellDescriptionButton.Text = "Description";
+            this.SpellDescriptionButton.UseVisualStyleBackColor = true;
+            this.SpellDescriptionButton.Click += new System.EventHandler(this.SpellDescriptionButton_Click);
+            // 
+            // spellAttackButton
+            // 
+            this.spellAttackButton.Enabled = false;
+            this.spellAttackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.spellAttackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellAttackButton.ForeColor = System.Drawing.Color.Black;
+            this.spellAttackButton.Location = new System.Drawing.Point(83, 149);
+            this.spellAttackButton.Name = "spellAttackButton";
+            this.spellAttackButton.Size = new System.Drawing.Size(81, 19);
+            this.spellAttackButton.TabIndex = 182;
+            this.spellAttackButton.TabStop = false;
+            this.spellAttackButton.Text = "Attack Roll";
+            this.spellAttackButton.UseVisualStyleBackColor = true;
+            this.spellAttackButton.Click += new System.EventHandler(this.SpellAttackRoll);
+            // 
+            // SpellMiscRollButton
+            // 
+            this.SpellMiscRollButton.Enabled = false;
+            this.SpellMiscRollButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SpellMiscRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpellMiscRollButton.ForeColor = System.Drawing.Color.Black;
+            this.SpellMiscRollButton.Location = new System.Drawing.Point(0, 171);
+            this.SpellMiscRollButton.Name = "SpellMiscRollButton";
+            this.SpellMiscRollButton.Size = new System.Drawing.Size(57, 21);
+            this.SpellMiscRollButton.TabIndex = 97;
+            this.SpellMiscRollButton.TabStop = false;
+            this.SpellMiscRollButton.Text = "Roll:";
+            this.SpellMiscRollButton.UseVisualStyleBackColor = true;
+            this.SpellMiscRollButton.Click += new System.EventHandler(this.SpellMiscRollButton_Click);
+            // 
+            // browseSpellsButton
+            // 
+            this.browseSpellsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.browseSpellsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.browseSpellsButton.Location = new System.Drawing.Point(2, 68);
+            this.browseSpellsButton.Name = "browseSpellsButton";
+            this.browseSpellsButton.Size = new System.Drawing.Size(104, 18);
+            this.browseSpellsButton.TabIndex = 169;
+            this.browseSpellsButton.TabStop = false;
+            this.browseSpellsButton.Text = "Browse Spells";
+            this.browseSpellsButton.UseVisualStyleBackColor = true;
+            this.browseSpellsButton.Click += new System.EventHandler(this.BrowseSpells);
+            // 
+            // refillSpellSlotsButton
+            // 
+            this.refillSpellSlotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refillSpellSlotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.refillSpellSlotsButton.Location = new System.Drawing.Point(2, 298);
+            this.refillSpellSlotsButton.Name = "refillSpellSlotsButton";
+            this.refillSpellSlotsButton.Size = new System.Drawing.Size(105, 18);
+            this.refillSpellSlotsButton.TabIndex = 183;
+            this.refillSpellSlotsButton.TabStop = false;
+            this.refillSpellSlotsButton.Text = "Refill All Slots";
+            this.refillSpellSlotsButton.UseVisualStyleBackColor = true;
+            this.refillSpellSlotsButton.Click += new System.EventHandler(this.RefillSpellSlots);
+            // 
+            // d12NumUpDown
+            // 
+            this.d12NumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.d12NumUpDown.Location = new System.Drawing.Point(144, 103);
+            this.d12NumUpDown.Name = "d12NumUpDown";
+            this.d12NumUpDown.Size = new System.Drawing.Size(46, 23);
+            this.d12NumUpDown.TabIndex = 23;
+            this.d12NumUpDown.Value = 0;
+            // 
+            // d10NumUpDown
+            // 
+            this.d10NumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.d10NumUpDown.Location = new System.Drawing.Point(96, 103);
+            this.d10NumUpDown.Name = "d10NumUpDown";
+            this.d10NumUpDown.Size = new System.Drawing.Size(46, 23);
+            this.d10NumUpDown.TabIndex = 22;
+            this.d10NumUpDown.Value = 0;
+            // 
+            // d8NumUpDown
+            // 
+            this.d8NumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.d8NumUpDown.Location = new System.Drawing.Point(46, 103);
+            this.d8NumUpDown.Name = "d8NumUpDown";
+            this.d8NumUpDown.Size = new System.Drawing.Size(46, 23);
+            this.d8NumUpDown.TabIndex = 21;
+            this.d8NumUpDown.Value = 0;
+            // 
+            // d6NumUpDown
+            // 
+            this.d6NumUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.d6NumUpDown.Location = new System.Drawing.Point(-2, 103);
+            this.d6NumUpDown.Name = "d6NumUpDown";
+            this.d6NumUpDown.Size = new System.Drawing.Size(46, 23);
+            this.d6NumUpDown.TabIndex = 20;
+            this.d6NumUpDown.Value = 0;
+            // 
+            // autoHealHitDice
+            // 
+            this.autoHealHitDice.AutoSize = true;
+            this.autoHealHitDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoHealHitDice.Location = new System.Drawing.Point(5, 62);
+            this.autoHealHitDice.Name = "autoHealHitDice";
+            this.autoHealHitDice.Size = new System.Drawing.Size(176, 19);
+            this.autoHealHitDice.TabIndex = 235;
+            this.autoHealHitDice.TabStop = false;
+            this.autoHealHitDice.Text = "Apply Healing Automatically";
+            this.autoHealHitDice.UseVisualStyleBackColor = true;
+            // 
+            // HitDicePartialRefillButton
+            // 
+            this.HitDicePartialRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitDicePartialRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.HitDicePartialRefillButton.Location = new System.Drawing.Point(96, 129);
+            this.HitDicePartialRefillButton.Name = "HitDicePartialRefillButton";
+            this.HitDicePartialRefillButton.Size = new System.Drawing.Size(95, 17);
+            this.HitDicePartialRefillButton.TabIndex = 117;
+            this.HitDicePartialRefillButton.TabStop = false;
+            this.HitDicePartialRefillButton.Text = "Partial Refill";
+            this.HitDicePartialRefillButton.UseVisualStyleBackColor = true;
+            this.HitDicePartialRefillButton.Click += new System.EventHandler(this.HitDicePartialRefillButton_Click);
+            // 
+            // HitDiceFullRefillButton
+            // 
+            this.HitDiceFullRefillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitDiceFullRefillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.HitDiceFullRefillButton.Location = new System.Drawing.Point(96, 148);
+            this.HitDiceFullRefillButton.Name = "HitDiceFullRefillButton";
+            this.HitDiceFullRefillButton.Size = new System.Drawing.Size(95, 17);
+            this.HitDiceFullRefillButton.TabIndex = 116;
+            this.HitDiceFullRefillButton.TabStop = false;
+            this.HitDiceFullRefillButton.Text = "Full Refill";
+            this.HitDiceFullRefillButton.UseVisualStyleBackColor = true;
+            this.HitDiceFullRefillButton.Click += new System.EventHandler(this.HitDiceFullRefillButton_Click);
+            // 
+            // HitDiceSetMaxButton
+            // 
+            this.HitDiceSetMaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitDiceSetMaxButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.HitDiceSetMaxButton.Location = new System.Drawing.Point(0, 148);
+            this.HitDiceSetMaxButton.Name = "HitDiceSetMaxButton";
+            this.HitDiceSetMaxButton.Size = new System.Drawing.Size(94, 17);
+            this.HitDiceSetMaxButton.TabIndex = 115;
+            this.HitDiceSetMaxButton.TabStop = false;
+            this.HitDiceSetMaxButton.Text = "Set Max";
+            this.HitDiceSetMaxButton.UseVisualStyleBackColor = true;
+            this.HitDiceSetMaxButton.Click += new System.EventHandler(this.HitDiceSetMaxButton_Click);
+            // 
+            // HitDiceUseButton
+            // 
+            this.HitDiceUseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitDiceUseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.HitDiceUseButton.Location = new System.Drawing.Point(0, 129);
+            this.HitDiceUseButton.Name = "HitDiceUseButton";
+            this.HitDiceUseButton.Size = new System.Drawing.Size(94, 18);
+            this.HitDiceUseButton.TabIndex = 109;
+            this.HitDiceUseButton.TabStop = false;
+            this.HitDiceUseButton.Text = "Use";
+            this.HitDiceUseButton.UseVisualStyleBackColor = true;
+            this.HitDiceUseButton.Click += new System.EventHandler(this.buttonNoPadding1_Click);
+            // 
+            // newWeaponButton
+            // 
+            this.newWeaponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWeaponButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newWeaponButton.Location = new System.Drawing.Point(44, 3);
+            this.newWeaponButton.Name = "newWeaponButton";
+            this.newWeaponButton.Size = new System.Drawing.Size(86, 19);
+            this.newWeaponButton.TabIndex = 94;
+            this.newWeaponButton.TabStop = false;
+            this.newWeaponButton.Text = "New Weapon";
+            this.newWeaponButton.UseVisualStyleBackColor = true;
+            this.newWeaponButton.Click += new System.EventHandler(this.createWeapon_Click);
+            // 
+            // weaponRadioButton8
+            // 
+            this.weaponRadioButton8.AutoSize = true;
+            this.weaponRadioButton8.Location = new System.Drawing.Point(3, 127);
+            this.weaponRadioButton8.Name = "weaponRadioButton8";
+            this.weaponRadioButton8.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton8.TabIndex = 103;
+            this.weaponRadioButton8.TabStop = true;
+            this.weaponRadioButton8.Text = "Weapon Name 8";
+            this.weaponRadioButton8.UseVisualStyleBackColor = true;
+            this.weaponRadioButton8.Visible = false;
+            this.weaponRadioButton8.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton7
+            // 
+            this.weaponRadioButton7.AutoSize = true;
+            this.weaponRadioButton7.Location = new System.Drawing.Point(3, 109);
+            this.weaponRadioButton7.Name = "weaponRadioButton7";
+            this.weaponRadioButton7.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton7.TabIndex = 102;
+            this.weaponRadioButton7.TabStop = true;
+            this.weaponRadioButton7.Text = "Weapon Name 7";
+            this.weaponRadioButton7.UseVisualStyleBackColor = true;
+            this.weaponRadioButton7.Visible = false;
+            this.weaponRadioButton7.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton6
+            // 
+            this.weaponRadioButton6.AutoSize = true;
+            this.weaponRadioButton6.Location = new System.Drawing.Point(3, 91);
+            this.weaponRadioButton6.Name = "weaponRadioButton6";
+            this.weaponRadioButton6.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton6.TabIndex = 101;
+            this.weaponRadioButton6.TabStop = true;
+            this.weaponRadioButton6.Text = "Weapon Name 6";
+            this.weaponRadioButton6.UseVisualStyleBackColor = true;
+            this.weaponRadioButton6.Visible = false;
+            this.weaponRadioButton6.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton5
+            // 
+            this.weaponRadioButton5.AutoSize = true;
+            this.weaponRadioButton5.Location = new System.Drawing.Point(3, 73);
+            this.weaponRadioButton5.Name = "weaponRadioButton5";
+            this.weaponRadioButton5.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton5.TabIndex = 100;
+            this.weaponRadioButton5.TabStop = true;
+            this.weaponRadioButton5.Text = "Weapon Name 5";
+            this.weaponRadioButton5.UseVisualStyleBackColor = true;
+            this.weaponRadioButton5.Visible = false;
+            this.weaponRadioButton5.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton4
+            // 
+            this.weaponRadioButton4.AutoSize = true;
+            this.weaponRadioButton4.Location = new System.Drawing.Point(3, 56);
+            this.weaponRadioButton4.Name = "weaponRadioButton4";
+            this.weaponRadioButton4.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton4.TabIndex = 99;
+            this.weaponRadioButton4.TabStop = true;
+            this.weaponRadioButton4.Text = "Weapon Name 4";
+            this.weaponRadioButton4.UseVisualStyleBackColor = true;
+            this.weaponRadioButton4.Visible = false;
+            this.weaponRadioButton4.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton3
+            // 
+            this.weaponRadioButton3.AutoSize = true;
+            this.weaponRadioButton3.Location = new System.Drawing.Point(3, 39);
+            this.weaponRadioButton3.Name = "weaponRadioButton3";
+            this.weaponRadioButton3.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton3.TabIndex = 98;
+            this.weaponRadioButton3.TabStop = true;
+            this.weaponRadioButton3.Text = "Weapon Name 3";
+            this.weaponRadioButton3.UseVisualStyleBackColor = true;
+            this.weaponRadioButton3.Visible = false;
+            this.weaponRadioButton3.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton2
+            // 
+            this.weaponRadioButton2.AutoSize = true;
+            this.weaponRadioButton2.Location = new System.Drawing.Point(3, 22);
+            this.weaponRadioButton2.Name = "weaponRadioButton2";
+            this.weaponRadioButton2.Size = new System.Drawing.Size(106, 17);
+            this.weaponRadioButton2.TabIndex = 97;
+            this.weaponRadioButton2.TabStop = true;
+            this.weaponRadioButton2.Text = "Weapon Name 2";
+            this.weaponRadioButton2.UseVisualStyleBackColor = true;
+            this.weaponRadioButton2.Visible = false;
+            this.weaponRadioButton2.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // weaponRadioButton1
+            // 
+            this.weaponRadioButton1.AutoSize = true;
+            this.weaponRadioButton1.Location = new System.Drawing.Point(3, 4);
+            this.weaponRadioButton1.Name = "weaponRadioButton1";
+            this.weaponRadioButton1.Size = new System.Drawing.Size(100, 17);
+            this.weaponRadioButton1.TabIndex = 96;
+            this.weaponRadioButton1.Text = "Wepon Name 1";
+            this.weaponRadioButton1.UseVisualStyleBackColor = true;
+            this.weaponRadioButton1.Visible = false;
+            this.weaponRadioButton1.CheckedChanged += new System.EventHandler(this.UpdateWeapon);
+            // 
+            // dmgRoll2
+            // 
+            this.dmgRoll2.Enabled = false;
+            this.dmgRoll2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dmgRoll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dmgRoll2.ForeColor = System.Drawing.Color.Black;
+            this.dmgRoll2.Location = new System.Drawing.Point(73, 174);
+            this.dmgRoll2.Name = "dmgRoll2";
+            this.dmgRoll2.Size = new System.Drawing.Size(74, 20);
+            this.dmgRoll2.TabIndex = 93;
+            this.dmgRoll2.TabStop = false;
+            this.dmgRoll2.Text = "Damage Roll";
+            this.dmgRoll2.UseVisualStyleBackColor = true;
+            this.dmgRoll2.Click += new System.EventHandler(this.dmgRoll2_Click);
+            // 
+            // weapondDelButton
+            // 
+            this.weapondDelButton.Enabled = false;
+            this.weapondDelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weapondDelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.weapondDelButton.Location = new System.Drawing.Point(3, 152);
+            this.weapondDelButton.Name = "weapondDelButton";
+            this.weapondDelButton.Size = new System.Drawing.Size(68, 20);
+            this.weapondDelButton.TabIndex = 92;
+            this.weapondDelButton.TabStop = false;
+            this.weapondDelButton.Text = "Delete";
+            this.weapondDelButton.UseVisualStyleBackColor = true;
+            this.weapondDelButton.Click += new System.EventHandler(this.DeleteWeapon);
+            // 
+            // weaponEditButton
+            // 
+            this.weaponEditButton.Enabled = false;
+            this.weaponEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weaponEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.weaponEditButton.Location = new System.Drawing.Point(3, 174);
+            this.weaponEditButton.Name = "weaponEditButton";
+            this.weaponEditButton.Size = new System.Drawing.Size(68, 20);
+            this.weaponEditButton.TabIndex = 91;
+            this.weaponEditButton.TabStop = false;
+            this.weaponEditButton.Text = "Edit";
+            this.weaponEditButton.UseVisualStyleBackColor = true;
+            this.weaponEditButton.Click += new System.EventHandler(this.EditWeapon);
+            // 
+            // atkRoll1
+            // 
+            this.atkRoll1.Enabled = false;
+            this.atkRoll1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.atkRoll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.atkRoll1.ForeColor = System.Drawing.Color.Black;
+            this.atkRoll1.Location = new System.Drawing.Point(73, 152);
+            this.atkRoll1.Name = "atkRoll1";
+            this.atkRoll1.Size = new System.Drawing.Size(74, 20);
+            this.atkRoll1.TabIndex = 90;
+            this.atkRoll1.TabStop = false;
+            this.atkRoll1.Text = "Attack Roll";
+            this.atkRoll1.UseVisualStyleBackColor = true;
+            this.atkRoll1.Click += new System.EventHandler(this.atkRoll1_Click);
             // 
             // Form1
             // 
@@ -4167,6 +4251,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1115, 648);
+            this.Controls.Add(this.helpPanel_prof);
+            this.Controls.Add(this.helpPanel_HP);
+            this.Controls.Add(this.helpPanel_Money);
             this.Controls.Add(this.helpLabel_Prof);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
@@ -4299,6 +4386,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.DeathFail2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.helpPanel_Money.ResumeLayout(false);
+            this.helpPanel_Money.PerformLayout();
+            this.helpPanel_HP.ResumeLayout(false);
+            this.helpPanel_HP.PerformLayout();
+            this.helpPanel_prof.ResumeLayout(false);
+            this.helpPanel_prof.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4614,6 +4707,12 @@
         private CustomControls.CustomUpDown miscRollNumnumericUpDown;
         private CustomControls.CustomUpDown miscRollAmountnumericUpDown;
         private System.Windows.Forms.Label helpLabel_Prof;
+        private System.Windows.Forms.Panel helpPanel_Money;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel helpPanel_HP;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel helpPanel_prof;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

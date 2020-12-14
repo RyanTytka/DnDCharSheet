@@ -17,13 +17,15 @@ namespace WindowsFormsApp1
 
 
     public partial class Form1 : Form
-    { 
+    {
+
+        #region initialization
+
         //to make form look a little nicer
         //protected override void OnPaint(PaintEventArgs e)
         //{
-            //ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        //ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
         //}
-        #region initialization
 
         string[] attributeNames;        //strings for each of the attributes in order
         bool saveThrowAdv;
@@ -274,6 +276,11 @@ namespace WindowsFormsApp1
             #endregion
 
             LoadSettings();
+
+            helpPanel_prof.Visible = false;
+            helpPanel_HP.Visible = false;
+            helpPanel_Money.Visible = false;
+            preparedHelppanel.Visible = false;
         }
 
 
@@ -2439,6 +2446,8 @@ namespace WindowsFormsApp1
 
             bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
             helpLabel_preparedSpells.Visible = prepared;
+            if (helpLabel_HP.Visible == false)
+                helpLabel_preparedSpells.Visible = false;
             spellsPreparedAmountlabel.Visible = prepared;
             preparednumericUpDown.Visible = prepared;
             if(prepared)
@@ -2594,6 +2603,8 @@ namespace WindowsFormsApp1
             currentSpellLevel = int.Parse(((RadioButton)sender).Tag.ToString());
             bool prepared = prepareSpells[classSpellType - 1];// && currentSpellLevel > 0;
             helpLabel_preparedSpells.Visible = prepared;
+            if (helpLabel_HP.Visible == false)
+                helpLabel_preparedSpells.Visible = false;
             spellsPreparedAmountlabel.Visible = prepared;
             preparednumericUpDown.Visible = prepared;
             if (prepared)
@@ -2922,16 +2933,6 @@ namespace WindowsFormsApp1
             SetUnsaved();
         }
 
-        private void ShowPreparedSpellHelpPanel(object sender, EventArgs e)
-        {
-            preparedHelppanel.Visible = true;
-        }
-
-        private void preparedhelpLabel_MouseLeave(object sender, EventArgs e)
-        {
-            preparedHelppanel.Visible = false;
-        }
-
 
         //inputs spells from text file into a list on load
         private void LoadSpells()
@@ -3190,6 +3191,8 @@ namespace WindowsFormsApp1
             deathSaveRollButton.Enabled = true;
             SetUnsaved();
         }
+
+
         #endregion
 
         #region Misc Rolls
@@ -3224,6 +3227,50 @@ namespace WindowsFormsApp1
         private void miscRollAmountnumericUpDown_Enter(object sender, EventArgs e)
         {
             ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Value.ToString().Length);
+        }
+
+        #endregion
+
+        #region Help Panels
+
+        private void ShowPreparedSpellHelpPanel(object sender, EventArgs e)
+        {
+            preparedHelppanel.Visible = true;
+        }
+
+        private void preparedhelpLabel_MouseLeave(object sender, EventArgs e)
+        {
+            preparedHelppanel.Visible = false;
+        }
+
+        private void helpLabel_Money_MouseEnter(object sender, EventArgs e)
+        {
+            helpPanel_Money.Visible = true;
+        }
+
+        private void helpLabel_Money_MouseLeave(object sender, EventArgs e)
+        {
+            helpPanel_Money.Visible = false;
+        }
+
+        private void helpLabel_HP_MouseEnter(object sender, EventArgs e)
+        {
+            helpPanel_HP.Visible = true;
+        }
+
+        private void helpLabel_HP_MouseLeave(object sender, EventArgs e)
+        {
+            helpPanel_HP.Visible = false;
+        }
+
+        private void helpLabel_Prof_MouseEnter(object sender, EventArgs e)
+        {
+            helpPanel_prof.Visible = true;
+        }
+
+        private void helpLabel_Prof_MouseLeave(object sender, EventArgs e)
+        {
+            helpPanel_prof.Visible = false;
         }
 
         #endregion
